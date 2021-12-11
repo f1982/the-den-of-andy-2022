@@ -12,6 +12,7 @@ import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 
 export default function Post({ post, preview }) {
+  console.log('post', post);
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -33,7 +34,7 @@ export default function Post({ post, preview }) {
               </Head>
               <PostHeader
                 title={post.title}
-                coverImage={post.coverImage}
+                coverImage={`${post.slug}${post.coverImage}`}
                 date={post.date}
                 author={post.author}
               />

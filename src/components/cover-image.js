@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function CoverImage({ title, src, slug, height, width }) {
+  console.log('src', src);
   const image = (
     <Image
       src={src}
