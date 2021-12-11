@@ -15,8 +15,10 @@ function Index() {
           <title>Next.js Blog Example with </title>
         </Head>
         <Container>
-          <h1>This is the welcome page of the website</h1>
-          <Link href="/home">Homepage</Link>
+          <h1>This is the home page</h1>
+          <Link href="/blog">Blog</Link> /
+          <Link href="/about">About</Link> /
+          <Link href="/works">Works</Link>
         </Container>
       </Layout>
     </>
