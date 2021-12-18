@@ -21,7 +21,7 @@
   },
   "include": [
     "src"
-  ],
+, "_document.js", "_document.js"  ],
   "exclude": [
     "node_modules"
   ]

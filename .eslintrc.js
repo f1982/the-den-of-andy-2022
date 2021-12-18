@@ -17,7 +17,8 @@ module.exports = {
   ],
   plugins: [
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "simple-import-sort"
   ],
   parser: "@typescript-eslint/parser",
   ignorePatterns: [
@@ -26,5 +27,9 @@ module.exports = {
     "dist",
     "coverage",
     "public"
-  ]
+  ],
+  rules: {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
 }
