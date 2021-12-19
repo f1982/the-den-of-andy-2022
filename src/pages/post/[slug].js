@@ -3,11 +3,11 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import Layout from '../../components/Layout/layout'
+import { CMS_NAME } from '../../config/constants'
 import BlogPost from '../../features/Blog/BlogPost'
 import PostTitle from '../../features/Blog/components/post-title'
-import { getAllPosts, getPostBySlug } from '../../lib/api'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
+import { getAllPosts, getPostBySlug } from '../../utils/api'
+import markdownToHtml from '../../utils/markdownToHtml'
 
 export default function Post({ post, preview }) {
   console.log('post', post);
@@ -16,8 +16,7 @@ export default function Post({ post, preview }) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout preview={preview}>
-
+    <>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -34,7 +33,7 @@ export default function Post({ post, preview }) {
             </article>
           </>
         )}
-    </Layout>
+    </>
   )
 }
 

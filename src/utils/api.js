@@ -1,7 +1,8 @@
 import fs from 'fs'
-import { join } from 'path'
 import matter from 'gray-matter'
-import Alert from '../components/alert';
+import { join } from 'path'
+
+import Alert from '../components/ui/alert';
 
 const postsDirectory = join(process.cwd(), 'public/blog')
 

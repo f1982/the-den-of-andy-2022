@@ -1,35 +1,51 @@
-
 module.exports = {
-  root: true,
   env: {
-    "browser": true,
-    "es6": true,
-    "node": true
+    browser: true,
+    es2021: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
-    "next",
-    // "prettier",
-    // "plugin:prettier/recommended",
+    'plugin:react/recommended',
+    'airbnb',
+    'next',
   ],
+  settings: {
+    next: {
+      rootDir: 'src/',
+    },
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 13,
+    sourceType: 'module',
+  },
   plugins: [
-    "@typescript-eslint",
-    "prettier",
-    "simple-import-sort"
-  ],
-  parser: "@typescript-eslint/parser",
-  ignorePatterns: [
-    "node_modules",
-    "build",
-    "dist",
-    "coverage",
-    "public"
+    'react',
+    '@typescript-eslint',
   ],
   rules: {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
-  }
-}
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-props-no-spreading': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    // 'react/prefer-stateless-function': [
+    //   'off',
+    // ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'function-declaration',
+      },
+    ],
+  },
+};

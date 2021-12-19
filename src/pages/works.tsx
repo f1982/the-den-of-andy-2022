@@ -1,7 +1,10 @@
 import React from "react"
 
-import Layout from "../components/Layout/layout"
+import ProjectList from "../features/Project/ProjectList"
 
 export default function About() {
-  return (<Layout><h1>works</h1></Layout>)
+  return (<>
+    <h1>works</h1>
+    <ProjectList />
+  </>)
 }

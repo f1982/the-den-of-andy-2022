@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../config/constants'
+import { CMS_NAME, HOME_OG_IMAGE_URL } from '../../config/constants'
 
 export default function Meta() {
   return (
@@ -11,7 +11,7 @@ export default function Meta() {
         href="/favicons/apple-touch-icon.png"
       />
       <link
-        rel="icon"
+        rel="icon" 
         type="image/png"
         sizes="32x32"
         href="/favicons/favicon-32x32.png"

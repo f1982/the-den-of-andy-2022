@@ -2,9 +2,9 @@
 import Link from 'next/link'
 import React from 'react'
 
-import Footer from '../footer'
-import Header from '../header'
 import Meta from '../meta'
+import Footer from './footer'
+import Header from './header'
 
 export default function Layout({ children }: { preview?: JSX.Element, children: React.ReactNode }): JSX.Element {
   return (

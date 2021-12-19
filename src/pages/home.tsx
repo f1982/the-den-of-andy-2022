@@ -10,7 +10,7 @@ import SelfIntroShort from '../features/Pragraph/SelfIntroShort'
 function Home(): React.ReactNode {
 
   return (
-    <Layout> 
+    <> 
       <Head>
         <title>Andy personal website </title>
       </Head>
@@ -18,7 +18,7 @@ function Home(): React.ReactNode {
         <SelfIntroShort />
         <Hero />
       </Container> 
-    </Layout> 
+    </> 
   )
 }
 
