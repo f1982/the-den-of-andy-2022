@@ -1,10 +1,6 @@
-
-import Link from 'next/link'
-import React from 'react'
-
-import Meta from '../meta'
-import Footer from './footer'
-import Header from './header'
+import Meta from '../meta';
+import Footer from './Footer';
+import Header from './Header';
 
 export default function Layout({ children }: { preview?: JSX.Element, children: React.ReactNode }): JSX.Element {
   return (
@@ -16,5 +12,5 @@ export default function Layout({ children }: { preview?: JSX.Element, children: 
       </div>
       <Footer />
     </>
-  )
+  );
 }

@@ -1,5 +1,12 @@
-import React from "react"
+import React from 'react';
+import SmallText from '../components/Pragraph/SmallText';
 
 export default function About() {
-  return (<><h1>About Andy</h1></>)
+  return (
+    <div>
+      <SmallText />
+      <SmallText />
+      <SmallText />
+    </div>
+  );
 }

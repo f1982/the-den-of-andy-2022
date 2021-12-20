@@ -1,40 +1,41 @@
-import ErrorPage from 'next/error'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+import ErrorPage from 'next/error';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import Layout from '../../components/Layout/layout'
-import { CMS_NAME } from '../../config/constants'
-import BlogPost from '../../features/Blog/BlogPost'
-import PostTitle from '../../features/Blog/components/post-title'
-import { getAllPosts, getPostBySlug } from '../../utils/api'
-import markdownToHtml from '../../utils/markdownToHtml'
+import Layout from '../../components/Layout/Layout';
+import { CMS_NAME } from '../../config/constants';
+import BlogPost from '../../features/Blog/BlogPost';
+import PostTitle from '../../features/Blog/components/post-title';
+import { getAllPosts, getPostBySlug } from '../../utils/api';
+import markdownToHtml from '../../utils/markdownToHtml';
 
 export default function Post({ post, preview }) {
   console.log('post', post);
-  const router = useRouter()
+  const router = useRouter();
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
+    return <ErrorPage statusCode={404} />;
   }
   return (
     <>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <BlogPost {...post} />
-              
-            </article>
-          </>
-        )}
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <article className="mb-32">
+          <Head>
+            <title>
+              {post.title}
+              {' '}
+              | Next.js Blog Example with
+              {CMS_NAME}
+            </title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <BlogPost {...post} />
+
+        </article>
+      )}
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ params }) {
@@ -46,8 +47,8 @@ export async function getStaticProps({ params }) {
     'content',
     'ogImage',
     'coverImage',
-  ])
-  const content = await markdownToHtml(post.content || '')
+  ]);
+  const content = await markdownToHtml(post.content || '');
 
   return {
     props: {
@@ -56,20 +57,18 @@ export async function getStaticProps({ params }) {
         content,
       },
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug']);
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      }
-    }),
+    paths: posts.map((post) => ({
+      params: {
+        slug: post.slug,
+      },
+    })),
     fallback: false,
-  }
+  };
 }

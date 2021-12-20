@@ -1,6 +1,6 @@
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/index';
-import Layout from '../components/Layout/layout';
+import Layout from '../components/Layout/Layout';
 import '../styles/index.css';
 
 // function MyApp({ Component, pageProps }) {
