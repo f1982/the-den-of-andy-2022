@@ -1,16 +1,40 @@
-import { useRouter } from 'next/router'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Container from '../../components/Layout/container';
 
-import ProjectDetail from '../../features/Project/Project'
+import ProjectDetail from '../../features/Project/Project';
+import { ProjectItemData } from '../../types/projects';
+import { getProjectDetail, getProjects } from '../../utils/api';
 
-
-const ProjectPage = ()=>{
-  const router = useRouter()
-  const {slug} = router.query
-  console.log('slug', slug);
-  return <div>
-    <h2>project detail page</h2>
-    <ProjectDetail slug={slug} title='title test' description='description test' />
-  </div>
+export default function ProjectPage({ detail }:{detail:ProjectItemData}) {
+  const router = useRouter();
+  const { slug } = router.query;
+  return (
+    <Container>
+      <button type="button" onClick={() => router.back()}>Go back</button>
+      <ProjectDetail
+        slug={slug}
+        {...detail}
+      />
+    </Container>
+  );
 }
 
-export default ProjectPage;
+export async function getStaticProps({ params }) {
+  const detail = getProjectDetail(params.slug);
+  return {
+    props: { detail },
+  };
+}
+
+export async function getStaticPaths() {
+  const { projects } = getProjects();
+  return {
+    paths: projects.map((post) => ({
+      params: {
+        slug: post.id,
+      },
+    })),
+    fallback: false,
+  };
+}

@@ -18,6 +18,10 @@ module.exports = {
       lineHeight: {
         tight: 1.2,
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       fontSize: {
         '5xl': '2.5rem',
         '6xl': '2.75rem',
@@ -30,4 +34,4 @@ module.exports = {
       },
     },
   },
-}
+};

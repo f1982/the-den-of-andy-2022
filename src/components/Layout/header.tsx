@@ -15,8 +15,8 @@ const MenuData: MenuItemType[] = [
     label: 'Blog',
   },
   {
-    link: '/works',
-    label: 'Works',
+    link: '/projects',
+    label: 'Projects',
   },
   {
     link: '/hobbies',

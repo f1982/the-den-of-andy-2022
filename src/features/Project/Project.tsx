@@ -1,11 +1,30 @@
-const Project = ({slug, title, description}) => {
+import Image from 'next/image';
+
+function Project({
+  slug, title, cover, description,
+}) {
   return (
-    <div>
-      <h3>title{title}</h3>
+    <article className="mb-32">
+      <h3>
+        title
+        {title}
+      </h3>
       <p>{slug}</p>
-      <p>details{description}</p>
-    </div>
-  )
+      <p>{`/projects/images/${cover}`}</p>
+      <Image
+        alt="cover image"
+        className="object-cover object-center h-full w-full"
+        src={`/projects/images/${cover}`}
+          // src={ImagePath}
+        width={650}
+        height={250}
+      />
+      <p>
+        details
+        {description}
+      </p>
+    </article>
+  );
 }
 
 export default Project;

@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="https://twitter.com/knyttneve" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a className="text-gray-500">
+          <a href="#/facebook" className="text-gray-500">
             <Facebook />
           </a>
           <a className="ml-3 text-gray-500">

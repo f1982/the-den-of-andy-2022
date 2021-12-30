@@ -16,7 +16,7 @@ export default function Post({ post, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <>
+    <div>
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
@@ -34,7 +34,7 @@ export default function Post({ post, preview }) {
 
         </article>
       )}
-    </>
+    </div>
   );
 }
 

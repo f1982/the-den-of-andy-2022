@@ -6,7 +6,7 @@ import HeroPost from '../features/Blog/components/hero-post';
 import MoreStories from '../features/Blog/components/more-stories';
 import { getAllPosts } from '../utils/api';
 
-const Index = function ({ allPosts }) {
+function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
@@ -35,7 +35,7 @@ const Index = function ({ allPosts }) {
       </Container>
     </>
   );
-};
+}
 
 export default Index;
 
