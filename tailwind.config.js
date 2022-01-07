@@ -34,4 +34,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      padding: ['last'],
+      margin: ['responsive', 'hover', 'last'],
+    },
+  },
 };

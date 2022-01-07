@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Container from '../../components/Layout/container';
+import CloseButton from '../../components/ui/CloseButton';
 
 import ProjectDetail from '../../features/Project/Project';
 import { ProjectItemData } from '../../types/projects';
@@ -11,7 +12,8 @@ export default function ProjectPage({ detail }:{detail:ProjectItemData}) {
   const { slug } = router.query;
   return (
     <Container>
-      <button type="button" onClick={() => router.back()}>Go back</button>
+      <CloseButton />
+
       <ProjectDetail
         slug={slug}
         {...detail}

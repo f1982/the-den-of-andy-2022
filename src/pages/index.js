@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import useRenderCount from '../hooks/useRenderCount';
 
 function Index() {
   const { t } = useTranslation();
+  const renderCount = useRenderCount();
 
   return (
     <div className="flex justify-center items-center">
+      <div>{renderCount}</div>
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
 

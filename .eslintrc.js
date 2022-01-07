@@ -47,5 +47,18 @@ module.exports = {
         namedComponents: 'function-declaration',
       },
     ],
+    'react/prop-types': 'off', // Since we do not use prop-types
+    'react/require-default-props': 'off', // Since we do not use prop-types
+    // note you must disable the base rule as it can report incorrect errors
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    //
+    'no-unused-vars': 'off',
+    // '@typescript-eslint/no-unused-vars': [
+    //   'error',
+    //   {
+    //     varsIgnorePattern: '^global$',
+    //   },
+    // ],
   },
 };

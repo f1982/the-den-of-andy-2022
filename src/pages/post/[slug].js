@@ -1,17 +1,17 @@
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-
-import Layout from '../../components/Layout/Layout';
+import CloseButton from '../../components/ui/CloseButton';
 import { CMS_NAME } from '../../config/constants';
 import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/post-title';
 import { getAllPosts, getPostBySlug } from '../../utils/api';
 import markdownToHtml from '../../utils/markdownToHtml';
+import Container from '../../components/Layout/container';
 
 export default function Post({ post, preview }) {
-  console.log('post', post);
   const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -30,6 +30,9 @@ export default function Post({ post, preview }) {
             </title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
+          <Container>
+            <CloseButton />
+          </Container>
           <BlogPost {...post} />
 
         </article>
