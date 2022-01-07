@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-import Avatar from './avatar';
-import CoverImage from './cover-image';
-import DateFormatter from './date-formatter';
+import Avatar from './PostAuthorAvatar';
+import CoverImage from './PostCoverImage';
+import DateFormatter from './PostDateFormatter';
 
-export default function HeroPost({
+export default function PostHero({
   title,
   coverImage,
   date,
@@ -17,7 +17,8 @@ export default function HeroPost({
       <div className="container mx-auto items-start">
         <span className="inline-block py-1 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">CATEGORY</span>
         <Link as={`/post/${slug}`} href="/post/[slug]" passHref>
-          <h2 className="sm:text-3xl text-2xl title-font font-medium mt-4 mb-4">{title}</h2>
+          {/* <h2 className="sm:text-3xl text-2xl title-font font-medium mt-4 mb-4">{title}</h2> */}
+          <h2 className="sm:text-3xl text-2xl title-font font-medium mt-4 mb-4 hover:underline">{title}</h2>
         </Link>
         <CoverImage
           title={title}
@@ -48,9 +49,7 @@ export default function HeroPost({
         </div>
         <DateFormatter dateString={date} />
         <Avatar name={author.name} picture={author.picture} />
-
       </div>
-
     </section>
   );
 }

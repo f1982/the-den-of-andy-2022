@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import CloseButton from '../../components/ui/CloseButton';
 import { CMS_NAME } from '../../config/constants';
 import BlogPost from '../../features/Blog/BlogPost';
-import PostTitle from '../../features/Blog/components/post-title';
+import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/api';
 import markdownToHtml from '../../utils/markdownToHtml';
 import Container from '../../components/Layout/container';

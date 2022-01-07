@@ -1,14 +1,17 @@
 import React from 'react';
 
-import PostHeader from './components/post-header';
+import PostHeader from './components/PostHeader';
 import PostBody from './components/PostBody';
 
 function BlogPost({
   title, coverImage, date, author, content,
-}:
-    { title: string,
-       coverImage: string,
-       date: string, author: string, content: string }) {
+}:{
+    title: string,
+    coverImage: string,
+    date: string,
+    author: string,
+    content: string
+}) {
   return (
     <article className="mb-32">
       <PostHeader

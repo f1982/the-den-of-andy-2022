@@ -1,9 +1,12 @@
+import { t } from 'i18next';
 import React from 'react';
+import Container from '../components/Layout/container';
+import PageTitle from '../components/PageTitle';
 
 export default function About() {
   return (
-    <div>
-      <h1>Contact</h1>
+    <Container>
+      <PageTitle title="Contact" />
       <section className="text-gray-600 body-font relative">
         <div className="absolute inset-0 bg-gray-300" />
         <div className="container px-5 py-24 mx-auto flex">
@@ -23,6 +26,11 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+      <section>
+        <div dangerouslySetInnerHTML={{ __html: t('contact.p1') }} />
+        <div dangerouslySetInnerHTML={{ __html: t('contact.p2') }} />
+        <div dangerouslySetInnerHTML={{ __html: t('contact.p3') }} />
+      </section>
+    </Container>
   );
 }

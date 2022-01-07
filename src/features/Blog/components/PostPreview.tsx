@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import DateFormatter from '../components/date-formatter'
-import Avatar from './avatar'
-import CoverImage from './cover-image'
+import DateFormatter from './PostDateFormatter';
+import Avatar from './PostAuthorAvatar';
+import CoverImage from './PostCoverImage';
 
 export default function PostPreview({
   title,
@@ -24,8 +24,8 @@ export default function PostPreview({
         />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/post/${slug}`} href="/post/[slug]">
-          <a className="hover:underline">{title}</a>
+        <Link as={`/post/${slug}`} href="/post/[slug]" passHref>
+          <span className="hover:underline">{title}</span>
         </Link>
       </h3>
       <div className="text-lg mb-4">
@@ -34,5 +34,5 @@ export default function PostPreview({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
     </div>
-  )
+  );
 }

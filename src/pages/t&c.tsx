@@ -1,5 +1,5 @@
 import React from 'react';
-import SmallText from '../components/Pragraph/SmallText';
+import SmallText from '../components/Paragraph/SmallText';
 import Container from '../components/Layout/container';
 
 export default function PrivacyPolicy() {

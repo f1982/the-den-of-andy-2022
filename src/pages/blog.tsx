@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Intro from '../components/intro';
+import PageTitle from '../components/PageTitle';
 import Container from '../components/Layout/container';
 import { CMS_NAME } from '../config/constants';
-import HeroPost from '../features/Blog/components/hero-post';
-import MoreStories from '../features/Blog/components/more-stories';
+import HeroPost from '../features/Blog/components/PostHero';
+import MoreStories from '../features/Blog/components/MoreStories';
 import { getAllPosts } from '../utils/api';
 
 function Index({ allPosts }) {
@@ -19,7 +19,7 @@ function Index({ allPosts }) {
         </title>
       </Head>
       <Container>
-        <Intro />
+        <PageTitle title="Blog" />
         {heroPost && (
         <HeroPost
           title={heroPost.title}
@@ -31,7 +31,6 @@ function Index({ allPosts }) {
         />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-
       </Container>
     </>
   );

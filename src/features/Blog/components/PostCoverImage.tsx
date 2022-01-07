@@ -2,7 +2,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function CoverImage({
+export default function PostCoverImage({
   title, src, slug, height, width,
 }) {
   const image = (

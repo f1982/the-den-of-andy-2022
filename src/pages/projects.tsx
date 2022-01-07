@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import Submenu from '../features/Menu/Submenu';
-
+import BlogPageTitle from '../components/PageTitle';
 import ProjectList from '../features/Project/ProjectList';
 import { getProjects } from '../utils/api';
+import Container from '../components/Layout/container';
 
 const ProjectSubmenu = [
   {
@@ -24,11 +25,11 @@ export default function Projects({ projects }) {
   const router = useRouter();
   const { type } = router.query;
   return (
-    <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-      <h1 className="text-8xl">projects</h1>
-      <Submenu items={ProjectSubmenu} />
+    <Container>
+      <BlogPageTitle title="Projects" />
+      {/* <Submenu items={ProjectSubmenu} /> */}
       <ProjectList list={projects} type={type as string} />
-    </div>
+    </Container>
   );
 }
 

@@ -38,7 +38,7 @@ const MenuData: MenuItemType[] = [
 function MenuItem({ link, label }: MenuItemType) {
   return (
     <Link href={link} passHref>
-      <button className="px-3 py-1" type="button">{label}</button>
+      <button className="pr-2 py-1" type="button">{label}</button>
     </Link>
   );
 }
