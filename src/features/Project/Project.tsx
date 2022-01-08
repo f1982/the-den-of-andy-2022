@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import ProjectTitle from './components/ProjectTitle';
 
 function Project({
@@ -9,13 +9,13 @@ function Project({
       <ProjectTitle title={title} />
       <p>{slug}</p>
       <p>{`/projects/images/${cover}`}</p>
-      <Image
+      {/* <Image
         alt={`${title} project cover image`}
         className="object-cover object-center h-full w-full"
         src={`/projects/images/${cover}`}
         width={650}
         height={250}
-      />
+      /> */}
       <p>
         details
         {description}

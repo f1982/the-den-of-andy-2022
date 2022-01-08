@@ -19,7 +19,7 @@ export const resources = {
 export const initI18n = (): void => {
   i18n.use(initReactI18next).init({
     lng: languages.CHINESE,
-    debug: true,
+    debug: false,
     ns: [DEFAULT_NAMESPACE],
     defaultNS: DEFAULT_NAMESPACE,
     fallbackLng: languages.ENGLISH,
