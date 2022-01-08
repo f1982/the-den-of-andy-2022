@@ -7,7 +7,7 @@ const enum SNSPlatforms {
   Weibo = 'Weibo'
 }
 
-interface LinkData {
+export interface LinkData {
     id: number,
     name: string,
     type: 'outside'|'inside',
@@ -17,4 +17,4 @@ interface LinkData {
     tag?: string,
     hidden:number,
 }
-export { SNSPlatforms, LinkData };
+export { SNSPlatforms };

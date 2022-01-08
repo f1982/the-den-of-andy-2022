@@ -1,13 +1,27 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-  purge: ['./src/components/**/*.js', './src/pages/**/*.js'],
+  purge: ['./src/**/*.{js.ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        // 'accent-1': '#FAFAFA',
+        // 'accent-2': '#EAEAEA',
+        // 'accent-7': '#333',
+        // success: '#0070f3',
+        // cyan: '#79FFE1',
+        emerald: colors.emerald,
+        yellow: colors.yellow,
+        fuchsia: colors.fuchsia,
+        'th-background': 'var(--background)',
+        'th-background-secondary': 'var(--background-secondary)',
+        'th-foreground': 'var(--foreground)',
+        'th-primary-dark': 'var(--primary-dark)',
+        'th-primary-medium': 'var(--primary-medium)',
+        'th-primary-light': 'var(--primary-light)',
+        'th-accent-dark': 'var(--accent-dark)',
+        'th-accent-medium': 'var(--accent-medium)',
+        'th-accent-light': 'var(--accent-light)',
       },
       spacing: {
         28: '7rem',
@@ -19,8 +33,7 @@ module.exports = {
         tight: 1.2,
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        as: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         '5xl': '2.5rem',

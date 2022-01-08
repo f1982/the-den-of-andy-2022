@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import Logo from '../Logo';
 import ArrowRight from '../Icons/ArrowRight';
+import ThemeChanger from '../ThemeChanger';
+import MyButton from '../ui/Button';
 
 interface MenuItemType {
   link:string,
@@ -38,7 +40,21 @@ const MenuData: MenuItemType[] = [
 function MenuItem({ link, label }: MenuItemType) {
   return (
     <Link href={link} passHref>
-      <button className="pr-2 py-1" type="button">{label}</button>
+      <button
+        className="
+        font-as
+        font-bold
+        px-2
+        py-2
+        rounded
+        hover:bg-th-accent-light
+        hover:text-white
+        "
+        type="button"
+      >
+        {label}
+
+      </button>
     </Link>
   );
 }
@@ -57,11 +73,14 @@ export default function Header() {
             ))
           }
         </nav>
-        <button type="button" className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+
+        <MyButton type="primary">
           Button
           <ArrowRight />
-        </button>
+
+        </MyButton>
       </div>
+      <ThemeChanger />
     </header>
   );
 }

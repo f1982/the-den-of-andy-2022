@@ -73,7 +73,19 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
     {props.type === 'primary' ? (
       <button
         type="button"
-        className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
+        className="
+          inline-flex
+          text-th-primary-medium
+          hover:text-th-primary-dark
+          bg-th-accent-medium
+          hover:bg-th-accent-light
+          border-0
+          py-2
+          px-6
+          focus:outline-none
+          rounded
+          text-lg
+        "
       >
         {props.children}
 
@@ -81,7 +93,20 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
     ) : (
       <button
         type="button"
-        className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+        className="
+          ml-4
+          inline-flex
+          text-th-primary-medium
+          hover:text-th-primary-dark
+          bg-th-accent-medium
+          hover:bg-th-accent-light
+          border-0
+          py-2
+          px-6
+          focus:outline-none
+          rounded
+          text-lg
+        "
       >
         {props.children}
       </button>

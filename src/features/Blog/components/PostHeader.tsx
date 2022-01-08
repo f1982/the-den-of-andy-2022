@@ -4,7 +4,7 @@ import DateFormatter from './PostDateFormatter';
 import PostTitle from './PostTitle';
 
 export default function PostHeader({
-  title, coverImage, date, author,
+  title, coverImage, date, author, slug,
 }) {
   return (
     <>
@@ -13,7 +13,7 @@ export default function PostHeader({
         <Avatar name={author.name} picture={author.picture} />
       </div>
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} height={620} width={1240} />
+        <CoverImage slug={slug} title={title} src={coverImage} height={620} width={1240} />
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">

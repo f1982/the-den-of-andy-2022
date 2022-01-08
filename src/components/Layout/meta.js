@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../../config/constants'
+import { CMS_NAME, HOME_OG_IMAGE_URL } from '../../config/constants';
 
 export default function Meta() {
   return (
@@ -11,7 +11,7 @@ export default function Meta() {
         href="/favicons/apple-touch-icon.png"
       />
       <link
-        rel="icon" 
+        rel="icon"
         type="image/png"
         sizes="32x32"
         href="/favicons/favicon-32x32.png"
@@ -28,7 +28,7 @@ export default function Meta() {
         href="/favicons/safari-pinned-tab.svg"
         color="#000000"
       />
-      <link rel="shortcut icon" href="/favicons/favicon.ico" />
+      <link rel="icon" href="/favicons/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
@@ -39,5 +39,5 @@ export default function Meta() {
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
-  )
+  );
 }

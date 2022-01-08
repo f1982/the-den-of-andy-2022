@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -18,11 +18,13 @@
     "gray-matter": "4.0.2",
     "i18next": "^21.6.2",
     "next": "latest",
+    "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.1",
     "remark": "13.0.0",
-    "remark-html": "13.0.1"
+    "remark-html": "13.0.1",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
@@ -45,7 +47,6 @@
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-config-styled-components": "0.1.1",
-    "tailwindcss": "^2.0.2",
     "typescript": "^4.5.3"
   },
   "husky": {

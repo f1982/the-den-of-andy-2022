@@ -20,8 +20,10 @@
     "module": "esnext"
   },
   "include": [
-    "src"
-, "_document.js", "_document.js"  ],
+    "src",
+    "react-app.d.ts",
+    "_document.js"
+  ],
   "exclude": [
     "node_modules"
   ]

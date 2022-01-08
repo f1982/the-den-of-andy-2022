@@ -28,7 +28,7 @@ export default function ProjectItem({
           height={250}
         />
       </div>
-      <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">{title}</h2>
+      <h2 className="title-font text-2xl font-bold font-as text-gray-900 mt-6 mb-3">{title}</h2>
       <p className="leading-relaxed text-base">{description}</p>
       <p className="leading-relaxed text-base">{type}</p>
       <p className="leading-relaxed text-base">{platform}</p>
