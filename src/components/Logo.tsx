@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
-// import LOGO from '../assets/logo.png';
+import NextImage from 'next/image';
+// import LogoImage from '../assets/logo.png';
+// import LogoImage from '../../public/static/images/logo.png';
 import Image from './ui/Image';
 
 // const myLoader = ({ src, width, quality }) => src;
@@ -25,6 +27,10 @@ export default function Logo() {
             height={100}
             alt="andy space"
           />
+          {/* <NextImage
+            src={LogoImage}
+            alt="andy space"
+          /> */}
         </a>
       </Link>
     </div>

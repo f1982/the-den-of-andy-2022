@@ -21,7 +21,7 @@
   },
   "include": [
     "src",
-    "react-app.d.ts",
+    "src/index.d.ts",
     "_document.js"
   ],
   "exclude": [

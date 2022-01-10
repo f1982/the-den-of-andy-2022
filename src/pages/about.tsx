@@ -12,6 +12,7 @@ export default function About() {
   return (
     <div>
       <SmallText
+        image="/static/images/about-andy-back.jpg"
         title={t('about.whoIsAndyTitle')}
         description={t('about.whoIsAndyDescription')}
       />

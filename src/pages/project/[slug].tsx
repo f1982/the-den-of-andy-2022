@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Container from '../../components/Layout/container';
 import CloseButton from '../../components/ui/CloseButton';
 
-import ProjectDetail from '../../features/Project/Project';
+import ProjectDetail from '../../features/Project/ProjectDetail';
 import { ProjectItemData } from '../../types/projects';
 import { getProjectDetail, getProjects } from '../../utils/api';
 
@@ -13,7 +13,6 @@ export default function ProjectPage({ detail }:{detail:ProjectItemData}) {
   return (
     <Container>
       <CloseButton />
-
       <ProjectDetail
         slug={slug}
         {...detail}
