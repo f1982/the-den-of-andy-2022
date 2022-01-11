@@ -10,9 +10,11 @@ module.exports = {
         // 'accent-7': '#333',
         // success: '#0070f3',
         // cyan: '#79FFE1',
+        // the following colurs are used in global.css for theme
         emerald: colors.emerald,
         yellow: colors.yellow,
         fuchsia: colors.fuchsia,
+        // these configuration are using for theme by global.css too
         'th-background': 'var(--background)',
         'th-background-secondary': 'var(--background-secondary)',
         'th-foreground': 'var(--foreground)',
