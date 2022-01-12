@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classNames from 'classnames';
-import SocialLinks from '../SocialLinks/SocialLinks';
-import Logo from '../Logo';
+import SocialLinks from './SocialLinks/SocialLinks';
+import Logo from './Logo';
 
 function Copyright() {
   return (
