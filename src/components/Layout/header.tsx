@@ -5,12 +5,12 @@ import ArrowRight from '../Icons/ArrowRight';
 import ThemeChanger from '../ThemeChanger';
 import MyButton from '../ui/Button';
 
-interface MenuItemType {
+interface MenuItemData {
   link:string,
   label:string
 }
 
-const MenuData: MenuItemType[] = [
+const MenuData: MenuItemData[] = [
   {
     link: '/home',
     label: 'Home',
@@ -37,7 +37,7 @@ const MenuData: MenuItemType[] = [
   },
 ];
 
-function MenuItem({ link, label }: MenuItemType) {
+function MenuItem({ link, label }: MenuItemData) {
   return (
     <Link href={link} passHref>
       <button
