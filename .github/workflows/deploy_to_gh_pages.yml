@@ -16,11 +16,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.5.1
     
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
@@ -28,13 +28,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - run: npm ci
-    
-    - name: Build my website
+    - name: Install and build website
+      run: npm ci
       run: npm run build && touch ./out/.nojekyll
       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.2
       with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages # The branch the action should deploy to.
         folder: build # The folder the action should deploy.
