@@ -1,5 +1,8 @@
 # Andy's personal website v2022
 
+# deploy
+
+to GitHub pages
 
 # Libraries
 
