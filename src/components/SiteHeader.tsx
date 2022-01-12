@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import Logo from '../Logo';
-import ArrowRight from '../Icons/ArrowRight';
-import ThemeChanger from '../ThemeChanger';
-import MyButton from '../ui/Button';
+import Logo from './Logo';
+import ArrowRight from './Icons/ArrowRight';
+import ThemeChanger from './ThemeChanger';
+import MyButton from './ui/Button';
 
 interface MenuItemData {
   link:string,

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Meta from '../meta';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from '../SiteFooter';
+import Header from '../SiteHeader';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
