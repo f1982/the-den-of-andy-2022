@@ -35,8 +35,8 @@ jobs:
       run: npm run build && touch ./out/.nojekyll
       
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.2.2
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages # The branch the action should deploy to.
         folder: build # The folder the action should deploy.
