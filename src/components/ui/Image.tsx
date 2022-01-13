@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import NextImage from 'next/image';
 import cn from 'classnames';
+import { useRouter } from 'next/router';
 
 export default function ImageComponent({
   src,
@@ -16,13 +17,14 @@ export default function ImageComponent({
   alt:string,
   className?:string
 }) {
+  const { basePath } = useRouter();
   if (
     src.startsWith('/')
   ) {
     return (
       <img
         className={cn('object-cover', className)}
-        src={src}
+        src={`${basePath}${src}`}
         width={width}
         height={height}
         alt={alt}
@@ -34,7 +36,7 @@ export default function ImageComponent({
   return (
     <NextImage
       className={cn('object-cover', className)}
-      src={src}
+      src={`${basePath}${src}`}
       width={width}
       height={height}
       alt={alt}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import useRenderCount from '../hooks/useRenderCount';
+import withTransition from '../hooks/withTransition';
 
 function Index() {
   const { t } = useTranslation();
@@ -28,4 +29,5 @@ function Index() {
   );
 }
 
+// export default withTransition(Index);
 export default Index;

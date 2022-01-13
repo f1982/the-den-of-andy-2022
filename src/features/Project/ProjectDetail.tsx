@@ -1,4 +1,5 @@
 // import Image from 'next/image';
+import { motion } from 'framer-motion';
 import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/ui/Image';
 import Carousel from '../../components/Carousel';
@@ -18,13 +19,15 @@ function Project({
       <ProjectTitle title={title} />
       <p>{slug}</p>
       <p>{`/projects/images/${cover}`}</p>
-      <Image
-        alt={`${title} project cover image`}
-        className="object-center w-full"
-        src={`/projects/images/${cover}`}
-        width={650}
-        height={250}
-      />
+      <motion.figure layoutId="project-cover">
+        <Image
+          alt={`${title} project cover image`}
+          className="object-center w-full"
+          src={`/projects/images/${cover}`}
+          width={650}
+          height={250}
+        />
+      </motion.figure>
       {getCarousel(images)}
       <p>
         details

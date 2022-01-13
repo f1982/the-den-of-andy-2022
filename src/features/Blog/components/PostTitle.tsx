@@ -1,6 +1,11 @@
+import { motion } from 'framer-motion';
+
 export default function PostTitle({ children }) {
   return (
-    <h1 className="
+    <motion.h1
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      className="
         text-6xl
         md:text-7xl
         lg:text-8xl
@@ -13,8 +18,9 @@ export default function PostTitle({ children }) {
         text-center
         md:text-left
       "
+      layoutId="post-title"
     >
       {children}
-    </h1>
+    </motion.h1>
   );
 }

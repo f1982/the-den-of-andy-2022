@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Avatar from './PostAuthorAvatar';
 import CoverImage from './PostCoverImage';
 import DateFormatter from './PostDateFormatter';
@@ -13,7 +14,9 @@ export default function PostHeader({
         <Avatar name={author.name} picture={author.picture} />
       </div>
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage slug={slug} title={title} src={coverImage} height={620} width={1240} />
+        <motion.figure layoutId="project-cover">
+          <CoverImage slug={slug} title={title} src={coverImage} height={620} width={1240} />
+        </motion.figure>
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
