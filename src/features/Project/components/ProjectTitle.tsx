@@ -1,6 +1,9 @@
-export default function ProjectTitle({ title }:{title:string}) {
+import { motion } from 'framer-motion';
+
+export default function ProjectTitle({ id, title }:{id: string, title:string}) {
   return (
-    <h1 className="
+    <motion.h1
+      className="
       text-6xl
       md:text-5xl
       lg:text-7xl
@@ -12,8 +15,9 @@ export default function ProjectTitle({ title }:{title:string}) {
       text-center
       md:text-left
       "
+      layoutId={`project-title-${id}`}
     >
       {title}
-    </h1>
+    </motion.h1>
   );
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classNames from 'classnames';
 import SocialLinks from './SocialLinks/SocialLinks';
-import Logo from './Logo';
+import ThemeChanger from './ThemeChanger';
 
 function Copyright() {
   return (
@@ -45,6 +45,7 @@ export default function Footer() {
         <TermsAndConditions />
         <SocialLinks />
       </div>
+      <ThemeChanger />
     </footer>
   );
 }
