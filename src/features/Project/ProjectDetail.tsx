@@ -16,10 +16,15 @@ function Project({
 
   return (
     <article className="mb-32">
-      <ProjectTitle title={title} />
+      <ProjectTitle id={slug} title={title} />
       <p>{slug}</p>
       <p>{`/projects/images/${cover}`}</p>
-      <motion.figure layoutId="project-cover">
+      <motion.figure
+        layoutId={`project-cover-${slug}`}
+        initial={{ scale: 1, opacity: 1 }}
+        // initial={{ scale: 0.8, opacity: 0 }}
+        // animate={{ scale: 1, opacity: 1 }}
+      >
         <Image
           alt={`${title} project cover image`}
           className="object-center w-full"

@@ -1,17 +1,35 @@
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import React from 'react';
 
-import Meta from '../meta';
+import Metadata from '../Metadata';
 import Footer from '../SiteFooter';
 import Header from '../SiteHeader';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const { pathname } = useRouter();
+
+  const spring = {
+    type: 'spring',
+    damping: 20,
+    stiffness: 100,
+    when: 'afterChildren',
+  };
+
   return (
     <>
-      <Meta />
+      <Metadata />
       <Header />
-      <div>
-        <main>{children}</main>
-      </div>
+      <motion.main
+        transition={spring}
+        key={pathname}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -100, opacity: 0 }}
+        id="page-transition-container"
+      >
+        {children}
+      </motion.main>
       <Footer />
     </>
   );

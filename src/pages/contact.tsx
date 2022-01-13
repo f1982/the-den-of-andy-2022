@@ -2,12 +2,12 @@
 import { t } from 'i18next';
 import React from 'react';
 import Container from '../components/Layout/container';
-import PageTitle from '../components/PageTitle';
+import Headline from '../components/Headline';
 
 export default function About() {
   return (
     <Container>
-      <PageTitle title="Contact" />
+      <Headline title="Contact" />
       <section className="text-gray-600 body-font relative">
         <div className="absolute inset-0 bg-gray-300" />
         <div className="container px-5 py-24 mx-auto flex">

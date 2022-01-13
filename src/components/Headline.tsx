@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function PageTitle({ title }:{title:string}) {
+export default function Headline({ title }:{title:string}) {
   return (
     <section
       className="

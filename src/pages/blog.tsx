@@ -1,25 +1,21 @@
 import Head from 'next/head';
-import PageTitle from '../components/PageTitle';
+import { t } from 'i18next';
+import Headline from '../components/Headline';
 import Container from '../components/Layout/container';
 import { CMS_NAME } from '../config/constants';
 import HeroPost from '../features/Blog/components/PostHero';
 import MoreStories from '../features/Blog/components/MoreStories';
 import { getAllPosts } from '../utils/api';
+import TabTitle from '../components/TabTitle';
 
 function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Head>
-        <title>
-          Next.js Blog Example with
-          {' '}
-          {CMS_NAME}
-        </title>
-      </Head>
+      <TabTitle i18nTitle="blog.pageTitle" />
       <Container>
-        <PageTitle title="Blog" />
+        <Headline title={t('blog.headline')} />
         {heroPost && (
         <HeroPost
           title={heroPost.title}
