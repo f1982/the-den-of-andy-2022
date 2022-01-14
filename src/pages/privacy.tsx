@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+import { t } from 'i18next';
 import React from 'react';
 import Container from '../components/Layout/container';
 import TabTitle from '../components/SiteSEO';
