@@ -2,12 +2,12 @@
 import React from 'react';
 import SmallText from '../components/Paragraph/SmallText';
 import Container from '../components/Layout/container';
-import TabTitle from '../components/TabTitle';
+import TabTitle from '../components/SiteSEO';
 
 export default function PrivacyPolicy() {
   return (
     <>
-      <TabTitle i18nTitle="tc.pageTitle" />
+      <TabTitle pageTitle={t('tc.pageTitle')} />
       <Container>
         <h1>Terms and Conditions</h1>
         <p>Last updated: January 02, 2022</p>

@@ -4,12 +4,12 @@ import Hero from '../components/Heros/Hero';
 import ColumnHero from '../components/Heros/ColumnHero';
 import Headline from '../components/Headline';
 import Container from '../components/Layout/container';
-import TabTitle from '../components/TabTitle';
+import TabTitle from '../components/SiteSEO';
 
 export default function About() {
   return (
     <>
-      <TabTitle i18nTitle="hobbies.pageTitle" />
+      <TabTitle pageTitle={t('hobbies.pageTitle')} />
       <Container>
         <Headline title={t('hobbies.headline')} />
         <Hero />

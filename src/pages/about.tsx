@@ -3,7 +3,7 @@ import React from 'react';
 import Headline from '../components/Headline';
 import Container from '../components/Layout/container';
 import SmallText from '../components/Paragraph/SmallText';
-import TabTitle from '../components/TabTitle';
+import TabTitle from '../components/SiteSEO';
 
 const getYears = (birthYear: number) => {
   const d = new Date();
@@ -14,7 +14,7 @@ const getYears = (birthYear: number) => {
 export default function About() {
   return (
     <>
-      <TabTitle i18nTitle="about.pageTitle" />
+      <TabTitle pageTitle={t('about.pageTitle')} />
       <Container>
         <Headline title={t('about.headline')} />
 

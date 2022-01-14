@@ -6,7 +6,7 @@ function CloseButton() {
   const router = useRouter();
 
   return (
-    <MyButton type="primary" onClick={() => router.back()}>Go back</MyButton>
+    <MyButton type="primary" onClick={() => router.back()}>X</MyButton>
 
   );
 }

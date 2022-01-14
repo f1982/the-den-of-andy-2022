@@ -6,6 +6,8 @@ import Metadata from '../Metadata';
 import Footer from '../SiteFooter';
 import Header from '../SiteHeader';
 
+const WELCOME_PATHNAME = '/';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useRouter();
 
@@ -19,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Metadata />
-      <Header />
+      {pathname !== WELCOME_PATHNAME && <Header />}
       <motion.main
         transition={spring}
         key={pathname}
@@ -30,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         {children}
       </motion.main>
-      <Footer />
+      {pathname !== WELCOME_PATHNAME && <Footer />}
     </>
   );
 }

@@ -29,13 +29,14 @@ module.exports = {
         28: '7rem',
       },
       letterSpacing: {
-        tighter: '-.04em',
+        tighter: '-0.08em',
       },
       lineHeight: {
         tight: 1.2,
       },
       fontFamily: {
-        as: ['Montserrat', 'sans-serif'],
+        as: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
       },
       fontSize: {
         '5xl': '2.5rem',

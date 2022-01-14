@@ -22,18 +22,16 @@ export default function PostCoverImage(
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/post/${slug}`} href="/post/[slug]">
-          <a aria-label={title}>
-            <Image
-              src={src}
-              alt={`Cover Image for ${title}`}
+      // <Link as={`/post/${slug}`} href="/post/[slug]">
+        <Image
+          src={src}
+          alt={`Cover Image for ${title}`}
               // className={cn('shadow-sm', 'hover:shadow-md transition-shadow duration-200')}
               // layout="responsive"
-              width={width}
-              height={height}
-            />
-          </a>
-        </Link>
+          width={width}
+          height={height}
+        />
+      // </Link>
       ) : (
         <p>image</p>
       )}
