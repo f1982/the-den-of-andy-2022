@@ -6,14 +6,14 @@ import { CMS_NAME } from '../config/constants';
 import HeroPost from '../features/Blog/components/PostHero';
 import MoreStories from '../features/Blog/components/MoreStories';
 import { getAllPosts } from '../utils/api';
-import TabTitle from '../components/TabTitle';
+import TabTitle from '../components/SiteSEO';
 
 function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <TabTitle i18nTitle="blog.pageTitle" />
+      <TabTitle pageTitle={t('blog.pageTitle')} />
       <Container>
         <Headline title={t('blog.headline')} />
         {heroPost && (

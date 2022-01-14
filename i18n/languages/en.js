@@ -55,6 +55,12 @@ const en = {
       p2: 'If you want to hire a software energeer, you can get my CV here and you can also can contact me via LinkedIn',
       p3: 'If you would like to get more updates about me, you can follow me via social networks. Such asTwitter or Weibo, I also update some information in my Telegram channel, I upload some videos about my life and experience in Youtube regularly, welcome to subscribe.',
     },
+    privacy: {
+      pageTitle: 'Privacy Policy',
+    },
+    tc: {
+      pageTitle: 'Terms & Conditions',
+    },
   },
 };
 

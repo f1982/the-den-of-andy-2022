@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
     "start": "next start",
+    "build": "next build && next export",
     "clean": "rm -rf node_modules",
     "lint": "next lint"
   },
@@ -20,6 +20,7 @@
     "gray-matter": "4.0.2",
     "i18next": "^21.6.2",
     "next": "latest",
+    "next-seo": "^4.28.1",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -43,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.4",
+    "next-sitemap": "^1.9.9",
     "postcss": "8.2.13",
     "prettier": "2.5.1",
     "stylelint": "13.8.0",

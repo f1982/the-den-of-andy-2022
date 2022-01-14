@@ -41,8 +41,6 @@ function MenuItem({ link, label }: MenuItemData) {
     <Link href={link} passHref>
       <button
         className="
-        font-as
-        font-bold
         px-2
         py-2
         rounded

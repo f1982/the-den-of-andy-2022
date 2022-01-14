@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/ui/Image';
@@ -35,7 +34,6 @@ function Project({
       </motion.figure>
       {getCarousel(images)}
       <p>
-        details
         {description}
       </p>
     </article>

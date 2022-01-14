@@ -29,7 +29,7 @@ function TermsAndConditions() {
         </Link>
       </li>
       <li>
-        <Link href="/t&c" passHref>
+        <Link href="/privacy" passHref>
           <button type="button" className="text-gray-500">Privacy Policy</button>
         </Link>
       </li>

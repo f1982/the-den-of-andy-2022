@@ -13,9 +13,11 @@ export default function Headline({ title }:{title:string}) {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2 }}
         className="
-        text-6xl text-th-accent-medium
-        font-as md:text-8xl font-bold
-        tracking-tighter leading-tight
+        text-6xl
+        md:text-8xl
+        font-bold
+        tracking-tighter
+        leading-tight
         md:pr-8"
       >
         {title}
