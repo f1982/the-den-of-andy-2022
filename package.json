@@ -1,7 +1,7 @@
 {
   "name": "andy-personal-webpage",
   "homepage": "https://andycao.me",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Andy's personal website v2022",
   "license": "MIT",
   "authors": "Andy Cao <caojundan@gmail.com> (https://github.com/f1982)",
@@ -61,5 +61,9 @@
       "pre-commit": "npm run test:no-watch",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "volta": {
+    "node": "16.13.2",
+    "yarn": "1.22.17"
   }
 }

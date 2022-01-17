@@ -6,6 +6,11 @@ import useRenderCount from '../hooks/useRenderCount';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
 
+function getNPMVersion(){
+  return process.env.NEXT_PUBLIC_APP_VERSION;
+  // return 'process.env.VERSION';
+  // return process.env.VERSION;
+}
 function Index() {
   const { t } = useTranslation();
   const renderCount = useRenderCount();
@@ -13,9 +18,10 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
-      <div className="flex justify-center items-center">
-        <div>{renderCount}</div>
-        <section className="text-gray-600 body-font" />
+      <div>
+        
+        {/* <section className="text-gray-600 body-font" /> */}
+        
         <DefaultWelcome
           greeting={t('greeting')}
           link={(
@@ -24,6 +30,8 @@ function Index() {
             </Link>
           )}
         />
+        <div>Render times: {renderCount}</div>
+        <div>Version: {getNPMVersion()}</div>
       </div>
     </>
   );
