@@ -6,12 +6,32 @@ import useRenderCount from '../hooks/useRenderCount';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
 
-function getNPMVersion() {
-  return process.env.NEXT_PUBLIC_APP_VERSION;
+function DebugInfo() {
+  const renderCount = useRenderCount();
+
+  return (
+    <div>
+      <div>
+        App Version:
+        {' '}
+        {process.env.NEXT_PUBLIC_APP_VERSION}
+      </div>
+      <div>
+        Site URL:
+        {' '}
+        {process.env.NEXT_PUBLIC_APP_SITE_URL}
+      </div>
+      <div>
+        Render times:
+        {' '}
+        {renderCount}
+      </div>
+    </div>
+  );
 }
+
 function Index() {
   const { t } = useTranslation();
-  const renderCount = useRenderCount();
 
   return (
     <>
@@ -39,15 +59,9 @@ function Index() {
             </Link>
           )}
         />
+
         <div>
-          Render times:
-          {' '}
-          {renderCount}
-        </div>
-        <div>
-          Version:
-          {' '}
-          {getNPMVersion()}
+          {DebugInfo()}
         </div>
       </div>
     </>
