@@ -6,10 +6,8 @@ import useRenderCount from '../hooks/useRenderCount';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
 
-function getNPMVersion(){
+function getNPMVersion() {
   return process.env.NEXT_PUBLIC_APP_VERSION;
-  // return 'process.env.VERSION';
-  // return process.env.VERSION;
 }
 function Index() {
   const { t } = useTranslation();
@@ -19,19 +17,38 @@ function Index() {
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
       <div>
-        
+
         {/* <section className="text-gray-600 body-font" /> */}
-        
+
         <DefaultWelcome
           greeting={t('greeting')}
           link={(
             <Link href="/home" passHref>
-              <a className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Go</a>
+              <a className="
+              inline-flex
+              text-white
+              bg-blue-500
+              border-0 py-2 px-6
+              focus:outline-none
+              hover:bg-blue-600
+              rounded text-lg
+              "
+              >
+                Go
+              </a>
             </Link>
           )}
         />
-        <div>Render times: {renderCount}</div>
-        <div>Version: {getNPMVersion()}</div>
+        <div>
+          Render times:
+          {' '}
+          {renderCount}
+        </div>
+        <div>
+          Version:
+          {' '}
+          {getNPMVersion()}
+        </div>
       </div>
     </>
   );

@@ -474,7 +474,7 @@
   dependencies:
     "@types/node" "*"
 
-"@typescript-eslint/eslint-plugin@^5.7.0":
+"@typescript-eslint/eslint-plugin@^4.0.0 || ^5.0.0", "@typescript-eslint/eslint-plugin@^5.7.0":
   "integrity" "sha512-8RTGBpNn5a9M628wBPrCbJ+v3YTEOE2qeZb7TDkGKTDXSj36KGRg92SpFFaR/0S3rSXQxM0Og/kV9EyadsYSBg=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.7.0.tgz"
   "version" "5.7.0"
@@ -488,7 +488,7 @@
     "semver" "^7.3.5"
     "tsutils" "^3.21.0"
 
-"@typescript-eslint/experimental-utils@5.7.0":
+"@typescript-eslint/experimental-utils@^5.0.0", "@typescript-eslint/experimental-utils@5.7.0":
   "integrity" "sha512-u57eZ5FbEpzN5kSjmVrSesovWslH2ZyNPnaXQMXWgH57d5+EVHEt76W75vVuI9qKZ5BMDKNfRN+pxcPEjQjb2A=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/experimental-utils/-/experimental-utils-5.7.0.tgz"
   "version" "5.7.0"
@@ -1574,6 +1574,13 @@
     "object.values" "^1.1.5"
     "resolve" "^1.20.0"
     "tsconfig-paths" "^3.11.0"
+
+"eslint-plugin-jest@^25.7.0":
+  "integrity" "sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-jest/-/eslint-plugin-jest-25.7.0.tgz"
+  "version" "25.7.0"
+  dependencies:
+    "@typescript-eslint/experimental-utils" "^5.0.0"
 
 "eslint-plugin-jsx-a11y@^6.5.1":
   "integrity" "sha512-sVCFKX9fllURnXT2JwLN5Qgo24Ug5NF6dxhkmxsMEUZhXRcGg+X3e1JbJ84YePQKBl5E0ZjAH5Q4rkdcGY99+g=="
