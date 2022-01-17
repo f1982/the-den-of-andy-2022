@@ -11,7 +11,7 @@ describe('Navigation', () => {
     cy.url().should('include', '/home');
 
     // The new page should contain an h1 with "About page"
-    cy.get('h2').contains('Phoebe Caulfield2');
+    cy.get('h2').contains('Phoebe Caulfield');
 
     
   });
