@@ -61,5 +61,9 @@
       "pre-commit": "npm run test:no-watch",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "volta": {
+    "node": "16.13.2",
+    "yarn": "1.22.17"
   }
 }
