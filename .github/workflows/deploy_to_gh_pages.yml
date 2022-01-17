@@ -34,9 +34,13 @@ jobs:
     # run e2e test 
     - name: Run Cypress e2e test
       uses: cypress-io/github-action@v2
+      with:
+        build: npm run build
+        start: npm start
+      
 
     - name: Build the website
-      run: npm run build && touch ./out/.nojekyll
+      run: npm run build && npm run export && touch ./out/.nojekyll
       
     - name: Deploy webpages to GitHub pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4
