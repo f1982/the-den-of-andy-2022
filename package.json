@@ -62,7 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:no-watch",
+      "pre-commit": "npm run lint:no-watch",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
