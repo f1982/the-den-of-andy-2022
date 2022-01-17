@@ -1,2 +1,9 @@
-User-Agent: *
+# *
+User-agent: *
 Allow: /
+
+# Host
+Host: undefined
+
+# Sitemaps
+Sitemap: undefined/sitemap.xml
