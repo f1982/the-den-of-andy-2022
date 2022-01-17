@@ -20,6 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Checkout codebase
     - uses: actions/checkout@v2
     
     - name: Use Node.js ${{ matrix.node-version }}
@@ -28,19 +29,21 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - name: Install packages
+    - name: Install npm packages
       run: npm ci
+
+    # run e2e test 
+    - name: Run Cypress e2e test
+      uses: cypress-io/github-action@v2
 
     - name: Build the website
       run: npm run build && touch ./out/.nojekyll
       
-    - name: Deploy 🚀
+    - name: Deploy webpages to GitHub pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages # The branch the action should deploy to.
         folder: out # The folder the action should deploy.
     
-    # run e2e test 
-    - name: Cypress e2e test
-      uses: cypress-io/github-action@v2
+    
