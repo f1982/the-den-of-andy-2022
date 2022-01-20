@@ -1,5 +1,9 @@
 # Andy's personal website v2022
 
+# dev
+
+`regenerate package-lock.json`
+
 # deploy
 
 to GitHub pages
