@@ -9,24 +9,18 @@ const projectJSONfile = join(process.cwd(), 'public/projects/all.json');
 
 export function getPostSlugs() {
   const files = fs.readdirSync(postsDirectory);
-  // console.log('files', files);
   return files;
 }
 
 export function getProjects() {
   const fullPath = join(projectJSONfile);
-  // console.log('fullPath', fullPath);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  // console.log('fileContents', fileContents.projects);
   const json = JSON.parse(fileContents);
-  // console.log('projects: ', json.projects);
   return json.data;
 }
 
 export function getProjectDetail(slug) {
-  console.log('getProjectDetail');
   const { projects } = getProjects();
-  console.log('projects', projects);
   return projects.find((item) => item.id === slug);
 }
 
