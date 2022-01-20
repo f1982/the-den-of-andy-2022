@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import classNames from 'classnames';
+import Link from 'next/link';
 import SocialLinks from './SocialLinks/SocialLinks';
 import ThemeChanger from './ThemeChanger';
 
@@ -13,27 +13,29 @@ function Copyright() {
 
 function TermsAndConditions() {
   return (
-    <ul className={classNames(
-      'inline-flex',
-      'text-sm',
-      'sm:ml-auto',
-      'sm:mt-0',
-      'mt-4',
-      'justify-center',
-      'sm:justify-start',
-    )}
-    >
-      <li className="pr-4">
-        <Link href="/t&c" passHref>
-          <button type="button" className="text-gray-500">Terms and Conditions</button>
-        </Link>
-      </li>
-      <li>
-        <Link href="/privacy" passHref>
-          <button type="button" className="text-gray-500">Privacy Policy</button>
-        </Link>
-      </li>
-    </ul>
+    <div>
+      <ul className={classNames(
+        'inline-flex',
+        'text-sm',
+        'sm:ml-auto',
+        'sm:mt-0',
+        'mt-4',
+        'justify-center',
+        'sm:justify-start',
+      )}
+      >
+        <li className="pr-4">
+          <Link href="/t&c" passHref>
+            <button type="button" className="text-gray-500">Terms and Conditions</button>
+          </Link>
+        </li>
+        <li>
+          <Link href="/privacy" passHref>
+            <button type="button" className="text-gray-500">Privacy Policy</button>
+          </Link>
+        </li>
+      </ul>
+    </div>
   );
 }
 

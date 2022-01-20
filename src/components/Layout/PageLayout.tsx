@@ -1,22 +1,29 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Metadata from '../Metadata';
 import Footer from '../SiteFooter';
 import Header from '../SiteHeader';
+import { logPageView } from '../../utils/SiteAnalystic';
 
 const WELCOME_PATHNAME = '/';
 
+const spring = {
+  type: 'spring',
+  damping: 20,
+  stiffness: 100,
+  when: 'afterChildren',
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useRouter();
-
-  const spring = {
-    type: 'spring',
-    damping: 20,
-    stiffness: 100,
-    when: 'afterChildren',
-  };
+  useEffect(() => {
+    // analysis the page view every time page changes
+    if (pathname !== '/') {
+      logPageView(pathname);
+    }
+  }, [pathname]);
 
   return (
     <>
