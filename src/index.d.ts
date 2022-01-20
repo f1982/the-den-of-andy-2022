@@ -1,9 +1,7 @@
-// declare global {
-  interface Window {
-    adsbygoogle: {[key: string]: unknown}[]
-    gtag:{[key: string]: unknown}[]
-  }
-// }
+interface Window {
+  adsbygoogle: {[key: string]: unknown}[]
+  gtag:{[key: string]: unknown}[]
+}
 
 // use css module in the project
 // need to add this file to tsconfig.json, put it in the include array
