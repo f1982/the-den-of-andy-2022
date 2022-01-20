@@ -12,7 +12,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "export": "next export",
-    "clean": "rm -rf node_modules",
+    "clean": "rm -rf node_modules && rm yarn.lock && rm package-lock.json",
     "lint": "next lint",
     "cypress": "cypress open",
     "prepare": "husky install"
