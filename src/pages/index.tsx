@@ -1,34 +1,11 @@
 import Link from 'next/link';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { DefaultSeo } from 'next-seo';
-import DefaultWelcome from '../features/Welcome/DefaultWelcome';
-import useRenderCount from '../hooks/useRenderCount';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
-
-function DebugInfo() {
-  const renderCount = useRenderCount();
-
-  return (
-    <div>
-      <div>
-        App Version:
-        {' '}
-        {process.env.NEXT_PUBLIC_APP_VERSION}
-      </div>
-      <div>
-        Site URL:
-        {' '}
-        {process.env.NEXT_PUBLIC_APP_SITE_URL}
-      </div>
-      <div>
-        Render times:
-        {' '}
-        {renderCount}
-      </div>
-    </div>
-  );
-}
+import DefaultWelcome from '../features/Welcome/DefaultWelcome';
+import DebugInfo from '../utils/DebugInfo';
+import { GoogleAds } from '../utils/SiteAds';
 
 function Index() {
   const { t } = useTranslation();
@@ -37,9 +14,6 @@ function Index() {
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
       <div>
-
-        {/* <section className="text-gray-600 body-font" /> */}
-
         <DefaultWelcome
           greeting={t('greeting')}
           link={(
@@ -59,14 +33,11 @@ function Index() {
             </Link>
           )}
         />
-
-        <div>
-          {DebugInfo()}
-        </div>
+        <DebugInfo />
+        <GoogleAds />
       </div>
     </>
   );
 }
 
-// export default withTransition(Index);
 export default Index;
