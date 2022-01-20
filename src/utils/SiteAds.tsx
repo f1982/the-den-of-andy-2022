@@ -14,7 +14,6 @@ function GoogleAds() {
         style={{ display: 'block', textAlign: 'center' }}
         data-ad-layout="in-article"
         data-ad-format="fluid"
-        data-adtest={process.env.NODE_ENV === 'production' ? 'off' : 'on'}
         data-ad-client={process.env.NEXT_PUBLIC_APP_GAD_ID}
         data-ad-slot="7654736119"
       />
