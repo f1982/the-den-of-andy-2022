@@ -5,7 +5,6 @@ import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 import DebugInfo from '../utils/DebugInfo';
-import { GoogleAds } from '../utils/SiteAds';
 
 function Index() {
   const { t } = useTranslation();
@@ -34,7 +33,6 @@ function Index() {
           )}
         />
         <DebugInfo />
-        <GoogleAds />
       </div>
     </>
   );
