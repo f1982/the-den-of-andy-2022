@@ -39,7 +39,7 @@ const MenuData: MenuItemData[] = [
 function MenuItem({ link, label }: MenuItemData) {
   return (
     <Link href={link} passHref>
-      <button
+      <a
         className="
         px-2
         py-2
@@ -47,11 +47,10 @@ function MenuItem({ link, label }: MenuItemData) {
         hover:bg-th-accent-light
         hover:text-white
         "
-        type="button"
       >
         {label}
 
-      </button>
+      </a>
     </Link>
   );
 }
