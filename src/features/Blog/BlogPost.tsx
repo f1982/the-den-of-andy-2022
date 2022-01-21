@@ -2,17 +2,11 @@ import React from 'react';
 
 import PostHeader from './components/PostHeader';
 import PostBody from './components/PostBody';
+import { BlogPostData } from '../../types/blog';
 
 function BlogPost({
   title, coverImage, date, author, content, slug,
-}:{
-    title: string,
-    coverImage: string,
-    date: string,
-    author: string,
-    content: string,
-    slug:string
-}) {
+}:BlogPostData) {
   return (
     <article className="mb-32">
       <PostHeader

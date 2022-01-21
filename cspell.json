@@ -6,8 +6,12 @@
   // words - list of words to be always considered correct
   "words": [
     "adsbygoogle",
+    "commitlint",
     "iandycao",
-    "pageview"
+    "pageview",
+    "postbuild",
+    "stylelint",
+    "Weibo"
   ],
   // Specify paths/files to ignore.
   "ignorePaths": [

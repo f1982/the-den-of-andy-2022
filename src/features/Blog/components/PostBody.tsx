@@ -6,6 +6,7 @@ function PostBody({ content }) {
     <div className="max-w-2xl mx-auto">
       <div
         className={styles.markdown}
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>

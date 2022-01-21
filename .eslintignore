@@ -1,0 +1,14 @@
+.next/
+node_modules/
+coverage/
+__snapshots__/
+package-lock.json
+out/
+public/
+yarn.lock
+*.png
+*.jpg
+*.ico
+*.md
+*.mdx
+.DS_Store

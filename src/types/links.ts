@@ -1,4 +1,4 @@
-const enum SNSPlatforms {
+export const enum SNSPlatforms {
   Instagram = 'Instagram',
   FaceBook = 'Facebook',
   YouTube = 'YouTube',
@@ -17,4 +17,3 @@ export interface LinkData {
     tag?: string,
     hidden:number,
 }
-export { SNSPlatforms };
