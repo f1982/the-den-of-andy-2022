@@ -4,6 +4,8 @@
 
 `regenerate package-lock.json`
 
+How to only update `package-lock.json` only
+
 # deploy
 
 to GitHub pages
