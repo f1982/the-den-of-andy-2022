@@ -28,12 +28,17 @@ jobs:
     
     - name: Install npm packages
       run: npm ci
+      run: npm run build --if-present
+
+    # run unit test
+    - name: Run unit tests
+      run: npm run test
 
     # run e2e test 
     - name: Run Cypress e2e test
       uses: cypress-io/github-action@v2
       with:
-        build: npm run build
+        # build: npm run build
         start: npm start
       
 
