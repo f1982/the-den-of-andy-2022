@@ -1,21 +1,3 @@
-// module.exports = {
-//   // ignore cypress folder
-//   // Jest transformations -- this adds support for TypeScript
-//   // using ts-jest
-//   // transform: {
-//   //   '^.+\\.tsx?$': 'ts-jest',
-//   // },
-
-//   // Test spec file resolution pattern
-//   // Matches parent folder `__tests__` and filename
-//   // should contain `test` or `spec`.
-//   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-
-//   testPathIgnorePatterns: ['<rootDir>/cypress/'],
-//   // Module file extensions for importing
-//   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-// };
-
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({

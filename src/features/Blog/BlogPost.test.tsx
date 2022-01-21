@@ -36,6 +36,4 @@ test('should show blog content', async () => {
   expect(screen.getByText(MockedContent.title)).toBeDefined();
   expect(screen.getByText(MockedContent.content)).toBeDefined();
   expect(screen.getByText(MockedContent.author.name)).toBeTruthy();
-
-  // expect(useRouterMock).toHaveBeenCalledTimes(1);
 });
