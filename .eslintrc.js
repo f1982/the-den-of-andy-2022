@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint',
     'cypress',
     'jest',
+    'testing-library',
   ],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -70,5 +71,17 @@ module.exports = {
       specialLink: ['hrefLeft', 'hrefRight'],
       aspects: ['invalidHref', 'preferButton'],
     }],
+    // to avoid to show error message in test files
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] }],
   },
+  overrides: [
+    // Only uses Testing Library lint rules in test files
+    {
+      files: [
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec|test).[jt]s?(x)',
+      ],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
 };
