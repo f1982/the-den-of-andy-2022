@@ -28,6 +28,8 @@ jobs:
     
     - name: Install npm packages
       run: npm ci
+
+    - name: Build the project
       run: npm run build --if-present
 
     # run unit test
