@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { CMS_NAME, HOME_OG_IMAGE_URL } from '../config/constants';
 
-export default function Meta() {
+export default function Metadata() {
   const { basePath } = useRouter();
   return (
     <Head>

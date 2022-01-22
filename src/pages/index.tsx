@@ -5,6 +5,7 @@ import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 import DebugInfo from '../utils/DebugInfo';
+import AlertBar from '../components/ui/AlertBar';
 
 function Index() {
   const { t } = useTranslation();
@@ -12,26 +13,9 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
-      <div>
-        <DefaultWelcome
-          greeting={t('greeting')}
-          link={(
-            <Link href="/home" passHref>
-              <a className="
-              inline-flex
-              text-white
-              bg-blue-500
-              border-0 py-2 px-6
-              focus:outline-none
-              hover:bg-blue-600
-              rounded text-lg
-              "
-              >
-                Go
-              </a>
-            </Link>
-          )}
-        />
+      <AlertBar preview />
+      <div className="h-screen flex flex-col justify-center items-center">
+        <DefaultWelcome />
         <DebugInfo />
       </div>
     </>

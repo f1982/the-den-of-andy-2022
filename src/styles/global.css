@@ -23,6 +23,24 @@ body {
   height: 100%;
 } */
 
+@layer base {
+  h1 {
+    @apply text-2xl;
+    background: linear-gradient(#efc854, #efc854) no-repeat;
+    background-size: 100% 15%;
+    background-position: 0 70%;
+  }
+  h2 {
+    @apply text-xl;
+  }
+
+  a {
+    background: linear-gradient(#efc854, #efc854) no-repeat;
+    background-size: 100% 15%;
+    background-position: 0 70%;
+  }
+}
+
 :root {
   --background: theme('colors.white');
   --background-secondary: theme('colors.gray.50');

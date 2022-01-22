@@ -37,6 +37,7 @@ module.exports = {
       fontFamily: {
         as: ['Inter', 'sans-serif'],
         sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
+        serif: ['Arial', 'Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
       },
       fontSize: {
         '5xl': '2.5rem',
