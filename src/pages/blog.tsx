@@ -1,34 +1,32 @@
-import Head from 'next/head';
 import { t } from 'i18next';
 import Headline from '../components/Headline';
 import Container from '../components/Layout/container';
-import { CMS_NAME } from '../config/constants';
-import HeroPost from '../features/Blog/components/PostHero';
-import MoreStories from '../features/Blog/components/MoreStories';
-import { getAllPosts } from '../utils/api';
 import TabTitle from '../components/SiteSEO';
+import MoreMoreStories from '../features/Blog/components/MoreMoreStories';
+import MoreStories from '../features/Blog/components/MoreStories';
+import HeroPost from '../features/Blog/components/PostPreviewHero';
+import { getAllPosts } from '../utils/api';
 
 function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
-    <>
+    <Container>
       <TabTitle pageTitle={t('blog.pageTitle')} />
-      <Container>
-        <Headline title={t('blog.headline')} />
-        {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </>
+      <Headline title={t('blog.headline')} />
+      {!!heroPost && (
+      <HeroPost
+        title={heroPost.title}
+        coverImage={heroPost.coverImage}
+        date={heroPost.date}
+        author={heroPost.author}
+        slug={heroPost.slug}
+        excerpt={heroPost.excerpt}
+      />
+      )}
+      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
+    </Container>
   );
 }
 

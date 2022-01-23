@@ -31,7 +31,6 @@ export default function Projects({ projects }) {
       <TabTitle pageTitle={t('project.pageTitle')} />
       <Container>
         <BlogPageTitle title="Projects" />
-        {/* <Submenu items={ProjectSubmenu} /> */}
         <ProjectList list={projects} type={type as string} />
       </Container>
     </>

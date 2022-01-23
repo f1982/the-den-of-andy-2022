@@ -29,16 +29,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Metadata />
       {pathname !== WELCOME_PATHNAME && <Header />}
-      <motion.main
+      {/* <motion.main
         transition={spring}
         key={pathname}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -100, opacity: 0 }}
         id="page-transition-container"
-      >
-        {children}
-      </motion.main>
+      > */}
+      {children}
+      {/* </motion.main> */}
       {pathname !== WELCOME_PATHNAME && <Footer />}
     </>
   );

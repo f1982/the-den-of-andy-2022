@@ -12,7 +12,7 @@ export default function ImageComponent({
   ...rest
 }:{
   src:string,
-  width:number,
+  width:number|string,
   height:number,
   alt:string,
   className?:string

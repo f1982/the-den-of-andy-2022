@@ -9,10 +9,10 @@ function Home(): React.ReactNode {
   return (
     <>
       <TabTitle pageTitle={t('home.pageTitle')} />
-      <div className="bg-black screen-w h-96">test</div>
+      {/* <div className="bg-black screen-w h-96">test</div> */}
       <Container>
         <SelfIntroShort />
-        <Hero />
+        {/* <Hero /> */}
       </Container>
     </>
   );

@@ -12,7 +12,6 @@ export default function ProjectPage({ detail }:{detail:ProjectItemData}) {
   const { slug } = router.query;
   return (
     <Container>
-      <CloseButton />
       <ProjectDetail
         slug={slug}
         {...detail}

@@ -33,12 +33,6 @@ body {
   h2 {
     @apply text-xl;
   }
-
-  a {
-    background: linear-gradient(#efc854, #efc854) no-repeat;
-    background-size: 100% 15%;
-    background-position: 0 70%;
-  }
 }
 
 :root {

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PostPreview from './PostPreview';
 
 export default function MoreStories({ posts }) {
