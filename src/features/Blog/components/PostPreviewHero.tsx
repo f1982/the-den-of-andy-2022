@@ -1,8 +1,4 @@
 import Link from 'next/link';
-import ArrowRight from '../../../components/Icons/ArrowRight';
-import EyeIcon from '../../../components/Icons/EyeIcon';
-
-import Avatar from './PostAuthorAvatar';
 import CoverImage from './PostCoverImage';
 import DateFormatter from './PostDateFormatter';
 
@@ -28,7 +24,7 @@ export default function PostHero({
             CATEGORY
           </span>
         </div>
-        <Link as={`/post/${slug}`} href="/post/[slug]" passHref>
+        <Link href="/post/[slug]" as={`/post/${slug}`} passHref>
           <div className="cursor-pointer">
             <CoverImage
               title={title}
@@ -39,7 +35,6 @@ export default function PostHero({
             />
           </div>
         </Link>
-
         <h2 className="
             sm:text-3xl text-2xl
             title-font font-medium
