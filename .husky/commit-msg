@@ -3,4 +3,4 @@
 
 # $1 is the git commit message
 # https://typicode.github.io/husky/#/?id=husky_git_params-ie-commitlint-
-# npx --no-install commitlint --edit $1
+npx --no-install commitlint --edit $1

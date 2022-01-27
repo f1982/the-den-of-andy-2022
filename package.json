@@ -16,7 +16,8 @@
     "lint": "next lint",
     "cypress": "cypress open",
     "test": "jest --coverage",
-    "testwatch": "jest --watch"
+    "testwatch": "jest --watch",
+    "prepare": "husky install"
   },
   "dependencies": {
     "classnames": "2.2.6",
