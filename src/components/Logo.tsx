@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import NextImage from 'next/image';
-// import LogoImage from '../assets/logo.png';
+import LogoImage from '../assets/logo.png';
 // import LogoImage from '../../public/static/images/logo.png';
 import Image from './ui/Image';
 
@@ -20,7 +20,7 @@ export default function Logo() {
             height={100}
             alt="Andy Space"
           /> */}
-          {/* <img src="/static/images/about-computer.jpg" alt="andy space" /> */}
+          {/* <img src={LogoImage} alt="andy space" /> */}
           <Image
             src="/static/images/logo.png"
             width={160}

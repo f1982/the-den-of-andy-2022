@@ -11,7 +11,7 @@ function Home(): React.ReactNode {
       <TabTitle pageTitle={t('home.pageTitle')} />
       <Container>
         <SelfIntroShort />
-        <Hero />
+        {/* <Hero /> */}
       </Container>
     </>
   );

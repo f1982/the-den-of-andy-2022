@@ -4,7 +4,12 @@ module.exports = {
   images: {
     domains: ['dummyimage.com'],
     // https://github.com/vercel/next.js/issues/21079
+
     loader: 'imgix',
     path: '/',
+    // path: '/_next/image',
+    // disable static imports for image files
+    disableStaticImages: false,
+    // formats: ['image/webp'],
   },
 };

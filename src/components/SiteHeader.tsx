@@ -3,53 +3,20 @@ import React from 'react';
 import Logo from './Logo';
 import ArrowRight from './Icons/ArrowRight';
 import MyButton from './ui/Button';
-
-interface MenuItemData {
-  link:string,
-  label:string
-}
-
-const MenuData: MenuItemData[] = [
-  {
-    link: '/home',
-    label: 'Home',
-  },
-  {
-    link: '/blog',
-    label: 'Blog',
-  },
-  {
-    link: '/projects',
-    label: 'Projects',
-  },
-  {
-    link: '/hobbies',
-    label: 'Hobbies',
-  },
-  {
-    link: '/about',
-    label: 'About',
-  },
-  {
-    link: '/contact',
-    label: 'Contact',
-  },
-];
+import MenuItemData from '../types/index';
+import { menuData } from '../config/menuData';
 
 function MenuItem({ link, label }: MenuItemData) {
   return (
     <Link href={link} passHref>
       <a
         className="
-        px-2
-        py-2
-        rounded
+        bg-th-accent-medium
         hover:bg-th-accent-light
         hover:text-white
         "
       >
         {label}
-
       </a>
     </Link>
   );
@@ -57,13 +24,16 @@ function MenuItem({ link, label }: MenuItemData) {
 
 export default function Header() {
   return (
-    <header className="text-gray-600 body-font">
+    <header className="body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Logo />
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {
-            MenuData.map((item) => (
-              <span key={item.link} className="mr-2">
+            menuData.map((item) => (
+              <span
+                key={item.link}
+                className="mr-2 px-2 py-4"
+              >
                 <MenuItem link={item.link} label={item.label} />
               </span>
             ))
@@ -71,9 +41,7 @@ export default function Header() {
         </nav>
 
         <MyButton type="primary">
-          Button
           <ArrowRight />
-
         </MyButton>
       </div>
 

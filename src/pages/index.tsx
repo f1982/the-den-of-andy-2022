@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
@@ -12,30 +11,19 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
-      <div>
-        <DefaultWelcome
-          greeting={t('greeting')}
-          link={(
-            <Link href="/home" passHref>
-              <a className="
-              inline-flex
-              text-white
-              bg-blue-500
-              border-0 py-2 px-6
-              focus:outline-none
-              hover:bg-blue-600
-              rounded text-lg
-              "
-              >
-                Go
-              </a>
-            </Link>
-          )}
-        />
+      <div className="h-screen flex flex-col justify-center items-center">
+        <DefaultWelcome />
         <DebugInfo />
       </div>
     </>
   );
 }
 
+Index.getLayout = function getLayout(page) {
+  return (
+    <div>
+      {page}
+    </div>
+  );
+};
 export default Index;

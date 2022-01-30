@@ -4,6 +4,9 @@ const en = {
     siteName: 'Den of Andy 2022',
     welcome: {
       pageTitle: 'Welcome',
+      greeting: 'Hey there! I am Andy',
+      description: 'Welcome to my space',
+      buttonLabel: 'Enter',
     },
     pageNotFound: {
       pageTitle: '404',

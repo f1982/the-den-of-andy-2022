@@ -7,7 +7,7 @@ interface PostCoverImageProps {
   src:string;
   slug:string;
   height:number;
-  width:number;
+  width:number|string;
 }
 
 export default function PostCoverImage(

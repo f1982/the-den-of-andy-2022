@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { EXAMPLE_PATH } from '../../config/constants';
 import Container from '../Layout/container';
 
-export default function Alert({ preview }) {
+export default function AlertBar({ preview }) {
   return (
     <div
       className={cn('border-b', {

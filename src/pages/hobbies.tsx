@@ -12,9 +12,9 @@ export default function About() {
       <TabTitle pageTitle={t('hobbies.pageTitle')} />
       <Container>
         <Headline title={t('hobbies.headline')} />
-        <Hero />
+        <Hero image="/static/images/hobby-rc-cover.jpg" />
         <ColumnHero />
-        <Hero />
+        <Hero image="/static/images/hobby-cover-video.png" />
       </Container>
     </>
 

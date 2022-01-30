@@ -3,6 +3,7 @@ import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/ui/Image';
 import Carousel from '../../components/Carousel';
 import { PROJECT_IMAGE_URL } from '../../config/constants';
+import CloseButton from '../../components/ui/CloseButton';
 
 function Project({
   slug, title, cover, description, images,
@@ -15,9 +16,10 @@ function Project({
 
   return (
     <article className="mb-32">
-      <ProjectTitle id={slug} title={title} />
-      <p>{slug}</p>
-      <p>{`/projects/images/${cover}`}</p>
+      <div className="flex flex-column">
+        <ProjectTitle id={slug} title={title} />
+        <CloseButton />
+      </div>
       <motion.figure
         layoutId={`project-cover-${slug}`}
         initial={{ scale: 1, opacity: 1 }}
@@ -27,7 +29,7 @@ function Project({
         <Image
           alt={`${title} project cover image`}
           className="object-center w-full"
-          src={`/projects/images/${cover}`}
+          src={`${PROJECT_IMAGE_URL}/${cover}`}
           width={650}
           height={250}
         />

@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# every you commit something the following command will be executed
+# https://typicode.github.io/husky/#/?id=create-a-hook
+
 npm run lint
+npm run test
