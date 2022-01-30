@@ -11,11 +11,12 @@ describe('Navigation', () => {
   });
 
   it('should navigate to the home page', () => {
-    cy.get('h2').contains('Phoebe Caulfield');
+    cy.get('h2').contains('Andy Cao');
   });
 
   it('should navigate to the about page', () => {
-    cy.get('a[href="/about"]').click();
+    // console.log(cy.get('a[href="/about"]'));
+    cy.get('a[href="/about"]').first().click();
     cy.url().should('include', '/about');
     cy.get('h1').contains('About me');
   });
