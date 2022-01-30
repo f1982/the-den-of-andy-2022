@@ -2,31 +2,24 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 
-const postsDirectory = join(process.cwd(), 'public/blog');
-const projectJSONfile = join(process.cwd(), 'public/projects/all.json');
+const BLOG_POST_DIRECTORY = join(process.cwd(), 'public/blog');
 
-// @refresh reset
-
+/**
+ * list all the blog post *.md files
+ * @returns array of file names
+ */
 export function getPostSlugs() {
-  const files = fs.readdirSync(postsDirectory);
+  const files = fs.readdirSync(BLOG_POST_DIRECTORY);
   return files;
 }
 
-export function getProjects() {
-  const fullPath = join(projectJSONfile);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const json = JSON.parse(fileContents);
-  return json.data;
-}
-
-export function getProjectDetail(slug) {
-  const { projects } = getProjects();
-  return projects.find((item) => item.id === slug);
+function getExtension(filename) {
+  return filename.split('.').pop();
 }
 
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(BLOG_POST_DIRECTORY, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -40,7 +33,6 @@ export function getPostBySlug(slug, fields = []) {
     if (field === 'content') {
       items[field] = content;
     }
-
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field];
     }
@@ -49,9 +41,6 @@ export function getPostBySlug(slug, fields = []) {
   return items;
 }
 
-function getExtension(filename) {
-  return filename.split('.').pop();
-}
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   const posts = slugs

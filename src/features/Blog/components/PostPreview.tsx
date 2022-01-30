@@ -1,9 +1,8 @@
 import Link from 'next/link';
-
-import { motion } from 'framer-motion';
-import DateFormatter from './PostDateFormatter';
+import { BLOG_PATH } from '../../../config/menuData';
 import Avatar from './PostAuthorAvatar';
 import CoverImage from './PostCoverImage';
+import DateFormatter from './PostDateFormatter';
 
 export default function PostPreview({
   title,
@@ -15,7 +14,7 @@ export default function PostPreview({
 }) {
   return (
     <div>
-      <Link as={`/post/${slug}`} href="/post/[slug]" passHref>
+      <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
         <div className="mb-5 cursor-pointer">
           <CoverImage
             slug={slug}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BLOG_PATH } from '../../../config/menuData';
 import CoverImage from './PostCoverImage';
 import DateFormatter from './PostDateFormatter';
 
@@ -24,7 +25,7 @@ export default function PostHero({
             CATEGORY
           </span>
         </div>
-        <Link href="/post/[slug]" as={`/post/${slug}`} passHref>
+        <Link href={`${BLOG_PATH}/[slug]`} as={`${BLOG_PATH}/${slug}`} passHref>
           <div className="cursor-pointer">
             <CoverImage
               title={title}

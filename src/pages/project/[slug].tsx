@@ -5,9 +5,9 @@ import CloseButton from '../../components/ui/CloseButton';
 
 import ProjectDetail from '../../features/Project/ProjectDetail';
 import { ProjectItemData } from '../../types/projects';
-import { getProjectDetail, getProjects } from '../../utils/api';
+import { getProjectDetail, getProjects } from '../../utils/project-helper';
 
-export default function ProjectPage({ detail }:{detail:ProjectItemData}) {
+function ProjectPage({ detail }:{detail:ProjectItemData}) {
   const router = useRouter();
   const { slug } = router.query;
   return (
@@ -38,3 +38,5 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+export default ProjectPage;

@@ -8,7 +8,7 @@ export default function MoreStories({ posts }) {
       </h2>
       <ul>
         {posts.map((post) => (
-          <Link key={post.plug} as={`/post/${post.slug}`} href="/post/[slug]" passHref>
+          <Link key={`list_${post.slug}`} as={`/blog/${post.slug}`} href="/blog/[slug]" passHref>
             <li className="cursor-pointer hover:underline">{post.title}</li>
           </Link>
         ))}

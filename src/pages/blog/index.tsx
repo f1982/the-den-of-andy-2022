@@ -1,18 +1,14 @@
 import { t } from 'i18next';
 import { useRouter } from 'next/router';
-import Modal from 'react-modal';
-import Headline from '../components/Headline';
-import Container from '../components/Layout/container';
-import TabTitle from '../components/SiteSEO';
-import MoreMoreStories from '../features/Blog/components/MoreMoreStories';
-import MoreStories from '../features/Blog/components/MoreStories';
-import HeroPost from '../features/Blog/components/PostPreviewHero';
-import { getAllPosts } from '../utils/api';
-import Post from './post/[slug]';
+import Headline from '../../components/Headline';
+import Container from '../../components/Layout/container';
+import TabTitle from '../../components/SiteSEO';
+import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
+import MoreStories from '../../features/Blog/components/MoreStories';
+import HeroPost from '../../features/Blog/components/PostPreviewHero';
+import { getAllPosts } from '../../utils/blog-helper';
 
-Modal.setAppElement('#__next');
-
-function Index({ allPosts }) {
+function Blog({ allPosts }) {
   const router = useRouter();
 
   const heroPost = allPosts[0];
@@ -20,13 +16,7 @@ function Index({ allPosts }) {
 
   return (
     <>
-      <Modal
-        isOpen={!!router.query.slug}
-        onRequestClose={() => router.push('/blog')}
-        contentLabel="Post modal"
-      >
-        <div>test</div>
-      </Modal>
+      {/* show all the blog post list */}
       <Container>
         <TabTitle pageTitle={t('blog.pageTitle')} />
         <Headline title={t('blog.headline')} />
@@ -47,7 +37,7 @@ function Index({ allPosts }) {
   );
 }
 
-export default Index;
+export default Blog;
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([

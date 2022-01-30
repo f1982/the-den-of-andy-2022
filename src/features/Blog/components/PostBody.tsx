@@ -1,4 +1,3 @@
-// import markdownStyles from './markdown.module.css';
 import styles from './markdown.module.css';
 
 function PostBody({ content }) {

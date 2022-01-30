@@ -14,12 +14,12 @@
 
 /* Your own custom utilities */
 
-/* html,
+html,
 body {
-
+  /* color: #2d334a */
 }
 
-#__next {
+/* #__next {
   height: 100%;
 } */
 
@@ -43,7 +43,8 @@ body {
   --accent-medium: theme('colors.yellow.500');
   --accent-light: theme('colors.yellow.400');
 
-  --primary-dark: theme('colors.gray.900');
+  /* --primary-dark: theme('colors.gray.900'); */
+  --primary-dark:#2d334a;
   --primary-medium: theme('colors.gray.700');
   --primary-light: theme('colors.gray.200');
 }

@@ -1,35 +1,34 @@
-import { useEffect } from 'react';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
-import CloseButton from '../../components/ui/CloseButton';
-import { CMS_NAME } from '../../config/constants';
-import BlogPost from '../../features/Blog/BlogPost';
-import PostTitle from '../../features/Blog/components/PostTitle';
-import { getAllPosts, getPostBySlug } from '../../utils/api';
-import markdownToHtml from '../../utils/markdownToHtml';
 import Container from '../../components/Layout/container';
 import SiteSEO from '../../components/SiteSEO';
+import CloseButton from '../../components/ui/CloseButton';
+import BlogPost from '../../features/Blog/BlogPost';
+import PostTitle from '../../features/Blog/components/PostTitle';
+import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
+import markdownToHtml from '../../utils/markdownToHtml';
 
 Modal.setAppElement('#__next');
 
-// Modal.defaultStyles.overlay.backgroundColor = 'black';
-
-const customStyles = {
+const customModalStyles = {
   content: {
-    top: '38px',
+    top: '39px',
+    bottom: '0',
     left: '0',
     right: 'auto',
   },
   overlay: {
-    background: 'rgba(0, 0, 0, 0.5)',
+    // background: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    // cursor: 'pointer',
   },
 };
 
 export default function Post({ post, preview }) {
   const router = useRouter();
 
+  // if the slug is not correct url, it will led user to the 404 page
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -38,11 +37,12 @@ export default function Post({ post, preview }) {
     <Modal
       isOpen
       onRequestClose={() => router.push('/blog')}
-      style={customStyles}
+      style={customModalStyles}
       contentLabel="Post modal"
     >
       <SiteSEO pageTitle={post.title} />
       <div>
+        {/* If the page is not yet generated, this will be displayed */}
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -69,7 +69,6 @@ export async function getStaticProps({ params }) {
     'coverImage',
   ]);
   const content = await markdownToHtml(post.content || '');
-
   return {
     props: {
       post: {
@@ -80,6 +79,8 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// getStaticPaths will define a list of paths to be statically generated
+// https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
 
