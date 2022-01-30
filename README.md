@@ -2,9 +2,9 @@
 
 # dev
 
-`regenerate package-lock.json`
+regenerate `package-lock.json`, How to only update `package-lock.json` only
 
-How to only update `package-lock.json` only
+`npm i --package-lock-only`
 
 # deploy
 
