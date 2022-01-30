@@ -29,7 +29,7 @@ function Project({
         <Image
           alt={`${title} project cover image`}
           className="object-center w-full"
-          src={`/projects/images/${cover}`}
+          src={`${PROJECT_IMAGE_URL}/${cover}`}
           width={650}
           height={250}
         />

@@ -1,4 +1,4 @@
-import { MenuItemData } from '../types/index';
+import MenuItemData from '../types/index';
 
 const BLOG_PATH = '/blog';
 

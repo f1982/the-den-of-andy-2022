@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 
-const PROJECTS_DATA = join(process.cwd(), 'public/projects/all.json');
+const PROJECTS_DATA = join(process.cwd(), 'public/static/projects.json');
 
 export function getProjects() {
   const fullPath = join(PROJECTS_DATA);

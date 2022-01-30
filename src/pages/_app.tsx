@@ -7,7 +7,6 @@ import '../styles/global.css';
 import { initGA } from '../utils/SiteAnalystic';
 
 function MyApp({ Component, pageProps }) {
-  // const router = useRouter();
   useEffect(() => {
     initGA();
   }, []);
@@ -18,12 +17,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <I18nextProvider i18n={i18n}>
-        {/* <AnimatePresence exitBeforeEnter> */}
-        {/* <Layout>
-          <Component {...pageProps} />
-        </Layout> */}
-        {/* </AnimatePresence> */}
-
         {getLayout(<Component {...pageProps} />)}
       </I18nextProvider>
     </ThemeProvider>

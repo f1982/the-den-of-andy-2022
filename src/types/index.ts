@@ -3,6 +3,4 @@ interface MenuItemData {
   label:string
 }
 
-export {
-  MenuItemData,
-};
+export default MenuItemData;

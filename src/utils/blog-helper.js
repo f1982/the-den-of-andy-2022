@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 
-const BLOG_POST_DIRECTORY = join(process.cwd(), 'public/blog');
+const BLOG_POST_DIRECTORY = join(process.cwd(), 'public/static/posts');
 
 /**
  * list all the blog post *.md files
