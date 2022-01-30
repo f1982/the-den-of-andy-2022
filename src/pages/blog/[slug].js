@@ -19,7 +19,6 @@ const customModalStyles = {
     right: 'auto',
   },
   overlay: {
-    // background: 'rgba(0, 0, 0, 0.5)',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     // cursor: 'pointer',
   },

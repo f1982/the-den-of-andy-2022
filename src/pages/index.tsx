@@ -22,4 +22,11 @@ function Index() {
   );
 }
 
+Index.getLayout = function getLayout(page) {
+  return (
+    <div>
+      {page}
+    </div>
+  );
+};
 export default Index;

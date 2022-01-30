@@ -12,14 +12,19 @@ function MyApp({ Component, pageProps }) {
     initGA();
   }, []);
 
+  // if the page has its specific layout, use it, if not, use default layout
+  const getLayout = Component.getLayout || ((page) => (<Layout>{page}</Layout>));
+
   return (
     <ThemeProvider>
       <I18nextProvider i18n={i18n}>
         {/* <AnimatePresence exitBeforeEnter> */}
-        <Layout>
+        {/* <Layout>
           <Component {...pageProps} />
-        </Layout>
+        </Layout> */}
         {/* </AnimatePresence> */}
+
+        {getLayout(<Component {...pageProps} />)}
       </I18nextProvider>
     </ThemeProvider>
   );
