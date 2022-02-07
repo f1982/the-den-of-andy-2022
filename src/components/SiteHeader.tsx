@@ -11,8 +11,8 @@ function MenuItem({ link, label }: MenuItemData) {
     <Link href={link} passHref>
       <a
         className="
-        bg-th-accent-medium
-        hover:bg-th-accent-light
+        bg-secondary-medium
+        hover:bg-secondary-light
         hover:text-white
         "
       >

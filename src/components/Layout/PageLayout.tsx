@@ -28,7 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Metadata />
-      <div className="text-th-primary-dark">
+      <div className="text-primary-dark">
         {pathname !== WELCOME_PATHNAME && <Header />}
         {/* <motion.main
         transition={spring}

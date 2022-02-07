@@ -1,3 +1,4 @@
+// cypress api doc: https://docs.cypress.io/api/table-of-contents
 describe('Navigation', () => {
   beforeEach(() => {
     // Start from the index page

@@ -1,6 +1,7 @@
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import Container from '../../components/Layout/container';
 import SiteSEO from '../../components/SiteSEO';
 import CloseButton from '../../components/ui/CloseButton';
@@ -8,15 +9,20 @@ import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
+import tailwindConfig from '../../../tailwind.config';
 
 Modal.setAppElement('#__next');
+
+const fullConfig = resolveConfig(tailwindConfig);
+console.log('fullConfig.theme.surface', fullConfig.theme.colors.surface);
 
 const customModalStyles = {
   content: {
     top: '39px',
     bottom: '0',
     left: '0',
-    right: 'auto',
+    right: '0',
+    backgroundColor: fullConfig.theme.colors.surface,
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -48,8 +54,8 @@ export default function Post({ post, preview }) {
           <article className="mb-32">
             <Container>
               <CloseButton />
+              <BlogPost {...post} />
             </Container>
-            <BlogPost {...post} />
           </article>
         )}
       </div>

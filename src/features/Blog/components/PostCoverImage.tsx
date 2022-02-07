@@ -20,10 +20,11 @@ export default function PostCoverImage(
   }:PostCoverImageProps,
 ) {
   return (
-    <div className="sm:mx-0">
+    <div className="mx-auto text-center">
       {slug ? (
       // <Link as={`/post/${slug}`} href="/post/[slug]">
         <Image
+          className="mx-auto"
           src={src}
           alt={`Cover Image for ${title}`}
               // className={cn('shadow-sm', 'hover:shadow-md transition-shadow duration-200')}

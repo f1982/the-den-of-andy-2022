@@ -30,53 +30,67 @@ body {
     background-size: 100% 15%;
     background-position: 0 70%;
   }
+
   h2 {
     @apply text-xl;
   }
 }
 
 :root {
-  --background: theme('colors.white');
-  --background-secondary: theme('colors.gray.50');
-
-  --accent-dark: theme('colors.yellow.600');
-  --accent-medium: theme('colors.yellow.500');
-  --accent-light: theme('colors.yellow.400');
-
-  /* --primary-dark: theme('colors.gray.900'); */
-  --primary-dark:#2d334a;
+  --primary-dark: #2d334a;
   --primary-medium: theme('colors.gray.700');
   --primary-light: theme('colors.gray.200');
+
+  --secondary-dark: theme('colors.yellow.600');
+  --secondary-medium: theme('colors.yellow.500');
+  --secondary-light: theme('colors.yellow.400');
+
+  --background: theme('colors.white');
+  --surface: theme('colors.gray.50');
+  --error: theme('colors.red.500');
+
+  --on-primary: theme('colors.black');
+  --on-secondary: theme('colors.gray.500');
+  --on-background: theme('colors.black');
+  --on-surface: theme('colors.black');
+  --on-error: theme('colors.white');
 }
 
 [data-theme='dark'] {
-  --background: theme('colors.black');
-  --background-secondary: theme('colors.gray.800');
-
-  --accent-dark: theme('colors.fuchsia.900');
-  --accent-medium: theme('colors.fuchsia.700');
-  --accent-light: theme('colors.fuchsia.500');
-
   --primary-dark: theme('colors.gray.300');
   --primary-medium: theme('colors.gray.200');
   --primary-light: theme('colors.gray.100');
+
+  --secondary-dark: theme('colors.fuchsia.900');
+  --secondary-medium: theme('colors.fuchsia.700');
+  --secondary-light: theme('colors.fuchsia.500');
+
+  --background: theme('colors.black');
+  --surface: theme('colors.gray.700');
+  --error: theme('colors.red.300');
+
+  --on-primary: theme('colors.black');
+  --on-secondary: theme('colors.gray.500');
+  --on-background: theme('colors.black');
+  --on-surface: theme('colors.black');
+  --on-error: theme('colors.white');
 }
 
 [data-theme="emerald"] {
   --background: theme("colors.white");
 
-  --accent-dark: theme("colors.emerald.900");
-  --accent-medium: theme("colors.emerald.700");
-  --accent-light: theme("colors.emerald.500");
+  --secondary-dark: theme("colors.emerald.900");
+  --secondary-medium: theme("colors.emerald.700");
+  --secondary-light: theme("colors.emerald.500");
 }
 
 [data-theme="pink"] {
   --background: theme("colors.gray.900");
-  --background-secondary: theme("colors.gray.800");
+  --surface: theme("colors.gray.800");
 
-  --accent-dark: theme("colors.pink.900");
-  --accent-medium: theme("colors.pink.700");
-  --accent-light: theme("colors.pink.500");
+  --secondary-dark: theme("colors.pink.900");
+  --secondary-medium: theme("colors.pink.700");
+  --secondary-light: theme("colors.pink.500");
 
   --primary-dark: theme("colors.gray.300");
   --primary-medium: theme("colors.gray.200");

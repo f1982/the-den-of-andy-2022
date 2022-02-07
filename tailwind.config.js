@@ -1,5 +1,7 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
+// detail information refer to:  https://tailwindcss.com/docs/theme
 module.exports = {
   purge: ['./src/**/*.{js.ts,jsx,tsx}'],
   theme: {
@@ -10,20 +12,29 @@ module.exports = {
         // 'accent-7': '#333',
         // success: '#0070f3',
         // cyan: '#79FFE1',
-        // the following colurs are used in global.css for theme
+        // the following colours are used in global.css for theme
         emerald: colors.emerald,
         yellow: colors.yellow,
         fuchsia: colors.fuchsia,
         // these configuration are using for theme by global.css too
+        primary: {
+          dark: 'var(--primary-dark)',
+          light: 'var(--primary-light)',
+          medium: 'var(--primary-medium)',
+        },
+        secondary: {
+          dark: 'var(--secondary-dark)',
+          medium: 'var(--secondary-medium)',
+          light: 'var(--secondary-light)',
+        },
         'th-background': 'var(--background)',
-        'th-background-secondary': 'var(--background-secondary)',
+        'th-background-secondary': 'var(--surface)',
         'th-foreground': 'var(--foreground)',
-        'th-primary-dark': 'var(--primary-dark)',
-        'th-primary-medium': 'var(--primary-medium)',
-        'th-primary-light': 'var(--primary-light)',
-        'th-accent-dark': 'var(--accent-dark)',
-        'th-accent-medium': 'var(--accent-medium)',
-        'th-accent-light': 'var(--accent-light)',
+        background: 'var(--background)',
+        surface: 'var(--surface)',
+        error: 'var(--error)',
+        'on-error': 'var(--on-error)',
+        'on-primary': 'var(--on-primary)',
       },
       spacing: {
         28: '7rem',
@@ -35,8 +46,7 @@ module.exports = {
         tight: 1.2,
       },
       fontFamily: {
-        as: ['Inter', 'sans-serif'],
-        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
+        sans: ['Inter', ...defaultTheme.fontFamily.sans], // default font font-sans
         serif: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
       },
       fontSize: {

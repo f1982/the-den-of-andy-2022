@@ -7,13 +7,13 @@ export default function PostTitle({ children }) {
       animate={{ scale: 1, opacity: 1 }}
       className="
         text-6xl
-        md:text-7xl
-        lg:text-8xl
+        md:text-6xl
+        lg:text-7xl
         font-bold
         tracking-tighter
         leading-tight
         md:leading-none
-        max-w-2xl
+        max-w-4xl
         mx-auto
         text-center
         md:text-left

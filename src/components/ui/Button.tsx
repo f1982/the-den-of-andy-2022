@@ -75,10 +75,10 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
         type="button"
         className="
           inline-flex
-          text-th-primary-medium
-          hover:text-th-primary-dark
-          bg-th-accent-medium
-          hover:bg-th-accent-light
+          text-primary-medium
+          hover:text-primary-dark
+          bg-secondary-medium
+          hover:bg-accent-light
           border-0
           py-2
           px-6
@@ -98,8 +98,8 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
           inline-flex
           text-th-primary-medium
           hover:text-th-primary-dark
-          bg-th-accent-medium
-          hover:bg-th-accent-light
+          bg-secondary-medium
+          hover:bg-accent-light
           border-0
           py-2
           px-6

@@ -18,7 +18,7 @@ export default function PostHero({
           <span className="
           inline-block py-1 px-2
           rounded
-          bg-th-accent-medium text-th-primary-medium text-opacity-75
+          bg-secondary-medium text-th-primary-medium text-opacity-75
           text-xs font-medium tracking-widest
           "
           >

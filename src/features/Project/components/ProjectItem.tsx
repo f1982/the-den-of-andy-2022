@@ -50,7 +50,7 @@ export default function ProjectItem({
           </motion.figure>
         </div>
         <motion.h2
-          className="title-font text-2xl font-bold font-as text-gray-900 mt-6 mb-3"
+          className="title-font text-2xl font-bold text-gray-900 mt-6 mb-3"
           layoutId={`project-title-${id}`}
         >
           {title}
@@ -64,8 +64,9 @@ export default function ProjectItem({
       </motion.div> */}
 
       <div className="xl:w-1/3 md:w-1/2 p-4 cursor-pointer">
-        <div className="bg-gray-100 p-3 rounded-lg">
+        <div className="bg-surface p-3 rounded-lg">
           {/* <div className="h-60 rounded w-full  object-center mb-6"> */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="h-60 rounded w-full object-cover mb-6"
             alt="content"
