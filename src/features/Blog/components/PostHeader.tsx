@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
-import Avatar from './PostAuthorAvatar';
-import CoverImage from './PostCoverImage';
-import DateFormatter from './PostDateFormatter';
-import PostTitle from './PostTitle';
 import Image from '../../../components/ui/Image';
+import Avatar from './PostAuthorAvatar';
+import DateFormatter from './PostDateFormatter';
 
 export default function PostHeader({
   title, coverImage, date, author, slug,

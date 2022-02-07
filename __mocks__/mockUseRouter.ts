@@ -12,7 +12,7 @@ export default function mockNextUseRouter(props: {
     query: string;
     asPath: string;
 }) {
-  useRouter.mockImplementationOnce(() => ({
+  useRouter.mockImplementation(() => ({
     route: props.route,
     basePath: props.basePath,
     pathname: props.pathname,

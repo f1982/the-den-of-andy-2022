@@ -14,7 +14,6 @@ import tailwindConfig from '../../../tailwind.config';
 Modal.setAppElement('#__next');
 
 const fullConfig = resolveConfig(tailwindConfig);
-console.log('fullConfig.theme.surface', fullConfig.theme.colors.surface);
 
 const customModalStyles = {
   content: {

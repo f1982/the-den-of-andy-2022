@@ -18,6 +18,7 @@ export default function ImageComponent({
   className?:string
 }) {
   const { basePath } = useRouter();
+  // load image from public folder
   if (
     src.startsWith('/')
   ) {
@@ -32,7 +33,7 @@ export default function ImageComponent({
       />
     );
   }
-
+  // load image from url
   return (
     <NextImage
       className={cn('object-cover', className)}
