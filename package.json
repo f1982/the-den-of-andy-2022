@@ -35,7 +35,7 @@
     "react-modal": "^3.14.4",
     "remark": "13.0.0",
     "remark-html": "13.0.2",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",

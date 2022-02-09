@@ -7,7 +7,7 @@ export default function AlertBar({ preview }) {
   return (
     <div
       className={cn('border-b', {
-        'bg-error border-accent-7 text-white': preview,
+        'bg-error border-accent-7 text-on-error': preview,
         'bg-error border-accent-2': !preview,
       })}
     >

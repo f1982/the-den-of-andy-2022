@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 // detail information refer to:  https://tailwindcss.com/docs/theme
 module.exports = {
   purge: ['./src/**/*.{js.ts,jsx,tsx}'],
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
@@ -41,8 +42,8 @@ module.exports = {
         tight: 1.2,
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans], // default font font-sans
-        serif: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Inter', ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
         '5xl': '2.5rem',
