@@ -37,43 +37,42 @@ body {
 }
 
 :root {
-  --primary-dark: #2d334a;
-  --primary-medium: theme('colors.gray.700');
-  --primary-light: theme('colors.gray.200');
+  --primary-dark: #eb9a04;
+  --primary-medium: #ffd803;
+  --primary-light: #ffcc66;
 
-  --secondary-dark: theme('colors.yellow.600');
-  --secondary-medium: theme('colors.yellow.500');
-  --secondary-light: theme('colors.yellow.400');
+  --secondary-dark: #bae8e8;
+  --secondary-medium: #e3f6f5;
+  --secondary-light: #eff8f8;
 
-  --background: theme('colors.white');
-  --surface: theme('colors.gray.50');
-  --error: theme('colors.red.500');
+  --background: #fffffe;
+  --surface:  #fffffe;
+  --error: #ff0000;
 
-  --on-primary: theme('colors.black');
-  --on-secondary: theme('colors.gray.500');
-  --on-background: theme('colors.black');
-  --on-surface: theme('colors.black');
-  --on-error: theme('colors.white');
+  --on-primary: #272343;
+  --on-secondary: #2d334a;
+  --on-background: #2d334a;
+  --on-surface: #2d334a;
+  --on-error: #fffffe;
 }
 
 [data-theme='dark'] {
-  --primary-dark: theme('colors.gray.300');
-  --primary-medium: theme('colors.gray.200');
-  --primary-light: theme('colors.gray.100');
+  /* --primary-dark: theme('colors.gray.700');
+  --primary-medium: theme('colors.gray.500');
+  --primary-light: theme('colors.gray.200');
 
   --secondary-dark: theme('colors.fuchsia.900');
   --secondary-medium: theme('colors.fuchsia.700');
-  --secondary-light: theme('colors.fuchsia.500');
+  --secondary-light: theme('colors.fuchsia.500'); */
 
-  --background: theme('colors.black');
-  --surface: theme('colors.gray.700');
-  --error: theme('colors.red.300');
+  --background: #303030;
+  --surface: #303030;
+  /* --error: theme('colors.red.300'); */
 
-  --on-primary: theme('colors.black');
-  --on-secondary: theme('colors.gray.500');
-  --on-background: theme('colors.black');
-  --on-surface: theme('colors.black');
-  --on-error: theme('colors.white');
+  --on-primary: #fff;
+  --on-secondary: #2d334a;
+  --on-background: #fff;
+  --on-surface: #fff;
 }
 
 [data-theme="emerald"] {

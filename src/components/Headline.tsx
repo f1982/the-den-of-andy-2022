@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Headline({ title }:{title:string}) {
   return (
-    <section
+    <div
       className="
     flex-col md:flex-row
     flex items-center md:justify-between mt-16 mb-16 md:mb-12
@@ -14,7 +14,7 @@ export default function Headline({ title }:{title:string}) {
         transition={{ delay: 0.2 }}
         className="
         text-6xl
-        md:text-8xl
+        md:text-7xl
         font-bold
         tracking-tighter
         leading-tight
@@ -23,6 +23,6 @@ export default function Headline({ title }:{title:string}) {
         {title}
         .
       </motion.h1>
-    </section>
+    </div>
   );
 }

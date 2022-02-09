@@ -1,65 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 
-function Button(
-  {
-    type = 'primary',
-    children,
-  }
-  :
-  {
-    type:'primary'|'secondary',
-    children: React.ReactNode
-  },
-) {
-  return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <>
-      {type === 'primary' ? (
-        <button
-          type="button"
-          className={classNames(
-            'inline-flex',
-            'text-white',
-            'bg-blue-500',
-            'border-0',
-            'py-2',
-            'px-6',
-            'focus:outline-none',
-            'hover:bg-blue-600',
-            'rounded',
-            'text-lg',
-          )}
-        >
-          {children}
-
-        </button>
-      ) : (
-        <button
-          type="button"
-          className={classNames(
-            'ml-4',
-            'inline-flex',
-            'text-gray-700',
-            'bg-gray-100',
-            'border-0',
-            'py-2',
-            'px-6',
-            'focus:outline-none',
-            'hover:bg-gray-200',
-            'rounded',
-            'text-lg',
-          )}
-        >
-          {children}
-
-        </button>
-      )}
-    </>
-
-  );
-}
-
 interface PropsType {
   type:'primary'|'secondary';
   children: React.ReactNode;
@@ -75,10 +16,10 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
         type="button"
         className="
           inline-flex
-          text-primary-medium
-          hover:text-primary-dark
-          bg-secondary-medium
-          hover:bg-accent-light
+          text-on-primary
+          hover:text-black
+          bg-primary-medium
+          hover:bg-primary-light
           border-0
           py-2
           px-6
@@ -88,7 +29,6 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
         "
       >
         {props.children}
-
       </button>
     ) : (
       <button
@@ -96,10 +36,10 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
         className="
           ml-4
           inline-flex
-          text-th-primary-medium
-          hover:text-th-primary-dark
-          bg-secondary-medium
-          hover:bg-accent-light
+          text-on-secondary
+          hover:text-black
+          bg-secondary-dark
+          hover:bg-secondary-light
           border-0
           py-2
           px-6

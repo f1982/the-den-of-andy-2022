@@ -7,11 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // 'accent-1': '#FAFAFA',
-        // 'accent-2': '#EAEAEA',
-        // 'accent-7': '#333',
-        // success: '#0070f3',
-        // cyan: '#79FFE1',
         // the following colours are used in global.css for theme
         emerald: colors.emerald,
         yellow: colors.yellow,
@@ -27,14 +22,14 @@ module.exports = {
           medium: 'var(--secondary-medium)',
           light: 'var(--secondary-light)',
         },
-        'th-background': 'var(--background)',
-        'th-background-secondary': 'var(--surface)',
-        'th-foreground': 'var(--foreground)',
         background: 'var(--background)',
         surface: 'var(--surface)',
         error: 'var(--error)',
+        'on-background': 'var(--on-background)',
+        'on-surface': 'var(--on-surface)',
         'on-error': 'var(--on-error)',
         'on-primary': 'var(--on-primary)',
+        'on-secondary': 'var(--on-secondary)',
       },
       spacing: {
         28: '7rem',

@@ -5,11 +5,16 @@ import Container from '../components/Layout/container';
 import SmallText from '../components/Paragraph/SmallText';
 import TabTitle from '../components/SiteSEO';
 
-const getYears = (birthYear: number) => {
-  const d = new Date();
-  const n = d.getFullYear();
-  return n - birthYear;
-};
+function getAge(dateString) {
+  const today = new Date();
+  const birthDate = new Date(dateString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age -= 1;
+  }
+  return age;
+}
 
 export default function About() {
   return (
@@ -29,7 +34,7 @@ export default function About() {
         />
         <SmallText
           title={t('about.familyTitle')}
-          description={String(t('about.familyDescription')).replace('$AGE_OF_ZOE$', getYears(2016).toString())}
+          description={String(t('about.familyDescription')).replace('$AGE_OF_ZOE$', getAge('2016-06-01').toString())}
         />
       </Container>
     </>

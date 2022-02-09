@@ -11,8 +11,11 @@ function MenuItem({ link, label }: MenuItemData) {
     <Link href={link} passHref>
       <a
         className="
-        bg-secondary-medium
-        hover:bg-secondary-light
+        px-4
+        py-2
+        bg-primary-medium
+        text-on-primary
+        hover:bg-primary-dark
         hover:text-white
         "
       >
@@ -40,8 +43,10 @@ export default function Header() {
           }
         </nav>
 
-        <MyButton type="primary">
+        <MyButton type="secondary">
           <ArrowRight />
+          {' '}
+          Go
         </MyButton>
       </div>
 

@@ -15,7 +15,7 @@ function ThemeChanger() {
   if (!mounted) return null;
 
   return (
-    <div className="p-8 flex justify-between items-center font-bold text-xl bg-th-background-secondary text-primary-dark">
+    <div className="p-8 flex justify-between items-center font-bold text-xl bg-primary-dark text-on-primary">
       <span>
         The current theme is:
         {' '}

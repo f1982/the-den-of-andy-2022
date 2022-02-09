@@ -1,5 +1,4 @@
 import { t } from 'i18next';
-import { useRouter } from 'next/router';
 import Headline from '../../components/Headline';
 import Container from '../../components/Layout/container';
 import TabTitle from '../../components/SiteSEO';
@@ -9,16 +8,14 @@ import HeroPost from '../../features/Blog/components/PostPreviewHero';
 import { getAllPosts } from '../../utils/blog-helper';
 
 function Blog({ allPosts }) {
-  const router = useRouter();
-
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 
   return (
     <>
       {/* show all the blog post list */}
-      <Container>
-        <TabTitle pageTitle={t('blog.pageTitle')} />
+      <TabTitle pageTitle={t('blog.pageTitle')} />
+      <div className="container mx-auto px-5">
         <Headline title={t('blog.headline')} />
         {!!heroPost && (
         <HeroPost
@@ -32,7 +29,7 @@ function Blog({ allPosts }) {
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
-      </Container>
+      </div>
     </>
   );
 }
