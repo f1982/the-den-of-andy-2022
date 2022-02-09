@@ -9,13 +9,13 @@ function Hero({ image }:{image:string}) {
     items-center justify-center flex-col"
     >
       <Image
-        className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+        className="lg:w-2/5 md:w-1/2 w-5/6 mb-10 object-cover object-center rounded"
         alt="hero"
         src={image}
         width={450}
         height={320}
       />
-      <div className="text-center lg:w-2/3 w-full">
+      <div className="text-center lg:w-3/4 w-full">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">Microdosing synth tattooed vexillologist</h1>
         <p className="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.</p>
         <div className="flex justify-center">

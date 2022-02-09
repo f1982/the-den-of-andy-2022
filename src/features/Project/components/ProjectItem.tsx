@@ -22,15 +22,15 @@ export default function ProjectItem({
         <div className="bg-surface p-3 rounded-lg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="h-60 rounded w-full object-cover mb-6"
-            alt="content"
+            className="h-60 rounded-xl w-full object-cover mb-6"
+            alt={title}
             src={`${PROJECT_IMAGE_URL}/${cover}`}
             width={650}
             height={250}
           />
-          <h3 className="tracking-widest text-xs font-medium title-font">{platform}</h3>
-          <h2 className="text-lg font-medium title-font mb-4">{title}</h2>
-          <p className="leading-relaxed text-base">{description}</p>
+          <h2 className="text-xl font-bold title-font mb-3">{title}</h2>
+          <span className="tracking-widest text-xs font-medium title-font">{platform}</span>
+          <p className="leading-relaxed">{description}</p>
         </div>
       </div>
     </Link>

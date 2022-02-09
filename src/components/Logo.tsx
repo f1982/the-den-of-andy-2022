@@ -22,7 +22,7 @@ export default function Logo() {
           /> */}
           {/* <img src={LogoImage} alt="andy space" /> */}
           <Image
-            src="/static/images/logo.png"
+            src="/static/images/logo-new.png"
             width={160}
             height={100}
             alt="andy space"
