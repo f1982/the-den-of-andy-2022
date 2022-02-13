@@ -1,0 +1,21 @@
+.headline {
+  background: linear-gradient(to bottom,transparent 0,transparent 55%,#c3fbfc 55%,#c3fbfc 100%);
+}
+
+.headline::before {
+    content: "";
+    position: absolute;
+    /* bottom: -0.8rem; */
+    bottom: 0rem;
+    left: .063rem;
+    height: 0.8rem;
+    border-radius: .125rem;
+    width: 84%;
+    background: linear-gradient(
+      to right,#f15a29 0,#f15a29 25%,#fff 25%,#fff 35%,#f15a29 35%,#f15a29 100%
+    );
+}
+
+.headline::after {
+  content: '.';
+}

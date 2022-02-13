@@ -40,11 +40,11 @@ const en = {
     },
     hobbies: {
       pageTitle: 'My hobbies',
-      headline: 'Hobbies...',
+      headline: 'Hobbies',
     },
     about: {
       pageTitle: 'About me',
-      headline: 'About me...',
+      headline: 'About',
       whoIsAndyTitle: 'Who\'s Andy',
       whoIsAndyDescription: 'My name is Andy Cao and I come from China 🇨🇳. I am a software developer👨‍💻 who focuses on building website and mobile apps 📱. I have serval hobbies with me for many years. Like RC hobby, FPV(flying drone in first person view), video editing and DIY. Currently My family and I living in Auckland, New Zealand 🇳🇿.',
       whatAndyDoTitle: 'What I do?',

@@ -10,7 +10,7 @@ import Image from './ui/Image';
 
 export default function Logo() {
   return (
-    <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    <div className="flex title-font font-medium mb-4 md:mb-0">
       <Link href="/" passHref>
         <a>
           {/* <Image
@@ -22,7 +22,7 @@ export default function Logo() {
           /> */}
           {/* <img src={LogoImage} alt="andy space" /> */}
           <Image
-            src="/static/images/logo.png"
+            src="/static/images/logo-new.png"
             width={160}
             height={100}
             alt="andy space"

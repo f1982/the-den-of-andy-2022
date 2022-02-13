@@ -10,12 +10,12 @@ export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('hobbies.pageTitle')} />
-      <Container>
+      <div className="container mx-auto">
         <Headline title={t('hobbies.headline')} />
         <Hero image="/static/images/hobby-rc-cover.jpg" />
         <ColumnHero />
         <Hero image="/static/images/hobby-cover-video.png" />
-      </Container>
+      </div>
     </>
 
   );

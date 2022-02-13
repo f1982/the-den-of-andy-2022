@@ -6,18 +6,19 @@ import { useRouter } from 'next/router';
 export default function ImageComponent({
   src,
   width,
-  height,
+  height = 'auto',
   alt,
   className,
   ...rest
 }:{
   src:string,
   width:number|string,
-  height:number,
+  height?:number|string,
   alt:string,
   className?:string
 }) {
   const { basePath } = useRouter();
+  // load image from public folder
   if (
     src.startsWith('/')
   ) {
@@ -32,7 +33,7 @@ export default function ImageComponent({
       />
     );
   }
-
+  // load image from url
   return (
     <NextImage
       className={cn('object-cover', className)}

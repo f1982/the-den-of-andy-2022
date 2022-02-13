@@ -1,22 +1,27 @@
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import Container from '../../components/Layout/container';
 import SiteSEO from '../../components/SiteSEO';
-import CloseButton from '../../components/ui/CloseButton';
+import CloseButton from '../../components/Button/CloseButton';
 import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
+import tailwindConfig from '../../../tailwind.config';
 
 Modal.setAppElement('#__next');
+
+const fullConfig = resolveConfig(tailwindConfig);
 
 const customModalStyles = {
   content: {
     top: '39px',
     bottom: '0',
     left: '0',
-    right: 'auto',
+    right: '0',
+    backgroundColor: fullConfig.theme.colors.surface,
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -47,9 +52,15 @@ export default function Post({ post, preview }) {
         ) : (
           <article className="mb-32">
             <Container>
-              <CloseButton />
+              <div className="flex w-full h-100">
+                <div className="flex-1" />
+                <CloseButton onClick={() => {
+                  router.back();
+                }}
+                />
+              </div>
+              <BlogPost {...post} />
             </Container>
-            <BlogPost {...post} />
           </article>
         )}
       </div>

@@ -1,27 +1,46 @@
 import { motion } from 'framer-motion';
+import Image from '../../../components/ui/Image';
 import Avatar from './PostAuthorAvatar';
-import CoverImage from './PostCoverImage';
 import DateFormatter from './PostDateFormatter';
-import PostTitle from './PostTitle';
 
 export default function PostHeader({
   title, coverImage, date, author, slug,
 }) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
-      <div className="max-w-2xl mx-auto">
-        <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <motion.figure layoutId="project-cover">
-          <CoverImage slug={slug} title={title} src={coverImage} height={620} width={1240} />
-        </motion.figure>
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
+      <div className=" max-w-2xl mx-auto">
+        <motion.h1
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="
+          text-lg
+          font-bold
+          tracking-tighter
+          text-center
+          md:text-xl
+          md:leading-none
+          md:text-left
+          mb-6
+        "
+          layoutId="post-title"
+        >
+          {title}
+        </motion.h1>
+        <div className="mb-6">
+          <Avatar name={author.name} picture={author.picture} />
         </div>
+      </div>
+      <Image
+        className="mx-auto
+        transition ease-in delay-350 duration-300
+        hover:shadow-md mb-12"
+        src={coverImage}
+        alt={`Cover Image for ${title}`}
+        width="100%"
+        height="auto"
+      />
+      <div className="max-w-2xl mx-auto">
+        <DateFormatter dateString={date} />
       </div>
     </>
   );

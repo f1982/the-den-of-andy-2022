@@ -1,3 +1,4 @@
+// cypress api doc: https://docs.cypress.io/api/table-of-contents
 describe('Navigation', () => {
   beforeEach(() => {
     // Start from the index page
@@ -18,6 +19,6 @@ describe('Navigation', () => {
     // console.log(cy.get('a[href="/about"]'));
     cy.get('a[href="/about"]').first().click();
     cy.url().should('include', '/about');
-    cy.get('h1').contains('About me');
+    cy.get('h1').contains('About');
   });
 });

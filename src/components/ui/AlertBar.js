@@ -7,12 +7,12 @@ export default function AlertBar({ preview }) {
   return (
     <div
       className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
+        'bg-error border-accent-7 text-on-error': preview,
+        'bg-error border-accent-2': !preview,
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="py-2 text-center text-sm text-on-error">
           {preview ? (
             <>
               This page is a preview.

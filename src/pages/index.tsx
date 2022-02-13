@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/SiteSEO';
+import AlertBar from '../components/ui/AlertBar';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 import DebugInfo from '../utils/DebugInfo';
 
@@ -11,6 +12,7 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
+      <AlertBar preview />
       <div className="h-screen flex flex-col justify-center items-center">
         <DefaultWelcome />
         <DebugInfo />

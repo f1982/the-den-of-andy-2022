@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/ui/Image';
 import Carousel from '../../components/Carousel';
 import { PROJECT_IMAGE_URL } from '../../config/constants';
-import CloseButton from '../../components/ui/CloseButton';
+import CloseButton from '../../components/Button/CloseButton';
 
 function Project({
   slug, title, cover, description, images,
 }) {
+  const router = useRouter();
+
   function getCarousel(imageList) {
     if (!imageList) return null;
     const fullPathImages = imageList.map((image) => `${PROJECT_IMAGE_URL}/${image}`);
@@ -15,16 +18,16 @@ function Project({
   }
 
   return (
-    <article className="mb-32">
+    <article className="container mx-auto mb-32">
       <div className="flex flex-column">
         <ProjectTitle id={slug} title={title} />
-        <CloseButton />
+        <CloseButton
+          onClick={() => router.back()}
+        />
       </div>
       <motion.figure
         layoutId={`project-cover-${slug}`}
         initial={{ scale: 1, opacity: 1 }}
-        // initial={{ scale: 0.8, opacity: 0 }}
-        // animate={{ scale: 1, opacity: 1 }}
       >
         <Image
           alt={`${title} project cover image`}

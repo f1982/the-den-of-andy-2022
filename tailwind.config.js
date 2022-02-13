@@ -1,29 +1,42 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
+// detail information refer to:  https://tailwindcss.com/docs/theme
 module.exports = {
   purge: ['./src/**/*.{js.ts,jsx,tsx}'],
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
-        // 'accent-1': '#FAFAFA',
-        // 'accent-2': '#EAEAEA',
-        // 'accent-7': '#333',
-        // success: '#0070f3',
-        // cyan: '#79FFE1',
-        // the following colurs are used in global.css for theme
+        // the following colours are used in global.css for theme
         emerald: colors.emerald,
         yellow: colors.yellow,
         fuchsia: colors.fuchsia,
         // these configuration are using for theme by global.css too
-        'th-background': 'var(--background)',
-        'th-background-secondary': 'var(--background-secondary)',
-        'th-foreground': 'var(--foreground)',
-        'th-primary-dark': 'var(--primary-dark)',
-        'th-primary-medium': 'var(--primary-medium)',
-        'th-primary-light': 'var(--primary-light)',
-        'th-accent-dark': 'var(--accent-dark)',
-        'th-accent-medium': 'var(--accent-medium)',
-        'th-accent-light': 'var(--accent-light)',
+        primary: {
+          dark: 'var(--primary-dark)',
+          light: 'var(--primary-light)',
+          medium: 'var(--primary-medium)',
+        },
+        secondary: {
+          dark: 'var(--secondary-dark)',
+          medium: 'var(--secondary-medium)',
+          light: 'var(--secondary-light)',
+        },
+        background: 'var(--background)',
+        surface: 'var(--surface)',
+        error: 'var(--error)',
+        'on-background': 'var(--on-background)',
+        'on-surface': 'var(--on-surface)',
+        'on-error': 'var(--on-error)',
+        'on-primary': 'var(--on-primary)',
+        'on-secondary': 'var(--on-secondary)',
+      },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          '2xl': '9rem',
+        },
       },
       spacing: {
         28: '7rem',
@@ -35,15 +48,17 @@ module.exports = {
         tight: 1.2,
       },
       fontFamily: {
-        as: ['Inter', 'sans-serif'],
-        sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
-        serif: ['Inter', 'Helvetica', 'Arial', 'sans-serif'], // default font
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Inter', ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
-        '5xl': '2.5rem',
-        '6xl': '2.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6.25rem',
+        // '5xl': '2.5rem',
+        // '6xl': '2.75rem',
+        // '7xl': '4.5rem',
+        '2xl': '4.2rem', // h1
+        xl: '3.15rem', // h2
+        lg: '2.4rem', // h3
+        md: '1.7rem', // h3
       },
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',

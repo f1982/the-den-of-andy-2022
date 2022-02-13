@@ -28,10 +28,10 @@ export default function Projects({ projects }) {
   return (
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
-      <Container>
+      <div className="container mx-auto">
         <BlogPageTitle title="Projects" />
         <ProjectList list={projects} type={type as string} />
-      </Container>
+      </div>
     </>
   );
 }

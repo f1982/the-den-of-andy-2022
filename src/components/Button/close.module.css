@@ -1,0 +1,42 @@
+.close_button {
+  --button-size: 42px;
+  --line-thick: 8px;
+  --line-color: #4a4a4a;
+
+  height: var(--button-size);
+  width: var(--button-size);
+  /* background-color:aquamarine; */
+  position: relative;
+  box-sizing: border-box;
+  line-height: 32px;
+  display: inline-block;
+}
+
+/* draw two rectangle and adjust their angles to make a X shape */
+.close_button::before,
+.close_button::after {
+  content: '';
+  position: absolute;
+  transform-origin: center;
+  top: 0%;
+  left: calc(50% - var(--line-thick)/2);
+  transform: rotate(-45deg);
+  display: block;
+  height: var(--button-size);
+  width: var(--line-thick);
+  background-color: var(--line-color);
+  transition: all 0.25s ease-out;
+  will-change: transform;
+}
+
+.close_button::after {
+  transform: rotate(-135deg);
+}
+
+.close_button:hover::before {
+  transform: rotate(0deg);
+}
+
+.close_button:hover::after {
+  transform: rotate(-180deg);
+}

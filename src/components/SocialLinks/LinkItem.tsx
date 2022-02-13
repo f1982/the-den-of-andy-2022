@@ -8,7 +8,7 @@ interface LinkItemSimpleProp {
 
 export default function LinkItemSimple({ link, alt, children }: LinkItemSimpleProp) {
   return (
-    <a href={link} title={alt} target="_blank" rel="noreferrer">
+    <a href={link} className="text-primary-dark" title={alt} target="_blank" rel="noreferrer">
       {children}
     </a>
   );
