@@ -19,6 +19,6 @@ describe('Navigation', () => {
     // console.log(cy.get('a[href="/about"]'));
     cy.get('a[href="/about"]').first().click();
     cy.url().should('include', '/about');
-    cy.get('h1').contains('About me');
+    cy.get('h1').contains('About');
   });
 });
