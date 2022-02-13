@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import Container from '../../components/Layout/container';
 import SiteSEO from '../../components/SiteSEO';
-import CloseButton from '../../components/ui/CloseButton';
+import CloseButton from '../../components/Button/CloseButton';
 import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
@@ -52,7 +52,13 @@ export default function Post({ post, preview }) {
         ) : (
           <article className="mb-32">
             <Container>
-              <CloseButton />
+              <div className="flex w-full h-100">
+                <div className="flex-1" />
+                <CloseButton onClick={() => {
+                  router.back();
+                }}
+                />
+              </div>
               <BlogPost {...post} />
             </Container>
           </article>

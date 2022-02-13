@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply leading-relaxed;
 }
 
 .markdown p,
@@ -18,7 +18,7 @@
 }
 
 .markdown pre {
-  @apply whitespace-pre overflow-x-auto p-4 text-sm leading-tight border border-gray-400 bg-gray-100;
+  @apply whitespace-pre overflow-x-auto p-4 text-sm leading-tight border border-gray-400 bg-surface;
 }
 
 .markdown code {
@@ -29,7 +29,7 @@
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-gray-500 bg-gray-200 italic ml-0 py-4 px-6;
+  @apply border-l-4 border-secondary-dark bg-surface italic ml-0 py-4 px-6;
 }
 
 .markdown blockquote p {

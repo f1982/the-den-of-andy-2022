@@ -25,10 +25,10 @@ body {
 
 @layer base {
   h1 {
-    @apply text-2xl;
-    background: linear-gradient(#efc854, #efc854) no-repeat;
+    /* @apply text-2xl; */
+    /* background: linear-gradient(#efc854, #efc854) no-repeat;
     background-size: 100% 15%;
-    background-position: 0 70%;
+    background-position: 0 70%; */
   }
 
   h2 {

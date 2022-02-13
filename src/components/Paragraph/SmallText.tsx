@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
+import { InView } from 'react-intersection-observer';
+import React from 'react';
 import ImageComponent from '../ui/Image';
-import Quote from '../Icons/Quote';
 
 function SmallText({
   description,
@@ -11,13 +13,21 @@ function SmallText({
     description:string
 }) {
   return (
-    <section className="container mx-auto">
-      <div className="xl:w-2/3 lg:w-3/4 w-full mb-20 mx-auto">
-        {!!title && <h2 className="font-bold title-font tracking-wider text-3xl font-bold mb-3">{title}</h2>}
-        {!!image && <ImageComponent className="my-6" src={image} alt="andy" width={1200} height={300} />}
-        <p className="leading-relaxed text-lg">{description}</p>
-      </div>
-    </section>
+    <InView threshold={0.25}>
+      {({ inView, ref, entry }) => (
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: -100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="w-full mb-20 mx-auto"
+        >
+          {!!title && <h2 className="text-lg mb-4 font-medium tracking-tighter">{title}</h2>}
+          {!!image && <ImageComponent className="my-6" src={image} alt="andy" width="100%" />}
+          <p>{description}</p>
+        </motion.div>
+      )}
+    </InView>
   );
 }
 

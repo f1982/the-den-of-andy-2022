@@ -12,7 +12,7 @@ function ProjectList({
   type:string}) {
   return (
     <section>
-      <div className="flex flex-wrap mx-4 mb-10">
+      <div className="flex flex-wrap mb-10">
         {type
           ? list.filter((item) => item.type === type).map((item) => (
             <Link key={item.id} href={`/project/${item.id}`} passHref>

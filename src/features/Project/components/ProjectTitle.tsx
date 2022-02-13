@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function ProjectTitle({ id, title }:{id: string, title:string}) {
   return (
-    <motion.h1
+    <h1
       className="
       text-6xl
       md:text-5xl
@@ -14,10 +14,10 @@ export default function ProjectTitle({ id, title }:{id: string, title:string}) {
       mx-auto
       text-center
       md:text-left
-      "
+      py-30"
       layoutId={`project-title-${id}`}
     >
       {title}
-    </motion.h1>
+    </h1>
   );
 }

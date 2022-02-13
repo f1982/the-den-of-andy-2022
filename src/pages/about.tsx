@@ -20,7 +20,7 @@ export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('about.pageTitle')} />
-      <Container>
+      <div className="container mx-auto">
         <Headline title={t('about.headline')} />
 
         <SmallText
@@ -38,7 +38,7 @@ export default function About() {
           title={t('about.familyTitle')}
           description={String(t('about.familyDescription')).replace('$AGE_OF_ZOE$', getAge('2016-06-01').toString())}
         />
-      </Container>
+      </div>
     </>
   );
 }

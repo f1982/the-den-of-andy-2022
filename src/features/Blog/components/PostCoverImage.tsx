@@ -6,8 +6,8 @@ interface PostCoverImageProps {
   title:string;
   src:string;
   slug:string;
-  height:number;
-  width:number|string;
+  height?:number|string;
+  width?:number|string;
 }
 
 export default function PostCoverImage(
@@ -20,7 +20,7 @@ export default function PostCoverImage(
   }:PostCoverImageProps,
 ) {
   return (
-    <div className="mx-auto text-center">
+    <div className="mx-auto">
       {slug ? (
       // <Link as={`/post/${slug}`} href="/post/[slug]">
         <Image

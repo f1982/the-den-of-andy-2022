@@ -6,14 +6,14 @@ import { useRouter } from 'next/router';
 export default function ImageComponent({
   src,
   width,
-  height,
+  height = 'auto',
   alt,
   className,
   ...rest
 }:{
   src:string,
   width:number|string,
-  height:number|string,
+  height?:number|string,
   alt:string,
   className?:string
 }) {

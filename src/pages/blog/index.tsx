@@ -1,10 +1,9 @@
 import { t } from 'i18next';
 import Headline from '../../components/Headline';
-import Container from '../../components/Layout/container';
 import TabTitle from '../../components/SiteSEO';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/components/MoreStories';
-import HeroPost from '../../features/Blog/components/PostPreviewHero';
+import PostPreview from '../../features/Blog/components/PostPreview';
 import { getAllPosts } from '../../utils/blog-helper';
 
 function Blog({ allPosts }) {
@@ -15,10 +14,10 @@ function Blog({ allPosts }) {
     <>
       {/* show all the blog post list */}
       <TabTitle pageTitle={t('blog.pageTitle')} />
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto">
         <Headline title={t('blog.headline')} />
         {!!heroPost && (
-        <HeroPost
+        <PostPreview
           title={heroPost.title}
           coverImage={heroPost.coverImage}
           date={heroPost.date}
@@ -27,7 +26,13 @@ function Blog({ allPosts }) {
           excerpt={heroPost.excerpt}
         />
         )}
+        <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
+          More Stories
+        </h2>
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
+          More List
+        </h2>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>

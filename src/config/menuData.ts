@@ -23,10 +23,10 @@ const menuData: MenuItemData[] = [
     link: '/about',
     label: 'About',
   },
-  {
-    link: '/contact',
-    label: 'Contact',
-  },
+  // {
+  //   link: '/contact',
+  //   label: 'Contact',
+  // },
 ];
 
 export {

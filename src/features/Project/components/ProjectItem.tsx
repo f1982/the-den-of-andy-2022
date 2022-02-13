@@ -1,7 +1,7 @@
 // import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Button from '../../../components/ui/Button';
+import Button from '../../../components/Button/Button';
 import { ProjectItemData } from '../../../types/projects';
 import TechStackItem from './TechStackItem';
 import Image from '../../../components/ui/Image';
@@ -28,8 +28,8 @@ export default function ProjectItem({
             width={650}
             height={250}
           />
-          <h2 className="text-xl font-bold title-font mb-3">{title}</h2>
-          <span className="tracking-widest text-xs font-medium title-font">{platform}</span>
+          <h3 className="text-md mb-3">{title}</h3>
+          <span className="tracking-widest text-sm">{platform}</span>
           <p className="leading-relaxed">{description}</p>
         </div>
       </div>

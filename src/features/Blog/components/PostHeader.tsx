@@ -8,31 +8,35 @@ export default function PostHeader({
 }) {
   return (
     <>
-      <div className=" max-w-4xl mx-auto">
+      <div className=" max-w-2xl mx-auto">
         <motion.h1
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="
-          text-6xl
-          md:text-6xl
-          lg:text-7xl
+          text-lg
           font-bold
           tracking-tighter
-          md:leading-none
           text-center
+          md:text-xl
+          md:leading-none
           md:text-left
+          mb-6
         "
           layoutId="post-title"
         >
           {title}
         </motion.h1>
-        <Avatar name={author.name} picture={author.picture} />
+        <div className="mb-6">
+          <Avatar name={author.name} picture={author.picture} />
+        </div>
       </div>
       <Image
-        className="mx-auto hover:shadow-md"
+        className="mx-auto
+        transition ease-in delay-350 duration-300
+        hover:shadow-md mb-12"
         src={coverImage}
         alt={`Cover Image for ${title}`}
-        width={1240}
+        width="100%"
         height="auto"
       />
       <div className="max-w-2xl mx-auto">
