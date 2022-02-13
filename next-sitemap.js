@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL,
+  siteUrl: process.env.NEXT_PUBLIC_APP_SITE_URL,
   generateRobotsTxt: true,
   sitemapSize: 7000,
 };
