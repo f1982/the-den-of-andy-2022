@@ -1,9 +1,10 @@
 import { t } from 'i18next';
 import React from 'react';
-import Headline from '../components/Headline';
-import Container from '../components/Layout/container';
-import SmallText from '../components/Paragraph/SmallText';
-import TabTitle from '../components/SiteSEO';
+import Headline from '../../components/Typography/Headline';
+import SmallText from '../../components/Paragraph/SmallText';
+import TabTitle from '../../components/SiteSEO';
+import Submenu from '../../components/MenuBar/Submenu';
+import { aboutSubmenu } from '../../config/menuData';
 
 function getAge(dateString) {
   const today = new Date();
@@ -22,6 +23,7 @@ export default function About() {
       <TabTitle pageTitle={t('about.pageTitle')} />
       <div className="container mx-auto">
         <Headline title={t('about.headline')} />
+        <Submenu items={aboutSubmenu} />
 
         <SmallText
           image="/static/images/about-andy-back.jpg"

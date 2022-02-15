@@ -41,6 +41,23 @@ const en = {
     hobbies: {
       pageTitle: 'My hobbies',
       headline: 'Hobbies',
+      rc: {
+        title: 'RC Hobby',
+        description: 'Making RC aeroplane was one of my dream in my childhood. When I was in primary school I have seen some magazines that introduced how to make RC aeroplane, I was shocked by the content and started to absorb the information that I can get. But actually, for a long period of time, I cannot get the right data or cannot find the right place to buy the components I need. Thanks for the Internet development and I can quickly find the groups and tutorials which let me enjoy to make or even design aircraft by myself.',
+        button1: 'Planes',
+        button2: 'My devices',
+      },
+      drawing: {
+        title: 'Drawing',
+        description: 'I feel that drawing is an easy way to express your ideas and also an efficient way to communicate with others. When I first time decided to draw something seriously was that when I saw the famous cartoon series of the Dragon Balls which created by Toriyama Akira. I keep this hobby as a tool to record some ideas or an approach for design.',
+        button: 'Drawing Album',
+      },
+      video: {
+        title: 'Video Editing',
+        description: 'I don’t think human’s memory is very stable and accurate. Sometimes, when we recall the things that happened before we can only remember the blurred pictures. I consider video as an external memory for very precise and detailed information. Especially when I have my child, I try to record all the key memories.',
+        button1: 'Youtube',
+        button2: 'Bilibili',
+      },
     },
     about: {
       pageTitle: 'About me',

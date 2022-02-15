@@ -29,7 +29,22 @@ const menuData: MenuItemData[] = [
   // },
 ];
 
+const aboutSubmenu: MenuItemData[] = [
+  {
+    link: '/about/my-devices',
+    label: 'My Device',
+  },
+  {
+    link: 'about/my-apps',
+    label: 'My Software',
+  },
+  {
+    link: '/project',
+    label: 'My tools',
+  },
+];
 export {
   BLOG_PATH,
   menuData,
+  aboutSubmenu,
 };
