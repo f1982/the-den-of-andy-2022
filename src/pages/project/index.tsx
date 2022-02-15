@@ -1,7 +1,7 @@
 import { t } from 'i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import BlogPageTitle from '../../components/Headline';
+import BlogPageTitle from '../../components/Typography/Headline';
 import Container from '../../components/Layout/container';
 import TabTitle from '../../components/SiteSEO';
 import ProjectList from '../../features/Project/ProjectList';

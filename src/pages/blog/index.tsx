@@ -1,5 +1,5 @@
 import { t } from 'i18next';
-import Headline from '../../components/Headline';
+import Headline from '../../components/Typography/Headline';
 import TabTitle from '../../components/SiteSEO';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/components/MoreStories';

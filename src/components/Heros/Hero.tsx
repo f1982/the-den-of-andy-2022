@@ -1,7 +1,7 @@
 // import Image from 'next/image';
-import { motion } from 'framer-motion';
 import classNames from 'classnames';
-import cn from '../../../i18n/languages/cn';
+import { motion } from 'framer-motion';
+import React from 'react';
 import Button from '../Button/Button';
 import Image from '../ui/Image';
 
@@ -11,25 +11,39 @@ const containerVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 2,
       type: 'tween',
-      staggerChildren: 0.5, // let the child show up by order after a certain delay
+      staggerChildren: 0.6, // let the child show up by order after a certain delay
     },
   },
 };
 
 const itemVariant = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
   show: {
     opacity: 1,
+    x: 0,
+  },
+  transition: {
+    type: 'tween',
+    duration: 2.6,
   },
 };
 
 function Hero({
+  title,
   image,
+  description,
+  buttons,
   viewPortOnce = false,
 }:{
+  title:string,
   image:string,
+  description?:string,
+  buttons?:React.ReactNode,
   viewPortOnce?:boolean
 }) {
   return (
@@ -46,15 +60,10 @@ function Hero({
       whileInView="show"
       viewport={{ once: viewPortOnce }}
     >
-      {/* <motion.figure
-        className="lg:w-2/5 md:w-1/2 w-5/6 mb-10 object-cover object-center rounded"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, type: 'tween' }}
-        viewport={{ once: viewPortOnce }}
-      > */}
       <motion.figure
-        className="lg:w-2/5 md:w-1/2 w-5/6 mb-10 object-cover object-center rounded"
+        className="
+        lg:w-2/5 md:w-1/2 w-5/6 mb-10
+        object-cover object-center rounded"
       >
         <Image
           alt="hero"
@@ -65,31 +74,26 @@ function Hero({
       </motion.figure>
       <div
         className="text-center lg:w-3/4 w-full"
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 1, type: 'tween' }}
-        // viewport={{ once: viewPortOnce }}
       >
         <motion.h2
           variants={itemVariant}
           className="
-        sm:text-lg text-lg mb-4 font-medium tracking-tighter"
+        sm:text-lg text-lg mb-4
+        font-medium tracking-tighter"
         >
-          Microdosing synth tattooed vexillologist
+          {title}
         </motion.h2>
         <motion.p
           variants={itemVariant}
           className="mb-8 leading-relaxed"
         >
-          Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled.
-          Chambray dreamcatcher trust fund,
-          kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh.
-          Pour-over meditation PBR&B pickled ennui celiac mlkshk
-          freegan photo booth af fingerstache pitchfork.
+          {description}
         </motion.p>
-        <motion.div variants={itemVariant} className="flex justify-center">
-          <Button type="primary">Primary</Button>
-          <Button type="secondary">Secondary</Button>
+        <motion.div
+          variants={itemVariant}
+          className="flex justify-center"
+        >
+          {buttons}
         </motion.div>
       </div>
     </motion.section>

@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 import { t } from 'i18next';
 import React from 'react';
-import Container from '../components/Layout/container';
-import Headline from '../components/Headline';
+import Container from '../../components/Layout/container';
+import Headline from '../../components/Typography/Headline';
 
 export default function About() {
   return (
