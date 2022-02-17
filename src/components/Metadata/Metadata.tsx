@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../config/constants';
+import { HOME_OG_IMAGE_URL } from '../../constants/paths';
 
 export default function Metadata() {
   const { basePath } = useRouter();
@@ -37,7 +37,7 @@ export default function Metadata() {
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content="A statically generated blog example using Next.js"
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>

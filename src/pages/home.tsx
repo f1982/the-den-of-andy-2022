@@ -1,7 +1,7 @@
 import { t } from 'i18next';
 import React from 'react';
 import SelfIntroShort from '../components/Blocks/SelfIntroShort';
-import TabTitle from '../components/SiteSEO';
+import TabTitle from '../components/Metadata/SiteSEO';
 import Highlight from '../components/Typography/Highlight';
 
 function Home(): React.ReactNode {

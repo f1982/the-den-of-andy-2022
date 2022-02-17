@@ -5,7 +5,7 @@ import Button from '../../../components/Button/Button';
 import { ProjectItemData } from '../../../types/projects';
 import TechStackItem from './TechStackItem';
 import Image from '../../../components/Image/Image';
-import { PROJECT_IMAGE_URL } from '../../../config/constants';
+import { PROJECT_IMAGE_URL } from '../../../constants/paths';
 
 export default function ProjectItem({
   id,

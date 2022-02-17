@@ -2,9 +2,9 @@ import { t } from 'i18next';
 import React from 'react';
 import Headline from '../../components/Typography/Headline';
 import SmallText from '../../components/Blocks/SmallText';
-import TabTitle from '../../components/SiteSEO';
-import Submenu from '../../components/MenuBar/Submenu';
-import { aboutSubmenu } from '../../config/menuData';
+import TabTitle from '../../components/Metadata/SiteSEO';
+import Submenu from '../../components/Menu/Submenu';
+import { aboutSubmenu } from '../../constants/menuData';
 
 function getAge(dateString) {
   const today = new Date();

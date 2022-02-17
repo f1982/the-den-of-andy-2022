@@ -1,7 +1,6 @@
 import { t } from 'i18next';
-import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
-import SEO from '../../next-seo';
+import SEO from '../../../next-seo';
 
 interface SiteSEOProps {
   pageTitle:string

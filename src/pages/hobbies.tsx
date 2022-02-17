@@ -3,7 +3,7 @@ import React from 'react';
 import Headline from '../components/Typography/Headline';
 import ColumnHero from '../components/Blocks/ColumnHero';
 import Hero from '../components/Blocks/Hero';
-import TabTitle from '../components/SiteSEO';
+import TabTitle from '../components/Metadata/SiteSEO';
 import MyButton from '../components/Button/Button';
 
 export default function About() {

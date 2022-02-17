@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/Image/Image';
 import Carousel from '../../components/Carousel';
-import { PROJECT_IMAGE_URL } from '../../config/constants';
+import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import CloseButton from '../../components/Button/CloseButton';
 
 function Project({

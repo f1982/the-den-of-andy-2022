@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
-import SiteSEO from '../components/SiteSEO';
-import AlertBar from '../components/ui/AlertBar';
+import SiteSEO from '../components/Metadata/SiteSEO';
+import AlertBar from '../components/Alert/AlertBar';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 import DebugInfo from '../utils/DebugInfo';
 

@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { EXAMPLE_PATH } from '../../config/constants';
 
 export default function AlertBar({ preview }) {
   return (
@@ -29,7 +28,7 @@ export default function AlertBar({ preview }) {
               The source code for this blog is
               {' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+                href="https://github.com/vercel/next.js/tree/canary/examples"
                 className="underline hover:text-success duration-200 transition-colors"
               >
                 available on GitHub

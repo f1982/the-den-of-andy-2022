@@ -4,9 +4,9 @@ import Logo from './Logo';
 import ArrowRight from '../Icons/ArrowRight';
 import MyButton from '../Button/Button';
 import MenuItemData from '../../types/index';
-import { menuData } from '../../config/menuData';
-import MobileMenuBar from '../MenuBar/MobileMenuBar';
-import DesktopMenuBar from '../MenuBar/DesktopMenuBar';
+import { menuData } from '../../constants/menuData';
+import MobileMenuBar from './MobileMenuBar';
+import DesktopMenuBar from './DesktopMenuBar';
 
 export default function Header() {
   return (

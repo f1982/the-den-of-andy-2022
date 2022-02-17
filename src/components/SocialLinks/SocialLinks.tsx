@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import classNames from 'classnames';
 import LinkItem from './LinkItem';
-import { SNS } from '../../config/links';
+import { SNS } from '../../constants/links';
 
 export default function SocialLinks() {
   return (

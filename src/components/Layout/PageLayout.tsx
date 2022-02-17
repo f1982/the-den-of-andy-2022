@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { logPageView } from '../../utils/SiteAnalystic';
-import Metadata from '../Metadata';
+import Metadata from '../Metadata/Metadata';
 import Footer from '../Header/SiteFooter';
 import Header from '../Header/SiteHeader';
 

@@ -2,7 +2,7 @@ import { t } from 'i18next';
 import React from 'react';
 import MyButton from '../components/Button/Button';
 import DotLoader from '../components/Loader/DotLoader';
-import TabTitle from '../components/SiteSEO';
+import TabTitle from '../components/Metadata/SiteSEO';
 import Headline from '../components/Typography/Headline';
 
 export default function Custom404() {
