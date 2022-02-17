@@ -2,14 +2,13 @@ import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
 import resolveConfig from 'tailwindcss/resolveConfig';
-import Container from '../../components/Layout/container';
-import SiteSEO from '../../components/SiteSEO';
+import tailwindConfig from '../../../tailwind.config';
 import CloseButton from '../../components/Button/CloseButton';
+import SiteSEO from '../../components/SiteSEO';
 import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
-import tailwindConfig from '../../../tailwind.config';
 
 Modal.setAppElement('#__next');
 
@@ -51,7 +50,7 @@ export default function Post({ post, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <article className="mb-32">
-            <Container>
+            <div className="container mx-auto px-5">
               <div className="flex w-full h-100">
                 <div className="flex-1" />
                 <CloseButton onClick={() => {
@@ -60,7 +59,7 @@ export default function Post({ post, preview }) {
                 />
               </div>
               <BlogPost {...post} />
-            </Container>
+            </div>
           </article>
         )}
       </div>

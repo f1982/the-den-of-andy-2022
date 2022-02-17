@@ -1,8 +1,8 @@
 import { t } from 'i18next';
 import React from 'react';
 import Headline from '../components/Typography/Headline';
-import ColumnHero from '../components/Paragraph/ColumnHero';
-import Hero from '../components/Paragraph/Hero';
+import ColumnHero from '../components/Blocks/ColumnHero';
+import Hero from '../components/Blocks/Hero';
 import TabTitle from '../components/SiteSEO';
 import MyButton from '../components/Button/Button';
 

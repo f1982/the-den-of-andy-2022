@@ -1,7 +1,5 @@
 import cn from 'classnames';
-
 import { EXAMPLE_PATH } from '../../config/constants';
-import Container from '../Layout/container';
 
 export default function AlertBar({ preview }) {
   return (
@@ -11,7 +9,7 @@ export default function AlertBar({ preview }) {
         'bg-error border-accent-2': !preview,
       })}
     >
-      <Container>
+      <div className="container mx-auto px-5">
         <div className="py-2 text-center text-sm text-on-error">
           {preview ? (
             <>
@@ -40,7 +38,7 @@ export default function AlertBar({ preview }) {
             </>
           )}
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

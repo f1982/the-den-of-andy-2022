@@ -1,6 +1,6 @@
 import { t } from 'i18next';
 import React from 'react';
-import SelfIntroShort from '../components/Paragraph/SelfIntroShort';
+import SelfIntroShort from '../components/Blocks/SelfIntroShort';
 import TabTitle from '../components/SiteSEO';
 import Highlight from '../components/Typography/Highlight';
 

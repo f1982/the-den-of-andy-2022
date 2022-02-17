@@ -1,15 +1,13 @@
 /* eslint-disable max-len */
-import React from 'react';
 import { t } from 'i18next';
-import SmallText from '../components/Paragraph/SmallText';
-import Container from '../components/Layout/container';
+import React from 'react';
 import TabTitle from '../components/SiteSEO';
 
 export default function PrivacyPolicy() {
   return (
     <>
       <TabTitle pageTitle={t('tc.pageTitle')} />
-      <Container>
+      <div className="container mx-auto px-5">
         <h1>Terms and Conditions</h1>
         <p>Last updated: January 02, 2022</p>
         <p>Please read these terms and conditions carefully before using Our Service.</p>
@@ -136,7 +134,7 @@ export default function PrivacyPolicy() {
         <ul>
           <li>By email: 001sd@126.com</li>
         </ul>
-      </Container>
+      </div>
     </>
 
   );

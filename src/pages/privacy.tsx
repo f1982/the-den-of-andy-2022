@@ -1,14 +1,13 @@
 /* eslint-disable max-len */
 import { t } from 'i18next';
 import React from 'react';
-import Container from '../components/Layout/container';
 import TabTitle from '../components/SiteSEO';
 
 export default function PrivacyPolicy() {
   return (
     <>
       <TabTitle pageTitle={t('privacy.pageTitle')} />
-      <Container>
+      <div className="container mx-auto px-5">
 
         <h1>Privacy Policy for andycao.me</h1>
 
@@ -148,7 +147,7 @@ export default function PrivacyPolicy() {
         <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
 
         <p>andycao personal website does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
-      </Container>
+      </div>
     </>
 
   );
