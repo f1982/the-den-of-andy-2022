@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 // import Image from 'next/image';
 import Link from 'next/link';
-import Image from '../ui/Image';
+import Image from '../Image/Image';
 
 function SelfIntroShort() {
   return (

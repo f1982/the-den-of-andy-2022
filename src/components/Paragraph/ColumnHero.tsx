@@ -1,6 +1,6 @@
 // import Image from 'next/image';
 import Button from '../Button/Button';
-import Image from '../ui/Image';
+import Image from '../Image/Image';
 
 function ColumnHero() {
   return (

@@ -1,4 +1,4 @@
-import ImageComponent from './ui/Image';
+import ImageComponent from './Image/Image';
 
 export default function Carousel({ images }:{images: string[]}) {
   return (

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import LogoImage from '../assets/logo.png';
 // import LogoImage from '../../public/static/images/logo.png';
-import Image from './ui/Image';
+import Image from './Image/Image';
 
 // const myLoader = ({ src, width, quality }) => src;
 

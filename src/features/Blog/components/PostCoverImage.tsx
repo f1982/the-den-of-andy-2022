@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Link from 'next/link';
-import Image from '../../../components/ui/Image';
+import Image from '../../../components/Image/Image';
 
 interface PostCoverImageProps {
   title:string;

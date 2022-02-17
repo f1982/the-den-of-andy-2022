@@ -3,10 +3,9 @@ import MenuItemData from '../../types';
 
 function SubMenuItem({ link, label }: MenuItemData) {
   return (
-    <div>
-      <Link href={link} passHref>
-        <a
-          className="
+    <Link href={link} passHref>
+      <a
+        className="
           px-4
           py-2
           text-md
@@ -15,11 +14,10 @@ function SubMenuItem({ link, label }: MenuItemData) {
           hover:bg-primary-dark
           hover:text-white
           "
-        >
-          {label}
-        </a>
-      </Link>
-    </div>
+      >
+        {label}
+      </a>
+    </Link>
   );
 }
 

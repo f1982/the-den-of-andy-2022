@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Button from '../Button/Button';
-import Image from '../ui/Image';
+import Image from '../Image/Image';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },

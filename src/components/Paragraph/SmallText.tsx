@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import ImageComponent from '../ui/Image';
+import ImageComponent from '../Image/Image';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Button from '../../../components/Button/Button';
 import { ProjectItemData } from '../../../types/projects';
 import TechStackItem from './TechStackItem';
-import Image from '../../../components/ui/Image';
+import Image from '../../../components/Image/Image';
 import { PROJECT_IMAGE_URL } from '../../../config/constants';
 
 export default function ProjectItem({
