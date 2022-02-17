@@ -32,7 +32,6 @@
 
 /* In React project use this class by className='loading["lds-ellipsis"]' */
 .ldsEllipsis {
-    display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
