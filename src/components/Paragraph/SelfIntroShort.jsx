@@ -9,6 +9,7 @@ function SelfIntroShort() {
       <div className="rounded-3xl overflow-hidden">
         <Image
           alt="content"
+          withLoader
           className="object-cover object-center h-full"
           src="/static/images/andy-at-cornfield.jpg"
           width="100%"
