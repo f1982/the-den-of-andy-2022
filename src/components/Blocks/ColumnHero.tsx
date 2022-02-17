@@ -10,18 +10,17 @@ function ColumnHero() {
     "
     >
       <Image
-        className="lg:w-1/3 md:w-1/3 w-5/6 mb-10 object-cover"
+        className="object-cover mb-6 md:mb-0"
         alt="hero"
         src="/static/images/hobby-drawing-cover.jpg"
-        width={450}
-        height="auto"
+        width="100%"
       />
-      <div className="lg:w-2/3 md:w-2/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <div className="lg:w-1/2 md:w-2/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
           Before they sold out readymade gluten
         </h1>
         <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-        <div className="flex justify-center">
+        <div className="flex gap-x-3">
           <Button type="primary">Primary</Button>
           <Button type="secondary">Secondary</Button>
         </div>

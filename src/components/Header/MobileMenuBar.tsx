@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import MenuItemData from '../../types';
+import { MenuItemData } from '../../types';
 import ArrowRight from '../Icons/ArrowRight';
 import Hamburger from '../Icons/Hamburger';
 import MyButton from '../Button/Button';

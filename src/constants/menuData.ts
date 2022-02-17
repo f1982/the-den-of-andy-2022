@@ -1,4 +1,4 @@
-import MenuItemData from '../types/index';
+import { MenuItemData } from '../types/index';
 
 const BLOG_PATH = '/blog';
 
@@ -23,24 +23,20 @@ const menuData: MenuItemData[] = [
     link: '/about',
     label: 'About',
   },
-  // {
-  //   link: '/contact',
-  //   label: 'Contact',
-  // },
 ];
 
 const aboutSubmenu: MenuItemData[] = [
   {
-    link: '/about/my-devices',
+    link: '/about/devices',
     label: 'My Device',
   },
   {
-    link: 'about/my-apps',
+    link: '/about/apps',
     label: 'My Software',
   },
   {
-    link: '/project',
-    label: 'My tools',
+    link: '/about/contact',
+    label: 'Contact',
   },
 ];
 export {

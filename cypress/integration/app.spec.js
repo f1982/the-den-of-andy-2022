@@ -63,4 +63,20 @@ describe('Inter pages', () => {
     cy.url().should('include', '/about');
     cy.get('h1').contains(/about/i);
   });
+
+  it('about contact page', () => {
+    cy.get('a[href="/about"]').first().click();
+    cy.get('a[href="/about/contact"]').first().click();
+    cy.url().should('include', '/about/contact');
+  });
+  it('about apps page', () => {
+    cy.get('a[href="/about"]').first().click();
+    cy.get('a[href="/about/apps"]').first().click();
+    cy.url().should('include', '/about/apps');
+  });
+  it('about devices page', () => {
+    cy.get('a[href="/about"]').first().click();
+    cy.get('a[href="/about/devices"]').first().click();
+    cy.url().should('include', '/about/devices');
+  });
 });

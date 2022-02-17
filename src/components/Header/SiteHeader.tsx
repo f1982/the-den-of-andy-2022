@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from './Logo';
 import ArrowRight from '../Icons/ArrowRight';
 import MyButton from '../Button/Button';
-import MenuItemData from '../../types/index';
+import { MenuItemData } from '../../types/index';
 import { menuData } from '../../constants/menuData';
 import MobileMenuBar from './MobileMenuBar';
 import DesktopMenuBar from './DesktopMenuBar';

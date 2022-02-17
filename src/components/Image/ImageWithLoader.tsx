@@ -22,7 +22,7 @@ export default function ImageWithLoader({
   }, []);
 
   return (
-    <div style={{ position: 'relative', minWidth: '600px', minHeight: '200px' }}>
+    <div style={{ position: 'relative', minWidth: '300px', minHeight: '200px' }}>
       {/* eslint-disable @next/next/no-img-element */}
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <img

@@ -17,10 +17,10 @@ export default function About() {
           title={t('hobbies.rc.title')}
           description={t('hobbies.rc.description')}
           buttons={(
-            <>
+            <div className="flex gap-x-3">
               <MyButton type="primary">{t('hobbies.rc.button1')}</MyButton>
               <MyButton type="secondary">{t('hobbies.rc.button2')}</MyButton>
-            </>
+            </div>
           )}
         />
         <ColumnHero />
@@ -29,10 +29,10 @@ export default function About() {
           title={t('hobbies.video.title')}
           description={t('hobbies.video.description')}
           buttons={(
-            <>
+            <div className="flex gap-x-3">
               <MyButton type="primary">{t('hobbies.video.button1')}</MyButton>
               <MyButton type="secondary">{t('hobbies.video.button2')}</MyButton>
-            </>
+            </div>
           )}
         />
       </div>

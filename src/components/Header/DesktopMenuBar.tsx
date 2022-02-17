@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import MenuItemData from '../../types/index';
+import { MenuItemData } from '../../types/index';
 import ArrowRight from '../Icons/ArrowRight';
 import MyButton from '../Button/Button';
 
@@ -29,12 +29,7 @@ function DesktopMenuBar({ menuData }:{menuData:MenuItemData[]}) {
     <nav className="hidden md:block flex flex-wrap space-x-2">
       {
             menuData.map((item) => (
-              // <span
-              //   key={item.link}
-              //   className="mr-2 px-2 py-4"
-              // >
               <MenuItem key={item.link} link={item.link} label={item.label} />
-              // </span>
             ))
           }
       <MyButton type="secondary">
