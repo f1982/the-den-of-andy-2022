@@ -9,6 +9,18 @@ describe('Welcome page', () => {
   });
 });
 
+describe('404 error page', () => {
+  it('return 404 if page not found', () => {
+    cy.request({ url: `${Cypress.env('host')}page-not-exist`, failOnStatusCode: false }).its('status').should('equal', 404);
+  });
+  it('404 page code and content should be correct', () => {
+    cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false }).its('status').should('equal', 404);
+    cy.visit(`${Cypress.env('host')}404`, { failOnStatusCode: false });
+    cy.get('button').contains(/back to home/i);
+    cy.get('h1').contains(/can not find the page/i);
+  });
+});
+
 describe('Inter pages', () => {
   beforeEach(() => {
     // Start from the index page

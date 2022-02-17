@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
-import Image from './Image/Image';
+import Image from '../Image/Image';
 
 export default function Logo() {
   return (

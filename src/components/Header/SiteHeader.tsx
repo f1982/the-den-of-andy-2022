@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import Logo from './Logo';
-import ArrowRight from './Icons/ArrowRight';
-import MyButton from './Button/Button';
-import MenuItemData from '../types/index';
-import { menuData } from '../config/menuData';
-import MobileMenuBar from './MenuBar/MobileMenuBar';
-import DesktopMenuBar from './MenuBar/DesktopMenuBar';
+import ArrowRight from '../Icons/ArrowRight';
+import MyButton from '../Button/Button';
+import MenuItemData from '../../types/index';
+import { menuData } from '../../config/menuData';
+import MobileMenuBar from '../MenuBar/MobileMenuBar';
+import DesktopMenuBar from '../MenuBar/DesktopMenuBar';
 
 export default function Header() {
   return (

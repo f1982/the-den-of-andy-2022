@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import SocialLinks from './SocialLinks/SocialLinks';
+import SocialLinks from '../SocialLinks/SocialLinks';
 import ThemeChanger from './ThemeChanger';
 
 function Copyright() {

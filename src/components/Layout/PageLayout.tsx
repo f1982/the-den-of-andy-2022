@@ -2,8 +2,8 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { logPageView } from '../../utils/SiteAnalystic';
 import Metadata from '../Metadata';
-import Footer from '../SiteFooter';
-import Header from '../SiteHeader';
+import Footer from '../Header/SiteFooter';
+import Header from '../Header/SiteHeader';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { pathname } = useRouter();
