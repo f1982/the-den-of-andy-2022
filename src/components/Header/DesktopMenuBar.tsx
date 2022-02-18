@@ -1,24 +1,18 @@
+import cn from 'classnames';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { MenuItemData } from '../../types/index';
-import ArrowRight from '../Icons/ArrowRight';
-import MyButton from '../Button/Button';
+import EyeIcon from '../Icons/EyeIcon';
+import styles from './menu.module.css';
 
-function MenuItem({ link, label }: MenuItemData) {
+function MenuItem({ link, label, icon }: MenuItemData) {
+  const { pathname } = useRouter();
   return (
     <Link href={link} passHref>
-      <a
-        className="
-        px-4
-        py-2
-
-        bg-primary-medium
-        text-on-primary
-        hover:bg-primary-dark
-        hover:text-white
-        "
-      >
-        {label}
+      <a className={link === pathname ? styles.activeNavLink : styles.topMenuItem}>
+        <span>{icon}</span>
+        <div className={styles.overlayText}>{label}</div>
       </a>
     </Link>
   );
@@ -26,17 +20,17 @@ function MenuItem({ link, label }: MenuItemData) {
 
 function DesktopMenuBar({ menuData }:{menuData:MenuItemData[]}) {
   return (
-    <nav className="hidden md:block flex flex-wrap space-x-2">
+    <nav className={cn('hidden md:flex md:flex-row', styles.navContainer)}>
       {
-            menuData.map((item) => (
-              <MenuItem key={item.link} link={item.link} label={item.label} />
-            ))
-          }
-      <MyButton type="secondary">
+        menuData.map((item) => (
+          <MenuItem key={item.link} {...item} />
+        ))
+      }
+      {/* <MyButton type="secondary">
         <ArrowRight />
         {' '}
         <span className="hover:animate-bounce">Go</span>
-      </MyButton>
+      </MyButton> */}
     </nav>
   );
 }

@@ -12,9 +12,9 @@ export default function Headline({ title }:{title:string}) {
       "
     >
       <motion.h1
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2 }}
+        // initial={{ scale: 0.9, opacity: 0 }}
+        // animate={{ scale: 1, opacity: 1 }}
+        // transition={{ delay: 0.2 }}
         className="
         text-xl
         relative

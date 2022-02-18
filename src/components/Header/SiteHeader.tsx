@@ -1,24 +1,21 @@
-import Link from 'next/link';
 import React from 'react';
-import Logo from './Logo';
-import ArrowRight from '../Icons/ArrowRight';
-import MyButton from '../Button/Button';
-import { MenuItemData } from '../../types/index';
 import { menuData } from '../../constants/menuData';
-import MobileMenuBar from './MobileMenuBar';
 import DesktopMenuBar from './DesktopMenuBar';
+import Logo from './Logo';
+import MobileMenuBar from './MobileMenuBar';
 
 export default function Header() {
   return (
-    <header>
-      <div className="
-      container mx-auto
-      flex
-      flex-wrap
-      items-center
-      md:flex-col
-      lg:flex-row
-      lg:content-center
+    <header style={{ borderBottom: '1px solid #ccc' }}>
+      <div
+        className="
+          container mx-auto
+          flex
+          flex-wrap
+          items-center
+          md:flex-col
+          lg:flex-row
+          lg:content-center
       "
       >
         <Logo />

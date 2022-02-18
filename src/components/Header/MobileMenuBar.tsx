@@ -5,12 +5,11 @@ import ArrowRight from '../Icons/ArrowRight';
 import Hamburger from '../Icons/Hamburger';
 import MyButton from '../Button/Button';
 
-function MenuItem({ link, label }: MenuItemData) {
+function MenuItem({ link, label, icon }: MenuItemData) {
   return (
-    <div>
-      <Link href={link} passHref>
-        <a
-          className="
+    <Link href={link} passHref>
+      <a
+        className="
           px-4
           py-2
           text-lg
@@ -20,11 +19,11 @@ function MenuItem({ link, label }: MenuItemData) {
           hover:bg-primary-dark
           hover:text-white
           "
-        >
-          {label}
-        </a>
-      </Link>
-    </div>
+      >
+        <span>{icon}</span>
+        <span>{label}</span>
+      </a>
+    </Link>
   );
 }
 
@@ -36,23 +35,24 @@ function MobileMenuBar({
   const [showing, setShowing] = useState(false);
 
   return (
-    <div className="md:hidden">
-      <MyButton
-        type="primary"
-        onClick={() => {
-          setShowing(!showing);
-        }}
-      >
-        <Hamburger />
-      </MyButton>
+    <>
+      {' '}
+      <div className="md:hidden">
+        <MyButton
+          type="primary"
+          onClick={() => {
+            setShowing(!showing);
+          }}
+        >
+          <Hamburger />
+        </MyButton>
+      </div>
       {showing && (
-      <div className="fixed top-0 right-0 w-full bg-secondary-dark">
-        <nav className="flex flex-col">
+      <div className="fixed top-0 left-0 w-full z-999 bg-secondary-dark">
+        <nav className="flex flex-col ">
           {
-              menuData.map((item) => (
-                <MenuItem key={item.link} link={item.link} label={item.label} />
-              ))
-            }
+            menuData.map((item) => <MenuItem key={item.link} {...item} />)
+          }
           <MyButton
             type="secondary"
             onClick={() => {
@@ -65,7 +65,8 @@ function MobileMenuBar({
         </nav>
       </div>
       )}
-    </div>
+    </>
+
   );
 }
 

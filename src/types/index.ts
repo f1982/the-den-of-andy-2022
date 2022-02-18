@@ -2,7 +2,8 @@ import React from 'react';
 
 interface MenuItemData {
   link:string,
-  label:string
+  label:string,
+  icon?: React.ReactElement,
 }
 
 interface HeroData {
