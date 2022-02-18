@@ -5,6 +5,7 @@ import styles from './close.module.css';
 function CloseButton({ onClick }:{onClick:()=>void}) {
   return (
     <button
+      aria-label="Close"
       type="button"
       onClick={() => {
         if (onClick) {

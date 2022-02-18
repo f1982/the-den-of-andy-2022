@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import ProjectTitle from './components/ProjectTitle';
 import Image from '../../components/Image/Image';
-import Carousel from '../../components/Carousel';
+import Carousel from '../../components/Carousel/Carousel';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import CloseButton from '../../components/Button/CloseButton';
 

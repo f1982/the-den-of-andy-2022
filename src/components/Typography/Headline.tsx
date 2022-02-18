@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styles from './headline.module.css';
+import Highlight from './Highlight';
 
 export default function Headline({ title }:{title:string}) {
   return (
@@ -24,9 +24,9 @@ export default function Headline({ title }:{title:string}) {
         leading-tight
         md:pr-8"
       >
-        <span className={styles.headline}>
+        <Highlight>
           {title}
-        </span>
+        </Highlight>
       </motion.h1>
     </div>
   );

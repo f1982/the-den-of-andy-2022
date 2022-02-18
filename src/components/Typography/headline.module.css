@@ -1,20 +1,47 @@
 .headline {
   display: inline-block;
   position: relative;
-  background: linear-gradient(to bottom,transparent 0,transparent 55%,#c3fbfc 55%,#c3fbfc 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 0,transparent 55%,
+    var(--secondary-medium) 55%,
+    var(--secondary-medium) 100%);
 }
 
 .headline::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 3%;
+    left: 1%;
     height: 12%;
     width: 90%;
     background: linear-gradient(
-      to right,#f15a29 0,#f15a29 25%,#fff 25%,#fff 35%,#f15a29 35%,#f15a29 100%
+      to right,
+      var(--primary-medium) 0,
+      var(--primary-medium) 25%,
+      #fff 25%,#fff 35%,
+      var(--primary-medium) 35%,
+      var(--primary-medium) 100%
     );
 }
+
+/* .extra-line {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    height: 12%;
+    width: 90%;
+    background: linear-gradient(
+      to right,
+      var(--primary-medium) 0,
+      var(--primary-medium) 25%,
+      #fff 25%,#fff 35%,
+      var(--primary-medium) 35%,
+      var(--primary-medium) 100%
+    );
+} */
+
 
 .headline::after {
   content: '.';

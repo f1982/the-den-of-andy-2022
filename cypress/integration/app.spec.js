@@ -21,7 +21,7 @@ describe('404 error page', () => {
   });
 });
 
-describe('Inter pages', () => {
+describe('other pages', () => {
   beforeEach(() => {
     // Start from the index page
     // cypress.env refer to https://github.com/rodrigosta/e2e-toDoList
@@ -42,12 +42,23 @@ describe('Inter pages', () => {
     cy.get('a[href="/blog"]').first().click();
     cy.url().should('include', '/blog');
     cy.get('h1').contains(/blog/i);
+    // open first blog page
+    cy.visit(`${Cypress.env('host')}blog`);
+    cy.get('div[href*="blog/"]').first().click();
+    // close the page
+    cy.get('button[aria-label="Close"]').click();
   });
 
   it('project page', () => {
     cy.get('a[href="/project"]').first().click();
     cy.url().should('include', '/project');
     cy.get('h1').contains(/project/i);
+
+    // open first project page
+    cy.visit(`${Cypress.env('host')}project`);
+    cy.get('div[href*="project/"]').first().click();
+    // close the page
+    cy.get('button[aria-label="Close"]').click();
   });
 
   it('hobbies page', () => {
