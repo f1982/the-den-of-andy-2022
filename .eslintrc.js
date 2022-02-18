@@ -72,7 +72,15 @@ module.exports = {
       aspects: ['invalidHref', 'preferButton'],
     }],
     // to avoid to show error message in test files
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] }],
+    'import/no-extraneous-dependencies': [
+      'error', {
+        devDependencies: [
+          '**/*.test.tsx',
+          '**/*.spec.tsx',
+          '**/*.spec.js',
+        ],
+      },
+    ],
   },
   overrides: [
     // Only uses Testing Library lint rules in test files
