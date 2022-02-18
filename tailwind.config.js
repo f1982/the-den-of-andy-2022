@@ -52,13 +52,22 @@ module.exports = {
         serif: ['Inter', ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
-        // '5xl': '2.5rem',
-        // '6xl': '2.75rem',
-        // '7xl': '4.5rem',
-        '2xl': '4.2rem', // h1
-        xl: '3.15rem', // h2
-        lg: '2.4rem', // h3
-        md: '1.7rem', // h3
+        // h1
+        '2xl': ['4.2rem', {
+          lineHeight: '4.5rem',
+        }],
+        // h2
+        xl: ['3.15rem', {
+          lineHeight: '3.5rem',
+        }],
+        // h3
+        lg: ['2.4rem', {
+          lineHeight: '2.5rem',
+        }],
+        // h4
+        md: ['1.7rem', {
+          lineHeight: '2rem',
+        }],
       },
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',

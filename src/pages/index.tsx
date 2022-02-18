@@ -4,7 +4,7 @@ import SEO from '../../next-seo';
 import SiteSEO from '../components/Metadata/SiteSEO';
 import AlertBar from '../components/Alert/AlertBar';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
-import DebugInfo from '../utils/DebugInfo';
+import DebugInfo from '../features/Debug/DebugInfo';
 
 function Index() {
   const { t } = useTranslation();

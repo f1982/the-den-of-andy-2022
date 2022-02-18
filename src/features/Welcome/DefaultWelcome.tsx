@@ -1,5 +1,4 @@
 import { t } from 'i18next';
-import Link from 'next/link';
 import React from 'react';
 import MyButton from '../../components/Button/Button';
 
