@@ -78,7 +78,7 @@
 }
 
 .activeNavLink {
-  background-color: #74ddf7;
+  background-color: var(--secondary-light);
 }
 
 .activeNavLink span {
@@ -93,6 +93,6 @@
 
 .activeNavLink:hover {
   content: 'data ';
-  background-color: #96dbec;
+  background-color: var(--secondary-light);
   color: aliceblue;
 }

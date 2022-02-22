@@ -33,7 +33,7 @@ function SmallText({
       className="w-full mb-20 mx-auto"
     >
       {!!title && <h2 className="text-lg mb-4 font-medium tracking-tighter">{title}</h2>}
-      {!!image && <ImageComponent className="my-6" src={image} alt="andy" width="100%" />}
+      {!!image && <ImageComponent className="my-6 rounded-2xl mx-auto" src={image} alt="andy" width="60%" />}
       <p>{description}</p>
     </motion.div>
   );

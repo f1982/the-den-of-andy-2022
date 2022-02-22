@@ -17,7 +17,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Metadata />
-      <div className="text-on-background">
+      <div className="
+      text-on-background 
+
+      ">
         <Header />
         {children}
         <Footer />

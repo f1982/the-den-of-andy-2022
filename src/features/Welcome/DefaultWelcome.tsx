@@ -1,6 +1,7 @@
 import { t } from 'i18next';
 import React from 'react';
 import MyButton from '../../components/Button/Button';
+import SVGAnimation from './SVGAnimation';
 
 interface WelcomeProps {
   link?: string;
@@ -12,13 +13,13 @@ export default function DefaultWelcome({ link = '/home' }:WelcomeProps) {
     container mx-auto
     flex
     flex-col
-    px-5 py-24
     items-center justify-center
     "
     >
+      <SVGAnimation />
 
       <div className="
-      text-center lg:w-2/3 w-full
+      text-center
       "
       >
         <h1 className="

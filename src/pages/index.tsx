@@ -15,8 +15,8 @@ function Index() {
       <AlertBar preview />
       <div className="h-screen flex flex-col justify-center items-center">
         <DefaultWelcome />
-        <DebugInfo />
       </div>
+      <DebugInfo />
     </>
   );
 }
