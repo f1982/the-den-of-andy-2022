@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import ImageComponent from '../Image/Image';
+import { Headline2 } from '../Typography/Headline';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -32,7 +33,7 @@ function SmallText({
       viewport={{ once: true }}
       className="w-full mb-20 mx-auto"
     >
-      {!!title && <h2 className="text-lg mb-4 font-medium tracking-tighter">{title}</h2>}
+      {!!title && <div className="text-center"><Headline2>{title}</Headline2></div>}
       {!!image && <ImageComponent className="my-6 rounded-2xl mx-auto" src={image} alt="andy" width="60%" />}
       <p>{description}</p>
     </motion.div>

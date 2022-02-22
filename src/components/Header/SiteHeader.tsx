@@ -6,7 +6,10 @@ import MobileMenuBar from './MobileMenuBar';
 
 export default function Header() {
   return (
-    <header style={{ borderBottom: '1px solid #ccc' }}>
+    <header
+      className="shadow-sm"
+      // style={{ borderBottom: '1px solid #ccc' }}
+    >
       <div
         className="
           container mx-auto

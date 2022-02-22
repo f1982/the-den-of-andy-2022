@@ -21,7 +21,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       text-on-background"
       >
         <Header />
-        {children}
+        <div>
+          {children}
+        </div>
         <Footer />
       </div>
     </>

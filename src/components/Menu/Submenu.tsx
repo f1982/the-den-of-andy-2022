@@ -6,9 +6,9 @@ function SubMenuItem({ link, label }: MenuItemData) {
     <Link href={link} passHref>
       <a
         className="
-          px-4
-          py-2
-          text-md
+          px-6
+          py-3
+          mr-3
           bg-secondary-medium
           text-on-primary
           hover:bg-primary-dark
@@ -23,7 +23,7 @@ function SubMenuItem({ link, label }: MenuItemData) {
 
 function Submenu({ items }:{items:MenuItemData[]}) {
   return (
-    <nav>
+    <nav className="mb-12 font-bold">
       <ul className="flex flex-column">
         {items.map((item:MenuItemData) => (
           <SubMenuItem key={item.link} label={item.label} link={item.link} />

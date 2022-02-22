@@ -5,21 +5,21 @@ import ThemeChanger from './ThemeChanger';
 
 function Copyright() {
   return (
-    <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">
-      Copyright @2020 andycao.com, design by Andy
-    </p>
+    <div className="mt-12">
+      <p className="text-sm sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">
+        Copyright @2020 andycao.com, design by Andy
+      </p>
+    </div>
+
   );
 }
 
 function TermsAndConditions() {
   return (
-    <div>
+    <div className="mt-3">
       <ul className={classNames(
         'inline-flex',
         'text-sm',
-        'sm:ml-auto',
-        'sm:mt-0',
-        'mt-4',
         'justify-center',
         'sm:justify-start',
       )}
@@ -41,11 +41,23 @@ function TermsAndConditions() {
 
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <footer className="border-t-2 border-gray mt-12">
+      <div className="
+      container mx-auto
+      py-12
+      flex items-center :flex-row flex-col"
+      >
+        <div className="w-full flex flex-row gap-10">
+          <div>
+            <p>Have a mind that is open to everything and attached to nothing</p>
+            <TermsAndConditions />
+          </div>
+          <div className="flex-1" />
+          <div>
+            <SocialLinks />
+          </div>
+        </div>
         <Copyright />
-        <TermsAndConditions />
-        <SocialLinks />
       </div>
       <ThemeChanger />
     </footer>

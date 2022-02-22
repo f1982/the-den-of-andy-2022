@@ -72,16 +72,23 @@
 }
 
 [data-theme="pink"] {
-  --background: theme("colors.gray.900");
-  --surface: theme("colors.gray.800");
+  --primary-dark: #ff01ff;
+  --primary-medium: #da09da;
+  --primary-light: #6f0579;
+  
+  --secondary-dark: #8f5e02;
+  --secondary-medium: #ec9b21;
+  --secondary-light: #fff23c;
 
-  --secondary-dark: theme("colors.pink.900");
-  --secondary-medium: theme("colors.pink.700");
-  --secondary-light: theme("colors.pink.500");
+  --background: #fffffe;
+  --surface:  #f5f5f4;
+  --error: #ff0000;
 
-  --primary-dark: theme("colors.gray.300");
-  --primary-medium: theme("colors.gray.200");
-  --primary-light: theme("colors.gray.100");
+  --on-primary: #fde8ec;
+  --on-secondary: #2d334a;
+  --on-background: #2d334a;
+  --on-surface: #fff;
+  --on-error: #fffffe;
 }
 
 ::selection {
@@ -98,6 +105,10 @@ body {
 /* #__next {
   height: 100%;
 } */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
 @layer base {
   h1 {

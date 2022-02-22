@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Button from '../Button/Button';
 import Image from '../Image/Image';
+import { Headline2 } from '../Typography/Headline';
+import { HeroData } from '../../types';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -39,13 +41,7 @@ function Hero({
   description,
   buttons,
   viewPortOnce = false,
-}:{
-  title:string,
-  image:string,
-  description?:string,
-  buttons?:React.ReactNode,
-  viewPortOnce?:boolean
-}) {
+}:HeroData) {
   return (
     <motion.section
       className={classNames(
@@ -75,14 +71,7 @@ function Hero({
       <div
         className="text-center lg:w-3/4 w-full"
       >
-        <motion.h2
-          variants={itemVariant}
-          className="
-        sm:text-lg text-lg mb-4
-        font-medium tracking-tighter"
-        >
-          {title}
-        </motion.h2>
+        <Headline2>{title}</Headline2>
         <motion.p
           variants={itemVariant}
           className="mb-8 leading-relaxed"

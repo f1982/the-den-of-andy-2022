@@ -4,8 +4,8 @@
   background: linear-gradient(
     to bottom,
     transparent 0,transparent 55%,
-    var(--secondary-medium) 55%,
-    var(--secondary-medium) 100%);
+    var(--secondary-dark) 55%,
+    var(--secondary-dark) 100%);
 }
 
 .headline::before {
@@ -17,11 +17,11 @@
     width: 90%;
     background: linear-gradient(
       to right,
-      var(--primary-medium) 0,
-      var(--primary-medium) 25%,
-      #fff 25%,#fff 35%,
-      var(--primary-medium) 35%,
-      var(--primary-medium) 100%
+      var(--primary-dark) 0,
+      var(--primary-dark) 25%,
+      var(--secondary-dark) 25%,var(--secondary-dark) 35%,
+      var(--primary-dark) 35%,
+      var(--primary-dark) 100%
     );
 }
 
