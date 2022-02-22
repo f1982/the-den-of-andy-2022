@@ -14,6 +14,7 @@
     "export": "next export",
     "clean": "rm -rf node_modules && rm yarn.lock && rm package-lock.json",
     "lint": "next lint",
+    "pre:e2e": "next build && next-sitemap && next start",
     "cypress": "cypress open",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
