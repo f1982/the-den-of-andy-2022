@@ -28,7 +28,6 @@ export default function Projects({ projects }) {
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
       <div className="container mx-auto">
-        
         <BlogPageTitle title="Projects" />
         {/* <HighlightProject projects={projects} id='103' /> */}
         <ProjectList list={projects} type={type as string} />
