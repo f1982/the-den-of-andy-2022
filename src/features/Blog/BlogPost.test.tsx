@@ -26,7 +26,7 @@ describe('test blog post', () => {
     });
   });
 
-  test('should show blog content', async () => {
+  test('should show blog content', () => {
     const { debug } = render(<BlogPost
       title={MockedContent.title}
       content={MockedContent.content}

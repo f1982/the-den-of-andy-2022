@@ -34,9 +34,9 @@
 }
 
 .close_button:hover::before {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
 
 .close_button:hover::after {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }

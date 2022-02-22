@@ -8,11 +8,10 @@ function TechStackItem(
   },
 ) {
   return (
-    <div className="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+    <div className="mt-3 mb-6">
       {stacks.map((item, index) => (
-        <span key={item}>
+        <span className="px-3 py-2 rounded-lg text-sm border-2 mr-2 border-gray-500 bg-gray-200" key={item}>
           {item}
-          {index === stacks.length - 1 ? '' : ', '}
         </span>
       ))}
     </div>

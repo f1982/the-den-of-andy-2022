@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BLOG_PATH } from '../../../config/menuData';
+import { BLOG_PATH } from '../../../constants/menuData';
 import Avatar from './PostAuthorAvatar';
 import CoverImage from './PostCoverImage';
 import DateFormatter from './PostDateFormatter';

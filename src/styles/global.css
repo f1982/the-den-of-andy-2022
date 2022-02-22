@@ -12,30 +12,6 @@
 @tailwind utilities;
 /* Stop purging. */
 
-/* Your own custom utilities */
-
-html,
-body {
-  /* color: #2d334a */
-}
-
-/* #__next {
-  height: 100%;
-} */
-
-@layer base {
-  h1 {
-    /* @apply text-2xl; */
-    /* background: linear-gradient(#efc854, #efc854) no-repeat;
-    background-size: 100% 15%;
-    background-position: 0 70%; */
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-}
-
 :root {
   --primary-dark: #eb9a04;
   --primary-medium: #ffd803;
@@ -76,22 +52,73 @@ body {
 }
 
 [data-theme="emerald"] {
-  --background: theme("colors.white");
+  --primary-dark: #af0c0c;
+  --primary-medium: #ff4d5b;
+  --primary-light: #ff8686;
+  
+  --secondary-dark: #7f8d00;
+  --secondary-medium: #84ec2e;
+  --secondary-light: #adffa6;
 
-  --secondary-dark: theme("colors.emerald.900");
-  --secondary-medium: theme("colors.emerald.700");
-  --secondary-light: theme("colors.emerald.500");
+  --background: #fffffe;
+  --surface:  #f5f5f4;
+  --error: #ff0000;
+
+  --on-primary: #fde8ec;
+  --on-secondary: #2d334a;
+  --on-background: #2d334a;
+  --on-surface: #fff;
+  --on-error: #fffffe;
 }
 
 [data-theme="pink"] {
-  --background: theme("colors.gray.900");
-  --surface: theme("colors.gray.800");
+  --primary-dark: #ff01ff;
+  --primary-medium: #da09da;
+  --primary-light: #6f0579;
+  
+  --secondary-dark: #8f5e02;
+  --secondary-medium: #ec9b21;
+  --secondary-light: #fff23c;
 
-  --secondary-dark: theme("colors.pink.900");
-  --secondary-medium: theme("colors.pink.700");
-  --secondary-light: theme("colors.pink.500");
+  --background: #fffffe;
+  --surface:  #f5f5f4;
+  --error: #ff0000;
 
-  --primary-dark: theme("colors.gray.300");
-  --primary-medium: theme("colors.gray.200");
-  --primary-light: theme("colors.gray.100");
+  --on-primary: #fde8ec;
+  --on-secondary: #2d334a;
+  --on-background: #2d334a;
+  --on-surface: #fff;
+  --on-error: #fffffe;
+}
+
+::selection {
+  background-color: var(--primary-dark);
+  color: var(--on-primary);
+}
+/* Your own custom utilities */
+
+html,
+body {
+  /* color: #2d334a */
+}
+
+/* #__next {
+  height: 100%;
+} */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@layer base {
+  h1 {
+    /* @apply text-2xl; */
+    /* background: linear-gradient(#efc854, #efc854) no-repeat;
+    background-size: 100% 15%;
+    background-position: 0 70%; */
+  }
+
+  h2 {
+    @apply text-xl;
+  }
 }

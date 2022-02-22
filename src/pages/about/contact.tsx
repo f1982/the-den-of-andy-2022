@@ -1,12 +1,11 @@
 /* eslint-disable react/no-danger */
 import { t } from 'i18next';
 import React from 'react';
-import Container from '../../components/Layout/container';
 import Headline from '../../components/Typography/Headline';
 
 export default function About() {
   return (
-    <Container>
+    <div className="container mx-auto px-5">
       <Headline title="Contact" />
       <section className="text-gray-600 body-font relative">
         <div className="absolute inset-0 bg-gray-300" />
@@ -36,6 +35,6 @@ export default function About() {
         <div dangerouslySetInnerHTML={{ __html: t('contact.p2') }} />
         <div dangerouslySetInnerHTML={{ __html: t('contact.p3') }} />
       </section>
-    </Container>
+    </div>
   );
 }

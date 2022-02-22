@@ -12,8 +12,8 @@ const customModalStyles = {
   content: {
     top: '39px',
     bottom: '0',
-    left: '0',
-    right: '0',
+    left: '100px',
+    right: '100px',
     backgroundColor: fullConfig.theme.colors.surface,
   },
   overlay: {

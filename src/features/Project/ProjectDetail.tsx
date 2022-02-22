@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import ProjectTitle from './components/ProjectTitle';
-import Image from '../../components/ui/Image';
-import Carousel from '../../components/Carousel';
-import { PROJECT_IMAGE_URL } from '../../config/constants';
+import Image from '../../components/Image/Image';
+import Carousel from '../../components/Carousel/Carousel';
+import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import CloseButton from '../../components/Button/CloseButton';
+import TechStackItem from './components/TechStackItem';
 
 function Project({
-  slug, title, cover, description, images,
+  slug, title, cover, tech, description, images,
 }) {
   const router = useRouter();
 
@@ -19,25 +20,23 @@ function Project({
 
   return (
     <article className="container mx-auto mb-32">
-      <div className="flex flex-column">
-        <ProjectTitle id={slug} title={title} />
+      <div>
         <CloseButton
           onClick={() => router.back()}
         />
       </div>
-      <motion.figure
-        layoutId={`project-cover-${slug}`}
-        initial={{ scale: 1, opacity: 1 }}
-      >
-        <Image
-          alt={`${title} project cover image`}
-          className="object-center w-full"
-          src={`${PROJECT_IMAGE_URL}/${cover}`}
-          width={650}
-          height={250}
-        />
-      </motion.figure>
-      {getCarousel(images)}
+      <ProjectTitle id={slug} title={title} />
+      <TechStackItem stacks={tech.split(',')} />
+      <Image
+        alt={`${title} project cover image`}
+        className="object-center w-full mb-9"
+        src={`${PROJECT_IMAGE_URL}/${cover}`}
+        width={650}
+        height={250}
+      />
+      <div className="px-10 mb-9">
+        {getCarousel(images)}
+      </div>
       <p>
         {description}
       </p>

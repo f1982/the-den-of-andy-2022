@@ -1,9 +1,8 @@
 import { t } from 'i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
+import TabTitle from '../../components/Metadata/SiteSEO';
 import BlogPageTitle from '../../components/Typography/Headline';
-import Container from '../../components/Layout/container';
-import TabTitle from '../../components/SiteSEO';
 import ProjectList from '../../features/Project/ProjectList';
 import { getProjects } from '../../utils/project-helper';
 
@@ -30,6 +29,7 @@ export default function Projects({ projects }) {
       <TabTitle pageTitle={t('project.pageTitle')} />
       <div className="container mx-auto">
         <BlogPageTitle title="Projects" />
+        {/* <HighlightProject projects={projects} id='103' /> */}
         <ProjectList list={projects} type={type as string} />
       </div>
     </>

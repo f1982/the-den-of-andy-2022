@@ -1,18 +1,27 @@
 .headline {
   display: inline-block;
   position: relative;
-  background: linear-gradient(to bottom,transparent 0,transparent 55%,#c3fbfc 55%,#c3fbfc 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 0,transparent 55%,
+    var(--secondary-dark) 55%,
+    var(--secondary-dark) 100%);
 }
 
 .headline::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 3%;
+    left: 1%;
     height: 12%;
     width: 90%;
     background: linear-gradient(
-      to right,#f15a29 0,#f15a29 25%,#fff 25%,#fff 35%,#f15a29 35%,#f15a29 100%
+      to right,
+      var(--primary-dark) 0,
+      var(--primary-dark) 25%,
+      var(--secondary-dark) 25%,var(--secondary-dark) 35%,
+      var(--primary-dark) 35%,
+      var(--primary-dark) 100%
     );
 }
 
