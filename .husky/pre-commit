@@ -4,8 +4,7 @@
 # every you commit something the following command will be executed
 # https://typicode.github.io/husky/#/?id=create-a-hook
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-npx --no-install jest
+PATH=$PATH:~/.volta/bin
 
 npm run lint
 npm run test
