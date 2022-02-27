@@ -1,22 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 // import Image from 'next/image';
 import Link from 'next/link';
-import Image from '../Image/Image';
 
 function SelfIntroShort() {
   return (
     <section className="mt-12">
-      <div className="bg-surface py-9">
-        <div className="rounded-3xl mx-auto lg:w-2/3 w-full overflow-hidden">
-          <Image
-            alt="content"
-            withLoader
-            className="object-cover object-center h-full"
-            src="/static/images/andy-at-cornfield.jpg"
-            width="100%"
-          />
-        </div>
-      </div>
 
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">

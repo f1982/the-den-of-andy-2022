@@ -5,8 +5,8 @@ import ThemeChanger from './ThemeChanger';
 
 function Copyright() {
   return (
-    <div className="mt-12">
-      <p className="text-sm sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">
+    <div className="mt-9">
+      <p className="text-sm text-center">
         Copyright @2020 andycao.com, design by Andy
       </p>
     </div>
@@ -18,20 +18,20 @@ function TermsAndConditions() {
   return (
     <div className="mt-3">
       <ul className={classNames(
-        'inline-flex',
         'text-sm',
+        'flex',
         'justify-center',
         'sm:justify-start',
       )}
       >
         <li className="pr-4">
           <Link href="/t&c" passHref>
-            <button type="button" className="text-gray-500">Terms and Conditions</button>
+            <button type="button">Terms and Conditions</button>
           </Link>
         </li>
         <li>
           <Link href="/privacy" passHref>
-            <button type="button" className="text-gray-500">Privacy Policy</button>
+            <button type="button">Privacy Policy</button>
           </Link>
         </li>
       </ul>
@@ -42,18 +42,13 @@ function TermsAndConditions() {
 export default function Footer() {
   return (
     <footer className="border-t-2 border-gray mt-12">
-      <div className="
-      container mx-auto
-      py-12
-      flex items-center :flex-row flex-col"
-      >
-        <div className="w-full flex flex-row gap-10">
-          <div>
-            <p>Have a mind that is open to everything and attached to nothing</p>
+      <div className="container mx-auto py-12">
+        <div className="w-full flex md:flex-row flex-col ">
+          <div className="md:w-2/3 w-full">
+            <p className="md:text-left text-center mt-0">Have a mind that is open to everything and attached to nothing</p>
             <TermsAndConditions />
           </div>
-          <div className="flex-1" />
-          <div>
+          <div className="w-full md:w-1/3 flex md:justify-end justify-center">
             <SocialLinks />
           </div>
         </div>

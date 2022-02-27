@@ -1,3 +1,6 @@
+// Currently this test only works on the local env, when this running on
+// the GitHub Action, it can not find the sitemap.xml
+
 // import X2JS from 'x2js';
 
 // // refer to https://glebbahmutov.com/blog/test-sitemap/

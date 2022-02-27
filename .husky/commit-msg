@@ -3,4 +3,9 @@
 
 # $1 is the git commit message need to check
 # https://typicode.github.io/husky/#/?id=husky_git_params-ie-commitlint-
+
+# doesn't work
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 npx --no-install commitlint --edit $1
+
+# yarn commitlint --edit $1

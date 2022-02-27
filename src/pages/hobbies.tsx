@@ -24,13 +24,13 @@ export default function About() {
           )}
         />
         <ColumnHero
-          image="/static/images/hobby-rc-cover.jpg"
-          title={t('hobbies.rc.title')}
-          description={t('hobbies.rc.description')}
+          image="/static/images/hobby-drawing-cover.jpg"
+          title={t('hobbies.drawing.title')}
+          description={t('hobbies.drawing.description')}
           buttons={(
             <div className="flex gap-x-3">
-              <MyButton type="primary">{t('hobbies.rc.button1')}</MyButton>
-              <MyButton type="secondary">{t('hobbies.rc.button2')}</MyButton>
+              <MyButton type="primary">{t('hobbies.drawing.button1')}</MyButton>
+              <MyButton type="secondary">{t('hobbies.drawing.button2')}</MyButton>
             </div>
           )}
         />

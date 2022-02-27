@@ -6,12 +6,12 @@ import { SNS } from '../../constants/links';
 export default function SocialLinks() {
   return (
     <ul className={classNames(
-      'inline-flex',
       'sm:ml-auto',
       'sm:mt-0',
       'mt-4',
-      'justify-center',
-      'sm:justify-start',
+      'flex',
+      // 'justify-center',
+      // 'md: justify-end',
     )}
     >
       {
