@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import styles from './bubble.module.css';
+import styles from './button.module.css';
 
 interface PropsType {
   type?:'primary'|'secondary';
@@ -10,7 +10,7 @@ interface PropsType {
 }
 // `onClick`, `href`, and `ref` need to be passed to the DOM element
 // for proper handling
-const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType, ref) => {
+const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType, ref) => {
   function getStyle(type:string):string {
     const buttonStyle = cn(
       'focus:outline-none',
@@ -21,10 +21,10 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
       'py-2',
       'px-6',
       'text-on-primary',
-      'bg-primary-medium',
+      // 'bg-primary-medium',
       'transition ease-in-out delay-100',
       'hover:text-black',
-      'hover:bg-primary-light',
+      // 'hover:bg-primary-light',
       'hover:-translate-y-1',
       'hover:scale-105',
       styles.button_bubble,
@@ -35,7 +35,7 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
         'text-on-primary',
         'hover:text-black',
         'bg-primary-medium',
-        'hover:bg-primary-light',
+        'hover:bg-primary-dark',
       );
     }
     return cn(
@@ -59,10 +59,10 @@ const MyButton = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType
   );
 });
 
-MyButton.displayName = 'MyButton';
-MyButton.defaultProps = {
+Button.displayName = 'Button';
+Button.defaultProps = {
   onClick: null,
   href: null,
 };
 
-export default MyButton;
+export default Button;
