@@ -8,11 +8,11 @@ export enum AlertType{
 
 export interface AlertBarProps {
   preview: boolean;
-  type: AlertType;
+  type?: AlertType;
   children: React.ReactNode;
 }
 
-function AlertBar({ preview, type, children }: AlertBarProps) {
+function AlertBar({ preview, type = AlertType.Warning, children }: AlertBarProps) {
   return (
     <div
       className={cn('border-b', {

@@ -9,9 +9,6 @@ function Home(): React.ReactNode {
   return (
     <>
       <TabTitle pageTitle={t('home.pageTitle')} />
-      <div className="container mx-auto">
-        <Headline title="This is a simple test" />
-      </div>
       <HeroHome />
       <div className="container mx-auto">
         <SelfIntroShort />

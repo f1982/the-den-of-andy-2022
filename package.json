@@ -81,6 +81,7 @@
     "eslint-plugin-testing-library": "^5.0.3",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
+    "jest-axe": "^6.0.0",
     "next-sitemap": "^1.9.12",
     "postcss": "8.2.13",
     "prettier": "2.5.1",

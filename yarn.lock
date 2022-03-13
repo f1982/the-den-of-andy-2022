@@ -4338,10 +4338,10 @@
   "resolved" "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
   "version" "1.11.0"
 
-"axe-core@^4.3.5":
-  "integrity" "sha512-WKTW1+xAzhMS5dJsxWkliixlO/PqC4VhmO9T4juNYcaTg9jzWiJsou6m5pxWYGfigWbwzJWeFY6z47a+4neRXA=="
-  "resolved" "https://registry.npmjs.org/axe-core/-/axe-core-4.3.5.tgz"
-  "version" "4.3.5"
+"axe-core@^4.3.5", "axe-core@4.4.1":
+  "integrity" "sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw=="
+  "resolved" "https://registry.npmjs.org/axe-core/-/axe-core-4.4.1.tgz"
+  "version" "4.4.1"
 
 "axobject-query@^2.2.0":
   "integrity" "sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA=="
@@ -4905,6 +4905,14 @@
   "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
   "version" "4.1.2"
+  dependencies:
+    "ansi-styles" "^4.1.0"
+    "supports-color" "^7.1.0"
+
+"chalk@4.1.0":
+  "integrity" "sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A=="
+  "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz"
+  "version" "4.1.0"
   dependencies:
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
@@ -8517,6 +8525,16 @@
     "es-get-iterator" "^1.0.2"
     "iterate-iterator" "^1.0.1"
 
+"jest-axe@^6.0.0":
+  "integrity" "sha512-gAh/2zoWii4Rbhe6IUIo5TTiseGJDCitFnDFwBNpIuaOciyQgVZue6jtd4W7oMoKHewKoRSuIol7t/MuGx+mqg=="
+  "resolved" "https://registry.npmjs.org/jest-axe/-/jest-axe-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "axe-core" "4.4.1"
+    "chalk" "4.1.0"
+    "jest-matcher-utils" "27.0.2"
+    "lodash.merge" "4.6.2"
+
 "jest-changed-files@^27.4.2":
   "integrity" "sha512-/9x8MjekuzUQoPjDHbBiXbNEBauhrPU2ct7m8TfCg69ywt1y/N+yYwGh3gCpnqUS3klYWDU/lSNgv+JhoD2k1A=="
   "resolved" "https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.4.2.tgz"
@@ -8597,7 +8615,7 @@
     "pretty-format" "^27.4.6"
     "slash" "^3.0.0"
 
-"jest-diff@^27.0.0", "jest-diff@^27.4.6":
+"jest-diff@^27.0.0", "jest-diff@^27.0.2", "jest-diff@^27.4.6":
   "integrity" "sha512-zjaB0sh0Lb13VyPsd92V7HkqF6yKRH9vm33rwBt7rPYrpQvS1nCvlIy2pICbKta+ZjWngYLNn4cCK4nyZkjS/w=="
   "resolved" "https://registry.npmjs.org/jest-diff/-/jest-diff-27.4.6.tgz"
   "version" "27.4.6"
@@ -8650,7 +8668,7 @@
     "jest-mock" "^27.4.6"
     "jest-util" "^27.4.2"
 
-"jest-get-type@^27.4.0":
+"jest-get-type@^27.0.1", "jest-get-type@^27.4.0":
   "integrity" "sha512-tk9o+ld5TWq41DkK14L4wox4s2D9MtTpKaAVzXfr5CUKm5ZK2ExcaFE0qls2W71zE/6R2TxxrK9w2r6svAFDBQ=="
   "resolved" "https://registry.npmjs.org/jest-get-type/-/jest-get-type-27.4.0.tgz"
   "version" "27.4.0"
@@ -8736,6 +8754,16 @@
     "jest-diff" "^27.4.6"
     "jest-get-type" "^27.4.0"
     "pretty-format" "^27.4.6"
+
+"jest-matcher-utils@27.0.2":
+  "integrity" "sha512-Qczi5xnTNjkhcIB0Yy75Txt+Ez51xdhOxsukN7awzq2auZQGPHcQrJ623PZj0ECDEMOk2soxWx05EXdXGd1CbA=="
+  "resolved" "https://registry.npmjs.org/jest-matcher-utils/-/jest-matcher-utils-27.0.2.tgz"
+  "version" "27.0.2"
+  dependencies:
+    "chalk" "^4.0.0"
+    "jest-diff" "^27.0.2"
+    "jest-get-type" "^27.0.1"
+    "pretty-format" "^27.0.2"
 
 "jest-message-util@^27.4.6":
   "integrity" "sha512-0p5szriFU0U74czRSFjH6RyS7UYIAkn/ntwMuOwTGWrQIOh5NzXXrq72LOqIkJKKvFbPq+byZKuBz78fjBERBA=="
@@ -9385,7 +9413,7 @@
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
 
-"lodash.merge@^4.6.2":
+"lodash.merge@^4.6.2", "lodash.merge@4.6.2":
   "integrity" "sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ=="
   "resolved" "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   "version" "4.6.2"

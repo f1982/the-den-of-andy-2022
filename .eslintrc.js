@@ -2,39 +2,39 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    'jest/globals': true
+    'jest/globals': true,
   },
-  extends: ["plugin:react/recommended", "plugin:cypress/recommended", "airbnb", "next", "plugin:storybook/recommended"],
+  extends: ['plugin:react/recommended', 'plugin:cypress/recommended', 'airbnb', 'next', 'plugin:storybook/recommended'],
   settings: {
     next: {
-      rootDir: 'src/'
-    }
+      rootDir: 'src/',
+    },
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 13,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'cypress', 'jest', 'testing-library'],
   rules: {
     'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }],
     'react/jsx-props-no-spreading': 'off',
     'import/extensions': ['error', 'ignorePackages', {
       js: 'never',
       jsx: 'never',
       ts: 'never',
-      tsx: 'never'
+      tsx: 'never',
     }],
     // 'react/prefer-stateless-function': [
     //   'off',
     // ],
     'react/function-component-definition': [2, {
-      namedComponents: 'function-declaration'
+      namedComponents: 'function-declaration',
     }],
     'react/prop-types': 'off',
     // Since we do not use prop-types
@@ -55,16 +55,16 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': ['error', {
       components: ['Link'],
       specialLink: ['hrefLeft', 'hrefRight'],
-      aspects: ['invalidHref', 'preferButton']
+      aspects: ['invalidHref', 'preferButton'],
     }],
     // to avoid to show error message in test files
     'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js']
-    }]
+      devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
+    }],
   },
   overrides: [// Only uses Testing Library lint rules in test files
-  {
-    files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-    extends: ['plugin:testing-library/react']
-  }]
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    }],
 };
