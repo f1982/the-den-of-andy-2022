@@ -3,15 +3,15 @@ import cn from 'classnames';
 import styles from './button.module.css';
 
 interface PropsType {
-  type?:'primary'|'secondary';
+  type?: 'primary' | 'secondary';
   children: React.ReactNode;
-  onClick?: ()=>void;
-  href?:string;
+  onClick?: () => void;
+  href?: string;
 }
 // `onClick`, `href`, and `ref` need to be passed to the DOM element
 // for proper handling
-const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType, ref) => {
-  function getStyle(type:string):string {
+const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props: PropsType, ref) => {
+  function getStyle(type: string): string {
     const buttonStyle = cn(
       'focus:outline-none',
       'inline-flex',
@@ -20,11 +20,7 @@ const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props:PropsType, 
       'rounded',
       'py-2',
       'px-6',
-      'text-on-primary',
-      // 'bg-primary-medium',
       'transition ease-in-out delay-100',
-      'hover:text-black',
-      // 'hover:bg-primary-light',
       'hover:-translate-y-1',
       'hover:scale-105',
       styles.button_bubble,
