@@ -1,7 +1,7 @@
 import {
   render, screen,
 } from '@testing-library/react';
-import { axe } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import DotLoader from './DotLoader';
 import '@testing-library/jest-dom';
 
@@ -12,6 +12,7 @@ describe('loader', () => {
   });
   test('accessibility', async () => {
     const { container } = render(<DotLoader />);
-    expect(await axe(container)).toHaveNoViolations();
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
   });
 });

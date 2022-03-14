@@ -1,6 +1,7 @@
 import {
   render, screen,
 } from '@testing-library/react';
+import { axe } from 'jest-axe';
 import mockNextUseRouter from '../../../__mocks__/mockUseRouter';
 import BlogPost from './BlogPost';
 
@@ -39,5 +40,18 @@ describe('test blog post', () => {
     expect(screen.getByText(MockedContent.title)).toBeDefined();
     expect(screen.getByText(MockedContent.content)).toBeDefined();
     expect(screen.getByText(MockedContent.author.name)).toBeTruthy();
+  });
+  test('accessibility', async () => {
+    const { container } = render(<BlogPost
+      title={MockedContent.title}
+      content={MockedContent.content}
+      coverImage="/test/url.png"
+      author={MockedContent.author}
+      slug="1234"
+      date={MockedContent.date}
+    />);
+
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
   });
 });

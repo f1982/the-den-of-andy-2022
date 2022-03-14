@@ -3367,6 +3367,14 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jest-axe@^3.5.3":
+  "integrity" "sha512-ad9qI9f+00N8IlOuGh6dnZ6o0BDdV9VhGfTUr1zCejsPvOfZd6eohffe4JYxUoUuRYEftyMcaJ6Ux4+MsOpGHg=="
+  "resolved" "https://registry.npmjs.org/@types/jest-axe/-/jest-axe-3.5.3.tgz"
+  "version" "3.5.3"
+  dependencies:
+    "@types/jest" "*"
+    "axe-core" "^3.5.5"
+
 "@types/jest@*", "@types/jest@^27.4.0":
   "integrity" "sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ=="
   "resolved" "https://registry.npmjs.org/@types/jest/-/jest-27.4.0.tgz"
@@ -4337,6 +4345,11 @@
   "integrity" "sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA=="
   "resolved" "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
   "version" "1.11.0"
+
+"axe-core@^3.5.5":
+  "integrity" "sha512-LEUDjgmdJoA3LqklSTwKYqkjcZ4HKc4ddIYGSAiSkr46NTjzg2L9RNB+lekO9P7Dlpa87+hBtzc2Fzn/+GUWMQ=="
+  "resolved" "https://registry.npmjs.org/axe-core/-/axe-core-3.5.6.tgz"
+  "version" "3.5.6"
 
 "axe-core@^4.3.5", "axe-core@4.4.1":
   "integrity" "sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw=="
