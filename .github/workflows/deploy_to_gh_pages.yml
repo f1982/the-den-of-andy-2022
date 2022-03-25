@@ -45,7 +45,8 @@ jobs:
       
 
     - name: Build the website
-      run: npm run build && npm run export && touch ./out/.nojekyll
+      # run: npm run export && touch ./out/.nojekyll
+      run: npm run export-with-storybook && touch ./out/.nojekyll
       
     - name: Deploy webpages to GitHub pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4
