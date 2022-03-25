@@ -3,4 +3,9 @@
 
 # $1 is the git commit message need to check
 # https://typicode.github.io/husky/#/?id=husky_git_params-ie-commitlint-
+
+# fix Git: .husky/pre-commit: line 12: npm: command not found
+# https://stackoverflow.com/questions/12881975/git-pre-commit-hook-failing-in-github-for-mac-works-on-command-line
+
+PATH=$PATH:~/.volta/bin
 npx --no-install commitlint --edit $1

@@ -23,12 +23,14 @@
 
   --background: #fffffe;
   --surface:  #f5f5f4;
+  --warning: #FFCC00;
   --error: #ff0000;
 
   --on-primary: #272343;
   --on-secondary: #2d334a;
   --on-background: #2d334a;
   --on-surface: #fff;
+  --on-warning: #000;
   --on-error: #fffffe;
 }
 

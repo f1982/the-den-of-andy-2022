@@ -4,12 +4,7 @@ module.exports = {
     es2021: true,
     'jest/globals': true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:cypress/recommended',
-    'airbnb',
-    'next',
-  ],
+  extends: ['plugin:react/recommended', 'plugin:cypress/recommended', 'airbnb', 'next', 'plugin:storybook/recommended'],
   settings: {
     next: {
       rootDir: 'src/',
@@ -23,37 +18,28 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'cypress',
-    'jest',
-    'testing-library',
-  ],
+  plugins: ['react', '@typescript-eslint', 'cypress', 'jest', 'testing-library'],
   rules: {
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    }],
     'react/jsx-props-no-spreading': 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': ['error', 'ignorePackages', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
     // 'react/prefer-stateless-function': [
     //   'off',
     // ],
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'function-declaration',
-      },
-    ],
-    'react/prop-types': 'off', // Since we do not use prop-types
-    'react/require-default-props': 'off', // Since we do not use prop-types
+    'react/function-component-definition': [2, {
+      namedComponents: 'function-declaration',
+    }],
+    'react/prop-types': 'off',
+    // Since we do not use prop-types
+    'react/require-default-props': 'off',
+    // Since we do not use prop-types
     // note you must disable the base rule as it can report incorrect errors
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
@@ -72,24 +58,13 @@ module.exports = {
       aspects: ['invalidHref', 'preferButton'],
     }],
     // to avoid to show error message in test files
-    'import/no-extraneous-dependencies': [
-      'error', {
-        devDependencies: [
-          '**/*.test.tsx',
-          '**/*.spec.tsx',
-          '**/*.spec.js',
-        ],
-      },
-    ],
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
+    }],
   },
-  overrides: [
-    // Only uses Testing Library lint rules in test files
+  overrides: [// Only uses Testing Library lint rules in test files
     {
-      files: [
-        '**/__tests__/**/*.[jt]s?(x)',
-        '**/?(*.)+(spec|test).[jt]s?(x)',
-      ],
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-    },
-  ],
+    }],
 };
