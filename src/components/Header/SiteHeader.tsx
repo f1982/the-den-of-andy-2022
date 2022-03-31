@@ -4,7 +4,7 @@ import DesktopMenuBar from './DesktopMenuBar';
 import Logo from './Logo';
 import MobileMenuBar from './MobileMenuBar';
 
-export default function Header() {
+function Header() {
   return (
     <header
       className="shadow-sm"
@@ -31,3 +31,11 @@ export default function Header() {
     </header>
   );
 }
+
+// Header.whyDidYouRender = true;
+Header.whyDidYouRender = {
+  logOnDifferentValues: true,
+  customName: 'SiteHeader',
+};
+
+export default Header;

@@ -5,7 +5,7 @@ coverImage: '/static/posts/dynamic-routing/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: JJ Kasper
-  picture: '/static/posts/authors/jj.jpeg'
+  picture: '/static/images/authors/jj.jpeg'
 ogImage:
   url: '/static/posts/dynamic-routing/cover.jpg'
 ---

@@ -5,7 +5,7 @@ coverImage: '/static/posts/hello-world/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: Tim Neutkens
-  picture: '/static/posts/authors/tim.jpeg'
+  picture: '/static/images/authors/tim.jpeg'
 ogImage:
   url: '/static/posts/hello-world/cover.jpg'
 ---

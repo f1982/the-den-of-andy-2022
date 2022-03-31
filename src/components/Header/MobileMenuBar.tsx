@@ -1,14 +1,17 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { MenuItemData } from '../../types';
 import ArrowRight from '../Icons/ArrowRight';
 import Hamburger from '../Icons/Hamburger';
 import MyButton from '../Button/Button';
 
-function MenuItem({ link, label, icon }: MenuItemData) {
+function MenuItem({
+  link, label, icon, onClick,
+}: MenuItemData) {
   return (
     <Link href={link} passHref>
-      <a
+      <button
+        type="button"
         className="
           px-4
           py-2
@@ -19,10 +22,11 @@ function MenuItem({ link, label, icon }: MenuItemData) {
           hover:bg-primary-dark
           hover:text-white
           "
+        onClick={(e) => onClick(e, link)}
       >
         <span>{icon}</span>
         <span>{label}</span>
-      </a>
+      </button>
     </Link>
   );
 }
@@ -34,9 +38,13 @@ function MobileMenuBar({
 }) {
   const [showing, setShowing] = useState(false);
 
+  // this fun will never change when rerendering happens
+  const handleClick = useCallback(() => {
+    setShowing(false);
+  }, []);
+
   return (
     <>
-      {' '}
       <div className="md:hidden">
         <MyButton
           type="primary"
@@ -48,10 +56,10 @@ function MobileMenuBar({
         </MyButton>
       </div>
       {showing && (
-      <div className="fixed top-0 left-0 w-full z-999 bg-secondary-dark">
+      <div className="fixed top-0 left-0 w-full bg-secondary-dark" style={{ zIndex: 1000 }}>
         <nav className="flex flex-col ">
           {
-            menuData.map((item) => <MenuItem key={item.link} {...item} />)
+            menuData.map((item) => <MenuItem key={item.link} {...item} onClick={handleClick} />)
           }
           <MyButton
             type="secondary"

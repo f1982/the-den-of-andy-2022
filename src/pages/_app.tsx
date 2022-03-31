@@ -1,3 +1,4 @@
+import '../../scripts/wdyr';
 import { ThemeProvider } from 'next-themes';
 import { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';

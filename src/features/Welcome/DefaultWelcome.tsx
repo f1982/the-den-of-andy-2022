@@ -1,6 +1,7 @@
 import { t } from 'i18next';
 import React from 'react';
 import MyButton from '../../components/Button/Button';
+import Typography from '../../components/Typography/Typography';
 import SVGAnimation from './SVGAnimation';
 
 interface WelcomeProps {
@@ -22,12 +23,7 @@ export default function DefaultWelcome({ link = '/home' }:WelcomeProps) {
       text-center
       "
       >
-        <h1 className="
-        title-font sm:text-4xl text-3xl mb-4 font-medium
-        "
-        >
-          {t('welcome.greeting')}
-        </h1>
+        <Typography title={t('welcome.greeting')} variant="h1" as="h2" />
         <p className="mb-8 leading-relaxed">
           {t('welcome.description')}
         </p>

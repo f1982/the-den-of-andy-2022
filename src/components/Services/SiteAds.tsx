@@ -1,15 +1,18 @@
+import Script from 'next/script';
+
 function GoogleAds() {
   if (process.env.NEXT_PUBLIC_APP_GAD !== 'on') {
     return (<div />);
   }
   return (
     <div style={{ height: '150px', width: '100%', border: '1px solid #cccccc' }}>
-      <script
+      <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         crossOrigin="anonymous"
       />
-      <script
+      <Script
+        id="gad-script"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: `

@@ -12,7 +12,6 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
-      <AlertBar preview>test</AlertBar>
       <div className="h-screen flex flex-col justify-center items-center">
         <DefaultWelcome />
       </div>

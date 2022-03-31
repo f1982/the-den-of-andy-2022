@@ -39,18 +39,12 @@ function HeroHome() {
 
       }}
       >
-        <h1 style={{ fontSize: '100px', color: '#ffff' }}>Hello</h1>
-        <div><h1 style={{ fontSize: '26px', color: '#ffff' }}>A Software Developer who also love to make hardware</h1></div>
+        <h1 className="uppercase" style={{ fontSize: '100px', color: '#ffff' }}>Hello</h1>
+        <div>
+          <h2 style={{ color: '#ffff', textAlign: 'center' }}>I am Andy</h2>
+          <h3 style={{ color: '#ffff', textAlign: 'center' }}>A software developer who also love to make hardware devices.</h3>
+        </div>
       </div>
-      {/* <div className="rounded-3xl mx-auto md:w-2/5 w-full overflow-hidden"> */}
-      {/* <Image
-          alt="content"
-          withLoader
-          className="object-cover object-center h-full"
-          src="/static/images/andy-at-cornfield.jpg"
-          width="100%"
-        /> */}
-      {/* </div> */}
     </div>
   );
 }

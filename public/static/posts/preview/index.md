@@ -5,7 +5,7 @@ coverImage: '/static/posts/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: Joe Haddad
-  picture: '/static/posts/authors/joe.jpeg'
+  picture: '/static/images/authors/joe.jpeg'
 ogImage:
   url: '/static/posts/preview/cover.jpg'
 ---

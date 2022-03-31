@@ -3,7 +3,6 @@ import React from 'react';
 import HeroHome from '../components/Blocks/HeroHome';
 import SelfIntroShort from '../components/Blocks/SelfIntroShort';
 import TabTitle from '../components/Metadata/SiteSEO';
-import Headline from '../components/Typography/Headline';
 
 function Home(): React.ReactNode {
   return (

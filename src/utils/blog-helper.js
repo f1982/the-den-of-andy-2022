@@ -17,9 +17,14 @@ function getExtension(filename) {
   return filename.split('.').pop();
 }
 
+function isFolder(filename) {
+  return filename.indexOf('.') === -1;
+}
+
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(BLOG_POST_DIRECTORY, `${realSlug}.md`);
+  // const fullPath = join(BLOG_POST_DIRECTORY, `${realSlug}.md`);
+  const fullPath = join(BLOG_POST_DIRECTORY, `${realSlug}/index.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -43,10 +48,13 @@ export function getPostBySlug(slug, fields = []) {
 
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
+  console.log('slugs', slugs);
   const posts = slugs
-    .filter((item) => getExtension(item) === 'md')
+  // .filter((item) => getExtension(item) === 'md')
+    .filter((item) => isFolder(item))
     .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
+  // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  console.log('posts', posts);
   return posts;
 }

@@ -41,7 +41,8 @@
     "react-modal": "^3.14.4",
     "remark": "13.0.0",
     "remark-html": "13.0.2",
-    "tailwindcss": "^2.1.0"
+    "tailwindcss": "^2.1.0",
+    "@welldone-software/why-did-you-render": "^6.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
