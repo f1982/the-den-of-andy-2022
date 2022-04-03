@@ -1,9 +1,8 @@
-import EyeIcon from '../components/Icons/EyeIcon';
-import Facebook from '../components/Icons/Facebook';
-import Hamburger from '../components/Icons/Hamburger';
-import Ins from '../components/Icons/Ins';
-import Twitter from '../components/Icons/Twitter';
-import YouTube from '../components/Icons/YouTube';
+import AboutIcon from '../components/Icons/AboutIcon';
+import BlogIcon from '../components/Icons/BlogIcon';
+import HobbyIcon from '../components/Icons/HobbyIcon';
+import HomeIcon from '../components/Icons/HomeIcon';
+import ProjectIcon from '../components/Icons/ProjectIcon';
 import { MenuItemData } from '../types/index';
 
 const BLOG_PATH = '/blog';
@@ -12,27 +11,27 @@ const menuData: MenuItemData[] = [
   {
     link: '/home',
     label: 'Home',
-    icon: <EyeIcon />,
+    icon: <HomeIcon />,
   },
   {
     link: BLOG_PATH,
     label: 'Blog',
-    icon: <YouTube />,
+    icon: <BlogIcon />,
   },
   {
     link: '/project',
     label: 'Projects',
-    icon: <Hamburger />,
+    icon: <ProjectIcon />,
   },
   {
     link: '/hobbies',
     label: 'Hobbies',
-    icon: <Ins />,
+    icon: <HobbyIcon />,
   },
   {
     link: '/about',
     label: 'About',
-    icon: <Twitter />,
+    icon: <AboutIcon />,
   },
 ];
 
