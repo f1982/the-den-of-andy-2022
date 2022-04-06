@@ -7,8 +7,9 @@ import PostPreview from '../../features/Blog/components/PostPreview';
 import { getAllPosts } from '../../utils/blog-helper';
 
 function Blog({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  // const heroPost = allPosts[0];
+  // const morePosts = allPosts.slice(1);
+  const morePosts = allPosts;
 
   return (
     <>
@@ -16,7 +17,7 @@ function Blog({ allPosts }) {
       <TabTitle pageTitle={t('blog.pageTitle')} />
       <div className="container mx-auto">
         <Headline title={t('blog.headline')} />
-        {!!heroPost && (
+        {/* {!!heroPost && (
         <PostPreview
           title={heroPost.title}
           coverImage={heroPost.coverImage}
@@ -25,10 +26,8 @@ function Blog({ allPosts }) {
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
         />
-        )}
-        <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
-          More Stories
-        </h2>
+        )} */}
+
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
           More List

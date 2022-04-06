@@ -20,15 +20,16 @@ export default function PostPreview({
             slug={slug}
             title={title}
             src={coverImage}
-            height="auto"
+            height="240px"
             width="100%"
+            style={{ maxWidth: '600px' }}
           />
         </div>
       </Link>
       <h3 className="
-      md:text-lg
+      md:text-lx
       text-md
-      tracking-tighter mb-3 "
+      tracking-relax mb-3 "
       >
         {title}
       </h3>
@@ -36,7 +37,6 @@ export default function PostPreview({
         <DateFormatter dateString={date} />
       </div>
       <p className="mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   );
 }

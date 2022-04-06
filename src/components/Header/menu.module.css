@@ -94,5 +94,5 @@
 .activeNavLink:hover {
   content: 'data ';
   background-color: var(--secondary-light);
-  color: aliceblue;
+  /* color: aliceblue; */
 }

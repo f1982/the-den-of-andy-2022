@@ -1,12 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import cn from 'classnames';
-import NextImage from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import ImageWithLoader from './ImageWithLoader';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import DotLoader from '../Loader/DotLoader';
+import ImageWithLoader from './ImageWithLoader';
 
 export default function ImageComponent({
   src,
@@ -15,6 +12,7 @@ export default function ImageComponent({
   alt,
   withLoader = true,
   className,
+  style,
   ...rest
 }:{
   src:string,
@@ -22,37 +20,18 @@ export default function ImageComponent({
   height?:number|string,
   alt:string,
   withLoader?: boolean,
-  className?:string
+  className?:string,
+  style:object
 }) {
   const { basePath } = useRouter();
-  // load image from public folder
-  if (
-    src.startsWith('/')
-  ) {
-    return (
-    // <LazyLoadImage
-    //   effect="blur"
-    //   src={`${basePath}${src}`}
-    //   {...{ width, height, alt }}
-    // />
-      <ImageWithLoader
-        className={cn('object-cover', className)}
-        src={`${basePath}${src}`}
-        withLoader
-        {...{ width, height, alt }}
-        {...rest}
-      />
-    );
-  }
-  // load image from url
   return (
-    <NextImage
+    <ImageWithLoader
       className={cn('object-cover', className)}
       src={`${basePath}${src}`}
-      width={width}
-      height={height}
-      alt={alt}
+      withLoader
+      {...{ width, height, alt }}
       {...rest}
+      style={style}
     />
   );
 }

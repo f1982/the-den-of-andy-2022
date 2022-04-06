@@ -1,16 +1,20 @@
 import cn from 'classnames';
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  ClassAttributes, useEffect, useRef, useState,
+} from 'react';
 import DotLoader from '../Loader/DotLoader';
 
 export default function ImageWithLoader({
   src,
   withLoader = true,
   className,
+  style = {},
   ...rest
 }:{
   src:string,
   withLoader?: boolean,
-  className?:string
+  className?:string,
+  style?:object
 }) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const ref = useRef<HTMLImageElement>(null);
@@ -34,7 +38,7 @@ export default function ImageWithLoader({
         ref={ref}
         src={src}
         className={cn('object-cover', className)}
-        style={isLoaded ? {} : { display: 'none' }}
+        style={isLoaded ? { ...style } : { display: 'none' }}
         onLoad={() => {
           setIsLoaded(true);
         }}

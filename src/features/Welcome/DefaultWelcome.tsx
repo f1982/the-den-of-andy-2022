@@ -18,11 +18,7 @@ export default function DefaultWelcome({ link = '/home' }:WelcomeProps) {
     "
     >
       <SVGAnimation />
-
-      <div className="
-      text-center
-      "
-      >
+      <div className="text-center">
         <Typography title={t('welcome.greeting')} variant="h1" as="h2" />
         <p className="mb-8 leading-relaxed">
           {t('welcome.description')}
