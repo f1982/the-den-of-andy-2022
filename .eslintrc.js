@@ -21,6 +21,7 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
     // ecmaVersion: 13,
     // sourceType: 'module',
@@ -67,6 +68,12 @@ module.exports = {
     // to avoid to show error message in test files
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
+    }],
+    // fix js file require a extra line at the end of file
+    'eol-last': 0,
+    'no-multiple-empty-lines': ['error', {
+      max: 1,
+      maxEOF: 0,
     }],
   },
   overrides: [ // Only uses Testing Library lint rules in test files

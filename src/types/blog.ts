@@ -11,3 +11,7 @@ export type BlogPostData = {
   content: string
   slug: string
 }
+
+export type PostMap = {
+  [key:string]: BlogPostData
+}
