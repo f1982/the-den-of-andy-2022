@@ -1,4 +1,4 @@
-import Image from '../../../components/atom/Image/Image';
+import Image from '../../../components/atoms/Image/Image';
 
 export default function PostAuthorAvatar({ name, picture }) {
   return (

@@ -1,8 +1,8 @@
 import { t } from 'i18next';
 import React from 'react';
-import Headline from '../../components/Typography/Headline';
-import SmallText from '../../components/Blocks/SmallText';
-import TabTitle from '../../components/Metadata/SiteSEO';
+import Headline from '../../components/atoms/typography/Headline';
+import SmallText from '../../components/organisms/blocks/SmallText';
+import TabTitle from '../../components/molecules/seo/SiteSEO';
 import Submenu from '../../components/molecules/submenu/Submenu';
 import { aboutSubmenu } from '../../constants/menuData';
 

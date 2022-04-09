@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
-import SiteSEO from '../components/Metadata/SiteSEO';
-import AlertBar from '../components/atom/Alert/AlertBar';
-import DefaultWelcome from '../features/Welcome/DefaultWelcome';
+import SiteSEO from '../components/molecules/seo/SiteSEO';
 import DebugInfo from '../features/Debug/DebugInfo';
+import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 
 function Index() {
   const { t } = useTranslation();
@@ -13,7 +12,11 @@ function Index() {
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
       <div className="h-screen flex flex-col justify-center items-center">
-        <DefaultWelcome />
+        <DefaultWelcome
+          title={t('welcome.greeting')}
+          subtitle={t('welcome.description')}
+          link="/home"
+        />
       </div>
       <DebugInfo />
     </>

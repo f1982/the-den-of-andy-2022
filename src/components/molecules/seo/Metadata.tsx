@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { HOME_OG_IMAGE_URL } from '../../constants/paths';
+import { HOME_OG_IMAGE_URL } from '../../../constants/paths';
 
 export default function Metadata() {
   const { basePath } = useRouter();

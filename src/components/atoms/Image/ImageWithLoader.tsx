@@ -2,7 +2,7 @@ import cn from 'classnames';
 import React, {
   ClassAttributes, useEffect, useRef, useState,
 } from 'react';
-import DotLoader from '../Loader/DotLoader';
+import DotLoader from '../spinner/DotLoader';
 
 export default function ImageWithLoader({
   src,

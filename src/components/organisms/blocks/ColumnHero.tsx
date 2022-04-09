@@ -1,8 +1,8 @@
 // import Image from 'next/image';
-import { HeroData } from '../../types';
-import Button from '../atom/Button/Button';
-import Image from '../atom/Image/Image';
-import Typography from '../Typography/Typography';
+import { HeroData } from '../../../types';
+import Button from '../../atoms/buttons/Button';
+import Image from '../../atoms/Image/Image';
+import Typography from '../../atoms/typography/Typography';
 
 function ColumnHero({
   title,

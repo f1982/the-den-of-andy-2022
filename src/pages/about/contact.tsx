@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import { t } from 'i18next';
 import React from 'react';
-import Headline from '../../components/Typography/Headline';
+import Headline from '../../components/atoms/typography/Headline';
 
 export default function About() {
   return (

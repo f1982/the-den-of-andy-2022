@@ -1,6 +1,6 @@
 import { t } from 'i18next';
-import Headline from '../../components/Typography/Headline';
-import TabTitle from '../../components/Metadata/SiteSEO';
+import Headline from '../../components/atoms/typography/Headline';
+import TabTitle from '../../components/molecules/seo/SiteSEO';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/components/MoreStories';
 import PostPreview from '../../features/Blog/components/PostPreview';

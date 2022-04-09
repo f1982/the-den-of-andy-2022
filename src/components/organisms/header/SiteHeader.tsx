@@ -1,8 +1,8 @@
 import React from 'react';
 import { menuData } from '../../../constants/menuData';
-import DesktopMenuBar from '../menus/DesktopMenuBar';
-import Logo from '../../atom/Logo/Logo';
-import MobileMenuBar from '../menus/MobileMenuBar';
+import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar';
+import Logo from '../../atoms/logo/Logo';
+import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 
 function Header() {
   return (

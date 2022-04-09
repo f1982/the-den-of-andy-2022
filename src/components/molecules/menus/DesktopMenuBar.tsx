@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { MenuItemData } from '../../../types/index';
-import EyeIcon from '../../atom/Icons/EyeIcon';
+import EyeIcon from '../../atoms/Icons/EyeIcon';
 import styles from './menu.module.css';
 
 function MenuItem({ link, label, icon }: MenuItemData) {

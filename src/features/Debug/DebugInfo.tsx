@@ -1,4 +1,4 @@
-import Highlight from '../../components/Typography/Highlight';
+import Highlight from '../../components/atoms/typography/Highlight';
 import useRenderCount from '../../hooks/useRenderCount';
 
 function DebugInfo() {

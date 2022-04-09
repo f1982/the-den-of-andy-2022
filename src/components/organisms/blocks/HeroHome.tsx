@@ -1,5 +1,5 @@
-import Image from '../atom/Image/Image';
-import Headline from '../Typography/Headline';
+import Image from '../../atoms/Image/Image';
+import Headline from '../../atoms/typography/Headline';
 
 function HeroHome() {
   return (

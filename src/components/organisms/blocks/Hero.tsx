@@ -2,10 +2,10 @@
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
-import Button from '../atom/Button/Button';
-import Image from '../atom/Image/Image';
-import { Headline2 } from '../Typography/Headline';
-import { HeroData } from '../../types';
+import Button from '../../atoms/buttons/Button';
+import Image from '../../atoms/Image/Image';
+import { Headline2 } from '../../atoms/typography/Headline';
+import { HeroData } from '../../../types';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },

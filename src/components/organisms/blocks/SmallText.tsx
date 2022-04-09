@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import ImageComponent from '../atom/Image/Image';
-import { Headline2 } from '../Typography/Headline';
+import ImageComponent from '../../atoms/Image/Image';
+import { Headline2 } from '../../atoms/typography/Headline';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
