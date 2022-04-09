@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React, { useCallback, useState } from 'react';
-import { MenuItemData } from '../../types';
-import ArrowRight from '../Icons/ArrowRight';
-import Hamburger from '../Icons/Hamburger';
-import MyButton from '../Button/Button';
+import { MenuItemData } from '../../../types';
+import ArrowRight from '../../atom/Icons/ArrowRight';
+import Hamburger from '../../atom/Icons/Hamburger';
+import MyButton from '../../atom/Button/Button';
 
 function MenuItem({
   link, label, icon, onClick,

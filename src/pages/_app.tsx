@@ -3,7 +3,7 @@ import { ThemeProvider } from 'next-themes';
 import React, { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../../i18n/index';
-import Layout from '../components/Layout/PageLayout';
+import Layout from '../components/molecules/Layout/PageLayout';
 import { initGA } from '../components/Services/SiteAnalystic';
 import '../styles/global.css';
 

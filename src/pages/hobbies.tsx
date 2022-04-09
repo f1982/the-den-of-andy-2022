@@ -4,7 +4,7 @@ import Headline from '../components/Typography/Headline';
 import ColumnHero from '../components/Blocks/ColumnHero';
 import Hero from '../components/Blocks/Hero';
 import TabTitle from '../components/Metadata/SiteSEO';
-import MyButton from '../components/Button/Button';
+import MyButton from '../components/atom/Button/Button';
 
 export default function About() {
   return (

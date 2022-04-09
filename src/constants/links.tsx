@@ -1,9 +1,9 @@
 import { SNSPlatforms } from '../types/links';
-import Facebook from '../components/Icons/Facebook';
-import Twitter from '../components/Icons/Twitter';
-import Ins from '../components/Icons/Ins';
-import LinkedIn from '../components/Icons/LinkedIn';
-import YouTube from '../components/Icons/YouTube';
+import Facebook from '../components/atom/Icons/Facebook';
+import Twitter from '../components/atom/Icons/Twitter';
+import Ins from '../components/atom/Icons/Ins';
+import LinkedIn from '../components/atom/Icons/LinkedIn';
+import YouTube from '../components/atom/Icons/YouTube';
 
 const SNS = [
   {

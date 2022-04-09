@@ -2,8 +2,8 @@
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
-import Button from '../Button/Button';
-import Image from '../Image/Image';
+import Button from '../atom/Button/Button';
+import Image from '../atom/Image/Image';
 import { Headline2 } from '../Typography/Headline';
 import { HeroData } from '../../types';
 

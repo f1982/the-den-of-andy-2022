@@ -1,7 +1,8 @@
 // import Image from 'next/image';
 import { HeroData } from '../../types';
-import Button from '../Button/Button';
-import Image from '../Image/Image';
+import Button from '../atom/Button/Button';
+import Image from '../atom/Image/Image';
+import Typography from '../Typography/Typography';
 
 function ColumnHero({
   title,
@@ -23,9 +24,7 @@ function ColumnHero({
         width="100%"
       />
       <div className="lg:w-1/2 md:w-2/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-          {title}
-        </h1>
+        <Typography title={title} variant="h1" />
         <p className="mb-8 leading-relaxed">{description}</p>
         <div className="flex gap-x-3">
           <Button type="primary">Primary</Button>

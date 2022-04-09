@@ -1,7 +1,7 @@
 import { t } from 'i18next';
 import React from 'react';
-import MyButton from '../components/Button/Button';
-import DotLoader from '../components/Loader/DotLoader';
+import MyButton from '../components/atom/Button/Button';
+import DotLoader from '../components/atom/Loader/DotLoader';
 import TabTitle from '../components/Metadata/SiteSEO';
 import Headline from '../components/Typography/Headline';
 

@@ -14,7 +14,7 @@ interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
 interface TypographyProps extends ComponentProps {
   title:string;
   variant:'h1'|'h2'|'h3'|'h4';
-  as: any;
+  as?: any;
 }
 
 // animation configuration

@@ -1,8 +1,8 @@
-import AboutIcon from '../components/Icons/AboutIcon';
-import BlogIcon from '../components/Icons/BlogIcon';
-import HobbyIcon from '../components/Icons/HobbyIcon';
-import HomeIcon from '../components/Icons/HomeIcon';
-import ProjectIcon from '../components/Icons/ProjectIcon';
+import AboutIcon from '../components/atom/Icons/AboutIcon';
+import BlogIcon from '../components/atom/Icons/BlogIcon';
+import HobbyIcon from '../components/atom/Icons/HobbyIcon';
+import HomeIcon from '../components/atom/Icons/HomeIcon';
+import ProjectIcon from '../components/atom/Icons/ProjectIcon';
 import { MenuItemData } from '../types/index';
 
 const BLOG_PATH = '/blog';

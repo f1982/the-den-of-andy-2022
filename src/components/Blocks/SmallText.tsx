@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import ImageComponent from '../Image/Image';
+import ImageComponent from '../atom/Image/Image';
 import { Headline2 } from '../Typography/Headline';
 
 const containerVariant = {

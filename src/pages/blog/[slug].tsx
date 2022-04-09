@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Modal from 'react-modal';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
-import CloseButton from '../../components/Button/CloseButton';
+import CloseButton from '../../components/atom/Button/CloseButton';
 import SiteSEO from '../../components/Metadata/SiteSEO';
 import BlogPost from '../../features/Blog/BlogPost';
 import PostTitle from '../../features/Blog/components/PostTitle';

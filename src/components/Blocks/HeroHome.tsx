@@ -1,4 +1,4 @@
-import Image from '../Image/Image';
+import Image from '../atom/Image/Image';
 import Headline from '../Typography/Headline';
 
 function HeroHome() {

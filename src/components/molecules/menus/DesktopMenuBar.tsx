@@ -2,8 +2,8 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { MenuItemData } from '../../types/index';
-import EyeIcon from '../Icons/EyeIcon';
+import { MenuItemData } from '../../../types/index';
+import EyeIcon from '../../atom/Icons/EyeIcon';
 import styles from './menu.module.css';
 
 function MenuItem({ link, label, icon }: MenuItemData) {

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MenuItemData } from '../../types';
+import { MenuItemData } from '../../../types';
 
 function SubMenuItem({ link, label }: MenuItemData) {
   return (

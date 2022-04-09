@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import ProjectTitle from './components/ProjectTitle';
-import Image from '../../components/Image/Image';
-import Carousel from '../../components/Carousel/Carousel';
+import Image from '../../components/atom/Image/Image';
+import Carousel from '../../components/atom/Carousel/Carousel';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
-import CloseButton from '../../components/Button/CloseButton';
+import CloseButton from '../../components/atom/Button/CloseButton';
 import TechStackItem from './components/TechStackItem';
 
 function Project({

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import SocialLinks from '../SocialLinks/SocialLinks';
-import ThemeChanger from './ThemeChanger';
+import SocialLinks from '../../atom/links/SocialLinks';
+import ThemeChanger from '../theme-switch/ThemeChanger';
 
 function Copyright() {
   return (

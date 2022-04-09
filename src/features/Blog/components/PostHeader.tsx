@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Image from '../../../components/Image/Image';
+import Image from '../../../components/atom/Image/Image';
 import Avatar from './PostAuthorAvatar';
 import DateFormatter from './PostDateFormatter';
 

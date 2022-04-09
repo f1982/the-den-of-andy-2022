@@ -3,7 +3,7 @@ import React from 'react';
 import Headline from '../../components/Typography/Headline';
 import SmallText from '../../components/Blocks/SmallText';
 import TabTitle from '../../components/Metadata/SiteSEO';
-import Submenu from '../../components/Menu/Submenu';
+import Submenu from '../../components/molecules/submenu/Submenu';
 import { aboutSubmenu } from '../../constants/menuData';
 
 function getAge(dateString) {
