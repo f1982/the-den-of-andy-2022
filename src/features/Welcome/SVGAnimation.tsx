@@ -9,8 +9,8 @@ export default function SVGAnimation() {
     <div className="p-6">
       <svg
         viewBox="-2 0 126 120"
-        width="182"
-        height="185"
+        width="100%"
+        height="100%"
         className={styles.svgAnimation}
         xmlns="http://www.w3.org/2000/svg"
       >

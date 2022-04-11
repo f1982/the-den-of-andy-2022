@@ -7,12 +7,14 @@ import SVGAnimation from './SVGAnimation';
 interface WelcomeProps {
   title:string;
   subtitle:string;
+  label:string;
   link?: string;
 }
 
 export default function DefaultWelcome({
   title,
   subtitle,
+  label,
   link = '/home',
 }:WelcomeProps) {
   return (
@@ -28,7 +30,7 @@ export default function DefaultWelcome({
         <Typography title={title} variant="h1" as="h1" />
         <p className="mb-8 leading-relaxed">{subtitle}</p>
         <div className="flex justify-center">
-          <MyButton href={link} type="primary">{t('welcome.buttonLabel')}</MyButton>
+          <MyButton href={link} type="primary">{label}</MyButton>
         </div>
       </div>
     </div>

@@ -25,9 +25,8 @@
   },
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
-    "@react-three/drei": "^8.20.2",
-    "@react-three/fiber": "^8.0.9",
-    "@welldone-software/why-did-you-render": "^6.2.3",
+    "@react-three/drei": "^7.2.1",
+    "@react-three/fiber": "^7.0.5",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "framer-motion": "^5.6.0",
@@ -36,8 +35,8 @@
     "next": "latest",
     "next-seo": "^4.28.1",
     "next-themes": "^0.0.15",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
     "react-i18next": "^11.15.1",
     "react-lazy-load-image-component": "^1.5.1",
@@ -46,7 +45,8 @@
     "remark": "13.0.0",
     "remark-html": "13.0.2",
     "tailwindcss": "^2.1.0",
-    "three": "^0.139.0"
+    "three": "^0.131.0",
+    "three-stdlib": "^2.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -69,6 +69,7 @@
     "@types/react": "^17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "@welldone-software/why-did-you-render": "^6.2.3",
     "autoprefixer": "^10.2.1",
     "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",

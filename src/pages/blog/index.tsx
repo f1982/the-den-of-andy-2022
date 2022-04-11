@@ -1,6 +1,8 @@
 import { t } from 'i18next';
 import Headline from '../../components/atoms/typography/Headline';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
+import BlockScene from '../../components/organisms/3d/Block';
+import Box from '../../components/organisms/3d/Box';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/components/MoreStories';
 import PostPreview from '../../features/Blog/components/PostPreview';
@@ -15,6 +17,8 @@ function Blog({ allPosts }) {
     <>
       {/* show all the blog post list */}
       <TabTitle pageTitle={t('blog.pageTitle')} />
+      <BlockScene />
+
       <div className="container mx-auto">
         <Headline title={t('blog.headline')} />
         {/* {!!heroPost && (

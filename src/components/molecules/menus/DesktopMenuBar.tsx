@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { MenuItemData } from '../../../types/index';
-import EyeIcon from '../../atoms/Icons/EyeIcon';
 import styles from './menu.module.css';
 
 function MenuItem({ link, label, icon }: MenuItemData) {
@@ -26,11 +25,6 @@ function DesktopMenuBar({ menuData }:{menuData:MenuItemData[]}) {
           <MenuItem key={item.link} {...item} />
         ))
       }
-      {/* <MyButton type="secondary">
-        <ArrowRight />
-        {' '}
-        <span className="hover:animate-bounce">Go</span>
-      </MyButton> */}
     </nav>
   );
 }

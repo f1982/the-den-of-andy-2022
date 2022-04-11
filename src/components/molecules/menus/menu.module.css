@@ -3,13 +3,14 @@
 }
 
 .navContainer>* {
-  border-color: #ccc;
-  border-style: solid;
-  border-width: 0 0 0 1px;
+  /* border-color: #ccc; */
+  /* border-style: solid; */
+  /* border-width: 0 0 0 1px; */
 }
 
-.navContainer>*:last-child {
-  border-width: 0 1px 0;
+.navContainer>*:not(:last-child) {
+  border-color: rgb(240, 240, 240);
+  border-width: 0 1px 0 0;
 }
 
 .topMenuItem,
@@ -17,8 +18,8 @@
   font-weight: bold;
   display: inline-block;
   position: relative;
-  width: 120px;
-  height: 186px;
+  width: 100px;
+  height: 120px;
   box-sizing: border-box;
   text-align: center;
   transition: var(--show-transition);
@@ -44,8 +45,7 @@
   transform: translateX(-50%);
   left: 50%;
   bottom: 50%;
-  /* color: var(--on-primary); */
-  color: #666666;
+  color: var(--on-primary);
   text-transform: uppercase;
   transition: 0.3s all ease-in-out;
   opacity: 1;
@@ -69,12 +69,12 @@
 /* when mouse over, the text will show and move down to the button of the menu item */
 .topMenuItem:hover span {
   opacity: 1;
-  bottom: 17.7%;
+  bottom: 35.5%;
 }
 
 .topMenuItem:hover div {
   opacity: 0;
-  bottom: 17.7%;
+  bottom: 35.5%;
 }
 
 .activeNavLink {
@@ -83,7 +83,7 @@
 
 .activeNavLink span {
   opacity: 1;
-  bottom: 17.7%;
+  bottom: 35.5%;
 }
 
 .activeNavLink div {

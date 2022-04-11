@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React, { useCallback, useState } from 'react';
 import { MenuItemData } from '../../../types';
+import MyButton from '../../atoms/buttons/Button';
 import ArrowRight from '../../atoms/Icons/ArrowRight';
 import Hamburger from '../../atoms/Icons/Hamburger';
-import MyButton from '../../atoms/buttons/Button';
 
 function MenuItem({
   link, label, icon, onClick,
@@ -21,7 +21,11 @@ function MenuItem({
           text-on-primary
           hover:bg-primary-dark
           hover:text-white
-          "
+          flex
+          flex-row
+          justify-between
+          justify-center
+          items-center        "
         onClick={(e) => onClick(e, link)}
       >
         <span>{icon}</span>
@@ -47,6 +51,7 @@ function MobileMenuBar({
     <>
       <div className="md:hidden">
         <MyButton
+          className="h-10 w-20"
           type="primary"
           onClick={() => {
             setShowing(!showing);
@@ -74,7 +79,6 @@ function MobileMenuBar({
       </div>
       )}
     </>
-
   );
 }
 

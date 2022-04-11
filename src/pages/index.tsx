@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/molecules/seo/SiteSEO';
-import DebugInfo from '../features/Debug/DebugInfo';
+import DebugInfo from '../components/organisms/debug/DebugInfo';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 
 function Index() {
@@ -15,6 +15,7 @@ function Index() {
         <DefaultWelcome
           title={t('welcome.greeting')}
           subtitle={t('welcome.description')}
+          label={t('welcome.buttonLabel')}
           link="/home"
         />
       </div>
@@ -30,4 +31,5 @@ Index.getLayout = function getLayout(page) {
     </div>
   );
 };
+
 export default Index;

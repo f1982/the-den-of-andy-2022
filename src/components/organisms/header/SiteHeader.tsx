@@ -7,8 +7,7 @@ import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 function Header() {
   return (
     <header
-      className="shadow-sm"
-      // style={{ borderBottom: '1px solid #ccc' }}
+      className="shadow-sm w-full"
     >
       <div
         className="
@@ -18,8 +17,7 @@ function Header() {
           items-center
           md:flex-col
           lg:flex-row
-          lg:content-center
-      "
+          lg:content-center"
       >
         <Logo />
         <div className="flex-1" />

@@ -7,6 +7,7 @@ interface PropsType {
   children: React.ReactNode;
   onClick?: () => void;
   href?: string;
+  className?: string;
 }
 // `onClick`, `href`, and `ref` need to be passed to the DOM element
 // for proper handling
@@ -47,7 +48,7 @@ const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props: PropsType,
     <a href={props.href} onClick={props.onClick} ref={ref}>
       <button
         type="button"
-        className={getStyle(props.type)}
+        className={cn(getStyle(props.type), props.className)}
       >
         {props.children}
       </button>

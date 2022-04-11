@@ -1,5 +1,4 @@
-import Highlight from '../../components/atoms/typography/Highlight';
-import useRenderCount from '../../hooks/useRenderCount';
+import useRenderCount from '../../../hooks/useRenderCount';
 
 function DebugInfo() {
   const renderCount = useRenderCount();
@@ -33,11 +32,6 @@ function DebugInfo() {
         <h4 className="text-md">This is h4</h4>
         <p>This is h4</p>
       </div>
-      <span>
-        Here is the
-        {' '}
-        <Highlight>Hight light text</Highlight>
-      </span>
     </div>
   );
 }
