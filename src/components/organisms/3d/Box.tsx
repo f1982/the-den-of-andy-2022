@@ -23,9 +23,6 @@ export function MyCube(props) {
 
 export default function Scene() {
   const fullConfig = resolveConfig(tailwindConfig);
-  console.log('fullConfig.theme.colors', fullConfig.theme.colors);
-  console.log('primary-dark: ', fullConfig.theme.colors.primary.dark);
-
   return (
     <Canvas dpr={2} style={{ height: '50vh' }}>
       <color attach="background" args={[fullConfig.theme.colors.primary.dark]} />

@@ -1,5 +1,4 @@
 import { Suspense } from 'react';
-import { MyCube } from './Box';
 import ElasticPresentation from './ElasticPresentation';
 import SuzannaModel from './SuzannaModel';
 import WatchModel from './WatchModel';
