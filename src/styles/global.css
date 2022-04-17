@@ -28,24 +28,17 @@
 
   --on-primary: #272343;
   --on-secondary: #2d334a;
-  --on-background: #2d334a;
+  /* --on-background: #2d334a; */ 
+  --on-background: #4E5064;
   --on-surface: #fff;
   --on-warning: #000;
   --on-error: #fffffe;
 }
 
 [data-theme='dark'] {
-  /* --primary-dark: theme('colors.gray.700');
-  --primary-medium: theme('colors.gray.500');
-  --primary-light: theme('colors.gray.200');
-
-  --secondary-dark: theme('colors.fuchsia.900');
-  --secondary-medium: theme('colors.fuchsia.700');
-  --secondary-light: theme('colors.fuchsia.500'); */
 
   --background: #303030;
   --surface: #303030;
-  /* --error: theme('colors.red.300'); */
 
   --on-primary: #fff;
   --on-secondary: #2d334a;

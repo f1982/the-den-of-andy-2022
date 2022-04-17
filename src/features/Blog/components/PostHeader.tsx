@@ -1,47 +1,22 @@
-import { motion } from 'framer-motion';
-import Image from '../../../components/Image/Image';
+import Typography from '../../../components/atoms/typography/Typography';
+import LandscapeHero from '../../../components/organisms/blocks/LandscapeHero';
+import { BlogPostData } from '../../../types/blog';
 import Avatar from './PostAuthorAvatar';
-import DateFormatter from './PostDateFormatter';
+import PostDate from '../../../components/organisms/article/PostDate';
 
 export default function PostHeader({
-  title, coverImage, date, author, slug,
-}) {
+  title, coverImage, date, author, excerpt,
+}:Omit<BlogPostData, 'content'>) {
   return (
     <>
-      <div className=" max-w-2xl mx-auto">
-        <motion.h1
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="
-          text-lg
-          font-bold
-          tracking-tighter
-          text-center
-          md:text-xl
-          md:leading-none
-          md:text-left
-          mb-6
-        "
-          layoutId="post-title"
-        >
-          {title}
-        </motion.h1>
+      <div className="container mx-auto">
+        <Typography variant="h2" title={title} as="h1" />
         <div className="mb-6">
+          <PostDate date={date} />
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
-      <Image
-        className="mx-auto
-        transition ease-in delay-350 duration-300
-        hover:shadow-md mb-12"
-        src={coverImage}
-        alt={`Cover Image for ${title}`}
-        width="100%"
-        height="auto"
-      />
-      <div className="max-w-2xl mx-auto">
-        <DateFormatter dateString={date} />
-      </div>
+      <LandscapeHero image={coverImage} text={excerpt} />
     </>
   );
 }

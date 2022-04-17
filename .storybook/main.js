@@ -28,5 +28,16 @@ module.exports = {
   // https://github.com/storybookjs/storybook/issues/15336#issuecomment-906809203
   "typescript": {
     "reactDocgen": false
-  }
+  },
+  "staticDirs": ['../public']
+  // "webpackFinal": async (config, {
+  //   configType
+  // }) => {
+  //   config.module.rules.push({
+  //     test: /\.(glb|gltf)$/,
+  //     use: ['file-loader'],
+  //     include: path.resolve(__dirname, '../'),
+  //   });
+  //   return config;
+  // },
 }

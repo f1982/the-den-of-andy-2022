@@ -1,25 +1,10 @@
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../../tailwind.config';
+import CloseButton from '../../components/atoms/buttons/CloseButton';
+import customModalStyles from '../../constants/modelConfig';
 import ProjectDetail from '../../features/Project/ProjectDetail';
 import { ProjectItemData } from '../../types/projects';
 import { getProjectDetail, getProjects } from '../../utils/project-helper';
-
-Modal.setAppElement('#__next');
-const fullConfig = resolveConfig(tailwindConfig);
-const customModalStyles = {
-  content: {
-    top: '39px',
-    bottom: '0',
-    left: '100px',
-    right: '100px',
-    backgroundColor: fullConfig.theme.colors.surface,
-  },
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-};
 
 function ProjectPage({ detail }:{detail:ProjectItemData}) {
   const router = useRouter();
@@ -31,10 +16,19 @@ function ProjectPage({ detail }:{detail:ProjectItemData}) {
       style={customModalStyles}
       contentLabel="Post modal"
     >
-      <ProjectDetail
-        slug={slug}
-        {...detail}
-      />
+      <article>
+        <div className="flex container mx-auto">
+          <div className="flex-1" />
+          <CloseButton onClick={() => {
+            router.back();
+          }}
+          />
+        </div>
+        <ProjectDetail
+          slug={slug}
+          {...detail}
+        />
+      </article>
     </Modal>
   );
 }

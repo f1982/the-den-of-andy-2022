@@ -4,7 +4,14 @@ module.exports = {
     es2021: true,
     'jest/globals': true,
   },
-  extends: ['plugin:react/recommended', 'plugin:cypress/recommended', 'airbnb', 'next', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:cypress/recommended',
+    'airbnb',
+    'next',
+    'plugin:storybook/recommended',
+  ],
   settings: {
     next: {
       rootDir: 'src/',
@@ -14,9 +21,10 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
-    ecmaVersion: 13,
-    sourceType: 'module',
+    // ecmaVersion: 13,
+    // sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'cypress', 'jest', 'testing-library'],
   rules: {
@@ -61,10 +69,20 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
     }],
+    // fix js file require a extra line at the end of file
+    'eol-last': 0,
+    'no-multiple-empty-lines': ['error', {
+      max: 1,
+      maxEOF: 0,
+    }],
   },
-  overrides: [// Only uses Testing Library lint rules in test files
+  overrides: [ // Only uses Testing Library lint rules in test files
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-    }],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
 };

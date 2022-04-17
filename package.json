@@ -16,7 +16,7 @@
     "clean": "rm -rf node_modules && rm yarn.lock && rm package-lock.json",
     "lint": "next lint",
     "pre:e2e": "next build && next-sitemap && next start",
-    "cypress": "cypress open",
+    "e2e": "cypress open",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "prepare": "husky install",
@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
+    "@react-three/drei": "^7.2.1",
+    "@react-three/fiber": "^7.0.5",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "framer-motion": "^5.6.0",
@@ -39,9 +41,12 @@
     "react-i18next": "^11.15.1",
     "react-lazy-load-image-component": "^1.5.1",
     "react-modal": "^3.14.4",
+    "react-three-fiber": "^6.0.13",
     "remark": "13.0.0",
     "remark-html": "13.0.2",
-    "tailwindcss": "^2.1.0"
+    "tailwindcss": "^2.1.0",
+    "three": "^0.134.0",
+    "three-stdlib": "^2.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -64,6 +69,7 @@
     "@types/react": "^17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "@welldone-software/why-did-you-render": "^6.2.3",
     "autoprefixer": "^10.2.1",
     "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",

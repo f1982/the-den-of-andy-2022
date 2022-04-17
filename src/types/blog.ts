@@ -5,9 +5,14 @@ export type AuthorData = {
 
 export type BlogPostData = {
   title: string
+  excerpt: string;
   coverImage: string
   date: string
   author: AuthorData
   content: string
   slug: string
+}
+
+export type PostMap = {
+  [key:string]: BlogPostData
 }

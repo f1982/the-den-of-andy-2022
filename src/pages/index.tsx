@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
-import SiteSEO from '../components/Metadata/SiteSEO';
-import AlertBar from '../components/Alert/AlertBar';
+import SiteSEO from '../components/molecules/seo/SiteSEO';
+import DebugInfo from '../components/organisms/debug/DebugInfo';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
-import DebugInfo from '../features/Debug/DebugInfo';
 
 function Index() {
   const { t } = useTranslation();
@@ -12,9 +11,13 @@ function Index() {
   return (
     <>
       <SiteSEO {...SEO} pageTitle={t('welcome.pageTitle')} />
-      <AlertBar preview>test</AlertBar>
       <div className="h-screen flex flex-col justify-center items-center">
-        <DefaultWelcome />
+        <DefaultWelcome
+          title={t('welcome.greeting')}
+          subtitle={t('welcome.description')}
+          label={t('welcome.buttonLabel')}
+          link="/home"
+        />
       </div>
       <DebugInfo />
     </>
@@ -28,4 +31,5 @@ Index.getLayout = function getLayout(page) {
     </div>
   );
 };
+
 export default Index;

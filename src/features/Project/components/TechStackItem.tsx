@@ -1,16 +1,19 @@
 import React from 'react';
+import cn from 'classnames';
 
 function TechStackItem(
   {
     stacks,
+    className,
   }: {
-    stacks: string[]
+    stacks: string[],
+    className?: string
   },
 ) {
   return (
-    <div className="mt-3 mb-6">
+    <div className={cn('mt-3 mb-6', className)}>
       {stacks.map((item, index) => (
-        <span className="px-3 py-2 rounded-lg text-sm border-2 mr-2 border-gray-500 bg-gray-200" key={item}>
+        <span className="px-2 py-1 rounded-lg text-sm border-16 mr-2 bg-secondary-dark" key={item}>
           {item}
         </span>
       ))}

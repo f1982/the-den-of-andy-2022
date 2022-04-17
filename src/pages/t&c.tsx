@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import { t } from 'i18next';
 import React from 'react';
-import TabTitle from '../components/Metadata/SiteSEO';
-import Headline, { Headline1, Headline2 } from '../components/Typography/Headline';
+import TabTitle from '../components/molecules/seo/SiteSEO';
+import Headline, { Headline1, Headline2 } from '../components/atoms/typography/Headline';
 
 export default function PrivacyPolicy() {
   return (

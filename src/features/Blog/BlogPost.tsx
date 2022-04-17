@@ -4,18 +4,10 @@ import PostHeader from './components/PostHeader';
 import PostBody from './components/PostBody';
 import { BlogPostData } from '../../types/blog';
 
-function BlogPost({
-  title, coverImage, date, author, content, slug,
-}:BlogPostData) {
+function BlogPost({ content, ...rest }:BlogPostData) {
   return (
     <article className="mb-32">
-      <PostHeader
-        slug={slug}
-        title={title}
-        coverImage={`${coverImage}`}
-        date={date}
-        author={author}
-      />
+      <PostHeader {...rest} />
       <PostBody content={content} />
     </article>
   );

@@ -1,0 +1,98 @@
+.navContainer {
+  --show-transition: 0.1s all ease-in-out;
+}
+
+.navContainer>* {
+  /* border-color: #ccc; */
+  /* border-style: solid; */
+  /* border-width: 0 0 0 1px; */
+}
+
+.navContainer>*:not(:last-child) {
+  border-color: rgb(240, 240, 240);
+  border-width: 0 1px 0 0;
+}
+
+.topMenuItem,
+.activeNavLink {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 120px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: var(--show-transition);
+}
+
+/* Show this after user hover */
+.topMenuItem span,
+.activeNavLink span {
+  display: inline-block;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 50%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: var(--show-transition);
+  opacity: 0;
+}
+
+/* Normally show this, before user hover */
+.overlayText {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 50%;
+  color: var(--on-primary);
+  text-transform: uppercase;
+  transition: 0.3s all ease-in-out;
+  opacity: 1;
+}
+
+.overlayText:hover {
+  opacity: 0;
+  /* left: 80%; */
+}
+
+.topMenuItem:link,
+.topMenuItem:visited {
+  background-color: inherit;
+  color: var(--on-primary);
+}
+
+.topMenuItem:hover {
+  background-color: var(--primary-light)
+}
+
+/* when mouse over, the text will show and move down to the button of the menu item */
+.topMenuItem:hover span {
+  opacity: 1;
+  bottom: 35.5%;
+}
+
+.topMenuItem:hover div {
+  opacity: 0;
+  bottom: 35.5%;
+}
+
+.activeNavLink {
+  background-color: var(--secondary-light);
+}
+
+.activeNavLink span {
+  opacity: 1;
+  bottom: 35.5%;
+}
+
+.activeNavLink div {
+  opacity: 0;
+  bottom: 50%;
+}
+
+.activeNavLink:hover {
+  content: 'data ';
+  background-color: var(--secondary-light);
+  /* color: aliceblue; */
+}

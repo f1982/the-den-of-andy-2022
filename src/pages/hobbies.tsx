@@ -1,10 +1,10 @@
 import { t } from 'i18next';
 import React from 'react';
-import Headline from '../components/Typography/Headline';
-import ColumnHero from '../components/Blocks/ColumnHero';
-import Hero from '../components/Blocks/Hero';
-import TabTitle from '../components/Metadata/SiteSEO';
-import MyButton from '../components/Button/Button';
+import Headline from '../components/atoms/typography/Headline';
+import ColumnHero from '../components/organisms/blocks/ColumnHero';
+import Hero from '../components/organisms/blocks/Hero';
+import TabTitle from '../components/molecules/seo/SiteSEO';
+import MyButton from '../components/atoms/buttons/Button';
 
 export default function About() {
   return (

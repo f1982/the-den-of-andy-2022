@@ -28,14 +28,17 @@ export default function ProjectItem({
           />
           <h3 className="text-md mb-3">{title}</h3>
           <span className="
-          absolute top-3 right-12 
-          bg-secondary-dark 
+          absolute top-3 right-12
+          bg-secondary-dark
           font-bold
           text-on-surface
-          px-2 py-0.5 rounded-lg 
+          px-2 py-0.5 rounded-lg
           tracking-widest text-sm
-          ">{platform}</span>
-          <p className='h-12' style={{overflow:'hidden'}} >{description}</p>
+          "
+          >
+            {platform}
+          </span>
+          <p className="h-12" style={{ overflow: 'hidden' }}>{description}</p>
         </div>
       </div>
     </Link>

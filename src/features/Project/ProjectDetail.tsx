@@ -1,14 +1,13 @@
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import ProjectTitle from './components/ProjectTitle';
-import Image from '../../components/Image/Image';
-import Carousel from '../../components/Carousel/Carousel';
+import Carousel from '../../components/atoms/carousel/Carousel';
+import Typography from '../../components/atoms/typography/Typography';
+import LandscapeHero from '../../components/organisms/blocks/LandscapeHero';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
-import CloseButton from '../../components/Button/CloseButton';
+import PostDate from '../../components/organisms/article/PostDate';
 import TechStackItem from './components/TechStackItem';
 
 function Project({
-  slug, title, cover, tech, description, images,
+  slug, title, cover, tech, end, description, images,
 }) {
   const router = useRouter();
 
@@ -19,28 +18,20 @@ function Project({
   }
 
   return (
-    <article className="container mx-auto mb-32">
-      <div>
-        <CloseButton
-          onClick={() => router.back()}
-        />
+    <>
+      <div className="container mx-auto">
+        <Typography variant="h2" title={title} as="h1" />
+        <PostDate date={end} />
       </div>
-      <ProjectTitle id={slug} title={title} />
-      <TechStackItem stacks={tech.split(',')} />
-      <Image
-        alt={`${title} project cover image`}
-        className="object-center w-full mb-9"
-        src={`${PROJECT_IMAGE_URL}/${cover}`}
-        width={650}
-        height={250}
-      />
-      <div className="px-10 mb-9">
-        {getCarousel(images)}
+      <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
+      <div className="container mx-auto">
+        <TechStackItem stacks={tech.split(',')} className="mt-9" />
+        <p>{description}</p>
+        <div className="px-10 mb-9">
+          {getCarousel(images)}
+        </div>
       </div>
-      <p>
-        {description}
-      </p>
-    </article>
+    </>
   );
 }
 

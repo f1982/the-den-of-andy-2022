@@ -1,13 +1,22 @@
 import { t } from 'i18next';
 import React from 'react';
-import MyButton from '../../components/Button/Button';
+import MyButton from '../../components/atoms/buttons/Button';
+import Typography from '../../components/atoms/typography/Typography';
 import SVGAnimation from './SVGAnimation';
 
 interface WelcomeProps {
+  title:string;
+  subtitle:string;
+  label:string;
   link?: string;
 }
 
-export default function DefaultWelcome({ link = '/home' }:WelcomeProps) {
+export default function DefaultWelcome({
+  title,
+  subtitle,
+  label,
+  link = '/home',
+}:WelcomeProps) {
   return (
     <div className="
     container mx-auto
@@ -17,22 +26,11 @@ export default function DefaultWelcome({ link = '/home' }:WelcomeProps) {
     "
     >
       <SVGAnimation />
-
-      <div className="
-      text-center
-      "
-      >
-        <h1 className="
-        title-font sm:text-4xl text-3xl mb-4 font-medium
-        "
-        >
-          {t('welcome.greeting')}
-        </h1>
-        <p className="mb-8 leading-relaxed">
-          {t('welcome.description')}
-        </p>
+      <div className="text-center">
+        <Typography title={title} variant="h1" as="h1" />
+        <p className="mb-8 leading-relaxed">{subtitle}</p>
         <div className="flex justify-center">
-          <MyButton href={link} type="primary">{t('welcome.buttonLabel')}</MyButton>
+          <MyButton href={link} type="primary">{label}</MyButton>
         </div>
       </div>
     </div>

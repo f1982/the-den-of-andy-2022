@@ -22,6 +22,46 @@ function MyComponent({ rotation }) {
   );
 }
 
+function RotationItem() {
+  const { scrollYProgress } = useViewportScroll();
+  const rotate = useTransform(scrollYProgress, [0.1, 0.2], [0, 360]);
+  const moveOut = useTransform(scrollYProgress, [0.2, 0.3], [0, 1000]);
+
+  return (
+    <motion.h1 style={{
+      rotate,
+      textAlign: 'center',
+      top: 'calc(50vh - 40px)',
+      x: moveOut,
+      position: 'fixed',
+      width: '100vw',
+      fontSize: '80px',
+    }}
+    >
+      This is RotationItem
+    </motion.h1>
+  );
+}
+
+function MoveInItem() {
+  const { scrollYProgress } = useViewportScroll();
+  const moveIn = useTransform(scrollYProgress, [0.3, 0.4, 0.5, 0.6], [-1000, 0, 0, -1000]);
+
+  return (
+    <motion.h1 style={{
+      textAlign: 'center',
+      top: 'calc(50vh - 40px)',
+      x: moveIn,
+      position: 'fixed',
+      width: '100vw',
+      fontSize: '80px',
+    }}
+    >
+      This is MoveInItem
+    </motion.h1>
+  );
+}
+
 function MyDevices() {
   const [isComplete, setIsComplete] = useState(false);
   const { scrollYProgress } = useViewportScroll();
@@ -37,20 +77,11 @@ function MyDevices() {
     'linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent)',
         margin: '0',
         backgroundSize: '700px 700px',
-        height: '1000000px',
+        height: '10000px',
       }}
     >
-      <motion.h1 style={{
-        rotate,
-        textAlign: 'center',
-        top: 'calc(50vh - 40px)',
-        position: 'fixed',
-        width: '100vw',
-        fontSize: '80px',
-      }}
-      >
-        This is the title
-      </motion.h1>
+      <RotationItem />
+      <MoveInItem />
     </div>
   );
 }

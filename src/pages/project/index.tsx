@@ -1,25 +1,11 @@
 import { t } from 'i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import TabTitle from '../../components/Metadata/SiteSEO';
-import BlogPageTitle from '../../components/Typography/Headline';
+import TabTitle from '../../components/molecules/seo/SiteSEO';
+import BlogPageTitle from '../../components/atoms/typography/Headline';
 import ProjectList from '../../features/Project/ProjectList';
 import { getProjects } from '../../utils/project-helper';
-
-const ProjectSubmenu = [
-  {
-    name: 'test',
-    link: 't1',
-  },
-  {
-    name: 'test2',
-    link: 't2',
-  },
-  {
-    name: 'test3',
-    link: 't3',
-  },
-];
+import Typography from '../../components/atoms/typography/Typography';
 
 export default function Projects({ projects }) {
   const router = useRouter();
@@ -28,8 +14,7 @@ export default function Projects({ projects }) {
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
       <div className="container mx-auto">
-        <BlogPageTitle title="Projects" />
-        {/* <HighlightProject projects={projects} id='103' /> */}
+        <Typography variant="h1" as="h1" highlight title={t('project.pageTitle')} />
         <ProjectList list={projects} type={type as string} />
       </div>
     </>

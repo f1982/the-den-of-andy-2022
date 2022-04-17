@@ -1,9 +1,9 @@
 import { t } from 'i18next';
 import React from 'react';
-import MyButton from '../components/Button/Button';
-import DotLoader from '../components/Loader/DotLoader';
-import TabTitle from '../components/Metadata/SiteSEO';
-import Headline from '../components/Typography/Headline';
+import MyButton from '../components/atoms/buttons/Button';
+import DotLoader from '../components/atoms/spinner/DotLoader';
+import TabTitle from '../components/molecules/seo/SiteSEO';
+import Headline from '../components/atoms/typography/Headline';
 
 function Custom404() {
   return (
