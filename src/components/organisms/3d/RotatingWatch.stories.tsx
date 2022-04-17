@@ -1,14 +1,37 @@
-import RotatingWatch from './RotatingWatch';
+import { Suspense } from 'react';
+import { MyCube } from './Box';
+import ElasticPresentation from './ElasticPresentation';
+import SuzannaModel from './SuzannaModel';
+import WatchModel from './WatchModel';
 
 export default {
-  title: 'Experiment/RotatingWatch',
-  component: RotatingWatch,
+  title: 'Experiment/ElasticPresentation',
+  component: ElasticPresentation,
 };
 
 export function Demos() {
   return (
-    <div style={{ height: '100vh' }}>
-      <RotatingWatch modelFile="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb" />
+    <div style={{ height: '600px' }}>
+      <ElasticPresentation>
+        <WatchModel
+          rotation={[-Math.PI / 2, 0, 0]}
+          position={[0, 0.25, 0]}
+          scale={0.003}
+        />
+      </ElasticPresentation>
+    </div>
+  );
+}
+
+export function Suzanna() {
+  return (
+    <div style={{ height: '600px' }}>
+      <ElasticPresentation>
+        <Suspense fallback={null}>
+          <SuzannaModel />
+        </Suspense>
+        {/* <MyCube /> */}
+      </ElasticPresentation>
     </div>
   );
 }

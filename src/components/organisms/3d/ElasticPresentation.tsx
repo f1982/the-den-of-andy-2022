@@ -3,14 +3,12 @@ import {
   Canvas,
 } from '@react-three/fiber';
 import React from 'react';
-import PostEffect from '../../../utils/3d/PostEffect';
-import WatchModel from './WatchModel';
 
-export function ElasticModel({
+export default function ElasticModel({
   children,
 }) {
   return (
-    <Canvas dpr={window.devicePixelRatio} camera={{ position: [0, 0, 5], fov: 50 }}>
+    <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
       <color attach="background" args={['#ffcc00']} />
       <ambientLight intensity={0.5} />
       <pointLight position={[-20, 10, 25]} />
@@ -27,19 +25,3 @@ export function ElasticModel({
     </Canvas>
   );
 }
-
-function Scene() {
-  return (
-    <ElasticModel>
-      <WatchModel
-        rotation={[-Math.PI / 2, 0, 0]}
-        position={[0, 0.25, 0]}
-        scale={0.003}
-      />
-      <PostEffect />
-
-    </ElasticModel>
-  );
-}
-
-export default Scene;

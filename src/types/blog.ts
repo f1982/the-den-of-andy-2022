@@ -5,6 +5,7 @@ export type AuthorData = {
 
 export type BlogPostData = {
   title: string
+  excerpt: string;
   coverImage: string
   date: string
   author: AuthorData

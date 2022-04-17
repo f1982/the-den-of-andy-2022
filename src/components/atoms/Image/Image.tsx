@@ -21,7 +21,7 @@ export default function ImageComponent({
   alt:string,
   withLoader?: boolean,
   className?:string,
-  style:object
+  style?:object
 }) {
   const { basePath } = useRouter();
   return (

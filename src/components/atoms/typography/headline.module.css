@@ -6,6 +6,7 @@
     transparent 0,transparent 55%,
     var(--secondary-dark) 55%,
     var(--secondary-dark) 100%);
+  
 }
 
 .headline::before {
@@ -26,5 +27,5 @@
 }
 
 .headline::after {
-  content: '.';
+  content: '';
 }

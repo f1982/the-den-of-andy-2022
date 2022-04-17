@@ -3,9 +3,10 @@ import Headline from '../../components/atoms/typography/Headline';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import BlockScene from '../../components/organisms/3d/Block';
 import Box from '../../components/organisms/3d/Box';
+import PresentedMonkey from '../../components/organisms/3d/PresentedMonkey';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/components/MoreStories';
-import PostPreview from '../../features/Blog/components/PostPreview';
+import PostPreview from '../../features/Blog/PostPreview';
 import { getAllPosts } from '../../utils/blog-helper';
 
 function Blog({ allPosts }) {
@@ -17,7 +18,11 @@ function Blog({ allPosts }) {
     <>
       {/* show all the blog post list */}
       <TabTitle pageTitle={t('blog.pageTitle')} />
-      <BlockScene />
+      {/* <BlockScene /> */}
+      <div style={{ height: '50vh' }}>
+
+        <PresentedMonkey />
+      </div>
 
       <div className="container mx-auto">
         <Headline title={t('blog.headline')} />

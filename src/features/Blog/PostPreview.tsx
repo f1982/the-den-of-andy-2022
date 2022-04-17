@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { BLOG_PATH } from '../../../constants/menuData';
-import Avatar from './PostAuthorAvatar';
-import CoverImage from './PostCoverImage';
-import DateFormatter from './PostDateFormatter';
+import Typography from '../../components/atoms/typography/Typography';
+import { BLOG_PATH } from '../../constants/menuData';
+import parseDate from '../../utils/date.utils';
+import CoverImage from './components/PostCoverImage';
+import PostDate from './components/PostDate';
 
 export default function PostPreview({
   title,
@@ -26,15 +27,10 @@ export default function PostPreview({
           />
         </div>
       </Link>
-      <h3 className="
-      md:text-lx
-      text-md
-      tracking-relax mb-3 "
-      >
-        {title}
-      </h3>
+      <Typography title={title} variant="h4" />
       <div className="mb-4">
-        <DateFormatter dateString={date} />
+        <Typography variant="body" title={parseDate(date)} as="time" />
+        <PostDate date={date} />
       </div>
       <p className="mb-4">{excerpt}</p>
     </div>

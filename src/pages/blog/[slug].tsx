@@ -20,15 +20,17 @@ const customModalStyles = {
     bottom: '0',
     left: '0',
     right: '0',
+    padding: '20px 0 0',
     backgroundColor: fullConfig.theme.colors.surface,
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    // cursor: 'pointer',
+    cursor: 'auto',
   },
 };
 
 export default function Post({ post, preview }) {
+  console.log('post', post);
   const router = useRouter();
 
   // if the slug is not correct url, it will led user to the 404 page
@@ -50,16 +52,14 @@ export default function Post({ post, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <article className="mb-32">
-            <div className="container mx-auto px-5">
-              <div className="flex w-full h-100">
-                <div className="flex-1" />
-                <CloseButton onClick={() => {
-                  router.back();
-                }}
-                />
-              </div>
-              <BlogPost {...post} />
+            <div className="flex w-full h-100">
+              <div className="flex-1" />
+              <CloseButton onClick={() => {
+                router.back();
+              }}
+              />
             </div>
+            <BlogPost {...post} />
           </article>
         )}
       </div>
@@ -71,6 +71,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
+    'excerpt',
     'slug',
     'author',
     'content',

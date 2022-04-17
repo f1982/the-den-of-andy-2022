@@ -2,15 +2,15 @@ import { PresentationControls } from '@react-three/drei';
 import {
   Canvas,
 } from '@react-three/fiber';
-import React from 'react';
-import PostEffect from '../../../utils/3d/PostEffect';
-import WatchModel from './WatchModel';
+import React, { Suspense } from 'react';
+import ElasticPresentation from './ElasticPresentation';
+import SuzannaModel from './SuzannaModel';
 
-export function ElasticModel({
+function ElasticModel({
   children,
 }) {
   return (
-    <Canvas dpr={window.devicePixelRatio} camera={{ position: [0, 0, 5], fov: 50 }}>
+    <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
       <color attach="background" args={['#ffcc00']} />
       <ambientLight intensity={0.5} />
       <pointLight position={[-20, 10, 25]} />
@@ -28,18 +28,12 @@ export function ElasticModel({
   );
 }
 
-function Scene() {
+export default function PresentedMonkey() {
   return (
-    <ElasticModel>
-      <WatchModel
-        rotation={[-Math.PI / 2, 0, 0]}
-        position={[0, 0.25, 0]}
-        scale={0.003}
-      />
-      <PostEffect />
-
-    </ElasticModel>
+    <ElasticPresentation>
+      <Suspense fallback={null}>
+        <SuzannaModel />
+      </Suspense>
+    </ElasticPresentation>
   );
 }
-
-export default Scene;
