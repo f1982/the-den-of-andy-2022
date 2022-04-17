@@ -20,7 +20,7 @@ function Blog({ allPosts }) {
       </div>
 
       <div className="container mx-auto">
-        <Typography variant="h1" highlight title={t('blog.headline')} />
+        <Typography variant="h1" as="h1" highlight title={t('blog.headline')} />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
           More List

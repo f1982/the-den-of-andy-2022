@@ -14,7 +14,7 @@ export default function Projects({ projects }) {
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
       <div className="container mx-auto">
-        <Typography variant="h1" highlight title={t('project.pageTitle')} />
+        <Typography variant="h1" as="h1" highlight title={t('project.pageTitle')} />
         <ProjectList list={projects} type={type as string} />
       </div>
     </>
