@@ -3,14 +3,20 @@ import {
   Canvas,
 } from '@react-three/fiber';
 import React, { Suspense } from 'react';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../../../tailwind.config';
 import ElasticPresentation from './ElasticPresentation';
 import SuzannaModel from './SuzannaModel';
 
 function ElasticModel({
   children,
 }) {
+  // const fullConfig = resolveConfig(tailwindConfig);
+  // console.log('fullConfig.theme.colors', fullConfig.theme.colors);
+
   return (
     <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
+      {/* <color attach="background" args={['#FFD083']} /> */}
       <color attach="background" args={['#ffcc00']} />
       <ambientLight intensity={0.5} />
       <pointLight position={[-20, 10, 25]} />

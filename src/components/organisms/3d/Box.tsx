@@ -1,9 +1,12 @@
 import { useRef } from 'react';
 import { Canvas, MeshProps, useFrame } from '@react-three/fiber';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import PostEffect from '../../../utils/3d/PostEffect';
+import tailwindConfig from '../../../../tailwind.config';
 
 export function MyCube(props) {
   const mesh = useRef<MeshProps>();
+
   // rotate the box
   useFrame((state, delta) => {
     mesh.current.rotation.y += 0.01;
@@ -19,9 +22,13 @@ export function MyCube(props) {
 }
 
 export default function Scene() {
+  const fullConfig = resolveConfig(tailwindConfig);
+  console.log('fullConfig.theme.colors', fullConfig.theme.colors);
+  console.log('primary-dark: ', fullConfig.theme.colors.primary.dark);
+
   return (
     <Canvas dpr={2} style={{ height: '50vh' }}>
-      <color attach="background" args={['#ffcc00']} />
+      <color attach="background" args={[fullConfig.theme.colors.primary.dark]} />
 
       {/* <ambientLight /> */}
       <pointLight position={[10, 10, 10]} />

@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Typography from '../../components/atoms/typography/Typography';
+import PostDate from '../../components/organisms/article/PostDate';
 import { BLOG_PATH } from '../../constants/menuData';
-import parseDate from '../../utils/date.utils';
 import CoverImage from './components/PostCoverImage';
-import PostDate from './components/PostDate';
 
 export default function PostPreview({
   title,
@@ -29,7 +28,6 @@ export default function PostPreview({
       </Link>
       <Typography title={title} variant="h4" />
       <div className="mb-4">
-        <Typography variant="body" title={parseDate(date)} as="time" />
         <PostDate date={date} />
       </div>
       <p className="mb-4">{excerpt}</p>

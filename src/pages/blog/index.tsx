@@ -1,5 +1,6 @@
 import { t } from 'i18next';
 import Headline from '../../components/atoms/typography/Headline';
+import Typography from '../../components/atoms/typography/Typography';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import BlockScene from '../../components/organisms/3d/Block';
 import Box from '../../components/organisms/3d/Box';
@@ -18,25 +19,12 @@ function Blog({ allPosts }) {
     <>
       {/* show all the blog post list */}
       <TabTitle pageTitle={t('blog.pageTitle')} />
-      {/* <BlockScene /> */}
       <div style={{ height: '50vh' }}>
-
         <PresentedMonkey />
       </div>
 
       <div className="container mx-auto">
-        <Headline title={t('blog.headline')} />
-        {/* {!!heroPost && (
-        <PostPreview
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        )} */}
-
+        <Typography variant="h1" highlight title={t('blog.headline')} />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         <h2 className="mb-8 md:text-lg font-bold tracking-tighter leading-tight">
           More List

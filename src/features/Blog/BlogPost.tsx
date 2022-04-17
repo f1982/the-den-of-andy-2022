@@ -4,11 +4,11 @@ import PostHeader from './components/PostHeader';
 import PostBody from './components/PostBody';
 import { BlogPostData } from '../../types/blog';
 
-function BlogPost(props:BlogPostData) {
+function BlogPost({ content, ...rest }:BlogPostData) {
   return (
     <article className="mb-32">
-      <PostHeader {...props} />
-      <PostBody content={props.content} />
+      <PostHeader {...rest} />
+      <PostBody content={content} />
     </article>
   );
 }

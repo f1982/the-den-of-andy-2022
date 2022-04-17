@@ -1,36 +1,14 @@
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../../tailwind.config';
 import CloseButton from '../../components/atoms/buttons/CloseButton';
 import SiteSEO from '../../components/molecules/seo/SiteSEO';
+import customModalStyles from '../../constants/modelConfig';
 import BlogPost from '../../features/Blog/BlogPost';
-import PostTitle from '../../features/Blog/components/PostTitle';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
 
-Modal.setAppElement('#__next');
-
-const fullConfig = resolveConfig(tailwindConfig);
-
-const customModalStyles = {
-  content: {
-    top: '39px',
-    bottom: '0',
-    left: '0',
-    right: '0',
-    padding: '20px 0 0',
-    backgroundColor: fullConfig.theme.colors.surface,
-  },
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    cursor: 'auto',
-  },
-};
-
 export default function Post({ post, preview }) {
-  console.log('post', post);
   const router = useRouter();
 
   // if the slug is not correct url, it will led user to the 404 page
@@ -49,7 +27,7 @@ export default function Post({ post, preview }) {
       <div>
         {/* If the page is not yet generated, this will be displayed */}
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <p>Loading…</p>
         ) : (
           <article className="mb-32">
             <div className="flex w-full h-100">

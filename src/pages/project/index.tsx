@@ -5,6 +5,7 @@ import TabTitle from '../../components/molecules/seo/SiteSEO';
 import BlogPageTitle from '../../components/atoms/typography/Headline';
 import ProjectList from '../../features/Project/ProjectList';
 import { getProjects } from '../../utils/project-helper';
+import Typography from '../../components/atoms/typography/Typography';
 
 export default function Projects({ projects }) {
   const router = useRouter();
@@ -13,8 +14,7 @@ export default function Projects({ projects }) {
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
       <div className="container mx-auto">
-        <BlogPageTitle title="Projects" />
-        {/* <HighlightProject projects={projects} id='103' /> */}
+        <Typography variant="h1" highlight title={t('project.pageTitle')} />
         <ProjectList list={projects} type={type as string} />
       </div>
     </>

@@ -16,6 +16,7 @@ interface TypographyProps extends ComponentProps {
   variant:'h1'|'h2'|'h3'|'h4'|'body'|'small';
   as?: any;
   className?:string;
+  highlight?:boolean;
 }
 
 // animation configuration
@@ -50,10 +51,15 @@ export default function Typography({
   variant = 'h1',
   as = null,
   className,
+  highlight = false,
 }:TypographyProps) {
   const Component = as ?? 'div';
+  const withAnimation = ['h1', 'h2'].includes(variant);
+  const getContent = (contentTitle:string) => (
+    highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
+  );
   return (
-    ['h1', 'h2'].includes(variant) ? (
+    withAnimation ? (
       <motion.div
         variants={headVariant}
         initial="hidden"
@@ -63,7 +69,7 @@ export default function Typography({
         className={cn(fontMap.get(variant), className)}
       >
         <Component>
-          <Highlight>{title}</Highlight>
+          {getContent(title)}
         </Component>
 
       </motion.div>
@@ -71,7 +77,7 @@ export default function Typography({
       <Component
         className={cn(fontMap.get(variant), className)}
       >
-        {title}
+        {getContent(title)}
       </Component>
     )
   );
