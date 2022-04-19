@@ -1,5 +1,3 @@
-// import Project from './Project'
-
 import Link from 'next/link';
 import ProjectItem from './components/ProjectItem';
 import { ProjectItemData } from '../../types/projects';

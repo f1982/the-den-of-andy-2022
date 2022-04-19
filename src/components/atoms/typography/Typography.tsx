@@ -38,10 +38,10 @@ const headVariant = {
 };
 
 const fontMap = new Map<string, string>([
-  ['h1', 'text-xl md:text-2xl font-bold text-on-background leading-tight mt-3 mb-3'],
-  ['h2', 'text-lg md:text-xl font-bold  text-on-background mt-3 mb-3'],
-  ['h3', 'text-md md:text-lg font-bold tracking-tight text-on-background mt-3 mb-3'],
-  ['h4', 'text-base md:text-md font-bold text-on-background leading-tight mt-2 mb-2'],
+  ['h1', 'text-xl md:text-[2.25rem] font-bold text-on-background leading-tight mt-3 mb-3'],
+  ['h2', 'text-lg md:text-[1.875rem] font-bold  text-on-background mt-3 mb-3'],
+  ['h3', 'text-md md:text-[1.5rem] font-bold tracking-tight text-on-background mt-3 mb-3'],
+  ['h4', 'text-base md:text-[1rem] font-bold text-on-background leading-tight mt-2 mb-2'],
   ['body', 'text-base md:text-base text-on-background mt-1 mb-1'],
   ['small', 'text-sm text-on-background mt-1 mb-1'],
 ]);

@@ -19,10 +19,10 @@ export default function DefaultWelcome({
 }:WelcomeProps) {
   return (
     <div className="
-    container mx-auto
-    flex
-    flex-col
-    items-center justify-center
+      container mx-auto
+      flex
+      flex-col
+      items-center justify-center
     "
     >
       <SVGAnimation />

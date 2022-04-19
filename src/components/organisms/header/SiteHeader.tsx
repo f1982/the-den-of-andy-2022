@@ -7,7 +7,7 @@ import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 function Header() {
   return (
     <header
-      className="shadow-sm w-full"
+      className="border-b-[0px] border-gray-200 w-full"
     >
       <div
         className="

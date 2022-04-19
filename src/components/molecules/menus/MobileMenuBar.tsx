@@ -49,16 +49,17 @@ function MobileMenuBar({
 
   return (
     <>
-      <div className="md:hidden">
-        <MyButton
-          className="h-10 w-20"
-          type="primary"
+      <div className="md:hidden p-[1rem]">
+        <button
+          type="button"
+          className="h-10 w-18"
+          // type="primary"
           onClick={() => {
             setShowing(!showing);
           }}
         >
           <Hamburger />
-        </MyButton>
+        </button>
       </div>
       {showing && (
       <div className="fixed top-0 left-0 w-full bg-secondary-dark" style={{ zIndex: 1000 }}>

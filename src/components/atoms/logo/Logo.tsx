@@ -38,7 +38,7 @@ function SVGLogoV3() {
 
 export default function Logo() {
   return (
-    <div className="inline md:w-20 w-16">
+    <div className="inline w-[48px]">
       <Link href="/" passHref>
         <a className="text-on-background">
           <SVGLogoV3 />

@@ -33,6 +33,7 @@ const en = {
     blog: {
       pageTitle: 'My blog',
       headline: 'Blog',
+      more: 'More',
     },
     project: {
       pageTitle: 'Projects',

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Typography from '../../components/atoms/typography/Typography';
 import PostDate from '../../components/organisms/article/PostDate';
 import { BLOG_PATH } from '../../constants/menuData';
-import CoverImage from './components/PostCoverImage';
+import CoverImage from './components/PostPreviewImage';
 
 export default function PostPreview({
   title,
@@ -13,7 +13,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
+    <div className="cursor-pointer">
       <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
         <div className="mb-5 cursor-pointer">
           <CoverImage
@@ -26,7 +26,7 @@ export default function PostPreview({
           />
         </div>
       </Link>
-      <Typography title={title} variant="h4" />
+      <Typography title={title} variant="h3" as="h2" />
       <div className="mb-4">
         <PostDate date={date} />
       </div>
