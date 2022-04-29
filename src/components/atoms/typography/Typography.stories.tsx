@@ -14,10 +14,10 @@ export default {
 export function Headings() {
   return (
     <div>
-      <Typography variant="h1" as="h1" title="This is heading 1" />
-      <Typography variant="h2" as="h2" title="This is heading 1" />
-      <Typography variant="h3" as="h3" title="This is heading 1" />
-      <Typography variant="h4" as="h4" title="This is heading 1" />
+      <Typography variant="h1" title="This is heading 1" />
+      <Typography variant="h2" title="This is heading 2" />
+      <Typography variant="h3" title="This is heading 3" />
+      <Typography variant="h4" title="This is heading 4" />
       <Typography
         variant="body"
         as="p"

@@ -23,8 +23,8 @@ function Blog({ allPosts }) {
 
       <div className="container mx-auto">
         {/* <Typography variant="h1" as="h1" highlight title={t('blog.headline')} /> */}
-        <div className="flex flex-col items-center justify-center mb-[2rem]">
-          <Typography variant="h1" as="h1" className="inline" highlight title={t('blog.headline')} />
+        <div className="flex flex-col items-center justify-center mb-[3rem]">
+          <Typography variant="h1" as="h1" highlight title={t('blog.headline')} />
           <Typography variant="body" as="div" className="inline" title={t('blog.intro')} />
         </div>
 

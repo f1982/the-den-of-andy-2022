@@ -1,22 +1,7 @@
 import Link from 'next/link';
-import { PROJECT_IMAGE_URL } from '../../../constants/paths';
-import { ProjectItemData } from '../../../types/projects';
-
-function PlatformTag({ text }: { text: string }) {
-  return (
-    <span className="
-            absolute top-3 right-12
-            bg-secondary-dark
-            font-bold
-            text-on-surface
-            px-2 py-0.5 rounded-lg
-            tracking-widest text-sm
-          "
-    >
-      {text}
-    </span>
-  );
-}
+import { PROJECT_IMAGE_URL } from '../../constants/paths';
+import { ProjectItemData } from '../../types/projects';
+import PlatformTag from './components/PlatformTag';
 
 export default function ProjectItem({
   id,
@@ -26,7 +11,7 @@ export default function ProjectItem({
   type,
   platform,
   tech,
-}:ProjectItemData) {
+}: ProjectItemData) {
   return (
     <Link key={id} href={`/project/${id}`} passHref>
       <div className="lg:w-1/2 p-3 cursor-pointer">
@@ -48,7 +33,7 @@ export default function ProjectItem({
             height={250}
           />
           <h3 className="text-md mb-3">{title}</h3>
-          { platform && (<PlatformTag text={platform} />) }
+          {platform && (<PlatformTag text={platform} />)}
           <p className="h-12" style={{ overflow: 'hidden' }}>{description}</p>
         </div>
       </div>

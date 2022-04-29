@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import ImageComponent from '../../atoms/Image/Image';
 import { Headline2 } from '../../atoms/typography/Headline';
+import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -20,10 +21,10 @@ function SmallText({
   description,
   title,
   image,
-}:{
-    title?:string,
-    image?:string,
-    description:string
+}: {
+  title?: string,
+  image?: string,
+  description: string
 }) {
   return (
     <motion.div
@@ -31,9 +32,9 @@ function SmallText({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full mb-20 mx-auto"
+      className="w-full mb-20 mx-auto flex flex-col items-center justify-center"
     >
-      {!!title && <div className="text-center"><Headline2>{title}</Headline2></div>}
+      {!!title && <div><Typography title={title} variant="h2" /></div>}
       {!!image && <ImageComponent className="my-6 rounded-2xl mx-auto" src={image} alt="andy" width="60%" />}
       <p>{description}</p>
     </motion.div>

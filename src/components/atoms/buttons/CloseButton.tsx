@@ -2,7 +2,13 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './close.module.css';
 
-function CloseButton({ onClick }:{onClick:()=>void}) {
+function CloseButton({
+  size = 'md',
+  onClick,
+}:{
+  size?: 'md'|'sm'
+  onClick:()=>void
+}) {
   return (
     <button
       aria-label="Close"
@@ -13,7 +19,11 @@ function CloseButton({ onClick }:{onClick:()=>void}) {
         }
       }}
     >
-      <div className={cn(styles.close_button)} />
+      <div className={cn(
+        styles.close_button,
+        size === 'sm' ? styles.close_button_small : '',
+      )}
+      />
     </button>
   );
 }

@@ -49,11 +49,12 @@ export default function BlockScene() {
       dpr={2}
       style={{ height: '30vh' }}
       camera={{ position: new THREE.Vector3(8, 5, 40) }}
+      className="mb-[3rem]"
     >
-      <color attach="background" args={['#06092c']} />
+      <color attach="background" args={['#fff']} />
       <pointLight position={[-20, 10, 25]} />
       <gridHelper
-        args={[100, 20, '#4D089A', '#4D089A']}
+        args={[200, 20, '#4D089A', '#4D089A']}
         position={[0, 0, -10]}
         rotation={[-Math.PI / 2, 0, 0]}
       />

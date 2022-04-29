@@ -12,7 +12,7 @@
 .prev {
   top: calc(50% - 20px);
   position: absolute;
-  background: var(--primary-medium);
+  background: var(--primary);
   border-radius: 30px;
   width: 40px;
   height: 40px;

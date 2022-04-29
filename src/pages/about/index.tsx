@@ -5,25 +5,23 @@ import SmallText from '../../components/organisms/blocks/SmallText';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import Submenu from '../../components/molecules/submenu/Submenu';
 import { aboutSubmenu } from '../../constants/menuData';
-
-function getAge(dateString) {
-  const today = new Date();
-  const birthDate = new Date(dateString);
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age -= 1;
-  }
-  return age;
-}
+import PageHero from '../../components/organisms/blocks/PageHero';
+import { getAge } from '../../utils/date.utils';
+import Typography from '../../components/atoms/typography/Typography';
 
 export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('about.pageTitle')} />
+      <PageHero image="/static/images/man-with-beard.png" />
+
       <div className="container mx-auto">
-        <Headline title={t('about.headline')} />
-        <Submenu items={aboutSubmenu} />
+
+        <div className="flex flex-col items-center justify-center mb-[3rem]">
+          <Typography variant="h1" as="h1" highlight title={t('about.headline')} />
+          <Typography variant="body" as="div" className="inline mb-[3rem]" title={t('about.intro')} />
+          <Submenu items={aboutSubmenu} />
+        </div>
 
         <SmallText
           image="/static/images/about-andy-back.jpg"

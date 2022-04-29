@@ -5,6 +5,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: ['./src/**/*.{js.ts,jsx,tsx}'],
   mode: 'jit',
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
   theme: {
     extend: {
       colors: {
@@ -16,11 +19,11 @@ module.exports = {
         primary: {
           dark: 'var(--primary-dark)',
           light: 'var(--primary-light)',
-          medium: 'var(--primary-medium)',
+          medium: 'var(--primary)',
         },
         secondary: {
           dark: 'var(--secondary-dark)',
-          medium: 'var(--secondary-medium)',
+          medium: 'var(--secondary)',
           light: 'var(--secondary-light)',
         },
         background: 'var(--background)',

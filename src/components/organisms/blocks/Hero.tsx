@@ -1,11 +1,9 @@
-// import Image from 'next/image';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
-import Button from '../../atoms/buttons/Button';
-import Image from '../../atoms/Image/Image';
-import { Headline2 } from '../../atoms/typography/Headline';
 import { HeroData } from '../../../types';
+import Image from '../../atoms/Image/Image';
+import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -13,9 +11,9 @@ const containerVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 2,
+      duration: 0.8,
       type: 'tween',
-      staggerChildren: 0.6, // let the child show up by order after a certain delay
+      staggerChildren: 1.0, // let the child show up by order after a certain delay
     },
   },
 };
@@ -41,7 +39,7 @@ function Hero({
   description,
   buttons,
   viewPortOnce = false,
-}:HeroData) {
+}: HeroData) {
   return (
     <motion.section
       className={classNames(
@@ -71,7 +69,7 @@ function Hero({
       <div
         className="text-center lg:w-3/4 w-full"
       >
-        <Headline2>{title}</Headline2>
+        <Typography variant="h2" title={title} as="h2" />
         <motion.p
           variants={itemVariant}
           className="mb-8 leading-relaxed"

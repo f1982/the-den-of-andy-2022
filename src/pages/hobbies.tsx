@@ -5,13 +5,20 @@ import ColumnHero from '../components/organisms/blocks/ColumnHero';
 import Hero from '../components/organisms/blocks/Hero';
 import TabTitle from '../components/molecules/seo/SiteSEO';
 import MyButton from '../components/atoms/buttons/Button';
+import PageHero from '../components/organisms/blocks/PageHero';
+import Typography from '../components/atoms/typography/Typography';
 
 export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('hobbies.pageTitle')} />
+      <PageHero image="/static/images/equipments.png" />
+
       <div className="container mx-auto">
-        <Headline title={t('hobbies.headline')} />
+        <div className="flex flex-col items-center justify-center">
+          <Typography variant="h1" as="h1" className="inline" highlight title={t('hobby.pageTitle')} />
+          <Typography variant="body" as="div" className="inline" title={t('hobby.intro')} />
+        </div>
         <Hero
           image="/static/images/hobby-rc-cover.jpg"
           title={t('hobbies.rc.title')}
