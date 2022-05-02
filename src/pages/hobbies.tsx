@@ -1,12 +1,11 @@
 import { t } from 'i18next';
 import React from 'react';
-import Headline from '../components/atoms/typography/Headline';
+import MyButton from '../components/atoms/buttons/Button';
+import Typography from '../components/atoms/typography/Typography';
+import TabTitle from '../components/molecules/seo/SiteSEO';
 import ColumnHero from '../components/organisms/blocks/ColumnHero';
 import Hero from '../components/organisms/blocks/Hero';
-import TabTitle from '../components/molecules/seo/SiteSEO';
-import MyButton from '../components/atoms/buttons/Button';
 import PageHero from '../components/organisms/blocks/PageHero';
-import Typography from '../components/atoms/typography/Typography';
 
 export default function About() {
   return (
@@ -15,10 +14,12 @@ export default function About() {
       <PageHero image="/static/images/equipments.png" />
 
       <div className="container mx-auto">
+        {/* title and intro */}
         <div className="flex flex-col items-center justify-center">
-          <Typography variant="h1" as="h1" className="inline" highlight title={t('hobby.pageTitle')} />
-          <Typography variant="body" as="div" className="inline" title={t('hobby.intro')} />
+          <Typography variant="h1" as="h1" className="inline" highlight title={t('hobbies.headline')} />
+          <Typography variant="body" as="div" className="inline" title={t('hobbies.intro')} />
         </div>
+        {/* rc hobby */}
         <Hero
           image="/static/images/hobby-rc-cover.jpg"
           title={t('hobbies.rc.title')}
@@ -30,6 +31,7 @@ export default function About() {
             </div>
           )}
         />
+        {/* drawing */}
         <ColumnHero
           image="/static/images/hobby-drawing-cover.jpg"
           title={t('hobbies.drawing.title')}
@@ -41,6 +43,7 @@ export default function About() {
             </div>
           )}
         />
+        {/* video editing */}
         <Hero
           image="/static/images/hobby-cover-video.png"
           title={t('hobbies.video.title')}
@@ -54,6 +57,5 @@ export default function About() {
         />
       </div>
     </>
-
   );
 }

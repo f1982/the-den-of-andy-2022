@@ -43,6 +43,7 @@ const en = {
     hobbies: {
       pageTitle: 'My hobbies',
       headline: 'Hobbies',
+      intro: 'Everybody needs hobbies',
       rc: {
         title: 'RC Hobby',
         description: 'Making RC aeroplane was one of my dream in my childhood. When I was in primary school I have seen some magazines that introduced how to make RC aeroplane, I was shocked by the content and started to absorb the information that I can get. But actually, for a long period of time, I cannot get the right data or cannot find the right place to buy the components I need. Thanks for the Internet development and I can quickly find the groups and tutorials which let me enjoy to make or even design aircraft by myself.',
