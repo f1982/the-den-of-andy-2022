@@ -1,0 +1,11 @@
+Model Information:
+* title:	Viking room
+* source:	https://sketchfab.com/3d-models/viking-room-a49f1b8e4f5c4ecf9e1fe7d81915ad38
+* author:	nigelgoh (https://sketchfab.com/nigelgoh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Viking room" (https://sketchfab.com/3d-models/viking-room-a49f1b8e4f5c4ecf9e1fe7d81915ad38) by nigelgoh (https://sketchfab.com/nigelgoh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
