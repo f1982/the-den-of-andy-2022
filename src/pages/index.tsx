@@ -19,7 +19,6 @@ function Index() {
           link="/home"
         />
       </div>
-      <DebugInfo />
     </>
   );
 }

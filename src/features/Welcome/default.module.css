@@ -1,4 +1,4 @@
 .svgAnimation {
-  fill: var(--primary-medium);
-  stroke: var(--secondary-medium);
+  fill: var(--primary);
+  stroke: var(--secondary);
 }

@@ -1,4 +1,4 @@
-import Block from './Block';
+import Block from './GridLogoScene';
 
 export default {
   title: 'Experiment/Block',

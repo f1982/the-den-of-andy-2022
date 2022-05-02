@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import ElasticPresentation from './ElasticPresentation';
 import SuzannaModel from './SuzannaModel';
+import RoomModel from './RoomModel';
 import WatchModel from './WatchModel';
 
 export default {
@@ -24,10 +25,10 @@ export function Demos() {
 
 export function Suzanna() {
   return (
-    <div style={{ height: '600px' }}>
+    <div style={{ width: '100%', height: '600px' }}>
       <ElasticPresentation>
         <Suspense fallback={null}>
-          <SuzannaModel />
+          <RoomModel />
         </Suspense>
         {/* <MyCube /> */}
       </ElasticPresentation>

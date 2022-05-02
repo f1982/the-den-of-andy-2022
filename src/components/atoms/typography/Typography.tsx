@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion';
-import React, {
-  ComponentType, HTMLAttributes, ElementType,
-} from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
+import React, { ElementType, HTMLAttributes } from 'react';
 import Highlight from './Highlight';
 // https://www.aleksandrhovhannisyan.com/blog/dynamic-tag-name-props-in-react/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
 
@@ -12,11 +10,11 @@ interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
 }
 
 interface TypographyProps extends ComponentProps {
-  title:string;
-  variant:'h1'|'h2'|'h3'|'h4'|'body'|'small';
+  title: string;
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'small';
   as?: any;
-  className?:string;
-  highlight?:boolean;
+  className?: string;
+  highlight?: boolean;
 }
 
 // animation configuration
@@ -37,25 +35,36 @@ const headVariant = {
   },
 };
 
-const fontMap = new Map<string, string>([
-  ['h1', 'text-xl md:text-2xl font-bold text-on-background leading-tight mt-3 mb-3'],
-  ['h2', 'text-lg md:text-xl font-bold  text-on-background mt-3 mb-3'],
-  ['h3', 'text-md md:text-lg font-bold tracking-tight text-on-background mt-3 mb-3'],
-  ['h4', 'text-base md:text-md font-bold text-on-background leading-tight mt-2 mb-2'],
-  ['body', 'text-base md:text-base text-on-background mt-1 mb-1'],
-  ['small', 'text-sm text-on-background mt-1 mb-1'],
+const basicStyle = 'text-on-background leading-tight';
+
+const asMap = new Map<string, string>([
+  ['h1', 'h1'],
+  ['h2', 'h2'],
+  ['h3', 'h3'],
+  ['h4', 'h4'],
+  ['body', 'p'],
+  ['small', 'p'],
+]);
+
+const styleMap = new Map<string, string>([
+  ['h1', 'text-[2.85rem] md:text-[2.85rem] font-bold mt-3 mb-3'],
+  ['h2', 'text-[1.85rem] md:text-[1.85rem] font-bold mt-3 mb-3'],
+  ['h3', 'text-[1.5rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3'],
+  ['h4', 'text-base font-bold t leading-tight mt-2 mb-2'],
+  ['body', 'text-base md:text-base t mt-1 mb-1'],
+  ['small', 'text-sm t mt-1 mb-1'],
 ]);
 
 export default function Typography({
   title,
   variant = 'h1',
-  as = null,
+  as = undefined,
   className,
   highlight = false,
-}:TypographyProps) {
-  const Component = as ?? 'div';
+}: TypographyProps) {
+  const Component = as || asMap.get(variant);
   const withAnimation = ['h1', 'h2'].includes(variant);
-  const getContent = (contentTitle:string) => (
+  const getContent = (contentTitle: string) => (
     highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
   );
   return (
@@ -66,16 +75,15 @@ export default function Typography({
         whileInView="show"
         whileHover="whileHover"
         viewport={{ once: true }}
-        className={cn(fontMap.get(variant), className)}
       >
-        <Component>
+        <Component className={cn(basicStyle, styleMap.get(variant), className)}>
           {getContent(title)}
         </Component>
 
       </motion.div>
     ) : (
       <Component
-        className={cn(fontMap.get(variant), className)}
+        className={cn(basicStyle, styleMap.get(variant), className)}
       >
         {getContent(title)}
       </Component>

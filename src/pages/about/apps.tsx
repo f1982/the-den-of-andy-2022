@@ -69,13 +69,13 @@ function MyDevices() {
 
   return (
     <div
-      className="container"
+      className="container mx-auto"
       style={{
-        padding: '0',
+        // padding: '0',
         backgroundColor: '#dedbde',
         backgroundImage:
     'linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent)',
-        margin: '0',
+        // margin: '0',
         backgroundSize: '700px 700px',
         height: '10000px',
       }}

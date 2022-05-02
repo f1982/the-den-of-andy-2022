@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Carousel from '../../components/atoms/carousel/Carousel';
 import Typography from '../../components/atoms/typography/Typography';
-import LandscapeHero from '../../components/organisms/blocks/LandscapeHero';
+import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import PostDate from '../../components/organisms/article/PostDate';
 import TechStackItem from './components/TechStackItem';

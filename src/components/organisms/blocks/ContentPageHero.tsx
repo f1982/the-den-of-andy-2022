@@ -6,7 +6,7 @@ function LandscapeHero({ image, text }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        height: '500px',
+        height: '30vh',
         backgroundColor: 'blue',
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',
@@ -16,15 +16,17 @@ function LandscapeHero({ image, text }) {
     >
       <div className="flex-1" />
       <div
-        className="container mx-auto bg-black"
-        style={{ marginBottom: '20px', paddingLeft: '40%', bottom: 0 }}
+        className="container mx-auto flex flex-col items-end "
+        style={{ marginBottom: '20px', bottom: 0, float: 'right' }}
       >
         {!!text && (
-        <Typography
-          className="text-on-surface"
-          title={text}
-          variant="body"
-        />
+        <div className="bg-black p-6 w-1/2">
+          <Typography
+            className="text-on-surface"
+            title={text}
+            variant="body"
+          />
+        </div>
         )}
       </div>
     </div>

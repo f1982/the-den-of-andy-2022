@@ -1,41 +1,10 @@
-.ldsRipple {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-.ldsRipple div {
-    position: absolute;
-    opacity: 1;
-    border-radius: 50%;
-    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.ldsRipple div:nth-child(2) {
-    animation-delay: -0.5s;
-}
-@keyframes lds-ripple {
-    0% {
-        top: 36px;
-        left: 36px;
-        width: 0;
-        height: 0;
-        opacity: 1;
-    }
-    100% {
-        top: 0px;
-        left: 0px;
-        width: 72px;
-        height: 72px;
-        opacity: 0;
-    }
-}
-
 /* In React project use this class by className='loading["lds-ellipsis"]' */
 .ldsEllipsis {
     position: relative;
     width: 80px;
     height: 80px;
 }
+
 .ldsEllipsis div {
     position: absolute;
     top: 33px;
@@ -44,22 +13,27 @@
     border-radius: 50%;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .ldsEllipsis div:nth-child(1) {
     left: 8px;
     animation: lds-ellipsis1 0.6s infinite;
 }
+
 .ldsEllipsis div:nth-child(2) {
     left: 8px;
     animation: lds-ellipsis2 0.6s infinite;
 }
+
 .ldsEllipsis div:nth-child(3) {
     left: 32px;
     animation: lds-ellipsis2 0.6s infinite;
 }
+
 .ldsEllipsis div:nth-child(4) {
     left: 56px;
     animation: lds-ellipsis3 0.6s infinite;
 }
+
 @keyframes lds-ellipsis1 {
     0% {
         transform: scale(0);
@@ -68,6 +42,7 @@
         transform: scale(1);
     }
 }
+
 @keyframes lds-ellipsis3 {
     0% {
         transform: scale(1);
@@ -76,6 +51,7 @@
         transform: scale(0);
     }
 }
+
 @keyframes lds-ellipsis2 {
     0% {
         transform: translate(0, 0);

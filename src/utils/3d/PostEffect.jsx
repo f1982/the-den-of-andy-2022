@@ -21,7 +21,7 @@ export default function PostEffect() {
       disableRenderPass
     >
       <renderPass attachArray="passes" scene={scene} camera={camera} />
-      <unrealBloomPass attachArray="passes" args={[aspect, 0.4, 1, 0]} />
+      {/* <unrealBloomPass attachArray="passes" args={[aspect, 0.4, 1, 0]} /> */}
     </EffectsComposer>
   );
 }

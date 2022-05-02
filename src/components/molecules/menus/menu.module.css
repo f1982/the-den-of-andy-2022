@@ -9,8 +9,8 @@
 }
 
 .navContainer>*:not(:last-child) {
-  border-color: rgb(240, 240, 240);
-  border-width: 0 1px 0 0;
+  /* border-color: rgb(240, 240, 240); */
+  /* border-width: 0 1px 0 0; */
 }
 
 .topMenuItem,
@@ -19,7 +19,7 @@
   display: inline-block;
   position: relative;
   width: 100px;
-  height: 120px;
+  height: 96px;
   box-sizing: border-box;
   text-align: center;
   transition: var(--show-transition);
@@ -44,9 +44,9 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 50%;
+  bottom: 35.5%;
   color: var(--on-primary);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: 0.3s all ease-in-out;
   opacity: 1;
 }
@@ -63,7 +63,7 @@
 }
 
 .topMenuItem:hover {
-  background-color: var(--primary-light)
+  /* background-color: var(--primary-light) */
 }
 
 /* when mouse over, the text will show and move down to the button of the menu item */
@@ -72,15 +72,17 @@
   bottom: 35.5%;
 }
 
+/* text go down position */
 .topMenuItem:hover div {
   opacity: 0;
-  bottom: 35.5%;
+  bottom: 15.5%;
 }
 
 .activeNavLink {
-  background-color: var(--secondary-light);
+  /* background-color: var(--secondary-light); */
 }
 
+/* selected icon */
 .activeNavLink span {
   opacity: 1;
   bottom: 35.5%;
@@ -93,6 +95,6 @@
 
 .activeNavLink:hover {
   content: 'data ';
-  background-color: var(--secondary-light);
+  /* background-color: var(--secondary-light); */
   /* color: aliceblue; */
 }

@@ -7,6 +7,10 @@ import tailwindConfig from '../../../../tailwind.config';
 export function MyCube(props) {
   const mesh = useRef<MeshProps>();
 
+  const fullConfig = resolveConfig(tailwindConfig);
+  const primaryColor = fullConfig.theme.colors.primary.dark;
+  // console.log('primaryColor', primaryColor);
+
   // rotate the box
   useFrame((state, delta) => {
     mesh.current.rotation.y += 0.01;
@@ -16,20 +20,20 @@ export function MyCube(props) {
   return (
     <mesh {...props} ref={mesh}>
       <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color="#ff0000" />
+      <meshStandardMaterial color="#ffcc00" />
     </mesh>
   );
 }
 
-export default function Scene() {
+export default function MyBox() {
   const fullConfig = resolveConfig(tailwindConfig);
   return (
-    <Canvas dpr={2} style={{ height: '50vh' }}>
-      <color attach="background" args={[fullConfig.theme.colors.primary.dark]} />
+    <Canvas dpr={2} style={{ height: '600px' }}>
+      {/* <color attach="background" args={[fullConfig.theme.colors.primary.dark]} /> */}
 
       {/* <ambientLight /> */}
       <pointLight position={[10, 10, 10]} />
-      {/* <pointLight position={[-20, 10, 25]} /> */}
+      <pointLight position={[-20, 10, 25]} />
 
       <MyCube position={[0, 0, 0]} />
       <PostEffect />

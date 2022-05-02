@@ -14,11 +14,11 @@
 
 :root {
   --primary-dark: #eb9a04;
-  --primary-medium: #ffd803;
+  --primary: #ffd803;
   --primary-light: #ffcc66;
 
   --secondary-dark: #bae8e8;
-  --secondary-medium: #e3f6f5;
+  --secondary: #e3f6f5;
   --secondary-light: #eff8f8;
 
   --background: #fffffe;
@@ -48,11 +48,11 @@
 
 [data-theme="emerald"] {
   --primary-dark: #af0c0c;
-  --primary-medium: #ff4d5b;
+  --primary: #ff4d5b;
   --primary-light: #ff8686;
   
   --secondary-dark: #7f8d00;
-  --secondary-medium: #84ec2e;
+  --secondary: #84ec2e;
   --secondary-light: #adffa6;
 
   --background: #fffffe;
@@ -68,11 +68,11 @@
 
 [data-theme="pink"] {
   --primary-dark: #ff01ff;
-  --primary-medium: #da09da;
+  --primary: #da09da;
   --primary-light: #6f0579;
   
   --secondary-dark: #8f5e02;
-  --secondary-medium: #ec9b21;
+  --secondary: #ec9b21;
   --secondary-light: #fff23c;
 
   --background: #fffffe;

@@ -1,19 +1,42 @@
 import { t } from 'i18next';
 import React from 'react';
-import HeroHome from '../components/organisms/blocks/HeroHome';
-import SelfIntroShort from '../components/organisms/blocks/SelfIntroShort';
+import MyButton from '../components/atoms/buttons/Button';
 import TabTitle from '../components/molecules/seo/SiteSEO';
-import RotatingWatch from '../components/organisms/3d/RotatingWatch';
-import Box from '../components/organisms/3d/Box';
+import { Suzanna } from '../components/organisms/3d/RotatingWatch.stories';
+import ColumnHero from '../components/organisms/blocks/ColumnHero';
+import PageHero from '../components/organisms/blocks/PageHero';
+import SelfIntroShort from '../components/organisms/blocks/SelfIntroShort';
+import HighlightProjectItem from '../features/Project/HighlightProjectItem';
 
 function Home(): React.ReactNode {
   return (
     <>
       <TabTitle pageTitle={t('home.pageTitle')} />
-      <Box />
-      <HeroHome />
-      {/* <RotatingWatch modelFile="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb" /> */}
+      <PageHero>
+        <Suzanna />
+      </PageHero>
+      <ColumnHero
+        image="/static/images/andy-with-bubbles.png"
+        title={t('home.self.hey')}
+        subtitle="I am a software engineer"
+        description={t('hobbies.drawing.description')}
+        buttons={(
+          <>
+            <MyButton type="primary">{t('home.button1')}</MyButton>
+            <MyButton type="secondary">{t('home.button2')}</MyButton>
+          </>
+        )}
+      />
+      <div className="container mx-auto">
 
+        <HighlightProjectItem
+          id="121"
+          title="Bluetooth Auto Blinder System"
+          cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+          type="test"
+          platform="iOS"
+        />
+      </div>
       <div className="container mx-auto">
         <SelfIntroShort />
       </div>

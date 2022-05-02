@@ -1,15 +1,14 @@
-// import Project from './Project'
-
 import Link from 'next/link';
-import ProjectItem from './components/ProjectItem';
+import ProjectItem from './ProjectItem';
 import { ProjectItemData } from '../../types/projects';
 
 function ProjectList({
   list,
   type = '',
-}:{
-  list:ProjectItemData[],
-  type:string}) {
+}: {
+  list: ProjectItemData[],
+  type: string
+}) {
   return (
     <section>
       <div className="flex flex-wrap mb-3">

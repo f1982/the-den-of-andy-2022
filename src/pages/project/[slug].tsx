@@ -16,7 +16,7 @@ function ProjectPage({ detail }:{detail:ProjectItemData}) {
       style={customModalStyles}
       contentLabel="Post modal"
     >
-      <article>
+      <article className="mb-32">
         <div className="flex container mx-auto">
           <div className="flex-1" />
           <CloseButton onClick={() => {

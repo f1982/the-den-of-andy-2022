@@ -30,7 +30,7 @@ export default function Post({ post, preview }) {
           <p>Loading…</p>
         ) : (
           <article className="mb-32">
-            <div className="flex w-full h-100">
+            <div className="flex container mx-auto">
               <div className="flex-1" />
               <CloseButton onClick={() => {
                 router.back();

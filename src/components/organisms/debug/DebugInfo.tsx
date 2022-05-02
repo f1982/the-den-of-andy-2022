@@ -25,13 +25,6 @@ function DebugInfo() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col">
-        <h1 className="text-2xl">This is h1</h1>
-        <h2 className="text-xl">This is h2</h2>
-        <h3 className="text-lg">This is h3</h3>
-        <h4 className="text-md">This is h4</h4>
-        <p>This is h4</p>
-      </div>
     </div>
   );
 }

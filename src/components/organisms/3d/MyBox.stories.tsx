@@ -1,4 +1,4 @@
-import Box from './Box';
+import Box from './MyBox';
 
 export default {
   title: 'Experiment/Box',
