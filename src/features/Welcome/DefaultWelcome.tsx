@@ -5,9 +5,9 @@ import Typography from '../../components/atoms/typography/Typography';
 import SVGAnimation from './SVGAnimation';
 
 interface WelcomeProps {
-  title:string;
-  subtitle:string;
-  label:string;
+  title: string;
+  subtitle: string;
+  label: string;
   link?: string;
 }
 
@@ -16,7 +16,7 @@ export default function DefaultWelcome({
   subtitle,
   label,
   link = '/home',
-}:WelcomeProps) {
+}: WelcomeProps) {
   return (
     <div className="
       container mx-auto
@@ -27,7 +27,7 @@ export default function DefaultWelcome({
     >
       <SVGAnimation />
       <div className="text-center">
-        <Typography title={title} variant="h1" as="h1" />
+        <Typography variant="h1" as="h1">{title}</Typography>
         <p className="mb-8 leading-relaxed">{subtitle}</p>
         <div className="flex justify-center">
           <MyButton href={link} type="primary">{label}</MyButton>

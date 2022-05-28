@@ -17,20 +17,20 @@ function Home(): React.ReactNode {
       </PageHero>
       <ColumnHero
         image="/static/images/andy-with-bubbles.png"
-        title={t('home.self.hey')}
-        subtitle="I am a software engineer"
-        description={t('hobbies.drawing.description')}
+        title={t('home.intro.greeting')}
+        subtitle={t('home.intro.role')}
+        description={t('home.intro.description')}
         buttons={(
           <>
-            <MyButton type="primary">{t('home.button1')}</MyButton>
-            <MyButton type="secondary">{t('home.button2')}</MyButton>
+            <MyButton type="primary">{t('home.intro.button1')}</MyButton>
+            <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
           </>
         )}
       />
       <div className="container mx-auto">
 
         <HighlightProjectItem
-          id="121"
+          id="114"
           title="Bluetooth Auto Blinder System"
           cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
           type="test"

@@ -15,10 +15,15 @@ const en = {
     },
     home: {
       pageTitle: 'Home',
-      greeting: 'Hi there,',
-      name: 'I\'M ANDY CAO',
-      pronunciation: '[ch ow]',
-      role: 'Software developer',
+      intro: {
+        greeting: 'Hello there, My name is Andy Cao',
+        pronunciation: '[ch ow]',
+        role: 'I am a software developer',
+        description: 'I feel that drawing is an easy way to express your ideas and also an efficient way to communicate with others. When I first time decided to draw something seriously was that when I saw the famous cartoon series of the Dragon Balls which created by Toriyama Akira. I keep this hobby as a tool to record some ideas or an approach for design.',
+        button1: 'Button 1 label',
+        button2: 'Button 2 label',
+      },
+
       buttonLabel: 'Contact',
       p1: {
         title: 'Love to explore and create',

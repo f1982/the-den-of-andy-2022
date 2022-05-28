@@ -69,7 +69,7 @@ function Hero({
       <div
         className="text-center lg:w-3/4 w-full"
       >
-        <Typography variant="h2" title={title} as="h2" />
+        <Typography variant="h2" as="h2">{title}</Typography>
         <motion.p
           variants={itemVariant}
           className="mb-8 leading-relaxed"

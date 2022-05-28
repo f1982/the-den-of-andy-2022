@@ -34,9 +34,8 @@ function HighlightProjectItem({
           <div className="absolute z-20 flex flex-row w-full h-full">
             <div className="flex-1" />
             <div className="pr-10 flex flex-col ">
-              <Typography variant="h3" title={title} className="text-[white]" />
+              <Typography variant="h3" className="text-[white]">{title}</Typography>
               {platform && (<div><PlatformTag text={platform} /></div>)}
-
             </div>
           </div>
         </div>

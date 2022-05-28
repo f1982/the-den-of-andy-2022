@@ -20,13 +20,14 @@ function LandscapeHero({ image, text }) {
         style={{ marginBottom: '20px', bottom: 0, float: 'right' }}
       >
         {!!text && (
-        <div className="bg-black p-6 w-1/2">
-          <Typography
-            className="text-on-surface"
-            title={text}
-            variant="body"
-          />
-        </div>
+          <div className="bg-black p-6 w-1/2">
+            <Typography
+              className="text-on-surface"
+              variant="body"
+            >
+              {text}
+            </Typography>
+          </div>
         )}
       </div>
     </div>

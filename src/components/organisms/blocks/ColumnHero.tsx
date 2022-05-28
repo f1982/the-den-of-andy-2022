@@ -60,9 +60,9 @@ function ColumnHero({
         src={image}
       />
       <div className="w-2/3 flex flex-col md:items-start md:text-left items-center text-center">
-        <Typography variant="h2" title={title} as="h2" />
-        {subtitle && <Typography variant="h3" title={subtitle} />}
-        <p className="leading-relaxed">{description}</p>
+        <Typography variant="h2" as="h2">{title}</Typography>
+        {subtitle && <Typography variant="h3">{subtitle}</Typography>}
+        <Typography variant="body">{description}</Typography>
         <motion.div
           variants={itemVariant}
           className="flex flex gap-x-3"

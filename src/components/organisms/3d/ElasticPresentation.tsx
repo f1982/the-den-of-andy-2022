@@ -9,7 +9,6 @@ export default function ElasticModel({
 }) {
   return (
     <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
-      {/* <color attach="background" args={['#ffcc00']} /> */}
       <ambientLight intensity={0.5} />
       <pointLight position={[-20, 10, 25]} />
       <PresentationControls

@@ -24,12 +24,12 @@ function Blog({ allPosts }) {
       <div className="container mx-auto">
         {/* <Typography variant="h1" as="h1" highlight title={t('blog.headline')} /> */}
         <div className="flex flex-col items-center justify-center mb-[3rem]">
-          <Typography variant="h1" as="h1" highlight title={t('blog.headline')} />
-          <Typography variant="body" as="div" className="inline" title={t('blog.intro')} />
+          <Typography variant="h1" as="h1" highlight>{t('blog.headline')}</Typography>
+          <Typography variant="body" as="div" className="inline">{t('blog.intro')}</Typography>
         </div>
 
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Typography variant="h1" as="h1" highlight title={t('blog.more')} />
+        <Typography variant="h1" as="h1" highlight>{t('blog.more')}</Typography>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>

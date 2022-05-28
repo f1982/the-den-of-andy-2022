@@ -11,7 +11,7 @@ function TechStackItem(
   },
 ) {
   return (
-    <div className={cn('mt-3 mb-6', className)}>
+    <div className={cn(className)}>
       {stacks.map((item, index) => (
         <span className="px-2 py-1 rounded-lg text-sm border-16 mr-2 bg-secondary-dark" key={item}>
           {item}

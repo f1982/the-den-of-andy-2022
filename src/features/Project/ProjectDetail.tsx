@@ -20,12 +20,12 @@ function Project({
   return (
     <>
       <div className="container mx-auto">
-        <Typography variant="h2" title={title} as="h1" />
+        <Typography variant="h2" as="h1">{title}</Typography>
         <PostDate date={end} />
       </div>
       <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
       <div className="container mx-auto">
-        <TechStackItem stacks={tech.split(',')} className="mt-9" />
+        <TechStackItem stacks={tech.split(',')} className="mt-6 mb-6" />
         <p>{description}</p>
         <div className="px-10 mb-9">
           {getCarousel(images)}

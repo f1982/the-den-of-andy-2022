@@ -18,8 +18,8 @@ export default function About() {
       <div className="container mx-auto">
 
         <div className="flex flex-col items-center justify-center mb-[3rem]">
-          <Typography variant="h1" as="h1" highlight title={t('about.headline')} />
-          <Typography variant="body" as="div" className="inline mb-[3rem]" title={t('about.intro')} />
+          <Typography variant="h1" as="h1" highlight>{t('about.headline')}</Typography>
+          <Typography variant="body" as="div" className="inline mb-[3rem]">{t('about.intro')}</Typography>
           <Submenu items={aboutSubmenu} />
         </div>
 

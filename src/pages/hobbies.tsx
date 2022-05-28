@@ -16,8 +16,8 @@ export default function About() {
       <div className="container mx-auto">
         {/* title and intro */}
         <div className="flex flex-col items-center justify-center">
-          <Typography variant="h1" as="h1" className="inline" highlight title={t('hobbies.headline')} />
-          <Typography variant="body" as="div" className="inline" title={t('hobbies.intro')} />
+          <Typography variant="h1" as="h1" className="inline" highlight>{t('hobbies.headline')}</Typography>
+          <Typography variant="body" as="div" className="inline">{t('hobbies.intro')}</Typography>
         </div>
         {/* rc hobby */}
         <Hero

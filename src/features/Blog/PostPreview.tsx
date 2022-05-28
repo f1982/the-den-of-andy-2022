@@ -26,8 +26,13 @@ export default function PostPreview({
           />
         </div>
       </Link>
-      <Typography title={title} variant="h3" as="h2" 
-        className='leading-[1.2] line-clamp-2'/>
+      <Typography
+        variant="h3"
+        as="h2"
+        className="leading-[1.2] line-clamp-2"
+      >
+        {title}
+      </Typography>
       <div className="mb-4">
         <PostDate date={date} />
       </div>

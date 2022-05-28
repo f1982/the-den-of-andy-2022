@@ -17,8 +17,8 @@ export default function Projects({ projects }) {
       <PageHero image="/static/images/tv-oldschool.png" />
       <div className="container mx-auto mb-[2rem]">
         <div className="flex flex-col items-center justify-center">
-          <Typography variant="h1" as="h1" className="inline" highlight title={t('project.pageTitle')} />
-          <Typography variant="body" as="div" className="inline" title={t('project.intro')} />
+          <Typography variant="h1" as="h1" className="inline" highlight>{t('project.pageTitle')}</Typography>
+          <Typography variant="body" as="div" className="inline">{t('project.intro')}</Typography>
         </div>
         <ProjectList list={projects} type={type as string} />
       </div>

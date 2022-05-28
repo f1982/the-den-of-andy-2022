@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import { motion } from 'framer-motion';
-import React, { ElementType, HTMLAttributes } from 'react';
+import React, {
+  ElementType, HTMLAttributes, PropsWithChildren, ReactNode,
+} from 'react';
 import Highlight from './Highlight';
 // https://www.aleksandrhovhannisyan.com/blog/dynamic-tag-name-props-in-react/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
 
@@ -10,7 +12,6 @@ interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
 }
 
 interface TypographyProps extends ComponentProps {
-  title: string;
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'small';
   as?: any;
   className?: string;
@@ -51,20 +52,20 @@ const styleMap = new Map<string, string>([
   ['h2', 'text-[1.85rem] md:text-[1.85rem] font-bold mt-3 mb-3'],
   ['h3', 'text-[1.5rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3'],
   ['h4', 'text-base font-bold t leading-tight mt-2 mb-2'],
-  ['body', 'text-base md:text-base t mt-1 mb-1'],
+  ['body', 'text-base md:text-base t mt-1 mb-1 tracking-tight'],
   ['small', 'text-sm t mt-1 mb-1'],
 ]);
 
 export default function Typography({
-  title,
   variant = 'h1',
   as = undefined,
   className,
   highlight = false,
-}: TypographyProps) {
+  children,
+}: PropsWithChildren<TypographyProps>) {
   const Component = as || asMap.get(variant);
   const withAnimation = ['h1', 'h2'].includes(variant);
-  const getContent = (contentTitle: string) => (
+  const getContent = (contentTitle: ReactNode) => (
     highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
   );
   return (
@@ -77,7 +78,7 @@ export default function Typography({
         viewport={{ once: true }}
       >
         <Component className={cn(basicStyle, styleMap.get(variant), className)}>
-          {getContent(title)}
+          {getContent(children)}
         </Component>
 
       </motion.div>
@@ -85,7 +86,7 @@ export default function Typography({
       <Component
         className={cn(basicStyle, styleMap.get(variant), className)}
       >
-        {getContent(title)}
+        {getContent(children)}
       </Component>
     )
   );
