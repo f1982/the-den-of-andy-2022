@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "kamikillerto.vscode-colorize",
+    "irongeek.vscode-env",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost",
+    "amatiasq.sort-imports",
+    "wooodhead.vscode-wrap-console-log-simple"
+  ]
+}
