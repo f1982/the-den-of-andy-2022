@@ -1,11 +1,11 @@
 import { t } from 'i18next';
 import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
+import Typography from '../components/atoms/typography/Typography';
 import TabTitle from '../components/molecules/seo/SiteSEO';
-import { Suzanna } from '../components/organisms/3d/RotatingWatch.stories';
+import ModelWithContainer from '../components/organisms/3d/RoomModel';
 import ColumnHero from '../components/organisms/blocks/ColumnHero';
 import PageHero from '../components/organisms/blocks/PageHero';
-import SelfIntroShort from '../components/organisms/blocks/SelfIntroShort';
 import HighlightProjectItem from '../features/Project/HighlightProjectItem';
 
 function Home(): React.ReactNode {
@@ -13,7 +13,7 @@ function Home(): React.ReactNode {
     <>
       <TabTitle pageTitle={t('home.pageTitle')} />
       <PageHero>
-        <Suzanna />
+        <ModelWithContainer />
       </PageHero>
       <ColumnHero
         image="/static/images/andy-with-bubbles.png"
@@ -27,18 +27,27 @@ function Home(): React.ReactNode {
           </>
         )}
       />
-      <div className="container mx-auto">
-
-        <HighlightProjectItem
-          id="114"
-          title="Bluetooth Auto Blinder System"
-          cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
-          type="test"
-          platform="iOS"
-        />
+      <div className="container mx-auto mt-20">
+        <Typography variant="h2" as="h1">Latest Projects</Typography>
+        <div className="flex flex-col" style={{ rowGap: '2rem', marginTop: '2rem' }}>
+          <HighlightProjectItem
+            id="114"
+            title="Bluetooth Auto Blinder System"
+            cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+            type="test"
+            platform="iOS"
+          />
+          <HighlightProjectItem
+            id="115"
+            title="Bluetooth Auto Blinder System"
+            cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+            type="test"
+            platform="iOS"
+          />
+        </div>
       </div>
       <div className="container mx-auto">
-        <SelfIntroShort />
+        <Typography variant="h2" as="h1">Video</Typography>
       </div>
     </>
   );

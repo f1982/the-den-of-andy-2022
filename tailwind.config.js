@@ -44,9 +44,9 @@ module.exports = {
           '2xl': '16rem',
         },
       },
-      spacing: {
-        28: '7rem',
-      },
+      // spacing: {
+      //   28: '7rem',
+      // },
       letterSpacing: {
         tighter: '-0.08em',
       },

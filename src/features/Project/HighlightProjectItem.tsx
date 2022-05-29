@@ -16,26 +16,28 @@ function HighlightProjectItem({
   return (
     <Link key={id} href={`/project/${id}`} passHref>
       <div className="w-full cursor-pointer">
-        <div className="
+        <div
+          className="
           bg-background
           transition-shadow ease-in duration-600
           rounded-[2rem]
-          h-48
           relative
           hover:shadow-md
         "
+          style={{ height: '9rem' }}
         >
           <img
-            className="absolute rounded-xl w-full h-full object-cover"
+            className="absolute rounded-[2rem] w-full h-full object-cover"
             alt={title}
             src={cover}
           />
           {/* text layer */}
           <div className="absolute z-20 flex flex-row w-full h-full">
             <div className="flex-1" />
-            <div className="pr-10 flex flex-col ">
-              <Typography variant="h3" className="text-[white]">{title}</Typography>
-              {platform && (<div><PlatformTag text={platform} /></div>)}
+            <div className="pr-10 flex flex-col pb-[1rem]">
+              <div className="flex-1" />
+              <Typography variant="h3" className="text-on-surface mb-0">{title}</Typography>
+              {platform && (<div className="mb-6 mt-0"><PlatformTag text={platform} /></div>)}
             </div>
           </div>
         </div>

@@ -16,12 +16,12 @@ const en = {
     home: {
       pageTitle: 'Home',
       intro: {
-        greeting: 'Hello there, My name is Andy Cao',
+        greeting: 'My name is Andy Cao',
         pronunciation: '[ch ow]',
         role: 'I am a software developer',
-        description: 'I feel that drawing is an easy way to express your ideas and also an efficient way to communicate with others. When I first time decided to draw something seriously was that when I saw the famous cartoon series of the Dragon Balls which created by Toriyama Akira. I keep this hobby as a tool to record some ideas or an approach for design.',
-        button1: 'Button 1 label',
-        button2: 'Button 2 label',
+        description: 'Andy currently is a Frontend Developer and living in New Zealand. He is working on some website and mobile 📱 project in RoamDigital. \n He considers indie game 🕹  development as a leisure time hobby. He have built some hardware project for fun. He is always trying to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
+        button1: 'Know more',
+        button2: 'Resume',
       },
 
       buttonLabel: 'Contact',

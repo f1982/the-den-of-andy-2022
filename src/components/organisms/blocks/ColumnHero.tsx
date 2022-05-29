@@ -65,7 +65,7 @@ function ColumnHero({
         <Typography variant="body">{description}</Typography>
         <motion.div
           variants={itemVariant}
-          className="flex flex gap-x-3"
+          className="flex flex gap-x-3 mt-6"
         >
           {buttons}
         </motion.div>
