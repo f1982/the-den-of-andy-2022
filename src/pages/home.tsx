@@ -35,7 +35,7 @@ function Home(): React.ReactNode {
             title="Bluetooth Auto Blinder System"
             cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
             type="test"
-            platform="iOS"
+            platform="iOS, web, Android, Other"
           />
           <HighlightProjectItem
             id="115"

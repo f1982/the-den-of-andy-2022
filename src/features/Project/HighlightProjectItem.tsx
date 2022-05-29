@@ -34,10 +34,10 @@ function HighlightProjectItem({
           {/* text layer */}
           <div className="absolute z-20 flex flex-row w-full h-full">
             <div className="flex-1" />
-            <div className="pr-10 flex flex-col pb-[1rem]">
+            <div className="pr-10 flex flex-col">
               <div className="flex-1" />
-              <Typography variant="h3" className="text-on-surface mb-0">{title}</Typography>
-              {platform && (<div className="mb-6 mt-0"><PlatformTag text={platform} /></div>)}
+              <Typography variant="h3" className="text-[#fff] mb-0">{title}</Typography>
+              {platform && (<div className="mb-4"><PlatformTag text={platform} /></div>)}
             </div>
           </div>
         </div>

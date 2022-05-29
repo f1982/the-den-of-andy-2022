@@ -20,7 +20,6 @@ export default function PostPreview({
             slug={slug}
             title={title}
             src={coverImage}
-            height="240px"
             width="100%"
             style={{ maxWidth: '600px' }}
           />

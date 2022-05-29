@@ -37,11 +37,13 @@ const en = {
     },
     blog: {
       pageTitle: 'My blog',
+      intro: 'I try to use texts to record some I have done.',
       headline: 'Blog',
       more: 'More',
     },
     project: {
       pageTitle: 'Projects',
+      intro: 'There are some project I have participated.',
       title: 'Projects',
       description: 'This is part of the project I participated in, and there are some projects that I have not organized and listed.',
     },
@@ -71,6 +73,7 @@ const en = {
     about: {
       pageTitle: 'About me',
       headline: 'About',
+      description: 'Here is something about me',
       whoIsAndyTitle: 'Who\'s Andy',
       whoIsAndyDescription: 'My name is Andy Cao and I come from China 🇨🇳. I am a software developer👨‍💻 who focuses on building website and mobile apps 📱. I have serval hobbies with me for many years. Like RC hobby, FPV(flying drone in first person view), video editing and DIY. Currently My family and I living in Auckland, New Zealand 🇳🇿.',
       whatAndyDoTitle: 'What I do?',
