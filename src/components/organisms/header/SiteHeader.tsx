@@ -8,7 +8,7 @@ function Header() {
   const [classNames, setClassNames] = useState<string>('');
 
   useEffect(() => {
-    function handleWindowScroll(evt) {
+    function handleWindowScroll() {
       if (window.pageYOffset > 10) {
         setClassNames('bg-secondary-dark');
       } else if (classNames !== '') {
@@ -28,11 +28,10 @@ function Header() {
     >
       <div
         className="
-          container mx-auto
+          container
+          mx-auto
           flex
-          flex-wrap
           items-center
-          md:flex-col
           lg:flex-row
           lg:content-center"
       >

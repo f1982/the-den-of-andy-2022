@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HeroData } from '../../../types';
-import Image from '../../atoms/Image/Image';
 import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
@@ -39,15 +38,15 @@ function Hero({
   description,
   buttons,
   viewPortOnce = false,
+  className,
 }: HeroData) {
   return (
     <motion.section
       className={classNames(
         'container mx-auto',
         'flex',
-        'px-5',
-        'py-24',
         'items-center justify-center flex-col',
+        className,
       )}
       variants={containerVariant}
       initial="hidden"
@@ -56,14 +55,14 @@ function Hero({
     >
       <motion.figure
         className="
-        lg:w-2/5 md:w-1/2 w-5/6 mb-10
+         md:w-1/2 mb-10
         object-cover object-center rounded"
       >
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="object-cover"
           alt="hero"
           src={image}
-          width={450}
-          height={320}
         />
       </motion.figure>
       <div

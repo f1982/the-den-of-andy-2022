@@ -8,16 +8,21 @@ import CloseButton from '../../atoms/buttons/CloseButton';
 import Hamburger from '../../atoms/Icons/Hamburger';
 
 function MenuItem({
-  link, label, icon, onClick,
+  link,
+  label,
+  icon,
+  onClick,
 }: MenuItemData) {
   const { pathname } = useRouter();
-
-  const basicStyle = `px-4 py-2
-          font-bold
-          text-on-primary
+  const basicStyle = `
+          px-4 py-4 
+          font-bold 
+          text-on-primary 
+          transition-all
+          transition ease-in-out
           hover:bg-primary-dark
           hover:text-white
-          flex
+          flex 
           flex-row
           justify-start
           items-center`;
@@ -37,11 +42,13 @@ function MenuItem({
   );
 }
 
+interface MobileMenuBarProps {
+  menuData: MenuItemData[]
+}
+
 function MobileMenuBar({
   menuData,
-}: {
-  menuData: MenuItemData[]
-}) {
+}: MobileMenuBarProps) {
   const [showing, setShowing] = useState(false);
   const isMobile = useMediaQuery('(max-width: 960px)');
 
@@ -52,12 +59,10 @@ function MobileMenuBar({
 
   return (
     <>
-      <div>{isMobile}</div>
-      <div className="md:hidden p-[1rem] pr-0">
+      <div className="md:hidden p-4 pr-0">
         <button
           type="button"
-          className="w-[32px]"
-          // type="primary"
+          className="w-8"
           onClick={() => {
             setShowing(!showing);
           }}
@@ -66,7 +71,7 @@ function MobileMenuBar({
         </button>
       </div>
       {showing && isMobile && (
-        <div className="fixed top-0 left-0 w-full bg-white" style={{ zIndex: 1000 }}>
+        <div className="fixed top-0 left-0 w-full bg-white" style={{ zIndex: 999 }}>
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>

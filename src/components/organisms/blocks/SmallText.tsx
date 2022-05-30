@@ -36,7 +36,7 @@ function SmallText({
     >
       {!!title && <div><Typography variant="h2">{title}</Typography></div>}
       {!!image && <ImageComponent className="my-6 rounded-2xl mx-auto" src={image} alt="andy" width="100%" />}
-      <p>{description}</p>
+      <div className="px-4">{description}</div>
     </motion.div>
   );
 }

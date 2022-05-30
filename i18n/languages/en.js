@@ -43,6 +43,7 @@ const en = {
     },
     project: {
       pageTitle: 'Projects',
+      headline: 'Projects',
       intro: 'There are some project I have participated.',
       title: 'Projects',
       description: 'This is part of the project I participated in, and there are some projects that I have not organized and listed.',
@@ -75,7 +76,7 @@ const en = {
       headline: 'About',
       description: 'Here is something about me',
       whoIsAndyTitle: 'Who\'s Andy',
-      whoIsAndyDescription: 'My name is Andy Cao and I come from China 🇨🇳. I am a software developer👨‍💻 who focuses on building website and mobile apps 📱. I have serval hobbies with me for many years. Like RC hobby, FPV(flying drone in first person view), video editing and DIY. Currently My family and I living in Auckland, New Zealand 🇳🇿.',
+      whoIsAndyDescription: 'My name is Andy Cao and I come from China 🇨🇳 \nI am a software developer👨‍💻 who focuses on building website and mobile apps 📱. I have serval hobbies with me for many years. Like RC hobby, FPV(flying drone in first person view), video editing and DIY. Currently My family and I living in Auckland, New Zealand 🇳🇿.',
       whatAndyDoTitle: 'What I do?',
       whatAndyDoDescription: 'I am a software developer 👨‍💻 and have worked in the software industry for more than 17 years. I have developed websites, made mobile 📱apps, and also built and designed casual games 🕹. The process of developing software always brings me happiness and satisfaction. Currently, I am learning 📖 and using front-end development technology. The main focuses are on JavaScript, CSS, HTML, React related technology stack and React Native. Because I love Apple 💻 ecosystem, I also keep an eye on iOS development.',
       familyTitle: 'Family',
