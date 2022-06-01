@@ -111,8 +111,8 @@
         "icon": "cbox_icon.png",
         "qrcode": "",
         "cover": "cbox-cover.jpg",
-        "start": "Apr 2012",
-        "end": "Jul 2015",
+        "start": "2012-04-01",
+        "end": "2015-07-01",
         "images": [
           "cbox-01.jpg",
           "cbox-02.jpg"
@@ -252,8 +252,8 @@
         "icon": "",
         "qrcode": "",
         "cover": "pewpewpew-cover.jpg",
-        "start": "Apr 2014",
-        "end": "Jul 2014",
+        "start": "2014-04-01",
+        "end": "2014-07-01",
         "images": [
           "pewpewpew-1.jpg"
         ],
