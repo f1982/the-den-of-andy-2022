@@ -1,20 +1,22 @@
 
 import cn from 'classnames';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../../tailwind.config';
 
 interface PageHeroProps {
   image?: string,
 }
+
 function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
   const fullConfig = resolveConfig(tailwindConfig);
   const primary = fullConfig.theme.colors.primary.medium;
+
   return (
     <div
       className={cn(
-        'mb-[3rem]',
-        'h-[600px]',
+        'mb-12',
+        // 'h-[600px]',
         'flex flex-col',
       )}
       style={{
@@ -35,6 +37,8 @@ function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
           <img
             className={cn(
               'mx-auto',
+              'h-[570px]',
+              'mt-20',
               'md:max-w-xl',
             )}
             src={image}

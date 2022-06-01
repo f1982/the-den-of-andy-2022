@@ -20,14 +20,18 @@ export default function PostPreview({
             slug={slug}
             title={title}
             src={coverImage}
-            height="240px"
             width="100%"
             style={{ maxWidth: '600px' }}
           />
         </div>
       </Link>
-      <Typography title={title} variant="h3" as="h2" 
-        className='leading-[1.2] line-clamp-2'/>
+      <Typography
+        variant="h3"
+        as="h2"
+        className="leading-[1.2] line-clamp-2"
+      >
+        {title}
+      </Typography>
       <div className="mb-4">
         <PostDate date={date} />
       </div>

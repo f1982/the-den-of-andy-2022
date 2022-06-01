@@ -13,6 +13,7 @@ interface HeroData {
   image: string,
   description?: string,
   buttons?: React.ReactNode,
-  viewPortOnce?: boolean
+  viewPortOnce?: boolean,
+  className?: string
 }
 export type { MenuItemData, HeroData };

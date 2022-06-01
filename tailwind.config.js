@@ -9,6 +9,15 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
   ],
   theme: {
+    container: {
+      // https://github.com/tailwindlabs/tailwindcss/issues/1102
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '1024px',
+        xl: '1024px',
+      },
+    },
     extend: {
       colors: {
         // the following colours are used in global.css for theme
@@ -40,13 +49,13 @@ module.exports = {
       container: {
         padding: {
           DEFAULT: '1rem',
-          lg: '8rem',
-          '2xl': '16rem',
+          // lg: '8rem',
+          // '2xl': '16rem',
         },
       },
-      spacing: {
-        28: '7rem',
-      },
+      // spacing: {
+      //   28: '7rem',
+      // },
       letterSpacing: {
         tighter: '-0.08em',
       },

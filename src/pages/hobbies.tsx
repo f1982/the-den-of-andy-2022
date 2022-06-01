@@ -6,21 +6,19 @@ import TabTitle from '../components/molecules/seo/SiteSEO';
 import ColumnHero from '../components/organisms/blocks/ColumnHero';
 import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
+import PageTitle from '../components/organisms/blocks/PageTitle';
 
 export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('hobbies.pageTitle')} />
       <PageHero image="/static/images/equipments.png" />
-
       <div className="container mx-auto">
         {/* title and intro */}
-        <div className="flex flex-col items-center justify-center">
-          <Typography variant="h1" as="h1" className="inline" highlight title={t('hobbies.headline')} />
-          <Typography variant="body" as="div" className="inline" title={t('hobbies.intro')} />
-        </div>
+        <PageTitle title={t('hobbies.headline')} description={t('hobbies.intro')} />
         {/* rc hobby */}
         <Hero
+          className="mb-20"
           image="/static/images/hobby-rc-cover.jpg"
           title={t('hobbies.rc.title')}
           description={t('hobbies.rc.description')}
@@ -33,6 +31,7 @@ export default function About() {
         />
         {/* drawing */}
         <ColumnHero
+          className="mb-20"
           image="/static/images/hobby-drawing-cover.jpg"
           title={t('hobbies.drawing.title')}
           description={t('hobbies.drawing.description')}
@@ -45,6 +44,7 @@ export default function About() {
         />
         {/* video editing */}
         <Hero
+          className="mb-20"
           image="/static/images/hobby-cover-video.png"
           title={t('hobbies.video.title')}
           description={t('hobbies.video.description')}

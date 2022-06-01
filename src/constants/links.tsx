@@ -3,7 +3,7 @@ import Facebook from '../components/atoms/Icons/Facebook';
 import Twitter from '../components/atoms/Icons/Twitter';
 import Ins from '../components/atoms/Icons/Ins';
 import LinkedIn from '../components/atoms/Icons/LinkedIn';
-import YouTube from '../components/atoms/Icons/YouTube';
+import YouTube from '../components/atoms/Icons/YouTubeIcon';
 
 const SNS = [
   {

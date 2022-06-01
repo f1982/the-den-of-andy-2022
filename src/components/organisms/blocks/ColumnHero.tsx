@@ -43,7 +43,6 @@ function ColumnHero({
   viewPortOnce = false,
 }: HeroData) {
   return (
-
     <motion.section
       className={classNames(
         'container mx-auto flex gap-x-16 mb-[3rem] md:flex-row flex-col items-center',
@@ -55,17 +54,17 @@ function ColumnHero({
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="object-cover mb-6 md:mb-0 w-1/3"
+        className="object-cover mb-6 md:mb-0 md:w-2/5"
         alt="hero"
         src={image}
       />
-      <div className="w-2/3 flex flex-col md:items-start md:text-left items-center text-center">
-        <Typography variant="h2" title={title} as="h2" />
-        {subtitle && <Typography variant="h3" title={subtitle} />}
-        <p className="leading-relaxed">{description}</p>
+      <div className="md:w-3/5 flex flex-col md:items-start md:text-left items-center text-center">
+        <Typography variant="h2" as="h2">{title}</Typography>
+        {subtitle && <Typography variant="h4" as="h3" className="mt-[0]">{subtitle}</Typography>}
+        <Typography variant="body">{description}</Typography>
         <motion.div
           variants={itemVariant}
-          className="flex flex gap-x-3"
+          className="flex flex gap-x-3 mt-6"
         >
           {buttons}
         </motion.div>

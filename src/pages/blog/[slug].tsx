@@ -17,33 +17,44 @@ export default function Post({ post, preview }) {
   }
 
   return (
-    <Modal
-      isOpen
-      onRequestClose={() => router.push('/blog')}
-      style={customModalStyles}
-      contentLabel="Post modal"
-    >
+    // <Modal
+    //   isOpen
+    //   onRequestClose={() => router.push('/blog')}
+    //   style={customModalStyles}
+    //   contentLabel="Post modal"
+    // >
+    <>
       <SiteSEO pageTitle={post.title} />
-      <div>
-        {/* If the page is not yet generated, this will be displayed */}
-        {router.isFallback ? (
-          <p>Loading…</p>
-        ) : (
+      {/* If the page is not yet generated, this will be displayed */}
+      {router.isFallback ? (
+        <p>Loading…</p>
+      ) : (
+        <>
+          <div className="flex container mx-auto mt-3">
+            <div className="flex-1" />
+            <CloseButton onClick={() => {
+              router.back();
+            }}
+            />
+          </div>
           <article className="mb-32">
-            <div className="flex container mx-auto">
-              <div className="flex-1" />
-              <CloseButton onClick={() => {
-                router.back();
-              }}
-              />
-            </div>
+
             <BlogPost {...post} />
           </article>
-        )}
-      </div>
-    </Modal>
+        </>
+      )}
+    </>
+    // </Modal>
   );
 }
+
+Post.getLayout = function getLayout(page) {
+  return (
+    <div>
+      {page}
+    </div>
+  );
+};
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
@@ -69,6 +80,7 @@ export async function getStaticProps({ params }) {
 
 // getStaticPaths will define a list of paths to be statically generated
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
+// this is not true
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
 

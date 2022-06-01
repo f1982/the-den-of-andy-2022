@@ -3,6 +3,7 @@ import Typography from '../../components/atoms/typography/Typography';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import PresentedMonkey from '../../components/organisms/3d/PresentedMonkey';
 import PageHero from '../../components/organisms/blocks/PageHero';
+import PageTitle from '../../components/organisms/blocks/PageTitle';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/MoreStories';
 import { getAllPosts } from '../../utils/blog-helper';
@@ -14,22 +15,14 @@ function Blog({ allPosts }) {
 
   return (
     <>
-      {/* show all the blog post list */}
       <TabTitle pageTitle={t('blog.pageTitle')} />
-      {/* <div style={{ height: '50vh' }}>
-        <PresentedMonkey />
-      </div> */}
-      <PageHero image="/static/images/camera-class.png" />
-
+      <PageHero image="/static/images/typewritter.png" />
       <div className="container mx-auto">
-        {/* <Typography variant="h1" as="h1" highlight title={t('blog.headline')} /> */}
-        <div className="flex flex-col items-center justify-center mb-[3rem]">
-          <Typography variant="h1" as="h1" highlight title={t('blog.headline')} />
-          <Typography variant="body" as="div" className="inline" title={t('blog.intro')} />
-        </div>
-
+        {/* title and intro */}
+        <PageTitle title={t('blog.headline')} description={t('blog.intro')} />
+        {/* blog posts */}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Typography variant="h1" as="h1" highlight title={t('blog.more')} />
+        <Typography variant="h1" as="h1" highlight>{t('blog.more')}</Typography>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>

@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HeroData } from '../../../types';
-import Image from '../../atoms/Image/Image';
 import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
@@ -35,19 +34,20 @@ const itemVariant = {
 
 function Hero({
   title,
+  subtitle,
   image,
   description,
   buttons,
   viewPortOnce = false,
+  className,
 }: HeroData) {
   return (
     <motion.section
       className={classNames(
         'container mx-auto',
         'flex',
-        'px-5',
-        'py-24',
         'items-center justify-center flex-col',
+        className,
       )}
       variants={containerVariant}
       initial="hidden"
@@ -56,26 +56,27 @@ function Hero({
     >
       <motion.figure
         className="
-        lg:w-2/5 md:w-1/2 w-5/6 mb-10
+         md:w-2/5 mb-10
         object-cover object-center rounded"
       >
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="object-cover w-full"
           alt="hero"
           src={image}
-          width={450}
-          height={320}
         />
       </motion.figure>
       <div
         className="text-center lg:w-3/4 w-full"
       >
-        <Typography variant="h2" title={title} as="h2" />
-        <motion.p
+        <Typography variant="h2" as="h2">{title}</Typography>
+        {subtitle && <Typography variant="h3" className="font-thin">{subtitle}</Typography>}
+        <motion.div
           variants={itemVariant}
-          className="mb-8 leading-relaxed"
+          className="mb-8"
         >
-          {description}
-        </motion.p>
+          <Typography variant="body">{description}</Typography>
+        </motion.div>
         <motion.div
           variants={itemVariant}
           className="flex justify-center"

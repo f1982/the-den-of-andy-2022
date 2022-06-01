@@ -19,7 +19,7 @@
   display: inline-block;
   position: relative;
   width: 100px;
-  height: 96px;
+  height: 64px;
   box-sizing: border-box;
   text-align: center;
   transition: var(--show-transition);
@@ -66,7 +66,7 @@
   /* background-color: var(--primary-light) */
 }
 
-/* when mouse over, the text will show and move down to the button of the menu item */
+/* when mouse over, the text will show and move down to the bottom of the menu item */
 .topMenuItem:hover span {
   opacity: 1;
   bottom: 35.5%;
@@ -94,7 +94,5 @@
 }
 
 .activeNavLink:hover {
-  content: 'data ';
-  /* background-color: var(--secondary-light); */
-  /* color: aliceblue; */
+  color: var(--secondary-dark);
 }

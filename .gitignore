@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# extensions
+.vscode/linenote/*
 # testing
 /coverage
 
