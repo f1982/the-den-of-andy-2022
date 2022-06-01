@@ -30,8 +30,6 @@ export default function ProjectItem({
             className="rounded-xl object-cover w-full h-[300px] mb-6"
             alt={title}
             src={`${PROJECT_IMAGE_URL}/${cover}`}
-          // width={650}
-          // height={250}
           />
           <Typography variant="h4" as="h2">{title}</Typography>
           {platform && (<PlatformTag text={platform} />)}
