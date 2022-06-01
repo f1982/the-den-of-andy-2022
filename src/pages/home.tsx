@@ -4,8 +4,6 @@ import MyButton from '../components/atoms/buttons/Button';
 import YouTubeIcon from '../components/atoms/Icons/YouTubeIcon';
 import Typography from '../components/atoms/typography/Typography';
 import TabTitle from '../components/molecules/seo/SiteSEO';
-import ModelWithContainer from '../components/organisms/3d/RoomModel';
-import ColumnHero from '../components/organisms/blocks/ColumnHero';
 import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
 import HighlightProjectItem from '../features/Project/HighlightProjectItem';
