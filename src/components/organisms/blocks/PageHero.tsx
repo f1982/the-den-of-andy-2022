@@ -15,8 +15,8 @@ function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
   return (
     <div
       className={cn(
-        'mb-[3rem]',
-        'h-[600px]',
+        'mb-12',
+        // 'h-[600px]',
         'flex flex-col',
       )}
       style={{
@@ -37,6 +37,8 @@ function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
           <img
             className={cn(
               'mx-auto',
+              'h-[570px]',
+              'mt-20',
               'md:max-w-xl',
             )}
             src={image}

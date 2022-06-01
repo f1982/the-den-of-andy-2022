@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import cn from 'classnames';
 import { menuData } from '../../../constants/menuData';
 import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar';
 import Logo from '../../atoms/logo/Logo';
@@ -9,8 +10,13 @@ function Header() {
 
   useEffect(() => {
     function handleWindowScroll() {
-      if (window.pageYOffset > 10) {
-        setClassNames('bg-secondary-dark');
+      if (window.pageYOffset > 60) {
+        setClassNames(cn(
+          'bg-white',
+          'pt-4 pb-1',
+          'border-b-[1px] border-gray-100',
+          // 'drop-shadow',
+        ));
       } else if (classNames !== '') {
         setClassNames('');
       }
@@ -24,7 +30,7 @@ function Header() {
 
   return (
     <header
-      className={`border-b-[0px] border-gray-200 w-full duration-300 sticky top-0 z-10 ${classNames}`}
+      className={`border-b-[0px] border-gray-200 w-full transition-all duration-500 sticky p-10 top-0 z-10 ${classNames}`}
     >
       <div
         className="

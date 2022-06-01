@@ -19,7 +19,7 @@
   display: inline-block;
   position: relative;
   width: 100px;
-  height: 96px;
+  height: 64px;
   box-sizing: border-box;
   text-align: center;
   transition: var(--show-transition);

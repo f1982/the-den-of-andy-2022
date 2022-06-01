@@ -15,29 +15,36 @@ function HighlightProjectItem({
 }: Partial<ProjectItemData>) {
   return (
     <Link key={id} href={`/project/${id}`} passHref>
-      <div className="w-full cursor-pointer">
+      <div className="w-[600px] h-[480px] cursor-pointer">
         <div
           className="
           bg-background
+          w-full
+          h-full
           transition-shadow ease-in duration-600
           rounded-[2rem]
+          border
           relative
           hover:shadow-md
         "
-          style={{ height: '9rem' }}
         >
-          <img
-            className="absolute rounded-[2rem] w-full h-full object-cover"
-            alt={title}
-            src={cover}
-          />
+          <div className="absolute p-4 w-full h-full">
+            <img
+              className="rounded-[1rem] w-full h-full object-cover"
+              alt={title}
+              src={cover}
+            />
+          </div>
           {/* text layer */}
           <div className="absolute z-20 flex flex-row w-full h-full">
             <div className="flex-1" />
-            <div className="pr-10 flex flex-col">
+            <div className="p-10 flex flex-col ">
               <div className="flex-1" />
-              <Typography variant="h3" className="text-[#fff] mb-0">{title}</Typography>
-              {platform && (<div className="mb-4"><PlatformTag text={platform} /></div>)}
+              <Typography variant="h3" className="mb-0 text-on-surface">{title}</Typography>
+              {platform && (<div><PlatformTag text={platform} /></div>)}
+              <div className="mb-4">
+                <Typography variant="body" className="text-on-surface">Grâce neuf mur tandis que alors. Inutile humain poser curiosité. Beau absolument enlever cercle sous humide approcher autrefois.</Typography>
+              </div>
             </div>
           </div>
         </div>

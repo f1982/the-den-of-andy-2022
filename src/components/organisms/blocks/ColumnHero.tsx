@@ -60,7 +60,7 @@ function ColumnHero({
       />
       <div className="md:w-3/5 flex flex-col md:items-start md:text-left items-center text-center">
         <Typography variant="h2" as="h2">{title}</Typography>
-        {subtitle && <Typography variant="h3">{subtitle}</Typography>}
+        {subtitle && <Typography variant="h4" as="h3" className="mt-[0]">{subtitle}</Typography>}
         <Typography variant="body">{description}</Typography>
         <motion.div
           variants={itemVariant}

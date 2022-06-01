@@ -34,6 +34,7 @@ const itemVariant = {
 
 function Hero({
   title,
+  subtitle,
   image,
   description,
   buttons,
@@ -55,12 +56,12 @@ function Hero({
     >
       <motion.figure
         className="
-         md:w-1/2 mb-10
+         md:w-2/5 mb-10
         object-cover object-center rounded"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className="object-cover"
+          className="object-cover w-full"
           alt="hero"
           src={image}
         />
@@ -69,12 +70,13 @@ function Hero({
         className="text-center lg:w-3/4 w-full"
       >
         <Typography variant="h2" as="h2">{title}</Typography>
-        <motion.p
+        {subtitle && <Typography variant="h3" className="font-thin">{subtitle}</Typography>}
+        <motion.div
           variants={itemVariant}
-          className="mb-8 leading-relaxed"
+          className="mb-8"
         >
-          {description}
-        </motion.p>
+          <Typography variant="body">{description}</Typography>
+        </motion.div>
         <motion.div
           variants={itemVariant}
           className="flex justify-center"
