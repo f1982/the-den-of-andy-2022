@@ -27,15 +27,15 @@ export default function ProjectItem({
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="h-50 rounded-xl w-full object-cover mb-6"
+            className="rounded-xl object-cover w-full h-[300px] mb-6"
             alt={title}
             src={`${PROJECT_IMAGE_URL}/${cover}`}
-            width={650}
-            height={250}
+          // width={650}
+          // height={250}
           />
           <Typography variant="h4" as="h2">{title}</Typography>
           {platform && (<PlatformTag text={platform} />)}
-          <p className="h-12" style={{ overflow: 'hidden' }}>{description}</p>
+          <p className="h-12 tracking-tight" style={{ overflow: 'hidden' }}>{description}</p>
         </div>
       </div>
     </Link>
