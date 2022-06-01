@@ -7,7 +7,7 @@ import PostDate from '../../components/organisms/article/PostDate';
 import TechStackItem from './components/TechStackItem';
 
 function Project({
-  slug, title, cover, tech, end, description, images,
+  slug, title, cover, tech, start, end, description, images,
 }) {
   const router = useRouter();
 
@@ -19,15 +19,17 @@ function Project({
 
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-8">
         <Typography variant="h2" as="h1">{title}</Typography>
+        <PostDate date={start} />
+        <span> - </span>
         <PostDate date={end} />
       </div>
       <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
       <div className="container mx-auto">
-        <TechStackItem stacks={tech.split(',')} className="mt-6 mb-6" />
+        <TechStackItem stacks={tech.split(',')} className="mt-10 mb-8" />
         <p>{description}</p>
-        <div className="px-10 mb-9">
+        <div className="mb-9">
           {getCarousel(images)}
         </div>
       </div>

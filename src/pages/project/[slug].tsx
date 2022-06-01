@@ -8,9 +8,8 @@ function ProjectPage({ detail }: { detail: ProjectItemData }) {
   const router = useRouter();
   const { slug } = router.query;
   return (
-
     <article className="mb-32">
-      <div className="flex container mx-auto">
+      <div className="flex container mx-auto mt-8">
         <div className="flex-1" />
         <CloseButton onClick={() => {
           router.back();
