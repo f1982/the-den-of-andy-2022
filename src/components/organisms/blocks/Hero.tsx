@@ -20,11 +20,11 @@ const containerVariant = {
 const itemVariant = {
   hidden: {
     opacity: 0,
-    x: -100,
+    y: -50,
   },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
   },
   transition: {
     type: 'tween',
@@ -56,19 +56,16 @@ function Hero({
     >
       <motion.figure
         className="
-         md:w-2/5 mb-10
-        object-cover object-center rounded"
+         mb-4 md:mb-6 w-full md:w-2/5 object-center rounded"
+        variants={itemVariant}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className="object-cover w-full"
           alt="hero"
           src={image}
         />
       </motion.figure>
-      <div
-        className="text-center lg:w-3/4 w-full"
-      >
+      <div className="text-center lg:w-3/4 w-full">
         <Typography variant="h2" as="h2">{title}</Typography>
         {subtitle && <Typography variant="h3" className="font-thin">{subtitle}</Typography>}
         <motion.div

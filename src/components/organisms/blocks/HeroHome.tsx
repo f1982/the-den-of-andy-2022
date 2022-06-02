@@ -1,5 +1,3 @@
-import Image from '../../atoms/Image/Image';
-import Headline from '../../atoms/typography/Headline';
 
 function HeroHome() {
   return (
