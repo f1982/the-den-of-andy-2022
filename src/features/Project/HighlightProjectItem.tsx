@@ -15,7 +15,7 @@ function HighlightProjectItem({
 }: Partial<ProjectItemData>) {
   return (
     <Link key={id} href={`/project/${id}`} passHref>
-      <div className="w-[600px] h-[480px] cursor-pointer">
+      <div className="md:w-[600px] w-full h-[480px] cursor-pointer">
         <div
           className="
           bg-background

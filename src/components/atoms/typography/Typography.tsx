@@ -64,30 +64,15 @@ export default function Typography({
   children,
 }: PropsWithChildren<TypographyProps>) {
   const Component = as || asMap.get(variant);
-  const withAnimation = ['h1', 'h2'].includes(variant);
+  // const withAnimation = ['h1', 'h2'].includes(variant);
   const getContent = (contentTitle: ReactNode) => (
     highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
   );
   return (
-    withAnimation ? (
-      <motion.div
-        variants={headVariant}
-        initial="hidden"
-        whileInView="show"
-        whileHover="whileHover"
-        viewport={{ once: true }}
-      >
-        <Component className={cn(basicStyle, styleMap.get(variant), className)}>
-          {getContent(children)}
-        </Component>
-
-      </motion.div>
-    ) : (
-      <Component
-        className={cn(basicStyle, styleMap.get(variant), className)}
-      >
-        {getContent(children)}
-      </Component>
-    )
+    <Component
+      className={cn(basicStyle, styleMap.get(variant), className)}
+    >
+      {getContent(children)}
+    </Component>
   );
 }

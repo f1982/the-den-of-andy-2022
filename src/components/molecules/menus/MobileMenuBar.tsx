@@ -71,7 +71,7 @@ function MobileMenuBar({
         </button>
       </div>
       {showing && isMobile && (
-        <div className="fixed top-0 left-0 w-full bg-white" style={{ zIndex: 999 }}>
+        <div className="fixed top-0 left-0 w-full h-full bg-white" style={{ zIndex: 999 }}>
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>
