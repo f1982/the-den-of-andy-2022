@@ -1,5 +1,5 @@
 .navContainer {
-  --show-transition: 0.1s all ease-in-out;
+  --show-transition: 0.15s all ease-in-out;
 }
 
 .navContainer>* {
@@ -44,7 +44,7 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 35.5%;
+  bottom: 31%;
   color: var(--on-primary);
   /* text-transform: uppercase; */
   transition: 0.3s all ease-in-out;
@@ -66,16 +66,16 @@
   /* background-color: var(--primary-light) */
 }
 
-/* when mouse over, the text will show and move down to the bottom of the menu item */
 .topMenuItem:hover span {
   opacity: 1;
-  bottom: 35.5%;
+  /* when mouse over, the icon will show and move down to the bottom of the menu item */
+  bottom: 26%;
 }
 
-/* text go down position */
 .topMenuItem:hover div {
   opacity: 0;
-  bottom: 15.5%;
+  /* when user mouse over the menu item, the text downs position */
+  bottom: 12%;
 }
 
 .activeNavLink {

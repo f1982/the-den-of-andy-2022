@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HeroData } from '../../../types';
@@ -43,10 +43,12 @@ function Hero({
 }: HeroData) {
   return (
     <motion.section
-      className={classNames(
+      className={cn(
         'container mx-auto',
         'flex',
-        'items-center justify-center flex-col',
+        'items-center',
+        'justify-center',
+        'flex-col',
         className,
       )}
       variants={containerVariant}
@@ -55,8 +57,11 @@ function Hero({
       viewport={{ once: viewPortOnce }}
     >
       <motion.figure
-        className="
-         mb-4 md:mb-6 w-full md:w-2/5 object-center rounded"
+        className={cn(
+          'mb-4 md:mb-6',
+          'w-full md:w-2/5',
+          'object-center rounded',
+        )}
         variants={itemVariant}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}

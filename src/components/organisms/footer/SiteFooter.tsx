@@ -41,7 +41,7 @@ function TermsAndConditions() {
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-gray mt-12">
+    <footer className="border-t-[1px] border-border mt-12">
       <div className="container mx-auto py-12">
         <div className="w-full flex md:flex-row flex-col ">
           <div className="md:w-2/3 w-full">
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
         <Copyright />
       </div>
-      {/* <ThemeChanger /> */}
+      <ThemeChanger />
     </footer>
   );
 }
