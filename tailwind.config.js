@@ -45,6 +45,7 @@ module.exports = {
         'on-warning': 'var(--on-warning)',
         'on-primary': 'var(--on-primary)',
         'on-secondary': 'var(--on-secondary)',
+        border: 'var(--border)',
       },
       container: {
         padding: {

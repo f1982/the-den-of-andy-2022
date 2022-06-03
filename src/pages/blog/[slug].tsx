@@ -38,7 +38,6 @@ export default function Post({ post, preview }) {
             />
           </div>
           <article className="mb-32">
-
             <BlogPost {...post} />
           </article>
         </>

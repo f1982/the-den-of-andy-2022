@@ -10,7 +10,7 @@ import HighlightProjectItem from '../features/Project/HighlightProjectItem';
 
 function LastProjects() {
   return (
-    <div className="container mx-auto mb-20">
+    <>
       <Typography variant="h2" as="h1" className="text-center">Latest Projects</Typography>
       <div className="flex flex-col items-center" style={{ rowGap: '2rem', marginTop: '2rem' }}>
         <HighlightProjectItem
@@ -18,10 +18,11 @@ function LastProjects() {
           title="Bluetooth Auto Blinder System"
           cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
           type="test"
+          description="Watch believe send must. Majority hit lay become impact opportunity ask. Story art single item."
           platform="iOS, web, Android, Other"
         />
       </div>
-    </div>
+    </>
   );
 }
 
@@ -48,7 +49,7 @@ function Home(): React.ReactNode {
       {/* <PageHero>
         <ModelWithContainer />
       </PageHero> */}
-      <PageHero image="/static/images/voxel-home.png" />
+      <PageHero image="/static/images/voxel-home.png" className="mb-8 md:mb-16" />
 
       {/* <ColumnHero
         image="/static/images/andy-with-bubbles.png"
@@ -63,7 +64,7 @@ function Home(): React.ReactNode {
         )}
       /> */}
       <Hero
-        className="mb-20 mt-20"
+        className="mb-8 md:mb-16"
         image="/static/images/andy-with-bubbles.png"
         title={t('home.intro.greeting')}
         subtitle={t('home.intro.role')}
@@ -76,14 +77,16 @@ function Home(): React.ReactNode {
         )}
       />
 
-      <div className="container mx-auto mb-20">
+      <div className="container mx-auto mb-8 md:mb-16">
         <Typography variant="h2" as="h1" className="text-center">Working on</Typography>
         <div className="text-center flex flex-row justify-center mb-8">
           <div className="w-6 mr-2"><YouTubeIcon /></div>
           <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
         </div>
       </div>
-      <LastProjects />
+      <div className="container mx-auto mb-8 md:mb-16">
+        <LastProjects />
+      </div>
       <div className="container mx-auto">
         <YouTubeChannelSection />
       </div>

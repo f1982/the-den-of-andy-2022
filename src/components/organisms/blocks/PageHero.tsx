@@ -6,9 +6,10 @@ import tailwindConfig from '../../../../tailwind.config';
 
 interface PageHeroProps {
   image?: string,
+  className?: string
 }
 
-function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
+function PageHero({ image, children, className }: PropsWithChildren<PageHeroProps>) {
   const fullConfig = resolveConfig(tailwindConfig);
   const primary = fullConfig.theme.colors.primary.medium;
 
@@ -16,8 +17,8 @@ function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
     <div
       className={cn(
         'mb-12',
-        // 'h-[600px]',
         'flex flex-col',
+        className,
       )}
       style={{
         backgroundPosition: '15px 0, 45px 0, 0 0, 0 0',
@@ -28,7 +29,7 @@ function PageHero({ image, children }: PropsWithChildren<PageHeroProps>) {
       <div className="flex-1" />
       <div
         className={cn(
-          'container mx-auto',
+          'mx-auto ml-0 mr-0',
           'flex flex-col items-center',
         )}
       >

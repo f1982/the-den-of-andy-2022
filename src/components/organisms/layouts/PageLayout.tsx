@@ -18,7 +18,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Metadata />
-      <div className="text-on-background">
+      {/* global color settings */}
+      <div className="text-on-background bg-background">
         <Header />
         <div>
           {children}

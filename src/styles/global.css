@@ -28,22 +28,23 @@
 
   --on-primary: #272343;
   --on-secondary: #2d334a;
-  /* --on-background: #2d334a; */ 
   --on-background: #4E5064;
   --on-surface: #fff;
   --on-warning: #000;
   --on-error: #fffffe;
+  --border: #f0f0f0;
 }
 
 [data-theme='dark'] {
 
   --background: #303030;
-  --surface: #303030;
+  --surface: #4a4a4a;
 
   --on-primary: #fff;
   --on-secondary: #2d334a;
   --on-background: #fff;
   --on-surface: #fff;
+  --border: #4b4b4b;
 }
 
 [data-theme="emerald"] {

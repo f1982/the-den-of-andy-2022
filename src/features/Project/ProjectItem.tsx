@@ -16,12 +16,12 @@ export default function ProjectItem({
   return (
     <Link key={id} href={`/project/${id}`} passHref>
       {/* md:p-3 for the space of shadow */}
-      <div className="lg:w-1/2 p-0 md:p-3 cursor-pointer">
+      <div className="p-0 md:p-2 cursor-pointer">
         <div className="
-        bg-background
+        bg-surface
         transition-shadow ease-in duration-600
-        rounded-[2rem]
-        p-0
+        rounded-xl
+        p-4
         md:p-6
         relative
         hover:shadow-md

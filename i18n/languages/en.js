@@ -16,10 +16,10 @@ const en = {
     home: {
       pageTitle: 'Home',
       intro: {
-        greeting: 'My name is Andy Cao',
+        greeting: 'Andy Cao',
         pronunciation: '[ch ow]',
-        role: 'I am a software developer',
-        description: 'Andy currently is a Frontend Developer and living in New Zealand. He is working on some website and mobile 📱 project in RoamDigital. \n He considers indie game 🕹  development as a leisure time hobby. He have built some hardware project for fun. He is always trying to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
+        role: 'Software Developer',
+        description: 'Hey, my name is Andy 👋🏽  currently I am  a Frontend Developer 👨‍💻 and living in New Zealand. I am working on some website 🕸 and mobile 📱 applications in RoamDigital. \n I consider indie game 🕹  development as a leisure time hobby. I also love to build some hardware project for fun. I am always trying to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
         button1: 'Know more',
         button2: 'Resume',
       },
