@@ -9,7 +9,10 @@ import { getProjects } from '../../utils/project-helper';
 
 export default function Projects({ projects }) {
   const router = useRouter();
-  const { type } = router.query;
+  let { type } = router.query;
+  // show coding project in default
+  type = !type ? 'coding' : '';
+
   return (
     <>
       <TabTitle pageTitle={t('project.pageTitle')} />
@@ -17,6 +20,7 @@ export default function Projects({ projects }) {
       <div className="container mx-auto">
         {/* title and intro */}
         <PageTitle title={t('project.headline')} description={t('project.intro')} />
+        {/* project list */}
         <ProjectList list={projects} type={type as string} />
       </div>
     </>

@@ -2,6 +2,31 @@
   "data": {
     "projects": [
       {
+        "id": "vodafone-dx-project",
+        "type": "coding",
+        "platform": "Web, Mobile",
+        "title": "Vodafone DX",
+        "description": "Vodafone DX project is about to rebuild Vodafone Website and Mobile app with cutting-edge technology.",
+        "responsibility": "I participated in the development of the website(Next.js) and the development of the mobile app(React Native). In this project I started to use GraphQL and Apollo Studio. Using Azure AD B2C to implement some Backend features as well. ",
+        "state": "release",
+        "icon": "",
+        "qrcode": "",
+        "cover": "vodafone-dx-cover.png",
+        "start": "2020",
+        "end": "2020",
+        "images": [
+          "vodafone-dx-1.png",
+          "vodafone-dx-2.png"
+        ],
+        "tech": "React, React Native, Next.js Typescript, RxJS, Azure DevOps, Azure AD B2C, Jest, React-Testing-Library, Storybook, Lerna, SSR, Accessibility, GraphQL",
+        "link": "",
+        "github": "",
+        "video": "",
+        "language": "en",
+        "quote": "",
+        "extension": ""
+      },
+      {
         "id": "116",
         "type": "diy",
         "platform": "",

@@ -59,7 +59,7 @@ function Hero({
       <motion.figure
         className={cn(
           'mb-4 md:mb-6',
-          'w-full md:w-2/5',
+          ' md:w-2/5',
           'object-center rounded',
         )}
         variants={itemVariant}

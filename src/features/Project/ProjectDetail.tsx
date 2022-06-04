@@ -4,33 +4,62 @@ import Typography from '../../components/atoms/typography/Typography';
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import PostDate from '../../components/organisms/article/PostDate';
-import TechStackItem from './components/TechStackItem';
+import TechStack from './components/TechStack';
+import PlatformTag from './components/PlatformTag';
 
 function Project({
-  slug, title, cover, tech, start, end, description, images,
+  slug, title, cover,
+  tech,
+  platform,
+  start, end,
+  description, responsibility,
+  images,
 }) {
   const router = useRouter();
 
-  function getCarousel(imageList) {
+  function getCarousel(imageList, alt) {
     if (!imageList) return null;
     const fullPathImages = imageList.map((image) => `${PROJECT_IMAGE_URL}/${image}`);
-    return <Carousel images={fullPathImages} />;
+    // return <Carousel images={fullPathImages} />;
+    return imageList.map((image) => (
+      <div key={image} className="mb-8">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={`${PROJECT_IMAGE_URL}/${image}`} alt={alt} />
+      </div>
+    ));
   }
 
   return (
     <>
       <div className="container mx-auto mb-8">
         <Typography variant="h2" as="h1">{title}</Typography>
-        <PostDate date={start} />
-        <span> - </span>
-        <PostDate date={end} />
+        <div className="mb-4">
+          <PostDate date={start} />
+          <span> - </span>
+          <PostDate date={end} />
+        </div>
+        {platform && (
+          <div className="mb-4">
+            <PlatformTag text={platform} />
+          </div>
+        )}
       </div>
       <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
       <div className="container mx-auto">
-        <TechStackItem stacks={tech.split(',')} className="mt-10 mb-8" />
-        <p>{description}</p>
+        <div className="mt-10 mb-8">
+          <Typography variant="h3">Technology stacks:</Typography>
+          <TechStack stacks={tech.split(',')} />
+        </div>
+        <div className="mb-8">
+          <Typography variant="body">{description}</Typography>
+        </div>
+        {responsibility && (
+          <div className="mb-8">
+            <Typography variant="body">{responsibility}</Typography>
+          </div>
+        )}
         <div className="mb-9">
-          {getCarousel(images)}
+          {getCarousel(images, title)}
         </div>
       </div>
     </>

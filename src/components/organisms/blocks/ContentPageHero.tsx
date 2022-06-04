@@ -7,7 +7,6 @@ function LandscapeHero({ image, text }) {
         display: 'flex',
         flexDirection: 'column',
         height: '30vh',
-        backgroundColor: 'blue',
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

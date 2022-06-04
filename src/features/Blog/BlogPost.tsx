@@ -12,13 +12,15 @@ function BlogPost({
   return (
     <article className="mb-32">
       <div className="container mx-auto">
-        <Typography variant="h1" as="h1">{title}</Typography>
-        <div className="mb-6">
+        <Typography variant="h2" as="h1">{title}</Typography>
+        <div className="mb-4">
           <PostDate date={date} />
+        </div>
+        <div className="mb-4">
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
-      <LandscapeHero image={coverImage} text={excerpt} />
+      <LandscapeHero image={coverImage} />
       <PostBody content={content} />
     </article>
   );

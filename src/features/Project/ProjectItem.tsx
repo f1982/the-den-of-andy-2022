@@ -20,8 +20,8 @@ export default function ProjectItem({
         <div className="
         bg-surface
         transition-shadow ease-in duration-600
-        rounded-xl
-        p-4
+        rounded-[1.5rem]
+        p-0
         md:p-6
         relative
         hover:shadow-md

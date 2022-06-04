@@ -5,7 +5,7 @@ coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/I
 date: '2020-04-02T05:35:07.322Z'
 author:
   name: Andy Cao
-  picture: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9826.jpg'
+  picture: '/static/images/avatar-pixel.jpg'
 ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9826.jpg'
 ---

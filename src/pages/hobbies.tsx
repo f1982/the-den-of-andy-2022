@@ -15,9 +15,23 @@ export default function About() {
       <div className="container mx-auto">
         {/* title and intro */}
         <PageTitle title={t('hobbies.headline')} description={t('hobbies.intro')} />
+        {/* drawing */}
+        <ColumnHero
+          className="mb-16 md:mb-20"
+          image="/static/images/3d-printing-ender-3-v2.png"
+          title={t('hobbies.drawing.title')}
+          description={t('hobbies.drawing.description')}
+          direction="r2l"
+          buttons={(
+            <div className="flex gap-x-3">
+              <MyButton type="primary">{t('hobbies.drawing.button1')}</MyButton>
+              <MyButton type="secondary">{t('hobbies.drawing.button2')}</MyButton>
+            </div>
+          )}
+        />
         {/* rc hobby */}
         <Hero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-rc-cover.png"
           title={t('hobbies.rc.title')}
           description={t('hobbies.rc.description')}
@@ -30,7 +44,7 @@ export default function About() {
         />
         {/* drawing */}
         <ColumnHero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-drawing-cover.png"
           title={t('hobbies.drawing.title')}
           description={t('hobbies.drawing.description')}
@@ -43,7 +57,7 @@ export default function About() {
         />
         {/* video editing */}
         <Hero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-cover-video.png"
           title={t('hobbies.video.title')}
           description={t('hobbies.video.description')}

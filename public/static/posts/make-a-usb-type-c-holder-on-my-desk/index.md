@@ -5,7 +5,7 @@ coverImage: '/static/posts/make-a-usb-type-c-holder-on-my-desk/cover-image.jpg'
 date: '2020-03-26T05:35:07.322Z'
 author:
   name: Andy Cao
-  picture: '/static/images/authors/jj.jpeg'
+  picture: '/static/images/avatar-pixel.jpg'
 ogImage:
   url: '/static/posts/make-a-usb-type-c-holder-on-my-desk/cover-image.jpg'
 ---

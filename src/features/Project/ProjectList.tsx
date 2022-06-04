@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import cn from 'classnames';
-import ProjectItem from './ProjectItem';
 import { ProjectItemData } from '../../types/projects';
+import ProjectItem from './ProjectItem';
 
 function ProjectList({
   list,
@@ -22,9 +21,7 @@ function ProjectList({
       >
         {type
           ? list.filter((item) => item.type === type).map((item) => (
-            <Link key={item.id} href={`/project/${item.id}`} passHref>
-              <ProjectItem {...item} />
-            </Link>
+            <ProjectItem key={item.id} {...item} />
           ))
           : list.map((item) => (
             <ProjectItem key={item.id} {...item} />
