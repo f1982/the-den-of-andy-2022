@@ -9,7 +9,12 @@ interface PageHeroProps {
   className?: string
 }
 
-function PageHero({ image, children, className }: PropsWithChildren<PageHeroProps>) {
+function PageHero({
+  image,
+  children,
+  className,
+}: PropsWithChildren<PageHeroProps>) {
+  // get theme primary color from tailwind config
   const fullConfig = resolveConfig(tailwindConfig);
   const primary = fullConfig.theme.colors.primary.medium;
 
@@ -37,12 +42,10 @@ function PageHero({ image, children, className }: PropsWithChildren<PageHeroProp
           // eslint-disable-next-line @next/next/no-img-element
           <img
             className={cn(
-              'mt-10',
-              'md:mt-32',
-              'w-full',
-              'md:max-w-xl',
-              // 'bg-primary-light',
-              // 'md:bg-secondary-light',
+              'mt-8',
+              'md:mt-16',
+              'w-auto',
+              'h-1/2 md:h-1/3',
             )}
             src={image}
             alt="andy"

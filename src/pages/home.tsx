@@ -1,4 +1,5 @@
 import { t } from 'i18next';
+import Link from 'next/link';
 import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
 import YouTubeIcon from '../components/atoms/Icons/YouTubeIcon';
@@ -71,8 +72,16 @@ function Home(): React.ReactNode {
         description={t('home.intro.description')}
         buttons={(
           <div className="flex gap-x-3">
-            <MyButton type="primary">{t('home.intro.button1')}</MyButton>
-            <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
+            <Link href="/about" passHref>
+              <MyButton
+                type="primary"
+              >
+                {t('home.intro.button1')}
+              </MyButton>
+            </Link>
+            <Link href="/project" passHref>
+              <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
+            </Link>
           </div>
         )}
       />

@@ -18,11 +18,10 @@ export default function ProjectItem({
       {/* md:p-3 for the space of shadow */}
       <div className="p-0 md:p-2 cursor-pointer">
         <div className="
-        bg-surface
+        bg-background
         transition-shadow ease-in duration-600
         rounded-[1.5rem]
-        p-0
-        md:p-6
+        p-4 md:p-6
         relative
         hover:shadow-md
         "
@@ -35,7 +34,7 @@ export default function ProjectItem({
           />
           <Typography variant="h4" as="h2">{title}</Typography>
           {platform && (<PlatformTag text={platform} />)}
-          <p className="h-12 tracking-tight" style={{ overflow: 'hidden' }}>{description}</p>
+          <p className="h-12 tracking-tight mb-2" style={{ overflow: 'hidden' }}>{description}</p>
         </div>
       </div>
     </Link>

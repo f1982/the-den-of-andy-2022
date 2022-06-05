@@ -1,4 +1,5 @@
 import { t } from 'i18next';
+import Link from 'next/link';
 import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
 import TabTitle from '../components/molecules/seo/SiteSEO';
@@ -15,17 +16,18 @@ export default function About() {
       <div className="container mx-auto">
         {/* title and intro */}
         <PageTitle title={t('hobbies.headline')} description={t('hobbies.intro')} />
-        {/* drawing */}
+        {/* 3d printing */}
         <ColumnHero
           className="mb-16 md:mb-20"
           image="/static/images/3d-printing-ender-3-v2.png"
-          title={t('hobbies.drawing.title')}
-          description={t('hobbies.drawing.description')}
+          title={t('hobbies.print3d.title')}
+          description={t('hobbies.print3d.description')}
           direction="r2l"
           buttons={(
-            <div className="flex gap-x-3">
-              <MyButton type="primary">{t('hobbies.drawing.button1')}</MyButton>
-              <MyButton type="secondary">{t('hobbies.drawing.button2')}</MyButton>
+            <div className="flex">
+              <Link href="https://www.thingiverse.com/iandycao/" passHref>
+                <MyButton type="primary">{t('hobbies.print3d.button1')}</MyButton>
+              </Link>
             </div>
           )}
         />

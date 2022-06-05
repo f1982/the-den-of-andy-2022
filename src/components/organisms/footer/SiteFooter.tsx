@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
         <Copyright />
       </div>
-      <ThemeChanger />
+      {/* <ThemeChanger /> */}
     </footer>
   );
 }
