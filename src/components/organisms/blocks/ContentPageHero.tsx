@@ -1,6 +1,6 @@
 import Typography from '../../atoms/typography/Typography';
 
-function LandscapeHero({ image, text }) {
+function LandscapeHero({ image, text }: { image: string, text?: string }) {
   return (
     <div
       style={{
