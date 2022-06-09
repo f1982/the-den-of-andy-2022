@@ -1,9 +1,7 @@
 // import Image from 'next/image';
-import { motion } from 'framer-motion';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 import { HeroData } from '../../../types';
-import Button from '../../atoms/buttons/Button';
-import Image from '../../atoms/Image/Image';
 import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
@@ -41,11 +39,15 @@ function ColumnHero({
   description,
   buttons,
   viewPortOnce = false,
-}: HeroData) {
+  direction = 'l2r',
+  className,
+}: HeroData & { direction?: 'l2r' | 'r2l' }) {
   return (
     <motion.section
       className={classNames(
-        'container mx-auto flex gap-x-16 mb-[3rem] md:flex-row flex-col items-center',
+        'container mx-auto flex gap-x-16 flex-col items-center',
+        direction === 'l2r' ? 'md:flex-row' : 'md:flex-row-reverse',
+        className,
       )}
       variants={containerVariant}
       initial="hidden"

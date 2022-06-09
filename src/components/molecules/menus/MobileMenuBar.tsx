@@ -2,6 +2,8 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
+import Modal from 'react-modal';
+import customModalStyles from '../../../constants/modelConfig';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import { MenuItemData } from '../../../types';
 import CloseButton from '../../atoms/buttons/CloseButton';
@@ -70,18 +72,34 @@ function MobileMenuBar({
           <Hamburger />
         </button>
       </div>
-      {showing && isMobile && (
-        <div className="fixed top-0 left-0 w-full h-full bg-background" style={{ zIndex: 999 }}>
+      <Modal
+        isOpen={showing && isMobile}
+        style={customModalStyles}
+        contentLabel="Mobile Menu Modal"
+        onAfterOpen={() => {
+          document.body.style.top = `-${window.scrollY}px`;
+          document.body.style.position = 'fixed';
+        }}
+        onAfterClose={() => {
+          const scrollY = document.body.style.top;
+          document.body.style.position = '';
+          document.body.style.top = '';
+          // eslint-disable-next-line radix
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }}
+      >
+        <div className="w-full h-full bg-background">
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>
+          <h1>test</h1>
           <nav className="flex flex-col ">
             {
               menuData.map((item) => <MenuItem key={item.link} {...item} onClick={handleClick} />)
             }
           </nav>
         </div>
-      )}
+      </Modal>
     </>
   );
 }

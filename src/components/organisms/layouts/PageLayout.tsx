@@ -21,9 +21,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* global color settings */}
       <div className="text-on-background bg-background">
         <Header />
-        <div>
+        <main>
           {children}
-        </div>
+        </main>
         <Footer />
       </div>
     </>

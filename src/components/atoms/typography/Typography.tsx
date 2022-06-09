@@ -69,8 +69,11 @@ export default function Typography({
     highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
   );
   return (
-    <Component
-      className={cn(basicStyle, styleMap.get(variant), className)}
+    <Component className={cn(
+      basicStyle,
+      styleMap.get(variant),
+      className,
+    )}
     >
       {getContent(children)}
     </Component>

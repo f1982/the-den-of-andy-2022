@@ -2,6 +2,79 @@
   "data": {
     "projects": [
       {
+        "id": "chick-fil-a-design-system",
+        "type": "coding",
+        "platform": "Web",
+        "title": "Chick fil a Design System and UI Library",
+        "description": "CFA Design system & UI library project provides a set of React UI components can be used in any React Frontend projects, help developers to build CFA branded desktop and mobile web applications. It’s responsive and with the accessibility features built-in.",
+        "responsibility": "In this project we were using TypeScript to develop core components. Use Storybooks to present components and provide clear component documentation.",
+        "state": "release",
+        "icon": "",
+        "qrcode": "",
+        "cover": "cfa-design-system-cover.jpg",
+        "start": "2022-02-01",
+        "end": "2022-04-01",
+        "images": [
+          "cfa-design-system-cover.jpg"
+        ],
+        "tech": "React,Typescript, Jest, React-Testing-Library, Storybook, Accessibility, Sass, Github Action",
+        "link": "",
+        "github": "",
+        "video": "",
+        "language": "en",
+        "quote": "",
+        "extension": ""
+      },
+      {
+        "id": "vodafone-dx-web-mobile-project",
+        "type": "coding",
+        "platform": "Web & mobile",
+        "title": "Vodafone DX",
+        "description": "Vodafone DX project is about to rebuild Vodafone Website and Mobile app with cutting-edge technology.",
+        "responsibility": "I participated in the development of the website(Next.js) and the development of the mobile app(React Native). In this project I started to use GraphQL and Apollo Studio. Using Azure AD B2C to implement some Backend features as well. ",
+        "state": "release",
+        "icon": "",
+        "qrcode": "",
+        "cover": "vodafone-dx-cover.png",
+        "start": "2021-03-01",
+        "end": "2021-12-20",
+        "images": [
+          "vodafone-dx-1.png",
+          "vodafone-dx-2.png"
+        ],
+        "tech": "React, React Native, Next.js Typescript, RxJS, Azure DevOps, Azure AD B2C, Jest, React-Testing-Library, Storybook, Lerna, SSR, Accessibility, GraphQL",
+        "link": "",
+        "github": "",
+        "video": "",
+        "language": "en",
+        "quote": "",
+        "extension": ""
+      },
+      {
+        "id": "buck-new-zealand-split-money-app",
+        "type": "coding",
+        "platform": "Web & mobile",
+        "title": "BUCK",
+        "description": "BUCK is creative payment mobile application project of Westpac, it provides a the fast, easy, and free way to pay friends and get money from them.",
+        "responsibility": "I participated in this project for building the website and dashboard by using React, Gatsby.js and Material UI.",
+        "state": "release",
+        "icon": "",
+        "qrcode": "",
+        "cover": "buck-cover.png",
+        "start": "2020-12-20",
+        "end": "2021-03-01",
+        "images": [
+          "buck-website.png"
+        ],
+        "tech": "React, Typescript, Jest, Gatsby.js, Material UI, CircleCI, EDM",
+        "link": "https://www.getbuck.co.nz/",
+        "github": "",
+        "video": "",
+        "language": "en",
+        "quote": "",
+        "extension": ""
+      },
+      {
         "id": "116",
         "type": "diy",
         "platform": "",

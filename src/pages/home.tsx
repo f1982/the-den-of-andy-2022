@@ -1,4 +1,6 @@
 import { t } from 'i18next';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
 import YouTubeIcon from '../components/atoms/Icons/YouTubeIcon';
@@ -7,6 +9,12 @@ import TabTitle from '../components/molecules/seo/SiteSEO';
 import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
 import HighlightProjectItem from '../features/Project/HighlightProjectItem';
+
+// lazy load 3d model and library will save about 5m
+const ModelWithContainer = dynamic<any>(
+  () => import('../components/organisms/3d/RoomModel'),
+  { ssr: false },
+);
 
 function LastProjects() {
   return (
@@ -46,23 +54,8 @@ function Home(): React.ReactNode {
   return (
     <>
       <TabTitle pageTitle={t('home.pageTitle')} />
-      {/* <PageHero>
-        <ModelWithContainer />
-      </PageHero> */}
+      {/* <ModelWithContainer /> */}
       <PageHero image="/static/images/voxel-home.png" className="mb-8 md:mb-16" />
-
-      {/* <ColumnHero
-        image="/static/images/andy-with-bubbles.png"
-        title={t('home.intro.greeting')}
-        subtitle={t('home.intro.role')}
-        description={t('home.intro.description')}
-        buttons={(
-          <>
-            <MyButton type="primary">{t('home.intro.button1')}</MyButton>
-            <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
-          </>
-        )}
-      /> */}
       <Hero
         className="mb-8 md:mb-16"
         image="/static/images/andy-with-bubbles.png"
@@ -71,8 +64,16 @@ function Home(): React.ReactNode {
         description={t('home.intro.description')}
         buttons={(
           <div className="flex gap-x-3">
-            <MyButton type="primary">{t('home.intro.button1')}</MyButton>
-            <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
+            <Link href="/about" passHref>
+              <MyButton
+                type="primary"
+              >
+                {t('home.intro.button1')}
+              </MyButton>
+            </Link>
+            <Link href="/project" passHref>
+              <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
+            </Link>
           </div>
         )}
       />

@@ -21,7 +21,7 @@ const en = {
         role: 'Software Developer',
         description: 'Hey, my name is Andy 👋🏽  currently I am  a Frontend Developer 👨‍💻 and living in New Zealand. I am working on some website 🕸 and mobile 📱 applications in RoamDigital. \n I consider indie game 🕹  development as a leisure time hobby. I also love to build some hardware project for fun. I am always trying to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
         button1: 'Know more',
-        button2: 'Resume',
+        button2: 'My works',
       },
 
       buttonLabel: 'Contact',
@@ -52,6 +52,11 @@ const en = {
       pageTitle: 'My hobbies',
       headline: 'Hobbies',
       intro: 'Everybody needs hobbies',
+      print3d: {
+        title: '3D Printing',
+        description: 'Making RC aeroplane was one of my dream in my childhood. When I was in primary school I have seen some magazines that introduced how to make RC aeroplane, I was shocked by the content and started to absorb the information that I can get. But actually, for a long period of time, I cannot get the right data or cannot find the right place to buy the components I need. Thanks for the Internet development and I can quickly find the groups and tutorials which let me enjoy to make or even design aircraft by myself.',
+        button1: 'My Thingiverse page',
+      },
       rc: {
         title: 'RC Hobby',
         description: 'Making RC aeroplane was one of my dream in my childhood. When I was in primary school I have seen some magazines that introduced how to make RC aeroplane, I was shocked by the content and started to absorb the information that I can get. But actually, for a long period of time, I cannot get the right data or cannot find the right place to buy the components I need. Thanks for the Internet development and I can quickly find the groups and tutorials which let me enjoy to make or even design aircraft by myself.',

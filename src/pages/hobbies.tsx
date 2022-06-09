@@ -1,4 +1,5 @@
 import { t } from 'i18next';
+import Link from 'next/link';
 import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
 import TabTitle from '../components/molecules/seo/SiteSEO';
@@ -15,9 +16,24 @@ export default function About() {
       <div className="container mx-auto">
         {/* title and intro */}
         <PageTitle title={t('hobbies.headline')} description={t('hobbies.intro')} />
+        {/* 3d printing */}
+        <ColumnHero
+          className="mb-16 md:mb-20"
+          image="/static/images/3d-printing-ender-3-v2.png"
+          title={t('hobbies.print3d.title')}
+          description={t('hobbies.print3d.description')}
+          direction="r2l"
+          buttons={(
+            <div className="flex">
+              <Link href="https://www.thingiverse.com/iandycao/" passHref>
+                <MyButton type="primary">{t('hobbies.print3d.button1')}</MyButton>
+              </Link>
+            </div>
+          )}
+        />
         {/* rc hobby */}
         <Hero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-rc-cover.png"
           title={t('hobbies.rc.title')}
           description={t('hobbies.rc.description')}
@@ -30,7 +46,7 @@ export default function About() {
         />
         {/* drawing */}
         <ColumnHero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-drawing-cover.png"
           title={t('hobbies.drawing.title')}
           description={t('hobbies.drawing.description')}
@@ -43,7 +59,7 @@ export default function About() {
         />
         {/* video editing */}
         <Hero
-          className="mb-20"
+          className="mb-16 md:mb-20"
           image="/static/images/hobby-cover-video.png"
           title={t('hobbies.video.title')}
           description={t('hobbies.video.description')}

@@ -91,30 +91,5 @@
   background-color: var(--primary-dark);
   color: var(--on-primary);
 }
+
 /* Your own custom utilities */
-
-html,
-body {
-  /* color: #2d334a */
-}
-
-/* #__next {
-  height: 100%;
-} */
-p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-@layer base {
-  h1 {
-    /* @apply text-2xl; */
-    /* background: linear-gradient(#efc854, #efc854) no-repeat;
-    background-size: 100% 15%;
-    background-position: 0 70%; */
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-}
