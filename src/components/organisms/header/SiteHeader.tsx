@@ -16,7 +16,7 @@ function Header() {
           'pt-1 pb-0', // mobile top and bottom paddings
           'md:pt-0 md:pb-0', // desktop top and bottom paddings
           'border-b-[1px] border-gray-100',
-          // 'drop-shadow',
+
         ));
       } else if (classNames !== '') {
         setClassNames('');

@@ -1,9 +1,7 @@
 // import Image from 'next/image';
-import { motion } from 'framer-motion';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 import { HeroData } from '../../../types';
-import Button from '../../atoms/buttons/Button';
-import Image from '../../atoms/Image/Image';
 import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {

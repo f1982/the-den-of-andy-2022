@@ -17,13 +17,12 @@ export default function Post({ post, preview }) {
   }
 
   return (
-    // <Modal
-    //   isOpen
-    //   onRequestClose={() => router.push('/blog')}
-    //   style={customModalStyles}
-    //   contentLabel="Post modal"
-    // >
-    <>
+    <Modal
+      isOpen
+      onRequestClose={() => router.push('/blog')}
+      style={customModalStyles}
+      contentLabel="Post modal"
+    >
       <SiteSEO pageTitle={post.title} />
       {/* If the page is not yet generated, this will be displayed */}
       {router.isFallback ? (
@@ -42,8 +41,7 @@ export default function Post({ post, preview }) {
           </article>
         </>
       )}
-    </>
-    // </Modal>
+    </Modal>
   );
 }
 
