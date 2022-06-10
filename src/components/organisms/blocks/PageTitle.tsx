@@ -11,8 +11,8 @@ interface PageTitleProps {
 function PageTitle({ title, description, className }: PageTitleProps) {
   return (
     <div className={cn('flex flex-col items-center justify-center mb-8 md:mb-16', className)}>
-      <Typography variant="h1" as="h1" highlight>{title}</Typography>
-      <Typography variant="body">{description}</Typography>
+      <Typography variant="h1" as="h1" className="page-title" highlight>{title}</Typography>
+      <Typography variant="body" className="page-description">{description}</Typography>
     </div>
   );
 }

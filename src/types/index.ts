@@ -8,12 +8,13 @@ interface MenuItemData {
 }
 
 interface HeroData {
-  title: string,
-  subtitle?: string,
-  image: string,
-  description?: string,
-  buttons?: React.ReactNode,
-  viewPortOnce?: boolean,
-  className?: string
+  title: string;
+  subtitle?: string;
+  image: string;
+  description?: string;
+  buttons?: React.ReactNode;
+  viewPortOnce?: boolean;
+  className?: string;
+  id?: string;
 }
 export type { MenuItemData, HeroData };

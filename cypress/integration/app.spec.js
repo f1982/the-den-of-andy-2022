@@ -41,7 +41,8 @@ describe('other pages', () => {
   it('blog page', () => {
     cy.get('a[href="/blog"]').first().click();
     cy.url().should('include', '/blog');
-    cy.get('h1').contains(/blog/i);
+    cy.get('.page-title').contains(/blog/i);
+
     // open first blog page
     cy.visit(`${Cypress.env('host')}blog`);
     cy.get('div[href*="blog/"]').first().click();
@@ -52,7 +53,7 @@ describe('other pages', () => {
   it('project page', () => {
     cy.get('a[href="/project"]').first().click();
     cy.url().should('include', '/project');
-    cy.get('h1').contains(/project/i);
+    cy.get('.page-title').contains(/projects/i);
 
     // open first project page
     cy.visit(`${Cypress.env('host')}project`);
@@ -64,14 +65,14 @@ describe('other pages', () => {
   it('hobbies page', () => {
     cy.get('a[href="/hobbies"]').first().click();
     cy.url().should('include', '/hobbies');
-    cy.get('h1').contains(/hobbies/i);
-    cy.get('h2').contains(/rc hobby/i);
+    // cy.get('h1').contains(/hobbies/i);
+    cy.get('#rc-hobby-id h2').contains(/RC Hobby/i);
     cy.get('h2').contains(/video editing/i);
   });
 
   it('about page', () => {
     cy.get('a[href="/about"]').first().click();
     cy.url().should('include', '/about');
-    cy.get('h1').contains(/about/i);
+    cy.get('.page-title').contains(/about/i);
   });
 });

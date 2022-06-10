@@ -4,7 +4,7 @@ import styles from './button.module.css';
 
 interface PropsType {
   type?: 'primary' | 'secondary';
-  children: React.ReactNode;
+  children: React.ReactElement;
   onClick?: () => void;
   href?: string;
   className?: string;
