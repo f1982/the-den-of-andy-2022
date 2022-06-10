@@ -2056,7 +2056,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.5.8", "@storybook/addon-actions@^6.5.8":
+"@storybook/addon-actions@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.8.tgz#c1f544acc016a4a0d5dcb373535dc991b5737c5f"
   integrity sha512-9ciR1iWBTzQNBDlq0iQs9+TV7gng+FbQxW5mHNxNvT9SxY1dt02wCPHZeVE/5la61wBXZs/zpEepZA93VzVBDw==
@@ -2152,7 +2152,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.5.8":
+"@storybook/addon-essentials@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.5.8.tgz#db89307cb8445c49d23ecaa346516b3793baa28a"
   integrity sha512-K/Aw/GLugCz5/S3c2tz5lnfC8aN6dSoQQDr8xaMDcBlT9h/xZ1l4jQQnx/mvY/qEvXtexBF41DE6ROWGKSZeSg==
@@ -2173,7 +2173,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-interactions@^6.5.8":
+"@storybook/addon-interactions@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-6.5.8.tgz#f44cf3aa572bc4f611bbdf60a1d2c24606523552"
   integrity sha512-eX/L27xmj891A7yM7B0FjTqvT3wkgfmZ7bwOeBs+ICyBT1sEY+TaUFGm3nb0hTsQSevQZoP4Rsi+AMI3/XUxNA==
@@ -2194,7 +2194,7 @@
     polished "^4.2.2"
     ts-dedent "^2.2.0"
 
-"@storybook/addon-links@^6.5.8":
+"@storybook/addon-links@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.5.8.tgz#ec4b640bf89dbb653592e6f05968ba771bb10b4a"
   integrity sha512-UxzEPnT1PLPsuy3tt+o3UJTbI4Kihec+/yzpzzGKreUnCC8EWTsOhtMQAVVit2t4BMl4vNrxKO0mKSc8saT3Gw==
@@ -2376,7 +2376,7 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.2.2"
 
-"@storybook/builder-webpack5@^6.5.8":
+"@storybook/builder-webpack5@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-6.5.8.tgz#8d1e366c4bc2c8bec49849073031cfd195682309"
   integrity sha512-bc7LSGzOqTUImejsfjWAHEHwBreoPQKS6pfnWYkjKMvfvWOwlHSAxwOSM5DyS4cvpcpMDG8yBJNz2QcvXFVLxA==
@@ -2749,7 +2749,7 @@
     webpack-dev-middleware "^3.7.3"
     webpack-virtual-modules "^0.2.2"
 
-"@storybook/manager-webpack5@^6.5.8":
+"@storybook/manager-webpack5@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/manager-webpack5/-/manager-webpack5-6.5.8.tgz#36e97096506073c837716897495fffe4a616fe83"
   integrity sha512-foW/ZvTqGZAl4TfcfGKdS3RlaBDDAgEjUCbCaVShlZRshZ8tzWBVu3JQFqbPVGslH89T5qp9DUYoN/SJqTUpcg==
@@ -2857,7 +2857,7 @@
     react-docgen-typescript "^2.1.1"
     tslib "^2.0.0"
 
-"@storybook/react@^6.5.8":
+"@storybook/react@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.5.8.tgz#8a9e15416a18ceb5c11c89ffe9f38357d442efa9"
   integrity sha512-LdObfhhPb9gAFBtRNb3awYJe1qMiYeda1ppkj0ZvccbV04YrmbW5bzYvfOCvU6D34ugbQJhJyWuvraO/0EJK6w==
@@ -3332,14 +3332,21 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/react-dom@<18.0.0", "@types/react-dom@^17.0.2":
+"@types/react-dom@18.0.5":
+  version "18.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.5.tgz#330b2d472c22f796e5531446939eacef8378444a"
+  integrity sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-dom@<18.0.0":
   version "17.0.17"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.17.tgz#2e3743277a793a96a99f1bf87614598289da68a1"
   integrity sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==
   dependencies:
     "@types/react" "^17"
 
-"@types/react-modal@^3.13.1":
+"@types/react-modal@3.13.1":
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/@types/react-modal/-/react-modal-3.13.1.tgz#5b9845c205fccc85d9a77966b6e16dc70a60825a"
   integrity sha512-iY/gPvTDIy6Z+37l+ibmrY+GTV4KQTHcCyR5FIytm182RQS69G5ps4PH2FxtC7bAQ2QRHXMevsBgck7IQruHNg==
@@ -3360,7 +3367,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@18.0.12":
   version "18.0.12"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.12.tgz#cdaa209d0a542b3fcf69cf31a03976ec4cdd8840"
   integrity sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==
@@ -3369,7 +3376,7 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^17", "@types/react@^17.0.2":
+"@types/react@^17":
   version "17.0.45"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.45.tgz#9b3d5b661fd26365fefef0e766a1c6c30ccf7b3f"
   integrity sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==
@@ -10923,7 +10930,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@^18.1.0:
+react-dom@18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.1.0.tgz#7f6dd84b706408adde05e1df575b3a024d7e8a2f"
   integrity sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w==
@@ -10991,10 +10998,10 @@ react-merge-refs@^1.0.0, react-merge-refs@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
-react-modal@^3.14.4:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.15.1.tgz#950ce67bfef80971182dd0ed38f2d9b1a681288b"
-  integrity sha512-duB9bxOaYg7Zt6TMFldIFxQRtSP+Dg3F1ZX3FXxSUn+3tZZ/9JCgeAQKDg7rhZSAqopq8TFRw3yIbnx77gyFTw==
+react-modal@3.14.4:
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.14.4.tgz#2ca7e8e9a180955e5c9508c228b73167c1e6f6a3"
+  integrity sha512-8surmulejafYCH9wfUmFyj4UfbSJwjcgbS9gf3oOItu4Hwd6ivJyVBETI0yHRhpJKCLZMUtnhzk76wXTsNL6Qg==
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.7.2"
@@ -11053,7 +11060,7 @@ react-use-measure@^2.1.1:
   dependencies:
     debounce "^1.2.1"
 
-react@^18.1.0:
+react@18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"
   integrity sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==
