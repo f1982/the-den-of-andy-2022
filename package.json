@@ -26,7 +26,7 @@
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
     "@react-three/drei": "^7.2.1",
-    "@react-three/fiber": "^7.0.5",
+    "@react-three/fiber": "8.0.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
@@ -46,7 +46,7 @@
     "remark": "13.0.0",
     "remark-html": "13.0.2",
     "tailwindcss": "^2.1.0",
-    "three": "^0.134.0",
+    "three": "^0.139.0",
     "three-stdlib": "^2.9.1"
   },
   "devDependencies": {
