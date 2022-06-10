@@ -47,7 +47,6 @@ jobs:
         # build: npm run build
         start: npm start
       
-
     - name: Build the website
       run: npm run export && touch ./out/.nojekyll
       # This below is used to build storybook static site with whole site together
