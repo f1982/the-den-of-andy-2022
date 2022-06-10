@@ -33,6 +33,7 @@ export default function About() {
         />
         {/* rc hobby */}
         <Hero
+          id="rc-hobby-id"
           className="mb-16 md:mb-20"
           image="/static/images/hobby-rc-cover.png"
           title={t('hobbies.rc.title')}

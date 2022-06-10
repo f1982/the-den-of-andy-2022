@@ -40,6 +40,7 @@ function Hero({
   buttons,
   viewPortOnce = false,
   className,
+  id,
 }: HeroData) {
   return (
     <motion.section
@@ -55,11 +56,12 @@ function Hero({
       initial="hidden"
       whileInView="show"
       viewport={{ once: viewPortOnce }}
+      id={id}
     >
       <motion.figure
         className={cn(
           'mb-4 md:mb-6',
-          ' md:w-2/5',
+          'md:w-2/5',
           'object-center rounded',
         )}
         variants={itemVariant}
