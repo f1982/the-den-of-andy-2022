@@ -30,8 +30,8 @@ jobs:
       run: npm i -g npm@latest
     
     - name: Install npm packages
-      # run: npm ci
-      run: npm ci --legacy-peer-deps
+      # why ci not install: https://betterprogramming.pub/npm-ci-vs-npm-install-which-should-you-use-in-your-node-js-projects-51e07cb71e26
+      run: npm ci
 
     - name: Build the project
       run: npm run build --if-present
