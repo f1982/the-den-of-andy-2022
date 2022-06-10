@@ -45,7 +45,8 @@ function PageHero({
               'mt-8',
               'md:mt-16',
               'w-auto',
-              'h-1/2 md:h-1/3',
+              'md:h-1/3',
+              'object-fit',
             )}
             src={image}
             alt="andy"

@@ -5,9 +5,9 @@ import styles from './close.module.css';
 function CloseButton({
   size = 'md',
   onClick,
-}:{
-  size?: 'md'|'sm'
-  onClick:()=>void
+}: {
+  size?: 'md' | 'sm'
+  onClick: () => void,
 }) {
   return (
     <button

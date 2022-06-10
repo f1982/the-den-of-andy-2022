@@ -92,7 +92,6 @@ function MobileMenuBar({
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>
-          <h1>test</h1>
           <nav className="flex flex-col ">
             {
               menuData.map((item) => <MenuItem key={item.link} {...item} onClick={handleClick} />)
