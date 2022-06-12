@@ -14,7 +14,7 @@ function Custom404() {
         <DotLoader />
         <DotLoader />
         <div>
-          <MyButton href="/" type="primary">{t('pageNotFound.backButtonLabel')}</MyButton>
+          <MyButton href="/" type="primary">{t<string>('pageNotFound.backButtonLabel')}</MyButton>
         </div>
       </div>
     </>

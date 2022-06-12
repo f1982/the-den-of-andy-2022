@@ -2,16 +2,18 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './button.module.css';
 
-interface PropsType {
+interface ButtonPropsType {
   type?: 'primary' | 'secondary';
-  children: React.ReactElement;
+  children: React.ReactNode | string;
   onClick?: () => void;
   href?: string;
   className?: string;
 }
 // `onClick`, `href`, and `ref` need to be passed to the DOM element
 // for proper handling
-const Button = React.forwardRef<HTMLAnchorElement, PropsType>((props: PropsType, ref) => {
+const Button = React.forwardRef<
+  HTMLAnchorElement, ButtonPropsType
+>((props: ButtonPropsType, ref) => {
   function getStyle(type: string): string {
     const buttonStyle = cn(
       'focus:outline-none',

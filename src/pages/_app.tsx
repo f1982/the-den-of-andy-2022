@@ -13,13 +13,15 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   // if the page has its specific layout, use it, if not, use default layout
-  const getLayout = Component.getLayout || ((page:React.FC) => (<Layout>{page}</Layout>));
+  const getLayout = Component.getLayout || ((page: React.ReactNode) => (<Layout>{page}</Layout>));
 
   return (
     <ThemeProvider>
-      <I18nextProvider i18n={i18n}>
-        {getLayout(<Component {...pageProps} />)}
-      </I18nextProvider>
+      <div>
+        <I18nextProvider i18n={i18n}>
+          {getLayout(<Component {...pageProps} />)}
+        </I18nextProvider>
+      </div>
     </ThemeProvider>
   );
 }
