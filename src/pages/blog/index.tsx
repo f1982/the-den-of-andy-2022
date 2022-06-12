@@ -15,14 +15,14 @@ function Blog({ allPosts }) {
 
   return (
     <>
-      <TabTitle pageTitle={t('blog.pageTitle')} />
+      <TabTitle pageTitle={t<string>('blog.pageTitle')} />
       <PageHero image="/static/images/typewritter.png" />
       <div className="container mx-auto">
         {/* title and intro */}
-        <PageTitle title={t('blog.headline')} description={t('blog.intro')} />
+        <PageTitle title={t<string>('blog.headline')} description={t<string>('blog.intro')} />
         {/* blog posts */}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Typography variant="h1" as="h1" highlight>{t('blog.more')}</Typography>
+        <Typography variant="h1" as="h1" highlight>{t<string>('blog.more')}</Typography>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>

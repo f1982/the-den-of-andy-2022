@@ -53,26 +53,26 @@ function YouTubeChannelSection() {
 function Home(): React.ReactNode {
   return (
     <>
-      <TabTitle pageTitle={t('home.pageTitle')} />
+      <TabTitle pageTitle={t<string>('home.pageTitle')} />
       {/* <ModelWithContainer /> */}
       <PageHero image="/static/images/voxel-home.png" className="mb-8 md:mb-16" />
       <Hero
         className="mb-8 md:mb-16"
         image="/static/images/andy-with-bubbles.png"
-        title={t('home.intro.greeting')}
-        subtitle={t('home.intro.role')}
-        description={t('home.intro.description')}
+        title={t<string>('home.intro.greeting')}
+        subtitle={t<string>('home.intro.role')}
+        description={t<string>('home.intro.description')}
         buttons={(
           <div className="flex gap-x-3">
             <Link href="/about" passHref>
               <MyButton
                 type="primary"
               >
-                {t('home.intro.button1')}
+                {t<string>('home.intro.button1')}
               </MyButton>
             </Link>
             <Link href="/project" passHref>
-              <MyButton type="secondary">{t('home.intro.button2')}</MyButton>
+              <MyButton type="secondary">{t<string>('home.intro.button2')}</MyButton>
             </Link>
           </div>
         )}
