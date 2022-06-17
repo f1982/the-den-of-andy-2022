@@ -1,5 +1,7 @@
 # Andy's personal website v2022
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e5c6671-2cf6-4e95-a468-9404e4d9cbaf/deploy-status)](https://app.netlify.com/sites/ac2022dev/deploys)
+
 # dev
 
 regenerate `package-lock.json`, How to only update `package-lock.json` only
