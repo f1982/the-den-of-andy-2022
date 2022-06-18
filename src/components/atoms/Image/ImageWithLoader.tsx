@@ -10,11 +10,11 @@ export default function ImageWithLoader({
   className,
   style = {},
   ...rest
-}:{
-  src:string,
+}: {
+  src: string,
   withLoader?: boolean,
-  className?:string,
-  style?:object
+  className?: string,
+  style?: object
 }) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const ref = useRef<HTMLImageElement>(null);
