@@ -39,8 +39,7 @@ export default function ImageWithLoader({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width,
-        height,
+
         minHeight: '240px',
       }}
       {...rest}
@@ -49,12 +48,25 @@ export default function ImageWithLoader({
         ref={ref}
         src={src}
         className={cn(
-          'object-cover w-full h-full opacity-0',
+          'object-contain opacity-0',
           'transition-opacity ease-out duration-1000',
           className,
         )}
         alt={alt}
-        style={isLoaded ? { ...style, opacity: 1 } : { opacity: 0 }}
+        style={
+          isLoaded
+            ? {
+              ...style,
+              ...{
+                width,
+                height,
+                opacity: 1,
+              },
+            }
+            : {
+              opacity: 0,
+            }
+        }
         onLoad={() => setIsLoaded(true)}
       />
       {!isLoaded && (

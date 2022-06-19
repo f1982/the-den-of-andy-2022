@@ -35,17 +35,15 @@ function PageHero({
       <div
         className={cn(
           'mx-auto mt-8 md:mt-16',
-          'w-full md:w-2/3 lg:w-1/2',
         )}
       >
         {!!image && (
           <Image
-            // width='100%'
-            // height='100%'
-            // className='h-[320px] md:h-[600px]'
             src={image}
             alt="hero image"
-
+            style={{
+              maxHeight: '600px',
+            }}
           />
         )}
         {/* {children} */}
