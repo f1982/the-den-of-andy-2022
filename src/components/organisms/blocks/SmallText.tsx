@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion';
-import React from 'react';
-import ImageComponent from '../../atoms/Image/Image';
-import { Headline2 } from '../../atoms/typography/Headline';
 import Typography from '../../atoms/typography/Typography';
 
 const containerVariant = {
@@ -35,7 +32,7 @@ function SmallText({
       className="w-full mb-20 mx-auto flex flex-col items-center justify-center"
     >
       {!!title && <div><Typography variant="h2">{title}</Typography></div>}
-      {!!image && <ImageComponent className="my-6 rounded-2xl mx-auto" src={image} alt="andy" width="100%" />}
+      {!!image && <img className="my-6 rounded-2xl w-full mx-auto" src={image} />}
       <div className="px-4">{description}</div>
     </motion.div>
   );
