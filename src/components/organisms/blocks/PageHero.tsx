@@ -1,9 +1,9 @@
-
 import cn from 'classnames';
 import React, { PropsWithChildren } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../../tailwind.config';
-import Image from '../../atoms/Image/Image'
+import Image from '../../atoms/Image/Image';
+
 interface PageHeroProps {
   image?: string,
   className?: string

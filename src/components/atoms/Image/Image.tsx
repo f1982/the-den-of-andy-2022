@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import cn from 'classnames';
 import { useEffect, useRef, useState } from 'react';
 import DotLoader from '../spinner/DotLoader';
@@ -19,7 +20,7 @@ export default function ImageWithLoader({
   withLoader = true,
   className,
   style = {},
-  alt = "",
+  alt = '',
   ...rest
 }: ImageWithLoaderProps) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -32,22 +33,25 @@ export default function ImageWithLoader({
   }, []);
 
   return (
-    <div style={{
-      position: 'relative',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: width,
-      height: height,
-      minHeight: '240px', //make sure the loading indicator can be seen properly
-    }} {...rest}>
+    <div
+      style={{
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width,
+        height,
+        minHeight: '240px',
+      }}
+      {...rest}
+    >
       <img
         ref={ref}
         src={src}
         className={cn(
           'object-cover w-full h-full opacity-0',
           'transition-opacity ease-out duration-1000',
-          className
+          className,
         )}
         alt={alt}
         style={isLoaded ? { ...style, opacity: 1 } : { opacity: 0 }}
@@ -68,6 +72,6 @@ export default function ImageWithLoader({
           <DotLoader />
         </div>
       )}
-    </div >
+    </div>
   );
 }
