@@ -17,7 +17,7 @@ export default function PostPreview({
       <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
         <div className="mb-5">
           <Image
-            className='rounded-xl w-full h-[270px] mb-6'
+            className='rounded-xl object-cover w-full h-[270px] mb-6'
             src={coverImage}
             alt={`${title} preview`} />
         </div>
@@ -32,7 +32,10 @@ export default function PostPreview({
       <div className="mb-4">
         <PostDate date={date} />
       </div>
-      <p className="mb-4 line-clamp-3">{excerpt}</p>
+      <Typography
+        variant="body"
+        className="leading-[1.2] line-clamp-3"
+      >{excerpt}</Typography>
     </div>
   );
 }

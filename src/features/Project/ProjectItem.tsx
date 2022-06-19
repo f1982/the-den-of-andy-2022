@@ -33,8 +33,12 @@ export default function ProjectItem({
           />
           <Typography variant="h4" as="h2">{title}</Typography>
           {platform && (<PlatformTag text={platform} />)}
-          {/* can not use typography, because need to implement the cutting off */}
-          <p className="h-12 tracking-tight mb-2" style={{ overflow: 'hidden' }}>{description}</p>
+          <Typography
+            variant="body"
+            className="leading-[1.2] line-clamp-2"
+          >
+            {description}
+          </Typography>
         </div>
       </div>
     </Link>
