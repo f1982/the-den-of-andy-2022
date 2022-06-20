@@ -54,7 +54,7 @@ const en = {
       intro: 'Everybody needs hobbies',
       print3d: {
         title: '3D Printing',
-        description: 'Making RC aeroplane was one of my dream in my childhood. When I was in primary school I have seen some magazines that introduced how to make RC aeroplane, I was shocked by the content and started to absorb the information that I can get. But actually, for a long period of time, I cannot get the right data or cannot find the right place to buy the components I need. Thanks for the Internet development and I can quickly find the groups and tutorials which let me enjoy to make or even design aircraft by myself.',
+        description: 'I started my 3D printing journey in 2021, my first 3D printer was Creality Ender 3 v2. 3D printing is a fun hobby which is low-cost, easy to learn, and useful. It provides a platform to channel creativity with three-dimensional designs. You can easily output your 3D ideas and design from your brain to reality.',
         button1: 'My Thingiverse page',
       },
       rc: {
