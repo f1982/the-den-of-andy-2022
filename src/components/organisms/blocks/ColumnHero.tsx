@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { HeroData } from '../../../types';

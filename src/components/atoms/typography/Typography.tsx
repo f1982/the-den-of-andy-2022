@@ -36,7 +36,7 @@ const headVariant = {
   },
 };
 
-const basicStyle = 'text-on-background leading-tight';
+const basicStyle = 'text-on-background';
 
 const asMap = new Map<string, string>([
   ['h1', 'h1'],
@@ -52,7 +52,7 @@ const styleMap = new Map<string, string>([
   ['h2', 'text-[1.5rem] md:text-[1.85rem] font-bold mt-3 mb-3 tracking-tight'],
   ['h3', 'text-[1.35rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3'],
   ['h4', 'text-base font-bold t leading-tight mt-2 mb-2 tracking-tight'],
-  ['body', 'text-base md:text-base t mt-1 mb-1 tracking-tight'],
+  ['body', 'text-base md:text-base t mt-1 mb-1 tracking-tight leading-6'],
   ['small', 'text-sm t mt-1 mb-1'],
 ]);
 

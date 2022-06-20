@@ -57,7 +57,7 @@ function Home(): React.ReactNode {
       {/* <ModelWithContainer /> */}
       <PageHero image="/static/images/voxel-home.png" className="mb-8 md:mb-16" />
       <Hero
-        className="mb-8 md:mb-16"
+        className="mb-16 md:mb-24"
         image="/static/images/andy-with-bubbles.png"
         title={t<string>('home.intro.greeting')}
         subtitle={t<string>('home.intro.role')}
@@ -78,14 +78,14 @@ function Home(): React.ReactNode {
         )}
       />
 
-      <div className="container mx-auto mb-8 md:mb-16">
+      <div className="container mx-auto mb-16 md:mb-24">
         <Typography variant="h2" as="h1" className="text-center">Working on</Typography>
         <div className="text-center flex flex-row justify-center mb-8">
           <div className="w-6 mr-2"><YouTubeIcon /></div>
           <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
         </div>
       </div>
-      <div className="container mx-auto mb-8 md:mb-16">
+      <div className="container mx-auto mb-16 md:mb-24">
         <LastProjects />
       </div>
       <div className="container mx-auto">

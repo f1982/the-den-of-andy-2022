@@ -35,9 +35,8 @@ export function getPostBySlug(slug, fields = []) {
   const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-  console.log('data', data);
 
-  const postItem:BlogPostData = {
+  const postItem: BlogPostData = {
     slug: '',
     title: '',
     excerpt: '',
@@ -73,6 +72,5 @@ export function getAllPosts(fields = []) {
     .map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
-  console.log('posts:', posts);
   return posts;
 }
