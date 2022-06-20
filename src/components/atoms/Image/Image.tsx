@@ -1,37 +1,89 @@
 /* eslint-disable @next/next/no-img-element */
 import cn from 'classnames';
-import { useRouter } from 'next/router';
-import React from 'react';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import ImageWithLoader from './ImageWithLoader';
+import { useEffect, useRef, useState } from 'react';
+import DotLoader from '../spinner/DotLoader';
 
-export default function ImageComponent({
+interface ImageWithLoaderProps {
+  src: string,
+  width?: number | string,
+  height?: number | string,
+  withLoader?: boolean,
+  className?: string,
+  alt?: string,
+  style?: object
+}
+
+export default function ImageWithLoader({
   src,
   width,
-  height = 'auto',
-  alt,
+  height,
   withLoader = true,
   className,
-  style,
+  style = {},
+  alt = '',
   ...rest
-}:{
-  src:string,
-  width:number|string,
-  height?:number|string,
-  alt:string,
-  withLoader?: boolean,
-  className?:string,
-  style?:object
-}) {
-  const { basePath } = useRouter();
+}: ImageWithLoaderProps) {
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const ref = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (ref.current && ref.current.complete) {
+      setIsLoaded(true);
+    }
+  }, []);
+
   return (
-    <ImageWithLoader
-      className={cn('object-cover', className)}
-      src={`${basePath}${src}`}
-      withLoader
-      {...{ width, height, alt }}
+    <div
+      style={{
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+        minHeight: '240px',
+      }}
       {...rest}
-      style={style}
-    />
+    >
+      <img
+        ref={ref}
+        src={src}
+        className={cn(
+          'object-contain opacity-0',
+          'transition-opacity ease-out duration-1000',
+          className,
+        )}
+        alt={alt}
+        style={
+          isLoaded
+            ? {
+              ...style,
+              ...{
+                width,
+                height,
+                opacity: 1,
+              },
+            }
+            : {
+              opacity: 0,
+            }
+        }
+        onLoad={() => setIsLoaded(true)}
+      />
+      {!isLoaded && (
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        >
+          <DotLoader />
+        </div>
+      )}
+    </div>
   );
 }

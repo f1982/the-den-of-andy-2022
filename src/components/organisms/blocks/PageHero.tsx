@@ -1,8 +1,8 @@
-
 import cn from 'classnames';
 import React, { PropsWithChildren } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../../tailwind.config';
+import Image from '../../atoms/Image/Image';
 
 interface PageHeroProps {
   image?: string,
@@ -34,25 +34,20 @@ function PageHero({
       <div className="flex-1" />
       <div
         className={cn(
-          'mx-auto ml-0 mr-0',
-          'flex flex-col items-center',
+          'mx-auto mt-8 md:mt-16',
         )}
       >
         {!!image && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            className={cn(
-              'mt-8',
-              'md:mt-16',
-              'w-auto',
-              'md:h-1/3',
-              'object-fit',
-            )}
+          <Image
             src={image}
-            alt="andy"
+            alt="hero image"
+            // className="max-h-50%"
+            style={{
+              maxHeight: '540px',
+            }}
           />
         )}
-        {children}
+        {/* {children} */}
       </div>
     </div>
   );

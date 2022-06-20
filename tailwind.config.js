@@ -9,15 +9,6 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
   ],
   theme: {
-    container: {
-      // https://github.com/tailwindlabs/tailwindcss/issues/1102
-      screens: {
-        sm: '100%',
-        md: '100%',
-        lg: '1024px',
-        xl: '1024px',
-      },
-    },
     extend: {
       colors: {
         // the following colours are used in global.css for theme
@@ -48,6 +39,12 @@ module.exports = {
         border: 'var(--border)',
       },
       container: {
+        screens: {
+          sm: '100%',
+          md: '100%',
+          lg: '1024px',
+          xl: '1024px',
+        },
         padding: {
           DEFAULT: '1rem',
           // lg: '8rem',

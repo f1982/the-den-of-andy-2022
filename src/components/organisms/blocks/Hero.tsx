@@ -60,15 +60,14 @@ function Hero({
     >
       <motion.figure
         className={cn(
-          'mb-4 md:mb-6',
-          'md:w-2/5',
-          'object-center rounded',
+          'mb-4 md:mb-6 w-full',
         )}
         variants={itemVariant}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="hero"
+          className="mx-auto w-3/5 md:w-2/5"
           src={image}
         />
       </motion.figure>

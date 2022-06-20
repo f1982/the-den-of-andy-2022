@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from '../../components/atoms/Image/Image';
 import Typography from '../../components/atoms/typography/Typography';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import { ProjectItemData } from '../../types/projects';
@@ -15,7 +16,6 @@ export default function ProjectItem({
 }: ProjectItemData) {
   return (
     <Link key={id} href={`/project/${id}`} passHref>
-      {/* md:p-3 for the space of shadow */}
       <div className="p-0 md:p-2 cursor-pointer">
         <div className="
         bg-background
@@ -26,15 +26,19 @@ export default function ProjectItem({
         hover:shadow-md
         "
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="rounded-xl object-cover w-full h-[300px] mb-6"
-            alt={title}
+          <Image
+            className="rounded-xl object-cover w-full h-[270px] mb-6"
             src={`${PROJECT_IMAGE_URL}/${cover}`}
+            alt={`${title} preview`}
           />
           <Typography variant="h4" as="h2">{title}</Typography>
           {platform && (<PlatformTag text={platform} />)}
-          <p className="h-12 tracking-tight mb-2" style={{ overflow: 'hidden' }}>{description}</p>
+          <Typography
+            variant="body"
+            className="leading-[1.2] line-clamp-2"
+          >
+            {description}
+          </Typography>
         </div>
       </div>
     </Link>

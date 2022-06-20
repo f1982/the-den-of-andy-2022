@@ -2,7 +2,8 @@ module.exports = {
   // must have this when using the secondary domain of the github page
   // basePath: '/the-den-of-andy-2022',
   images: {
-    domains: ['dummyimage.com'],
+    domains: ['github.com'],
+    formats: ['image/avif', 'image/webp'],
     // https://github.com/vercel/next.js/issues/21079
 
     loader: 'imgix',
