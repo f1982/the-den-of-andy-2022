@@ -41,7 +41,10 @@ function PageHero({
           <Image
             src={image}
             alt="hero image"
-            className="max-h-[600px]"
+            // className="max-h-50%"
+            style={{
+              maxHeight: '540px',
+            }}
           />
         )}
         {/* {children} */}
