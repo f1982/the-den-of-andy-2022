@@ -24,38 +24,30 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'yarn'
 
-    - name: Update npm to latest version
-      run: npm i -g npm@latest
-    
-    - name: Install npm packages
-      # why ci not install: https://betterprogramming.pub/npm-ci-vs-npm-install-which-should-you-use-in-your-node-js-projects-51e07cb71e26
-      run: npm ci
-
+    - name: Install packages
+      run: yarn install 
+      
     - name: Build the project
-      run: npm run build --if-present
+      run: yarn build
 
-    # run unit test
     - name: Run unit tests
-      run: npm run test
+      yarn test
 
-    # run e2e test 
     - name: Run Cypress e2e test
       uses: cypress-io/github-action@v2
       with:
-        # build: npm run build
-        start: npm start
+        start: yarn start
       
     - name: Build the website
-      run: npm run export && touch ./out/.nojekyll
+      run: yarn export && touch ./out/.nojekyll
       # This below is used to build storybook static site with whole site together
       # run: npm run export-with-storybook && touch ./out/.nojekyll
       
     - name: Deploy webpages to GitHub pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages # The branch the action should deploy to.
         folder: out # The folder the action should deploy.
     
