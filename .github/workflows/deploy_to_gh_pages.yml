@@ -33,7 +33,7 @@ jobs:
       run: yarn build
 
     - name: Run unit tests
-      yarn test
+      run: yarn test
 
     - name: Run Cypress e2e test
       uses: cypress-io/github-action@v2
