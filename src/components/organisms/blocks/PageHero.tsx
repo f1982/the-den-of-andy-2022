@@ -34,17 +34,14 @@ function PageHero({
       <div className="flex-1" />
       <div
         className={cn(
-          'mx-auto mt-8 md:mt-16',
+          'mt-8 md:mt-16',
         )}
       >
         {!!image && (
           <Image
             src={image}
             alt="hero image"
-            // className="max-h-50%"
-            style={{
-              maxHeight: '540px',
-            }}
+            className="h-[360px] md:h-[540px]"
           />
         )}
         {/* {children} */}
