@@ -11,7 +11,6 @@ export default function MoreStories({ posts }) {
       mb-16
       mx-2 md:mx-auto"
       >
-        {/* <div className="flex flex-wrap mb-3"> */}
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
