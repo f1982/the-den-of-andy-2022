@@ -7,19 +7,34 @@ import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 
 function Header() {
   const [classNames, setClassNames] = useState<string>('');
+  const [isChanging, setIsChanging] = useState<boolean>(false);
+  const [isNarrow, setIsNarrow] = useState<boolean>(false);
 
   useEffect(() => {
     function handleWindowScroll() {
-      if (window.pageYOffset > 60) {
+      if (isChanging) return;
+      if (window.pageYOffset > 60 && isNarrow === false) {
         setClassNames(cn(
           'bg-background',
           'pt-1 pb-0', // mobile top and bottom paddings
           'md:pt-0 md:pb-0', // desktop top and bottom paddings
           'border-b-[1px] border-gray-100',
-
         ));
-      } else if (classNames !== '') {
+        setIsChanging(true);
+        setTimeout(() => {
+          setIsChanging(false);
+        }, 300);
+        // change state
+        setIsNarrow(true);
+      }
+      if (isNarrow && window.pageYOffset < 60) {
         setClassNames('');
+        setIsChanging(true);
+        // setIsNarrow(false);
+        setTimeout(() => {
+          setIsChanging(false);
+        }, 300);
+        setIsNarrow(false);
       }
     }
 
@@ -27,7 +42,7 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', handleWindowScroll);
     };
-  }, [classNames]);
+  }, [classNames, isChanging]);
 
   return (
     <header
@@ -36,7 +51,7 @@ function Header() {
       border-gray-200 
       w-full 
       transition-all 
-      duration-500 
+      duration-300 
       sticky 
       p-2 md:p-10 top-0 z-10 ${classNames}`}
     >
