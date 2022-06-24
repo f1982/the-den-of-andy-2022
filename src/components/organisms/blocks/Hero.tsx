@@ -10,9 +10,9 @@ const containerVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 1.8,
       type: 'tween',
-      staggerChildren: 1.0, // let the child show up by order after a certain delay
+      staggerChildren: 0.6, // let the child show up by order after a certain delay
     },
   },
 };
@@ -28,7 +28,7 @@ const itemVariant = {
   },
   transition: {
     type: 'tween',
-    duration: 2.6,
+    duration: 3.0,
   },
 };
 
@@ -67,18 +67,18 @@ function Hero({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="hero"
-          className="mx-auto w-3/5 md:w-2/5"
+          className="mx-auto w-1/3 md:w-2/5"
           src={image}
         />
       </motion.figure>
-      <div className="text-center lg:w-3/4 w-full">
-        <Typography variant="h2" as="h2">{title}</Typography>
-        {subtitle && <Typography variant="h3" className="font-thin">{subtitle}</Typography>}
+      <div className="lg:w-3/4 w-full">
+        <Typography variant="h2" as="h2" className="text-center">{title}</Typography>
+        {subtitle && <Typography variant="h3" className="font-thin text-center">{subtitle}</Typography>}
         <motion.div
           variants={itemVariant}
           className="mb-8"
         >
-          <Typography variant="body">{description}</Typography>
+          <Typography variant="body" className="text-left">{description}</Typography>
         </motion.div>
         <motion.div
           variants={itemVariant}

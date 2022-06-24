@@ -80,7 +80,7 @@ function Home(): React.ReactNode {
 
       <div className="container mx-auto mb-16 md:mb-24">
         <Typography variant="h2" as="h1" className="text-center">Working on</Typography>
-        <div className="text-center flex flex-row justify-center mb-8">
+        <div className="flex flex-row justify-center mb-8">
           <div className="w-6 mr-2"><YouTubeIcon /></div>
           <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
         </div>
