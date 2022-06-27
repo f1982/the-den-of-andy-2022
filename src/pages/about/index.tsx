@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       <TabTitle pageTitle={t('about.pageTitle')} />
-      <PageHero image="/static/images/andy-working-memoji.png" />
+      <PageHero image="/static/images/page-hero-memoji.png" />
       {/* <PageHero image="/static/images/about-andy-meditation.png" /> */}
       <div className="container mx-auto">
         <PageTitle title={t('about.headline')} description={t('about.description')} />

@@ -16,7 +16,7 @@ function Blog({ allPosts }) {
   return (
     <>
       <TabTitle pageTitle={t<string>('blog.pageTitle')} />
-      <PageHero image="/static/images/blog-typewritter.png" />
+      <PageHero image="/static/images/page-hero-typewriter.png" />
       <div className="container mx-auto">
         {/* title and intro */}
         <PageTitle title={t<string>('blog.headline')} description={t<string>('blog.intro')} />

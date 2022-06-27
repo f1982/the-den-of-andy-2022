@@ -6,11 +6,11 @@ const transition = { duration: 4, yoyo: 100, ease: 'easeInOut' };
 
 export default function SVGAnimation() {
   return (
-    <div className="p-6">
+    <div className="p-4">
       <svg
         viewBox="-2 0 126 120"
-        width="100%"
-        height="100%"
+        width="80%"
+        height="80%"
         className={styles.svgAnimation}
         xmlns="http://www.w3.org/2000/svg"
       >

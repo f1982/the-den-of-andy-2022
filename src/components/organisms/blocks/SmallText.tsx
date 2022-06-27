@@ -33,9 +33,9 @@ function SmallText({
       viewport={{ once: true }}
       className="w-full mb-20 mx-auto flex flex-col items-center justify-center"
     >
-      {!!title && <div><Typography variant="h2">{title}</Typography></div>}
-      {!!image && <ImageComponent className="my-6 rounded-2xl w-full mx-auto" src={image} alt={title} />}
-      <div className="px-4">{description}</div>
+      {!!title && <Typography variant="h2">{title}</Typography>}
+      {!!image && <ImageComponent className="mb-4 rounded-2xl w-full" src={image} alt={title} />}
+      <Typography variant="body">{description}</Typography>
     </motion.div>
   );
 }
