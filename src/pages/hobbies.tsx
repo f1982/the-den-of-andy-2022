@@ -1,6 +1,4 @@
 import { t } from 'i18next';
-import Link from 'next/link';
-import React from 'react';
 import MyButton from '../components/atoms/buttons/Button';
 import TabTitle from '../components/molecules/seo/SiteSEO';
 import ColumnHero from '../components/organisms/blocks/ColumnHero';
@@ -8,7 +6,7 @@ import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
 import PageTitle from '../components/organisms/blocks/PageTitle';
 import {
-  DrawingAlbumURL, RCDevicesAlbumURL, RCPlanesAlbumURL, ThingiverseURL,
+  DrawingAlbumURL, RCDevicesAlbumURL, RCPlanesAlbumURL, ThingiverseURL, YouTubeURL,
 } from '../constants/links';
 
 export default function About() {
@@ -74,8 +72,9 @@ export default function About() {
           description={t<string>('hobbies.video.description')}
           buttons={(
             <div className="flex gap-x-3">
-              <MyButton type="primary">{t<string>('hobbies.video.button1')}</MyButton>
-              <MyButton type="secondary">{t<string>('hobbies.video.button2')}</MyButton>
+              <a target="_blank" href={YouTubeURL} rel="noopener noreferrer">
+                <MyButton type="primary">{t<string>('hobbies.video.button1')}</MyButton>
+              </a>
             </div>
           )}
         />
