@@ -33,6 +33,17 @@ describe('other pages', () => {
   it('check the content should be displayed on the page', () => {
     cy.url().should('include', '/home');
     cy.get('h2').contains('Andy Cao');
+    cy.get('h3').contains('Software Developer');
+    cy.get('h2').contains(/working on/i);
+    cy.get('h2').contains(/my youtube channel/i);
+
+    // need to have the link to about and projects
+    cy.get('a[href*="about"]');
+    cy.get('a[href*="project"]');
+    cy.get('footer ul li').get('button[href*="t&c"]');
+    cy.get('footer ul li').get('button[href*="privacy"]');
+
+    // footer links
     cy.get('button').contains(/terms and conditions/i);
     cy.get('button').contains(/privacy policy/i);
     cy.get('p').contains(/copyright/i);
