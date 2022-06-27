@@ -16,8 +16,8 @@ describe('404 error page', () => {
   it('404 page code and content should be correct', () => {
     cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false }).its('status').should('equal', 404);
     cy.visit(`${Cypress.env('host')}404`, { failOnStatusCode: false });
-    cy.get('button').contains(/back to home/i);
-    cy.get('h1').contains(/can not find the page/i);
+    cy.get('button').contains(/back to homepage/i);
+    cy.get('h2').contains(/can not find the page/i);
   });
 });
 
@@ -78,7 +78,10 @@ describe('other pages', () => {
     cy.url().should('include', '/hobbies');
     // cy.get('h1').contains(/hobbies/i);
     cy.get('#rc-hobby-id h2').contains(/RC Hobby/i);
+
     cy.get('h2').contains(/video editing/i);
+    cy.get('h2').contains(/3d printing/i);
+    cy.get('h2').contains(/drawing/i);
   });
 
   it('about page', () => {
