@@ -39,8 +39,9 @@ export default function ImageWithLoader({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
-        minHeight: '240px',
+        minHeight: '80px',
+        width,
+        height,
       }}
       {...rest}
     >

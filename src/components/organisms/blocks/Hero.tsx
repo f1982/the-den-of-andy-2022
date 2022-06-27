@@ -67,7 +67,7 @@ function Hero({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="hero"
-          className="mx-auto w-1/3 md:w-2/5"
+          className="mx-auto w-2/3 md:w-2/5"
           src={image}
         />
       </motion.figure>

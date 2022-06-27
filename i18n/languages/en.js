@@ -67,7 +67,6 @@ const en = {
         title: 'Drawing',
         description: 'I feel that drawing is an easy way to express your ideas and also an efficient way to communicate with others. When I first time decided to draw something seriously was that when I saw the famous cartoon series of the Dragon Balls which created by Toriyama Akira. I keep this hobby as a tool to record some ideas or an approach for design.',
         button1: 'Drawing Album',
-        button2: 'Drawing Album',
       },
       video: {
         title: 'Video Editing',

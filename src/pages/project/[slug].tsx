@@ -9,20 +9,22 @@ import { getProjectDetail, getProjects } from '../../utils/project-helper';
 function ProjectPage({ detail }: { detail: ProjectItemData }) {
   const router = useRouter();
   const { slug } = router.query;
+
+  const handleClose = () => {
+    router.back();
+  };
+
   return (
     <Modal
       isOpen
-      onRequestClose={() => router.back()}
+      onRequestClose={handleClose}
       style={customModalStyles}
       contentLabel="Post modal"
     >
       <article className="mb-32">
         <div className="flex container mx-auto mt-8">
           <div className="flex-1" />
-          <CloseButton onClick={() => {
-            router.back();
-          }}
-          />
+          <CloseButton onClick={handleClose} />
         </div>
         <ProjectDetail
           slug={slug}

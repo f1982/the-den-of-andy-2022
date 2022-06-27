@@ -1,6 +1,8 @@
 import { t } from 'i18next';
+import Link from 'next/link';
 import React from 'react';
 import MyButton from '../../components/atoms/buttons/Button';
+import Highlight from '../../components/atoms/typography/Highlight';
 import Typography from '../../components/atoms/typography/Typography';
 import SVGAnimation from './SVGAnimation';
 
@@ -27,10 +29,12 @@ export default function DefaultWelcome({
     >
       <SVGAnimation />
       <div className="text-center">
-        <Typography variant="h1" as="h1">{title}</Typography>
+        <Typography variant="h2" as="h1" className="uppercase">{title}</Typography>
         <p className="mb-8 leading-relaxed">{subtitle}</p>
         <div className="flex justify-center">
-          <MyButton href={link} type="primary">{label}</MyButton>
+          <a href={link}>
+            <MyButton type="primary">{label}</MyButton>
+          </a>
         </div>
       </div>
     </div>
