@@ -1,8 +1,4 @@
-import { t } from 'i18next';
-import Link from 'next/link';
-import React from 'react';
 import MyButton from '../../components/atoms/buttons/Button';
-import Highlight from '../../components/atoms/typography/Highlight';
 import Typography from '../../components/atoms/typography/Typography';
 import SVGAnimation from './SVGAnimation';
 

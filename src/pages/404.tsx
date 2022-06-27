@@ -1,21 +1,19 @@
 import { t } from 'i18next';
-import React from 'react';
+import Link from 'next/link';
 import MyButton from '../components/atoms/buttons/Button';
-import DotLoader from '../components/atoms/spinner/DotLoader';
+import Typography from '../components/atoms/typography/Typography';
 import TabTitle from '../components/molecules/seo/SiteSEO';
-import Headline from '../components/atoms/typography/Headline';
 
 function Custom404() {
   return (
     <>
       <TabTitle pageTitle={t('pageNotFound.pageTitle')} />
-      <div className="flex-row border-4 justify-center items-center  justify-items-center content-center">
-        <Headline title={t('pageNotFound.headline')} />
-        <DotLoader />
-        <DotLoader />
-        <div>
-          <MyButton href="/" type="primary">{t<string>('pageNotFound.backButtonLabel')}</MyButton>
-        </div>
+      <div className="flex flex-col justify-center items-center ">
+        <Typography variant="h1">404</Typography>
+        <Typography variant="h2" className="mb-8">{t<string>('pageNotFound.headline')}</Typography>
+        <Link href="/">
+          <MyButton type="primary">{t<string>('pageNotFound.backButtonLabel')}</MyButton>
+        </Link>
       </div>
     </>
   );

@@ -1,6 +1,5 @@
 import cn from 'classnames';
-import { motion } from 'framer-motion';
-import React, {
+import {
   ElementType, HTMLAttributes, PropsWithChildren, ReactNode,
 } from 'react';
 import Highlight from './Highlight';

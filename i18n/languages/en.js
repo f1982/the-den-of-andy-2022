@@ -9,9 +9,9 @@ const en = {
       buttonLabel: 'Enter',
     },
     pageNotFound: {
-      pageTitle: '404',
+      pageTitle: '404, page cannot find.',
       headline: 'Can not find the page...',
-      backButtonLabel: 'back to home',
+      backButtonLabel: 'Back to homepage',
     },
     home: {
       pageTitle: 'Home',
