@@ -9,9 +9,9 @@ const containerVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 1.8,
       type: 'tween',
-      staggerChildren: 1.0, // let the child show up by order after a certain delay
+      staggerChildren: 1.6, // let the child show up by order after a certain delay
     },
   },
 };
@@ -19,7 +19,7 @@ const containerVariant = {
 const itemVariant = {
   hidden: {
     opacity: 0,
-    y: -100,
+    y: -50,
   },
   show: {
     opacity: 1,
@@ -27,7 +27,7 @@ const itemVariant = {
   },
   transition: {
     type: 'tween',
-    duration: 2.6,
+    duration: 1.6,
   },
 };
 
@@ -59,10 +59,12 @@ function ColumnHero({
         alt="hero"
         src={image}
       />
-      <div className="md:w-3/5 flex flex-col md:items-start md:text-left items-center text-center">
+      <div className="md:w-3/5 flex flex-col md:items-start items-center ">
         <Typography variant="h2" as="h2">{title}</Typography>
         {subtitle && <Typography variant="h4" as="h3" className="mt-[0]">{subtitle}</Typography>}
-        <Typography variant="body">{description}</Typography>
+        <motion.div variants={itemVariant}>
+          <Typography variant="body">{description}</Typography>
+        </motion.div>
         <motion.div
           variants={itemVariant}
           className="flex flex gap-x-3 mt-6"

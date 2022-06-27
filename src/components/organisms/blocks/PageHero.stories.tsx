@@ -14,7 +14,7 @@ export default {
 export function Headings() {
   return (
     <div>
-      <PageHero image="http://placekitten.com/800/500" />
+      <PageHero image="http://placekitten.com/1800/1500" />
     </div>
   );
 }

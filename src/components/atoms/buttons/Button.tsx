@@ -6,13 +6,11 @@ interface ButtonPropsType {
   type?: 'primary' | 'secondary';
   children: React.ReactNode | string;
   onClick?: () => void;
-  href?: string;
   className?: string;
 }
-// `onClick`, `href`, and `ref` need to be passed to the DOM element
 // for proper handling
 const Button = React.forwardRef<
-  HTMLAnchorElement, ButtonPropsType
+  HTMLButtonElement, ButtonPropsType
 >((props: ButtonPropsType, ref) => {
   function getStyle(type: string): string {
     const buttonStyle = cn(
@@ -47,21 +45,17 @@ const Button = React.forwardRef<
   }
 
   return (
-    <a href={props.href} onClick={props.onClick} ref={ref}>
-      <button
-        type="button"
-        className={cn(getStyle(props.type), props.className)}
-      >
-        {props.children}
-      </button>
-    </a>
+    <button
+      ref={ref}
+      onClick={props.onClick}
+      type="button"
+      className={cn(getStyle(props.type), props.className)}
+    >
+      {props.children}
+    </button>
   );
 });
 
 Button.displayName = 'Button';
-Button.defaultProps = {
-  onClick: null,
-  href: null,
-};
 
 export default Button;

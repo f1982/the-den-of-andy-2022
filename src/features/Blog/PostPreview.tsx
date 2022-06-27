@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 import Image from '../../components/atoms/Image/Image';
 import Typography from '../../components/atoms/typography/Typography';
@@ -17,9 +18,13 @@ export default function PostPreview({
       <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
         <div className="mb-5">
           <Image
-            className='rounded-xl object-cover w-full h-[270px] mb-6'
+            className={classNames(
+              'rounded-xl object-cover',
+              'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6',
+            )}
             src={coverImage}
-            alt={`${title} preview`} />
+            alt={`${title} preview`}
+          />
         </div>
       </Link>
       <Typography
@@ -35,7 +40,10 @@ export default function PostPreview({
       <Typography
         variant="body"
         className="leading-[1.2] line-clamp-3"
-      >{excerpt}</Typography>
+      >
+        {excerpt}
+
+      </Typography>
     </div>
   );
 }

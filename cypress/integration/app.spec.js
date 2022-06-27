@@ -16,8 +16,8 @@ describe('404 error page', () => {
   it('404 page code and content should be correct', () => {
     cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false }).its('status').should('equal', 404);
     cy.visit(`${Cypress.env('host')}404`, { failOnStatusCode: false });
-    cy.get('button').contains(/back to home/i);
-    cy.get('h1').contains(/can not find the page/i);
+    cy.get('button').contains(/back to homepage/i);
+    cy.get('h2').contains(/can not find the page/i);
   });
 });
 
@@ -33,6 +33,17 @@ describe('other pages', () => {
   it('check the content should be displayed on the page', () => {
     cy.url().should('include', '/home');
     cy.get('h2').contains('Andy Cao');
+    cy.get('h3').contains('Software Developer');
+    cy.get('h2').contains(/working on/i);
+    cy.get('h2').contains(/my youtube channel/i);
+
+    // need to have the link to about and projects
+    cy.get('a[href*="about"]');
+    cy.get('a[href*="project"]');
+    cy.get('footer ul li').get('button[href*="t&c"]');
+    cy.get('footer ul li').get('button[href*="privacy"]');
+
+    // footer links
     cy.get('button').contains(/terms and conditions/i);
     cy.get('button').contains(/privacy policy/i);
     cy.get('p').contains(/copyright/i);
@@ -67,7 +78,10 @@ describe('other pages', () => {
     cy.url().should('include', '/hobbies');
     // cy.get('h1').contains(/hobbies/i);
     cy.get('#rc-hobby-id h2').contains(/RC Hobby/i);
+
     cy.get('h2').contains(/video editing/i);
+    cy.get('h2').contains(/3d printing/i);
+    cy.get('h2').contains(/drawing/i);
   });
 
   it('about page', () => {

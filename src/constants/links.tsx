@@ -5,6 +5,13 @@ import Ins from '../components/atoms/Icons/Ins';
 import LinkedIn from '../components/atoms/Icons/LinkedIn';
 import YouTube from '../components/atoms/Icons/YouTubeIcon';
 
+export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7';
+export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A';
+export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6';
+export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/';
+export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme';
+export const BilibiliURL = 'https://space.bilibili.com/30429048';
+
 const SNS = [
   {
     id: 1,
@@ -32,7 +39,7 @@ const SNS = [
     name: SNSPlatforms.YouTube,
     type: 'outside',
     icon: <YouTube />,
-    link: 'https://www.youtube.com/c/AndyCaoisme',
+    link: YouTubeURL,
     alt: "Andy's Youtube Channel",
     tag: null,
     hidden: 0,
@@ -94,6 +101,16 @@ const SNS = [
     icon: 'douban',
     link: 'https://www.douban.com/people/f1982/',
     alt: null,
+    tag: null,
+    hidden: 1,
+  },
+  {
+    id: 10,
+    name: 'BiliBili',
+    type: 'inside',
+    icon: 'BiliBili',
+    link: BilibiliURL,
+    alt: 'Bili Bili',
     tag: null,
     hidden: 1,
   },
