@@ -1,6 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
 
+// TODO: add new styles for the tags, for example: skill tag and platform tag
+
 function Tags(
   {
     type = 'tech',

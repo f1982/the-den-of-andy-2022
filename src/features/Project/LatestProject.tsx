@@ -37,7 +37,9 @@ function LatestProject({
         {subtitle && <Typography variant="body-bold" className="text-secondary-dark">{subtitle}</Typography>}
         {title && <Typography variant="h3">{title}</Typography>}
         {description && (
-          <Typography variant="body">{description}</Typography>
+          <div className="text-left md:text-center">
+            <Typography variant="body">{description}</Typography>
+          </div>
         )}
       </div>
     </div>

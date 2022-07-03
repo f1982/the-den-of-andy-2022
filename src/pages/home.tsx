@@ -28,18 +28,26 @@ function WorkingOn() {
   );
 }
 
+const LatestProjectImageURL = 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png';
+
 function LastProjects() {
   return (
     <>
-      <Typography variant="h2" className="text-center">Latest Projects</Typography>
+      <Typography
+        variant="h2"
+        className="text-center"
+        style={{ marginBottom: '2rem' }}
+      >
+        Latest Projects
+      </Typography>
       <div className="flex flex-col items-center">
-        <Link id="test" href="/project/chick-fil-a-design-system">
+        <Link id="test" href="/blog/my-wfh-desk-setups-2022">
           <button type="button">
             <LatestProject
-              title="Bluetooth Auto Blinder System"
-              cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
-              description="Watch believe send must. Majority hit lay become impact opportunity ask. Story art single item."
-              platform="iOS, web, Android, Other"
+              title="My desktop setups for WFH 2022"
+              cover={LatestProjectImageURL}
+              description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at home. I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+              platform="Article,Video"
             />
           </button>
         </Link>
@@ -51,9 +59,17 @@ function LastProjects() {
 
 function YouTubeChannelSection() {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div
+      className="flex flex-col items-center text-center"
+    >
       <Typography variant="h2">My YouTube Channel</Typography>
-      <Typography variant="body" className="w-full md:w-1/2">I setup my YouTube channel for recording something I have learnt and share something interesting</Typography>
+      <Typography
+        variant="body"
+        className="w-full md:w-1/2"
+      >
+        I setup my YouTube channel for recording something
+        I have learnt and share something interesting
+      </Typography>
       <div className="mt-8">
         <a href="https://youtube.com/AndyCaoisme" title="Andy YouTube Channel">
           <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,10 +109,10 @@ function Home(): React.ReactNode {
         )}
       />
       <div className="container mx-auto mb-16 md:mb-24">
-        <WorkingOn />
+        <LastProjects />
       </div>
       <div className="container mx-auto mb-16 md:mb-24">
-        <LastProjects />
+        <WorkingOn />
       </div>
       <div className="container mx-auto mb-16 md:mb-24">
         <YouTubeChannelSection />
