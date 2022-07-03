@@ -4,7 +4,7 @@ import Typography from '../../components/atoms/typography/Typography';
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
 import PostDate from '../../components/organisms/article/PostDate';
-import TechStack from './components/TechStack';
+import Tags from '../../components/atoms/tags/Tags';
 import PlatformTag from './components/PlatformTag';
 
 function Project({
@@ -48,7 +48,7 @@ function Project({
       <div className="container mx-auto">
         <div className="mt-10 mb-8">
           <Typography variant="h3">Technology stacks:</Typography>
-          <TechStack stacks={tech.split(',')} />
+          <Tags stacks={tech.split(',')} />
         </div>
         <div className="mb-8">
           <Typography variant="body">{description}</Typography>

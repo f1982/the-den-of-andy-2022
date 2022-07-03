@@ -8,7 +8,7 @@ import Typography from '../components/atoms/typography/Typography';
 import TabTitle from '../components/molecules/seo/SiteSEO';
 import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
-import HighlightProjectItem from '../features/Project/HighlightProjectItem';
+import LatestProject from '../features/Project/LatestProject';
 
 // lazy load 3d model and library will save about 5m
 const ModelWithContainer = dynamic<any>(
@@ -16,19 +16,42 @@ const ModelWithContainer = dynamic<any>(
   { ssr: false },
 );
 
+function WorkingOn() {
+  return (
+    <div className="flex flex-col items-center text-center">
+      <Typography variant="h2">Working on</Typography>
+      <div className="flex flex-row justify-center">
+        <div className="w-6 mr-2"><YouTubeIcon /></div>
+        <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
+      </div>
+    </div>
+  );
+}
+
+const LatestProjectImageURL = 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png';
+
 function LastProjects() {
   return (
     <>
-      <Typography variant="h2" className="text-center">Latest Projects</Typography>
-      <div className="flex flex-col items-center" style={{ rowGap: '2rem', marginTop: '2rem' }}>
-        <HighlightProjectItem
-          id="114"
-          title="Bluetooth Auto Blinder System"
-          cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
-          type="test"
-          description="Watch believe send must. Majority hit lay become impact opportunity ask. Story art single item."
-          platform="iOS, web, Android, Other"
-        />
+      <Typography
+        variant="h2"
+        className="text-center"
+        style={{ marginBottom: '2rem' }}
+      >
+        Latest Projects
+      </Typography>
+      <div className="flex flex-col items-center">
+        <Link id="test" href="/blog/my-wfh-desk-setups-2022">
+          <button type="button">
+            <LatestProject
+              title="My desktop setups for WFH 2022"
+              cover={LatestProjectImageURL}
+              description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at home. I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+              platform="Article,Video"
+            />
+          </button>
+        </Link>
+        {/* can add other one */}
       </div>
     </>
   );
@@ -36,9 +59,17 @@ function LastProjects() {
 
 function YouTubeChannelSection() {
   return (
-    <div className="container mx-auto mb-20 flex flex-col items-center text-center">
+    <div
+      className="flex flex-col items-center text-center"
+    >
       <Typography variant="h2">My YouTube Channel</Typography>
-      <Typography variant="body" className="w-full md:w-1/2">I setup my YouTube channel for recording something I have learnt and share something interesting</Typography>
+      <Typography
+        variant="body"
+        className="w-full md:w-1/2"
+      >
+        I setup my YouTube channel for recording something
+        I have learnt and share something interesting
+      </Typography>
       <div className="mt-8">
         <a href="https://youtube.com/AndyCaoisme" title="Andy YouTube Channel">
           <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +86,7 @@ function Home(): React.ReactNode {
     <>
       <TabTitle pageTitle={t<string>('home.pageTitle')} />
       {/* <ModelWithContainer /> */}
-      <PageHero image="/static/images/page-hero-workspace.png" className="mb-8 md:mb-16" />
+      <PageHero image="/static/images/page-hero-workspace-2.png" className="mb-8 md:mb-16" />
       <Hero
         className="mb-16 md:mb-24"
         image="/static/images/andy-with-bubbles.png"
@@ -77,18 +108,13 @@ function Home(): React.ReactNode {
           </div>
         )}
       />
-
-      <div className="container mx-auto mb-16 md:mb-24">
-        <Typography variant="h2" className="text-center">Working on</Typography>
-        <div className="flex flex-row justify-center mb-8">
-          <div className="w-6 mr-2"><YouTubeIcon /></div>
-          <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
-        </div>
-      </div>
       <div className="container mx-auto mb-16 md:mb-24">
         <LastProjects />
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-16 md:mb-24">
+        <WorkingOn />
+      </div>
+      <div className="container mx-auto mb-16 md:mb-24">
         <YouTubeChannelSection />
       </div>
     </>
