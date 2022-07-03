@@ -1,7 +1,8 @@
 import cn from 'classnames';
-import {
+import React, {
   ElementType, HTMLAttributes, PropsWithChildren, ReactNode,
 } from 'react';
+
 import Highlight from './Highlight';
 // https://www.aleksandrhovhannisyan.com/blog/dynamic-tag-name-props-in-react/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
 
@@ -11,9 +12,10 @@ interface ComponentProps extends HTMLAttributes<HTMLOrSVGElement> {
 }
 
 interface TypographyProps extends ComponentProps {
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'small';
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'body-bold' | 'small';
   as?: any;
   className?: string;
+  style?: React.CSSProperties,
   highlight?: boolean;
 }
 
@@ -43,6 +45,7 @@ const asMap = new Map<string, string>([
   ['h3', 'h3'],
   ['h4', 'h4'],
   ['body', 'p'],
+  ['body-bold', 'p'],
   ['small', 'p'],
 ]);
 
@@ -52,6 +55,7 @@ const styleMap = new Map<string, string>([
   ['h3', 'text-[1.35rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3'],
   ['h4', 'text-base font-bold t leading-tight mt-2 mb-2 tracking-tight'],
   ['body', 'text-base md:text-base t mt-1 mb-1 tracking-tight leading-6'],
+  ['body-bold', 'text-base md:text-base font-bold t mt-1 mb-1 tracking-tight leading-6'],
   ['small', 'text-sm t mt-1 mb-1'],
 ]);
 
@@ -60,6 +64,7 @@ export default function Typography({
   as = undefined,
   className,
   highlight = false,
+  style,
   children,
 }: PropsWithChildren<TypographyProps>) {
   const Component = as || asMap.get(variant);
@@ -68,11 +73,13 @@ export default function Typography({
     highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
   );
   return (
-    <Component className={cn(
-      basicStyle,
-      styleMap.get(variant),
-      className,
-    )}
+    <Component
+      className={cn(
+        basicStyle,
+        styleMap.get(variant),
+        className,
+      )}
+      style={style}
     >
       {getContent(children)}
     </Component>
