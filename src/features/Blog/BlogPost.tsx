@@ -1,7 +1,7 @@
-import React from 'react';
 import Typography from '../../components/atoms/typography/Typography';
 import PostDate from '../../components/organisms/article/PostDate';
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
+import Comments from '../../components/organisms/comment/Comments';
 import { BlogPostData } from '../../types/blog';
 import Avatar from './components/PostAuthorAvatar';
 import PostBody from './components/PostBody';
@@ -22,6 +22,7 @@ function BlogPost({
       </div>
       <LandscapeHero image={coverImage} />
       <PostBody content={content} />
+      <Comments />
     </article>
   );
 }
