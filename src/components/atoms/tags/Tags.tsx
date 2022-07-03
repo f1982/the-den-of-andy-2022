@@ -1,11 +1,13 @@
 import React from 'react';
 import cn from 'classnames';
 
-function TechStack(
+function Tags(
   {
+    type = 'tech',
     stacks,
     className,
   }: {
+    type?: 'tech' | 'platform' | 'skill'
     stacks: string[],
     className?: string
   },
@@ -33,4 +35,4 @@ function TechStack(
   );
 }
 
-export default TechStack;
+export default Tags;

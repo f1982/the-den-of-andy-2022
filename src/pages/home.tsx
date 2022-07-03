@@ -8,7 +8,7 @@ import Typography from '../components/atoms/typography/Typography';
 import TabTitle from '../components/molecules/seo/SiteSEO';
 import Hero from '../components/organisms/blocks/Hero';
 import PageHero from '../components/organisms/blocks/PageHero';
-import HighlightProjectItem from '../features/Project/HighlightProjectItem';
+import LatestProject from '../features/Project/LatestProject';
 
 // lazy load 3d model and library will save about 5m
 const ModelWithContainer = dynamic<any>(
@@ -16,19 +16,34 @@ const ModelWithContainer = dynamic<any>(
   { ssr: false },
 );
 
+function WorkingOn() {
+  return (
+    <div className="flex flex-col items-center text-center">
+      <Typography variant="h2">Working on</Typography>
+      <div className="flex flex-row justify-center">
+        <div className="w-6 mr-2"><YouTubeIcon /></div>
+        <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
+      </div>
+    </div>
+  );
+}
+
 function LastProjects() {
   return (
     <>
       <Typography variant="h2" className="text-center">Latest Projects</Typography>
-      <div className="flex flex-col items-center" style={{ rowGap: '2rem', marginTop: '2rem' }}>
-        <HighlightProjectItem
-          id="114"
-          title="Bluetooth Auto Blinder System"
-          cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
-          type="test"
-          description="Watch believe send must. Majority hit lay become impact opportunity ask. Story art single item."
-          platform="iOS, web, Android, Other"
-        />
+      <div className="flex flex-col items-center">
+        <Link id="test" href="/project/chick-fil-a-design-system">
+          <button type="button">
+            <LatestProject
+              title="Bluetooth Auto Blinder System"
+              cover="https://raw.githubusercontent.com/f1982/planet-of-images/main/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+              description="Watch believe send must. Majority hit lay become impact opportunity ask. Story art single item."
+              platform="iOS, web, Android, Other"
+            />
+          </button>
+        </Link>
+        {/* can add other one */}
       </div>
     </>
   );
@@ -36,7 +51,7 @@ function LastProjects() {
 
 function YouTubeChannelSection() {
   return (
-    <div className="container mx-auto mb-20 flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center">
       <Typography variant="h2">My YouTube Channel</Typography>
       <Typography variant="body" className="w-full md:w-1/2">I setup my YouTube channel for recording something I have learnt and share something interesting</Typography>
       <div className="mt-8">
@@ -55,7 +70,7 @@ function Home(): React.ReactNode {
     <>
       <TabTitle pageTitle={t<string>('home.pageTitle')} />
       {/* <ModelWithContainer /> */}
-      <PageHero image="/static/images/page-hero-workspace.png" className="mb-8 md:mb-16" />
+      <PageHero image="/static/images/page-hero-workspace-2.png" className="mb-8 md:mb-16" />
       <Hero
         className="mb-16 md:mb-24"
         image="/static/images/andy-with-bubbles.png"
@@ -77,18 +92,13 @@ function Home(): React.ReactNode {
           </div>
         )}
       />
-
       <div className="container mx-auto mb-16 md:mb-24">
-        <Typography variant="h2" className="text-center">Working on</Typography>
-        <div className="flex flex-row justify-center mb-8">
-          <div className="w-6 mr-2"><YouTubeIcon /></div>
-          <Typography variant="body">Video: How I build my WFH setups tour 2022</Typography>
-        </div>
+        <WorkingOn />
       </div>
       <div className="container mx-auto mb-16 md:mb-24">
         <LastProjects />
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-16 md:mb-24">
         <YouTubeChannelSection />
       </div>
     </>

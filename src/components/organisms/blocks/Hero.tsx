@@ -38,7 +38,7 @@ function Hero({
   image,
   description,
   buttons,
-  viewPortOnce = false,
+  viewPortOnce = true,
   className,
   id,
 }: HeroData) {

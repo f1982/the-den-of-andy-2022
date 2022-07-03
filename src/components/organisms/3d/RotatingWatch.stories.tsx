@@ -28,7 +28,10 @@ export function Suzanna() {
     <div style={{ width: '100%', height: '600px' }}>
       <ElasticPresentation>
         <Suspense fallback={null}>
-          <RoomModel />
+          <RoomModel
+            rotation={[0, Math.PI, 0]}
+            position={[0, -1, 0]}
+          />
         </Suspense>
         {/* <MyCube /> */}
       </ElasticPresentation>

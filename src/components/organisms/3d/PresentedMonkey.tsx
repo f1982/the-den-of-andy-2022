@@ -1,12 +1,14 @@
 import React, { Suspense } from 'react';
 import ElasticPresentation from './ElasticPresentation';
 import SuzannaModel from './SuzannaModel';
+import RoomModel from './RoomModel';
 
 export default function PresentedMonkey() {
   return (
     <ElasticPresentation>
       <Suspense fallback={null}>
-        <SuzannaModel />
+        {/* <SuzannaModel /> */}
+        <RoomModel />
       </Suspense>
     </ElasticPresentation>
   );
