@@ -9,7 +9,7 @@ function Comments() {
   const status = useScript({
     url: 'https://utteranc.es/client.js',
     theme: 'github-light',
-    issueTerm: 'url',
+    issueTerm: 'pathname',
     repo: 'f1982/the-den-of-andy-2022',
     ref: comment,
   });

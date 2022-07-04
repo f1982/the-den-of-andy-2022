@@ -23,7 +23,7 @@ const useScript = (params) => {
     script.src = url;
     script.async = true;
     script.crossOrigin = 'anonymous';
-    script.setAttribute('label', '💬✨');
+    script.setAttribute('label', 'comment');
     script.setAttribute('theme', theme);
     script.setAttribute('issue-term', issueTerm);
     script.setAttribute('repo', repo);
