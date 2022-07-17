@@ -11,10 +11,8 @@ export default {
   },
 };
 
-export function Headings() {
-  return (
-    <div>
-      <PageHero image="http://placekitten.com/1800/1500" />
-    </div>
-  );
-}
+export const Headings = () => (
+  <div>
+    <PageHero image="http://placekitten.com/1800/1500" />
+  </div>
+);

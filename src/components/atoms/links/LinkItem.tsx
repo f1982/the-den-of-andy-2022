@@ -6,20 +6,20 @@ interface LinkItemSimpleProp {
   children?: React.ReactNode
 }
 
-export default function LinkItemSimple({
+const LinkItemSimple: React.FC<LinkItemSimpleProp> = ({
   link,
   alt,
   children,
-}: LinkItemSimpleProp) {
-  return (
-    <a
-      href={link}
-      className="text-primary-dark"
-      title={alt}
-      target="_blank"
-      rel="noreferrer"
-    >
-      {children}
-    </a>
-  );
-}
+}) => (
+  <a
+    href={link}
+    className="text-primary-dark"
+    title={alt}
+    target="_blank"
+    rel="noreferrer"
+  >
+    {children}
+  </a>
+);
+
+export default LinkItemSimple;

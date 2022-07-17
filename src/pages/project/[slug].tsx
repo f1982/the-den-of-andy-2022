@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import React from 'react';
 import Modal from 'react-modal';
 import CloseButton from '../../components/atoms/buttons/CloseButton';
 import customModalStyles from '../../constants/modelConfig';
@@ -6,7 +7,15 @@ import ProjectDetail from '../../features/Project/ProjectDetail';
 import { ProjectItemData } from '../../types/projects';
 import { getProjectDetail, getProjects } from '../../utils/project-helper';
 
-function ProjectPage({ detail }: { detail: ProjectItemData }) {
+interface ProjectPageProps {
+  detail: ProjectItemData,
+}
+
+type ProjectPageType = React.FC<ProjectPageProps> & {
+  getLayout: (page: React.ReactNode) => React.ReactNode
+}
+
+const ProjectPage: ProjectPageType = ({ detail }) => {
   const router = useRouter();
   const { slug } = router.query;
 
@@ -33,7 +42,7 @@ function ProjectPage({ detail }: { detail: ProjectItemData }) {
       </article>
     </Modal>
   );
-}
+};
 
 ProjectPage.getLayout = function getLayout(page) {
   return (

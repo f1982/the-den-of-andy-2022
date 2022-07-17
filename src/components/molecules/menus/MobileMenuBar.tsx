@@ -9,12 +9,12 @@ import { MenuItemData } from '../../../types';
 import CloseButton from '../../atoms/buttons/CloseButton';
 import Hamburger from '../../atoms/Icons/Hamburger';
 
-function MenuItem({
+const MenuItem: React.FC<MenuItemData> = ({
   link,
   label,
   icon,
   onClick,
-}: MenuItemData) {
+}) => {
   const { pathname } = useRouter();
   const basicStyle = `
           px-4 py-4 
@@ -42,15 +42,15 @@ function MenuItem({
       </button>
     </Link>
   );
-}
+};
 
 interface MobileMenuBarProps {
   menuData: MenuItemData[]
 }
 
-function MobileMenuBar({
+const MobileMenuBar = ({
   menuData,
-}: MobileMenuBarProps) {
+}: MobileMenuBarProps) => {
   const [showing, setShowing] = useState(false);
   const isMobile = useMediaQuery('(max-width: 960px)');
 
@@ -101,6 +101,6 @@ function MobileMenuBar({
       </Modal>
     </>
   );
-}
+};
 
 export default MobileMenuBar;

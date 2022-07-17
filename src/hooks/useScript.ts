@@ -10,8 +10,6 @@ const useScript = (params) => {
 
   const [status, setStatus] = useState(url ? 'loading' : 'idle');
 
-  console.log(params);
-
   // run the useEffect when the url of the script changes
   useEffect(() => {
     if (!url) {

@@ -32,7 +32,7 @@ const itemVariant = {
   },
 };
 
-function Hero({
+const Hero: React.FC<HeroData> = ({
   title,
   subtitle,
   image,
@@ -41,54 +41,52 @@ function Hero({
   viewPortOnce = true,
   className,
   id,
-}: HeroData) {
-  return (
-    <motion.section
+}) => (
+  <motion.section
+    className={cn(
+      'container mx-auto',
+      'flex',
+      'items-center',
+      'justify-center',
+      'flex-col',
+      className,
+    )}
+    variants={containerVariant}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: viewPortOnce }}
+    id={id}
+  >
+    <motion.figure
       className={cn(
-        'container mx-auto',
-        'flex',
-        'items-center',
-        'justify-center',
-        'flex-col',
-        className,
+        'mb-4 md:mb-6 w-full',
       )}
-      variants={containerVariant}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: viewPortOnce }}
-      id={id}
+      variants={itemVariant}
     >
-      <motion.figure
-        className={cn(
-          'mb-4 md:mb-6 w-full',
-        )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        alt="hero"
+        className="mx-auto w-2/3 md:w-2/5"
+        src={image}
+      />
+    </motion.figure>
+    <div className="lg:w-3/4 w-full">
+      <Typography variant="h2" as="h2" className="text-center">{title}</Typography>
+      {subtitle && <Typography variant="h3" className="font-thin text-center">{subtitle}</Typography>}
+      <motion.div
         variants={itemVariant}
+        className="mb-8"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="hero"
-          className="mx-auto w-2/3 md:w-2/5"
-          src={image}
-        />
-      </motion.figure>
-      <div className="lg:w-3/4 w-full">
-        <Typography variant="h2" as="h2" className="text-center">{title}</Typography>
-        {subtitle && <Typography variant="h3" className="font-thin text-center">{subtitle}</Typography>}
-        <motion.div
-          variants={itemVariant}
-          className="mb-8"
-        >
-          <Typography variant="body" className="text-left">{description}</Typography>
-        </motion.div>
-        <motion.div
-          variants={itemVariant}
-          className="flex justify-center"
-        >
-          {buttons}
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-}
+        <Typography variant="body" className="text-left">{description}</Typography>
+      </motion.div>
+      <motion.div
+        variants={itemVariant}
+        className="flex justify-center"
+      >
+        {buttons}
+      </motion.div>
+    </div>
+  </motion.section>
+);
 
 export default Hero;

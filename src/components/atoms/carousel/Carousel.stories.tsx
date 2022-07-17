@@ -17,11 +17,9 @@ const images = [
   'http://placekitten.com/400/300',
 ];
 
-export function Demos() {
-  return (
-    <div style={{ maxWidth: '800px' }}>
-      <p>Demo</p>
-      <Carousel images={images} />
-    </div>
-  );
-}
+export const Demos = () => (
+  <div style={{ maxWidth: '800px' }}>
+    <p>Demo</p>
+    <Carousel images={images} />
+  </div>
+);

@@ -8,13 +8,15 @@ interface PageTitleProps {
   className?: string,
 }
 
-function PageTitle({ title, description, className }: PageTitleProps) {
-  return (
-    <div className={cn('flex flex-col items-center justify-center mb-8 md:mb-16', className)}>
-      <Typography variant="h1" as="h1" className="page-title" highlight>{title}</Typography>
-      <Typography variant="body" className="page-description">{description}</Typography>
-    </div>
-  );
-}
+const PageTitle: React.FC<PageTitleProps> = ({
+  title,
+  description,
+  className,
+}) => (
+  <div className={cn('flex flex-col items-center justify-center mb-8 md:mb-16', className)}>
+    <Typography variant="h1" as="h1" className="page-title" highlight>{title}</Typography>
+    <Typography variant="body" className="page-description">{description}</Typography>
+  </div>
+);
 
 export default PageTitle;
