@@ -17,7 +17,7 @@ type GLTFResult = GLTF & {
 
 const file = 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/suzanna.gltf';
 
-export default function Model(props) {
+const Model = (props) => {
   const ref = useRef<MeshProps>();
   const { nodes, materials } = useGLTF(file) as GLTFResult;
 
@@ -41,5 +41,7 @@ export default function Model(props) {
       />
     </group>
   );
-}
+};
 useGLTF.preload(file);
+
+export default Model;

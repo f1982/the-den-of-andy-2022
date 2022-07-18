@@ -13,7 +13,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export default function WatchModel(rest: GroupProps) {
+const WatchModel = (rest: GroupProps) => {
   const file = 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb';
   useGLTF.preload(file);
   const ref = useRef<MeshProps>();
@@ -52,4 +52,6 @@ export default function WatchModel(rest: GroupProps) {
       />
     </group>
   );
-}
+};
+
+export default WatchModel;

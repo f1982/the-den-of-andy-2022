@@ -13,7 +13,7 @@ interface ImageWithLoaderProps {
   style?: object
 }
 
-export default function ImageWithLoader({
+const ImageWithLoader = ({
   src,
   width,
   height,
@@ -22,7 +22,7 @@ export default function ImageWithLoader({
   style = {},
   alt = '',
   ...rest
-}: ImageWithLoaderProps) {
+}: ImageWithLoaderProps) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const ref = useRef<HTMLImageElement>(null);
 
@@ -87,4 +87,6 @@ export default function ImageWithLoader({
       )}
     </div>
   );
-}
+};
+
+export default ImageWithLoader;

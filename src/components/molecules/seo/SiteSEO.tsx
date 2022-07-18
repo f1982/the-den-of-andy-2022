@@ -2,14 +2,13 @@ import { t } from 'i18next';
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import SEO from '../../../../next-seo';
+import { LOCAL_DEV_URL } from '../../../constants/paths';
 
-const LOCAL_DEV_URL = 'http://localhost:3000';
-
-export default function SiteSEO({
+const SiteSEO = ({
   pageTitle,
 }: {
   pageTitle: string,
-}) {
+}) => {
   const router = useRouter();
   // get site url
   let hostUrl = process.env.NEXT_PUBLIC_APP_SITE_URL;
@@ -27,4 +26,6 @@ export default function SiteSEO({
       title={`${t(pageTitle)} - ${SEO.title}`}
     />
   );
-}
+};
+
+export default SiteSEO;

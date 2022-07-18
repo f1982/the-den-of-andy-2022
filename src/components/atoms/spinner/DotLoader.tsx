@@ -1,10 +1,13 @@
+import React from 'react';
 import styles from './threedots.module.css';
 
-function DotLoader({
+interface DotLoaderProps {
+  color?: 'primary' | 'secondary'
+}
+
+const DotLoader: React.FC<DotLoaderProps> = ({
   color = 'primary',
-}:{
-  color?:'primary'|'secondary'
-}) {
+}) => {
   const dotColor = `bg-${color}-medium`;
   return (
     <div aria-busy="true" role="alert" className={styles.ldsEllipsis}>
@@ -14,6 +17,6 @@ function DotLoader({
       <div className={dotColor} />
     </div>
   );
-}
+};
 
 export default DotLoader;

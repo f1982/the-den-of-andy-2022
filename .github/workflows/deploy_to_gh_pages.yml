@@ -5,11 +5,10 @@ name: GitHub Pages deployment
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,37 +17,36 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
+      - uses: actions/checkout@v2
 
-    - name: Install packages
-      run: yarn install 
-      
-    - name: Build the project
-      run: yarn build
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
-    - name: Run unit tests
-      run: yarn test
+      - name: Install packages
+        run: yarn install
 
-    - name: Run Cypress e2e test
-      uses: cypress-io/github-action@v2
-      with:
-        start: yarn start
-      
-    - name: Build the website
-      run: yarn export && touch ./out/.nojekyll
-      # This below is used to build storybook static site with whole site together
-      # run: npm run export-with-storybook && touch ./out/.nojekyll
-      
-    - name: Deploy webpages to GitHub pages 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: out # The folder the action should deploy.
-    
-    
+      - name: Build the project
+        run: yarn build
+
+      - name: Run unit tests
+        run: yarn test
+
+      - name: Run Cypress e2e test
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
+
+      - name: Build the website
+        run: yarn export && touch ./out/.nojekyll
+        # This below is used to build storybook static site with whole site together
+        # run: npm run export-with-storybook && touch ./out/.nojekyll
+
+      - name: Deploy webpages to GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: out # The folder the action should deploy.
+

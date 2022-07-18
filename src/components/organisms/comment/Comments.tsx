@@ -1,12 +1,11 @@
 
 import React, { useRef } from 'react';
-
 import useScript from '../../../hooks/useScript';
 
-function Comments() {
+const Comments: React.FC = () => {
   const comment = useRef(null);
 
-  const status = useScript({
+  useScript({
     url: 'https://utteranc.es/client.js',
     theme: 'github-light',
     issueTerm: 'pathname',
@@ -19,6 +18,6 @@ function Comments() {
       <div ref={comment} />
     </div>
   );
-}
+};
 
 export default Comments;

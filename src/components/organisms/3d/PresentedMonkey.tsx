@@ -3,13 +3,13 @@ import ElasticPresentation from './ElasticPresentation';
 import SuzannaModel from './SuzannaModel';
 import RoomModel from './RoomModel';
 
-export default function PresentedMonkey() {
-  return (
-    <ElasticPresentation>
-      <Suspense fallback={null}>
-        {/* <SuzannaModel /> */}
-        <RoomModel />
-      </Suspense>
-    </ElasticPresentation>
-  );
-}
+const PresentedMonkey = () => (
+  <ElasticPresentation>
+    <Suspense fallback={null}>
+      {/* <SuzannaModel /> */}
+      <RoomModel />
+    </Suspense>
+  </ElasticPresentation>
+);
+
+export default PresentedMonkey;

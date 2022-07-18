@@ -9,11 +9,11 @@ interface PageHeroProps {
   className?: string
 }
 
-function PageHero({
+const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
   image,
   children,
   className,
-}: PropsWithChildren<PageHeroProps>) {
+}) => {
   // get theme primary color from tailwind config
   const fullConfig = resolveConfig(tailwindConfig);
   const primary = fullConfig.theme.colors.primary.medium;
@@ -48,6 +48,6 @@ function PageHero({
       </div>
     </div>
   );
-}
+};
 
 export default PageHero;

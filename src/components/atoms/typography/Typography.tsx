@@ -59,14 +59,14 @@ const styleMap = new Map<string, string>([
   ['small', 'text-sm t mt-1 mb-1'],
 ]);
 
-export default function Typography({
+const Typography: React.FC<PropsWithChildren<TypographyProps>> = ({
   variant = 'h1',
   as = undefined,
   className,
   highlight = false,
   style,
   children,
-}: PropsWithChildren<TypographyProps>) {
+}) => {
   const Component = as || asMap.get(variant);
   // const withAnimation = ['h1', 'h2'].includes(variant);
   const getContent = (contentTitle: ReactNode) => (
@@ -84,4 +84,6 @@ export default function Typography({
       {getContent(children)}
     </Component>
   );
-}
+};
+
+export default Typography;

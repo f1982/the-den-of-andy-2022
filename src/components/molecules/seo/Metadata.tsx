@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { HOME_OG_IMAGE_URL } from '../../../constants/paths';
 
-export default function Metadata() {
+const Metadata = () => {
   const { basePath } = useRouter();
   return (
     <Head>
@@ -42,4 +42,6 @@ export default function Metadata() {
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );
-}
+};
+
+export default Metadata;

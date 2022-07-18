@@ -5,11 +5,9 @@ export default {
   component: NucleusScene,
 };
 
-export function Demos() {
-  return (
-    <div style={{ backgroundColor: '#06092c', height: '100vh' }}>
-      <p>Nucleus Demo</p>
-      <NucleusScene />
-    </div>
-  );
-}
+export const Demos = () => (
+  <div style={{ backgroundColor: '#06092c', height: '100vh' }}>
+    <p>Nucleus Demo</p>
+    <NucleusScene />
+  </div>
+);

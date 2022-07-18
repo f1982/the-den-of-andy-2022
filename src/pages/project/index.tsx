@@ -5,9 +5,14 @@ import TabTitle from '../../components/molecules/seo/SiteSEO';
 import PageHero from '../../components/organisms/blocks/PageHero';
 import PageTitle from '../../components/organisms/blocks/PageTitle';
 import ProjectList from '../../features/Project/ProjectList';
+import { ProjectItemData } from '../../types/projects';
 import { getProjects } from '../../utils/project-helper';
 
-export default function Projects({ projects }) {
+const Projects = ({
+  projects,
+}: {
+  projects: ProjectItemData[]
+}) => {
   const router = useRouter();
   let { type } = router.query;
   // show coding project in default
@@ -25,7 +30,9 @@ export default function Projects({ projects }) {
       </div>
     </>
   );
-}
+};
+
+export default Projects;
 
 export async function getStaticProps() {
   const { projects } = getProjects();

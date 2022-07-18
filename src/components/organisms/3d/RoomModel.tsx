@@ -95,7 +95,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export default function Model(rest: GroupProps) {
+const Model = (rest: GroupProps) => {
   const group = useRef<THREE.Group>();
   const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf') as GLTFResult;
   return (
@@ -475,6 +475,8 @@ export default function Model(rest: GroupProps) {
       />
     </group>
   );
-}
+};
+
+export default Model;
 
 useGLTF.preload('https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf');

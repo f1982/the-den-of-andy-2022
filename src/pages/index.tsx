@@ -5,7 +5,7 @@ import SiteSEO from '../components/molecules/seo/SiteSEO';
 import DebugInfo from '../components/organisms/debug/DebugInfo';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 
-function Index() {
+const Index = () => {
   const { t } = useTranslation();
 
   return (
@@ -21,7 +21,7 @@ function Index() {
       </div>
     </>
   );
-}
+};
 
 Index.getLayout = function getLayout(page) {
   return (

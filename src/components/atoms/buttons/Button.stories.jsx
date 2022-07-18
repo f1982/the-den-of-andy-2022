@@ -5,9 +5,7 @@ export default {
   component: Button,
 };
 
-function Template(args) {
-  return <Button {...args} />;
-}
+const Template = (args) => <Button {...args} />;
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = { type: 'primary', children: 'Primary Button' };

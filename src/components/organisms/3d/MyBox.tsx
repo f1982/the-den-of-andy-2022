@@ -4,7 +4,7 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import PostEffect from '../../../utils/3d/PostEffect';
 import tailwindConfig from '../../../../tailwind.config';
 
-export function MyCube(props) {
+export const MyCube = (props) => {
   const mesh = useRef<MeshProps>();
 
   const fullConfig = resolveConfig(tailwindConfig);
@@ -23,9 +23,9 @@ export function MyCube(props) {
       <meshStandardMaterial color="#ffcc00" />
     </mesh>
   );
-}
+};
 
-export default function MyBox() {
+const MyBox = () => {
   const fullConfig = resolveConfig(tailwindConfig);
   return (
     <Canvas dpr={2} style={{ height: '600px' }}>
@@ -39,4 +39,6 @@ export default function MyBox() {
       <PostEffect />
     </Canvas>
   );
-}
+};
+
+export default MyBox;
