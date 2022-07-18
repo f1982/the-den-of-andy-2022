@@ -17,7 +17,6 @@ type ProjectPageType = React.FC<ProjectPageProps> & {
 
 const ProjectPage: ProjectPageType = ({ detail }) => {
   const router = useRouter();
-  const { slug } = router.query;
 
   const handleClose = () => {
     router.back();
@@ -35,10 +34,7 @@ const ProjectPage: ProjectPageType = ({ detail }) => {
           <div className="flex-1" />
           <CloseButton onClick={handleClose} />
         </div>
-        <ProjectDetail
-          slug={slug}
-          {...detail}
-        />
+        <ProjectDetail {...detail} />
       </article>
     </Modal>
   );
