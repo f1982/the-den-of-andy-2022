@@ -49,6 +49,7 @@ const aboutSubmenu: MenuItemData[] = [
     label: 'Contact',
   },
 ];
+
 export {
   BLOG_PATH,
   menuData,

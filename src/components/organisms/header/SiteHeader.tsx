@@ -5,7 +5,7 @@ import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar';
 import Logo from '../../atoms/logo/Logo';
 import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 
-function Header() {
+const Header = () => {
   const [classNames, setClassNames] = useState<string>('');
   const [isChanging, setIsChanging] = useState<boolean>(false);
   const [isNarrow, setIsNarrow] = useState<boolean>(false);
@@ -73,7 +73,7 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 // Header.whyDidYouRender = true;
 Header.whyDidYouRender = {

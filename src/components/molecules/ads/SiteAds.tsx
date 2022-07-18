@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-function GoogleAds() {
+const GoogleAds = () => {
   if (process.env.NEXT_PUBLIC_APP_GAD !== 'on') {
     return (<div />);
   }
@@ -25,10 +25,8 @@ function GoogleAds() {
       />
     </div>
   );
-}
+};
 
-function GoogleAdsBanner() {
-  return <div>banner</div>;
-}
+const GoogleAdsBanner = () => <div>banner</div>;
 
 export { GoogleAds, GoogleAdsBanner };

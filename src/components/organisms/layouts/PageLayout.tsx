@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import React, { PropsWithChildren, useEffect } from 'react';
 import { logPageView } from '../../molecules/analysis/SiteAnalystic';
 import Metadata from '../../molecules/seo/Metadata';
 import Footer from '../footer/SiteFooter';
 import Header from '../header/SiteHeader';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
 
   useEffect(() => {
@@ -28,4 +28,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
     </>
   );
-}
+};
+
+export default Layout;

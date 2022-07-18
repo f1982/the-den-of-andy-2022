@@ -41,9 +41,10 @@ module.exports = {
     // 'react/prefer-stateless-function': [
     //   'off',
     // ],
-    'react/function-component-definition': [2, {
-      namedComponents: 'function-declaration',
-    }],
+    'react/function-component-definition': [
+      // 2, { namedComponents: 'function-declaration' },
+      2, { namedComponents: 'arrow-function' },
+    ],
     'react/prop-types': 'off',
     // Since we do not use prop-types
     'react/require-default-props': 'off',

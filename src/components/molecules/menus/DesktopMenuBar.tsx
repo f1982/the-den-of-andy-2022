@@ -5,7 +5,7 @@ import React from 'react';
 import { MenuItemData } from '../../../types/index';
 import styles from './menu.module.css';
 
-function MenuItem({ link, label, icon }: MenuItemData) {
+const MenuItem: React.FC<MenuItemData> = ({ link, label, icon }) => {
   const { pathname } = useRouter();
   return (
     <Link href={link} passHref>
@@ -15,18 +15,16 @@ function MenuItem({ link, label, icon }: MenuItemData) {
       </a>
     </Link>
   );
-}
+};
 
-function DesktopMenuBar({ menuData }:{menuData:MenuItemData[]}) {
-  return (
-    <nav className={cn('hidden md:flex md:flex-row', styles.navContainer)}>
-      {
-        menuData.map((item) => (
-          <MenuItem key={item.link} {...item} />
-        ))
-      }
-    </nav>
-  );
-}
+const DesktopMenuBar = ({ menuData }: { menuData: MenuItemData[] }) => (
+  <nav className={cn('hidden md:flex md:flex-row', styles.navContainer)}>
+    {
+      menuData.map((item) => (
+        <MenuItem key={item.link} {...item} />
+      ))
+    }
+  </nav>
+);
 
 export default DesktopMenuBar;

@@ -1,14 +1,25 @@
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
+import React from 'react';
 import CloseButton from '../../components/atoms/buttons/CloseButton';
 import SiteSEO from '../../components/molecules/seo/SiteSEO';
 import customModalStyles from '../../constants/modelConfig';
 import BlogPost from '../../features/Blog/BlogPost';
+import { BlogPostData } from '../../types/blog';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
 
-export default function Post({ post, preview }) {
+interface PostProps {
+  post: BlogPostData;
+  preview: string;
+}
+
+type PostPageType = React.FC<PostProps> & {
+  getLayout: (page: React.ReactNode) => React.ReactNode
+}
+
+const Post: PostPageType = ({ post, preview }) => {
   const router = useRouter();
 
   // if the slug is not correct url, it will led user to the 404 page
@@ -43,7 +54,7 @@ export default function Post({ post, preview }) {
       )}
     </Modal>
   );
-}
+};
 
 Post.getLayout = function getLayout(page) {
   return (
@@ -52,6 +63,8 @@ Post.getLayout = function getLayout(page) {
     </div>
   );
 };
+
+export default Post;
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [

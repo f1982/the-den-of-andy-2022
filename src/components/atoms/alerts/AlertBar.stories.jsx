@@ -5,18 +5,14 @@ export default {
   component: AlertBar,
 };
 
-export function Demos() {
-  return (
-    <div>
-      <p>Demo</p>
-      <AlertBar type={AlertType.Warning}>This is Warning Bar</AlertBar>
-      <AlertBar type={AlertType.Error}>This is Error Bar</AlertBar>
-    </div>
-  );
-}
-function Template(args) {
-  return <AlertBar {...args} />;
-}
+export const Demos = () => (
+  <div>
+    <p>Demo</p>
+    <AlertBar type={AlertType.Warning}>This is Warning Bar</AlertBar>
+    <AlertBar type={AlertType.Error}>This is Error Bar</AlertBar>
+  </div>
+);
+const Template = (args) => <AlertBar {...args} />;
 
 export const WarningAlertBar = Template.bind({});
 WarningAlertBar.args = {

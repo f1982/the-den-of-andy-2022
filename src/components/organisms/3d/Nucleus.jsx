@@ -2,16 +2,16 @@
 // https://varun.ca/modular-webgl/
 import { Center, OrbitControls } from '@react-three/drei';
 import {
-  Canvas, MeshProps, useFrame,
+  Canvas, useFrame,
 } from '@react-three/fiber';
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import * as THREE from 'three';
 
 const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false };
 const SIDE = 10;
 
-function Nucleus(props) {
+const Nucleus = (props) => {
   const mesh = useRef();
 
   // rotate the box
@@ -42,26 +42,26 @@ function Nucleus(props) {
   //  <meshNormalMaterial attach="material" />
   // </mesh>
   );
-}
+};
 
-export default function NucleusScene() {
-  return (
-    <Canvas
-      dpr={2}
-      style={{ height: '30vh' }}
-      camera={{ position: new THREE.Vector3(8, 5, 40) }}
-    >
-      <color attach="background" args={['#06092c']} />
-      <pointLight position={[-20, 10, 25]} />
-      <gridHelper
-        args={[100, 20, '#4D089A', '#4D089A']}
-        position={[0, 0, -10]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <Center>
-        <Nucleus />
-      </Center>
-      <OrbitControls enableRotate enableZoom />
-    </Canvas>
-  );
-}
+const NucleusScene = () => (
+  <Canvas
+    dpr={2}
+    style={{ height: '30vh' }}
+    camera={{ position: new THREE.Vector3(8, 5, 40) }}
+  >
+    <color attach="background" args={['#06092c']} />
+    <pointLight position={[-20, 10, 25]} />
+    <gridHelper
+      args={[100, 20, '#4D089A', '#4D089A']}
+      position={[0, 0, -10]}
+      rotation={[-Math.PI / 2, 0, 0]}
+    />
+    <Center>
+      <Nucleus />
+    </Center>
+    <OrbitControls enableRotate enableZoom />
+  </Canvas>
+);
+
+export default NucleusScene;

@@ -8,7 +8,7 @@ import { Extrude, OrbitControls, Center } from '@react-three/drei';
 const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false };
 const SIDE = 10;
 
-function Block(props) {
+const Block = (props) => {
   const shape = React.useMemo(() => {
     // eslint-disable-next-line no-underscore-dangle
     const _shape = new THREE.Shape();
@@ -41,27 +41,27 @@ function Block(props) {
       />
     </Extrude>
   );
-}
+};
 
-export default function BlockScene() {
-  return (
-    <Canvas
-      dpr={2}
-      style={{ height: '30vh' }}
-      camera={{ position: new THREE.Vector3(8, 5, 40) }}
-      className="mb-[3rem]"
-    >
-      <color attach="background" args={['#fff']} />
-      <pointLight position={[-20, 10, 25]} />
-      <gridHelper
-        args={[200, 20, '#4D089A', '#4D089A']}
-        position={[0, 0, -10]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <Center>
-        <Block />
-      </Center>
-      <OrbitControls enableRotate enableZoom={false} />
-    </Canvas>
-  );
-}
+const BlockScene = () => (
+  <Canvas
+    dpr={2}
+    style={{ height: '30vh' }}
+    camera={{ position: new THREE.Vector3(8, 5, 40) }}
+    className="mb-[3rem]"
+  >
+    <color attach="background" args={['#fff']} />
+    <pointLight position={[-20, 10, 25]} />
+    <gridHelper
+      args={[200, 20, '#4D089A', '#4D089A']}
+      position={[0, 0, -10]}
+      rotation={[-Math.PI / 2, 0, 0]}
+    />
+    <Center>
+      <Block />
+    </Center>
+    <OrbitControls enableRotate enableZoom={false} />
+  </Canvas>
+);
+
+export default BlockScene;

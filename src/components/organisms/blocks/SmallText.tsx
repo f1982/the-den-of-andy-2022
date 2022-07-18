@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
+import React from 'react';
 import Typography from '../../atoms/typography/Typography';
 import ImageComponent from '../../atoms/Image/Image';
 
@@ -16,28 +17,28 @@ const containerVariant = {
   },
 };
 
-function SmallText({
+interface SmallTextProps {
+  title?: string;
+  image?: string;
+  description: string;
+}
+
+const SmallText: React.FC<SmallTextProps> = ({
   description,
   title,
   image,
-}: {
-  title?: string,
-  image?: string,
-  description: string
-}) {
-  return (
-    <motion.div
-      variants={containerVariant}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="w-full mb-20 mx-auto flex flex-col items-center justify-center"
-    >
-      {!!title && <Typography variant="h2">{title}</Typography>}
-      {!!image && <ImageComponent className="mb-4 rounded-2xl w-full" src={image} alt={title} />}
-      <Typography variant="body">{description}</Typography>
-    </motion.div>
-  );
-}
+}) => (
+  <motion.div
+    variants={containerVariant}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true }}
+    className="w-full mb-20 mx-auto flex flex-col items-center justify-center"
+  >
+    {!!title && <Typography variant="h2">{title}</Typography>}
+    {!!image && <ImageComponent className="mb-4 rounded-2xl w-full" src={image} alt={title} />}
+    <Typography variant="body">{description}</Typography>
+  </motion.div>
+);
 
 export default SmallText;

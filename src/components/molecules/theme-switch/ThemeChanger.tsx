@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 const themes = [{ name: 'Light' }, { name: 'Dark' }, { name: 'Emerald' }, { name: 'Pink' }];
 
-function ThemeChanger() {
+const ThemeChanger: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -23,7 +23,6 @@ function ThemeChanger() {
         Theme:
         <strong>{theme}</strong>
       </span>
-      {/* <div> */}
       <select
         name="theme"
         id="theme-select"
@@ -38,9 +37,8 @@ function ThemeChanger() {
           </option>
         ))}
       </select>
-      {/* </div> */}
     </div>
   );
-}
+};
 
 export default ThemeChanger;

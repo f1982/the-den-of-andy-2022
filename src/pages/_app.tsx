@@ -7,7 +7,16 @@ import Layout from '../components/organisms/layouts/PageLayout';
 import { initGA } from '../components/molecules/analysis/SiteAnalystic';
 import '../styles/global.css';
 
-function MyApp({ Component, pageProps }) {
+const MyApp: React.FC = (
+  {
+    Component,
+    pageProps,
+  }:
+    {
+      Component: any,
+      pageProps: any
+    },
+) => {
   useEffect(() => {
     initGA();
   }, []);
@@ -24,6 +33,6 @@ function MyApp({ Component, pageProps }) {
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default MyApp;

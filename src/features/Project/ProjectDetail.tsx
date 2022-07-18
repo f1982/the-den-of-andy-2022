@@ -1,22 +1,21 @@
-import { useRouter } from 'next/router';
-import Carousel from '../../components/atoms/carousel/Carousel';
+import React from 'react';
+import Tags from '../../components/atoms/tags/Tags';
 import Typography from '../../components/atoms/typography/Typography';
+import PostDate from '../../components/organisms/article/PostDate';
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
 import { PROJECT_IMAGE_URL } from '../../constants/paths';
-import PostDate from '../../components/organisms/article/PostDate';
-import Tags from '../../components/atoms/tags/Tags';
+import { ProjectItemData } from '../../types/projects';
 import PlatformTag from './components/PlatformTag';
 
-function Project({
-  slug, title, cover,
+const Project: React.FC<ProjectItemData> = ({
+  title,
+  cover,
   tech,
   platform,
   start, end,
   description, responsibility,
   images,
-}) {
-  const router = useRouter();
-
+}) => {
   function getCarousel(imageList, alt) {
     if (!imageList) return null;
     const fullPathImages = imageList.map((image) => `${PROJECT_IMAGE_URL}/${image}`);
@@ -64,6 +63,6 @@ function Project({
       </div>
     </>
   );
-}
+};
 
 export default Project;
