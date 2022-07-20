@@ -16,6 +16,7 @@ const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%',
+      marginBottom: '2rem',
     }}
   >
     <div className="flex-1" />
