@@ -12,7 +12,7 @@ const containerVariant = {
     transition: {
       duration: 1.8,
       type: 'tween',
-      staggerChildren: 0.6, // let the child show up by order after a certain delay
+      staggerChildren: 1.6, // let the child show up by order after a certain delay
     },
   },
 };
@@ -57,19 +57,14 @@ const Hero: React.FC<HeroData> = ({
     viewport={{ once: viewPortOnce }}
     id={id}
   >
-    <motion.figure
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
       className={cn(
-        'mb-4 md:mb-6 w-full',
+        'mx-auto w-2/3 md:w-2/5',
       )}
-      variants={itemVariant}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        alt="hero"
-        className="mx-auto w-2/3 md:w-2/5"
-        src={image}
-      />
-    </motion.figure>
+      alt="hero"
+      src={image}
+    />
     <div className="lg:w-3/4 w-full">
       <Typography variant="h2" as="h2" className="text-center">{title}</Typography>
       {subtitle && <Typography variant="h3" className="font-thin text-center">{subtitle}</Typography>}
