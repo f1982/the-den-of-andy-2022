@@ -38,7 +38,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   image,
   description,
   buttons,
-  viewPortOnce = false,
+  viewPortOnce = true,
   direction = 'l2r',
   className,
 }) => (

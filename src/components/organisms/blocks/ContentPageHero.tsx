@@ -6,7 +6,10 @@ interface LandscapeHeroProps {
   text?: string
 }
 
-const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
+const LandscapeHero: React.FC<LandscapeHeroProps> = ({
+  image,
+  text,
+}) => (
   <div
     style={{
       display: 'flex',
@@ -16,6 +19,7 @@ const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%',
+      marginBottom: '2rem',
     }}
   >
     <div className="flex-1" />
