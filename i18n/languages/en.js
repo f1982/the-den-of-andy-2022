@@ -71,7 +71,7 @@ const en = {
       video: {
         title: 'Video Editing',
         description: 'I don’t think human’s memory is very stable and accurate. Sometimes, when we recall the things that happened before we can only remember the blurred pictures. I consider video as an external memory for very precise and detailed information. Especially when I have my child, I try to record all the key memories.',
-        button1: 'Youtube',
+        button1: 'YouTube',
         button2: 'Bilibili',
       },
     },
