@@ -27,10 +27,14 @@ const Post: PostPageType = ({ post, preview }) => {
     return <ErrorPage statusCode={404} />;
   }
 
+  const handleClose = () => {
+    router.push('/blog');
+  };
+
   return (
     <Modal
       isOpen
-      onRequestClose={() => router.push('/blog')}
+      onRequestClose={handleClose}
       style={customModalStyles}
       contentLabel="Post modal"
     >
@@ -42,10 +46,7 @@ const Post: PostPageType = ({ post, preview }) => {
         <>
           <div className="flex container mx-auto mt-3">
             <div className="flex-1" />
-            <CloseButton onClick={() => {
-              router.back();
-            }}
-            />
+            <CloseButton onClick={handleClose} />
           </div>
           <article className="mb-32">
             <BlogPost {...post} />

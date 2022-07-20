@@ -6,7 +6,10 @@ interface LandscapeHeroProps {
   text?: string
 }
 
-const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
+const LandscapeHero: React.FC<LandscapeHeroProps> = ({
+  image,
+  text,
+}) => (
   <div
     style={{
       display: 'flex',
