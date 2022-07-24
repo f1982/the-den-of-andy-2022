@@ -4,7 +4,7 @@ import PostDate from '../../components/organisms/article/PostDate';
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
 import Comments from '../../components/organisms/comment/Comments';
 import { BlogPostData } from '../../types/blog';
-import Avatar from './components/PostAuthorAvatar';
+import Avatar from '../../components/atoms/avatar/Avatar';
 import PostBody from './components/PostBody';
 
 const BlogPost: React.FC<Partial<BlogPostData>> = ({
