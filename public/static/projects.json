@@ -77,7 +77,7 @@
         "extension": ""
       },
       {
-        "id": "116",
+        "id": "lucid-dream-hinter-device",
         "type": "diy",
         "platform": "",
         "title": "Dream hinter",
@@ -103,7 +103,7 @@
         "extension": "dream-hinter"
       },
       {
-        "id": "114",
+        "id": "cyber-vertex-news-portal",
         "type": "coding",
         "platform": "Web",
         "title": "Cyber Vertex News Portal",
@@ -128,7 +128,7 @@
         "quote": ""
       },
       {
-        "id": "113",
+        "id": "cctv-cntv-website",
         "type": "coding",
         "platform": "Web",
         "title": "CCTV.com",
@@ -152,7 +152,7 @@
         "quote": ""
       },
       {
-        "id": "112",
+        "id": "qu-duo-duo",
         "type": "coding",
         "platform": "Wechat",
         "title": "QDD",
@@ -176,7 +176,7 @@
         "quote": "It's a very good game"
       },
       {
-        "id": "111",
+        "id": "cctv-video-app",
         "type": "coding",
         "platform": "iOS",
         "title": "CBox",
@@ -200,7 +200,7 @@
         "quote": "cool"
       },
       {
-        "id": "110",
+        "id": "thousand-dogs",
         "type": "game",
         "platform": "Wechat",
         "title": "Thousand Dogs",
@@ -224,7 +224,7 @@
         "quote": ""
       },
       {
-        "id": "109",
+        "id": "time-signet",
         "type": "coding",
         "platform": "Wechat",
         "title": "Time Signet",
@@ -248,7 +248,7 @@
         "quote": ""
       },
       {
-        "id": "108",
+        "id": "crunching",
         "type": "game",
         "platform": "iOS",
         "title": "Crunching",
@@ -271,7 +271,7 @@
         "quote": ""
       },
       {
-        "id": "107",
+        "id": "endless-nails",
         "type": "coding",
         "platform": "iOS",
         "title": "Endless Nails",
@@ -294,7 +294,7 @@
         "quote": ""
       },
       {
-        "id": "106",
+        "id": "charging-spacecraft",
         "type": "coding",
         "platform": "iOS",
         "title": "Charging Spacecraft",
@@ -317,7 +317,7 @@
         "quote": ""
       },
       {
-        "id": "105",
+        "id": "pew-pew-pew",
         "type": "coding",
         "platform": "iOS",
         "title": "Pew Pew Pew",
@@ -340,7 +340,7 @@
         "quote": ""
       },
       {
-        "id": "104",
+        "id": "showstopper-basketball",
         "type": "coding",
         "platform": "Facebook Game",
         "title": "Showstopper Basketball",
@@ -363,7 +363,7 @@
         "quote": ""
       },
       {
-        "id": "103",
+        "id": "pocket-gridiron",
         "type": "coding",
         "platform": "Facebook Game",
         "title": "Pocket Gridiron",
@@ -386,7 +386,7 @@
         "quote": ""
       },
       {
-        "id": "102",
+        "id": "eingzone",
         "type": "coding",
         "platform": "Web",
         "title": "eingzone.com",
@@ -408,36 +408,13 @@
         "quote": ""
       },
       {
-        "id": "101",
+        "id": "customer-services-system",
         "type": "coding",
         "platform": "Web",
         "title": "Online Customer Service System",
         "description": "This online customer service system includes live broadcast, online whiteboard and chatting features.",
         "responsibility": "Participate in product design, mainly responsible for the development, implementation and maintenance of the project.",
         "state": "release",
-        "icon": "",
-        "qrcode": "",
-        "cover": "spkf.png",
-        "start": "2005",
-        "end": "2005",
-        "images": [
-          "spkf.png"
-        ],
-        "tech": "Flash,ActionScript,RED5,Java,JSP,MySQL",
-        "link": "",
-        "github": "",
-        "video": "",
-        "language": "",
-        "quote": ""
-      },
-      {
-        "id": "100",
-        "type": "diy",
-        "platform": "Web",
-        "title": "Online Customer Service System",
-        "description": "This online customer service system includes live broadcast, online whiteboard and chatting features.",
-        "responsibility": "Participate in product design, mainly responsible for the development, implementation and maintenance of the project.",
-        "state": "draft",
         "icon": "",
         "qrcode": "",
         "cover": "spkf.png",
