@@ -19,7 +19,7 @@ const ProjectPage: ProjectPageType = ({ detail }) => {
   const router = useRouter();
 
   const handleClose = () => {
-    router.back();
+    router.push('/project');
   };
 
   return (
