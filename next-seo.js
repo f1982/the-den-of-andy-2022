@@ -19,14 +19,14 @@ const seoConfig = {
     // TODO: replace the images
     images: [
       {
-        url: '/static/image/og-image-1200x627.png',
+        url: `${process.env.NEXT_PUBLIC_APP_SITE_URL}static/image/og-image-1200x627.png`,
         width: 1200,
         height: 627,
         alt: SITE_NAME,
         type: 'image/jpeg',
       },
       {
-        url: '/static/image/og-image-900x800.png',
+        url: `${process.env.NEXT_PUBLIC_APP_SITE_URL}static/image/og-image-900x800.png`,
         width: 900,
         height: 800,
         alt: SITE_NAME,
