@@ -38,7 +38,7 @@ const seoConfig = {
   twitter: {
     handle: '@iandycao',
     creator: '@iandycao',
-    cardType: 'summary',
+    cardType: 'summary_large_image',
   },
 };
 
