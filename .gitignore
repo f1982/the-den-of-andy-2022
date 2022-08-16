@@ -9,6 +9,7 @@
 .vscode/linenote/*
 # testing
 /cypress/videos
+/cypress/screenshots
 /coverage
 
 # next.js
