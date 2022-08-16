@@ -38,8 +38,7 @@ const seoConfig = {
   twitter: {
     handle: '@iandycao',
     creator: '@iandycao',
-    image: `${process.env.NEXT_PUBLIC_APP_SITE_URL}/static/images/og-image-900x800.png`,
-    cardType: 'summary_large_image',
+    cardType: 'summary',
   },
 };
 
