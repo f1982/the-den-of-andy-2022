@@ -1,7 +1,6 @@
 import { t } from 'i18next';
 import Link from 'next/link';
 import MyButton from '../../components/atoms/buttons/Button';
-import Typography from '../../components/atoms/typography/Typography';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import styles from './404.module.css';
 
@@ -10,11 +9,20 @@ const Custom404 = () => (
     <TabTitle pageTitle={t('pageNotFound.pageTitle')} />
     <div className="flex flex-col justify-center items-center">
       <div className={styles.wrapper}>
-        <h1 className={styles.glitch} data-text="404">404</h1>
-        <h2 className={styles.sub}>Opps, page not found</h2>
+        <h1
+          className={styles.glitch}
+          data-text={t<string>('pageNotFound.errorCode')}
+        >
+          {t<string>('pageNotFound.errorCode')}
+        </h1>
+        <h2 className={styles.subtitle}>
+          {t<string>('pageNotFound.subtitle')}
+        </h2>
       </div>
       <Link href="/">
-        <MyButton type="primary">{t<string>('pageNotFound.backButtonLabel')}</MyButton>
+        <MyButton type="primary">
+          {t<string>('pageNotFound.backButtonLabel')}
+        </MyButton>
       </Link>
     </div>
   </>
