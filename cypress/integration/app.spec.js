@@ -16,8 +16,8 @@ describe('404 error page', () => {
   it('404 page code and content should be correct', () => {
     cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false }).its('status').should('equal', 404);
     cy.visit(`${Cypress.env('host')}404`, { failOnStatusCode: false });
-    cy.get('button').contains(/back to homepage/i);
-    cy.get('h2').contains(/can not find the page/i);
+    cy.get('button').contains(/back/i);
+    cy.get('h2').contains(/oops, page not found/i);
   });
 });
 

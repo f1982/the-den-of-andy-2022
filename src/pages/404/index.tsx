@@ -4,17 +4,21 @@ import MyButton from '../../components/atoms/buttons/Button';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
 import styles from './404.module.css';
 
+export const Glitch404 = ({ text }: { text: string }) => (
+  <h1
+    className={styles.glitch}
+    data-text={text}
+  >
+    {text}
+  </h1>
+);
+
 const Custom404 = () => (
   <>
     <TabTitle pageTitle={t('pageNotFound.pageTitle')} />
     <div className="flex flex-col justify-center items-center">
       <div className={styles.wrapper}>
-        <h1
-          className={styles.glitch}
-          data-text={t<string>('pageNotFound.errorCode')}
-        >
-          {t<string>('pageNotFound.errorCode')}
-        </h1>
+        <Glitch404 text={t<string>('pageNotFound.errorCode')} />
         <h2 className={styles.subtitle}>
           {t<string>('pageNotFound.subtitle')}
         </h2>
