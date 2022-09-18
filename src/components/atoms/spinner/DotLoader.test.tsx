@@ -1,9 +1,8 @@
 import {
   render, screen,
 } from '@testing-library/react';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { axe } from 'jest-axe';
 import DotLoader from './DotLoader';
-import '@testing-library/jest-dom';
 
 describe('loader', () => {
   test('loader should display properly', () => {
