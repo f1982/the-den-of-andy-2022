@@ -11,7 +11,9 @@ const en = {
     pageNotFound: {
       pageTitle: '404, page cannot find.',
       headline: 'Can not find the page...',
-      backButtonLabel: 'Back to homepage',
+      errorCode: '404',
+      subtitle: 'Oops, page not found',
+      backButtonLabel: 'Back',
     },
     home: {
       pageTitle: 'Home',
