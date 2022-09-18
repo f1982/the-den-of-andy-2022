@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
+import { useEffect, useState } from 'react';
 import { menuData } from '../../../constants/menuData';
-import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar';
 import Logo from '../../atoms/logo/Logo';
+import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar';
 import MobileMenuBar from '../../molecules/menus/MobileMenuBar';
 
 const Header = () => {
@@ -42,7 +42,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleWindowScroll);
     };
-  }, [classNames, isChanging]);
+  }, [classNames, isChanging, isNarrow]);
 
   return (
     <header
