@@ -1,10 +1,28 @@
 // import ReactGA from 'react-ga';
 
-export const initGA = () => {
-  // ReactGA.initialize(process.env.NEXT_PUBLIC_APP_GA_ID, {
-  //   testMode: process.env.NODE_ENV !== 'production',
-  // });
+import Script from 'next/script';
+
+export const GoogleAnalytics = ({ trackingId }: { trackingId: string }) => {
+  const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+  return (
+    <>
+      <Script
+        src={gtagUrl}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${trackingId}');
+        `}
+      </Script>
+    </>
+  );
 };
+
 export const logPageView = (pathname) => {
   // ReactGA.set({ page: pathname });
   // ReactGA.pageview(pathname);
