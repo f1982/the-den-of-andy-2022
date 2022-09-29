@@ -1,8 +1,6 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../next-seo';
 import SiteSEO from '../components/molecules/seo/SiteSEO';
-import DebugInfo from '../components/organisms/debug/DebugInfo';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 
 const Index = () => {
