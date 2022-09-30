@@ -3,6 +3,7 @@ title: 'My productive WFH setup introduction and desk tour of 2022'
 excerpt: 'Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at home. I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganize the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity.'
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/front-setups-1.jpg'
 date: '2020-07-04T05:35:07.322Z'
+keywords: 'test,test1,test2,wfh,desk tour'
 author:
   name: Andy Cao
   picture: '/static/images/avatar-pixel.jpg'

@@ -4,11 +4,15 @@ import { useRouter } from 'next/router';
 import SEO from '../../../../next-seo';
 import { LOCAL_DEV_URL } from '../../../constants/paths';
 
+interface SiteSEOProps {
+  pageTitle: string,
+  seoConfig?: {}
+}
+
 const SiteSEO = ({
   pageTitle,
-}: {
-  pageTitle: string,
-}) => {
+  seoConfig = SEO,
+}: SiteSEOProps) => {
   const router = useRouter();
   // get site url
   let hostUrl = process.env.NEXT_PUBLIC_APP_SITE_URL;
@@ -21,7 +25,7 @@ const SiteSEO = ({
 
   return (
     <DefaultSeo
-      {...SEO}
+      {...seoConfig}
       canonical={canonicalUrl}
       title={`${t(pageTitle)} - ${SEO.title}`}
     />

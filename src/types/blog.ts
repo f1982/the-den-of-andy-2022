@@ -10,7 +10,8 @@ export type BlogPostData = {
   date: string
   author: AuthorData
   content: string
-  slug: string
+  slug: string,
+  keywords: string,
 }
 
 export type PostMap = {

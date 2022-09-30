@@ -40,6 +40,7 @@ export function getPostBySlug(slug, fields = []) {
     slug: '',
     title: '',
     excerpt: '',
+    keywords: '',
     author: {
       name: '',
       picture: '',
