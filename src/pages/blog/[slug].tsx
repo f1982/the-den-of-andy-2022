@@ -47,12 +47,13 @@ const Post: PostPageType = ({ post, preview }) => {
   };
 
   return (
-    <Modal
+    <>
+      {/* <Modal
       isOpen
       onRequestClose={handleClose}
       style={customModalStyles}
       contentLabel="Post modal"
-    >
+    > */}
       <NextSeo
         title={post.title}
         additionalMetaTags={getAdditionalTags()}
@@ -104,11 +105,14 @@ const Post: PostPageType = ({ post, preview }) => {
             <CloseButton onClick={handleClose} />
           </div>
           <article className="mb-32">
+            <h1>{post.title}</h1>
+            <p>{post.excerpt}</p>
             <BlogPost {...post} />
           </article>
         </>
       )}
-    </Modal>
+      {/* </Modal> */}
+    </>
   );
 };
 
@@ -150,6 +154,7 @@ export async function getStaticProps({ params }) {
 // this is not true
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
+  console.log('posts', posts);
 
   return {
     paths: posts.map((post) => ({
