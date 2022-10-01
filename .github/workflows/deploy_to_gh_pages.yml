@@ -13,6 +13,13 @@ jobs:
     # We need to specify what environment to use for environment secrets
     # https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-secrets
     environment: github-pages 
+    env: 
+      # Set env variables to actions secrets
+      NEXT_PUBLIC_APP_GA_ID: ${{secrets.NEXT_PUBLIC_APP_GA_ID}}
+      NEXT_PUBLIC_APP_GAD: ${{secrets.NEXT_PUBLIC_APP_GAD}}
+      NEXT_PUBLIC_APP_GAD_ID: ${{secrets.NEXT_PUBLIC_APP_GAD_ID}}
+      NEXT_PUBLIC_APP_SITE_URL: ${{secrets.NEXT_PUBLIC_APP_SITE_URL}}
+      NEXT_PUBLIC_APP_VERSION: ${{secrets.NEXT_PUBLIC_APP_VERSION}}
 
     strategy:
       matrix:
@@ -20,15 +27,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Setup env variables 
-        env: 
-          # Set env variables to actions secrets
-          NEXT_PUBLIC_APP_GA_ID: ${{secrets.NEXT_PUBLIC_APP_GA_ID}}
-          NEXT_PUBLIC_APP_GAD: ${{secrets.NEXT_PUBLIC_APP_GAD}}
-          NEXT_PUBLIC_APP_GAD_ID: ${{secrets.NEXT_PUBLIC_APP_GAD_ID}}
-          NEXT_PUBLIC_APP_SITE_URL: ${{secrets.NEXT_PUBLIC_APP_SITE_URL}}
-          NEXT_PUBLIC_APP_VERSION: ${{secrets.NEXT_PUBLIC_APP_VERSION}}
-
       - name: Output env variables
         # test
         run: 
