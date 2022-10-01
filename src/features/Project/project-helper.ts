@@ -1,10 +1,10 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
-import { ProjectItemData } from '../types/projects';
+import { ProjectItemData } from '../../types/projects';
 
-const PROJECTS_DATA = join(process.cwd(), 'public/static/projects.json');
-const PROJ_POST_DIRECTORY = join(process.cwd(), 'public/static/projects');
+const PROJECTS_DATA = join(process.cwd(), 'src/data/projects.json');
+const PROJ_POST_DIRECTORY = join(process.cwd(), 'src/data/projects');
 
 export function getProjects() {
   const fullPath = join(PROJECTS_DATA);

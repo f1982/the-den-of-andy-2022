@@ -56,7 +56,11 @@ describe('other pages', () => {
 
     // open first blog page
     cy.visit(`${Cypress.env('host')}blog`);
-    cy.get('div[href*="blog/"]').first().click();
+    cy.get('div[href*="blog/"]').last().click();
+
+    // SEO: check keywords is there
+    cy.document().get('head meta[name="keywords"]')
+      .should('have.attr', 'content', 'cable management, cable management desk, cable management ideas, cable management tray, wfh setups, developer desk, cable management tips, developer desk setup, dev desk setup');
     // close the page
     cy.get('button[aria-label="Close"]').click();
   });
