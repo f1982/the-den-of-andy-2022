@@ -1,13 +1,10 @@
+import { NextSeo } from 'next-seo';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
-import Modal from 'react-modal';
 import React from 'react';
-import { ArticleJsonLd, DefaultSeoProps, NextSeo } from 'next-seo';
-import { BaseMetaTag, HTML5MetaTag, MetaTag } from 'next-seo/lib/types';
 import CloseButton from '../../components/atoms/buttons/CloseButton';
-import SiteSEO from '../../components/molecules/seo/SiteSEO';
-import customModalStyles from '../../constants/modelConfig';
 import BlogPost from '../../features/Blog/BlogPost';
+import usePageURL from '../../hooks/usePageURL';
 import { BlogPostData } from '../../types/blog';
 import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
@@ -18,53 +15,44 @@ interface PostProps {
 }
 
 type PostPageType = React.FC<PostProps> & {
-  getLayout: (page: React.ReactNode) => React.ReactNode
+  getLayout: (page: React.ReactNode) => React.ReactNode,
 }
 
 const Post: PostPageType = ({ post, preview }) => {
   const router = useRouter();
+  const pageURL = usePageURL();
 
   // if the slug is not correct url, it will led user to the 404 page
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
 
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  // https://nextjs.org/docs/api-reference/data-fetching/get-static-paths
+  if (router.isFallback) {
+    return (<div>Loading...</div>);
+  }
+
   const handleClose = () => {
     router.push('/blog');
   };
 
-  const getSEOConfig = () => ({
-    description: post.excerpt,
-    additionalMetaTags: post.keywords,
-  });
-
-  const getAdditionalTags = () => {
-    const tags: HTML5MetaTag[] = [
-      // keywords tag
-      { name: 'keywords', content: post.keywords },
-    ];
-    return tags;
-  };
-
   return (
     <>
-      {/* <Modal
-      isOpen
-      onRequestClose={handleClose}
-      style={customModalStyles}
-      contentLabel="Post modal"
-    > */}
       <NextSeo
         title={post.title}
-        additionalMetaTags={getAdditionalTags()}
+        additionalMetaTags={[
+          { name: 'keywords', content: post.keywords }, // keywords metadata
+        ]}
         openGraph={{
           title: post.title,
           description: post.excerpt,
-          url: 'https://www.example.com/articles/article-title',
+          url: pageURL,
           type: 'article',
           article: {
             publishedTime: post.date,
-            section: 'Section II',
+            section: 'Section One',
             authors: [post.author.name],
             tags: post.keywords.split(','),
           },
@@ -78,40 +66,14 @@ const Post: PostPageType = ({ post, preview }) => {
           ],
         }}
       />
-
-      {/* <ArticleJsonLd
-        url="https://example.com/article"
-        title="Article headline"
-        images={[
-          'https://example.com/photos/1x1/photo.jpg',
-          'https://example.com/photos/4x3/photo.jpg',
-          'https://example.com/photos/16x9/photo.jpg',
-        ]}
-        datePublished="2015-02-05T08:00:00+08:00"
-        dateModified="2015-02-05T09:00:00+08:00"
-        authorName={['Jane Blogs', 'Mary Stone']}
-        publisherName="Gary Meehan"
-        publisherLogo="https://www.example.com/photos/logo.jpg"
-        description="This is a mighty good description of this article."
-      /> */}
-
-      {/* If the page is not yet generated, this will be displayed */}
-      {router.isFallback ? (
-        <p>Loading…</p>
-      ) : (
-        <>
-          <div className="flex container mx-auto mt-3">
-            <div className="flex-1" />
-            <CloseButton onClick={handleClose} />
-          </div>
-          <article className="mb-32">
-            <h1>{post.title}</h1>
-            <p>{post.excerpt}</p>
-            <BlogPost {...post} />
-          </article>
-        </>
-      )}
-      {/* </Modal> */}
+      {/* TODO: add JSON-LD support, https://jsonld.com/blog-post/ */}
+      <div className="flex container mx-auto mt-3">
+        <div className="flex-1" />
+        <CloseButton onClick={handleClose} />
+      </div>
+      <article className="mb-32">
+        <BlogPost {...post} />
+      </article>
     </>
   );
 };
@@ -126,8 +88,12 @@ Post.getLayout = function getLayout(page) {
 
 export default Post;
 
+/**
+ * Get post data by slug
+ * @returns
+ */
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
+  const fields = [
     'title',
     'date',
     'excerpt',
@@ -137,7 +103,8 @@ export async function getStaticProps({ params }) {
     'content',
     'ogImage',
     'coverImage',
-  ]);
+  ];
+  const post = getPostBySlug(params.slug, fields);
   const content = await markdownToHtml(post.content || '');
   return {
     props: {
@@ -152,10 +119,8 @@ export async function getStaticProps({ params }) {
 // getStaticPaths will define a list of paths to be statically generated
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 // this is not true
-export async function getStaticPaths() {
+export async function getStaticPaths(context) {
   const posts = getAllPosts(['slug']);
-  console.log('posts', posts);
-
   return {
     paths: posts.map((post) => ({
       params: {

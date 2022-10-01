@@ -7,7 +7,7 @@
   "authors": "Andy Cao <caojundan@gmail.com> (https://github.com/f1982)",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap",

@@ -1,22 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
-import { BlogPostData, PostMap } from '../types/blog';
+import { BlogPostData } from '../types/blog';
 
 const BLOG_POST_DIRECTORY = join(process.cwd(), 'public/static/posts');
-
-/**
- * list all the blog post folders
- * @returns array of file names
- */
-export function getAllPostFolders() {
-  const files = fs.readdirSync(BLOG_POST_DIRECTORY);
-  return files;
-}
-
-function getExtension(filename) {
-  return filename.split('.').pop();
-}
 
 function isFolder(filename) {
   return filename.indexOf('.') === -1;
@@ -67,7 +54,7 @@ export function getPostBySlug(slug, fields = []) {
 }
 
 export function getAllPosts(fields = []) {
-  const folders = getAllPostFolders();
+  const folders = fs.readdirSync(BLOG_POST_DIRECTORY);
   const posts = folders
     .filter((item) => isFolder(item))
     .map((slug) => getPostBySlug(slug, fields))
