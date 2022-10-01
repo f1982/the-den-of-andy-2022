@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # We need to specify what environment to use for environment secrets
+    # https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-secrets
+    environment: github-pages 
 
     strategy:
       matrix:
