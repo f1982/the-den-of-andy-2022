@@ -33,36 +33,36 @@ jobs:
           echo "NEXT_PUBLIC_APP_GA_ID is:${{env.NEXT_PUBLIC_APP_GA_ID}}"
           echo "NEXT_PUBLIC_APP_SITE_URL is:${{env.NEXT_PUBLIC_APP_SITE_URL}}" 
 
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     cache: "yarn"
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
-      # - name: Install packages
-      #   run: yarn install
+      - name: Install packages
+        run: yarn install
 
-      # - name: Build the project
-      #   run: yarn build
+      - name: Build the project
+        run: yarn build
 
-      # - name: Run unit tests
-      #   run: yarn test
+      - name: Run unit tests
+        run: yarn test
 
-      # - name: Run Cypress e2e test
-      #   uses: cypress-io/github-action@v2
-      #   with:
-      #     start: yarn start
+      - name: Run Cypress e2e test
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
 
-      # - name: Build the website
-      #   run: yarn export && touch ./out/.nojekyll
-      #   # This below is used to build storybook static site with whole site together
-      #   # run: npm run export-with-storybook && touch ./out/.nojekyll
+      - name: Build the website
+        run: yarn export && touch ./out/.nojekyll
+        # This below is used to build storybook static site with whole site together
+        # run: npm run export-with-storybook && touch ./out/.nojekyll
 
-      # - name: Deploy webpages to GitHub pages 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     branch: gh-pages # The branch the action should deploy to.
-      #     folder: out # The folder the action should deploy.
+      - name: Deploy webpages to GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: out # The folder the action should deploy.
 
