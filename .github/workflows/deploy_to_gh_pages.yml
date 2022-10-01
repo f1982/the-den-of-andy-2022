@@ -20,36 +20,51 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Setup env variables 
+        env: 
+          # Set env variables to actions secrets
+          NEXT_PUBLIC_APP_GA_ID: ${{secrets.NEXT_PUBLIC_APP_GA_ID}}
+          NEXT_PUBLIC_APP_GAD: ${{secrets.NEXT_PUBLIC_APP_GAD}}
+          NEXT_PUBLIC_APP_GAD_ID: ${{secrets.NEXT_PUBLIC_APP_GAD_ID}}
+          NEXT_PUBLIC_APP_SITE_URL: ${{secrets.NEXT_PUBLIC_APP_SITE_URL}}
+          NEXT_PUBLIC_APP_VERSION: ${{secrets.NEXT_PUBLIC_APP_VERSION}}
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "yarn"
+      - name: Output env variables
+        # test
+        run: 
+          echo "NEXT_PUBLIC_APP_GA_ID is" ${{env.NEXT_PUBLIC_APP_GA_ID}}
+          echo "NEXT_PUBLIC_APP_SITE_URL is" ${{env.NEXT_PUBLIC_APP_SITE_URL}}
 
-      - name: Install packages
-        run: yarn install
+      # - uses: actions/checkout@v2
 
-      - name: Build the project
-        run: yarn build
+      # - name: Use Node.js ${{ matrix.node-version }}
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      #     cache: "yarn"
 
-      - name: Run unit tests
-        run: yarn test
+      # - name: Install packages
+      #   run: yarn install
 
-      - name: Run Cypress e2e test
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn start
+      # - name: Build the project
+      #   run: yarn build
 
-      - name: Build the website
-        run: yarn export && touch ./out/.nojekyll
-        # This below is used to build storybook static site with whole site together
-        # run: npm run export-with-storybook && touch ./out/.nojekyll
+      # - name: Run unit tests
+      #   run: yarn test
 
-      - name: Deploy webpages to GitHub pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: out # The folder the action should deploy.
+      # - name: Run Cypress e2e test
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     start: yarn start
+
+      # - name: Build the website
+      #   run: yarn export && touch ./out/.nojekyll
+      #   # This below is used to build storybook static site with whole site together
+      #   # run: npm run export-with-storybook && touch ./out/.nojekyll
+
+      # - name: Deploy webpages to GitHub pages 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     branch: gh-pages # The branch the action should deploy to.
+      #     folder: out # The folder the action should deploy.
 
