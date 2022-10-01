@@ -3,8 +3,9 @@ title: 'New Apple Silicon M1 Pro Chip MacBook Pro Hands-on and First Impression'
 excerpt: 'I have used this M1 Pro Chip MacBook Pro for about one week now. I have to say it’s really fast! I can not feel any lagging issues during my daily development workflow. Additionally, the 120 Herts refresh rate gives me a new level of screen experience.'
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9826.jpg'
 date: '2020-04-02T05:35:07.322Z'
+keywords: 'MacBook Pro 2021, MacBook Air 2021, MacBook Pro 13 inch 2021, MacBook Pro 2022, best laptop 2021, apple MacBook Pro 2021, new MacBook Pro 2021, comparison, benchmarks, exporting, Microsoft office, apps, zollotech, top spec MacBook Pro, which MacBook should I buy, 4K, MacBook Air vs MacBook Pro 2020, apple silicon, M1 MacBook, apple MacBook Pro m1, MacBook Air m1'
 author:
-  name: Andy Cao
+  name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9826.jpg'
