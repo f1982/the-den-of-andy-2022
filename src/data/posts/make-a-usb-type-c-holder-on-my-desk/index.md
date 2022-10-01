@@ -1,10 +1,11 @@
 ---
 title: 'Cable management solution: how to keep clean when I move the laptop outside the desk'
-excerpt: 'Recently, I am obsessed with reordering or organising my little pieces of stuff. For example, cable management is a great topic it is hard to say it’s perfect at any time. How to organise your tools or material make them easy to store and find is really a fascinating challenge.'
+excerpt: 'Recently, I am obsessed with reordering or organizing my little pieces of stuff. For example, cable management is a great topic it is hard to say it’s perfect at any time. How to organize your tools or material make them easy to store and find is really a fascinating challenge.'
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-cover-image.jpg'
 date: '2020-03-26T05:35:07.322Z'
+keywords: 'cable management,cable management desk,cable management ideas,cable management tray,wfh setups, developer desk,cable management tips,developer desk setup,dev desk setup'
 author:
-  name: Andy Cao
+  name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-cover-image.jpg'
