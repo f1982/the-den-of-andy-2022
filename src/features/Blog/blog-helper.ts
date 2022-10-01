@@ -1,9 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
-import { BlogPostData } from '../types/blog';
+import { BlogPostData } from '../../types/blog';
 
-const BLOG_POST_DIRECTORY = join(process.cwd(), 'public/static/posts');
+const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/data/posts');
 
 function isFolder(filename) {
   return filename.indexOf('.') === -1;

@@ -6,7 +6,7 @@ import PageHero from '../../components/organisms/blocks/PageHero';
 import PageTitle from '../../components/organisms/blocks/PageTitle';
 import ProjectList from '../../features/Project/ProjectList';
 import { ProjectItemData } from '../../types/projects';
-import { getProjects } from '../../utils/project-helper';
+import { getProjects } from '../../features/Project/project-helper';
 
 const Projects = ({
   projects,

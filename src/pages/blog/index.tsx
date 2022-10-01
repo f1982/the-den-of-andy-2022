@@ -8,7 +8,7 @@ import PageTitle from '../../components/organisms/blocks/PageTitle';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/MoreStories';
 import { BlogPostData } from '../../types/blog';
-import { getAllPosts } from '../../utils/blog-helper';
+import { getAllPosts } from '../../features/Blog/blog-helper';
 
 interface BlogProps {
   allPosts: BlogPostData[]

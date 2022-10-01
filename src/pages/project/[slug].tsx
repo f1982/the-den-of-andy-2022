@@ -5,7 +5,7 @@ import CloseButton from '../../components/atoms/buttons/CloseButton';
 import customModalStyles from '../../constants/modelConfig';
 import ProjectDetail from '../../features/Project/ProjectDetail';
 import { ProjectItemData } from '../../types/projects';
-import { getProjectDetail, getProjects } from '../../utils/project-helper';
+import { getProjectDetail, getProjects } from '../../features/Project/project-helper';
 
 interface ProjectPageProps {
   detail: ProjectItemData,

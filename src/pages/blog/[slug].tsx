@@ -6,7 +6,7 @@ import CloseButton from '../../components/atoms/buttons/CloseButton';
 import BlogPost from '../../features/Blog/BlogPost';
 import usePageURL from '../../hooks/usePageURL';
 import { BlogPostData } from '../../types/blog';
-import { getAllPosts, getPostBySlug } from '../../utils/blog-helper';
+import { getAllPosts, getPostBySlug } from '../../features/Blog/blog-helper';
 import markdownToHtml from '../../utils/markdownToHtml';
 
 interface PostProps {
