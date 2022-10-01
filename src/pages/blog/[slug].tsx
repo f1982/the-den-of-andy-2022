@@ -38,6 +38,9 @@ const Post: PostPageType = ({ post, preview }) => {
     router.push('/blog');
   };
 
+  // Trim spaces at the beginning and end of the keyword
+  const parseKeywords = (keywords) => keywords.split(',').map((keyword) => keyword.trim());
+
   return (
     <>
       <NextSeo
@@ -52,9 +55,8 @@ const Post: PostPageType = ({ post, preview }) => {
           type: 'article',
           article: {
             publishedTime: post.date,
-            section: 'Section One',
             authors: [post.author.name],
-            tags: post.keywords.split(','),
+            tags: parseKeywords(post.keywords),
           },
           images: [
             {
