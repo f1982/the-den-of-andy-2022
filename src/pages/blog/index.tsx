@@ -2,21 +2,18 @@ import { t } from 'i18next';
 import React from 'react';
 import Typography from '../../components/atoms/typography/Typography';
 import TabTitle from '../../components/molecules/seo/SiteSEO';
-import PresentedMonkey from '../../components/organisms/3d/PresentedMonkey';
 import PageHero from '../../components/organisms/blocks/PageHero';
 import PageTitle from '../../components/organisms/blocks/PageTitle';
+import { getAllPosts } from '../../features/Blog/blog-helper';
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
 import MoreStories from '../../features/Blog/MoreStories';
 import { BlogPostData } from '../../types/blog';
-import { getAllPosts } from '../../features/Blog/blog-helper';
 
 interface BlogProps {
   allPosts: BlogPostData[]
 }
 
 const Blog: React.FC<BlogProps> = ({ allPosts }) => {
-  // const heroPost = allPosts[0];
-  // const morePosts = allPosts.slice(1);
   const morePosts = allPosts;
 
   return (

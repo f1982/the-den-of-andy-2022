@@ -1,6 +1,6 @@
 import { t } from 'i18next';
 import { DefaultSeo, DefaultSeoProps } from 'next-seo';
-import getDefaultSEOConfig from '../../../constants/seoConfig';
+import getDefaultSEOConfig from './seoConfig';
 import usePageURL from '../../../hooks/usePageURL';
 
 interface SiteSEOProps {
