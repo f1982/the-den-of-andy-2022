@@ -1,25 +1,26 @@
 import { t } from 'i18next';
-import { DefaultSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import SEO from '../../../../next-seo';
+import { DefaultSeo, DefaultSeoProps } from 'next-seo';
+import getDefaultSEOConfig from '../../../constants/seoConfig';
 import usePageURL from '../../../hooks/usePageURL';
 
 interface SiteSEOProps {
   pageTitle: string,
-  seoConfig?: {}
+  seoConfig?: DefaultSeoProps
 }
 
 const SiteSEO = ({
   pageTitle,
-  seoConfig = SEO,
+  seoConfig,
 }: SiteSEOProps) => {
   const pageURL = usePageURL();
 
+  const seoCnf = seoConfig || getDefaultSEOConfig();
+
   return (
     <DefaultSeo
-      {...seoConfig}
+      {...seoCnf}
       canonical={pageURL}
-      title={`${t(pageTitle)} - ${SEO.title}`}
+      title={`${t(pageTitle)} - ${seoCnf.title}`}
     />
   );
 };

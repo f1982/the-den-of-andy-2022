@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import SEO from '../../next-seo';
+import SEO from '../constants/seoConfig';
 import SiteSEO from '../components/molecules/seo/SiteSEO';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
 
