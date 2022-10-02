@@ -1,5 +1,7 @@
-const SITE_NAME = 'Andy\'s personal website';
-const SITE_DESC = 'Andy\'s personal website is used for recording all his work and thinking.';
+import { t } from 'i18next';
+
+const SITE_NAME = t('siteName');
+const SITE_DESC = t('siteDescription');
 
 const seoConfig = {
   title: SITE_NAME,
@@ -9,7 +11,7 @@ const seoConfig = {
     type: 'website',
     title: SITE_NAME,
     // this is the desc will show up in twitter sharing
-    description: 'Andy\'s personal website is used for recording all his work and thinking.',
+    description: SITE_DESC,
     // if you want to localize your tags, it would probably make sense to include locale.
     // the format is language_TERRITORY, where the default is en_US.
     locale: 'en_US',
