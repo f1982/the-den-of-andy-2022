@@ -4,13 +4,15 @@ import Script from 'next/script';
 
 export const GoogleAnalytics = ({ trackingId }: { trackingId: string }) => {
   const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+  // lazy load ga script
+  const strategy = 'lazyOnload';
   return (
     <>
       <Script
         src={gtagUrl}
-        strategy="afterInteractive"
+        strategy={strategy}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy={strategy}>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
