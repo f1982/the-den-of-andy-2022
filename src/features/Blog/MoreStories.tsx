@@ -1,6 +1,11 @@
 import React from 'react';
 import { BlogPostData } from '../../types/blog';
+
 import PostPreview from './PostPreview';
+
+// test page only can be accessed by directly input the url
+// http://localhost:3000/blog/test-post-with-all-kinds-of-format
+export const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format';
 
 interface MoreStoriesProps {
   posts: BlogPostData[]
@@ -17,15 +22,17 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
       mx-2 md:mx-auto"
     >
       {posts.map((post) => (
-        <PostPreview
-          key={post.slug}
-          title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
-          slug={post.slug}
-          excerpt={post.excerpt}
-        />
+        post.slug !== TEST_BLOG_POST && (
+          <PostPreview
+            key={post.slug}
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            author={post.author}
+            slug={post.slug}
+            excerpt={post.excerpt}
+          />
+        )
       ))}
     </div>
   </section>
