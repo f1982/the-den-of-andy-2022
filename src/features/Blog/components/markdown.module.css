@@ -15,13 +15,15 @@
   color:var(--primary-dark)
 }
 
-.markdown ol,
+/* list styles */
+
+.markdown ol {
+  @apply ml-6 mb-4;
+  list-style:decimal;
+}
 .markdown ul {
   @apply ml-6 mb-4;
-  list-style: auto;
-}
-.mardown li {
-  
+  list-style:disc;
 }
 
 /* headings */
