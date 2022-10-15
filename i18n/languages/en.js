@@ -1,11 +1,12 @@
 const en = {
   translation: {
     greeting: 'Kia Ora',
-    siteName: 'Den of Andy 2022',
+    siteName: 'Andy\'s Digital Space',
+    siteDescription: 'Andy\'s personal website is used for recording all his work and thinking.',
     welcome: {
       pageTitle: 'Welcome',
       greeting: 'Hey there! I am Andy',
-      description: 'Welcome to my space',
+      description: 'Welcome To My Digital Space',
       buttonLabel: 'Enter',
     },
     pageNotFound: {
@@ -91,7 +92,7 @@ const en = {
     contact: {
       pageTitle: 'Contact',
       p1: 'Current, I live in Auckland, New Zealand, If you want contact me, feel free to send a email to me. My email address is <a href="https://drive.google.com/file/d/1pyrvwo3Hmu7qVeEFqTFCtTgNotbWhNK1/view?usp=sharing"> here</a>',
-      p2: 'If you want to hire a software energeer, you can get my CV here and you can also can contact me via LinkedIn',
+      p2: 'If you want to hire a software engineer, you can get my CV here and you can also can contact me via LinkedIn',
       p3: 'If you would like to get more updates about me, you can follow me via social networks. Such asTwitter or Weibo, I also update some information in my Telegram channel, I upload some videos about my life and experience in Youtube regularly, welcome to subscribe.',
     },
     privacy: {
