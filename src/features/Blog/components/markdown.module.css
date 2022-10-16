@@ -1,40 +1,66 @@
 .markdown {
-  @apply leading-relaxed;
+  /* @apply leading-relaxed; */
   color: var(--on-background);
 }
 
-.markdown p,
-.markdown blockquote {
-  @apply mb-4 ml-0;
+.markdown p {
+@apply mb-4;
 }
 
-.markdown ol,
+.markdown blockquote {
+  @apply mb-2 ml-0;
+}
+
+.markdown a {
+  color:var(--primary-dark)
+}
+
+/* list styles */
+
+.markdown ol {
+  @apply ml-6 mb-4;
+  list-style:decimal;
+}
 .markdown ul {
   @apply ml-6 mb-4;
-  list-style: auto;
+  list-style:disc;
 }
-.mardown li {
-  
-}
+
+/* headings */
+/* synced with typography configuration */
+
 .markdown h1 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-[2.85rem] md:text-[2.85rem] font-bold mt-3 mb-3 tracking-tight;
 }
 
 .markdown h2 {
-  @apply text-2xl mt-12 mb-4 leading-snug;
+  @apply text-[1.5rem] md:text-[1.85rem] font-bold mt-3 mb-3 tracking-tight;
 }
 
 .markdown h3 {
-  @apply text-xl mt-8 mb-4 leading-snug;
+  @apply text-[1.35rem] md:text-[1.5rem] font-bold tracking-tight mt-3 mb-3;
 }
+
+.markdown h4 {
+  @apply text-base font-bold leading-tight mt-2 mb-2 tracking-tight;
+}
+
+/* coding block */
 
 .markdown pre {
-  @apply whitespace-pre overflow-x-auto p-4 text-sm leading-tight border border-gray-400 bg-surface;
+  @apply whitespace-pre overflow-x-auto p-4 text-sm leading-tight border border-gray-400 bg-surface mb-4 rounded-md;
+
 }
 
-.markdown code {
-  @apply text-sm;
+.markdown pre>code {
+  @apply p-0 border-0
 }
+
+/* inline code */
+.markdown code {
+  @apply text-sm bg-surface border p-1 rounded; 
+}
+
 .markdown figcaption {
   @apply text-center text-sm;
 }
