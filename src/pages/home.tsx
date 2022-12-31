@@ -80,7 +80,7 @@ const Home: React.FC = () => (
   <>
     <TabTitle pageTitle={t<string>('home.pageTitle')} />
     {/* <ModelWithContainer /> */}
-    <PageHero image="/static/images/page-hero-workspace-2.png" className="mb-8 md:mb-16" />
+    <PageHero image="/static/images/page-hero-workspace.png" className="mb-8 md:mb-16" />
     <Hero
       className="mb-16 md:mb-24"
       image="/static/images/andy-with-bubbles.png"
