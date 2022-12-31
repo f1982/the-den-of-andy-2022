@@ -1,7 +1,7 @@
 ---
 title: 'Annual Summary of 2022'
 excerpt: 'It’s another year in the blink of an eye, and I’m trying to summarize my experience of the year before the end of the last day of 2022'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9826.jpg'
+coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/2022-summary-on-cape-reinga-lighthouse.JPG.jpg'
 date: '2020-12-31T05:35:07.322Z'
 keywords: 'annual summary, 2022, end of 2022, conclusion of 2022'
 author:
