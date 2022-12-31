@@ -22,7 +22,7 @@ const en = {
         greeting: 'Andy Cao',
         pronunciation: '[ch ow]',
         role: 'Software Developer',
-        description: 'Hey, my name is Andy 👋🏽  currently I am  a Frontend Developer 👨‍💻 and living in New Zealand. I am working on some website 🕸 and mobile 📱 applications in RoamDigital. \n I consider indie game 🕹  development as a leisure time hobby. I also love to build some hardware project for fun. I am always trying to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
+        description: '👋🏽 Hey, my name is Andy, I am  a Frontend Developer 👨‍💻 and living in New Zealand. Mostly, I am working on some websites 🕸 and mobile 📱 applications. \n I consider indie game 🕹  development as a leisure time hobby. I also love to build some tiny hardware devices for fun. I always try to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️',
         button1: 'Know more',
         button2: 'My works',
       },
@@ -40,7 +40,7 @@ const en = {
     },
     blog: {
       pageTitle: 'My blog',
-      intro: 'I try to use texts to record some I have done.',
+      intro: 'I try to use texts to record something I have done.',
       headline: 'Blog',
       more: 'More',
     },
