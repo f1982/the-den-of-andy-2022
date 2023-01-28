@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/f1982/the-den-of-andy-2022/compare/v0.1.1...v0.1.2) (2023-01-28)
+
+
+### 🎉 Features
+
+* update readme doc ([59f45e3](https://github.com/f1982/the-den-of-andy-2022/commit/59f45e31dddb21f3e603945de02a9b5f7270ad46))
+
 ### [0.1.1](https://github.com/f1982/the-den-of-andy-2022/compare/v0.1.0...v0.1.1) (2023-01-28)
 
 ## 0.1.0 (2023-01-28)
