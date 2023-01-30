@@ -79,7 +79,7 @@ const YouTubeChannelSection: React.FC = () => (
 const Home: React.FC = () => (
   <>
     <TabTitle pageTitle={t<string>('home.pageTitle')} />
-    {/* <ModelWithContainer /> */}
+    <ModelWithContainer style={{ width: '100%', height: '300px' }} />
     <PageHero image="/static/images/page-hero-workspace.png" className="mb-8 md:mb-16" />
     <Hero
       className="mb-16 md:mb-24"

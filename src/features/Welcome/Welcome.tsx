@@ -6,6 +6,7 @@ import DotLoader from '../../components/atoms/spinner/DotLoader';
 import Typography from '../../components/atoms/typography/Typography';
 
 const MyCube = lazy(() => import('../../components/organisms/3d/MyBox'));
+const SVGAnimation = lazy(() => import('../../components/organisms/logo-animation/SVGAnimation'));
 
 interface WelcomeProps {
   title: string;
@@ -14,16 +15,18 @@ interface WelcomeProps {
   link?: string;
 }
 
-const Welcome3D = ({
+const DefaultWelcome = ({
   title,
   subtitle,
   label,
   link = '/home',
 }: WelcomeProps) => {
   const [isMounted, setIsMounted] = useState(false);
+  const [rnd, setRnd] = useState(0);
 
   useEffect(() => {
     setIsMounted(true);
+    setRnd(Math.random());
   }, []);
 
   return (
@@ -34,9 +37,9 @@ const Welcome3D = ({
       items-center justify-center
     "
     >
-      { !isMounted ? null : (
+      {!isMounted ? null : (
         <Suspense fallback={<DotLoader />}>
-          <MyCube />
+          {rnd > 0.5 ? <SVGAnimation /> : <MyCube />}
         </Suspense>
       )}
 
@@ -53,4 +56,4 @@ const Welcome3D = ({
   );
 };
 
-export default Welcome3D;
+export default DefaultWelcome;
