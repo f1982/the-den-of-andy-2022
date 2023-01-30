@@ -15,12 +15,6 @@ const Index = () => {
           label={t('welcome.buttonLabel')}
           link="/home"
         />
-        {/* <Welcome3D
-          title={t('welcome.greeting')}
-          subtitle={t('welcome.description')}
-          label={t('welcome.buttonLabel')}
-          link="/home"
-        /> */}
       </div>
     </>
   );
