@@ -5,7 +5,7 @@ import MyButton from '../../components/atoms/buttons/Button';
 import DotLoader from '../../components/atoms/spinner/DotLoader';
 import Typography from '../../components/atoms/typography/Typography';
 
-const MyCube = lazy(() => import('../../components/organisms/3d/MyBox'));
+// const MyCube = lazy(() => import('../../components/organisms/3d/MyBox'));
 const SVGAnimation = lazy(() => import('../../components/organisms/logo-animation/SVGAnimation'));
 
 interface WelcomeProps {
@@ -39,7 +39,8 @@ const DefaultWelcome = ({
     >
       {!isMounted ? null : (
         <Suspense fallback={<DotLoader />}>
-          {rnd > 0.5 ? <SVGAnimation /> : <MyCube />}
+          {/* {rnd > 0.5 ? <SVGAnimation /> : <MyCube />} */}
+          <SVGAnimation />
         </Suspense>
       )}
 
