@@ -1,8 +1,8 @@
 ---
 title: 'Challenging Myself to Take a Cold Sea Bath Before Sunrise'
 excerpt: 'Have you ever wanted to take on a challenge and push yourself out of your comfort zone? Yesterday, I finally did just that and took a cold bath in the sea water before sunrise. Despite some unexpected setbacks, the experience was invigorating and left me feeling accomplished and ready to tackle whatever comes my way.'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
-date: '2020-10-06T05:35:07.322Z'
+coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
+date: '2023-03-04T05:35:07.322Z'
 keywords: 'challenge, cold bath, sunrise, experience, tips'
 author:
   name: 'Andy Cao'
@@ -10,8 +10,6 @@ author:
 ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
 ---
-
-# Why plants on the desk
 
 Yesterday, I decided to take on a challenge I had been wanting to do for a long time: taking a cold bath before sunrise. So, the night before, I went to bed early (before 11 pm), and before falling asleep, I packed my bath towel and clothes in a bag to save time in the morning. I had two vivid dreams during the night, which made me even more excited for what was to come.
 
