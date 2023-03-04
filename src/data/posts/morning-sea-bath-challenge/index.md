@@ -1,8 +1,8 @@
 ---
 title: 'Challenging Myself to Take a Cold Sea Bath Before Sunrise'
 excerpt: 'Have you ever wanted to take on a challenge and push yourself out of your comfort zone? Yesterday, I finally did just that and took a cold bath in the sea water before sunrise. Despite some unexpected setbacks, the experience was invigorating and left me feeling accomplished and ready to tackle whatever comes my way.'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
-date: '2020-10-06T05:35:07.322Z'
+coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
+date: '2023-03-04T05:35:07.322Z'
 keywords: 'challenge, cold bath, sunrise, experience, tips'
 author:
   name: 'Andy Cao'
@@ -11,19 +11,27 @@ ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
 ---
 
-# Why plants on the desk
+Yesterday, I decided to take on a challenge I had been wanting to do for a long time: taking a cold sea bath before sunrise. So, the night before, I went to bed early (before 11 pm), and before falling asleep, I packed up my bath towel and clothes in a bag to save time in the morning. I had two vivid dreams during the night, which didn't affect me on what was to come.
 
-Yesterday, I decided to take on a challenge I had been wanting to do for a long time: taking a cold bath before sunrise. So, the night before, I went to bed early (before 11 pm), and before falling asleep, I packed my bath towel and clothes in a bag to save time in the morning. I had two vivid dreams during the night, which made me even more excited for what was to come.
+When I woke up at around 6:40 am, the sun was nowhere in sight, but I was already wide awake and ready to go. I jumped into my car and drove to the beach, but I had never driven this early, and my car window fogged up. I stopped to check if it was on the inside or outside, but it was just the weather playing a prank on me.
 
-When I woke up at around 6:40 am, the sun was nowhere in sight, but I was already wide awake and ready to go. I jumped in my car and drove to the beach, but I had never driven this early before, and my car window fogged up. I stopped to check if it was on the inside or outside, but it was just the weather playing a prank on me.
+Finally, around 7:10 am, I arrived at the beach, and to my surprise, there were already many people there, waiting for the sun to rise. But I couldn't wait any longer, so I quickly stripped off my clothes and walk into the ocean. The water wasn't as cold as I had anticipated, which was probably because I had been taking cold showers for more than a week. In fact, it was so comfortable that I even found it a little bit warm!
 
-Finally, around 7:10 am, I arrived at the beach, and to my surprise, there were already many people there, waiting for the sun to rise. But I couldn't wait any longer, so I quickly stripped off my clothes and jumped into the ocean. The water wasn't as cold as I had anticipated, which was probably because I had been taking cold baths for a week. In fact, it was so comfortable that I even found it a little bit warm!
+I decided to move into the deeper areas and fully immerse myself in the salty water. It was an exhilarating experience, and I couldn't help but stare at the sky, the faraway mountains, and the clouds above. Life is so beautiful.
 
-I decided to dive into the deeper areas and fully immerse myself in the salty water. It was an exhilarating experience, and I couldn't help but stare at the sky, the faraway mountains, and the clouds above. Life was good.
-
-After about 20 minutes, I got out of the water, picked up my clothes, and went to the bathroom to have another refreshing bath. By the time I got out, the sun had already risen, and more people had arrived at the beach to run or jog. It was like nothing had ever happened, and I couldn't help but chuckle at the thought of how much more exciting my morning had been compared to a normal day.
+After about 20 minutes, I got out of the water, picked up my clothes, and went to the bathroom to have another refreshing cold bath. By the time I got out, the sun had already risen, and more people had arrived at the beach to run or jog. It was like nothing had ever happened, and I couldn't help but chuckle at the thought of how much more exciting my morning had been compared to a normal day.
 
 I got back in my car and drove home before my daughter woke up, feeling energized and accomplished. As I drove, I spoke to myself, "I'll definitely do it again!"
+
+![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath23.jpeg)
+
+![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath21.jpeg)
+
+
+At the end I'd like to share the video I was listening to about Cold Exposure.
+
+- https://www.youtube.com/watch?v=pq6WHJzOkno
+
 
 
 昨天晚上，我突然决定接受一个我长期以来想要尝试的挑战：在日出前洗个海水澡。所以，昨晚我早早上床睡觉（在晚上11点之前），在入睡前，我将我的浴巾和换洗的衣服放进包里，以节省早上的时间。晚上我还做了两个乱七八糟的梦，这并没有影响我带着兴奋期待即将到来的体验。
@@ -38,6 +46,8 @@ I got back in my car and drove home before my daughter woke up, feeling energize
 
 在女儿醒来之前，我开着车回到了家，感觉到应该大约 5 杯咖啡级别的精力充沛。在驾车回家的路上我对自己说：“我一定会再来的！”
 
-![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath23.jpeg)
+最后分享一下给我启发的 Huberman 的视频。
 
-![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath21.jpeg)
+- https://www.youtube.com/watch?v=pq6WHJzOkno
+
+
