@@ -9,6 +9,20 @@ This project is Andy's personal website.
 
 I'd love to have a place that fully autonomous. I can put all my interests there. 
 
+# Install
+
+```
+yarn 
+```
+
+# Release
+
+```bash
+ yarn release:minor
+ yarn release:patch
+ yarn release:major
+```
+
 # Tech stack using in this project
 
 - React
