@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import SiteSEO from '../components/molecules/seo/SiteSEO';
-import DefaultWelcome from '../features/Welcome/DefaultWelcome';
+import DefaultWelcome from '../features/Welcome/Welcome';
 
 const Index = () => {
   const { t } = useTranslation();
