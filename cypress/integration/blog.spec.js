@@ -7,6 +7,6 @@ describe('blog pages', () => {
 
   it('blog detail page', () => {
     cy.visit(`${Cypress.env('host')}blog`);
-    cy.get('div[href*="blog/"]').first().click();
+    cy.get('a[href*="blog/"]').first().click();
   });
 });
