@@ -6,7 +6,7 @@ import { UnrealBloomPass } from 'three-stdlib';
 
 extend({ UnrealBloomPass });
 
-export default function PostEffect() {
+const PostEffect = () => {
   const { size, scene, camera } = useThree();
   const aspect = useMemo(
     () => new THREE.Vector2(size.width, size.height),
@@ -24,4 +24,5 @@ export default function PostEffect() {
       {/* <unrealBloomPass attachArray="passes" args={[aspect, 0.4, 1, 0]} /> */}
     </EffectsComposer>
   );
-}
+};
+export default PostEffect;

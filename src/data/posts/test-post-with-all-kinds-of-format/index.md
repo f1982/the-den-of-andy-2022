@@ -24,17 +24,6 @@ A reprehenderit amet enim et soluta inventore exercitationem. Occaecati mollitia
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
-Code snippets
-
-```js
-import React from 'react';
-
-const whyDidYouRender = require('@welldone-software/why-did-you-render');
-
-whyDidYouRender(React, {
-  trackAllPureComponents: true,
-});
-```
 
 This is the `inline code block`
 
