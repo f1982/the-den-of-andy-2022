@@ -6,21 +6,25 @@ const SubMenuItem: React.FC<MenuItemData> = ({
   link,
   label,
 }) => (
-  <Link href={link} passHref>
-    <a
+  (
+    <Link
+      href={link}
+      passHref
       className="
-          px-6
-          py-3
-          mr-3
-          bg-secondary-medium
-          text-on-primary
-          hover:bg-primary-dark
-          hover:text-white
-          "
+        px-6
+        py-3
+        mr-3
+        bg-secondary-medium
+        text-on-primary
+        hover:bg-primary-dark
+        hover:text-white
+        "
     >
+
       {label}
-    </a>
-  </Link>
+
+    </Link>
+  )
 );
 
 const Submenu = ({ items }: { items: MenuItemData[] }) => (

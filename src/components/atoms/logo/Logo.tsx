@@ -34,11 +34,11 @@ const SVGLogoV3 = () => (
 
 const Logo = () => (
   <div className="inline w-[48px]">
-    <Link href="/" passHref>
-      <a className="text-on-background">
-        <SVGLogoV3 />
-        {/* <SVGLogoV2 /> */}
-      </a>
+    <Link href="/" passHref className="text-on-background">
+
+      <SVGLogoV3 />
+      {/* <SVGLogoV2 /> */}
+
     </Link>
   </div>
 );

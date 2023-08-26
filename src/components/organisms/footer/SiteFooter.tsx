@@ -22,12 +22,12 @@ const TermsAndConditions = () => (
     )}
     >
       <li className="pr-4">
-        <Link href="/t&c" passHref>
+        <Link href="/t&c" passHref legacyBehavior>
           <button type="button">Terms and Conditions</button>
         </Link>
       </li>
       <li>
-        <Link href="/privacy" passHref>
+        <Link href="/privacy" passHref legacyBehavior>
           <button type="button">Privacy Policy</button>
         </Link>
       </li>

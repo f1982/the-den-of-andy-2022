@@ -39,7 +39,7 @@ const LastProjects: React.FC = () => (
       Latest Projects
     </Typography>
     <div className="flex flex-col items-center">
-      <Link id="test" href="/blog/my-wfh-desk-setups-2022">
+      <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
         <button type="button">
           <LatestProject
             title="My desktop setups for WFH 2022"
@@ -89,14 +89,14 @@ const Home: React.FC = () => (
       description={t<string>('home.intro.description')}
       buttons={(
         <div className="flex gap-x-3">
-          <Link href="/about" passHref>
+          <Link href="/about" passHref legacyBehavior>
             <MyButton
               type="primary"
             >
               {t<string>('home.intro.button1')}
             </MyButton>
           </Link>
-          <Link href="/project" passHref>
+          <Link href="/project" passHref legacyBehavior>
             <MyButton type="secondary">{t<string>('home.intro.button2')}</MyButton>
           </Link>
         </div>

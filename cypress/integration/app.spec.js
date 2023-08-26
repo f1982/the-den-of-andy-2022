@@ -56,7 +56,7 @@ describe('other pages', () => {
 
     // open first blog page
     cy.visit(`${Cypress.env('host')}blog`);
-    cy.get('div[href*="blog/"]').last().click();
+    cy.get('a[href*="blog/"]').last().click();
 
     // SEO: check keywords is there
     cy.document().get('head meta[name="keywords"]')

@@ -31,7 +31,7 @@ const MenuItem: React.FC<MenuItemData> = ({
   const activeStyle = link === pathname ? 'bg-secondary-dark text-on-background' : '';
 
   return (
-    <Link href={link} passHref>
+    <Link href={link} passHref legacyBehavior>
       <button
         type="button"
         className={cn(basicStyle, activeStyle)}
