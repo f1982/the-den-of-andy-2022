@@ -16,7 +16,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
   platform,
   tech,
 }) => (
-  <Link key={id} href={`/project/${id}`} passHref>
+  <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
     <div className="p-0 md:p-2 cursor-pointer">
       <div className={cn(
         'relative bg-background rounded-[1.5rem]',

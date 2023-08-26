@@ -12,7 +12,7 @@ const PageNotFound = () => (
       <h2 className="text-primary-dark mb-8 tracking-[1rem]">
         {t<string>('pageNotFound.subtitle')}
       </h2>
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <MyButton type="primary">
           {t<string>('pageNotFound.backButtonLabel')}
         </MyButton>
