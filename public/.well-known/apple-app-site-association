@@ -12,11 +12,11 @@
             "comment": "Matches board pack url"
           },
           {
-            "/": "/minutes-signing/*",
-            "comment": "Matches the minutes signing url"
+            "/": "/signing/*",
+            "comment": "Matches the signing url"
           },
           {
-            "/": "/signing/*",
+            "/": "/minutes-signing/*",
             "comment": "Matches the minutes signing url"
           }
         ]
