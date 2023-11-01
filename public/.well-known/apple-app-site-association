@@ -13,7 +13,10 @@
           },
           {
             "/": "/minutes-signing/*",
-            "exclude": true,
+            "comment": "Matches the minutes signing url"
+          },
+          {
+            "/": "/signing/*",
             "comment": "Matches the minutes signing url"
           }
         ]
