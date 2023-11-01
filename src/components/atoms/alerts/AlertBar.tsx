@@ -17,10 +17,13 @@ const AlertBar: React.FC<AlertBarProps> = ({
   type = AlertType.Warning, children,
 }) => (
   <div
-    className={cn('border-b', {
-      'bg-error border-accent-7 text-on-error': type === AlertType.Error,
-      'bg-warning border-accent-2 text-on-warning': type === AlertType.Warning,
-    })}
+    className={cn(
+      'border-b',
+      {
+        'bg-error border-accent-7 text-on-error': type === AlertType.Error,
+        'bg-warning border-accent-2 text-on-warning': type === AlertType.Warning,
+      },
+    )}
   >
     <div className="container mx-auto px-5 ">
       <div className="py-2 text-primary text-center text-sm">

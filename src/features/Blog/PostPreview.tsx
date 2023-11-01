@@ -16,7 +16,11 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
   slug,
 }) => (
   <div className="cursor-pointer">
-    <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
+    <Link
+      as={`${BLOG_PATH}/${slug}`}
+      href={`${BLOG_PATH}/[slug]`}
+      passHref
+    >
       <div className="mb-5">
         <Image
           className={classNames(

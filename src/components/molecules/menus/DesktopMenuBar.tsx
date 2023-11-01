@@ -8,12 +8,18 @@ import styles from './menu.module.css';
 const MenuItem: React.FC<MenuItemData> = ({ link, label, icon }) => {
   const { pathname } = useRouter();
   return (
-    <Link href={link} passHref>
-      <a className={link === pathname ? styles.activeNavLink : styles.topMenuItem}>
+    (
+      <Link
+        href={link}
+        passHref
+        className={link === pathname ? styles.activeNavLink : styles.topMenuItem}
+      >
+
         <span>{icon}</span>
         <div className={styles.overlayText}>{label}</div>
-      </a>
-    </Link>
+
+      </Link>
+    )
   );
 };
 
