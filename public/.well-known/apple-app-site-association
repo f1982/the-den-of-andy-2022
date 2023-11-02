@@ -1,29 +1,37 @@
 {
+  "webcredentials": {
+    "apps": [
+      "6D8CVP77YW.app.boardpro.kea",
+      "6D8CVP77YW.app.boardpro.kea.dev"
+    ]
+  },
   "applinks": {
     "apps": [],
     "details": [
       {
         "appID": "6D8CVP77YW.app.boardpro.kea",
         "paths": [
-          "/pack/*",
-          "/signing/",
+          "/pack/*"
+        ]
+      },
+      {
+        "appID": "6D8CVP77YW.app.boardpro.kea.dev",
+        "paths": [
+          "/pack/*"
+        ]
+      },
+      {
+        "appID": "6D8CVP77YW.app.boardpro.kea",
+        "paths": [
           "/minutes-signing/*"
         ]
       },
       {
         "appID": "6D8CVP77YW.app.boardpro.kea.dev",
         "paths": [
-          "/pack/*",
-          "/signing/",
           "/minutes-signing/*"
         ]
       }
-    ]
-  },
-  "webcredentials": {
-    "apps": [
-      "6D8CVP77YW.app.boardpro.kea",
-      "6D8CVP77YW.app.boardpro.kea.dev"
     ]
   }
 }
