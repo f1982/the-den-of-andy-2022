@@ -1,24 +1,21 @@
 {
   "applinks": {
+    "apps": [],
     "details": [
       {
-        "appIDs": [
-          "6D8CVP77YW.app.boardpro.kea",
-          "6D8CVP77YW.app.boardpro.kea.dev"
-        ],
-        "components": [
-          {
-            "/": "/pack/*",
-            "comment": "Matches board pack url"
-          },
-          {
-            "/": "/signing/*",
-            "comment": "Matches the signing url"
-          },
-          {
-            "/": "/minutes-signing/*",
-            "comment": "Matches the minutes signing url"
-          }
+        "appID": "6D8CVP77YW.app.boardpro.kea",
+        "paths": [
+          "/pack/*",
+          "/signing/",
+          "/minutes-signing/*"
+        ]
+      },
+      {
+        "appID": "6D8CVP77YW.app.boardpro.kea.dev",
+        "paths": [
+          "/pack/*",
+          "/signing/",
+          "/minutes-signing/*"
         ]
       }
     ]
