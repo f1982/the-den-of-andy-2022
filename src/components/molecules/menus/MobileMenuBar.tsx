@@ -63,6 +63,7 @@ const MobileMenuBar = ({
     <>
       <div className="md:hidden p-4 pr-0">
         <button
+          aria-label="menu"
           type="button"
           className="w-8"
           onClick={() => {
