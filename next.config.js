@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-})
+  enabled: process.env.ANALYZE === 'true',
+});
 
 module.exports = withBundleAnalyzer({
   // must have this when using the secondary domain of the github page
@@ -17,4 +17,4 @@ module.exports = withBundleAnalyzer({
     disableStaticImages: false,
     // formats: ['image/webp'],
   },
-})
+});

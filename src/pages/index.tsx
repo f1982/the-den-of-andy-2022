@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
-import SiteSEO from '../components/molecules/seo/SiteSEO';
+import { siteMetadata } from '../constants/settings';
 import DefaultWelcome from '../features/Welcome/DefaultWelcome';
+
+export const metadata = { ...siteMetadata };
 
 const Index = () => {
   const { t } = useTranslation();
 
   return (
     <>
-      <SiteSEO pageTitle={t('welcome.pageTitle')} />
+      {/* <SiteSEO pageTitle={t('welcome.pageTitle')} /> */}
       <div className="h-screen flex flex-col justify-center items-center">
         <DefaultWelcome
           title={t('welcome.greeting')}

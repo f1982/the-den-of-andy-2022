@@ -2,7 +2,9 @@ const en = {
   translation: {
     greeting: 'Kia Ora',
     siteName: 'Andy\'s Digital Space',
+    siteTitle: 'Andy\'s personal website is used for recording all his work and thinking.',
     siteDescription: 'Andy\'s personal website is used for recording all his work and thinking.',
+    siteKeywords: 'AndyCao, Frontend developer, coding, website development, mobile app development',
     welcome: {
       pageTitle: 'Welcome',
       greeting: 'Hey there! I am Andy',
