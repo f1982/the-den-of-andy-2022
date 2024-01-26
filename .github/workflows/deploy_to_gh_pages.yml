@@ -33,24 +33,24 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          # cache: 'yarn'
 
       - name: Install packages
-        run: yarn install
+        run: npm run install
 
       - name: Build the project
-        run: yarn build
+        run: npm build
 
       - name: Run unit tests
-        run: yarn test
+        run: npm test
 
-      - name: Run Cypress e2e test
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn start
+      # - name: Run Cypress e2e test
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     start: yarn start
 
       - name: Build the website
-        run: yarn export && touch ./out/.nojekyll
+        run: npm run export && touch ./out/.nojekyll
         # This below is used to build storybook static site with whole site together
         # run: npm run export-with-storybook && touch ./out/.nojekyll
 

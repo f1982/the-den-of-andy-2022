@@ -1,14 +1,26 @@
 import Button from './Button'
 
-export default {
-  title: 'UI/Button',
-  component: Button
-}
+const meta = {
+  title: 'Den/Button',
+  component: Button,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  // tags: ['autodocs'],
+  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
 
-const Template = (args) => <Button {...args} />
+export default meta;
 
-export const PrimaryButton = Template.bind({})
-PrimaryButton.args = { type: 'primary', children: 'Primary Button' }
+export const Primary = {
+  args: { type: 'primary', children: 'Primary Button' },
+};
 
-export const SecondaryButton = Template.bind({})
-SecondaryButton.args = { type: 'secondary', children: 'Secondary Button' }
+export const SecondaryButton = {
+  args: { type: 'secondary', children: 'Primary Button' },
+};
