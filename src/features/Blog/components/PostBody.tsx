@@ -1,4 +1,4 @@
-import styles from './markdown.module.css';
+import styles from './markdown.module.css'
 
 const PostBody = ({ content }) => (
   <div className="container mx-auto">
@@ -8,6 +8,6 @@ const PostBody = ({ content }) => (
       dangerouslySetInnerHTML={{ __html: content }}
     />
   </div>
-);
+)
 
-export default PostBody;
+export default PostBody

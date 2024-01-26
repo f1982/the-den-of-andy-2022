@@ -1,23 +1,27 @@
-import MyButton from '../../components/atoms/buttons/Button';
-import Typography from '../../components/atoms/typography/Typography';
-import SVGAnimation from './SVGAnimation';
+import MyButton from '../../components/atoms/buttons/Button'
+import Typography from '../../components/atoms/typography/Typography'
+import SVGAnimation from './SVGAnimation'
 
 interface WelcomeProps {
-  title: string;
-  subtitle: string;
-  label: string;
-  link?: string;
+  title: string
+  subtitle: string
+  label: string
+  link?: string
 }
 
-const DefaultWelcome = ({ title, subtitle, label, link = '/home' }: WelcomeProps) => (
+const DefaultWelcome = ({
+  title,
+  subtitle,
+  label,
+  link = '/home'
+}: WelcomeProps) => (
   <div
     className="
       container mx-auto
       flex
       flex-col
       items-center justify-center
-    "
-  >
+    ">
     <SVGAnimation />
     <div className="text-center">
       <Typography variant="h2" as="h1" className="uppercase">
@@ -31,6 +35,6 @@ const DefaultWelcome = ({ title, subtitle, label, link = '/home' }: WelcomeProps
       </div>
     </div>
   </div>
-);
+)
 
-export default DefaultWelcome;
+export default DefaultWelcome

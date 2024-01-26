@@ -1,5 +1,5 @@
-import Highlight from './Highlight';
-import Typography from './Typography';
+import Highlight from './Highlight'
+import Typography from './Typography'
 
 export default {
   title: 'UI/Highlight',
@@ -7,10 +7,10 @@ export default {
   argTypes: {
     title: {
       options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-  },
-};
+      control: { type: 'radio' }
+    }
+  }
+}
 
 export const Default = () => (
   <div>
@@ -30,4 +30,4 @@ export const Default = () => (
       </Highlight>
     </div>
   </div>
-);
+)

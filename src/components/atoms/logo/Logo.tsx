@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const SVGLogoV2 = () => (
   <svg
@@ -6,15 +6,14 @@ const SVGLogoV2 = () => (
     width="100%"
     height="100%"
     fill="currentColor"
-    viewBox="0 0 129 129"
-  >
+    viewBox="0 0 129 129">
     <path d="M129 64.5c0 35.622-28.878 64.5-64.5 64.5S0 100.122 0 64.5 28.878 0 64.5 0 129 28.878 129 64.5z" />
     <path
       fill="white"
       d="M84.917 87.531L55.08 37.963a2 2 0 01-.058-1.96l3.308-6.316c.728-1.39 2.7-1.438 3.495-.086l32.9 55.884c.785 1.334-.176 3.015-1.723 3.015H86.63a2 2 0 01-1.714-.969zM32.738 86.498l18.65-32.215a2 2 0 013.396-.107l3.52 5.28a2 2 0 01.058 2.125L49.28 76.984C48.492 78.317 49.454 80 51 80h17.897a2 2 0 011.69.932l3.474 5.5c.841 1.332-.115 3.068-1.69 3.068H34.468c-1.54 0-2.503-1.669-1.731-3.002z"
     />
   </svg>
-);
+)
 
 const SVGLogoV3 = () => (
   <svg
@@ -22,8 +21,7 @@ const SVGLogoV3 = () => (
     height="100%"
     viewBox="0 0 120 120"
     fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+    xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -37,7 +35,7 @@ const SVGLogoV3 = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
 const Logo = () => (
   <div className="inline w-[48px]">
@@ -46,6 +44,6 @@ const Logo = () => (
       {/* <SVGLogoV2 /> */}
     </Link>
   </div>
-);
+)
 
-export default Logo;
+export default Logo

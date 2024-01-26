@@ -1,16 +1,16 @@
-import cn from 'classnames';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useCallback, useState } from 'react';
-import Modal from 'react-modal';
-import customModalStyles from '../../../constants/modelConfig';
-import useMediaQuery from '../../../hooks/useMediaQuery';
-import { MenuItemData } from '../../../types';
-import CloseButton from '../../atoms/buttons/CloseButton';
-import Hamburger from '../../atoms/Icons/Hamburger';
+import customModalStyles from '../../../constants/modelConfig'
+import useMediaQuery from '../../../hooks/useMediaQuery'
+import { MenuItemData } from '../../../types'
+import Hamburger from '../../atoms/Icons/Hamburger'
+import CloseButton from '../../atoms/buttons/CloseButton'
+import cn from 'classnames'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React, { useCallback, useState } from 'react'
+import Modal from 'react-modal'
 
 const MenuItem: React.FC<MenuItemData> = ({ link, label, icon, onClick }) => {
-  const { pathname } = useRouter();
+  const { pathname } = useRouter()
   const basicStyle = `
           px-4 py-4 
           font-bold 
@@ -22,31 +22,35 @@ const MenuItem: React.FC<MenuItemData> = ({ link, label, icon, onClick }) => {
           flex 
           flex-row
           justify-start
-          items-center`;
-  const activeStyle = link === pathname ? 'bg-secondary-dark text-on-background' : '';
+          items-center`
+  const activeStyle =
+    link === pathname ? 'bg-secondary-dark text-on-background' : ''
 
   return (
     <Link href={link} passHref legacyBehavior>
-      <button type="button" className={cn(basicStyle, activeStyle)} onClick={(e) => onClick && onClick(e, link)}>
+      <button
+        type="button"
+        className={cn(basicStyle, activeStyle)}
+        onClick={(e) => onClick && onClick(e, link)}>
         <span className="mr-[1rem]">{icon}</span>
         <span>{label}</span>
       </button>
     </Link>
-  );
-};
+  )
+}
 
 interface MobileMenuBarProps {
-  menuData: MenuItemData[];
+  menuData: MenuItemData[]
 }
 
 const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
-  const [showing, setShowing] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 960px)');
+  const [showing, setShowing] = useState(false)
+  const isMobile = useMediaQuery('(max-width: 960px)')
 
   // this fun will never change when rerendering happens
   const handleClick = useCallback(() => {
-    setShowing(false);
-  }, []);
+    setShowing(false)
+  }, [])
 
   return (
     <>
@@ -56,7 +60,7 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
           type="button"
           className="w-8"
           onClick={() => {
-            setShowing(!showing);
+            setShowing(!showing)
           }}>
           <Hamburger />
         </button>
@@ -66,15 +70,15 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
         style={customModalStyles}
         contentLabel="Mobile Menu Modal"
         onAfterOpen={() => {
-          document.body.style.top = `-${window.scrollY}px`;
-          document.body.style.position = 'fixed';
+          document.body.style.top = `-${window.scrollY}px`
+          document.body.style.position = 'fixed'
         }}
         onAfterClose={() => {
-          const scrollY = document.body.style.top;
-          document.body.style.position = '';
-          document.body.style.top = '';
+          const scrollY = document.body.style.top
+          document.body.style.position = ''
+          document.body.style.top = ''
           // eslint-disable-next-line radix
-          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+          window.scrollTo(0, parseInt(scrollY || '0') * -1)
         }}>
         <div className="w-full h-full bg-background">
           <div className="flex justify-end p-[1rem]">
@@ -88,7 +92,7 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
         </div>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default MobileMenuBar;
+export default MobileMenuBar

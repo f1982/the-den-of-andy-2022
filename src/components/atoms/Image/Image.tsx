@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import cn from 'classnames';
-import { useEffect, useRef, useState } from 'react';
-import DotLoader from '../spinner/DotLoader';
+import DotLoader from '../spinner/DotLoader'
+import cn from 'classnames'
+import { useEffect, useRef, useState } from 'react'
 
 interface ImageWithLoaderProps {
-  src: string;
-  width?: number | string;
-  height?: number | string;
-  withLoader?: boolean;
-  className?: string;
-  alt?: string;
-  style?: object;
+  src: string
+  width?: number | string
+  height?: number | string
+  withLoader?: boolean
+  className?: string
+  alt?: string
+  style?: object
 }
 
 const ImageWithLoader = ({
@@ -23,14 +23,14 @@ const ImageWithLoader = ({
   alt = '',
   ...rest
 }: ImageWithLoaderProps) => {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const ref = useRef<HTMLImageElement>(null);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false)
+  const ref = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     if (ref.current && ref.current.complete) {
-      setIsLoaded(true);
+      setIsLoaded(true)
     }
-  }, []);
+  }, [])
 
   return (
     <div
@@ -41,10 +41,9 @@ const ImageWithLoader = ({
         alignItems: 'center',
         minHeight: '80px',
         width,
-        height,
+        height
       }}
-      {...rest}
-    >
+      {...rest}>
       <img
         ref={ref}
         src={src}
@@ -61,11 +60,11 @@ const ImageWithLoader = ({
                 ...{
                   width,
                   height,
-                  opacity: 1,
-                },
+                  opacity: 1
+                }
               }
             : {
-                opacity: 0,
+                opacity: 0
               }
         }
         onLoad={() => setIsLoaded(true)}
@@ -80,14 +79,13 @@ const ImageWithLoader = ({
             height: '100%',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+            alignItems: 'center'
+          }}>
           <DotLoader />
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ImageWithLoader;
+export default ImageWithLoader

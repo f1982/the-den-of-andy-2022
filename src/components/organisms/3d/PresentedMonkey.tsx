@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
-import ElasticPresentation from './ElasticPresentation';
-import SuzannaModel from './SuzannaModel';
-import RoomModel from './RoomModel';
+import ElasticPresentation from './ElasticPresentation'
+import RoomModel from './RoomModel'
+import SuzannaModel from './SuzannaModel'
+import React, { Suspense } from 'react'
 
 const PresentedMonkey = () => (
   <ElasticPresentation>
@@ -10,6 +10,6 @@ const PresentedMonkey = () => (
       <RoomModel />
     </Suspense>
   </ElasticPresentation>
-);
+)
 
-export default PresentedMonkey;
+export default PresentedMonkey

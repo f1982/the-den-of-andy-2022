@@ -1,11 +1,11 @@
-import classNames from 'classnames';
-import Link from 'next/link';
-import React from 'react';
-import Image from '../../components/atoms/Image/Image';
-import Typography from '../../components/atoms/typography/Typography';
-import PostDate from '../../components/organisms/article/PostDate';
-import { BLOG_PATH } from '../../constants/menuData';
-import { BlogPostData } from '../../types/blog';
+import Image from '../../components/atoms/Image/Image'
+import Typography from '../../components/atoms/typography/Typography'
+import PostDate from '../../components/organisms/article/PostDate'
+import { BLOG_PATH } from '../../constants/menuData'
+import { BlogPostData } from '../../types/blog'
+import classNames from 'classnames'
+import Link from 'next/link'
+import React from 'react'
 
 const PostPreview: React.FC<Partial<BlogPostData>> = ({
   title,
@@ -13,7 +13,7 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
   date,
   excerpt,
   author,
-  slug,
+  slug
 }) => (
   <div className="cursor-pointer">
     <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
@@ -40,6 +40,6 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
       {excerpt}
     </Typography>
   </div>
-);
+)
 
-export default PostPreview;
+export default PostPreview

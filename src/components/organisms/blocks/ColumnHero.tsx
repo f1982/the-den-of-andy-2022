@@ -1,8 +1,8 @@
-import classNames from 'classnames';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { HeroData } from '../../../types';
-import Typography from '../../atoms/typography/Typography';
+import { HeroData } from '../../../types'
+import Typography from '../../atoms/typography/Typography'
+import classNames from 'classnames'
+import { motion } from 'framer-motion'
+import React from 'react'
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -12,25 +12,25 @@ const containerVariant = {
     transition: {
       duration: 1.8,
       type: 'tween',
-      staggerChildren: 1.6, // let the child show up by order after a certain delay
-    },
-  },
-};
+      staggerChildren: 1.6 // let the child show up by order after a certain delay
+    }
+  }
+}
 
 const itemVariant = {
   hidden: {
     opacity: 0,
-    y: -50,
+    y: -50
   },
   show: {
     opacity: 1,
-    y: 0,
+    y: 0
   },
   transition: {
     type: 'tween',
-    duration: 1.6,
-  },
-};
+    duration: 1.6
+  }
+}
 
 const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   title,
@@ -40,7 +40,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   buttons,
   viewPortOnce = true,
   direction = 'l2r',
-  className,
+  className
 }) => (
   <motion.section
     className={classNames(
@@ -51,10 +51,13 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
     variants={containerVariant}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: viewPortOnce }}
-  >
+    viewport={{ once: viewPortOnce }}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img className="object-cover mb-6 md:mb-0 md:w-2/5" alt="hero" src={image} />
+    <img
+      className="object-cover mb-6 md:mb-0 md:w-2/5"
+      alt="hero"
+      src={image}
+    />
     <div className="md:w-3/5 flex flex-col md:items-start items-center ">
       <Typography variant="h2" as="h2">
         {title}
@@ -72,6 +75,6 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
       </motion.div>
     </div>
   </motion.section>
-);
+)
 
-export default ColumnHero;
+export default ColumnHero

@@ -16,11 +16,11 @@
     "module": "esnext",
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
-    "strictNullChecks": true,
+    "strictNullChecks": true
   },
   "include": ["src", "src/index.d.ts", "_document.js", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

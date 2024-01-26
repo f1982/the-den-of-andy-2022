@@ -4,16 +4,16 @@ export const enum SNSPlatforms {
   YouTube = 'YouTube',
   LinkedIn = 'LinkedIn',
   Twitter = 'Twitter',
-  Weibo = 'Weibo',
+  Weibo = 'Weibo'
 }
 
 export interface LinkData {
-  id: number;
-  name: string;
-  type: 'outside' | 'inside';
-  icon: string;
-  link: string;
-  alt?: string;
-  tag?: string;
-  hidden: number;
+  id: number
+  name: string
+  type: 'outside' | 'inside'
+  icon: string
+  link: string
+  alt?: string
+  tag?: string
+  hidden: number
 }

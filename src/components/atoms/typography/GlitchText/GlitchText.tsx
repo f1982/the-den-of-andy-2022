@@ -1,4 +1,4 @@
-import styles from './GlitchText.module.css';
+import styles from './GlitchText.module.css'
 
 const GlitchText = ({ text }: { text: string }) => (
   <div className={styles.wrapper}>
@@ -6,6 +6,6 @@ const GlitchText = ({ text }: { text: string }) => (
       {text}
     </h1>
   </div>
-);
+)
 
-export default GlitchText;
+export default GlitchText

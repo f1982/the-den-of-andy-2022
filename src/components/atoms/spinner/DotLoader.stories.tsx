@@ -1,9 +1,9 @@
-import DotLoader from './DotLoader';
+import DotLoader from './DotLoader'
 
 export default {
   title: 'UI/Loader',
-  component: DotLoader,
-};
+  component: DotLoader
+}
 
 export const Demos = () => (
   <div>
@@ -12,4 +12,4 @@ export const Demos = () => (
     <p>Demo</p>
     <DotLoader color="secondary" />
   </div>
-);
+)

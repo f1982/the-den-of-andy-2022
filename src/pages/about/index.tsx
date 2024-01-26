@@ -1,10 +1,10 @@
-import { t } from 'i18next';
-import React from 'react';
-import TabTitle from '../../components/molecules/seo/SiteSEO';
-import PageHero from '../../components/organisms/blocks/PageHero';
-import PageTitle from '../../components/organisms/blocks/PageTitle';
-import SmallText from '../../components/organisms/blocks/SmallText';
-import { getAge } from '../../utils/date.utils';
+import TabTitle from '../../components/molecules/seo/SiteSEO'
+import PageHero from '../../components/organisms/blocks/PageHero'
+import PageTitle from '../../components/organisms/blocks/PageTitle'
+import SmallText from '../../components/organisms/blocks/SmallText'
+import { getAge } from '../../utils/date.utils'
+import { t } from 'i18next'
+import React from 'react'
 
 const About: React.FC = () => (
   <>
@@ -12,7 +12,10 @@ const About: React.FC = () => (
     <PageHero image="/static/images/page-hero-memoji.png" />
     {/* <PageHero image="/static/images/about-andy-meditation.png" /> */}
     <div className="container mx-auto">
-      <PageTitle title={t('about.headline')} description={t('about.description')} />
+      <PageTitle
+        title={t('about.headline')}
+        description={t('about.description')}
+      />
       {/* <div className="flex flex-col items-center justify-center">
           <Submenu items={aboutSubmenu} />
         </div> */}
@@ -36,6 +39,6 @@ const About: React.FC = () => (
       />
     </div>
   </>
-);
+)
 
-export default About;
+export default About

@@ -1,37 +1,37 @@
-import { Html, useGLTF } from '@react-three/drei';
-import { GroupProps, MeshProps, useFrame } from '@react-three/fiber';
-import React, { useRef } from 'react';
-import THREE from 'three';
-import { GLTF } from 'three-stdlib/loaders/GLTFLoader';
+import { Html, useGLTF } from '@react-three/drei'
+import { GroupProps, MeshProps, useFrame } from '@react-three/fiber'
+import React, { useRef } from 'react'
+import THREE from 'three'
+import { GLTF } from 'three-stdlib/loaders/GLTFLoader'
 
 type GLTFResult = GLTF & {
   nodes: {
-    Object006_watch_0: THREE.Mesh;
-  };
+    Object006_watch_0: THREE.Mesh
+  }
   materials: {
-    watch: THREE.Material;
-  };
-};
+    watch: THREE.Material
+  }
+}
 
 const WatchModel = (rest: GroupProps) => {
   const file =
-    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb';
-  useGLTF.preload(file);
-  const ref = useRef<any>();
+    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb'
+  useGLTF.preload(file)
+  const ref = useRef<any>()
 
-  const { nodes, materials } = useGLTF(file) as GLTFResult;
+  const { nodes, materials } = useGLTF(file) as GLTFResult
 
   useFrame((state) => {
-    const t = state.clock.getElapsedTime();
+    const t = state.clock.getElapsedTime()
     // @ts-ignore
-    ref.current.rotation.x = -Math.PI / 1.75 + Math.cos(t / 4) / 8;
+    ref.current.rotation.x = -Math.PI / 1.75 + Math.cos(t / 4) / 8
     // @ts-ignore
-    ref.current.rotation.y = Math.sin(t / 4) / 8;
+    ref.current.rotation.y = Math.sin(t / 4) / 8
     // @ts-ignore
-    ref.current.rotation.z = (1 + Math.sin(t / 1.5)) / 20;
+    ref.current.rotation.z = (1 + Math.sin(t / 1.5)) / 20
     // @ts-ignore
-    ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10;
-  });
+    ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
+  })
 
   return (
     <group ref={ref} {...rest} dispose={null}>
@@ -41,8 +41,7 @@ const WatchModel = (rest: GroupProps) => {
           rotation={[Math.PI / 2, 0, 0]}
           position={[180, -350, 50]}
           transform
-          occlude
-        >
+          occlude>
           <div className="annotation">
             6.550 $<span style={{ fontSize: '1.5em' }}>🥲</span>
           </div>
@@ -55,7 +54,7 @@ const WatchModel = (rest: GroupProps) => {
         material={materials.watch}
       />
     </group>
-  );
-};
+  )
+}
 
-export default WatchModel;
+export default WatchModel

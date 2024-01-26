@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const HeroHome: React.FC = () => (
   <div
@@ -10,9 +10,8 @@ const HeroHome: React.FC = () => (
       backgroundPosition: 'center center',
       backgroundSize: 'cover',
       // backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat',
-    }}
-  >
+      backgroundRepeat: 'no-repeat'
+    }}>
     <div
       style={{
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
@@ -20,7 +19,7 @@ const HeroHome: React.FC = () => (
         height: '100%',
         width: '100%',
         top: '0',
-        right: '0',
+        right: '0'
       }}
     />
     <div
@@ -34,9 +33,8 @@ const HeroHome: React.FC = () => (
         height: '100%',
         width: '100%',
         top: '0',
-        right: '0',
-      }}
-    >
+        right: '0'
+      }}>
       <h1 className="uppercase" style={{ fontSize: '100px', color: '#ffff' }}>
         Hello
       </h1>
@@ -48,6 +46,6 @@ const HeroHome: React.FC = () => (
       </div>
     </div>
   </div>
-);
+)
 
-export default HeroHome;
+export default HeroHome

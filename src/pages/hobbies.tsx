@@ -1,17 +1,17 @@
-import { t } from 'i18next';
-import MyButton from '../components/atoms/buttons/Button';
-import TabTitle from '../components/molecules/seo/SiteSEO';
-import ColumnHero from '../components/organisms/blocks/ColumnHero';
-import Hero from '../components/organisms/blocks/Hero';
-import PageHero from '../components/organisms/blocks/PageHero';
-import PageTitle from '../components/organisms/blocks/PageTitle';
+import MyButton from '../components/atoms/buttons/Button'
+import TabTitle from '../components/molecules/seo/SiteSEO'
+import ColumnHero from '../components/organisms/blocks/ColumnHero'
+import Hero from '../components/organisms/blocks/Hero'
+import PageHero from '../components/organisms/blocks/PageHero'
+import PageTitle from '../components/organisms/blocks/PageTitle'
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,
   RCPlanesAlbumURL,
   ThingiverseURL,
-  YouTubeURL,
-} from '../constants/links';
+  YouTubeURL
+} from '../constants/links'
+import { t } from 'i18next'
 
 const Hobbies = () => (
   <>
@@ -19,7 +19,10 @@ const Hobbies = () => (
     <PageHero image="/static/images/page-hero-hobby.png" />
     <div className="container mx-auto">
       {/* title and intro */}
-      <PageTitle title={t('hobbies.headline')} description={t('hobbies.intro')} />
+      <PageTitle
+        title={t('hobbies.headline')}
+        description={t('hobbies.intro')}
+      />
       {/* 3d printing */}
       <ColumnHero
         className="mb-16 md:mb-20"
@@ -44,10 +47,16 @@ const Hobbies = () => (
         description={t('hobbies.rc.description')}
         buttons={
           <div className="flex gap-x-3">
-            <a target="_blank" href={RCPlanesAlbumURL} rel="noopener noreferrer">
+            <a
+              target="_blank"
+              href={RCPlanesAlbumURL}
+              rel="noopener noreferrer">
               <MyButton type="primary">{t('hobbies.rc.button1')}</MyButton>
             </a>
-            <a target="_blank" href={RCDevicesAlbumURL} rel="noopener noreferrer">
+            <a
+              target="_blank"
+              href={RCDevicesAlbumURL}
+              rel="noopener noreferrer">
               <MyButton type="secondary">{t('hobbies.rc.button2')}</MyButton>
             </a>
           </div>
@@ -83,6 +92,6 @@ const Hobbies = () => (
       />
     </div>
   </>
-);
+)
 
-export default Hobbies;
+export default Hobbies

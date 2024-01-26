@@ -1,10 +1,10 @@
-import Modal from 'react-modal';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../tailwind.config';
+import tailwindConfig from '../../tailwind.config'
+import Modal from 'react-modal'
+import resolveConfig from 'tailwindcss/resolveConfig'
 
-Modal.setAppElement('#__next');
+Modal.setAppElement('#__next')
 
-const fullConfig = resolveConfig<any>(tailwindConfig);
+const fullConfig = resolveConfig<any>(tailwindConfig)
 const customModalStyles = {
   content: {
     top: '0',
@@ -12,12 +12,12 @@ const customModalStyles = {
     left: '0',
     right: '0',
     padding: '0',
-    backgroundColor: fullConfig.theme.colors.surface,
+    backgroundColor: fullConfig.theme.colors.surface
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: 999,
-  },
-};
+    zIndex: 999
+  }
+}
 
-export default customModalStyles;
+export default customModalStyles

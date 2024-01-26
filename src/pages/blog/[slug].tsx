@@ -1,52 +1,53 @@
-import { NextSeo } from 'next-seo';
-import ErrorPage from 'next/error';
-import { useRouter } from 'next/router';
-import React from 'react';
-import CloseButton from '../../components/atoms/buttons/CloseButton';
-import BlogPost from '../../features/Blog/BlogPost';
-import usePageURL from '../../hooks/usePageURL';
-import { BlogPostData } from '../../types/blog';
-import { getAllPosts, getPostBySlug } from '../../features/Blog/blog-helper';
-import markdownToHtml from '../../utils/markdownToHtml';
+import CloseButton from '../../components/atoms/buttons/CloseButton'
+import BlogPost from '../../features/Blog/BlogPost'
+import { getAllPosts, getPostBySlug } from '../../features/Blog/blog-helper'
+import usePageURL from '../../hooks/usePageURL'
+import { BlogPostData } from '../../types/blog'
+import markdownToHtml from '../../utils/markdownToHtml'
+import { NextSeo } from 'next-seo'
+import ErrorPage from 'next/error'
+import { useRouter } from 'next/router'
+import React from 'react'
 
 interface PostProps {
-  post: BlogPostData;
-  preview: string;
+  post: BlogPostData
+  preview: string
 }
 
 type PostPageType = React.FC<PostProps> & {
-  getLayout: (page: React.ReactNode) => React.ReactNode;
-};
+  getLayout: (page: React.ReactNode) => React.ReactNode
+}
 
 const Post: PostPageType = ({ post, preview }) => {
-  const router = useRouter();
-  const pageURL = usePageURL();
+  const router = useRouter()
+  const pageURL = usePageURL()
 
   // if the slug is not correct url, it will led user to the 404 page
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
+    return <ErrorPage statusCode={404} />
   }
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
   // https://nextjs.org/docs/api-reference/data-fetching/get-static-paths
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   const handleClose = () => {
-    router.push('/blog');
-  };
+    router.push('/blog')
+  }
 
   // Trim spaces at the beginning and end of the keyword
-  const parseKeywords = (keywords) => keywords.split(',').map((keyword) => keyword.trim());
+  const parseKeywords = (keywords) =>
+    keywords.split(',').map((keyword) => keyword.trim())
 
   return (
     <>
       <NextSeo
         title={post.title}
         additionalMetaTags={[
-          { name: 'keywords', content: post.keywords }, // keywords metadata
+          { name: 'keywords', content: post.keywords } // keywords metadata
         ]}
         openGraph={{
           title: post.title,
@@ -56,16 +57,16 @@ const Post: PostPageType = ({ post, preview }) => {
           article: {
             publishedTime: post.date,
             authors: [post.author.name],
-            tags: parseKeywords(post.keywords),
+            tags: parseKeywords(post.keywords)
           },
           images: [
             {
               url: post.coverImage,
               width: 850,
               height: 650,
-              alt: `Photo of ${post.title}`,
-            },
-          ],
+              alt: `Photo of ${post.title}`
+            }
+          ]
         }}
       />
       {/* TODO: add JSON-LD support, https://jsonld.com/blog-post/ */}
@@ -77,14 +78,14 @@ const Post: PostPageType = ({ post, preview }) => {
         <BlogPost {...post} />
       </article>
     </>
-  );
-};
+  )
+}
 
 Post.getLayout = function getLayout(page) {
-  return <div>{page}</div>;
-};
+  return <div>{page}</div>
+}
 
-export default Post;
+export default Post
 
 /**
  * Get post data by slug
@@ -100,31 +101,31 @@ export async function getStaticProps({ params }) {
     'keywords',
     'content',
     'ogImage',
-    'coverImage',
-  ];
-  const post = getPostBySlug(params.slug, fields);
-  const content = await markdownToHtml(post.content || '');
+    'coverImage'
+  ]
+  const post = getPostBySlug(params.slug, fields)
+  const content = await markdownToHtml(post.content || '')
   return {
     props: {
       post: {
         ...post,
-        content,
-      },
-    },
-  };
+        content
+      }
+    }
+  }
 }
 
 // getStaticPaths will define a list of paths to be statically generated
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 // this is not true
 export async function getStaticPaths(context) {
-  const posts = getAllPosts(['slug']);
+  const posts = getAllPosts(['slug'])
   return {
     paths: posts.map((post) => ({
       params: {
-        slug: post.slug,
-      },
+        slug: post.slug
+      }
     })),
-    fallback: false,
-  };
+    fallback: false
+  }
 }

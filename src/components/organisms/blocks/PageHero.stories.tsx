@@ -1,4 +1,4 @@
-import PageHero from './PageHero';
+import PageHero from './PageHero'
 
 export default {
   title: 'Blocks/PageHero',
@@ -6,13 +6,13 @@ export default {
   argTypes: {
     title: {
       options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-  },
-};
+      control: { type: 'radio' }
+    }
+  }
+}
 
 export const Headings = () => (
   <div>
     <PageHero image="http://placekitten.com/1800/1500" />
   </div>
-);
+)

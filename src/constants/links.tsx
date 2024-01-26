@@ -1,16 +1,16 @@
-import { SNSPlatforms } from '../types/links';
-import Facebook from '../components/atoms/Icons/Facebook';
-import Twitter from '../components/atoms/Icons/Twitter';
-import Ins from '../components/atoms/Icons/Ins';
-import LinkedIn from '../components/atoms/Icons/LinkedIn';
-import YouTube from '../components/atoms/Icons/YouTubeIcon';
+import Facebook from '../components/atoms/Icons/Facebook'
+import Ins from '../components/atoms/Icons/Ins'
+import LinkedIn from '../components/atoms/Icons/LinkedIn'
+import Twitter from '../components/atoms/Icons/Twitter'
+import YouTube from '../components/atoms/Icons/YouTubeIcon'
+import { SNSPlatforms } from '../types/links'
 
-export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7';
-export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A';
-export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6';
-export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/';
-export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme';
-export const BilibiliURL = 'https://space.bilibili.com/30429048';
+export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
+export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'
+export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6'
+export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/'
+export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme'
+export const BilibiliURL = 'https://space.bilibili.com/30429048'
 
 const SNS = [
   {
@@ -22,7 +22,7 @@ const SNS = [
     link: 'https://www.instagram.com/iandycao/',
     alt: "Andy's Instagram",
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const SNS = [
     link: 'https://www.facebook.com/andycao1982',
     alt: "Andy's Facebook Homepage",
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const SNS = [
     link: YouTubeURL,
     alt: "Andy's Youtube Channel",
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const SNS = [
     link: 'https://www.linkedin.com/in/andyisme/',
     alt: "Andy's LinkedIn Page",
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const SNS = [
     link: 'https://twitter.com/iandycao',
     alt: "Andy's Twitter",
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const SNS = [
     link: 'https://www.flickr.com/photos/ad1982/',
     alt: '',
     tag: '',
-    hidden: 1,
+    hidden: 1
   },
   {
     id: 7,
@@ -82,7 +82,7 @@ const SNS = [
     link: 'http://www.weibo.com/enjoywound',
     alt: '',
     tag: '',
-    hidden: 1,
+    hidden: 1
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const SNS = [
     link: 'https://soundcloud.com/andy-cao-925715105',
     alt: '',
     tag: '',
-    hidden: 1,
+    hidden: 1
   },
   {
     id: 9,
@@ -102,7 +102,7 @@ const SNS = [
     link: 'https://www.douban.com/people/f1982/',
     alt: '',
     tag: '',
-    hidden: 1,
+    hidden: 1
   },
   {
     id: 10,
@@ -112,9 +112,9 @@ const SNS = [
     link: BilibiliURL,
     alt: 'Bili Bili',
     tag: '',
-    hidden: 1,
-  },
-];
+    hidden: 1
+  }
+]
 
 const friends = [
   {
@@ -125,7 +125,7 @@ const friends = [
     link: 'https://tigerwang.us/',
     alt: 'Tiger Wang',
     tag: '',
-    hidden: 0,
+    hidden: 0
   },
   {
     id: 1,
@@ -135,8 +135,8 @@ const friends = [
     link: 'http://fenglee.com/',
     alt: 'Indie game developer Feng Lee',
     tag: '',
-    hidden: 0,
-  },
-];
+    hidden: 0
+  }
+]
 
-export { SNSPlatforms, SNS, friends };
+export { SNSPlatforms, SNS, friends }

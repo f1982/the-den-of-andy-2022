@@ -1,17 +1,16 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-
-import en from './languages/en';
+import en from './languages/en'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 const languages = {
-  ENGLISH: 'en',
-};
+  ENGLISH: 'en'
+}
 
-const DEFAULT_NAMESPACE = 'translation';
+const DEFAULT_NAMESPACE = 'translation'
 
 export const resources = {
-  [languages.ENGLISH]: en,
-};
+  [languages.ENGLISH]: en
+}
 
 export const initI18n = (): void => {
   i18n.use(initReactI18next).init({
@@ -23,11 +22,11 @@ export const initI18n = (): void => {
     load: 'languageOnly',
     resources,
     interpolation: {
-      escapeValue: false,
-    },
-  });
-};
+      escapeValue: false
+    }
+  })
+}
 
-initI18n();
+initI18n()
 
-export default i18n;
+export default i18n

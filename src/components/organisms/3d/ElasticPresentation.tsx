@@ -1,11 +1,11 @@
-import { Html, PresentationControls, useProgress } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
+import { Html, PresentationControls, useProgress } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import React, { Suspense } from 'react'
 
 const Loader = () => {
-  const { progress } = useProgress();
-  return <Html center>{`${progress}: % loaded`}</Html>;
-};
+  const { progress } = useProgress()
+  return <Html center>{`${progress}: % loaded`}</Html>
+}
 
 const ElasticModel = ({ children }) => (
   <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
@@ -18,12 +18,11 @@ const ElasticModel = ({ children }) => (
         snap
         rotation={[0, 0.3, 0]}
         polar={[-Math.PI / 3, Math.PI / 3]}
-        azimuth={[-Math.PI / 1.4, Math.PI / 2]}
-      >
+        azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
         {children}
       </PresentationControls>
     </Suspense>
   </Canvas>
-);
+)
 
-export default ElasticModel;
+export default ElasticModel

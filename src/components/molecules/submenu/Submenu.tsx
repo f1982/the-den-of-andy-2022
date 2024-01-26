@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import React from 'react';
-import { MenuItemData } from '../../../types';
+import { MenuItemData } from '../../../types'
+import Link from 'next/link'
+import React from 'react'
 
 const SubMenuItem: React.FC<MenuItemData> = ({ link, label }) => (
   <Link
@@ -14,20 +14,24 @@ const SubMenuItem: React.FC<MenuItemData> = ({ link, label }) => (
         text-on-primary
         hover:bg-primary-dark
         hover:text-white
-        "
-  >
+        ">
     {label}
   </Link>
-);
+)
 
 const Submenu = ({ items }: { items: MenuItemData[] }) => (
   <nav className="mb-12 font-bold">
     <ul className="flex flex-column">
       {items.map((item: MenuItemData) => (
-        <SubMenuItem key={item.link} label={item.label} link={item.link} onClick={() => {}} />
+        <SubMenuItem
+          key={item.link}
+          label={item.label}
+          link={item.link}
+          onClick={() => {}}
+        />
       ))}
     </ul>
   </nav>
-);
+)
 
-export default Submenu;
+export default Submenu

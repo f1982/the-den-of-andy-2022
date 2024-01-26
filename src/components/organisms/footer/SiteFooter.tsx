@@ -1,17 +1,25 @@
-import classNames from 'classnames';
-import Link from 'next/link';
-import SocialLinks from '../../atoms/links/SocialLinks';
-import ThemeChanger from '../../molecules/theme-switch/ThemeChanger';
+import SocialLinks from '../../atoms/links/SocialLinks'
+import ThemeChanger from '../../molecules/theme-switch/ThemeChanger'
+import classNames from 'classnames'
+import Link from 'next/link'
 
 const Copyright = () => (
   <div className="mt-9">
-    <p className="text-sm text-center">Copyright @2020 andycao.com, design by Andy</p>
+    <p className="text-sm text-center">
+      Copyright @2020 andycao.com, design by Andy
+    </p>
   </div>
-);
+)
 
 const TermsAndConditions = () => (
   <div className="mt-3">
-    <ul className={classNames('text-sm', 'flex', 'justify-center', 'sm:justify-start')}>
+    <ul
+      className={classNames(
+        'text-sm',
+        'flex',
+        'justify-center',
+        'sm:justify-start'
+      )}>
       <li className="pr-4">
         <Link href="/t&c" passHref legacyBehavior>
           <button type="button">Terms and Conditions</button>
@@ -24,7 +32,7 @@ const TermsAndConditions = () => (
       </li>
     </ul>
   </div>
-);
+)
 
 const Footer = () => (
   <footer className="border-t-[1px] border-border mt-12">
@@ -44,6 +52,6 @@ const Footer = () => (
     </div>
     {/* <ThemeChanger /> */}
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

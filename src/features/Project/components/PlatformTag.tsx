@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PlatformTag: React.FC<{ text: string }> = ({ text }) => (
   <span
@@ -9,10 +9,9 @@ const PlatformTag: React.FC<{ text: string }> = ({ text }) => (
       text-on-surface
       px-2 py-0.5 rounded-lg
       tracking-widest text-sm
-    "
-  >
+    ">
     {text}
   </span>
-);
+)
 
-export default PlatformTag;
+export default PlatformTag

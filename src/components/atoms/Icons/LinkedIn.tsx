@@ -6,6 +6,6 @@ const LinkedIn = () => (
     />
     <circle cx="4" cy="4" r="2" stroke="none" />
   </svg>
-);
+)
 
-export default LinkedIn;
+export default LinkedIn

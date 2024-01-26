@@ -1,20 +1,20 @@
-import { t } from 'i18next';
-import React from 'react';
-import Typography from '../../components/atoms/typography/Typography';
-import TabTitle from '../../components/molecules/seo/SiteSEO';
-import PageHero from '../../components/organisms/blocks/PageHero';
-import PageTitle from '../../components/organisms/blocks/PageTitle';
-import { getAllPosts } from '../../features/Blog/blog-helper';
-import MoreMoreStories from '../../features/Blog/components/MoreMoreStories';
-import MoreStories from '../../features/Blog/MoreStories';
-import { BlogPostData } from '../../types/blog';
+import Typography from '../../components/atoms/typography/Typography'
+import TabTitle from '../../components/molecules/seo/SiteSEO'
+import PageHero from '../../components/organisms/blocks/PageHero'
+import PageTitle from '../../components/organisms/blocks/PageTitle'
+import MoreStories from '../../features/Blog/MoreStories'
+import { getAllPosts } from '../../features/Blog/blog-helper'
+import MoreMoreStories from '../../features/Blog/components/MoreMoreStories'
+import { BlogPostData } from '../../types/blog'
+import { t } from 'i18next'
+import React from 'react'
 
 interface BlogProps {
-  allPosts: BlogPostData[];
+  allPosts: BlogPostData[]
 }
 
 const Blog: React.FC<BlogProps> = ({ allPosts }) => {
-  const morePosts = allPosts;
+  const morePosts = allPosts
 
   return (
     <>
@@ -31,15 +31,22 @@ const Blog: React.FC<BlogProps> = ({ allPosts }) => {
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt'
+  ])
 
   return {
-    props: { allPosts },
-  };
+    props: { allPosts }
+  }
 }

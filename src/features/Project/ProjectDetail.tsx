@@ -1,11 +1,11 @@
-import React from 'react';
-import Tags from '../../components/atoms/tags/Tags';
-import Typography from '../../components/atoms/typography/Typography';
-import PostDate from '../../components/organisms/article/PostDate';
-import LandscapeHero from '../../components/organisms/blocks/ContentPageHero';
-import { PROJECT_IMAGE_URL } from '../../constants/paths';
-import { ProjectItemData } from '../../types/projects';
-import PlatformTag from './components/PlatformTag';
+import Tags from '../../components/atoms/tags/Tags'
+import Typography from '../../components/atoms/typography/Typography'
+import PostDate from '../../components/organisms/article/PostDate'
+import LandscapeHero from '../../components/organisms/blocks/ContentPageHero'
+import { PROJECT_IMAGE_URL } from '../../constants/paths'
+import { ProjectItemData } from '../../types/projects'
+import PlatformTag from './components/PlatformTag'
+import React from 'react'
 
 const Project: React.FC<ProjectItemData> = ({
   title,
@@ -16,18 +16,20 @@ const Project: React.FC<ProjectItemData> = ({
   end,
   description,
   responsibility,
-  images,
+  images
 }) => {
   function getCarousel(imageList, alt) {
-    if (!imageList) return null;
-    const fullPathImages = imageList.map((image) => `${PROJECT_IMAGE_URL}/${image}`);
+    if (!imageList) return null
+    const fullPathImages = imageList.map(
+      (image) => `${PROJECT_IMAGE_URL}/${image}`
+    )
     // return <Carousel images={fullPathImages} />;
     return imageList.map((image) => (
       <div key={image} className="mb-8">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`${PROJECT_IMAGE_URL}/${image}`} alt={alt} />
       </div>
-    ));
+    ))
   }
 
   return (
@@ -64,7 +66,7 @@ const Project: React.FC<ProjectItemData> = ({
         <div className="mb-9">{getCarousel(images, title)}</div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

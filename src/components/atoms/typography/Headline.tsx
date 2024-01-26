@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import Highlight from './Highlight';
+import Highlight from './Highlight'
+import { motion } from 'framer-motion'
+import React from 'react'
 
 const headVariant = {
   hidden: { opacity: 0, x: 60 },
@@ -11,10 +11,10 @@ const headVariant = {
     transition: {
       duration: 0.3,
       type: 'tween',
-      ease: 'easeInOut',
-    },
-  },
-};
+      ease: 'easeInOut'
+    }
+  }
+}
 
 const Headline = ({ title }: { title: string }) => (
   <div
@@ -23,8 +23,7 @@ const Headline = ({ title }: { title: string }) => (
         flex items-center
         md:flex-row md:justify-between md:mb-12 md:mb-12
         mt-6 mb-6
-      "
-  >
+      ">
     <motion.h1
       // initial={{ scale: 0.9, opacity: 0 }}
       // animate={{ scale: 1, opacity: 1 }}
@@ -36,12 +35,11 @@ const Headline = ({ title }: { title: string }) => (
         font-bold
         tracking-tighter
         leading-tight
-        md:pr-8"
-    >
+        md:pr-8">
       <Highlight>{title}</Highlight>
     </motion.h1>
   </div>
-);
+)
 
 const Headline1 = ({ children }: { children: React.ReactNode }) => (
   <motion.h1
@@ -57,11 +55,10 @@ const Headline1 = ({ children }: { children: React.ReactNode }) => (
         font-bold
         tracking-tighter
         leading-tight
-        md:pr-8"
-  >
+        md:pr-8">
     <Highlight>{children}</Highlight>
   </motion.h1>
-);
+)
 
 const Headline2 = ({ children }: { children: React.ReactNode }) => (
   <motion.h2
@@ -79,11 +76,10 @@ const Headline2 = ({ children }: { children: React.ReactNode }) => (
         leading-tight
         md:pr-8
         mt-3 mb-3
-        "
-  >
+        ">
     <Highlight>{children}</Highlight>
   </motion.h2>
-);
+)
 
-export default Headline;
-export { Headline1, Headline2 };
+export default Headline
+export { Headline1, Headline2 }

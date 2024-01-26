@@ -1,12 +1,12 @@
-import React from 'react';
-import cn from 'classnames';
-import styles from './button.module.css';
+import styles from './button.module.css'
+import cn from 'classnames'
+import React from 'react'
 
 interface ButtonPropsType {
-  type: 'primary' | 'secondary';
-  children: React.ReactNode | string;
-  onClick?: () => void;
-  className?: string;
+  type: 'primary' | 'secondary'
+  children: React.ReactNode | string
+  onClick?: () => void
+  className?: string
 }
 // for proper handling
 const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
@@ -24,7 +24,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         'hover:-translate-y-1',
         'hover:scale-105',
         styles.button_bubble
-      );
+      )
       if (type === 'primary') {
         return cn(
           buttonStyle,
@@ -32,7 +32,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
           'hover:text-black',
           'bg-primary-medium',
           'hover:bg-primary-dark'
-        );
+        )
       }
       return cn(
         buttonStyle,
@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         'hover:text-black',
         'bg-secondary-dark',
         'hover:bg-secondary-light'
-      );
+      )
     }
 
     return (
@@ -48,14 +48,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         ref={ref}
         onClick={props.onClick}
         type="button"
-        className={cn(getStyle(props.type), props.className)}
-      >
+        className={cn(getStyle(props.type), props.className)}>
         {props.children}
       </button>
-    );
+    )
   }
-);
+)
 
-Button.displayName = 'Button';
+Button.displayName = 'Button'
 
-export default Button;
+export default Button

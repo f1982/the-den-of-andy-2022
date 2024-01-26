@@ -1,5 +1,5 @@
-const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 // detail information refer to:  https://tailwindcss.com/docs/theme
 module.exports = {
@@ -17,12 +17,12 @@ module.exports = {
         primary: {
           dark: 'var(--primary-dark)',
           light: 'var(--primary-light)',
-          medium: 'var(--primary)',
+          medium: 'var(--primary)'
         },
         secondary: {
           dark: 'var(--secondary-dark)',
           medium: 'var(--secondary)',
-          light: 'var(--secondary-light)',
+          light: 'var(--secondary-light)'
         },
         background: 'var(--background)',
         surface: 'var(--surface)',
@@ -34,74 +34,74 @@ module.exports = {
         'on-warning': 'var(--on-warning)',
         'on-primary': 'var(--on-primary)',
         'on-secondary': 'var(--on-secondary)',
-        border: 'var(--border)',
+        border: 'var(--border)'
       },
       container: {
         screens: {
           sm: '100%',
           md: '100%',
           lg: '1024px',
-          xl: '1024px',
+          xl: '1024px'
         },
         padding: {
-          DEFAULT: '1rem',
+          DEFAULT: '1rem'
           // lg: '8rem',
           // '2xl': '16rem',
-        },
+        }
       },
       // spacing: {
       //   28: '7rem',
       // },
       letterSpacing: {
-        tighter: '-0.08em',
+        tighter: '-0.08em'
       },
       lineHeight: {
-        tight: 1.2,
+        tight: 1.2
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: ['Inter', ...defaultTheme.fontFamily.serif],
+        serif: ['Inter', ...defaultTheme.fontFamily.serif]
       },
       fontSize: {
         // h1
         '2xl': [
           '4.2rem',
           {
-            lineHeight: '4.5rem',
-          },
+            lineHeight: '4.5rem'
+          }
         ],
         // h2
         xl: [
           '3.15rem',
           {
-            lineHeight: '3.5rem',
-          },
+            lineHeight: '3.5rem'
+          }
         ],
         // h3
         lg: [
           '2.4rem',
           {
-            lineHeight: '2.5rem',
-          },
+            lineHeight: '2.5rem'
+          }
         ],
         // h4
         md: [
           '1.7rem',
           {
-            lineHeight: '2rem',
-          },
-        ],
+            lineHeight: '2rem'
+          }
+        ]
       },
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
-        md: '0 8px 30px rgba(0, 0, 0, 0.12)',
-      },
-    },
+        md: '0 8px 30px rgba(0, 0, 0, 0.12)'
+      }
+    }
   },
   variants: {
     extend: {
       padding: ['last'],
-      margin: ['responsive', 'hover', 'last'],
-    },
-  },
-};
+      margin: ['responsive', 'hover', 'last']
+    }
+  }
+}

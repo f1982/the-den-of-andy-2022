@@ -1,11 +1,11 @@
-import cn from 'classnames';
-import Link from 'next/link';
-import React from 'react';
-import Image from '../../components/atoms/Image/Image';
-import Typography from '../../components/atoms/typography/Typography';
-import { PROJECT_IMAGE_URL } from '../../constants/paths';
-import { ProjectItemData } from '../../types/projects';
-import PlatformTag from './components/PlatformTag';
+import Image from '../../components/atoms/Image/Image'
+import Typography from '../../components/atoms/typography/Typography'
+import { PROJECT_IMAGE_URL } from '../../constants/paths'
+import { ProjectItemData } from '../../types/projects'
+import PlatformTag from './components/PlatformTag'
+import cn from 'classnames'
+import Link from 'next/link'
+import React from 'react'
 
 const ProjectItem: React.FC<ProjectItemData> = ({
   id,
@@ -14,7 +14,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
   cover,
   type,
   platform,
-  tech,
+  tech
 }) => (
   <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
     <div className="p-0 md:p-2 cursor-pointer">
@@ -25,8 +25,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
           'p-4 md:p-6',
           'md:hover:shadow-md',
           ''
-        )}
-      >
+        )}>
         <Image
           className={cn(
             'rounded-xl object-cover',
@@ -45,6 +44,6 @@ const ProjectItem: React.FC<ProjectItemData> = ({
       </div>
     </div>
   </Link>
-);
+)
 
-export default ProjectItem;
+export default ProjectItem

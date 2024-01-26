@@ -1,19 +1,25 @@
-import { t } from 'i18next';
-import { DefaultSeo, DefaultSeoProps } from 'next-seo';
-import getDefaultSEOConfig from './seoConfig';
-import usePageURL from '../../../hooks/usePageURL';
+import usePageURL from '../../../hooks/usePageURL'
+import getDefaultSEOConfig from './seoConfig'
+import { t } from 'i18next'
+import { DefaultSeo, DefaultSeoProps } from 'next-seo'
 
 interface SiteSEOProps {
-  pageTitle: string;
-  seoConfig?: DefaultSeoProps;
+  pageTitle: string
+  seoConfig?: DefaultSeoProps
 }
 
 const SiteSEO = ({ pageTitle, seoConfig }: SiteSEOProps) => {
-  const pageURL = usePageURL();
+  const pageURL = usePageURL()
 
-  const seoCnf = seoConfig || getDefaultSEOConfig();
+  const seoCnf = seoConfig || getDefaultSEOConfig()
 
-  return <DefaultSeo {...seoCnf} canonical={pageURL} title={`${t(pageTitle)} - ${seoCnf.title}`} />;
-};
+  return (
+    <DefaultSeo
+      {...seoCnf}
+      canonical={pageURL}
+      title={`${t(pageTitle)} - ${seoCnf.title}`}
+    />
+  )
+}
 
-export default SiteSEO;
+export default SiteSEO

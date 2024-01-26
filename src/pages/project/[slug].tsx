@@ -1,34 +1,37 @@
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react';
-import CloseButton from '../../components/atoms/buttons/CloseButton';
-import { getProjectDetail, getProjects } from '../../features/Project/project-helper';
-import ProjectDetail from '../../features/Project/ProjectDetail';
-import usePageURL from '../../hooks/usePageURL';
-import { ProjectItemData } from '../../types/projects';
+import CloseButton from '../../components/atoms/buttons/CloseButton'
+import ProjectDetail from '../../features/Project/ProjectDetail'
+import {
+  getProjectDetail,
+  getProjects
+} from '../../features/Project/project-helper'
+import usePageURL from '../../hooks/usePageURL'
+import { ProjectItemData } from '../../types/projects'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
+import React from 'react'
 
 interface ProjectPageProps {
-  detail: ProjectItemData;
+  detail: ProjectItemData
 }
 
 type ProjectPageType = React.FC<ProjectPageProps> & {
-  getLayout: (page: React.ReactNode) => React.ReactNode;
-};
+  getLayout: (page: React.ReactNode) => React.ReactNode
+}
 
 const ProjectPage: ProjectPageType = ({ detail }) => {
-  const router = useRouter();
-  const pageURL = usePageURL();
+  const router = useRouter()
+  const pageURL = usePageURL()
 
   const handleClose = () => {
-    router.push('/project');
-  };
+    router.push('/project')
+  }
 
   return (
     <>
       <NextSeo
         title={detail.title}
         additionalMetaTags={[
-          { name: 'keywords', content: detail.tech }, // keywords metadata
+          { name: 'keywords', content: detail.tech } // keywords metadata
         ]}
         openGraph={{
           title: detail.title,
@@ -40,9 +43,9 @@ const ProjectPage: ProjectPageType = ({ detail }) => {
               url: detail.cover,
               width: 850,
               height: 650,
-              alt: `Photo of ${detail.title}`,
-            },
-          ],
+              alt: `Photo of ${detail.title}`
+            }
+          ]
         }}
       />
       <article className="mb-32">
@@ -53,30 +56,30 @@ const ProjectPage: ProjectPageType = ({ detail }) => {
         <ProjectDetail {...detail} />
       </article>
     </>
-  );
-};
+  )
+}
 
 ProjectPage.getLayout = function getLayout(page) {
-  return <div>{page}</div>;
-};
+  return <div>{page}</div>
+}
 
 export async function getStaticProps({ params }) {
-  const detail = getProjectDetail(params.slug);
+  const detail = getProjectDetail(params.slug)
   return {
-    props: { detail },
-  };
+    props: { detail }
+  }
 }
 
 export async function getStaticPaths() {
-  const { projects } = getProjects();
+  const { projects } = getProjects()
   return {
     paths: projects.map((post) => ({
       params: {
-        slug: post.id,
-      },
+        slug: post.id
+      }
     })),
-    fallback: false,
-  };
+    fallback: false
+  }
 }
 
-export default ProjectPage;
+export default ProjectPage
