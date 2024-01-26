@@ -46,7 +46,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
     className={classNames(
       'container mx-auto flex gap-x-16 flex-col items-center',
       direction === 'l2r' ? 'md:flex-row' : 'md:flex-row-reverse',
-      className,
+      className
     )}
     variants={containerVariant}
     initial="hidden"
@@ -54,21 +54,20 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
     viewport={{ once: viewPortOnce }}
   >
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img
-      className="object-cover mb-6 md:mb-0 md:w-2/5"
-      alt="hero"
-      src={image}
-    />
+    <img className="object-cover mb-6 md:mb-0 md:w-2/5" alt="hero" src={image} />
     <div className="md:w-3/5 flex flex-col md:items-start items-center ">
-      <Typography variant="h2" as="h2">{title}</Typography>
-      {subtitle && <Typography variant="h4" as="h3" className="mt-[0]">{subtitle}</Typography>}
+      <Typography variant="h2" as="h2">
+        {title}
+      </Typography>
+      {subtitle && (
+        <Typography variant="h4" as="h3" className="mt-[0]">
+          {subtitle}
+        </Typography>
+      )}
       <motion.div variants={itemVariant}>
         <Typography variant="body">{description}</Typography>
       </motion.div>
-      <motion.div
-        variants={itemVariant}
-        className="flex flex gap-x-3 mt-6"
-      >
+      <motion.div variants={itemVariant} className="flex flex gap-x-3 mt-6">
         {buttons}
       </motion.div>
     </div>

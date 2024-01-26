@@ -1,7 +1,8 @@
 import React from 'react';
 
 const PlatformTag: React.FC<{ text: string }> = ({ text }) => (
-  <span className="
+  <span
+    className="
       top-3 right-12
       bg-secondary-dark
       font-bold

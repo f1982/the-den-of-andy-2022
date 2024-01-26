@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface MenuItemData {
-  link: string,
-  label: string,
-  icon?: React.ReactElement,
-  onClick?: (e: React.MouseEvent, path: string) => void
+  link: string;
+  label: string;
+  icon?: React.ReactElement;
+  onClick?: (e: React.MouseEvent, path: string) => void | undefined;
 }
 
 interface HeroData {

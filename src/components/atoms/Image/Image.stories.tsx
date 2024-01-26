@@ -8,7 +8,11 @@ export default {
 const Template = (args) => <ACImage {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { width: '400px', height: '300px', src: 'http://placekitten.com/1200/500' };
+Default.args = {
+  width: '400px',
+  height: '300px',
+  src: 'http://placekitten.com/1200/500',
+};
 
 export const DifferentSizes = () => (
   <div>
@@ -28,7 +32,13 @@ export const DifferentSizes = () => (
 export const CustomStyle = () => (
   <div>
     <h1>Class name</h1>
-    <ACImage width="300px" height="300px" src="http://placekitten.com/800/500" alt="test" className="rounded-lg" />
+    <ACImage
+      width="300px"
+      height="300px"
+      src="http://placekitten.com/800/500"
+      alt="test"
+      className="rounded-lg"
+    />
     <h1>Custom style</h1>
     <ACImage
       width="300px"

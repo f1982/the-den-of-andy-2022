@@ -33,7 +33,11 @@ const LatestProject: React.FC<LastProjectProps> = ({
     </div>
     {/* text layer */}
     <div className="px-0 md:px-2">
-      {subtitle && <Typography variant="body-bold" className="text-secondary-dark">{subtitle}</Typography>}
+      {subtitle && (
+        <Typography variant="body-bold" className="text-secondary-dark">
+          {subtitle}
+        </Typography>
+      )}
       {title && <Typography variant="h3">{title}</Typography>}
       {description && (
         <div className="text-left md:text-center">

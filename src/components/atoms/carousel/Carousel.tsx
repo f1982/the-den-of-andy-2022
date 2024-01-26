@@ -31,11 +31,7 @@ const variants = {
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velocity;
 
-const Example = ({ images }
-  :
-  {
-    images: string[]
-  }) => {
+const Example = ({ images }: { images: string[] }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and

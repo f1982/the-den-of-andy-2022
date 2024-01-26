@@ -1,12 +1,9 @@
-
 import { useEffect, useState } from 'react';
 
 // we need a function that accepts the script src and couple of other parameters
 
 const useScript = (params) => {
-  const {
-    url, theme, issueTerm, repo, ref,
-  } = params;
+  const { url, theme, issueTerm, repo, ref } = params;
 
   const [status, setStatus] = useState(url ? 'loading' : 'idle');
 

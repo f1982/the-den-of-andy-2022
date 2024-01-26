@@ -15,7 +15,8 @@ const ThemeChanger: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <div className="
+    <div
+      className="
     p-3 flex justify-between
     bg-primary-dark text-on-primary"
     >

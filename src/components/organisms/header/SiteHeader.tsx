@@ -14,12 +14,14 @@ const Header = () => {
     function handleWindowScroll() {
       if (isChanging) return;
       if (window.pageYOffset > 60 && isNarrow === false) {
-        setClassNames(cn(
-          'bg-background',
-          'pt-1 pb-0', // mobile top and bottom paddings
-          'md:pt-0 md:pb-0', // desktop top and bottom paddings
-          'border-b-[1px] border-gray-100',
-        ));
+        setClassNames(
+          cn(
+            'bg-background',
+            'pt-1 pb-0', // mobile top and bottom paddings
+            'md:pt-0 md:pb-0', // desktop top and bottom paddings
+            'border-b-[1px] border-gray-100'
+          )
+        );
         setIsChanging(true);
         setTimeout(() => {
           setIsChanging(false);

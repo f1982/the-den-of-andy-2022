@@ -25,20 +25,13 @@ const Metadata = () => {
         href={`${basePath}/favicons/favicon-16x16.png`}
       />
       <link rel="manifest" href="/favicons/site.webmanifest" />
-      <link
-        rel="mask-icon"
-        href={`${basePath}/favicons/safari-pinned-tab.svg`}
-        color="#000000"
-      />
+      <link rel="mask-icon" href={`${basePath}/favicons/safari-pinned-tab.svg`} color="#000000" />
       <link rel="icon" href={`${basePath}/favicons/favicon.ico`} />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content={`${basePath}/favicons/browserconfig.xml`} />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <meta
-        name="description"
-        content="A statically generated blog example using Next.js"
-      />
+      <meta name="description" content="A statically generated blog example using Next.js" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );

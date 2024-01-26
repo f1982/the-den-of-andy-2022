@@ -12,8 +12,10 @@ const Project: React.FC<ProjectItemData> = ({
   cover,
   tech,
   platform,
-  start, end,
-  description, responsibility,
+  start,
+  end,
+  description,
+  responsibility,
   images,
 }) => {
   function getCarousel(imageList, alt) {
@@ -31,7 +33,9 @@ const Project: React.FC<ProjectItemData> = ({
   return (
     <>
       <div className="container mx-auto mb-8">
-        <Typography variant="h2" as="h1">{title}</Typography>
+        <Typography variant="h2" as="h1">
+          {title}
+        </Typography>
         <div className="mb-4">
           <PostDate date={start} />
           <span> - </span>
@@ -57,9 +61,7 @@ const Project: React.FC<ProjectItemData> = ({
             <Typography variant="body">{responsibility}</Typography>
           </div>
         )}
-        <div className="mb-9">
-          {getCarousel(images, title)}
-        </div>
+        <div className="mb-9">{getCarousel(images, title)}</div>
       </div>
     </>
   );

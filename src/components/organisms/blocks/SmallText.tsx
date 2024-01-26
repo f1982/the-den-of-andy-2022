@@ -23,11 +23,7 @@ interface SmallTextProps {
   description: string;
 }
 
-const SmallText: React.FC<SmallTextProps> = ({
-  description,
-  title,
-  image,
-}) => (
+const SmallText: React.FC<SmallTextProps> = ({ description, title, image }) => (
   <motion.div
     variants={containerVariant}
     initial="hidden"

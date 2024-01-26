@@ -1,7 +1,5 @@
 import cn from 'classnames';
-import React, {
-  ElementType, HTMLAttributes, PropsWithChildren, ReactNode,
-} from 'react';
+import React, { ElementType, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 import Highlight from './Highlight';
 // https://www.aleksandrhovhannisyan.com/blog/dynamic-tag-name-props-in-react/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
@@ -15,7 +13,7 @@ interface TypographyProps extends ComponentProps {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'body-bold' | 'small';
   as?: any;
   className?: string;
-  style?: React.CSSProperties,
+  style?: React.CSSProperties;
   highlight?: boolean;
 }
 
@@ -69,18 +67,10 @@ const Typography: React.FC<PropsWithChildren<TypographyProps>> = ({
 }) => {
   const Component = as || asMap.get(variant);
   // const withAnimation = ['h1', 'h2'].includes(variant);
-  const getContent = (contentTitle: ReactNode) => (
-    highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle
-  );
+  const getContent = (contentTitle: ReactNode) =>
+    highlight ? <Highlight>{contentTitle}</Highlight> : contentTitle;
   return (
-    <Component
-      className={cn(
-        basicStyle,
-        styleMap.get(variant),
-        className,
-      )}
-      style={style}
-    >
+    <Component className={cn(basicStyle, styleMap.get(variant), className)} style={style}>
       {getContent(children)}
     </Component>
   );

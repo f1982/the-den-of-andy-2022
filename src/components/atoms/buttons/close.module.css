@@ -11,7 +11,7 @@
   display: inline-block;
 }
 
-.close_button_small{
+.close_button_small {
   --button-size: 32px;
   --line-thick: 4px;
   --line-color: var(--on-background);
@@ -28,7 +28,7 @@
   position: absolute;
   transform-origin: center;
   top: 0%;
-  left: calc(50% - var(--line-thick)/2);
+  left: calc(50% - var(--line-thick) / 2);
   transform: rotate(-45deg);
   display: block;
   height: var(--button-size);

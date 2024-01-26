@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import DotLoader from '../spinner/DotLoader';
 
 interface ImageWithLoaderProps {
-  src: string,
-  width?: number | string,
-  height?: number | string,
-  withLoader?: boolean,
-  className?: string,
-  alt?: string,
-  style?: object
+  src: string;
+  width?: number | string;
+  height?: number | string;
+  withLoader?: boolean;
+  className?: string;
+  alt?: string;
+  style?: object;
 }
 
 const ImageWithLoader = ({
@@ -51,36 +51,37 @@ const ImageWithLoader = ({
         className={cn(
           'object-contain opacity-0',
           'transition-opacity ease-out duration-1000',
-          className,
+          className
         )}
         alt={alt}
         style={
           isLoaded
             ? {
-              ...style,
-              ...{
-                width,
-                height,
-                opacity: 1,
-              },
-            }
+                ...style,
+                ...{
+                  width,
+                  height,
+                  opacity: 1,
+                },
+              }
             : {
-              opacity: 0,
-            }
+                opacity: 0,
+              }
         }
         onLoad={() => setIsLoaded(true)}
       />
       {!isLoaded && (
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
           <DotLoader />
         </div>

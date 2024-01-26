@@ -1,9 +1,7 @@
 // this demo is from this article
 // https://varun.ca/modular-webgl/
 import { Center, OrbitControls } from '@react-three/drei';
-import {
-  Canvas, useFrame,
-} from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 
 import { useRef } from 'react';
 import * as THREE from 'three';
@@ -37,19 +35,15 @@ const Nucleus = (props) => {
       {/* <lambertMaterial args={[texturenucleus]} /> */}
     </mesh>
 
-  //   <mesh scale={active ? [2, 2, 2] : [1, 1, 1]} onClick={handleClick}>
-  //  <icosahedronBufferGeometry attach="geometry" args={[1, 0]} />
-  //  <meshNormalMaterial attach="material" />
-  // </mesh>
+    //   <mesh scale={active ? [2, 2, 2] : [1, 1, 1]} onClick={handleClick}>
+    //  <icosahedronBufferGeometry attach="geometry" args={[1, 0]} />
+    //  <meshNormalMaterial attach="material" />
+    // </mesh>
   );
 };
 
 const NucleusScene = () => (
-  <Canvas
-    dpr={2}
-    style={{ height: '30vh' }}
-    camera={{ position: new THREE.Vector3(8, 5, 40) }}
-  >
+  <Canvas dpr={2} style={{ height: '30vh' }} camera={{ position: new THREE.Vector3(8, 5, 40) }}>
     <color attach="background" args={['#06092c']} />
     <pointLight position={[-20, 10, 25]} />
     <gridHelper

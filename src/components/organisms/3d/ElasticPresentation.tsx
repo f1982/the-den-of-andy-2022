@@ -1,21 +1,13 @@
 import { Html, PresentationControls, useProgress } from '@react-three/drei';
-import {
-  Canvas,
-} from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 
 const Loader = () => {
   const { progress } = useProgress();
-  return (
-    <Html center>
-      {`${progress}: % loaded`}
-    </Html>
-  );
+  return <Html center>{`${progress}: % loaded`}</Html>;
 };
 
-const ElasticModel = ({
-  children,
-}) => (
+const ElasticModel = ({ children }) => (
   <Canvas dpr={2} camera={{ position: [0, 0, 5], fov: 50 }}>
     <Suspense fallback={<Loader />}>
       <ambientLight intensity={0.5} />

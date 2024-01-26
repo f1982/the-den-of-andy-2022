@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 const GoogleAds = () => {
   if (process.env.NEXT_PUBLIC_APP_GAD !== 'on') {
-    return (<div />);
+    return <div />;
   }
   return (
     <div style={{ height: '150px', width: '100%', border: '1px solid #cccccc' }}>

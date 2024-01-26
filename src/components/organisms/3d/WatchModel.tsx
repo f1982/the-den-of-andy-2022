@@ -14,17 +14,22 @@ type GLTFResult = GLTF & {
 };
 
 const WatchModel = (rest: GroupProps) => {
-  const file = 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb';
+  const file =
+    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/hShr-watch-v1.glb';
   useGLTF.preload(file);
-  const ref = useRef<MeshProps>();
+  const ref = useRef<any>();
 
   const { nodes, materials } = useGLTF(file) as GLTFResult;
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
+    // @ts-ignore
     ref.current.rotation.x = -Math.PI / 1.75 + Math.cos(t / 4) / 8;
+    // @ts-ignore
     ref.current.rotation.y = Math.sin(t / 4) / 8;
+    // @ts-ignore
     ref.current.rotation.z = (1 + Math.sin(t / 1.5)) / 20;
+    // @ts-ignore
     ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10;
   });
 
@@ -39,8 +44,7 @@ const WatchModel = (rest: GroupProps) => {
           occlude
         >
           <div className="annotation">
-            6.550 $
-            <span style={{ fontSize: '1.5em' }}>🥲</span>
+            6.550 $<span style={{ fontSize: '1.5em' }}>🥲</span>
           </div>
         </Html>
       </mesh>

@@ -10,6 +10,7 @@ author:
 ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/2022-summary-on-cape-reinga-lighthouse.JPG.jpg'
 ---
+
 It’s another year in the blink of an eye, and I’m trying to summarize my experience of the year before the end of the last day of 2022
 
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/2022-summary-on-cape-reinga-lighthouse.JPG.jpg)

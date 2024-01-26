@@ -21,7 +21,7 @@ const SNS = [
     icon: <Ins />,
     link: 'https://www.instagram.com/iandycao/',
     alt: "Andy's Instagram",
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -31,7 +31,7 @@ const SNS = [
     icon: <Facebook />,
     link: 'https://www.facebook.com/andycao1982',
     alt: "Andy's Facebook Homepage",
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -41,7 +41,7 @@ const SNS = [
     icon: <YouTube />,
     link: YouTubeURL,
     alt: "Andy's Youtube Channel",
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -51,7 +51,7 @@ const SNS = [
     icon: <LinkedIn />,
     link: 'https://www.linkedin.com/in/andyisme/',
     alt: "Andy's LinkedIn Page",
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -61,7 +61,7 @@ const SNS = [
     icon: <Twitter />,
     link: 'https://twitter.com/iandycao',
     alt: "Andy's Twitter",
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -70,8 +70,8 @@ const SNS = [
     type: 'outside',
     icon: 'flickr',
     link: 'https://www.flickr.com/photos/ad1982/',
-    alt: null,
-    tag: null,
+    alt: '',
+    tag: '',
     hidden: 1,
   },
   {
@@ -80,8 +80,8 @@ const SNS = [
     type: 'inside',
     icon: 'weibo',
     link: 'http://www.weibo.com/enjoywound',
-    alt: null,
-    tag: null,
+    alt: '',
+    tag: '',
     hidden: 1,
   },
   {
@@ -90,8 +90,8 @@ const SNS = [
     type: 'outside',
     icon: 'soundcloud',
     link: 'https://soundcloud.com/andy-cao-925715105',
-    alt: null,
-    tag: null,
+    alt: '',
+    tag: '',
     hidden: 1,
   },
   {
@@ -100,8 +100,8 @@ const SNS = [
     type: 'inside',
     icon: 'douban',
     link: 'https://www.douban.com/people/f1982/',
-    alt: null,
-    tag: null,
+    alt: '',
+    tag: '',
     hidden: 1,
   },
   {
@@ -111,7 +111,7 @@ const SNS = [
     icon: 'BiliBili',
     link: BilibiliURL,
     alt: 'Bili Bili',
-    tag: null,
+    tag: '',
     hidden: 1,
   },
 ];
@@ -124,7 +124,7 @@ const friends = [
     icon: '',
     link: 'https://tigerwang.us/',
     alt: 'Tiger Wang',
-    tag: null,
+    tag: '',
     hidden: 0,
   },
   {
@@ -134,7 +134,7 @@ const friends = [
     icon: 'facebook',
     link: 'http://fenglee.com/',
     alt: 'Indie game developer Feng Lee',
-    tag: null,
+    tag: '',
     hidden: 0,
   },
 ];

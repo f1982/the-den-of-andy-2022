@@ -16,7 +16,7 @@ function isFolder(filename) {
  * @param fields the data hash of single post
  * @returns
  */
-export function getPostBySlug(slug, fields = []) {
+export function getPostBySlug(slug, fields: any[]) {
   // slug is the folder name
   // could add a zh-cn.md to contain other language content
   const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`);
@@ -46,6 +46,7 @@ export function getPostBySlug(slug, fields = []) {
     }
     // all the props written in the md file
     if (typeof data[field] !== 'undefined') {
+      //@ts-ignore
       postItem[field] = data[field];
     }
   });
@@ -53,7 +54,7 @@ export function getPostBySlug(slug, fields = []) {
   return postItem;
 }
 
-export function getAllPosts(fields = []) {
+export function getAllPosts(fields: any[]) {
   const folders = fs.readdirSync(BLOG_POST_DIRECTORY);
   const posts = folders
     .filter((item) => isFolder(item))

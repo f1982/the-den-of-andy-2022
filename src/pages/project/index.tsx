@@ -8,11 +8,7 @@ import ProjectList from '../../features/Project/ProjectList';
 import { ProjectItemData } from '../../types/projects';
 import { getProjects } from '../../features/Project/project-helper';
 
-const Projects = ({
-  projects,
-}: {
-  projects: ProjectItemData[]
-}) => {
+const Projects = ({ projects }: { projects: ProjectItemData[] }) => {
   const router = useRouter();
   let { type } = router.query;
   // show coding project in default

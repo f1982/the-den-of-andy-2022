@@ -8,10 +8,7 @@ export const GoogleAnalytics = ({ trackingId }: { trackingId: string }) => {
   const strategy = 'lazyOnload';
   return (
     <>
-      <Script
-        src={gtagUrl}
-        strategy={strategy}
-      />
+      <Script src={gtagUrl} strategy={strategy} />
       <Script id="google-analytics" strategy={strategy}>
         {`
           window.dataLayer = window.dataLayer || [];

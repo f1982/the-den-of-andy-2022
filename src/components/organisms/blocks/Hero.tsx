@@ -49,7 +49,7 @@ const Hero: React.FC<HeroData> = ({
       'items-center',
       'justify-center',
       'flex-col',
-      className,
+      className
     )}
     variants={containerVariant}
     initial="hidden"
@@ -58,26 +58,22 @@ const Hero: React.FC<HeroData> = ({
     id={id}
   >
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img
-      className={cn(
-        'mx-auto w-2/3 md:w-2/5',
-      )}
-      alt="hero"
-      src={image}
-    />
+    <img className={cn('mx-auto w-2/3 md:w-2/5')} alt="hero" src={image} />
     <div className="lg:w-3/4 w-full">
-      <Typography variant="h2" as="h2" className="text-center">{title}</Typography>
-      {subtitle && <Typography variant="h3" className="font-thin text-center">{subtitle}</Typography>}
-      <motion.div
-        variants={itemVariant}
-        className="mb-8"
-      >
-        <Typography variant="body" className="text-left">{description}</Typography>
+      <Typography variant="h2" as="h2" className="text-center">
+        {title}
+      </Typography>
+      {subtitle && (
+        <Typography variant="h3" className="font-thin text-center">
+          {subtitle}
+        </Typography>
+      )}
+      <motion.div variants={itemVariant} className="mb-8">
+        <Typography variant="body" className="text-left">
+          {description}
+        </Typography>
       </motion.div>
-      <motion.div
-        variants={itemVariant}
-        className="flex justify-center"
-      >
+      <motion.div variants={itemVariant} className="flex justify-center">
         {buttons}
       </motion.div>
     </div>

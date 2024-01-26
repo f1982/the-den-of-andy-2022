@@ -20,15 +20,13 @@ WarningAlertBar.args = {
   type: AlertType.Warning,
   children: (
     <div>
-      This page is a preview.
-      {' '}
+      This page is a preview.{' '}
       <a
         href="/api/exit-preview"
         className="underline hover:text-cyan duration-200 transition-colors"
       >
         Click here
-      </a>
-      {' '}
+      </a>{' '}
       to exit preview mode.
     </div>
   ),
@@ -40,8 +38,7 @@ ErrorAlertBar.args = {
   type: AlertType.Error,
   children: (
     <>
-      The source code for this blog is
-      {' '}
+      The source code for this blog is{' '}
       <a
         href="https://github.com/vercel/next.js/tree/canary/examples"
         className="underline hover:text-success duration-200 transition-colors"

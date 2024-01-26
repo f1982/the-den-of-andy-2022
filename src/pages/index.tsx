@@ -23,11 +23,7 @@ const Index = () => {
 };
 
 Index.getLayout = function getLayout(page) {
-  return (
-    <div>
-      {page}
-    </div>
-  );
+  return <div>{page}</div>;
 };
 
 export default Index;

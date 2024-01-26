@@ -38,9 +38,7 @@ const Headline = ({ title }: { title: string }) => (
         leading-tight
         md:pr-8"
     >
-      <Highlight>
-        {title}
-      </Highlight>
+      <Highlight>{title}</Highlight>
     </motion.h1>
   </div>
 );
@@ -61,9 +59,7 @@ const Headline1 = ({ children }: { children: React.ReactNode }) => (
         leading-tight
         md:pr-8"
   >
-    <Highlight>
-      {children}
-    </Highlight>
+    <Highlight>{children}</Highlight>
   </motion.h1>
 );
 
@@ -85,14 +81,9 @@ const Headline2 = ({ children }: { children: React.ReactNode }) => (
         mt-3 mb-3
         "
   >
-    <Highlight>
-      {children}
-    </Highlight>
+    <Highlight>{children}</Highlight>
   </motion.h2>
 );
 
 export default Headline;
-export {
-  Headline1,
-  Headline2,
-};
+export { Headline1, Headline2 };

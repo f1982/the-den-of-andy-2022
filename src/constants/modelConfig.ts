@@ -3,7 +3,8 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../tailwind.config';
 
 Modal.setAppElement('#__next');
-const fullConfig = resolveConfig(tailwindConfig);
+
+const fullConfig = resolveConfig<any>(tailwindConfig);
 const customModalStyles = {
   content: {
     top: '0',
@@ -16,7 +17,6 @@ const customModalStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     zIndex: 999,
-
   },
 };
 

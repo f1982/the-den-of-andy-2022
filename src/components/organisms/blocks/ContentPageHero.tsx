@@ -3,13 +3,10 @@ import Typography from '../../atoms/typography/Typography';
 
 interface LandscapeHeroProps {
   image: string;
-  text?: string
+  text?: string;
 }
 
-const LandscapeHero: React.FC<LandscapeHeroProps> = ({
-  image,
-  text,
-}) => (
+const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
   <div
     style={{
       display: 'flex',
@@ -29,10 +26,7 @@ const LandscapeHero: React.FC<LandscapeHeroProps> = ({
     >
       {!!text && (
         <div className="bg-black p-6 w-1/2">
-          <Typography
-            className="text-on-surface"
-            variant="body"
-          >
+          <Typography className="text-on-surface" variant="body">
             {text}
           </Typography>
         </div>

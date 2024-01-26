@@ -8,26 +8,14 @@ interface ProjectListProps {
   type: string;
 }
 
-const ProjectList: React.FC<ProjectListProps> = ({
-  list,
-  type = '',
-}) => (
+const ProjectList: React.FC<ProjectListProps> = ({ list, type = '' }) => (
   <section>
-    <div className={cn(
-      'grid grid-cols-1',
-      'md:grid-cols-2',
-      'gap-x-8',
-      'gap-y-8',
-      'mb-16',
-    )}
-    >
+    <div className={cn('grid grid-cols-1', 'md:grid-cols-2', 'gap-x-8', 'gap-y-8', 'mb-16')}>
       {type
-        ? list.filter((item) => item.type === type).map((item) => (
-          <ProjectItem key={item.id} {...item} />
-        ))
-        : list.map((item) => (
-          <ProjectItem key={item.id} {...item} />
-        ))}
+        ? list
+            .filter((item) => item.type === type)
+            .map((item) => <ProjectItem key={item.id} {...item} />)
+        : list.map((item) => <ProjectItem key={item.id} {...item} />)}
     </div>
   </section>
 );

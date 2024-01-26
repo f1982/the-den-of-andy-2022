@@ -15,8 +15,8 @@ interface PostProps {
 }
 
 type PostPageType = React.FC<PostProps> & {
-  getLayout: (page: React.ReactNode) => React.ReactNode,
-}
+  getLayout: (page: React.ReactNode) => React.ReactNode;
+};
 
 const Post: PostPageType = ({ post, preview }) => {
   const router = useRouter();
@@ -31,7 +31,7 @@ const Post: PostPageType = ({ post, preview }) => {
   // initially until getStaticProps() finishes running
   // https://nextjs.org/docs/api-reference/data-fetching/get-static-paths
   if (router.isFallback) {
-    return (<div>Loading...</div>);
+    return <div>Loading...</div>;
   }
 
   const handleClose = () => {
@@ -81,11 +81,7 @@ const Post: PostPageType = ({ post, preview }) => {
 };
 
 Post.getLayout = function getLayout(page) {
-  return (
-    <div>
-      {page}
-    </div>
-  );
+  return <div>{page}</div>;
 };
 
 export default Post;

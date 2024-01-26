@@ -29,7 +29,10 @@ const About: React.FC = () => (
       <SmallText
         image="/static/images/about-andy-family.jpg"
         title={t('about.familyTitle')}
-        description={String(t('about.familyDescription')).replace('$AGE_OF_ZOE$', getAge('2016-06-01').toString())}
+        description={String(t('about.familyDescription')).replace(
+          '$AGE_OF_ZOE$',
+          getAge('2016-06-01').toString()
+        )}
       />
     </div>
   </>

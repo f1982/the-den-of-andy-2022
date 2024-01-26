@@ -1,6 +1,6 @@
 interface Window {
-  adsbygoogle: {[key: string]: unknown}[]
-  gtag:{[key: string]: unknown}[]
+  adsbygoogle: { [key: string]: unknown }[];
+  gtag: { [key: string]: unknown }[];
 }
 
 // use css module in the project

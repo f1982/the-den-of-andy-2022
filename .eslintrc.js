@@ -28,22 +28,30 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'cypress', 'jest', 'testing-library'],
   rules: {
-    'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    ],
     'react/jsx-props-no-spreading': 'off',
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
-    }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     // 'react/prefer-stateless-function': [
     //   'off',
     // ],
     'react/function-component-definition': [
       // 2, { namedComponents: 'function-declaration' },
-      2, { namedComponents: 'arrow-function' },
+      2,
+      { namedComponents: 'arrow-function' },
     ],
     'react/prop-types': 'off',
     // Since we do not use prop-types
@@ -61,23 +69,33 @@ module.exports = {
     //   },
     // ],
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/402#issuecomment-368305051
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: ['Link'],
-      specialLink: ['hrefLeft', 'hrefRight'],
-      aspects: ['invalidHref', 'preferButton'],
-    }],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
     // to avoid to show error message in test files
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
-    }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/*.test.tsx', '**/*.spec.tsx', '**/*.spec.js', '**/*.test.js'],
+      },
+    ],
     // fix js file require a extra line at the end of file
     'eol-last': 0,
-    'no-multiple-empty-lines': ['error', {
-      max: 1,
-      maxEOF: 0,
-    }],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxEOF: 0,
+      },
+    ],
   },
-  overrides: [ // Only uses Testing Library lint rules in test files
+  overrides: [
+    // Only uses Testing Library lint rules in test files
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],

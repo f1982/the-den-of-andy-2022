@@ -50,8 +50,4 @@ const aboutSubmenu: MenuItemData[] = [
   },
 ];
 
-export {
-  BLOG_PATH,
-  menuData,
-  aboutSubmenu,
-};
+export { BLOG_PATH, menuData, aboutSubmenu };

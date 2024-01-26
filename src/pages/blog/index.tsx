@@ -10,7 +10,7 @@ import MoreStories from '../../features/Blog/MoreStories';
 import { BlogPostData } from '../../types/blog';
 
 interface BlogProps {
-  allPosts: BlogPostData[]
+  allPosts: BlogPostData[];
 }
 
 const Blog: React.FC<BlogProps> = ({ allPosts }) => {
@@ -18,14 +18,16 @@ const Blog: React.FC<BlogProps> = ({ allPosts }) => {
 
   return (
     <>
-      <TabTitle pageTitle={t<string>('blog.pageTitle')} />
+      <TabTitle pageTitle={t('blog.pageTitle')} />
       <PageHero image="/static/images/page-hero-typewriter.png" />
       <div className="container mx-auto">
         {/* title and intro */}
-        <PageTitle title={t<string>('blog.headline')} description={t<string>('blog.intro')} />
+        <PageTitle title={t('blog.headline')} description={t('blog.intro')} />
         {/* blog posts */}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Typography variant="h1" as="h1" highlight>{t<string>('blog.more')}</Typography>
+        <Typography variant="h1" as="h1" highlight>
+          {t('blog.more')}
+        </Typography>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>
     </>
@@ -35,14 +37,7 @@ const Blog: React.FC<BlogProps> = ({ allPosts }) => {
 export default Blog;
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ]);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
 
   return {
     props: { allPosts },

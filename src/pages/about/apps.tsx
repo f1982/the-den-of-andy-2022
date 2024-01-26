@@ -26,15 +26,16 @@ const RotationItem = () => {
   const moveOut = useTransform(scrollYProgress, [0.2, 0.3], [0, 1000]);
 
   return (
-    <motion.h1 style={{
-      rotate,
-      textAlign: 'center',
-      top: 'calc(50vh - 40px)',
-      x: moveOut,
-      position: 'fixed',
-      width: '100vw',
-      fontSize: '80px',
-    }}
+    <motion.h1
+      style={{
+        rotate,
+        textAlign: 'center',
+        top: 'calc(50vh - 40px)',
+        x: moveOut,
+        position: 'fixed',
+        width: '100vw',
+        fontSize: '80px',
+      }}
     >
       This is RotationItem
     </motion.h1>
@@ -46,14 +47,15 @@ const MoveInItem = () => {
   const moveIn = useTransform(scrollYProgress, [0.3, 0.4, 0.5, 0.6], [-1000, 0, 0, -1000]);
 
   return (
-    <motion.h1 style={{
-      textAlign: 'center',
-      top: 'calc(50vh - 40px)',
-      x: moveIn,
-      position: 'fixed',
-      width: '100vw',
-      fontSize: '80px',
-    }}
+    <motion.h1
+      style={{
+        textAlign: 'center',
+        top: 'calc(50vh - 40px)',
+        x: moveIn,
+        position: 'fixed',
+        width: '100vw',
+        fontSize: '80px',
+      }}
     >
       This is MoveInItem
     </motion.h1>

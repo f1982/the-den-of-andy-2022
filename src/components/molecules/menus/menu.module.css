@@ -2,13 +2,13 @@
   --show-transition: 0.15s all ease-in-out;
 }
 
-.navContainer>* {
+.navContainer > * {
   /* border-color: #ccc; */
   /* border-style: solid; */
   /* border-width: 0 0 0 1px; */
 }
 
-.navContainer>*:not(:last-child) {
+.navContainer > *:not(:last-child) {
   /* border-color: rgb(240, 240, 240); */
   /* border-width: 0 1px 0 0; */
 }

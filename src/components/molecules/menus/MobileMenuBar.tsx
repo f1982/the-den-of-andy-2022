@@ -9,12 +9,7 @@ import { MenuItemData } from '../../../types';
 import CloseButton from '../../atoms/buttons/CloseButton';
 import Hamburger from '../../atoms/Icons/Hamburger';
 
-const MenuItem: React.FC<MenuItemData> = ({
-  link,
-  label,
-  icon,
-  onClick,
-}) => {
+const MenuItem: React.FC<MenuItemData> = ({ link, label, icon, onClick }) => {
   const { pathname } = useRouter();
   const basicStyle = `
           px-4 py-4 
@@ -32,11 +27,7 @@ const MenuItem: React.FC<MenuItemData> = ({
 
   return (
     <Link href={link} passHref legacyBehavior>
-      <button
-        type="button"
-        className={cn(basicStyle, activeStyle)}
-        onClick={(e) => onClick(e, link)}
-      >
+      <button type="button" className={cn(basicStyle, activeStyle)} onClick={(e) => onClick && onClick(e, link)}>
         <span className="mr-[1rem]">{icon}</span>
         <span>{label}</span>
       </button>
@@ -45,12 +36,10 @@ const MenuItem: React.FC<MenuItemData> = ({
 };
 
 interface MobileMenuBarProps {
-  menuData: MenuItemData[]
+  menuData: MenuItemData[];
 }
 
-const MobileMenuBar = ({
-  menuData,
-}: MobileMenuBarProps) => {
+const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
   const [showing, setShowing] = useState(false);
   const isMobile = useMediaQuery('(max-width: 960px)');
 
@@ -68,8 +57,7 @@ const MobileMenuBar = ({
           className="w-8"
           onClick={() => {
             setShowing(!showing);
-          }}
-        >
+          }}>
           <Hamburger />
         </button>
       </div>
@@ -87,16 +75,15 @@ const MobileMenuBar = ({
           document.body.style.top = '';
           // eslint-disable-next-line radix
           window.scrollTo(0, parseInt(scrollY || '0') * -1);
-        }}
-      >
+        }}>
         <div className="w-full h-full bg-background">
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>
           <nav className="flex flex-col ">
-            {
-              menuData.map((item) => <MenuItem key={item.link} {...item} onClick={handleClick} />)
-            }
+            {menuData.map((item) => (
+              <MenuItem key={item.link} {...item} onClick={handleClick} />
+            ))}
           </nav>
         </div>
       </Modal>

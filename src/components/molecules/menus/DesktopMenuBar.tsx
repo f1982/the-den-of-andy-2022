@@ -8,28 +8,22 @@ import styles from './menu.module.css';
 const MenuItem: React.FC<MenuItemData> = ({ link, label, icon }) => {
   const { pathname } = useRouter();
   return (
-    (
-      <Link
-        href={link}
-        passHref
-        className={link === pathname ? styles.activeNavLink : styles.topMenuItem}
-      >
-
-        <span>{icon}</span>
-        <div className={styles.overlayText}>{label}</div>
-
-      </Link>
-    )
+    <Link
+      href={link}
+      passHref
+      className={link === pathname ? styles.activeNavLink : styles.topMenuItem}
+    >
+      <span>{icon}</span>
+      <div className={styles.overlayText}>{label}</div>
+    </Link>
   );
 };
 
 const DesktopMenuBar = ({ menuData }: { menuData: MenuItemData[] }) => (
   <nav className={cn('hidden md:flex md:flex-row', styles.navContainer)}>
-    {
-      menuData.map((item) => (
-        <MenuItem key={item.link} {...item} />
-      ))
-    }
+    {menuData.map((item) => (
+      <MenuItem key={item.link} {...item} />
+    ))}
   </nav>
 );
 

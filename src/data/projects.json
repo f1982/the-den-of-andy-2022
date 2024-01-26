@@ -40,10 +40,7 @@
         "cover": "vodafone-dx-cover.png",
         "start": "2021-03-01",
         "end": "2021-12-20",
-        "images": [
-          "vodafone-dx-1.png",
-          "vodafone-dx-2.png"
-        ],
+        "images": ["vodafone-dx-1.png", "vodafone-dx-2.png"],
         "tech": "React, React Native, Next.js Typescript, RxJS, Azure DevOps, Azure AD B2C, Jest, React-Testing-Library, Storybook, Lerna, SSR, Accessibility, GraphQL",
         "link": "",
         "github": "",
@@ -65,9 +62,7 @@
         "cover": "buck-cover.png",
         "start": "2020-12-20",
         "end": "2021-03-01",
-        "images": [
-          "buck-website.png"
-        ],
+        "images": ["buck-website.png"],
         "tech": "React, Typescript, Jest, Gatsby.js, Material UI, CircleCI, EDM",
         "link": "https://www.getbuck.co.nz/",
         "github": "",
@@ -89,11 +84,7 @@
         "cover": "cyvertex-cover.jpg",
         "start": "2020",
         "end": "2020",
-        "images": [
-          "cyvertex-01.jpg",
-          "cyvertex-02.jpg",
-          "cyvertex-03.jpg"
-        ],
+        "images": ["cyvertex-01.jpg", "cyvertex-02.jpg", "cyvertex-03.jpg"],
         "tech": "Laravel,Vue.js,MySQL,Docker Compose,Amazon AWS",
         "link": "https://cyvertex.com",
         "github": "",
@@ -115,11 +106,7 @@
         "cover": "cyvertex-cover.jpg",
         "start": "2020",
         "end": "2020",
-        "images": [
-          "cyvertex-01.jpg",
-          "cyvertex-02.jpg",
-          "cyvertex-03.jpg"
-        ],
+        "images": ["cyvertex-01.jpg", "cyvertex-02.jpg", "cyvertex-03.jpg"],
         "tech": "Laravel,Vue.js,MySQL,Docker Compose,Amazon AWS",
         "link": "https://cyvertex.com",
         "github": "",
@@ -140,10 +127,7 @@
         "cover": "cctv.com-cover.jpg",
         "start": "2009",
         "end": "2013",
-        "images": [
-          "cctv.com-01.jpg",
-          "cctv.com-02.jpg"
-        ],
+        "images": ["cctv.com-01.jpg", "cctv.com-02.jpg"],
         "tech": "HTML,Javascript,JQuery,Flash,PHP",
         "link": "https://www.cctv.com",
         "github": "",
@@ -164,10 +148,7 @@
         "cover": "quduoduo-cover.jpg",
         "start": "2018",
         "end": "2018",
-        "images": [
-          "quduoduo-01.jpg",
-          "quduoduo-02.jpg"
-        ],
+        "images": ["quduoduo-01.jpg", "quduoduo-02.jpg"],
         "tech": "Javascript,PHP,Workerman,Wechat",
         "link": "",
         "github": "",
@@ -188,10 +169,7 @@
         "cover": "cbox-cover.jpg",
         "start": "2012-04-01",
         "end": "2015-07-01",
-        "images": [
-          "cbox-01.jpg",
-          "cbox-02.jpg"
-        ],
+        "images": ["cbox-01.jpg", "cbox-02.jpg"],
         "tech": "Objective-C,ffmpeg,php",
         "link": "https://apps.apple.com/app/id331259725",
         "github": "",
@@ -212,10 +190,7 @@
         "cover": "thousanddogs-cover.jpg",
         "start": "2017",
         "end": "2017",
-        "images": [
-          "thousanddogs-01.jpg",
-          "thousanddogs-02.jpg"
-        ],
+        "images": ["thousanddogs-01.jpg", "thousanddogs-02.jpg"],
         "tech": "Gulp,NPM,Cocos2d-JS,HTML,CSS,Wechat",
         "link": "",
         "github": "",
@@ -236,10 +211,7 @@
         "cover": "timesignet-cover.jpg",
         "start": "2018",
         "end": "2018",
-        "images": [
-          "timesignet-01.jpg",
-          "timesignet-02.jpg"
-        ],
+        "images": ["timesignet-01.jpg", "timesignet-02.jpg"],
         "tech": "Cocos Creator,JavaScript,Gulp",
         "link": "",
         "github": "",
@@ -260,9 +232,7 @@
         "cover": "crunching-cover.jpg",
         "start": "2009",
         "end": "2009",
-        "images": [
-          "crunching-01.jpg"
-        ],
+        "images": ["crunching-01.jpg"],
         "tech": "Cocos2d,Objective-C,XCode,Sqlite",
         "link": "https://apps.apple.com/app/id480154435",
         "github": "",
@@ -283,9 +253,7 @@
         "cover": "endless-nails-cover.jpg",
         "start": "2010",
         "end": "2010",
-        "images": [
-          "endless-nails-01.jpg"
-        ],
+        "images": ["endless-nails-01.jpg"],
         "tech": "Flash,ActionScript3.0",
         "link": "https://apps.apple.com/app/id820188009",
         "github": "",
@@ -306,9 +274,7 @@
         "cover": "tesla-ship-cover.jpg",
         "start": "2010",
         "end": "2010",
-        "images": [
-          "tesla-ship-01.jpg"
-        ],
+        "images": ["tesla-ship-01.jpg"],
         "tech": "Cocos2d-X,C++,XCode",
         "link": "https://apps.apple.com/app/id785097969",
         "github": "",
@@ -329,9 +295,7 @@
         "cover": "pewpewpew-cover.jpg",
         "start": "2014-04-01",
         "end": "2014-07-01",
-        "images": [
-          "pewpewpew-1.jpg"
-        ],
+        "images": ["pewpewpew-1.jpg"],
         "tech": "Cocos2d-X,C++,XCode,Cocosbuilder,Particle Designer",
         "link": "https://apps.apple.com/app/id994388321",
         "github": "",
@@ -352,9 +316,7 @@
         "cover": "showstopper-basketball-cover.jpg",
         "start": "2010",
         "end": "2010",
-        "images": [
-          "showstopper-basketball-01.jpg"
-        ],
+        "images": ["showstopper-basketball-01.jpg"],
         "tech": "Flash,ActionScript3.0,Away3D",
         "link": "",
         "github": "",
@@ -375,9 +337,7 @@
         "cover": "pocket-gridiron-cover.jpg",
         "start": "2011",
         "end": "2011",
-        "images": [
-          "pocket-gridiron-cover.jpg"
-        ],
+        "images": ["pocket-gridiron-cover.jpg"],
         "tech": "Flash,ActionScript3.0,Away3D",
         "link": "",
         "github": "",
@@ -398,9 +358,7 @@
         "cover": "eingzone-cover.jpg",
         "start": "2006",
         "end": "2007",
-        "images": [
-          "eingzone-01.jpg"
-        ],
+        "images": ["eingzone-01.jpg"],
         "tech": "ASP,SQLServer,Flash,ActionScript",
         "link": "",
         "video": "",
@@ -420,9 +378,7 @@
         "cover": "spkf.png",
         "start": "2005",
         "end": "2005",
-        "images": [
-          "spkf.png"
-        ],
+        "images": ["spkf.png"],
         "tech": "Flash,ActionScript,RED5,Java,JSP,MySQL",
         "link": "",
         "github": "",

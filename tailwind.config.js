@@ -5,9 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: ['./src/**/*.{js.ts,jsx,tsx}'],
   mode: 'jit',
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [require('@tailwindcss/line-clamp')],
   theme: {
     extend: {
       colors: {
@@ -66,21 +64,33 @@ module.exports = {
       },
       fontSize: {
         // h1
-        '2xl': ['4.2rem', {
-          lineHeight: '4.5rem',
-        }],
+        '2xl': [
+          '4.2rem',
+          {
+            lineHeight: '4.5rem',
+          },
+        ],
         // h2
-        xl: ['3.15rem', {
-          lineHeight: '3.5rem',
-        }],
+        xl: [
+          '3.15rem',
+          {
+            lineHeight: '3.5rem',
+          },
+        ],
         // h3
-        lg: ['2.4rem', {
-          lineHeight: '2.5rem',
-        }],
+        lg: [
+          '2.4rem',
+          {
+            lineHeight: '2.5rem',
+          },
+        ],
         // h4
-        md: ['1.7rem', {
-          lineHeight: '2rem',
-        }],
+        md: [
+          '1.7rem',
+          {
+            lineHeight: '2rem',
+          },
+        ],
       },
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',

@@ -11,10 +11,17 @@ describe('Welcome page', () => {
 
 describe('404 error page', () => {
   it('return 404 if page not found', () => {
-    cy.request({ url: `${Cypress.env('host')}page-not-exist`, failOnStatusCode: false }).its('status').should('equal', 404);
+    cy.request({
+      url: `${Cypress.env('host')}page-not-exist`,
+      failOnStatusCode: false,
+    })
+      .its('status')
+      .should('equal', 404);
   });
   it('404 page code and content should be correct', () => {
-    cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false }).its('status').should('equal', 404);
+    cy.request({ url: `${Cypress.env('host')}404`, failOnStatusCode: false })
+      .its('status')
+      .should('equal', 404);
     cy.visit(`${Cypress.env('host')}404`, { failOnStatusCode: false });
     cy.get('button').contains(/back/i);
     cy.get('h2').contains(/oops, page not found/i);
@@ -59,8 +66,13 @@ describe('other pages', () => {
     cy.get('a[href*="blog/"]').last().click();
 
     // SEO: check keywords is there
-    cy.document().get('head meta[name="keywords"]')
-      .should('have.attr', 'content', 'cable management, cable management desk, cable management ideas, cable management tray, wfh setups, developer desk, cable management tips, developer desk setup, dev desk setup');
+    cy.document()
+      .get('head meta[name="keywords"]')
+      .should(
+        'have.attr',
+        'content',
+        'cable management, cable management desk, cable management ideas, cable management tray, wfh setups, developer desk, cable management tips, developer desk setup, dev desk setup'
+      );
     // close the page
     cy.get('button[aria-label="Close"]').click();
   });

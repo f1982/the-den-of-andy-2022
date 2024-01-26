@@ -8,12 +8,12 @@ import usePageURL from '../../hooks/usePageURL';
 import { ProjectItemData } from '../../types/projects';
 
 interface ProjectPageProps {
-  detail: ProjectItemData,
+  detail: ProjectItemData;
 }
 
 type ProjectPageType = React.FC<ProjectPageProps> & {
-  getLayout: (page: React.ReactNode) => React.ReactNode
-}
+  getLayout: (page: React.ReactNode) => React.ReactNode;
+};
 
 const ProjectPage: ProjectPageType = ({ detail }) => {
   const router = useRouter();
@@ -57,11 +57,7 @@ const ProjectPage: ProjectPageType = ({ detail }) => {
 };
 
 ProjectPage.getLayout = function getLayout(page) {
-  return (
-    <div>
-      {page}
-    </div>
-  );
+  return <div>{page}</div>;
 };
 
 export async function getStaticProps({ params }) {

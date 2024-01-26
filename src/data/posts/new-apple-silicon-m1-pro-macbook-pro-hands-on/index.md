@@ -27,11 +27,9 @@ I have used this new M1 Pro MacBook Pro for about one week now. I have to say it
 
 I still remembered that when I was watching the Apple Event, I saw the notch on the screen design. That felt so bad. It’s not OCD(Obsessive-compulsive disorder) friendly at all. But, when I handed on it, actually on the first day. I carefully observed the camera and the surrounding area for a while. After that, I almost forgot the notch! So, in my opinion as a non-OCD user, it doesn’t bother me too much.
 
-
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/IMG_9829.jpg)
 
-
-Another very interesting thing is like this. Due to the COVID-19 spread so quickly in community and back and forth unstoppably. We’ve been WFH for more than half a year now. The camera of the previous 16 inch MBP is very poor. It can not handle with the low light environment very well.  Especially in the morning, the location of my desk against the light. By in this way, every time when I open the Zoom in the standup meeting, it feels that I am in a very dark room. I have to DIY a fill-in light designed for the meeting. To avoid that colleagues may think I am WFC (work from cave)
+Another very interesting thing is like this. Due to the COVID-19 spread so quickly in community and back and forth unstoppably. We’ve been WFH for more than half a year now. The camera of the previous 16 inch MBP is very poor. It can not handle with the low light environment very well. Especially in the morning, the location of my desk against the light. By in this way, every time when I open the Zoom in the standup meeting, it feels that I am in a very dark room. I have to DIY a fill-in light designed for the meeting. To avoid that colleagues may think I am WFC (work from cave)
 
 But when I started to use new Apple silicon MBP, this problem solved without effort. In the morning, my room still a little bit dark, but if you look it through the MBP camera, it’s so bright. I even removed my spotlight behind the monitor, which is dedicated for the Zoom meeting.
 

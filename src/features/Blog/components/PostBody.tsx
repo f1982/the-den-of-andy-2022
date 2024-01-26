@@ -4,7 +4,7 @@ const PostBody = ({ content }) => (
   <div className="container mx-auto">
     <div
       className={styles.markdown}
-        // eslint-disable-next-line react/no-danger
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: content }}
     />
   </div>

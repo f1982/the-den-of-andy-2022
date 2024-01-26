@@ -96,8 +96,10 @@ type GLTFResult = GLTF & {
 };
 
 const Model = (rest: GroupProps) => {
-  const group = useRef<THREE.Group>();
-  const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf') as GLTFResult;
+  const group = useRef<any>();
+  const { nodes, materials } = useGLTF(
+    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf'
+  ) as GLTFResult;
   return (
     <group ref={group} {...rest} dispose={null}>
       <mesh
@@ -382,14 +384,8 @@ const Model = (rest: GroupProps) => {
         rotation={[0, 0, Math.PI]}
         scale={[0.1, 0.55, 1.05]}
       >
-        <mesh
-          geometry={nodes.Cube011.geometry}
-          material={materials['window-frame']}
-        />
-        <mesh
-          geometry={nodes.Cube011_1.geometry}
-          material={materials['window-panel']}
-        />
+        <mesh geometry={nodes.Cube011.geometry} material={materials['window-frame']} />
+        <mesh geometry={nodes.Cube011_1.geometry} material={materials['window-panel']} />
       </group>
       <mesh
         geometry={nodes['wall-trim-top'].geometry}
@@ -452,14 +448,8 @@ const Model = (rest: GroupProps) => {
         rotation={[-1.46975, -0.05333, 2.65758]}
         scale={[170, 0.60933, 119.99999]}
       >
-        <mesh
-          geometry={nodes.Plane002.geometry}
-          material={materials['gray-aluminum']}
-        />
-        <mesh
-          geometry={nodes.Plane002_1.geometry}
-          material={materials['monitor-material']}
-        />
+        <mesh geometry={nodes.Plane002.geometry} material={materials['gray-aluminum']} />
+        <mesh geometry={nodes.Plane002_1.geometry} material={materials['monitor-material']} />
       </group>
       <mesh
         geometry={nodes['no-man-sky'].geometry}
@@ -479,4 +469,6 @@ const Model = (rest: GroupProps) => {
 
 export default Model;
 
-useGLTF.preload('https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf');
+useGLTF.preload(
+  'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf'
+);

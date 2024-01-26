@@ -2,15 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import { MenuItemData } from '../../../types';
 
-const SubMenuItem: React.FC<MenuItemData> = ({
-  link,
-  label,
-}) => (
-  (
-    <Link
-      href={link}
-      passHref
-      className="
+const SubMenuItem: React.FC<MenuItemData> = ({ link, label }) => (
+  <Link
+    href={link}
+    passHref
+    className="
         px-6
         py-3
         mr-3
@@ -19,19 +15,16 @@ const SubMenuItem: React.FC<MenuItemData> = ({
         hover:bg-primary-dark
         hover:text-white
         "
-    >
-
-      {label}
-
-    </Link>
-  )
+  >
+    {label}
+  </Link>
 );
 
 const Submenu = ({ items }: { items: MenuItemData[] }) => (
   <nav className="mb-12 font-bold">
     <ul className="flex flex-column">
       {items.map((item: MenuItemData) => (
-        <SubMenuItem key={item.link} label={item.label} link={item.link} />
+        <SubMenuItem key={item.link} label={item.label} link={item.link} onClick={() => {}} />
       ))}
     </ul>
   </nav>

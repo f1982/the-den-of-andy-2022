@@ -1,14 +1,10 @@
 import { PresentationControls } from '@react-three/drei';
-import {
-  Canvas,
-} from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import React from 'react';
 import PostEffect from '../../../utils/3d/PostEffect';
 import WatchModel from './WatchModel';
 
-export const ElasticModel = ({
-  children,
-}) => (
+export const ElasticModel = ({ children }) => (
   <Canvas dpr={window.devicePixelRatio} camera={{ position: [0, 0, 5], fov: 50 }}>
     <color attach="background" args={['#ffcc00']} />
     <ambientLight intensity={0.5} />
@@ -28,13 +24,8 @@ export const ElasticModel = ({
 
 const Scene = () => (
   <ElasticModel>
-    <WatchModel
-      rotation={[-Math.PI / 2, 0, 0]}
-      position={[0, 0.25, 0]}
-      scale={0.003}
-    />
+    <WatchModel rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.25, 0]} scale={0.003} />
     <PostEffect />
-
   </ElasticModel>
 );
 

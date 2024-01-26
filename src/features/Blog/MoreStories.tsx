@@ -8,12 +8,13 @@ import PostPreview from './PostPreview';
 export const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format';
 
 interface MoreStoriesProps {
-  posts: BlogPostData[]
+  posts: BlogPostData[];
 }
 
 const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
   <section>
-    <div className="
+    <div
+      className="
       grid grid-cols-1
       md:grid-cols-2
       gap-x-16
@@ -21,19 +22,20 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
       mb-16
       mx-2 md:mx-auto"
     >
-      {posts.map((post) => (
-        post.slug !== TEST_BLOG_POST && (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            slug={post.slug}
-            excerpt={post.excerpt}
-          />
-        )
-      ))}
+      {posts.map(
+        (post) =>
+          post.slug !== TEST_BLOG_POST && (
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          )
+      )}
     </div>
   </section>
 );

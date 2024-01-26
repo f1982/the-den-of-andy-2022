@@ -21,9 +21,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
       {/* global color settings */}
       <div className="text-on-background bg-background">
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </div>
     </>
