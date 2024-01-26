@@ -3,9 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 // detail information refer to:  https://tailwindcss.com/docs/theme
 module.exports = {
-  purge: ['./src/**/*.{js.ts,jsx,tsx}'],
+  content: ['./src/**/*.{js.ts,jsx,tsx}'],
   mode: 'jit',
-  plugins: [require('@tailwindcss/line-clamp')],
   theme: {
     extend: {
       colors: {

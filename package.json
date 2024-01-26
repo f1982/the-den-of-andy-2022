@@ -31,7 +31,6 @@
     "@popmotion/popcorn": "^0.4.4",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "8.15.14",
-    "@tailwindcss/line-clamp": "^0.4.4",
     "classnames": "^2.5.1",
     "date-fns": "^3.2.0",
     "framer-motion": "^10.18.0",
@@ -83,7 +82,7 @@
   },
   "volta": {
     "node": "18.17.0",
-    "yarn": "3.6.4"
+    "npm": "9.6.7"
   },
   "resolutions": {
     "webpack": "^5"
