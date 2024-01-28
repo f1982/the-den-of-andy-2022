@@ -1,13 +1,16 @@
-import Avatar from './Avatar';
+import Avatar from './Avatar'
 
-export default {
-  title: 'UI/Avatar',
+const meta = {
+  title: 'Den/Avatar',
   component: Avatar,
-};
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered'
+  }
+}
 
-export const Demos = () => (
-  <div>
-    <p>Avatar Demo</p>
-    <Avatar name="andy" picture="http://placekitten.com/800/500" />
-  </div>
-);
+export default meta
+
+export const Primary = {
+  args: { name: 'primary', picture: 'http://placekitten.com/800/500' }
+}

@@ -1,21 +1,21 @@
-import fs from 'fs';
-import matter from 'gray-matter';
-import { join } from 'path';
-import { ProjectItemData } from '../../types/projects';
+import { ProjectItemData } from '../../types/projects'
+import fs from 'fs'
+import matter from 'gray-matter'
+import { join } from 'path'
 
-const PROJECTS_DATA = join(process.cwd(), 'src/data/projects.json');
-const PROJ_POST_DIRECTORY = join(process.cwd(), 'src/data/projects');
+const PROJECTS_DATA = join(process.cwd(), 'src/data/projects.json')
+const PROJ_POST_DIRECTORY = join(process.cwd(), 'src/data/projects')
 
 export function getProjects() {
-  const fullPath = join(PROJECTS_DATA);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const json = JSON.parse(fileContents);
-  return json.data;
+  const fullPath = join(PROJECTS_DATA)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const json = JSON.parse(fileContents)
+  return json.data
 }
 
 export function getProjectDetail(slug) {
-  const { projects } = getProjects();
-  return projects.find((item) => item.id === slug);
+  const { projects } = getProjects()
+  return projects.find((item) => item.id === slug)
 }
 
 /**

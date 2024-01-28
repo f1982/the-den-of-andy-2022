@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from 'framer-motion'
+import React from 'react'
 
 function withTransition(OriginalComponent) {
   return (
@@ -20,7 +20,7 @@ function withTransition(OriginalComponent) {
         transition={{ duration: 1, ease: 'easeInOut' }}
       />
     </div>
-  );
+  )
 }
 
-export default withTransition;
+export default withTransition

@@ -26,6 +26,7 @@ I change and update my main desk setup consistently, so I realise that I should 
 # Reason
 
 Why I want to write this articles? I think there're two main reason for it.
+
 - For recording, I always have some new ideas come out of my mind. So I try to change my setups if I think I need. The notes of the thinking process will give me a chance to review and to use it as a reference.
 - Sharing with others. I found lots of people want to setup, design and optimise their daily work environment. Share these ideas can help others or give others some inspirations.
 

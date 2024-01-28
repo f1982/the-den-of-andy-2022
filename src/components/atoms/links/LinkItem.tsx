@@ -1,25 +1,24 @@
-import React from 'react';
+import React from 'react'
 
 interface LinkItemSimpleProp {
   link: string
-  alt?: string
+  alt?: string | undefined
   children?: React.ReactNode
 }
 
 const LinkItemSimple: React.FC<LinkItemSimpleProp> = ({
   link,
   alt,
-  children,
+  children
 }) => (
   <a
     href={link}
     className="text-primary-dark"
     title={alt}
     target="_blank"
-    rel="noreferrer"
-  >
+    rel="noreferrer">
     {children}
   </a>
-);
+)
 
-export default LinkItemSimple;
+export default LinkItemSimple

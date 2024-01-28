@@ -1,16 +1,16 @@
-import { SNSPlatforms } from '../types/links';
-import Facebook from '../components/atoms/Icons/Facebook';
-import Twitter from '../components/atoms/Icons/Twitter';
-import Ins from '../components/atoms/Icons/Ins';
-import LinkedIn from '../components/atoms/Icons/LinkedIn';
-import YouTube from '../components/atoms/Icons/YouTubeIcon';
+import Facebook from '../components/atoms/Icons/Facebook'
+import Ins from '../components/atoms/Icons/Ins'
+import LinkedIn from '../components/atoms/Icons/LinkedIn'
+import Twitter from '../components/atoms/Icons/Twitter'
+import YouTube from '../components/atoms/Icons/YouTubeIcon'
+import { SNSPlatforms } from '../types/links'
 
-export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7';
-export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A';
-export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6';
-export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/';
-export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme';
-export const BilibiliURL = 'https://space.bilibili.com/30429048';
+export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
+export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'
+export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6'
+export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/'
+export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme'
+export const BilibiliURL = 'https://space.bilibili.com/30429048'
 
 const SNS = [
   {
@@ -21,8 +21,8 @@ const SNS = [
     icon: <Ins />,
     link: 'https://www.instagram.com/iandycao/',
     alt: "Andy's Instagram",
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ const SNS = [
     icon: <Facebook />,
     link: 'https://www.facebook.com/andycao1982',
     alt: "Andy's Facebook Homepage",
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 3,
@@ -41,8 +41,8 @@ const SNS = [
     icon: <YouTube />,
     link: YouTubeURL,
     alt: "Andy's Youtube Channel",
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 4,
@@ -51,8 +51,8 @@ const SNS = [
     icon: <LinkedIn />,
     link: 'https://www.linkedin.com/in/andyisme/',
     alt: "Andy's LinkedIn Page",
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 5,
@@ -61,8 +61,8 @@ const SNS = [
     icon: <Twitter />,
     link: 'https://twitter.com/iandycao',
     alt: "Andy's Twitter",
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 6,
@@ -70,9 +70,9 @@ const SNS = [
     type: 'outside',
     icon: 'flickr',
     link: 'https://www.flickr.com/photos/ad1982/',
-    alt: null,
-    tag: null,
-    hidden: 1,
+    alt: '',
+    tag: '',
+    hidden: 1
   },
   {
     id: 7,
@@ -80,9 +80,9 @@ const SNS = [
     type: 'inside',
     icon: 'weibo',
     link: 'http://www.weibo.com/enjoywound',
-    alt: null,
-    tag: null,
-    hidden: 1,
+    alt: '',
+    tag: '',
+    hidden: 1
   },
   {
     id: 8,
@@ -90,9 +90,9 @@ const SNS = [
     type: 'outside',
     icon: 'soundcloud',
     link: 'https://soundcloud.com/andy-cao-925715105',
-    alt: null,
-    tag: null,
-    hidden: 1,
+    alt: '',
+    tag: '',
+    hidden: 1
   },
   {
     id: 9,
@@ -100,9 +100,9 @@ const SNS = [
     type: 'inside',
     icon: 'douban',
     link: 'https://www.douban.com/people/f1982/',
-    alt: null,
-    tag: null,
-    hidden: 1,
+    alt: '',
+    tag: '',
+    hidden: 1
   },
   {
     id: 10,
@@ -111,10 +111,10 @@ const SNS = [
     icon: 'BiliBili',
     link: BilibiliURL,
     alt: 'Bili Bili',
-    tag: null,
-    hidden: 1,
-  },
-];
+    tag: '',
+    hidden: 1
+  }
+]
 
 const friends = [
   {
@@ -124,8 +124,8 @@ const friends = [
     icon: '',
     link: 'https://tigerwang.us/',
     alt: 'Tiger Wang',
-    tag: null,
-    hidden: 0,
+    tag: '',
+    hidden: 0
   },
   {
     id: 1,
@@ -134,9 +134,9 @@ const friends = [
     icon: 'facebook',
     link: 'http://fenglee.com/',
     alt: 'Indie game developer Feng Lee',
-    tag: null,
-    hidden: 0,
-  },
-];
+    tag: '',
+    hidden: 0
+  }
+]
 
-export { SNSPlatforms, SNS, friends };
+export { SNSPlatforms, SNS, friends }

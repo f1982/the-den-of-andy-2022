@@ -1,14 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 interface AuthorAvatarProps {
-  name: string;
-  picture: string;
+  name: string
+  picture: string
 }
 
-const AuthorAvatar: React.FC<AuthorAvatarProps> = ({
-  name,
-  picture,
-}) => (
+const AuthorAvatar: React.FC<AuthorAvatarProps> = ({ name, picture }) => (
   <div className="flex items-center">
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
@@ -20,6 +17,6 @@ const AuthorAvatar: React.FC<AuthorAvatarProps> = ({
     />
     <div className="font-bold">{name}</div>
   </div>
-);
+)
 
-export default AuthorAvatar;
+export default AuthorAvatar

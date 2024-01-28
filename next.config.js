@@ -14,7 +14,7 @@ module.exports = withBundleAnalyzer({
     path: '/',
     // path: '/_next/image',
     // disable static imports for image files
-    disableStaticImages: false,
+    disableStaticImages: false
     // formats: ['image/webp'],
-  },
+  }
 })

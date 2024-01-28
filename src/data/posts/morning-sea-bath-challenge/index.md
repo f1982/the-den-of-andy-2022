@@ -27,12 +27,9 @@ I got back in my car and drove home before my daughter woke up, feeling energize
 
 ![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath21.jpeg)
 
-
 At the end I'd like to share the video I was listening to about Cold Exposure.
 
 - https://www.youtube.com/watch?v=pq6WHJzOkno
-
-
 
 昨天晚上，我突然决定接受一个我长期以来想要尝试的挑战：在日出前洗个海水澡。所以，昨晚我早早上床睡觉（在晚上11点之前），在入睡前，我将我的浴巾和换洗的衣服放进包里，以节省早上的时间。晚上我还做了两个乱七八糟的梦，这并没有影响我带着兴奋期待即将到来的体验。
 
@@ -49,5 +46,3 @@ At the end I'd like to share the video I was listening to about Cold Exposure.
 最后分享一下给我启发的 Huberman 的视频。
 
 - https://www.youtube.com/watch?v=pq6WHJzOkno
-
-

@@ -1,9 +1,28 @@
-import AlertBar, { AlertType } from './AlertBar';
+import AlertBar, { AlertType } from './AlertBar'
 
-export default {
-  title: 'UI/AlertBar',
+const meta = {
+  title: 'Den/AlertBar',
   component: AlertBar,
-};
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered'
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  // tags: ['autodocs'],
+  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  argTypes: {
+    backgroundColor: { control: 'color' }
+  }
+}
+
+export default meta
+
+export const Primary = {
+  args: {
+    type: AlertType.Warning,
+    children: 'This is Error Bar'
+  }
+}
 
 export const Demos = () => (
   <div>
@@ -11,44 +30,4 @@ export const Demos = () => (
     <AlertBar type={AlertType.Warning}>This is Warning Bar</AlertBar>
     <AlertBar type={AlertType.Error}>This is Error Bar</AlertBar>
   </div>
-);
-const Template = (args) => <AlertBar {...args} />;
-
-export const WarningAlertBar = Template.bind({});
-WarningAlertBar.args = {
-  preview: false,
-  type: AlertType.Warning,
-  children: (
-    <div>
-      This page is a preview.
-      {' '}
-      <a
-        href="/api/exit-preview"
-        className="underline hover:text-cyan duration-200 transition-colors"
-      >
-        Click here
-      </a>
-      {' '}
-      to exit preview mode.
-    </div>
-  ),
-};
-
-export const ErrorAlertBar = Template.bind({});
-ErrorAlertBar.args = {
-  preview: true,
-  type: AlertType.Error,
-  children: (
-    <>
-      The source code for this blog is
-      {' '}
-      <a
-        href="https://github.com/vercel/next.js/tree/canary/examples"
-        className="underline hover:text-success duration-200 transition-colors"
-      >
-        available on GitHub
-      </a>
-      .
-    </>
-  ),
-};
+)
