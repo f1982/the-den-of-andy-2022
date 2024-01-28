@@ -21,12 +21,12 @@ const TermsAndConditions = () => (
         'sm:justify-start'
       )}>
       <li className="pr-4">
-        <Link href="/t&c" passHref legacyBehavior>
+        <Link href="/term-and-conditions" passHref legacyBehavior>
           <button type="button">Terms and Conditions</button>
         </Link>
       </li>
       <li>
-        <Link href="/privacy" passHref legacyBehavior>
+        <Link href="/privacy-policy" passHref legacyBehavior>
           <button type="button">Privacy Policy</button>
         </Link>
       </li>
