@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://2022.andycao.me
+Host: https://2022.andycao.me/
 
 # Sitemaps
 Sitemap: https://2022.andycao.me/sitemap.xml
