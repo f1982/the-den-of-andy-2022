@@ -1,14 +1,14 @@
-import React from 'react';
-import ImageWithLoader from '../../components/atoms/Image/Image';
-import Tags from '../../components/atoms/tags/Tags';
-import Typography from '../../components/atoms/typography/Typography';
+import ImageWithLoader from '../../components/atoms/Image/Image'
+import Tags from '../../components/atoms/tags/Tags'
+import Typography from '../../components/atoms/typography/Typography'
+import React from 'react'
 
 interface LastProjectProps {
-  subtitle?: string;
-  title?: string;
-  cover: string;
-  platform?: string;
-  description?: string;
+  subtitle?: string
+  title?: string
+  cover: string
+  platform?: string
+  description?: string
 }
 
 const LatestProject: React.FC<LastProjectProps> = ({
@@ -16,7 +16,7 @@ const LatestProject: React.FC<LastProjectProps> = ({
   title = undefined,
   cover,
   platform = undefined,
-  description = undefined,
+  description = undefined
 }: LastProjectProps) => (
   <div className="w-full md:w-[540px] mb-4 md:mb-6">
     <div className="relative mb-8">
@@ -33,7 +33,11 @@ const LatestProject: React.FC<LastProjectProps> = ({
     </div>
     {/* text layer */}
     <div className="px-0 md:px-2">
-      {subtitle && <Typography variant="body-bold" className="text-secondary-dark">{subtitle}</Typography>}
+      {subtitle && (
+        <Typography variant="body-bold" className="text-secondary-dark">
+          {subtitle}
+        </Typography>
+      )}
       {title && <Typography variant="h3">{title}</Typography>}
       {description && (
         <div className="text-left md:text-center">
@@ -42,6 +46,6 @@ const LatestProject: React.FC<LastProjectProps> = ({
       )}
     </div>
   </div>
-);
+)
 
-export default LatestProject;
+export default LatestProject

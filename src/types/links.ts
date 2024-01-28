@@ -8,12 +8,12 @@ export const enum SNSPlatforms {
 }
 
 export interface LinkData {
-    id: number,
-    name: string,
-    type: 'outside'|'inside',
-    icon: string,
-    link: string,
-    alt?: string,
-    tag?: string,
-    hidden:number,
+  id: number
+  name: string
+  type: 'outside' | 'inside'
+  icon: string
+  link: string
+  alt?: string
+  tag?: string
+  hidden: number
 }

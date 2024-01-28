@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import styles from './default.module.css';
+import styles from './default.module.css'
+import { motion } from 'framer-motion'
+import React from 'react'
 
-const transition = { duration: 4, yoyo: 100, ease: 'easeInOut' };
+const transition = { duration: 4, yoyo: 100, ease: 'easeInOut' }
 
 const SVGAnimation = () => (
   <div className="p-4">
@@ -11,8 +11,7 @@ const SVGAnimation = () => (
       width="80%"
       height="80%"
       className={styles.svgAnimation}
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <motion.path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -32,6 +31,6 @@ const SVGAnimation = () => (
       transition={transition}
     />
   </div>
-);
+)
 
-export default SVGAnimation;
+export default SVGAnimation

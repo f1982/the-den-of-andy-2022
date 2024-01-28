@@ -28,7 +28,7 @@ export interface ProjectItemData {
   video?: string
   language: string
   quote?: string
-  content?:string
+  content?: string
 }
 
 export interface LinkObject {

@@ -17,14 +17,26 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "module": "esnext"
+    "module": "esnext",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "types": [
+      "vitest/globals"
+    ],
+    "strictNullChecks": true
   },
   "include": [
-    "src",
-    "src/index.d.ts",
-    "_document.js"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "tests/e2e",
+    "tools"
   ]
 }

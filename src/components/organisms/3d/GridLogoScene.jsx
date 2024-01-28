@@ -1,29 +1,29 @@
 // this demo is from this article
 // https://varun.ca/modular-webgl/
-import React from 'react';
-import * as THREE from 'three';
-import { Canvas } from '@react-three/fiber';
-import { Extrude, OrbitControls, Center } from '@react-three/drei';
+import { Center, Extrude, OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import React from 'react'
+import * as THREE from 'three'
 
-const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false };
-const SIDE = 10;
+const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false }
+const SIDE = 10
 
 const Block = (props) => {
   const shape = React.useMemo(() => {
     // eslint-disable-next-line no-underscore-dangle
-    const _shape = new THREE.Shape();
+    const _shape = new THREE.Shape()
 
-    _shape.moveTo(0, 0);
-    _shape.lineTo(SIDE, 0);
-    _shape.lineTo(SIDE, SIDE * 2);
-    _shape.lineTo(0, SIDE * 2);
-    _shape.lineTo(0, SIDE * 3);
-    _shape.lineTo(-SIDE, SIDE * 3);
-    _shape.lineTo(-SIDE, SIDE);
-    _shape.lineTo(0, SIDE);
+    _shape.moveTo(0, 0)
+    _shape.lineTo(SIDE, 0)
+    _shape.lineTo(SIDE, SIDE * 2)
+    _shape.lineTo(0, SIDE * 2)
+    _shape.lineTo(0, SIDE * 3)
+    _shape.lineTo(-SIDE, SIDE * 3)
+    _shape.lineTo(-SIDE, SIDE)
+    _shape.lineTo(0, SIDE)
 
-    return _shape;
-  }, []);
+    return _shape
+  }, [])
 
   return (
     <Extrude args={[shape, extrudeSettings]} {...props}>
@@ -40,16 +40,15 @@ const Block = (props) => {
         attenuationDistance={0}
       />
     </Extrude>
-  );
-};
+  )
+}
 
 const BlockScene = () => (
   <Canvas
     dpr={2}
     style={{ height: '30vh' }}
     camera={{ position: new THREE.Vector3(8, 5, 40) }}
-    className="mb-[3rem]"
-  >
+    className="mb-[3rem]">
     <color attach="background" args={['#fff']} />
     <pointLight position={[-20, 10, 25]} />
     <gridHelper
@@ -62,6 +61,6 @@ const BlockScene = () => (
     </Center>
     <OrbitControls enableRotate enableZoom={false} />
   </Canvas>
-);
+)
 
-export default BlockScene;
+export default BlockScene
