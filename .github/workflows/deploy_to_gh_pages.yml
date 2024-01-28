@@ -72,7 +72,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} run test
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.manager }} run build
 
       - name: Build the website
         # Place a .nojekyll file in the /public directory to disable GitHub Pages from trying to create a Jekyll website.
