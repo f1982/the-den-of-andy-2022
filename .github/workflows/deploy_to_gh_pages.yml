@@ -1,4 +1,4 @@
-# https://github.com/gregrickaby/nextjs-github-pages/blob/main/.github/workflows/deploy.yml For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# https://github.com/gregrickaby/nextjs-github-pages/blob/main/.github/workflows/deploy.yml
 
 name: GitHub Pages deployment
 
@@ -66,12 +66,13 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Install dependencies
-        run: |
-          ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-          ${{ steps.detect-package-manager.outputs.manager }} test
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+
+      - name: Run unit tests
+        run: ${{ steps.detect-package-manager.outputs.manager }} run test
 
       - name: Build the website
         # Place a .nojekyll file in the /public directory to disable GitHub Pages from trying to create a Jekyll website.
