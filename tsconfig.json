@@ -29,12 +29,14 @@
     "strictNullChecks": true
   },
   "include": [
-    "src",
-    "src/index.d.ts",
-    "_document.js",
-    ".next/types/**/*.ts"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "tests/e2e",
+    "tools"
   ]
 }
