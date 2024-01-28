@@ -44,11 +44,6 @@ jobs:
       - name: Run unit tests
         run: npm test
 
-      # - name: Run Cypress e2e test
-      #   uses: cypress-io/github-action@v2
-      #   with:
-      #     start: yarn start
-
       - name: Build the website
         run: npm run export && touch ./out/.nojekyll
         # This below is used to build storybook static site with whole site together

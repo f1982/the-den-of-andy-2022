@@ -16,11 +16,11 @@
 }
 
 /* list styles */
-
 .markdown ol {
   @apply mb-4 ml-6;
   list-style: decimal;
 }
+
 .markdown ul {
   @apply mb-4 ml-6;
   list-style: disc;
