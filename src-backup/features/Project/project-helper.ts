@@ -1,18 +1,21 @@
+import { PROJECTS_DATA } from '../../../src/config/server-config'
 import fs from 'fs'
 import { join } from 'path'
 
-const PROJECTS_DATA = join(process.cwd(), 'src-backup/data/projects.json')
-const PROJ_POST_DIRECTORY = join(process.cwd(), 'src-backup/data/projects')
-
 export function getProjects() {
-  const fullPath = join(PROJECTS_DATA)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  // const fullPath = join(PROJECTS_DATA)
+  console.log('fullPath', PROJECTS_DATA)
+  const fileContents = fs.readFileSync(PROJECTS_DATA, 'utf8')
+  // const fileContents = require(PROJECTS_DATA)
+  console.log('fileContents', fileContents)
   const json = JSON.parse(fileContents)
   return json.data.projects
 }
 
-export function getProjectDetail(slug) {
-  const { projects } = getProjects()
+export function getProjectDetail(slug: string) {
+  console.log('slug', slug)
+  const projects = getProjects()
+  console.log('projects', projects)
   return projects.find((item) => item.id === slug)
 }
 

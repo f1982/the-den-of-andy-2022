@@ -1,6 +1,6 @@
+import { PROJECT_IMAGE_URL } from '../../../src/config/site-config'
 import Image from '../../components/atoms/Image/Image'
 import Typography from '../../components/atoms/typography/Typography'
-import { PROJECT_IMAGE_URL } from '../../constants/paths'
 import { ProjectItemData } from '../../types/projects'
 import PlatformTag from './components/PlatformTag'
 import cn from 'classnames'

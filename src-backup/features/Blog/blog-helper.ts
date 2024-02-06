@@ -1,9 +1,8 @@
+import { BLOG_POST_DIRECTORY } from '../../../src/config/server-config'
 import { BlogPostData } from '../../types/blog'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
-
-const BLOG_POST_DIRECTORY = join(process.cwd(), 'src-backup/data/posts')
 
 function isFolder(filename) {
   return filename.indexOf('.') === -1

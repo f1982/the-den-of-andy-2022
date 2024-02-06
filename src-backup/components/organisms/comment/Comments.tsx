@@ -1,3 +1,5 @@
+'use client'
+
 import useScript from '../../../hooks/useScript'
 import React, { useRef } from 'react'
 
