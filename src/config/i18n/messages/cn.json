@@ -1,0 +1,13 @@
+{
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 English} other {Unbekannt}}"
+  },
+  "Index": {
+    "title": "你好，世界！",
+    "pageTitle": "欢迎",
+    "greeting": "嗨！我是安迪",
+    "description": "欢迎来到我的数字空间",
+    "buttonLabel": "进入"
+  }
+}
