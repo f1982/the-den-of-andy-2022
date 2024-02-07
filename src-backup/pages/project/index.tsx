@@ -1,7 +1,7 @@
+import PageTitle from '../../../src/components/organisms/blocks/PageTitle'
 import PageHero from '../../../src/components/page/PageHero'
 import { ProjectItemData } from '../../../src/types/projects'
 import TabTitle from '../../components/molecules/seo/SiteSEO'
-import PageTitle from '../../components/organisms/blocks/PageTitle'
 import ProjectList from '../../features/Project/ProjectList'
 import { getProjects } from '../../features/Project/project-helper'
 import { t } from 'i18next'

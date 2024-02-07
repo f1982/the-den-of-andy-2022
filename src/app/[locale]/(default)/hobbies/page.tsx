@@ -1,6 +1,6 @@
 import Button from '../../../../../src-backup/components/atoms/buttons/Button'
-import Hero from '../../../../../src-backup/components/organisms/blocks/Hero'
-import PageTitle from '../../../../../src-backup/components/organisms/blocks/PageTitle'
+import Hero from '../../../../components/organisms/blocks/Hero'
+import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import ColumnHero from '../../../../components/page/ColumnHero'
 import PageHero from '../../../../components/page/PageHero'
 import {

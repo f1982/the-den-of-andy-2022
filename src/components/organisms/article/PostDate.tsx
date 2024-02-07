@@ -1,5 +1,5 @@
-import parseDate from '../../../../src/lib/date.utils'
-import Typography from '../../atoms/typography/Typography'
+import Typography from '../../../../src-backup/components/atoms/typography/Typography'
+import parseDate from '../../../lib/date.utils'
 
 const PostDate = ({ date }) => (
   <Typography variant="small" as="time">

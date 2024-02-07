@@ -1,5 +1,5 @@
-import PageTitle from '../../../../../src-backup/components/organisms/blocks/PageTitle'
-import SmallText from '../../../../../src-backup/components/organisms/blocks/SmallText'
+import PageTitle from '../../../../components/organisms/blocks/PageTitle'
+import SmallText from '../../../../components/organisms/blocks/SmallText'
 import PageHero from '../../../../components/page/PageHero'
 import { getAge } from '../../../../lib/date.utils'
 import { useTranslations } from 'next-intl'

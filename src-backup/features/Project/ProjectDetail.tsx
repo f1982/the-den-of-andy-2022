@@ -1,9 +1,9 @@
 import Tags from '../../../src/components/molecule/Tags'
+import PostDate from '../../../src/components/organisms/article/PostDate'
+import LandscapeHero from '../../../src/components/organisms/blocks/ContentPageHero'
 import { PROJECT_IMAGE_URL } from '../../../src/config/site-config'
 import { ProjectItemData } from '../../../src/types/projects'
 import Typography from '../../components/atoms/typography/Typography'
-import PostDate from '../../components/organisms/article/PostDate'
-import LandscapeHero from '../../components/organisms/blocks/ContentPageHero'
 import PlatformTag from './components/PlatformTag'
 import React from 'react'
 

@@ -1,3 +1,5 @@
+import Hero from '../../src/components/organisms/blocks/Hero'
+import PageTitle from '../../src/components/organisms/blocks/PageTitle'
 import ColumnHero from '../../src/components/page/ColumnHero'
 import PageHero from '../../src/components/page/PageHero'
 import {
@@ -9,8 +11,6 @@ import {
 } from '../../src/config/links'
 import MyButton from '../components/atoms/buttons/Button'
 import TabTitle from '../components/molecules/seo/SiteSEO'
-import Hero from '../components/organisms/blocks/Hero'
-import PageTitle from '../components/organisms/blocks/PageTitle'
 import { t } from 'i18next'
 
 const Hobbies = () => (

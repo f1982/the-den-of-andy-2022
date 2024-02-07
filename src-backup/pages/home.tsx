@@ -1,10 +1,10 @@
+import Hero from '../../src/components/organisms/blocks/Hero'
 import PageHero from '../../src/components/page/PageHero'
 import { YouTubeURL } from '../../src/config/links'
 import YouTubeIcon from '../components/atoms/Icons/YouTubeIcon'
 import MyButton from '../components/atoms/buttons/Button'
 import Typography from '../components/atoms/typography/Typography'
 import TabTitle from '../components/molecules/seo/SiteSEO'
-import Hero from '../components/organisms/blocks/Hero'
 import LatestProject from '../features/Project/LatestProject'
 import { t } from 'i18next'
 import dynamic from 'next/dynamic'
@@ -13,7 +13,7 @@ import React from 'react'
 
 // lazy load 3d model and library will save about 5m
 const ModelWithContainer = dynamic<any>(
-  () => import('../components/organisms/3d/RoomModel'),
+  () => import('../../src/components/organisms/3d/RoomModel'),
   {
     ssr: false
   }

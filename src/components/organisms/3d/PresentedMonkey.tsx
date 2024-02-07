@@ -1,7 +1,6 @@
 import ElasticPresentation from './ElasticPresentation'
 import RoomModel from './RoomModel'
-import SuzannaModel from './SuzannaModel'
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 
 const PresentedMonkey = () => (
   <ElasticPresentation>

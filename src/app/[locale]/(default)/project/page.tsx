@@ -1,6 +1,6 @@
-import PageTitle from '../../../../../src-backup/components/organisms/blocks/PageTitle'
 import ProjectList from '../../../../../src-backup/features/Project/ProjectList'
 import { getProjects } from '../../../../../src-backup/features/Project/project-helper'
+import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
 import { t } from 'i18next'
 import { useRouter, useSearchParams } from 'next/navigation'
