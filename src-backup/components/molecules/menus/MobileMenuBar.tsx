@@ -1,6 +1,6 @@
+import { MenuItemData } from '../../../../src/types'
 import customModalStyles from '../../../constants/modelConfig'
 import useMediaQuery from '../../../hooks/useMediaQuery'
-import { MenuItemData } from '../../../types'
 import Hamburger from '../../atoms/Icons/Hamburger'
 import CloseButton from '../../atoms/buttons/CloseButton'
 import cn from 'classnames'

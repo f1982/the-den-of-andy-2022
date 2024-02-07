@@ -1,8 +1,8 @@
+import PageHero from '../../../src/components/page/PageHero'
+import { getAge } from '../../../src/lib/date.utils'
 import TabTitle from '../../components/molecules/seo/SiteSEO'
-import PageHero from '../../components/organisms/blocks/PageHero'
 import PageTitle from '../../components/organisms/blocks/PageTitle'
 import SmallText from '../../components/organisms/blocks/SmallText'
-import { getAge } from '../../utils/date.utils'
 import { t } from 'i18next'
 import React from 'react'
 

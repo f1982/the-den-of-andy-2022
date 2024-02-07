@@ -3,7 +3,7 @@ import Ins from '../../src-backup/components/atoms/Icons/Ins'
 import LinkedIn from '../../src-backup/components/atoms/Icons/LinkedIn'
 import Twitter from '../../src-backup/components/atoms/Icons/Twitter'
 import YouTube from '../../src-backup/components/atoms/Icons/YouTubeIcon'
-import { SNSPlatforms } from '../../src-backup/types/links'
+import { SNSPlatforms } from '../types/links'
 
 export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
 export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'

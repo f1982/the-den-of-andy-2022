@@ -1,7 +1,7 @@
 import BlogPost from '../../../../../../src-backup/features/Blog/BlogPost'
 import { getPostBySlug } from '../../../../../../src-backup/features/Blog/blog-helper'
-import { BlogPostData } from '../../../../../../src-backup/types/blog'
-import markdownToHtml from '../../../../../../src-backup/utils/markdownToHtml'
+import markdownToHtml from '../../../../../lib/markdownToHtml'
+import { BlogPostData } from '../../../../../types/blog'
 
 /**
  * Get post data by slug

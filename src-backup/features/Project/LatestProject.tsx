@@ -1,5 +1,5 @@
+import Tags from '../../../src/components/molecule/Tags'
 import ImageWithLoader from '../../components/atoms/Image/Image'
-import Tags from '../../components/atoms/tags/Tags'
 import Typography from '../../components/atoms/typography/Typography'
 import React from 'react'
 

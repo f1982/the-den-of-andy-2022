@@ -1,5 +1,5 @@
-import Footer from '../../../../src-backup/components/organisms/footer/SiteFooter'
-import Header from '../../../../src-backup/components/organisms/header/SiteHeader'
+import Footer from '../../../components/molecule/SiteFooter'
+import Header from '../../../components/molecule/SiteHeader'
 import React from 'react'
 
 export default function Layout({ children }: { children: React.ReactNode }) {

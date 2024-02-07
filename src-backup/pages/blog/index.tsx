@@ -1,11 +1,11 @@
+import PageHero from '../../../src/components/page/PageHero'
+import { BlogPostData } from '../../../src/types/blog'
 import Typography from '../../components/atoms/typography/Typography'
 import TabTitle from '../../components/molecules/seo/SiteSEO'
-import PageHero from '../../components/organisms/blocks/PageHero'
 import PageTitle from '../../components/organisms/blocks/PageTitle'
 import MoreStories from '../../features/Blog/MoreStories'
 import { getAllPosts } from '../../features/Blog/blog-helper'
 import MoreMoreStories from '../../features/Blog/components/MoreMoreStories'
-import { BlogPostData } from '../../types/blog'
 import { t } from 'i18next'
 import React from 'react'
 

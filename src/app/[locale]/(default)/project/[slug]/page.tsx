@@ -1,6 +1,6 @@
 import ProjectDetail from '../../../../../../src-backup/features/Project/ProjectDetail'
 import { getProjectDetail } from '../../../../../../src-backup/features/Project/project-helper'
-import { ProjectItemData } from '../../../../../../src-backup/types/projects'
+import { ProjectItemData } from '../../../../../types/projects'
 // import { useRouter } from 'next/navigation'
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import { MenuItemData } from '../../../types'
+import { MenuItemData } from '../../../../src/types'
 import Link from 'next/link'
 import React from 'react'
 

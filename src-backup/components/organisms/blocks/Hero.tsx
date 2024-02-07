@@ -1,6 +1,6 @@
 'use client'
 
-import { HeroData } from '../../../types'
+import { HeroData } from '../../../../src/types'
 import Typography from '../../atoms/typography/Typography'
 import cn from 'classnames'
 import { motion } from 'framer-motion'

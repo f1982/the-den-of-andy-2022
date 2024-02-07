@@ -1,3 +1,4 @@
+import { ProjectItemData } from '../../../src/types/projects'
 import CloseButton from '../../components/atoms/buttons/CloseButton'
 import ProjectDetail from '../../features/Project/ProjectDetail'
 import {
@@ -5,7 +6,6 @@ import {
   getProjects
 } from '../../features/Project/project-helper'
 import usePageURL from '../../hooks/usePageURL'
-import { ProjectItemData } from '../../types/projects'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import React from 'react'

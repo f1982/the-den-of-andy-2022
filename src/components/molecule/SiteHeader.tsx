@@ -1,9 +1,9 @@
 'use client'
 
-import { menuData } from '../../../../src/config/menu-data'
-import Logo from '../../atoms/logo/Logo'
-import DesktopMenuBar from '../../molecules/menus/DesktopMenuBar'
-import MobileMenuBar from '../../molecules/menus/MobileMenuBar'
+import Logo from '../../../src-backup/components/atoms/logo/Logo'
+import DesktopMenuBar from '../../../src-backup/components/molecules/menus/DesktopMenuBar'
+import MobileMenuBar from '../../../src-backup/components/molecules/menus/MobileMenuBar'
+import { menuData } from '../../config/menu-data'
 import cn from 'classnames'
 import { useEffect, useState } from 'react'
 

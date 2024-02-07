@@ -1,3 +1,5 @@
+import ColumnHero from '../../src/components/page/ColumnHero'
+import PageHero from '../../src/components/page/PageHero'
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,
@@ -7,9 +9,7 @@ import {
 } from '../../src/config/links'
 import MyButton from '../components/atoms/buttons/Button'
 import TabTitle from '../components/molecules/seo/SiteSEO'
-import ColumnHero from '../components/organisms/blocks/ColumnHero'
 import Hero from '../components/organisms/blocks/Hero'
-import PageHero from '../components/organisms/blocks/PageHero'
 import PageTitle from '../components/organisms/blocks/PageTitle'
 import { t } from 'i18next'
 

@@ -1,4 +1,4 @@
-import PostEffect from '../../../utils/3d/PostEffect'
+import PostEffect from '../../../../src/lib/3d/PostEffect'
 import WatchModel from './WatchModel'
 import { PresentationControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'

@@ -1,4 +1,4 @@
-import { MenuItemData } from '../../../types/index'
+import { MenuItemData } from '../../../../src/types/index'
 import styles from './menu.module.css'
 import cn from 'classnames'
 import Link from 'next/link'

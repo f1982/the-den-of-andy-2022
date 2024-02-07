@@ -1,4 +1,4 @@
-import parseDate from '../../../utils/date.utils'
+import parseDate from '../../../../src/lib/date.utils'
 import Typography from '../../atoms/typography/Typography'
 
 const PostDate = ({ date }) => (

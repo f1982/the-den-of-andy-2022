@@ -1,9 +1,9 @@
+import Tags from '../../../src/components/molecule/Tags'
 import { PROJECT_IMAGE_URL } from '../../../src/config/site-config'
-import Tags from '../../components/atoms/tags/Tags'
+import { ProjectItemData } from '../../../src/types/projects'
 import Typography from '../../components/atoms/typography/Typography'
 import PostDate from '../../components/organisms/article/PostDate'
 import LandscapeHero from '../../components/organisms/blocks/ContentPageHero'
-import { ProjectItemData } from '../../types/projects'
 import PlatformTag from './components/PlatformTag'
 import React from 'react'
 

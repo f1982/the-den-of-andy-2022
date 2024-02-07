@@ -3,7 +3,7 @@ import BlogIcon from '../../src-backup/components/atoms/Icons/BlogIcon'
 import HobbyIcon from '../../src-backup/components/atoms/Icons/HobbyIcon'
 import HomeIcon from '../../src-backup/components/atoms/Icons/HomeIcon'
 import ProjectIcon from '../../src-backup/components/atoms/Icons/ProjectIcon'
-import { MenuItemData } from '../../src-backup/types/index'
+import { MenuItemData } from '../types/index'
 
 const BLOG_PATH = '/blog'
 

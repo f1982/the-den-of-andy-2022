@@ -1,5 +1,5 @@
-import tailwindConfig from '../../../../tailwind.config'
-import Image from '../../atoms/Image/Image'
+import Image from '../../../src-backup/components/atoms/Image/Image'
+import tailwindConfig from '../../../tailwind.config'
 import cn from 'classnames'
 import React, { PropsWithChildren } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'

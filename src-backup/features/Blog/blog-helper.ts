@@ -1,5 +1,5 @@
 import { BLOG_POST_DIRECTORY } from '../../../src/config/server-config'
-import { BlogPostData } from '../../types/blog'
+import { BlogPostData } from '../../../src/types/blog'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'

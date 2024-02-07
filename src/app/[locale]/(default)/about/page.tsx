@@ -1,7 +1,7 @@
-import PageHero from '../../../../../src-backup/components/organisms/blocks/PageHero'
 import PageTitle from '../../../../../src-backup/components/organisms/blocks/PageTitle'
 import SmallText from '../../../../../src-backup/components/organisms/blocks/SmallText'
-import { getAge } from '../../../../../src-backup/utils/date.utils'
+import PageHero from '../../../../components/page/PageHero'
+import { getAge } from '../../../../lib/date.utils'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
