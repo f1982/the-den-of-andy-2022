@@ -1,5 +1,5 @@
-import Image from '../../../../../../src-backup/components/atoms/Image/Image'
-import Typography from '../../../../../../src-backup/components/atoms/typography/Typography'
+import Image from '../../../../../components/atoms/Image/Image'
+import Typography from '../../../../../components/atoms/typography/Typography'
 import PostDate from '../../../../../components/organisms/article/PostDate'
 import { BLOG_PATH } from '../../../../../config/menu-data'
 import { BlogPostData } from '../../../../../types/blog'

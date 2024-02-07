@@ -1,5 +1,5 @@
-import Image from '../../../../../../src-backup/components/atoms/Image/Image'
-import Typography from '../../../../../../src-backup/components/atoms/typography/Typography'
+import Image from '../../../../../components/atoms/Image/Image'
+import Typography from '../../../../../components/atoms/typography/Typography'
 import { PROJECT_IMAGE_URL } from '../../../../../config/site-config'
 import { ProjectItemData } from '../../../../../types/projects'
 import PlatformTag from './components/PlatformTag'

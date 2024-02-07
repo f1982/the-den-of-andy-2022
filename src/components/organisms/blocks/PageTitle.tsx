@@ -1,4 +1,4 @@
-import Typography from '../../../../src-backup/components/atoms/typography/Typography'
+import Typography from '../../atoms/typography/Typography'
 import cn from 'classnames'
 import React from 'react'
 

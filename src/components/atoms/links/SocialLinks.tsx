@@ -1,4 +1,4 @@
-import { SNS } from '../../../../src/config/links'
+import { SNS } from '../../../config/links'
 import LinkItem from './LinkItem'
 import classNames from 'classnames'
 

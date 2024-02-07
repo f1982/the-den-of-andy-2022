@@ -1,7 +1,7 @@
 'use client'
 
-import Typography from '../../../src-backup/components/atoms/typography/Typography'
 import { HeroData } from '../../types'
+import Typography from '../atoms/typography/Typography'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
 import React from 'react'

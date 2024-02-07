@@ -1,4 +1,4 @@
-import Button from '../../../../../src-backup/components/atoms/buttons/Button'
+import Button from '../../../../components/atoms/buttons/Button'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import ColumnHero from '../../../../components/page/ColumnHero'

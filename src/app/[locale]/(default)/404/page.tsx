@@ -1,4 +1,4 @@
-import MyButton from '../../../../../src-backup/components/atoms/buttons/Button'
+import MyButton from '../../../../components/atoms/buttons/Button'
 import GlitchText from '../../../../components/molecule/glitch-text/GlitchText'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'

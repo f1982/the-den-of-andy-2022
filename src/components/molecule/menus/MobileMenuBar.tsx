@@ -1,10 +1,10 @@
 'use client'
 
-import Hamburger from '../../../../src-backup/components/atoms/Icons/Hamburger'
-import CloseButton from '../../../../src-backup/components/atoms/buttons/CloseButton'
 import customModalStyles from '../../../config/modelConfig'
 import useMediaQuery from '../../../lib/hooks/useMediaQuery'
 import { MenuItemData } from '../../../types'
+import Hamburger from '../../atoms/Icons/Hamburger'
+import CloseButton from '../../atoms/buttons/CloseButton'
 import cn from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

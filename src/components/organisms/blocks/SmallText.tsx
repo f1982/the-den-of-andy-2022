@@ -1,8 +1,8 @@
 'use client'
 
 /* eslint-disable @next/next/no-img-element */
-import ImageComponent from '../../../../src-backup/components/atoms/Image/Image'
-import Typography from '../../../../src-backup/components/atoms/typography/Typography'
+import ImageComponent from '../../atoms/Image/Image'
+import Typography from '../../atoms/typography/Typography'
 import { motion } from 'framer-motion'
 import React from 'react'
 

@@ -1,5 +1,5 @@
-import Avatar from '../../../../../../src-backup/components/atoms/avatar/Avatar'
-import Typography from '../../../../../../src-backup/components/atoms/typography/Typography'
+import Avatar from '../../../../../components/atoms/avatar/Avatar'
+import Typography from '../../../../../components/atoms/typography/Typography'
 import PostDate from '../../../../../components/organisms/article/PostDate'
 import LandscapeHero from '../../../../../components/organisms/blocks/ContentPageHero'
 import Comments from '../../../../../components/organisms/comment/Comments'

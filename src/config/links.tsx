@@ -1,8 +1,8 @@
-import Facebook from '../../src-backup/components/atoms/Icons/Facebook'
-import Ins from '../../src-backup/components/atoms/Icons/Ins'
-import LinkedIn from '../../src-backup/components/atoms/Icons/LinkedIn'
-import Twitter from '../../src-backup/components/atoms/Icons/Twitter'
-import YouTube from '../../src-backup/components/atoms/Icons/YouTubeIcon'
+import Facebook from '../components/atoms/Icons/Facebook'
+import Ins from '../components/atoms/Icons/Ins'
+import LinkedIn from '../components/atoms/Icons/LinkedIn'
+import Twitter from '../components/atoms/Icons/Twitter'
+import YouTube from '../components/atoms/Icons/YouTubeIcon'
 import { SNSPlatforms } from '../types/links'
 
 export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'

@@ -1,4 +1,4 @@
-import Typography from '../../../../../src-backup/components/atoms/typography/Typography'
+import Typography from '../../../../components/atoms/typography/Typography'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
 import { BlogPostData } from '../../../../types/blog'

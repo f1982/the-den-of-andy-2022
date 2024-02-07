@@ -1,4 +1,4 @@
-import Typography from '../../../../../../src-backup/components/atoms/typography/Typography'
+import Typography from '../../../../../components/atoms/typography/Typography'
 import Tags from '../../../../../components/molecule/Tags'
 import PostDate from '../../../../../components/organisms/article/PostDate'
 import LandscapeHero from '../../../../../components/organisms/blocks/ContentPageHero'

@@ -1,7 +1,7 @@
 'use client'
 
-import Logo from '../../../src-backup/components/atoms/logo/Logo'
 import { menuData } from '../../config/menu-data'
+import Logo from '../atoms/logo/Logo'
 import DesktopMenuBar from './menus/DesktopMenuBar'
 import MobileMenuBar from './menus/MobileMenuBar'
 import cn from 'classnames'

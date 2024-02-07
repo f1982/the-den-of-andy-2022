@@ -1,8 +1,8 @@
-import AboutIcon from '../../src-backup/components/atoms/Icons/AboutIcon'
-import BlogIcon from '../../src-backup/components/atoms/Icons/BlogIcon'
-import HobbyIcon from '../../src-backup/components/atoms/Icons/HobbyIcon'
-import HomeIcon from '../../src-backup/components/atoms/Icons/HomeIcon'
-import ProjectIcon from '../../src-backup/components/atoms/Icons/ProjectIcon'
+import AboutIcon from '../components/atoms/Icons/AboutIcon'
+import BlogIcon from '../components/atoms/Icons/BlogIcon'
+import HobbyIcon from '../components/atoms/Icons/HobbyIcon'
+import HomeIcon from '../components/atoms/Icons/HomeIcon'
+import ProjectIcon from '../components/atoms/Icons/ProjectIcon'
 import { MenuItemData } from '../types/index'
 
 const BLOG_PATH = '/blog'

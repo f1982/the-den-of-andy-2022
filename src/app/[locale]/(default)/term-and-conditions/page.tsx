@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import Typography from '../../../../../src-backup/components/atoms/typography/Typography'
+import Typography from '../../../../components/atoms/typography/Typography'
 import { t } from 'i18next'
 import React from 'react'
 

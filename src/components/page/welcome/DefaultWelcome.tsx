@@ -1,5 +1,5 @@
-import MyButton from '../../../../src-backup/components/atoms/buttons/Button'
-import Typography from '../../../../src-backup/components/atoms/typography/Typography'
+import MyButton from '../../atoms/buttons/Button'
+import Typography from '../../atoms/typography/Typography'
 import SVGAnimation from './SVGAnimation'
 import Link from 'next/link'
 
