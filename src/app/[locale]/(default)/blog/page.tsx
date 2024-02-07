@@ -1,10 +1,10 @@
 import Typography from '../../../../../src-backup/components/atoms/typography/Typography'
-import MoreStories from '../../../../../src-backup/features/Blog/MoreStories'
-import { getAllPosts } from '../../../../../src-backup/features/Blog/blog-helper'
-import MoreMoreStories from '../../../../../src-backup/features/Blog/components/MoreMoreStories'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
 import { BlogPostData } from '../../../../types/blog'
+import MoreStories from './_lib/MoreStories'
+import { getAllPosts } from './_lib/blog-helper'
+import MoreMoreStories from './_lib/components/MoreMoreStories'
 import { t } from 'i18next'
 import React from 'react'
 

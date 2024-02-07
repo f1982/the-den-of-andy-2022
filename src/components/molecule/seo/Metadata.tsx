@@ -1,4 +1,4 @@
-import { HOME_OG_IMAGE_URL } from '../../../../src/config/site-config'
+import { HOME_OG_IMAGE_URL } from '../../../config/site-config'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 

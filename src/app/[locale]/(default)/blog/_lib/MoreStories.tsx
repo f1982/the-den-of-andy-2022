@@ -1,4 +1,4 @@
-import { BlogPostData } from '../../../src/types/blog'
+import { BlogPostData } from '../../../../../types/blog'
 import PostPreview from './PostPreview'
 import React from 'react'
 

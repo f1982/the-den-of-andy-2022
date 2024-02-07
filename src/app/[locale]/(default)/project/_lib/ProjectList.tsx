@@ -1,4 +1,4 @@
-import { ProjectItemData } from '../../../src/types/projects'
+import { ProjectItemData } from '../../../../../types/projects'
 import ProjectItem from './ProjectItem'
 import cn from 'classnames'
 import React from 'react'

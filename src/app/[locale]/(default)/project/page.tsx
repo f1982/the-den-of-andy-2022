@@ -1,7 +1,7 @@
-import ProjectList from '../../../../../src-backup/features/Project/ProjectList'
-import { getProjects } from '../../../../../src-backup/features/Project/project-helper'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
+import ProjectList from './_lib/ProjectList'
+import { getProjects } from './_lib/project-helper'
 import { t } from 'i18next'
 import { useRouter, useSearchParams } from 'next/navigation'
 

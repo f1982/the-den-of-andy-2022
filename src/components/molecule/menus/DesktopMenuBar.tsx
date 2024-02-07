@@ -19,7 +19,7 @@ const MenuItem: React.FC<MenuItemData> = ({ link, label, icon }) => {
 }
 
 const DesktopMenuBar = ({ menuData }: { menuData: MenuItemData[] }) => (
-  <nav className={cn('md:hidden md:flex md:flex-row', styles.navContainer)}>
+  <nav className={cn('sm:hidden md:flex md:flex-row', styles.navContainer)}>
     {menuData.map((item) => (
       <MenuItem key={item.link} {...item} />
     ))}

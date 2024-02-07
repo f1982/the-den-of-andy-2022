@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '../../../src-backup/components/molecules/analysis/SiteAnalystic'
+import { GoogleAnalytics } from '../../components/molecule/analysis/SiteAnalystic'
 import './global.css'
 import clsx from 'clsx'
 import { Metadata } from 'next'

@@ -1,8 +1,8 @@
 'use client'
 
 import SocialLinks from '../../../src-backup/components/atoms/links/SocialLinks'
-import ThemeChanger from '../../../src-backup/components/molecules/theme-switch/ThemeChanger'
 import LocaleSwitcher from '../../lib/lang/locale-switcher'
+import ThemeChanger from './theme-switch/ThemeChanger'
 import classNames from 'classnames'
 import Link from 'next/link'
 

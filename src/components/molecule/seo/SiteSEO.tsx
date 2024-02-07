@@ -1,4 +1,4 @@
-import usePageURL from '../../../hooks/usePageURL'
+import usePageURL from '../../../lib/hooks/usePageURL'
 import getDefaultSEOConfig from './seoConfig'
 import { t } from 'i18next'
 import { DefaultSeo, DefaultSeoProps } from 'next-seo'

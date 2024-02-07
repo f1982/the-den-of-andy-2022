@@ -1,4 +1,4 @@
-import DefaultWelcome from '../../../src-backup/features/Welcome/DefaultWelcome'
+import DefaultWelcome from '../../components/page/welcome/DefaultWelcome'
 import LocaleSwitcher from '../../lib/lang/locale-switcher'
 import { Link } from '../../navigation'
 import { Metadata } from 'next'

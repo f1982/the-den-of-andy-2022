@@ -1,4 +1,4 @@
-import useRenderCount from '../../../src-backup/hooks/useRenderCount'
+import useRenderCount from '../../lib/hooks/useRenderCount'
 
 const DebugInfo = () => {
   const renderCount = useRenderCount()

@@ -1,6 +1,6 @@
-import Tags from '../../../src/components/molecule/Tags'
-import ImageWithLoader from '../../components/atoms/Image/Image'
-import Typography from '../../components/atoms/typography/Typography'
+import ImageWithLoader from '../../../../../../src-backup/components/atoms/Image/Image'
+import Typography from '../../../../../../src-backup/components/atoms/typography/Typography'
+import Tags from '../../../../../components/molecule/Tags'
 import React from 'react'
 
 interface LastProjectProps {

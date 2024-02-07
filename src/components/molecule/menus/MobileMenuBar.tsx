@@ -1,16 +1,19 @@
-import { MenuItemData } from '../../../../src/types'
-import customModalStyles from '../../../constants/modelConfig'
-import useMediaQuery from '../../../hooks/useMediaQuery'
-import Hamburger from '../../atoms/Icons/Hamburger'
-import CloseButton from '../../atoms/buttons/CloseButton'
+'use client'
+
+import Hamburger from '../../../../src-backup/components/atoms/Icons/Hamburger'
+import CloseButton from '../../../../src-backup/components/atoms/buttons/CloseButton'
+import customModalStyles from '../../../config/modelConfig'
+import useMediaQuery from '../../../lib/hooks/useMediaQuery'
+import { MenuItemData } from '../../../types'
 import cn from 'classnames'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import React, { useCallback, useState } from 'react'
 import Modal from 'react-modal'
 
 const MenuItem: React.FC<MenuItemData> = ({ link, label, icon, onClick }) => {
-  const { pathname } = useRouter()
+  // const { pathname } = useRouter()
+  const pathname = usePathname()
   const basicStyle = `
           px-4 py-4 
           font-bold 
