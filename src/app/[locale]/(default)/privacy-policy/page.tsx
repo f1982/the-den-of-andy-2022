@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
+import { useTranslations } from 'next-intl'
 import Typography from '../../../../components/atoms/typography/Typography'
-import { t } from 'i18next'
-import React from 'react'
 
-const PrivacyPolicy = () => (
+const PrivacyPolicy = () => {
+  const t = useTranslations('contact')
+  return (
   <>
     {/* <TabTitle pageTitle={t('privacy.pageTitle')} /> */}
     <div className="container mx-auto mt-20">
@@ -219,6 +220,6 @@ const PrivacyPolicy = () => (
       </p>
     </div>
   </>
-)
+)}
 
 export default PrivacyPolicy

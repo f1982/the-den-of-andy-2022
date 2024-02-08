@@ -1,4 +1,3 @@
-import { t } from 'i18next'
 import { Metadata } from 'next'
 import { Robots } from 'next/dist/lib/metadata/types/metadata-types'
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types'
@@ -14,11 +13,11 @@ export const siteUrl = `https://${siteHostname}`
 export const GoogleAnalyticsID = 'G-L8EFRS04CF'
 
 export const siteSettings = {
-  name: t('siteName'),
+  name: ('siteName'),
   url: siteUrl,
-  title: t('siteTitle'),
-  description: t('siteDescription'),
-  keywords: t('siteKeywords'),
+  title: ('siteTitle'),
+  description: ('siteDescription'),
+  keywords: ('siteKeywords'),
   author: 'Andy Cao',
   creator: '@andycaonz@gmail.com'
 }

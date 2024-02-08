@@ -1,7 +1,7 @@
+import { useTranslations } from 'next-intl'
+import { DefaultSeo, DefaultSeoProps } from 'next-seo'
 import usePageURL from '../../../lib/hooks/usePageURL'
 import getDefaultSEOConfig from './seoConfig'
-import { t } from 'i18next'
-import { DefaultSeo, DefaultSeoProps } from 'next-seo'
 
 interface SiteSEOProps {
   pageTitle: string
@@ -9,6 +9,7 @@ interface SiteSEOProps {
 }
 
 const SiteSEO = ({ pageTitle, seoConfig }: SiteSEOProps) => {
+  const t = useTranslations('home')
   const pageURL = usePageURL()
 
   const seoCnf = seoConfig || getDefaultSEOConfig()

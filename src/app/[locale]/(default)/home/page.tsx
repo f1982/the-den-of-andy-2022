@@ -1,3 +1,6 @@
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import React from 'react'
 import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
 import Button from '../../../../components/atoms/buttons/Button'
 import Typography from '../../../../components/atoms/typography/Typography'
@@ -5,9 +8,6 @@ import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/PageHero'
 import { YouTubeURL } from '../../../../config/links'
 import LatestProject from '../project/_lib/LatestProject'
-import { t } from 'i18next'
-import Link from 'next/link'
-import React from 'react'
 
 // lazy load 3d model and library will save about 5m
 // const ModelWithContainer = dynamic<any>(
@@ -86,42 +86,45 @@ const YouTubeChannelSection: React.FC = () => (
   </div>
 )
 
-const Home: React.FC = () => (
-  <>
-    <h1>home</h1>
-    {/* <TabTitle pageTitle={t('home.pageTitle')} /> */}
-    {/* <ModelWithContainer /> */}
-    <PageHero
-      image="/static/images/page-hero-workspace.png"
-      className="mb-8 md:mb-16"
-    />
-    <Hero
-      className="mb-16 md:mb-24"
-      image="/static/images/andy-with-bubbles.png"
-      title={t('home.intro.greeting')}
-      subtitle={t('home.intro.role')}
-      description={t('home.intro.description')}
-      buttons={
-        <div className="flex gap-x-3">
-          <Link href="/about" passHref legacyBehavior>
-            <Button type="primary">{t('home.intro.button1')}</Button>
-          </Link>
-          <Link href="/project" passHref legacyBehavior>
-            <Button type="secondary">{t('home.intro.button2')}</Button>
-          </Link>
-        </div>
-      }
-    />
-    <div className="container mx-auto mb-16 md:mb-24">
-      <LastProjects />
-    </div>
-    <div className="container mx-auto mb-16 md:mb-24">
-      <WorkingOn />
-    </div>
-    <div className="container mx-auto mb-16 md:mb-24">
-      <YouTubeChannelSection />
-    </div>
-  </>
-)
+const Home: React.FC = () => {
+  const t = useTranslations('home')
+  return (
+    <>
+      <h1>home</h1>
+      {/* <TabTitle pageTitle={t('home.pageTitle')} /> */}
+      {/* <ModelWithContainer /> */}
+      <PageHero
+        image="/static/images/page-hero-workspace.png"
+        className="mb-8 md:mb-16"
+      />
+      <Hero
+        className="mb-16 md:mb-24"
+        image="/static/images/andy-with-bubbles.png"
+        title={t('home.intro.greeting')}
+        subtitle={t('home.intro.role')}
+        description={t('home.intro.description')}
+        buttons={
+          <div className="flex gap-x-3">
+            <Link href="/about" passHref legacyBehavior>
+              <Button type="primary">{t('home.intro.button1')}</Button>
+            </Link>
+            <Link href="/project" passHref legacyBehavior>
+              <Button type="secondary">{t('home.intro.button2')}</Button>
+            </Link>
+          </div>
+        }
+      />
+      <div className="container mx-auto mb-16 md:mb-24">
+        <LastProjects />
+      </div>
+      <div className="container mx-auto mb-16 md:mb-24">
+        <WorkingOn />
+      </div>
+      <div className="container mx-auto mb-16 md:mb-24">
+        <YouTubeChannelSection />
+      </div>
+    </>
+  )
+}
 
 export default Home

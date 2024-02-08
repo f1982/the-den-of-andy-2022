@@ -1,9 +1,8 @@
 /* eslint-disable max-len */
 import Typography from '../../../../components/atoms/typography/Typography'
-import { t } from 'i18next'
 import React from 'react'
 
-const TermAndCondition = () => (
+const TermAndCondition = () => {(
   <>
     {/* <TabTitle pageTitle={t('tc.pageTitle')} /> */}
     <div className="container mx-auto mt-20">
@@ -309,6 +308,6 @@ const TermAndCondition = () => (
       </ul>
     </div>
   </>
-)
+)}
 
 export default TermAndCondition

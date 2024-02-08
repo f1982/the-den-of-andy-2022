@@ -3,6 +3,19 @@
     "label": "Sprache ändern",
     "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 English} other {Unbekannt}}"
   },
+  "welcome": {
+    "pageTitle": "Welcome",
+    "greeting": "Hey there! I am Andy",
+    "description": "Welcome To My Digital Space",
+    "buttonLabel": "Enter"
+  },
+  "pageNotFound": {
+    "pageTitle": "404, page cannot find.",
+    "headline": "Can not find the page...",
+    "errorCode": "404",
+    "subtitle": "Oops, page not found",
+    "backButtonLabel": "Back"
+  },
   "Index": {
     "title": "Hello world!",
     "pageTitle": "Welcome",
@@ -10,7 +23,40 @@
     "description": "Welcome To My Digital Space",
     "buttonLabel": "Enter"
   },
-
+  "home": {
+    "pageTitle": "Home",
+    "intro": {
+      "greeting": "Andy Cao",
+      "pronunciation": "[ch ow]",
+      "role": "Software Developer",
+      "description": "👋🏽 Hey, my name is Andy, I am a Frontend Developer 👨‍💻 and living in New Zealand. Mostly, I am working on some websites 🕸 and mobile 📱 applications. \n I consider indie game 🕹 development as a leisure time hobby. I also love to build some tiny hardware devices for fun. I always try to be a life-long learner 🧠  as well as a good father 💁🏻‍♂️",
+      "button1": "Know more",
+      "button2": "My works"
+    },
+    "buttonLabel": "Contact",
+    "p1": {
+      "title": "Love to explore and create",
+      "p1": "My name is Andy Cao and I come from China 🇨🇳. I am a Software Developer 👨‍💻 who focuses on website and mobile 📱 application development.",
+      "p2": "I consider indie game 🕹 development as a leisure time hobby. I know some design 🎨. I am trying to be a life-long learner 🧠, an excellent drone 🛸 pilot as well as a good father 💁🏻‍♂️"
+    },
+    "p2": {
+      "title": "Projects",
+      "description": "Here are some projects that I have done recently."
+    }
+  },
+  "blog": {
+    "pageTitle": "My blog",
+    "intro": "I try to use texts to record something I have done.",
+    "headline": "Blog",
+    "more": "More"
+  },
+  "project": {
+    "pageTitle": "Projects",
+    "headline": "Projects",
+    "intro": "There are some projects I have participated in.",
+    "title": "Projects",
+    "description": "This is part of the project I participated in, and there are some projects that I have not organized and listed."
+  },
   "hobbies": {
     "pageTitle": "My hobbies",
     "headline": "Hobbies",
@@ -38,7 +84,6 @@
       "button2": "Bilibili"
     }
   },
-
   "about": {
     "pageTitle": "About me",
     "headline": "About",

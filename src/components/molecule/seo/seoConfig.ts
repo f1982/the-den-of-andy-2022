@@ -1,8 +1,10 @@
-import { t } from 'i18next'
+
 
 const getDefaultSEOConfig = () => {
-  const siteTitle = t('siteName')
-  const siteDescription = t('siteDescription')
+  //Need to be update
+  
+  const siteTitle = ('siteName')
+  const siteDescription = ('siteDescription')
   return {
     title: siteTitle,
     description: siteDescription,
