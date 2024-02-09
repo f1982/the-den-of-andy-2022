@@ -1,10 +1,10 @@
 import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
-import Button from '../../../../components/atoms/buttons/Button'
 import Typography from '../../../../components/atoms/typography/Typography'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/PageHero'
 import { YouTubeURL } from '../../../../config/links'
 import LatestProject from '../project/_lib/LatestProject'
+import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
@@ -35,27 +35,17 @@ const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
 
 const LastProjects: React.FC = () => (
-  <>
-    <Typography
-      variant="h2"
-      className="text-center"
-      style={{ marginBottom: '2rem' }}>
-      Latest Projects
-    </Typography>
-    <div className="flex flex-col items-center">
-      <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
-        <button aria-label="last project" type="button">
-          <LatestProject
-            title="My desktop setups for WFH 2022"
-            cover={LatestProjectImageURL}
-            description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
-            platform="Article,Video"
-          />
-        </button>
-      </Link>
-      {/* can add other one */}
-    </div>
-  </>
+  <div className="container text-center">
+    <h2>Latest Projects</h2>
+    <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
+      <LatestProject
+        title="My desktop setups for WFH 2022"
+        cover={LatestProjectImageURL}
+        description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+        platform="Article,Video"
+      />
+    </Link>
+  </div>
 )
 
 const YouTubeChannelSection: React.FC = () => (
@@ -94,7 +84,7 @@ const Home: React.FC = () => {
         image="/static/images/page-hero-workspace.png"
         className="mb-8 md:mb-16"
       />
-      
+
       <Hero
         className="mb-16 md:mb-24"
         image="/static/images/andy-with-bubbles.png"
@@ -102,26 +92,20 @@ const Home: React.FC = () => {
         subtitle={t('intro.role')}
         description={t('intro.description')}
         buttons={
-          <div className="flex gap-x-3">
+          <div className="flex gap-x-6">
             <Link href="/about" passHref legacyBehavior>
-              <Button type="primary">{t('intro.button1')}</Button>
+              <Button variant={'default'}>{t('intro.button1')}</Button>
             </Link>
             <Link href="/project" passHref legacyBehavior>
-              <Button type="secondary">{t('intro.button2')}</Button>
+              <Button variant={'default'}>{t('intro.button2')}</Button>
             </Link>
           </div>
         }
       />
-      <div className="container mx-auto mb-16 md:mb-24 dark:bg-yellow-400 dark:text-red-500">
-        This is a test
-      </div>
-      <div className="container mx-auto mb-16 md:mb-24">
+
+      <div className="container flex flex-col gap-12">
         <LastProjects />
-      </div>
-      <div className="container mx-auto mb-16 md:mb-24">
         <WorkingOn />
-      </div>
-      <div className="container mx-auto mb-16 md:mb-24">
         <YouTubeChannelSection />
       </div>
     </>

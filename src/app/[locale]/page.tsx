@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const t = useTranslations('Index')
+  
   return (
-    <>
       <div className="h-screen flex flex-col justify-center items-center">
         <DefaultWelcome
           title={t('greeting')}
@@ -18,6 +18,5 @@ export default function Page() {
           link="/home"
         />
       </div>
-    </>
   )
 }

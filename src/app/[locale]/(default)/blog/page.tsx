@@ -13,7 +13,7 @@ interface BlogProps {
 }
 
 const Blog: React.FC<BlogProps> = () => {
-  const t = useTranslations('contact')
+  const t = useTranslations('blog')
   const morePosts = getAllPosts([
     'title',
     'date',
@@ -25,15 +25,15 @@ const Blog: React.FC<BlogProps> = () => {
 
   return (
     <>
-      {/* <TabTitle pageTitle={t('blog.pageTitle')} /> */}
+      {/* <TabTitle pageTitle={t('pageTitle')} /> */}
       <PageHero image="/static/images/page-hero-typewriter.png" />
       <div className="container mx-auto">
         {/* title and intro */}
-        <PageTitle title={t('blog.headline')} description={t('blog.intro')} />
+        <PageTitle title={t('headline')} description={t('intro')} />
         {/* blog posts */}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         <Typography variant="h1" as="h1" highlight>
-          {t('blog.more')}
+          {t('more')}
         </Typography>
         {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
       </div>

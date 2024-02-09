@@ -18,7 +18,7 @@ const LatestProject: React.FC<LastProjectProps> = ({
   platform = undefined,
   description = undefined
 }: LastProjectProps) => (
-  <div className="w-full md:w-[540px] mb-4 md:mb-6">
+  <div className="w-full md:w-[540px] mb-4 md:mb-6 mx-auto">
     <div className="relative mb-8">
       <ImageWithLoader
         className="rounded-lg object-cover w-full h-[240px] md:h-[360px]"
@@ -32,18 +32,10 @@ const LatestProject: React.FC<LastProjectProps> = ({
       )}
     </div>
     {/* text layer */}
-    <div className="px-0 md:px-2">
-      {subtitle && (
-        <Typography variant="body-bold" className="text-secondary-dark">
-          {subtitle}
-        </Typography>
-      )}
-      {title && <Typography variant="h3">{title}</Typography>}
-      {description && (
-        <div className="text-left md:text-center">
-          <Typography variant="body">{description}</Typography>
-        </div>
-      )}
+    <div className="prose dark:prose-invert">
+      {subtitle && <h4>{subtitle}</h4>}
+      {title && <h3>{title}</h3>}
+      {description && <p>{description}</p>}
     </div>
   </div>
 )

@@ -66,11 +66,11 @@ export const twitter: Twitter = {
 
 export const siteMetadata: Metadata = {
   // https://dequeuniversity.com/rules/axe/4.7/meta-viewport
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 3
-  },
+  // viewport: {
+  //   width: 'device-width',
+  //   initialScale: 1,
+  //   maximumScale: 3
+  // },
   category: 'technology',
   title: siteSettings.title,
   description: siteSettings.description,

@@ -1,20 +1,19 @@
-import { GoogleAnalytics } from '../../components/molecule/analysis/SiteAnalystic'
-import './global.css'
+import { siteMetadata } from '@/config/site-config'
 import clsx from 'clsx'
-import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { Inter as FontSans } from 'next/font/google'
+import { Inter, Nunito } from 'next/font/google'
 import React from 'react'
+import '../../global.css'
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Welcome to Next.js'
+export const inter = Inter({ subsets: ['latin'] })
+export const nunito = Nunito({ subsets: ['latin'] })
+
+export const metadata = {
+  ...siteMetadata,
+  icons: {
+    favicon: '/favicon.ico'
+  }
 }
-
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans'
-})
 
 export default function RootLayout({
   children,
@@ -24,22 +23,18 @@ export default function RootLayout({
   params: { locale: string }
 }) {
   const messages = useMessages()
+  
   return (
-    <html lang={locale}>
+    <html lang={locale} className='dark' suppressHydrationWarning>
       <body
         className={clsx(
-          'dark',
           'dark:bg-slate-800 bg-white dark:text-slate-200',
-          'min-h-screen flex flex-col font-sans antialiased',
-          fontSans.variable
+          'min-h-screen flex flex-col',
+          'antialiased',
+          inter.className
         )}>
         <NextIntlClientProvider messages={messages}>
-          <GoogleAnalytics trackingId={process.env.NEXT_PUBLIC_APP_GA_ID!} />
-          {/* <ThemeProvider> */}
-          {/* <I18nextProvider i18n={i18n}> */}
           {children}
-          {/* </I18nextProvider> */}
-          {/* </ThemeProvider> */}
         </NextIntlClientProvider>
       </body>
     </html>
