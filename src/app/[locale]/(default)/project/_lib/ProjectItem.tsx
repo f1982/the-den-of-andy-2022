@@ -17,12 +17,11 @@ const ProjectItem: React.FC<ProjectItemData> = ({
   tech
 }) => (
   <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
-    <div className="p-0 md:p-2 cursor-pointer">
+    <div className="cursor-pointer">
       <div
         className={cn(
           'relative bg-background rounded-[1.5rem]',
           'transition-shadow ease-in duration-600',
-          'p-4 md:p-6',
           'md:hover:shadow-md',
           ''
         )}>

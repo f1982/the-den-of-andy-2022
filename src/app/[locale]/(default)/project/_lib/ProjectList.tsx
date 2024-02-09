@@ -16,8 +16,8 @@ const ProjectList: React.FC<ProjectListProps> = ({ list, type = '' }) => {
         className={cn(
           'grid grid-cols-1',
           'md:grid-cols-2',
-          'gap-x-8',
-          'gap-y-8',
+          'gap-x-16',
+          'gap-y-16',
           'mb-16'
         )}>
         {type

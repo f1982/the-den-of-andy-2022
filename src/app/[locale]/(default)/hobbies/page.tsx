@@ -17,7 +17,7 @@ const Hobbies = () => {
   return (
     <>
       <PageHero image="/static/images/page-hero-hobby.png" />
-      <div className="container mx-auto">
+      <div className="container">
         {/* title and intro */}
         <PageTitle title={t('headline')} description={t('intro')} />
         {/* 3d printing */}

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
-import DefaultWelcome from '../../components/page/welcome/DefaultWelcome'
+import DefaultWelcome from '../../components/page/welcome/welcome'
 
 export const metadata: Metadata = {
   title: 'My Page Title'

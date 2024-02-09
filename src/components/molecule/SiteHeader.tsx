@@ -55,6 +55,8 @@ const Header = () => {
       w-full 
       transition-all 
       duration-300 
+      bg-slate-200
+      dark:bg-gray-900
       sticky 
       p-2 md:p-10 top-0 z-10 ${classNames}`}>
       <div

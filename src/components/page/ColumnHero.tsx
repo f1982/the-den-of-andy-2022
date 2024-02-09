@@ -46,7 +46,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
 }) => (
   <motion.section
     className={classNames(
-      'container mx-auto flex gap-x-16 flex-col items-center',
+      'flex gap-x-16 flex-col items-center',
       direction === 'l2r' ? 'md:flex-row' : 'md:flex-row-reverse',
       className
     )}
