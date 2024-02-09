@@ -1,6 +1,3 @@
-import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import React from 'react'
 import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
 import Button from '../../../../components/atoms/buttons/Button'
 import Typography from '../../../../components/atoms/typography/Typography'
@@ -8,6 +5,9 @@ import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/PageHero'
 import { YouTubeURL } from '../../../../config/links'
 import LatestProject from '../project/_lib/LatestProject'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import React from 'react'
 
 // lazy load 3d model and library will save about 5m
 // const ModelWithContainer = dynamic<any>(
@@ -18,7 +18,7 @@ import LatestProject from '../project/_lib/LatestProject'
 // )
 
 const WorkingOn: React.FC = () => (
-  <div className="flex flex-col items-center text-center">
+  <div className="flex flex-col items-center text-center dark:text-red">
     <Typography variant="h2">Working on</Typography>
     <div className="flex flex-row justify-center">
       <div className="w-6 mr-2">
@@ -48,7 +48,7 @@ const LastProjects: React.FC = () => (
           <LatestProject
             title="My desktop setups for WFH 2022"
             cover={LatestProjectImageURL}
-            description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at home. I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+            description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
             platform="Article,Video"
           />
         </button>
@@ -90,30 +90,31 @@ const Home: React.FC = () => {
   const t = useTranslations('home')
   return (
     <>
-      <h1>home</h1>
-      {/* <TabTitle pageTitle={t('home.pageTitle')} /> */}
-      {/* <ModelWithContainer /> */}
       <PageHero
         image="/static/images/page-hero-workspace.png"
         className="mb-8 md:mb-16"
       />
+      
       <Hero
         className="mb-16 md:mb-24"
         image="/static/images/andy-with-bubbles.png"
-        title={t('home.intro.greeting')}
-        subtitle={t('home.intro.role')}
-        description={t('home.intro.description')}
+        title={t('intro.greeting')}
+        subtitle={t('intro.role')}
+        description={t('intro.description')}
         buttons={
           <div className="flex gap-x-3">
             <Link href="/about" passHref legacyBehavior>
-              <Button type="primary">{t('home.intro.button1')}</Button>
+              <Button type="primary">{t('intro.button1')}</Button>
             </Link>
             <Link href="/project" passHref legacyBehavior>
-              <Button type="secondary">{t('home.intro.button2')}</Button>
+              <Button type="secondary">{t('intro.button2')}</Button>
             </Link>
           </div>
         }
       />
+      <div className="container mx-auto mb-16 md:mb-24 dark:bg-yellow-400 dark:text-red-500">
+        This is a test
+      </div>
       <div className="container mx-auto mb-16 md:mb-24">
         <LastProjects />
       </div>

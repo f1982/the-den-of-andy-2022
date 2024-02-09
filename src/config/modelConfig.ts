@@ -1,8 +1,6 @@
-import tailwindConfig from '../../tailwind.config'
-import Modal from 'react-modal'
 import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config'
 
-// Modal.setAppElement('#__next')
 
 const fullConfig = resolveConfig<any>(tailwindConfig)
 const customModalStyles = {

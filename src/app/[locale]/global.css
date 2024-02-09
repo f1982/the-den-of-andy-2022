@@ -1,18 +1,8 @@
 @tailwind base;
-
-/* Write your own custom base styles here */
-
-/* Start purging... */
 @tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-
-/* Start purging... */
 @tailwind utilities;
-/* Stop purging. */
 
-:root {
+/* :root {
   --primary-dark: #eb9a04;
   --primary: #ffd803;
   --primary-light: #ffcc66;
@@ -89,6 +79,6 @@
 ::selection {
   background-color: var(--primary-dark);
   color: var(--on-primary);
-}
+} */
 
 /* Your own custom utilities */

@@ -2,7 +2,6 @@
 
 import LocaleSwitcher from '../../lib/lang/locale-switcher'
 import SocialLinks from '../atoms/links/SocialLinks'
-import ThemeChanger from './theme-switch/ThemeChanger'
 import classNames from 'classnames'
 import Link from 'next/link'
 
@@ -54,7 +53,6 @@ const Footer = () => (
       </div>
       <Copyright />
     </div>
-    {/* <ThemeChanger /> */}
   </footer>
 )
 

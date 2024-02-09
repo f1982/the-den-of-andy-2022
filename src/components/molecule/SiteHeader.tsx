@@ -52,7 +52,6 @@ const Header = () => {
     <header
       className={`
       border-b-[0px] 
-      border-gray-200 
       w-full 
       transition-all 
       duration-300 

@@ -34,7 +34,7 @@
   transform: translateX(-50%);
   left: 50%;
   bottom: 31%;
-  color: var(--on-primary);
+  /* color: var(--on-primary); */
   /* text-transform: uppercase; */
   transition: 0.3s all ease-in-out;
   opacity: 1;
@@ -47,8 +47,8 @@
 
 .topMenuItem:link,
 .topMenuItem:visited {
-  background-color: inherit;
-  color: var(--on-primary);
+  /* background-color: inherit; */
+  /* color: var(--on-primary); */
 }
 
 .topMenuItem:hover {
@@ -83,5 +83,5 @@
 }
 
 .activeNavLink:hover {
-  color: var(--secondary-dark);
+  /* color: var(--secondary-dark); */
 }

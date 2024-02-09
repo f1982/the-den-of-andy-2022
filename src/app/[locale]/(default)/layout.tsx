@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="text-on-background bg-background">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )

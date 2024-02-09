@@ -28,7 +28,9 @@ export default function RootLayout({
     <html lang={locale}>
       <body
         className={clsx(
-          'min-h-screen bg-background flex flex-col font-sans antialiased',
+          'dark',
+          'dark:bg-slate-800 bg-white dark:text-slate-200',
+          'min-h-screen flex flex-col font-sans antialiased',
           fontSans.variable
         )}>
         <NextIntlClientProvider messages={messages}>
