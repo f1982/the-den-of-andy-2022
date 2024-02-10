@@ -1,9 +1,9 @@
 import { siteMetadata } from '@/config/site-config'
 import clsx from 'clsx'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Inter, Nunito } from 'next/font/google'
 import React from 'react'
 import '../../global.css'
+import LocaleSwitcher from '@/lib/lang/locale-switcher'
 
 export const inter = Inter({ subsets: ['latin'] })
 export const nunito = Nunito({ subsets: ['latin'] })
@@ -22,7 +22,6 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  const messages = useMessages()
   
   return (
     <html lang={locale} className='dark' suppressHydrationWarning>
@@ -33,9 +32,8 @@ export default function RootLayout({
           'antialiased',
           inter.className
         )}>
-        <NextIntlClientProvider messages={messages}>
           {children}
-        </NextIntlClientProvider>
+          <LocaleSwitcher />
       </body>
     </html>
   )

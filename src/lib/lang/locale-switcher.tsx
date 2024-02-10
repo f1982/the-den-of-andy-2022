@@ -1,10 +1,10 @@
+import { getLocale, getTranslations } from 'next-intl/server'
 import { locales } from '../../config/i18n/config'
 import LocaleSwitcherSelect from './locale-switch-select'
-import { useLocale, useTranslations } from 'next-intl'
 
-export default function LocaleSwitcher() {
-  const t = useTranslations('LocaleSwitcher')
-  const locale = useLocale()
+export default async function LocaleSwitcher() {
+  const t = await getTranslations('LocaleSwitcher')
+  const locale = await getLocale()
 
   return (
     <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>

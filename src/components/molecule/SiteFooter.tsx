@@ -45,7 +45,6 @@ const Footer = () => (
             Have a mind that is open to everything and attached to nothing
           </p>
           <TermsAndConditions />
-          <LocaleSwitcher />
         </div>
         <div className="w-full md:w-1/3 flex md:justify-end justify-center">
           <SocialLinks />
