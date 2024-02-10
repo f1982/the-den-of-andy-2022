@@ -14,24 +14,24 @@ const containerVariant = {
     transition: {
       duration: 1.8,
       type: 'tween',
-      staggerChildren: 1.6 // let the child show up by order after a certain delay
-    }
-  }
+      staggerChildren: 1.6, // let the child show up by order after a certain delay
+    },
+  },
 }
 
 const itemVariant = {
   hidden: {
     opacity: 0,
-    y: -50
+    y: -50,
   },
   show: {
     opacity: 1,
-    y: 0
+    y: 0,
   },
   transition: {
     type: 'tween',
-    duration: 3.0
-  }
+    duration: 3.0,
+  },
 }
 
 const Hero: React.FC<HeroData> = ({
@@ -42,7 +42,7 @@ const Hero: React.FC<HeroData> = ({
   buttons,
   viewPortOnce = true,
   className,
-  id
+  id,
 }) => (
   <motion.section
     className={cn(
@@ -51,7 +51,7 @@ const Hero: React.FC<HeroData> = ({
       'items-center',
       'justify-center',
       'flex-col',
-      className
+      className,
     )}
     variants={containerVariant}
     initial="hidden"

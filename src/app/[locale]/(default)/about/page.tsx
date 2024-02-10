@@ -31,7 +31,7 @@ export default function About() {
           title={t('familyTitle')}
           description={String(t('familyDescription')).replace(
             '$AGE_OF_ZOE$',
-            getAge('2016-06-01').toString()
+            getAge('2016-06-01').toString(),
           )}
         />
       </div>

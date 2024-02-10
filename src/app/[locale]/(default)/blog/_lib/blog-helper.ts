@@ -29,11 +29,11 @@ export function getPostBySlug(slug, fields: any[]) {
     keywords: '',
     author: {
       name: '',
-      picture: ''
+      picture: '',
     },
     content: '',
     coverImage: '',
-    date: ''
+    date: '',
   }
 
   fields.forEach((field) => {

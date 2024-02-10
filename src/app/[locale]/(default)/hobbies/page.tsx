@@ -8,7 +8,7 @@ import {
   RCDevicesAlbumURL,
   RCPlanesAlbumURL,
   ThingiverseURL,
-  YouTubeURL
+  YouTubeURL,
 } from '../../../../config/links'
 import { useTranslations } from 'next-intl'
 

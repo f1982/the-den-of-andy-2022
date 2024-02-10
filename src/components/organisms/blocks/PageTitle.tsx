@@ -11,12 +11,12 @@ interface PageTitleProps {
 const PageTitle: React.FC<PageTitleProps> = ({
   title,
   description,
-  className
+  className,
 }) => (
   <div
     className={cn(
       'flex flex-col items-center justify-center mb-8 md:mb-16',
-      className
+      className,
     )}>
     <Typography variant="h1" as="h1" className="page-title" highlight>
       {title}

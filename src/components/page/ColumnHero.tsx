@@ -14,24 +14,24 @@ const containerVariant = {
     transition: {
       duration: 1.8,
       type: 'tween',
-      staggerChildren: 1.6 // let the child show up by order after a certain delay
-    }
-  }
+      staggerChildren: 1.6, // let the child show up by order after a certain delay
+    },
+  },
 }
 
 const itemVariant = {
   hidden: {
     opacity: 0,
-    y: -50
+    y: -50,
   },
   show: {
     opacity: 1,
-    y: 0
+    y: 0,
   },
   transition: {
     type: 'tween',
-    duration: 1.6
-  }
+    duration: 1.6,
+  },
 }
 
 const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
@@ -42,13 +42,13 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   buttons,
   viewPortOnce = true,
   direction = 'l2r',
-  className
+  className,
 }) => (
   <motion.section
     className={classNames(
       'flex gap-x-16 flex-col items-center',
       direction === 'l2r' ? 'md:flex-row' : 'md:flex-row-reverse',
-      className
+      className,
     )}
     variants={containerVariant}
     initial="hidden"

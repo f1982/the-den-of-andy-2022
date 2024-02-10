@@ -7,7 +7,7 @@ const DebugInfo = () => {
     { key: 'environment', value: process.env.NODE_ENV },
     { key: 'App Version', value: process.env.NEXT_PUBLIC_APP_VERSION },
     { key: 'Site URL', value: process.env.NEXT_PUBLIC_APP_SITE_URL },
-    { key: 'Render times', value: renderCount.toString() }
+    { key: 'Render times', value: renderCount.toString() },
   ]
 
   return (

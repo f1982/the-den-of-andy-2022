@@ -1,10 +1,8 @@
-
-
 const getDefaultSEOConfig = () => {
   //Need to be update
-  
-  const siteTitle = ('siteName')
-  const siteDescription = ('siteDescription')
+
+  const siteTitle = 'siteName'
+  const siteDescription = 'siteDescription'
   return {
     title: siteTitle,
     description: siteDescription,
@@ -27,23 +25,23 @@ const getDefaultSEOConfig = () => {
           width: 1200,
           height: 627,
           alt: siteTitle,
-          type: 'image/jpeg'
+          type: 'image/jpeg',
         },
         {
           url: `${process.env.NEXT_PUBLIC_APP_SITE_URL}/static/images/og-image-900x800.png`,
           width: 900,
           height: 800,
           alt: siteTitle,
-          type: 'image/jpeg'
-        }
-      ]
+          type: 'image/jpeg',
+        },
+      ],
     },
     // https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
     twitter: {
       handle: '@iandycao',
       creator: '@iandycao',
-      cardType: 'summary'
-    }
+      cardType: 'summary',
+    },
   }
 }
 

@@ -17,13 +17,13 @@ async function getPost(slug: string): Promise<BlogPostData> {
     'keywords',
     'content',
     'ogImage',
-    'coverImage'
+    'coverImage',
   ]
   const post = getPostBySlug(slug, fields)
   const content = await markdownToHtml(post.content || '')
   return {
     ...post,
-    content
+    content,
   }
 }
 

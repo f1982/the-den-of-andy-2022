@@ -11,43 +11,43 @@ const menuData: MenuItemData[] = [
   {
     link: '/home',
     label: 'Home',
-    icon: <HomeIcon />
+    icon: <HomeIcon />,
   },
   {
     link: BLOG_PATH,
     label: 'Blog',
-    icon: <BlogIcon />
+    icon: <BlogIcon />,
   },
   {
     link: '/project',
     label: 'Projects',
-    icon: <ProjectIcon />
+    icon: <ProjectIcon />,
   },
   {
     link: '/hobbies',
     label: 'Hobbies',
-    icon: <HobbyIcon />
+    icon: <HobbyIcon />,
   },
   {
     link: '/about',
     label: 'About',
-    icon: <AboutIcon />
-  }
+    icon: <AboutIcon />,
+  },
 ]
 
 const aboutSubmenu: MenuItemData[] = [
   {
     link: '/about/devices',
-    label: 'My Device'
+    label: 'My Device',
   },
   {
     link: '/about/apps',
-    label: 'My Software'
+    label: 'My Software',
   },
   {
     link: '/about/contact',
-    label: 'Contact'
-  }
+    label: 'Contact',
+  },
 ]
 
 export { BLOG_PATH, menuData, aboutSubmenu }

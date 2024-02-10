@@ -18,7 +18,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ list, type = '' }) => {
           'md:grid-cols-2',
           'gap-x-16',
           'gap-y-16',
-          'mb-16'
+          'mb-16',
         )}>
         {type
           ? list

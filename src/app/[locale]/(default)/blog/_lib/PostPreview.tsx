@@ -13,7 +13,7 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
   date,
   excerpt,
   author,
-  slug
+  slug,
 }) => (
   <div className="cursor-pointer">
     <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
@@ -22,7 +22,7 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
           <Image
             className={classNames(
               'rounded-xl object-cover',
-              'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6'
+              'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6',
             )}
             src={coverImage}
             alt={`${title} preview`}

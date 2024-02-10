@@ -21,7 +21,7 @@ const GoogleAds = () => {
                    google_ad_client: "${process.env.NEXT_PUBLIC_APP_GAD_ID}",
                    enable_page_level_ads: true
                });
-                `
+                `,
         }}
       />
     </div>

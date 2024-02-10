@@ -10,7 +10,7 @@ const HeroHome: React.FC = () => (
       backgroundPosition: 'center center',
       backgroundSize: 'cover',
       // backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
     }}>
     <div
       style={{
@@ -19,7 +19,7 @@ const HeroHome: React.FC = () => (
         height: '100%',
         width: '100%',
         top: '0',
-        right: '0'
+        right: '0',
       }}
     />
     <div
@@ -33,7 +33,7 @@ const HeroHome: React.FC = () => (
         height: '100%',
         width: '100%',
         top: '0',
-        right: '0'
+        right: '0',
       }}>
       <h1 className="uppercase" style={{ fontSize: '100px', color: '#ffff' }}>
         Hello

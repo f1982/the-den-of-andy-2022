@@ -1,8 +1,8 @@
-const createNextIntlPlugin = require('next-intl/plugin');
-const withNextIntl = createNextIntlPlugin();
+const createNextIntlPlugin = require('next-intl/plugin')
+const withNextIntl = createNextIntlPlugin()
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+  enabled: process.env.ANALYZE === 'true',
 })
 
 const nextConfig = {
@@ -16,8 +16,8 @@ const nextConfig = {
     // https://github.com/vercel/next.js/issues/21079
     loader: 'imgix',
     path: '/',
-    disableStaticImages: false
-  }
-};
+    disableStaticImages: false,
+  },
+}
 
 module.exports = withBundleAnalyzer(withNextIntl(nextConfig))

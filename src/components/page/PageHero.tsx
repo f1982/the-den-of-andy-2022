@@ -12,7 +12,7 @@ interface PageHeroProps {
 const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
   image,
   children,
-  className
+  className,
 }) => {
   // get theme primary color from tailwind config
   // @ts-ignore
@@ -26,7 +26,7 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
       style={{
         backgroundPosition: '15px 0, 45px 0, 0 0, 0 0',
         backgroundSize: '30px 60px',
-        background: `linear-gradient(0deg, yellow 25%, transparent 25%)`
+        background: `linear-gradient(0deg, yellow 25%, transparent 25%)`,
       }}>
       <div className="flex-1" />
       <div className={cn('mt-8 md:mt-16')}>

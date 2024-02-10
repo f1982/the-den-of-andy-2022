@@ -13,7 +13,7 @@ interface ProjectPageProps {
 // }
 
 export default async function Page({
-  params
+  params,
 }: {
   params: { slug: string; locale: string }
 }) {

@@ -43,7 +43,7 @@ const ImageWithLoader = ({
         alignItems: 'center',
         minHeight: '80px',
         width,
-        height
+        height,
       }}
       {...rest}>
       <img
@@ -52,7 +52,7 @@ const ImageWithLoader = ({
         className={cn(
           'object-contain opacity-0',
           'transition-opacity ease-out duration-1000',
-          className
+          className,
         )}
         alt={alt}
         style={
@@ -62,11 +62,11 @@ const ImageWithLoader = ({
                 ...{
                   width,
                   height,
-                  opacity: 1
-                }
+                  opacity: 1,
+                },
               }
             : {
-                opacity: 0
+                opacity: 0,
               }
         }
         onLoad={() => setIsLoaded(true)}
@@ -81,7 +81,7 @@ const ImageWithLoader = ({
             height: '100%',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
           }}>
           <DotLoader />
         </div>

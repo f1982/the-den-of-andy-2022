@@ -16,12 +16,12 @@ const Project: React.FC<ProjectItemData> = ({
   end,
   description,
   responsibility,
-  images
+  images,
 }) => {
   function getCarousel(imageList, alt) {
     if (!imageList) return null
     const fullPathImages = imageList.map(
-      (image) => `${PROJECT_IMAGE_URL}/${image}`
+      (image) => `${PROJECT_IMAGE_URL}/${image}`,
     )
     // return <Carousel images={fullPathImages} />;
     return imageList.map((image) => (

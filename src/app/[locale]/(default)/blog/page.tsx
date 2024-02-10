@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl'
-import React from 'react'
 import Typography from '../../../../components/atoms/typography/Typography'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
@@ -7,6 +5,8 @@ import { BlogPostData } from '../../../../types/blog'
 import MoreStories from './_lib/MoreStories'
 import { getAllPosts } from './_lib/blog-helper'
 import MoreMoreStories from './_lib/components/MoreMoreStories'
+import { useTranslations } from 'next-intl'
+import React from 'react'
 
 interface BlogProps {
   allPosts: BlogPostData[]
@@ -20,7 +20,7 @@ const Blog: React.FC<BlogProps> = () => {
     'slug',
     'author',
     'coverImage',
-    'excerpt'
+    'excerpt',
   ])
 
   return (

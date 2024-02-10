@@ -14,7 +14,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
   cover,
   type,
   platform,
-  tech
+  tech,
 }) => (
   <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
     <div className="cursor-pointer">
@@ -23,12 +23,12 @@ const ProjectItem: React.FC<ProjectItemData> = ({
           'relative bg-background rounded-[1.5rem]',
           'transition-shadow ease-in duration-600',
           'md:hover:shadow-md',
-          ''
+          '',
         )}>
         <Image
           className={cn(
             'rounded-xl object-cover',
-            'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6'
+            'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6',
           )}
           src={`${PROJECT_IMAGE_URL}/${cover}`}
           alt={`${title} preview`}

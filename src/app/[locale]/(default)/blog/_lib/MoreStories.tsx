@@ -32,7 +32,7 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
               slug={post.slug}
               excerpt={post.excerpt}
             />
-          )
+          ),
       )}
     </div>
   </section>

@@ -1,8 +1,8 @@
-import { getTranslations } from 'next-intl/server'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import PageHero from '../../../../components/page/PageHero'
 import ProjectList from './_lib/ProjectList'
 import { getProjects } from './_lib/project-helper'
+import { getTranslations } from 'next-intl/server'
 
 export default async function Page() {
   // const router = useRouter()

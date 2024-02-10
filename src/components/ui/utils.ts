@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 export function getValidChildren(children: React.ReactNode) {
   return React.Children.toArray(children).filter((child) =>
-    React.isValidElement(child)
+    React.isValidElement(child),
   ) as React.ReactElement[]
 }
 

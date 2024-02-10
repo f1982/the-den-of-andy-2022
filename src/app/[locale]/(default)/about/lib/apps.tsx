@@ -13,7 +13,7 @@ const Apps = ({ rotation }) => (
       fontSize: '80px',
       margin: '0',
       color: '#a26ddc',
-      transform: `rotate(${rotation}deg)`
+      transform: `rotate(${rotation}deg)`,
     }}>
     Scroll down..
   </h1>
@@ -33,7 +33,7 @@ const RotationItem = () => {
         x: moveOut,
         position: 'fixed',
         width: '100vw',
-        fontSize: '80px'
+        fontSize: '80px',
       }}>
       This is RotationItem
     </motion.h1>
@@ -45,7 +45,7 @@ const MoveInItem = () => {
   const moveIn = useTransform(
     scrollYProgress,
     [0.3, 0.4, 0.5, 0.6],
-    [-1000, 0, 0, -1000]
+    [-1000, 0, 0, -1000],
   )
 
   return (
@@ -56,7 +56,7 @@ const MoveInItem = () => {
         x: moveIn,
         position: 'fixed',
         width: '100vw',
-        fontSize: '80px'
+        fontSize: '80px',
       }}>
       This is MoveInItem
     </motion.h1>
@@ -78,7 +78,7 @@ const MyDevices = () => {
           'linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent)',
         // margin: '0',
         backgroundSize: '700px 700px',
-        height: '10000px'
+        height: '10000px',
       }}>
       <RotationItem />
       <MoveInItem />

@@ -1,4 +1,4 @@
-import { locales } from './config/i18n/config'
+import { locales } from './i18n/i18n-config'
 import { getRequestConfig } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 
@@ -9,6 +9,6 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound()
 
   return {
-    messages: (await import(`./config/i18n/messages/${locale}.json`)).default
+    messages: (await import(`./i18n/messages/${locale}.json`)).default,
   }
 })

@@ -1,6 +1,6 @@
 'use client'
 
-import LocaleSwitcher from '../../lib/lang/locale-switcher'
+import LocaleSwitcher from '../../i18n/locale-switcher'
 import SocialLinks from '../atoms/links/SocialLinks'
 import classNames from 'classnames'
 import Link from 'next/link'
@@ -20,7 +20,7 @@ const TermsAndConditions = () => (
         'text-sm',
         'flex',
         'justify-center',
-        'sm:justify-start'
+        'sm:justify-start',
       )}>
       <li className="pr-4">
         <Link href="/term-and-conditions" passHref legacyBehavior>

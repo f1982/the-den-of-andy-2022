@@ -2,8 +2,8 @@
 import Typography from '../../../../components/atoms/typography/Typography'
 import React from 'react'
 
-const TermAndCondition = () => {(
-  <>
+const TermAndCondition = () => {
+  ;<>
     {/* <TabTitle pageTitle={t('tc.pageTitle')} /> */}
     <div className="container mx-auto mt-20">
       <Typography variant="h1">Terms and Conditions</Typography>
@@ -308,6 +308,6 @@ const TermAndCondition = () => {(
       </ul>
     </div>
   </>
-)}
+}
 
 export default TermAndCondition

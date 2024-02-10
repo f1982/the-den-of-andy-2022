@@ -1,6 +1,6 @@
+import SVGAnimation from './logo-animation'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import SVGAnimation from './logo-animation'
 
 interface WelcomeProps {
   title: string
@@ -13,7 +13,7 @@ const DefaultWelcome = ({
   title,
   subtitle,
   label,
-  link = '/home'
+  link = '/home',
 }: WelcomeProps) => (
   <div
     className="

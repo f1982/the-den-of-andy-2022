@@ -1,17 +1,17 @@
-import React from 'react'
 import Typography from '../../../../../components/atoms/typography/Typography'
 import PostDate from '../../../../../components/organisms/article/PostDate'
 import LandscapeHero from '../../../../../components/organisms/blocks/ContentPageHero'
 import Comments from '../../../../../components/organisms/comment/Comments'
 import { BlogPostData } from '../../../../../types/blog'
 import PostBody from './components/PostBody'
+import React from 'react'
 
 const BlogPost: React.FC<Partial<BlogPostData>> = ({
   title,
   date,
   author,
   content,
-  coverImage
+  coverImage,
 }) => (
   <article className="mb-32">
     <div className="container mx-auto">

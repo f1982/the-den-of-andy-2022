@@ -1,4 +1,4 @@
-import { localePrefix, locales, pathnames } from './config/i18n/config'
+import { localePrefix, locales, pathnames } from './i18n/i18n-config'
 import createMiddleware from 'next-intl/middleware'
 
 export default createMiddleware({
@@ -8,7 +8,7 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: 'en',
   localePrefix,
-  pathnames
+  pathnames,
 })
 
 export const config = {
@@ -18,6 +18,6 @@ export const config = {
     '/(cn|en)/:path*',
     // Enable redirects that add missing locales
     // (e.g. `/pathnames` -> `/en/pathnames`)
-    '/((?!_next|_vercel|.*\\..*).*)'
-  ]
+    '/((?!_next|_vercel|.*\\..*).*)',
+  ],
 }

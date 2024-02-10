@@ -9,7 +9,7 @@ interface LinkItemSimpleProp {
 const LinkItemSimple: React.FC<LinkItemSimpleProp> = ({
   link,
   alt,
-  children
+  children,
 }) => (
   <a
     href={link}

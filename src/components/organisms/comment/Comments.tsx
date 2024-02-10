@@ -11,7 +11,7 @@ const Comments: React.FC = () => {
     theme: 'github-light',
     issueTerm: 'pathname',
     repo: 'f1982/the-den-of-andy-2022',
-    ref: comment
+    ref: comment,
   })
 
   return (

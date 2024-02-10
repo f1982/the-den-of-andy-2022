@@ -23,7 +23,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         'transition ease-in-out delay-100',
         'hover:-translate-y-1',
         'hover:scale-105',
-        styles.button_bubble
+        styles.button_bubble,
       )
       if (type === 'primary') {
         return cn(
@@ -31,7 +31,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
           'text-on-primary',
           'hover:text-black',
           'bg-primary-medium',
-          'hover:bg-primary-dark'
+          'hover:bg-primary-dark',
         )
       }
       return cn(
@@ -39,7 +39,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         'text-on-secondary',
         'hover:text-black',
         'bg-secondary-dark',
-        'hover:bg-secondary-light'
+        'hover:bg-secondary-light',
       )
     }
 
@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         {props.children}
       </button>
     )
-  }
+  },
 )
 
 Button.displayName = 'Button'

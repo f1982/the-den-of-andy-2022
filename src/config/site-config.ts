@@ -13,20 +13,20 @@ export const siteUrl = `https://${siteHostname}`
 export const GoogleAnalyticsID = 'G-L8EFRS04CF'
 
 export const siteSettings = {
-  name: ('siteName'),
+  name: 'siteName',
   url: siteUrl,
-  title: ('siteTitle'),
-  description: ('siteDescription'),
-  keywords: ('siteKeywords'),
+  title: 'siteTitle',
+  description: 'siteDescription',
+  keywords: 'siteKeywords',
   author: 'Andy Cao',
-  creator: '@andycaonz@gmail.com'
+  creator: '@andycaonz@gmail.com',
 }
 
 // Add icon image in public folder
 const icons = {
   icon: '/icon.png',
   shortcut: '/icon.png',
-  apple: '/apple-icon.png'
+  apple: '/apple-icon.png',
 }
 
 // TODO: add bing bot
@@ -38,8 +38,8 @@ const robots: Robots = {
     follow: true,
     noimageindex: false,
     'max-video-preview': -1,
-    'max-image-preview': 'large'
-  }
+    'max-image-preview': 'large',
+  },
 }
 
 export const openGraph: OpenGraph = {
@@ -50,9 +50,9 @@ export const openGraph: OpenGraph = {
   siteName: siteSettings.name,
   images: [
     {
-      url: '/og-image.png'
-    }
-  ]
+      url: '/og-image.png',
+    },
+  ],
 }
 
 export const twitter: Twitter = {
@@ -61,7 +61,7 @@ export const twitter: Twitter = {
   creator: siteSettings.creator,
   title: siteSettings.title,
   description: siteSettings.description,
-  images: ['/og-image.png']
+  images: ['/og-image.png'],
 }
 
 export const siteMetadata: Metadata = {
@@ -78,7 +78,7 @@ export const siteMetadata: Metadata = {
   publisher: siteSettings.creator,
   metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: '/'
+    canonical: '/',
   },
   icons,
   robots,
@@ -87,6 +87,6 @@ export const siteMetadata: Metadata = {
   verification: {
     other: {
       // 'msvalidate.01': '8C4A5C5044C69129C4355BCC538281EC',
-    }
-  }
+    },
+  },
 }

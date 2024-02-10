@@ -14,7 +14,7 @@ const Tags: React.FC<TagsProps> = ({ type = 'tech', stacks, className }) => (
         className={cn(
           'px-2 py-0.5 rounded-lg',
           'text-sm',
-          'text-on-surface bg-primary-dark'
+          'text-on-surface bg-primary-dark',
         )}
         key={item}>
         {item}

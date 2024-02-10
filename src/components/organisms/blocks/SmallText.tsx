@@ -14,9 +14,9 @@ const containerVariant = {
     transition: {
       duration: 0.6,
       type: 'tween',
-      staggerChildren: 0.5 // let the child show up by order after a certain delay
-    }
-  }
+      staggerChildren: 0.5, // let the child show up by order after a certain delay
+    },
+  },
 }
 
 interface SmallTextProps {

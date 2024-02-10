@@ -4,7 +4,7 @@ import React from 'react'
 
 const CloseButton = ({
   size = 'md',
-  onClick
+  onClick,
 }: {
   size?: 'md' | 'sm'
   onClick: () => void
@@ -20,7 +20,7 @@ const CloseButton = ({
     <div
       className={cn(
         styles.close_button,
-        size === 'sm' ? styles.close_button_small : ''
+        size === 'sm' ? styles.close_button_small : '',
       )}
     />
   </button>

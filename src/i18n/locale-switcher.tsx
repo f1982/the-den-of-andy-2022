@@ -1,6 +1,6 @@
-import { getLocale, getTranslations } from 'next-intl/server'
-import { locales } from '../../config/i18n/config'
+import { locales } from './i18n-config'
 import LocaleSwitcherSelect from './locale-switch-select'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 export default async function LocaleSwitcher() {
   const t = await getTranslations('LocaleSwitcher')

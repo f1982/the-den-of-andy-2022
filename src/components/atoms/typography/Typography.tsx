@@ -4,7 +4,7 @@ import React, {
   ElementType,
   HTMLAttributes,
   PropsWithChildren,
-  ReactNode
+  ReactNode,
 } from 'react'
 
 // https://www.aleksandrhovhannisyan.com/blog/dynamic-tag-name-props-in-react/?hmsr=joyk.com&utm_source=joyk.com&utm_medium=referral
@@ -26,7 +26,7 @@ interface TypographyProps extends ComponentProps {
 const transition = {
   duration: 0.3,
   type: 'tween',
-  ease: 'easeInOut'
+  ease: 'easeInOut',
 }
 
 const headVariant = {
@@ -36,8 +36,8 @@ const headVariant = {
     opacity: 1,
     y: 0,
     x: 0,
-    transition
-  }
+    transition,
+  },
 }
 
 const basicStyle = 'text-on-background'
@@ -49,7 +49,7 @@ const asMap = new Map<string, string>([
   ['h4', 'h4'],
   ['body', 'p'],
   ['body-bold', 'p'],
-  ['small', 'p']
+  ['small', 'p'],
 ])
 
 const styleMap = new Map<string, string>([
@@ -57,15 +57,15 @@ const styleMap = new Map<string, string>([
   ['h2', 'text-[1.5rem] md:text-[1.85rem] font-bold mt-3 mb-3 tracking-tight'],
   [
     'h3',
-    'text-[1.35rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3'
+    'text-[1.35rem] md:text-[1.5rem] font-bold tracking-tight t mt-3 mb-3',
   ],
   ['h4', 'text-base font-bold t leading-tight mt-2 mb-2 tracking-tight'],
   ['body', 'text-base md:text-base t mt-1 mb-1 tracking-tight leading-6'],
   [
     'body-bold',
-    'text-base md:text-base font-bold t mt-1 mb-1 tracking-tight leading-6'
+    'text-base md:text-base font-bold t mt-1 mb-1 tracking-tight leading-6',
   ],
-  ['small', 'text-sm t mt-1 mb-1']
+  ['small', 'text-sm t mt-1 mb-1'],
 ])
 
 const Typography: React.FC<PropsWithChildren<TypographyProps>> = ({
@@ -74,7 +74,7 @@ const Typography: React.FC<PropsWithChildren<TypographyProps>> = ({
   className,
   highlight = false,
   style,
-  children
+  children,
 }) => {
   const Component = as || asMap.get(variant)
   // const withAnimation = ['h1', 'h2'].includes(variant);

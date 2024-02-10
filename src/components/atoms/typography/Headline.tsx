@@ -11,9 +11,9 @@ const headVariant = {
     transition: {
       duration: 0.3,
       type: 'tween',
-      ease: 'easeInOut'
-    }
-  }
+      ease: 'easeInOut',
+    },
+  },
 }
 
 const Headline = ({ title }: { title: string }) => (

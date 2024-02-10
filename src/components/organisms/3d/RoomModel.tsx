@@ -97,7 +97,7 @@ type GLTFResult = GLTF & {
 const Model = (rest: GroupProps) => {
   const group = useRef<any>()
   const { nodes, materials } = useGLTF(
-    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf'
+    'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf',
   ) as GLTFResult
   return (
     <group ref={group} {...rest} dispose={null}>
@@ -479,5 +479,5 @@ const Model = (rest: GroupProps) => {
 export default Model
 
 useGLTF.preload(
-  'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf'
+  'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/my-room-v0.69.gltf',
 )

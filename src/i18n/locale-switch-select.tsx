@@ -1,6 +1,6 @@
 'use client'
 
-import { usePathname, useRouter } from '../../navigation'
+import { usePathname, useRouter } from './navigation'
 import clsx from 'clsx'
 import { ChangeEvent, ReactNode, useTransition } from 'react'
 
@@ -13,7 +13,7 @@ type Props = {
 export default function LocaleSwitcherSelect({
   children,
   defaultValue,
-  label
+  label,
 }: Props) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
@@ -30,7 +30,7 @@ export default function LocaleSwitcherSelect({
     <label
       className={clsx(
         'relative text-gray-400',
-        isPending && 'transition-opacity [&:disabled]:opacity-30'
+        isPending && 'transition-opacity [&:disabled]:opacity-30',
       )}>
       <p className="sr-only">{label}</p>
       <select

@@ -10,7 +10,7 @@ const PostEffect = () => {
   const { size, scene, camera } = useThree()
   const aspect = useMemo(
     () => new THREE.Vector2(size.width, size.height),
-    [size]
+    [size],
   )
 
   return (

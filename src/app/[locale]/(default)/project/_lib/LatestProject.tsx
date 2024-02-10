@@ -16,7 +16,7 @@ const LatestProject: React.FC<LastProjectProps> = ({
   title = undefined,
   cover,
   platform = undefined,
-  description = undefined
+  description = undefined,
 }: LastProjectProps) => (
   <div className="w-full md:w-[540px] mb-4 md:mb-6 mx-auto">
     <div className="relative mb-8">
