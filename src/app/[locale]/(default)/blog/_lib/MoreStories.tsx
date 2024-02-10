@@ -14,12 +14,12 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
   <section>
     <div
       className="
-      grid grid-cols-1
-      md:grid-cols-2
+      mx-2 mb-16
+      grid
+      grid-cols-1
       gap-x-16
       gap-y-16
-      mb-16
-      mx-2 md:mx-auto">
+      md:mx-auto md:grid-cols-2">
       {posts.map(
         (post) =>
           post.slug !== TEST_BLOG_POST && (

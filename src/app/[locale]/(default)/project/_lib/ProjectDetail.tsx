@@ -51,7 +51,7 @@ const Project: React.FC<ProjectItemData> = ({
       </div>
       <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
       <div className="container mx-auto">
-        <div className="mt-10 mb-8">
+        <div className="mb-8 mt-10">
           <Typography variant="h3">Technology stacks:</Typography>
           <Tags stacks={tech.split(',')} />
         </div>

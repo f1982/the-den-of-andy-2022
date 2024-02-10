@@ -10,7 +10,7 @@ export default function Page() {
   const t = useTranslations('Index')
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="flex h-screen flex-col items-center justify-center">
       <DefaultWelcome
         title={t('greeting')}
         subtitle={t('description')}

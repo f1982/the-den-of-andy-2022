@@ -14,9 +14,9 @@ const DebugInfo = () => {
     <div
       className="
       container mx-auto
-      text-sm
-      flex flex-col
-      px-5 py-24
+      flex
+      flex-col px-5
+      py-24 text-sm
     ">
       <div>
         {infos.map((item) => (

@@ -1,6 +1,6 @@
 const EyeIcon = () => (
   <svg
-    className="w-5 h-5 inline"
+    className="inline h-5 w-5"
     stroke="currentColor"
     strokeWidth="2"
     fill="none"

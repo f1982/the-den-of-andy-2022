@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Copyright = () => (
   <div className="mt-9">
-    <p className="text-sm text-center">
+    <p className="text-center text-sm">
       Copyright @2020 andycao.com, design by Andy
     </p>
   </div>
@@ -37,16 +37,16 @@ const TermsAndConditions = () => (
 )
 
 const Footer = () => (
-  <footer className="border-t-[1px] border-border mt-12">
+  <footer className="mt-12 border-t-[1px] border-border">
     <div className="container mx-auto py-12">
-      <div className="w-full flex md:flex-row flex-col ">
-        <div className="md:w-2/3 w-full">
-          <p className="md:text-left text-center mt-0">
+      <div className="flex w-full flex-col md:flex-row ">
+        <div className="w-full md:w-2/3">
+          <p className="mt-0 text-center md:text-left">
             Have a mind that is open to everything and attached to nothing
           </p>
           <TermsAndConditions />
         </div>
-        <div className="w-full md:w-1/3 flex md:justify-end justify-center">
+        <div className="flex w-full justify-center md:w-1/3 md:justify-end">
           <SocialLinks />
         </div>
       </div>

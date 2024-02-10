@@ -19,8 +19,8 @@ const Header = () => {
         setClassNames(
           cn(
             'bg-background',
-            'pt-1 pb-0', // mobile top and bottom paddings
-            'md:pt-0 md:pb-0', // desktop top and bottom paddings
+            'pb-0 pt-1', // mobile top and bottom paddings
+            'md:pb-0 md:pt-0', // desktop top and bottom paddings
             'border-b-[1px] border-gray-100',
           ),
         )
@@ -51,14 +51,14 @@ const Header = () => {
   return (
     <header
       className={`
-      border-b-[0px] 
-      w-full 
-      transition-all 
-      duration-300 
-      bg-slate-200
-      dark:bg-gray-900
       sticky 
-      p-2 md:p-10 top-0 z-10 ${classNames}`}>
+      top-0 
+      z-10 
+      w-full 
+      border-b-[0px]
+      bg-slate-200
+      p-2 
+      transition-all duration-300 dark:bg-gray-900 md:p-10 ${classNames}`}>
       <div
         className="
           container

@@ -18,15 +18,15 @@ const LatestProject: React.FC<LastProjectProps> = ({
   platform = undefined,
   description = undefined,
 }: LastProjectProps) => (
-  <div className="w-full md:w-[540px] mb-4 md:mb-6 mx-auto">
+  <div className="mx-auto mb-4 w-full md:mb-6 md:w-[540px]">
     <div className="relative mb-8">
       <ImageWithLoader
-        className="rounded-lg object-cover w-full h-[240px] md:h-[360px]"
+        className="h-[240px] w-full rounded-lg object-cover md:h-[360px]"
         alt={title}
         src={cover}
       />
       {platform && (
-        <div className="absolute right-2 bottom-2 md:right-4 md:bottom-4">
+        <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4">
           <Tags stacks={platform.split(',')} />
         </div>
       )}

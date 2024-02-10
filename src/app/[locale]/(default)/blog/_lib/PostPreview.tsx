@@ -22,7 +22,7 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
           <Image
             className={classNames(
               'rounded-xl object-cover',
-              'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6',
+              'mb-6 h-[210px] w-full md:h-[180px] lg:h-[270px]',
             )}
             src={coverImage}
             alt={`${title} preview`}
@@ -30,13 +30,13 @@ const PostPreview: React.FC<Partial<BlogPostData>> = ({
         )}
       </div>
     </Link>
-    <Typography variant="h3" as="h2" className="leading-[1.2] line-clamp-2">
+    <Typography variant="h3" as="h2" className="line-clamp-2 leading-[1.2]">
       {title}
     </Typography>
     <div className="mb-4">
       <PostDate date={date} />
     </div>
-    <Typography variant="body" className="leading-[1.2] line-clamp-3">
+    <Typography variant="body" className="line-clamp-3 leading-[1.2]">
       {excerpt}
     </Typography>
   </div>

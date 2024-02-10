@@ -51,7 +51,7 @@ const ImageWithLoader = ({
         src={src}
         className={cn(
           'object-contain opacity-0',
-          'transition-opacity ease-out duration-1000',
+          'transition-opacity duration-1000 ease-out',
           className,
         )}
         alt={alt}

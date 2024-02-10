@@ -57,7 +57,7 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
 
   return (
     <>
-      <div className="md:hidden p-4 pr-0">
+      <div className="p-4 pr-0 md:hidden">
         <button
           aria-label="menu"
           type="button"
@@ -83,7 +83,7 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
           // eslint-disable-next-line radix
           window.scrollTo(0, parseInt(scrollY || '0') * -1)
         }}>
-        <div className="w-full h-full bg-background">
+        <div className="h-full w-full bg-background">
           <div className="flex justify-end p-[1rem]">
             <CloseButton size="sm" onClick={() => setShowing(!showing)} />
           </div>

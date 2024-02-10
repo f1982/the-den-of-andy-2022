@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroHome: React.FC = () => (
   <div
-    className="bg-surface py-9 w-full h-1/2]"
+    className="bg-surface h-1/2] w-full py-9"
     style={{
       position: 'relative',
       height: '680px',

@@ -23,7 +23,7 @@ const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
       className="container mx-auto flex flex-col items-end "
       style={{ marginBottom: '20px', bottom: 0, float: 'right' }}>
       {!!text && (
-        <div className="bg-black p-6 w-1/2">
+        <div className="w-1/2 bg-black p-6">
           <Typography className="text-on-surface" variant="body">
             {text}
           </Typography>

@@ -18,10 +18,10 @@ import React from 'react'
 // )
 
 const WorkingOn: React.FC = () => (
-  <div className="flex flex-col items-center text-center dark:text-red">
+  <div className="dark:text-red flex flex-col items-center text-center">
     <Typography variant="h2">Working on</Typography>
     <div className="flex flex-row justify-center">
-      <div className="w-6 mr-2">
+      <div className="mr-2 w-6">
         <YouTubeIcon />
       </div>
       <Typography variant="body">

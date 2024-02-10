@@ -31,11 +31,11 @@ const SmallText: React.FC<SmallTextProps> = ({ description, title, image }) => (
     initial="hidden"
     whileInView="show"
     viewport={{ once: true }}
-    className="w-full mb-20 mx-auto flex flex-col items-center justify-center">
+    className="mx-auto mb-20 flex w-full flex-col items-center justify-center">
     {!!title && <Typography variant="h2">{title}</Typography>}
     {!!image && (
       <ImageComponent
-        className="mb-4 rounded-2xl w-full"
+        className="mb-4 w-full rounded-2xl"
         src={image}
         alt={title}
       />

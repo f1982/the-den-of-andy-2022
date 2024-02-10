@@ -7,47 +7,47 @@ const Contact = () => {
   return (
     <div className="container mx-auto px-5">
       <Headline title="Contact" />
-      <section className="text-gray-600 body-font relative">
+      <section className="body-font relative text-gray-600">
         <div className="absolute inset-0 bg-gray-300" />
-        <div className="container px-5 py-24 mx-auto flex">
-          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+        <div className="container mx-auto flex px-5 py-24">
+          <div className="relative z-10 mt-10 flex w-full flex-col rounded-lg bg-white p-8 shadow-md md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3">
+            <h2 className="title-font mb-1 text-lg font-medium text-gray-900">
               Feedback
             </h2>
-            <p className="leading-relaxed mb-5 text-gray-600">
+            <p className="mb-5 leading-relaxed text-gray-600">
               Post-ironic portland shabby chic echo park, banjo fashion axe
             </p>
             <div className="relative mb-4">
               <label
                 htmlFor="email"
-                className="leading-7 text-sm text-gray-600">
+                className="text-sm leading-7 text-gray-600">
                 Email
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                 />
               </label>
             </div>
             <div className="relative mb-4">
               <label
                 htmlFor="message"
-                className="leading-7 text-sm text-gray-600">
+                className="text-sm leading-7 text-gray-600">
                 Message
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                 />
               </label>
             </div>
             <button
               type="button"
-              className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none">
               Button
             </button>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="mt-3 text-xs text-gray-500">
               Chicharrones blog helvetica normcore iceland tousled brook viral
               artisan.
             </p>

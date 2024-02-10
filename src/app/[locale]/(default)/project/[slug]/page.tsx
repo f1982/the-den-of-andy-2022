@@ -49,7 +49,7 @@ export default async function Page({
         }}
       /> */}
       <article className="mb-32">
-        <div className="flex container mx-auto mt-8">
+        <div className="container mx-auto mt-8 flex">
           <div className="flex-1" />
           {/* <CloseButton onClick={handleClose} /> */}
         </div>

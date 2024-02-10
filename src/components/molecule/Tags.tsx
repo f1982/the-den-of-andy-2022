@@ -8,11 +8,11 @@ interface TagsProps {
   className?: string
 }
 const Tags: React.FC<TagsProps> = ({ type = 'tech', stacks, className }) => (
-  <div className={cn('flex flex-row flex-wrap', 'gap-y-2 gap-x-2', className)}>
+  <div className={cn('flex flex-row flex-wrap', 'gap-x-2 gap-y-2', className)}>
     {stacks.map((item, index) => (
       <span
         className={cn(
-          'px-2 py-0.5 rounded-lg',
+          'rounded-lg px-2 py-0.5',
           'text-sm',
           'text-on-surface bg-primary-dark',
         )}

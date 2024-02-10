@@ -20,7 +20,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
         'rounded',
         'py-2',
         'px-6',
-        'transition ease-in-out delay-100',
+        'transition delay-100 ease-in-out',
         'hover:-translate-y-1',
         'hover:scale-105',
         styles.button_bubble,

@@ -20,15 +20,15 @@ const ProjectItem: React.FC<ProjectItemData> = ({
     <div className="cursor-pointer">
       <div
         className={cn(
-          'relative bg-background rounded-[1.5rem]',
-          'transition-shadow ease-in duration-600',
+          'relative rounded-[1.5rem] bg-background',
+          'duration-600 transition-shadow ease-in',
           'md:hover:shadow-md',
           '',
         )}>
         <Image
           className={cn(
             'rounded-xl object-cover',
-            'w-full h-[210px] md:h-[180px] lg:h-[270px] mb-6',
+            'mb-6 h-[210px] w-full md:h-[180px] lg:h-[270px]',
           )}
           src={`${PROJECT_IMAGE_URL}/${cover}`}
           alt={`${title} preview`}
@@ -37,7 +37,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
           {title}
         </Typography>
         {platform && <PlatformTag text={platform} />}
-        <Typography variant="body" className="leading-[1.2] line-clamp-2">
+        <Typography variant="body" className="line-clamp-2 leading-[1.2]">
           {description}
         </Typography>
       </div>

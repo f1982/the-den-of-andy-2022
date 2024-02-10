@@ -23,7 +23,7 @@ const DefaultWelcome = ({
       items-center justify-center
     ">
     <SVGAnimation />
-    <div className="prose prose-sm dark:prose-invert text-center mb-9">
+    <div className="prose prose-sm mb-9 text-center dark:prose-invert">
       <h1 className="uppercase">{title}</h1>
       <p>{subtitle}</p>
     </div>

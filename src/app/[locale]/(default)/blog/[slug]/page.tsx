@@ -75,7 +75,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         }}
       /> */}
       {/* TODO: add JSON-LD support, https://jsonld.com/blog-post/ */}
-      <div className="flex container mx-auto mt-3">
+      <div className="container mx-auto mt-3 flex">
         <div className="flex-1" />
         {/* <CloseButton onClick={handleClose} /> */}
       </div>

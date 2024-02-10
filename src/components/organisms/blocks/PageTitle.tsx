@@ -15,7 +15,7 @@ const PageTitle: React.FC<PageTitleProps> = ({
 }) => (
   <div
     className={cn(
-      'flex flex-col items-center justify-center mb-8 md:mb-16',
+      'mb-8 flex flex-col items-center justify-center md:mb-16',
       className,
     )}>
     <Typography variant="h1" as="h1" className="page-title" highlight>

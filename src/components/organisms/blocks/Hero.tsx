@@ -60,12 +60,12 @@ const Hero: React.FC<HeroData> = ({
     id={id}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img className={cn('mx-auto w-2/3 md:w-2/5')} alt="hero" src={image} />
-    <div className="lg:w-3/4 w-full">
+    <div className="w-full lg:w-3/4">
       <Typography variant="h2" as="h2" className="text-center">
         {title}
       </Typography>
       {subtitle && (
-        <Typography variant="h3" className="font-thin text-center">
+        <Typography variant="h3" className="text-center font-thin">
           {subtitle}
         </Typography>
       )}
