@@ -1,5 +1,3 @@
-'use client'
-
 import LocaleSwitcher from '../../i18n/locale-switcher'
 import SocialLinks from '../atoms/links/SocialLinks'
 import classNames from 'classnames'
@@ -18,11 +16,11 @@ const TermsAndConditions = () => (
     <ul
       className={classNames(
         'text-sm',
-        'flex',
+        'flex gap-3',
         'justify-center',
         'sm:justify-start',
       )}>
-      <li className="pr-4">
+      <li>
         <Link href="/term-and-conditions" passHref legacyBehavior>
           <button type="button">Terms and Conditions</button>
         </Link>
@@ -32,14 +30,17 @@ const TermsAndConditions = () => (
           <button type="button">Privacy Policy</button>
         </Link>
       </li>
+      <li>
+        <LocaleSwitcher />
+      </li>
     </ul>
   </div>
 )
 
 const Footer = () => (
   <footer className="mt-12 border-t-[1px] border-border">
-    <div className="container mx-auto py-12">
-      <div className="flex w-full flex-col md:flex-row ">
+    <div className="container py-6">
+      <div className="mb-[120px] flex w-full flex-col md:flex-row ">
         <div className="w-full md:w-2/3">
           <p className="mt-0 text-center md:text-left">
             Have a mind that is open to everything and attached to nothing

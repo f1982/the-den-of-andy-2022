@@ -80,10 +80,7 @@ const Home: React.FC = () => {
   const t = useTranslations('home')
   return (
     <>
-      <PageHero
-        image="/static/images/page-hero-workspace.png"
-        className="mb-8 md:mb-16"
-      />
+      <PageHero image="/static/images/page-hero-workspace.png" />
 
       <Hero
         className="mb-16 md:mb-24"

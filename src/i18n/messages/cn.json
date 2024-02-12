@@ -1,7 +1,7 @@
 {
   "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 English} other {Unbekannt}}"
+    "label": "选择语言",
+    "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
   },
   "Index": {
     "title": "你好，世界！",

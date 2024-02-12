@@ -32,7 +32,6 @@ export default function RootLayout({
           inter.className,
         )}>
         {children}
-        <LocaleSwitcher />
       </body>
     </html>
   )
