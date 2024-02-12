@@ -23,7 +23,7 @@ export default function RootLayout({
   params: { locale: string }
 }) {
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={clsx(
           'bg-white  dark:bg-slate-800 dark:text-slate-200',

@@ -2,6 +2,7 @@
 
 import { menuData } from '../../config/menu-data'
 import Logo from '../atoms/logo/Logo'
+import DarkModeToggle from './dark-mode-button'
 import DesktopMenuBar from './menus/DesktopMenuBar'
 import MobileMenuBar from './menus/MobileMenuBar'
 import cn from 'classnames'
@@ -73,6 +74,7 @@ const Header = () => {
           <DesktopMenuBar menuData={menuData} />
           <MobileMenuBar menuData={menuData} />
         </div>
+        <DarkModeToggle />
       </div>
     </header>
   )
