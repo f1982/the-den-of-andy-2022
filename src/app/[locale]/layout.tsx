@@ -1,6 +1,6 @@
-import '../../global.css'
 import { siteMetadata } from '@/config/site-config'
-import LocaleSwitcher from '@/i18n/locale-switcher'
+import '@/global.css'
+import { AnalyticSettings } from '@/lib/services/analytics-settings'
 import clsx from 'clsx'
 import { Inter, Nunito } from 'next/font/google'
 import React from 'react'
@@ -8,6 +8,7 @@ import React from 'react'
 export const inter = Inter({ subsets: ['latin'] })
 export const nunito = Nunito({ subsets: ['latin'] })
 
+//TODO: update seo
 export const metadata = {
   ...siteMetadata,
   icons: {
@@ -32,6 +33,7 @@ export default function RootLayout({
           inter.className,
         )}>
         {children}
+        <AnalyticSettings />
       </body>
     </html>
   )

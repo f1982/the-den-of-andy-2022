@@ -1,5 +1,5 @@
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import PageHero from '../../../../components/page/PageHero'
+import PageHero from '../../../../components/page/hero-image'
 import ProjectList from './_lib/ProjectList'
 import { getProjects } from './_lib/project-helper'
 import { getTranslations } from 'next-intl/server'

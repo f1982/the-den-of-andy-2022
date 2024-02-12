@@ -1,6 +1,6 @@
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
 import SmallText from '../../../../components/organisms/blocks/SmallText'
-import PageHero from '../../../../components/page/PageHero'
+import PageHero from '../../../../components/page/hero-image'
 import { getAge } from '../../../../lib/date.utils'
 import { useTranslations } from 'next-intl'
 import React from 'react'

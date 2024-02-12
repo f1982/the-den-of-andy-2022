@@ -1,8 +1,8 @@
 import Button from '../../../../components/atoms/buttons/Button'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import ColumnHero from '../../../../components/page/ColumnHero'
-import PageHero from '../../../../components/page/PageHero'
+import PageHero from '../../../../components/page/hero-image'
+import ColumnHero from '../../../../components/page/hero-image-text'
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,

@@ -51,7 +51,8 @@
     "remark-html": "^16.0.1",
     "tailwind-merge": "^2.2.1",
     "three": "^0.160.0",
-    "three-stdlib": "^2.29.1"
+    "three-stdlib": "^2.29.1",
+    "usehooks-ts": "^2.14.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",

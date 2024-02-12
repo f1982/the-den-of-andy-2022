@@ -1,6 +1,6 @@
 import Typography from '../../../../components/atoms/typography/Typography'
 import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import PageHero from '../../../../components/page/PageHero'
+import PageHero from '../../../../components/page/hero-image'
 import { BlogPostData } from '../../../../types/blog'
 import MoreStories from './_lib/MoreStories'
 import { getAllPosts } from './_lib/blog-helper'
