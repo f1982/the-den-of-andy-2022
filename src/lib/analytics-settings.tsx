@@ -1,7 +1,7 @@
 'use client'
 
-import { GoogleAnalyticsID, siteHostname } from '../../config/site-config'
-import { GoogleAnalytics } from './google-analytics'
+import { GoogleAnalyticsID, siteHostname } from '../config/site-config'
+import { GoogleAnalytics } from '../utils/google-analytics'
 import { useEffect, useState } from 'react'
 import { useIsMounted } from 'usehooks-ts'
 

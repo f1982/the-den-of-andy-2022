@@ -1,4 +1,4 @@
-import markdownToHtml from '../../../../../lib/markdownToHtml'
+import markdownToHtml from '../../../../../utils/markdownToHtml'
 import { BlogPostData } from '../../../../../types/blog'
 import BlogPost from '../../../../../features/blog/components/BlogPost'
 import { getPostBySlug } from '../../../../../features/blog/utils/blog-helper'

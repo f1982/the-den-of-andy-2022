@@ -1,6 +1,6 @@
-import DefaultWelcome from '../../components/page/welcome/welcome'
 import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
+import DefaultWelcome from '../../components/page/welcome/welcome'
 
 export const metadata: Metadata = {
   title: 'My Page Title',
@@ -11,6 +11,7 @@ export default function Page() {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center">
+      
       <DefaultWelcome
         title={t('greeting')}
         subtitle={t('description')}

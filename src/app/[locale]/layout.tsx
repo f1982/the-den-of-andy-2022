@@ -1,6 +1,6 @@
 import { siteMetadata } from '@/config/site-config'
 import '@/global.css'
-import { AnalyticSettings } from '@/lib/services/analytics-settings'
+import { AnalyticSettings } from '@/lib/analytics-settings'
 import clsx from 'clsx'
 import { Inter, Nunito } from 'next/font/google'
 import React from 'react'
