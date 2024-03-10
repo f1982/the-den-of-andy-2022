@@ -1,4 +1,4 @@
-import { PROJECTS_DATA } from '../../../../../config/server-config'
+import { PROJECTS_DATA } from '../../../config/server-config'
 import fs from 'fs'
 import { join } from 'path'
 

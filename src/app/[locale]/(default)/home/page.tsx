@@ -1,9 +1,10 @@
+import WorkingOn from '@/features/project/components/working-on'
 import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
 import Typography from '../../../../components/atoms/typography/Typography'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/hero-image'
 import { YouTubeURL } from '../../../../config/links'
-import LatestProject from '../project/_lib/LatestProject'
+import LatestProject from '../../../../features/project/components/LatestProject'
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
@@ -17,19 +18,6 @@ import React from 'react'
 //   }
 // )
 
-const WorkingOn: React.FC = () => (
-  <div className="dark:text-red flex flex-col items-center text-center">
-    <Typography variant="h2">Working on</Typography>
-    <div className="flex flex-row justify-center">
-      <div className="mr-2 w-6">
-        <YouTubeIcon />
-      </div>
-      <Typography variant="body">
-        Video: How I build my WFH setups tour 2022
-      </Typography>
-    </div>
-  </div>
-)
 
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'

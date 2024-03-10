@@ -1,6 +1,6 @@
 import { ProjectItemData } from '../../../../../types/projects'
-import ProjectDetail from '../_lib/ProjectDetail'
-import { getProjectDetail } from '../_lib/project-helper'
+import ProjectDetail from '../../../../../features/project/components/ProjectDetail'
+import { getProjectDetail } from '../../../../../features/project/utils/project-helper'
 // import { useRouter } from 'next/navigation'
 import React from 'react'
 

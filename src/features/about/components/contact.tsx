@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import Headline from '../../../../../components/atoms/typography/Headline'
+import Headline from '../../../components/atoms/typography/Headline'
 import { useTranslations } from 'next-intl'
 
 const Contact = () => {

@@ -1,7 +1,7 @@
 import markdownToHtml from '../../../../../lib/markdownToHtml'
 import { BlogPostData } from '../../../../../types/blog'
-import BlogPost from '../_lib/BlogPost'
-import { getPostBySlug } from '../_lib/blog-helper'
+import BlogPost from '../../../../../features/blog/components/BlogPost'
+import { getPostBySlug } from '../../../../../features/blog/utils/blog-helper'
 
 /**
  * Get post data by slug
