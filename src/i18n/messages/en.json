@@ -5,8 +5,8 @@
   },
   "welcome": {
     "pageTitle": "Welcome",
-    "greeting": "Hey there! I am Andy",
-    "description": "Welcome To My Digital Space",
+    "greeting": "Hey there! I'm Andy",
+    "description": "Welcome to my digital space",
     "buttonLabel": "Enter"
   },
   "pageNotFound": {
