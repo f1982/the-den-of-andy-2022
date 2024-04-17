@@ -32,7 +32,7 @@ const Header = () => {
         // change state
         setIsNarrow(true)
       }
-      if (isNarrow && window.pageYOffset < 60) {
+      if (isNarrow && window.pageYOffset <= 60) {
         setClassNames('')
         setIsChanging(true)
         // setIsNarrow(false);
@@ -57,9 +57,10 @@ const Header = () => {
       z-10 
       w-full 
       border-b-[0px]
-      bg-slate-200
-      p-2 
-      transition-all duration-300 dark:bg-gray-900 md:p-10 ${classNames}`}>
+      bg-card
+      p-2
+      text-card-foreground 
+      transition-all duration-300  md:p-10 ${classNames}`}>
       <div
         className="
           container

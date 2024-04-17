@@ -29,7 +29,12 @@ const DefaultWelcome = ({
     </div>
     <div className="flex justify-center">
       <Link href={link} locale="en">
-        <Button variant={'default'} size={'lg'}>{label}</Button>
+        <Button
+          // className="bg-primary text-primary-foreground"
+          variant={'default'}
+          size={'lg'}>
+          {label}
+        </Button>
       </Link>
     </div>
   </div>

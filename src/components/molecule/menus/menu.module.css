@@ -4,7 +4,7 @@
 
 .topMenuItem,
 .activeNavLink {
-  font-weight: bold;
+  font-weight: 500;
   display: inline-block;
   position: relative;
   width: 100px;

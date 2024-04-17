@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import Link from 'next/link'
 
 const Copyright = () => (
-  <div className="mt-9">
-    <p className="text-center text-sm">
+  <div className="my-9">
+    <p className="text-center text-sm text-muted-foreground">
       Copyright @2020 andycao.com, design by Andy
     </p>
   </div>

@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={clsx(
-          'bg-white  dark:bg-slate-800 dark:text-slate-200',
+          'bg-background text-foreground',
           'flex min-h-screen flex-col',
           'antialiased',
           inter.className,

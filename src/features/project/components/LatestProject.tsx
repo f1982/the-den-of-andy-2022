@@ -1,6 +1,7 @@
 import ImageWithLoader from '../../../components/atoms/Image/Image'
 import Typography from '../../../components/atoms/typography/Typography'
 import Tags from '../../../components/molecule/Tags'
+import Prose from '@/components/atoms/prose'
 import React from 'react'
 
 interface LastProjectProps {
@@ -18,7 +19,7 @@ const LatestProject: React.FC<LastProjectProps> = ({
   platform = undefined,
   description = undefined,
 }: LastProjectProps) => (
-  <div className="mx-auto mb-4 w-full md:mb-6 md:w-[540px]">
+  <div className="mx-auto mb-4 w-full md:mb-6">
     <div className="relative mb-8">
       <ImageWithLoader
         className="h-[240px] w-full rounded-lg object-cover md:h-[360px]"
@@ -32,11 +33,11 @@ const LatestProject: React.FC<LastProjectProps> = ({
       )}
     </div>
     {/* text layer */}
-    <div className="prose dark:prose-invert">
+    <Prose>
       {subtitle && <h4>{subtitle}</h4>}
       {title && <h3>{title}</h3>}
       {description && <p>{description}</p>}
-    </div>
+    </Prose>
   </div>
 )
 

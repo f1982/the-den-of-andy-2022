@@ -4,6 +4,7 @@ import { HeroData } from '../../../types'
 import Typography from '../../atoms/typography/Typography'
 import cn from 'classnames'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 
 const containerVariant = {
@@ -58,22 +59,17 @@ const Hero: React.FC<HeroData> = ({
     whileInView="show"
     viewport={{ once: viewPortOnce }}
     id={id}>
-    {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img className={cn('mx-auto w-2/3 md:w-2/5')} alt="hero" src={image} />
-    <div className="w-full lg:w-3/4">
-      <Typography variant="h2" as="h2" className="text-center">
-        {title}
-      </Typography>
-      {subtitle && (
-        <Typography variant="h3" className="text-center font-thin">
-          {subtitle}
-        </Typography>
-      )}
-      <motion.div variants={itemVariant} className="mb-8">
-        <Typography variant="body" className="text-left">
-          {description}
-        </Typography>
-      </motion.div>
+    <Image
+      className={cn('mx-auto mb-9 w-5/6 md:w-1/2')}
+      width={320}
+      height={240}
+      alt="hero"
+      src={image}
+    />
+    <div className="prose mx-auto w-full max-w-none dark:prose-invert">
+      <h2 className="text-center">{title}</h2>
+      {subtitle && <h3 className="text-center">{subtitle}</h3>}
+      <motion.p variants={itemVariant}>{description}</motion.p>
       <motion.div variants={itemVariant} className="flex justify-center">
         {buttons}
       </motion.div>

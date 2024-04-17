@@ -1,11 +1,13 @@
-import WorkingOn from '@/features/project/components/working-on'
 import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
 import Typography from '../../../../components/atoms/typography/Typography'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/hero-image'
 import { YouTubeURL } from '../../../../config/links'
 import LatestProject from '../../../../features/project/components/LatestProject'
+import PageRows from '@/components/atoms/page-rows'
+import Prose from '@/components/atoms/prose'
 import { Button } from '@/components/ui/button'
+import WorkingOn from '@/features/project/components/working-on'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
@@ -18,13 +20,14 @@ import React from 'react'
 //   }
 // )
 
-
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
 
 const LastProjects: React.FC = () => (
-  <div className="container text-center">
-    <h2>Latest Projects</h2>
+  <div className="container">
+    <Prose>
+      <h2>Latest Projects</h2>
+    </Prose>
     <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
       <LatestProject
         title="My desktop setups for WFH 2022"
@@ -38,11 +41,13 @@ const LastProjects: React.FC = () => (
 
 const YouTubeChannelSection: React.FC = () => (
   <div className="flex flex-col items-center text-center">
-    <Typography variant="h2">My YouTube Channel</Typography>
-    <Typography variant="body" className="w-full md:w-1/2">
-      I setup my YouTube channel for recording something I have learnt and share
-      something interesting
-    </Typography>
+    <Prose>
+      <h2>My YouTube Channel</h2>
+      <p>
+        I setup my YouTube channel for recording something I have learnt and
+        share something interesting
+      </p>
+    </Prose>
     <div className="mt-8">
       <a
         href={YouTubeURL}
@@ -68,31 +73,33 @@ const Home: React.FC = () => {
   const t = useTranslations('home')
   return (
     <>
-      <PageHero image="/static/images/page-hero-workspace.png" />
+      <PageRows>
+        <PageHero image="/static/images/page-hero-workspace.png" />
 
-      <Hero
-        className="mb-16 md:mb-24"
-        image="/static/images/andy-with-bubbles.png"
-        title={t('intro.greeting')}
-        subtitle={t('intro.role')}
-        description={t('intro.description')}
-        buttons={
-          <div className="flex gap-x-6">
-            <Link href="/about" passHref legacyBehavior>
-              <Button variant={'default'}>{t('intro.button1')}</Button>
-            </Link>
-            <Link href="/project" passHref legacyBehavior>
-              <Button variant={'default'}>{t('intro.button2')}</Button>
-            </Link>
-          </div>
-        }
-      />
+        <Hero
+          className="mb-16 md:mb-24"
+          image="/static/images/andy-with-bubbles.png"
+          title={t('intro.greeting')}
+          subtitle={t('intro.role')}
+          description={t('intro.description')}
+          buttons={
+            <div className="flex gap-x-6">
+              <Link href="/about" passHref legacyBehavior>
+                <Button className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
+                  {t('intro.button1')}
+                </Button>
+              </Link>
+              <Link href="/project" passHref legacyBehavior>
+                <Button variant={'default'}>{t('intro.button2')}</Button>
+              </Link>
+            </div>
+          }
+        />
 
-      <div className="container flex flex-col gap-12">
         <LastProjects />
         <WorkingOn />
         <YouTubeChannelSection />
-      </div>
+      </PageRows>
     </>
   )
 }
