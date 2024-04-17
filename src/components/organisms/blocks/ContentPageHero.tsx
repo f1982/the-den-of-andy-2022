@@ -11,7 +11,7 @@ const LandscapeHero: React.FC<LandscapeHeroProps> = ({ image, text }) => (
     style={{
       display: 'flex',
       flexDirection: 'column',
-      height: '30vh',
+      height: '50vh',
       backgroundImage: `url(${image})`,
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',

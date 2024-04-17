@@ -1,5 +1,3 @@
-import YouTubeIcon from '../../../../components/atoms/Icons/YouTubeIcon'
-import Typography from '../../../../components/atoms/typography/Typography'
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/hero-image'
 import { YouTubeURL } from '../../../../config/links'
@@ -73,7 +71,7 @@ const Home: React.FC = () => {
   const t = useTranslations('home')
   return (
     <>
-      <PageRows>
+      <PageRows withMargin>
         <PageHero image="/static/images/page-hero-workspace.png" />
 
         <Hero

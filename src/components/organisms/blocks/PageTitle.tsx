@@ -1,5 +1,4 @@
-import Typography from '../../atoms/typography/Typography'
-import cn from 'classnames'
+import Prose from '@/components/atoms/prose'
 import React from 'react'
 
 interface PageTitleProps {
@@ -13,18 +12,10 @@ const PageTitle: React.FC<PageTitleProps> = ({
   description,
   className,
 }) => (
-  <div
-    className={cn(
-      'mb-8 flex flex-col items-center justify-center md:mb-16',
-      className,
-    )}>
-    <Typography variant="h1" as="h1" className="page-title" highlight>
-      {title}
-    </Typography>
-    <Typography variant="body" className="page-description">
-      {description}
-    </Typography>
-  </div>
+  <Prose>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </Prose>
 )
 
 export default PageTitle

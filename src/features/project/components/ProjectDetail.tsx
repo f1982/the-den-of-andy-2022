@@ -23,7 +23,6 @@ const Project: React.FC<ProjectItemData> = ({
     const fullPathImages = imageList.map(
       (image) => `${PROJECT_IMAGE_URL}/${image}`,
     )
-    // return <Carousel images={fullPathImages} />;
     return imageList.map((image) => (
       <div key={image} className="mb-8">
         {/* eslint-disable-next-line @next/next/no-img-element */}

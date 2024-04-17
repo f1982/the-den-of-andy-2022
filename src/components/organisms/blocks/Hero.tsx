@@ -1,7 +1,6 @@
 'use client'
 
 import { HeroData } from '../../../types'
-import Typography from '../../atoms/typography/Typography'
 import cn from 'classnames'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -61,8 +60,8 @@ const Hero: React.FC<HeroData> = ({
     id={id}>
     <Image
       className={cn('mx-auto mb-9 w-5/6 md:w-1/2')}
-      width={320}
-      height={240}
+      width={800}
+      height={600}
       alt="hero"
       src={image}
     />

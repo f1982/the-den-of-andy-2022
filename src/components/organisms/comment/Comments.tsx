@@ -14,11 +14,7 @@ const Comments: React.FC = () => {
     ref: comment,
   })
 
-  return (
-    <div className="w-full">
-      <div ref={comment} />
-    </div>
-  )
+  return <div ref={comment} />
 }
 
 export default Comments

@@ -1,10 +1,10 @@
-import Typography from '../../../../components/atoms/typography/Typography'
-import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import PageHero from '../../../../components/page/hero-image'
-import { BlogPostData } from '../../../../types/blog'
-import MoreStories from '../../../../features/blog/components/MoreStories'
-import { getAllPosts } from '../../../../features/blog/utils/blog-helper'
-import MoreMoreStories from '../../../../features/blog/components/MoreMoreStories'
+import PageRows from '@/components/atoms/page-rows'
+import PageTitle from '@/components/organisms/blocks/PageTitle'
+import PageHero from '@/components/page/hero-image'
+import BlogPosCards from '@/features/blog/components/blog-post-cards'
+import BlogPostList from '@/features/blog/components/blog-post-list'
+import { getAllPosts } from '@/features/blog/utils/blog-helper'
+import { BlogPostData } from '@/types/blog'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
@@ -24,20 +24,15 @@ const Blog: React.FC<BlogProps> = () => {
   ])
 
   return (
-    <>
-      {/* <TabTitle pageTitle={t('pageTitle')} /> */}
+    <PageRows withMargin>
       <PageHero image="/static/images/page-hero-typewriter.png" />
-      <div className="container mx-auto">
-        {/* title and intro */}
+      <div className="container">
         <PageTitle title={t('headline')} description={t('intro')} />
-        {/* blog posts */}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Typography variant="h1" as="h1" highlight>
-          {t('more')}
-        </Typography>
-        {morePosts.length > 0 && <MoreMoreStories posts={morePosts} />}
+        {morePosts.length > 0 && <BlogPosCards posts={morePosts} />}
+        <h2 className="mb-6 text-3xl font-bold">{t('more')}</h2>
+        {morePosts.length > 0 && <BlogPostList posts={morePosts} />}
       </div>
-    </>
+    </PageRows>
   )
 }
 

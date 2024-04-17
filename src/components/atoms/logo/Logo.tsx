@@ -1,7 +1,8 @@
-import Link from 'next/link'
+import clsx from 'clsx'
 
-const SVGLogoV3 = () => (
+const Logo = ({ className }: { className?: string }) => (
   <svg
+    className={clsx('fill-primary', className)}
     width="100%"
     height="100%"
     viewBox="0 0 120 120"
@@ -20,14 +21,6 @@ const SVGLogoV3 = () => (
       fill="currentColor"
     />
   </svg>
-)
-
-const Logo = () => (
-  <div className="inline w-[48px]">
-    <Link href="/" passHref className="text-on-background">
-      <SVGLogoV3 />
-    </Link>
-  </div>
 )
 
 export default Logo

@@ -1,16 +1,16 @@
 import { BlogPostData } from '../../../types/blog'
-import PostPreview from './PostPreview'
+import PostPreview from './blog-post-item'
 import React from 'react'
 
 // test page only can be accessed by directly input the url
 // http://localhost:3000/blog/test-post-with-all-kinds-of-format
 export const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
 
-interface MoreStoriesProps {
+interface Props {
   posts: BlogPostData[]
 }
 
-const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
+const BlogPosCards: React.FC<Props> = ({ posts }) => (
   <section>
     <div
       className="
@@ -30,7 +30,6 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
               date={post.date}
               author={post.author}
               slug={post.slug}
-              excerpt={post.excerpt}
             />
           ),
       )}
@@ -38,4 +37,4 @@ const MoreStories: React.FC<MoreStoriesProps> = ({ posts }) => (
   </section>
 )
 
-export default MoreStories
+export default BlogPosCards

@@ -1,15 +1,15 @@
-import Button from '../../../../components/atoms/buttons/Button'
-import Hero from '../../../../components/organisms/blocks/Hero'
-import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import PageHero from '../../../../components/page/hero-image'
-import ColumnHero from '../../../../components/page/hero-image-text'
+import Hero from '@/components/organisms/blocks/Hero'
+import PageTitle from '@/components/organisms/blocks/PageTitle'
+import PageHero from '@/components/page/hero-image'
+import ColumnHero from '@/components/page/hero-image-text'
+import { Button } from '@/components/ui/button'
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,
   RCPlanesAlbumURL,
   ThingiverseURL,
   YouTubeURL,
-} from '../../../../config/links'
+} from '@/config/links'
 import { useTranslations } from 'next-intl'
 
 const Hobbies = () => {
@@ -18,9 +18,7 @@ const Hobbies = () => {
     <>
       <PageHero image="/static/images/page-hero-hobby.png" />
       <div className="container">
-        {/* title and intro */}
         <PageTitle title={t('headline')} description={t('intro')} />
-        {/* 3d printing */}
         <ColumnHero
           className="mb-16 md:mb-20"
           image="/static/images/3d-printing-ender-3-v2.png"
@@ -33,7 +31,7 @@ const Hobbies = () => {
                 href={ThingiverseURL}
                 target="_blank"
                 rel="noopener noreferrer">
-                <Button type="primary">{t('print3d.button1')}</Button>
+                <Button variant={'default'}>{t('print3d.button1')}</Button>
               </a>
             </div>
           }
@@ -51,13 +49,13 @@ const Hobbies = () => {
                 target="_blank"
                 href={RCPlanesAlbumURL}
                 rel="noopener noreferrer">
-                <Button type="primary">{t('rc.button1')}</Button>
+                <Button variant={'default'}>{t('rc.button1')}</Button>
               </a>
               <a
                 target="_blank"
                 href={RCDevicesAlbumURL}
                 rel="noopener noreferrer">
-                <Button type="secondary">{t('rc.button2')}</Button>
+                <Button variant={'default'}>{t('rc.button2')}</Button>
               </a>
             </div>
           }
@@ -74,7 +72,7 @@ const Hobbies = () => {
                 target="_blank"
                 href={DrawingAlbumURL}
                 rel="noopener noreferrer">
-                <Button type="primary">{t('drawing.button1')}</Button>
+                <Button variant={'default'}>{t('drawing.button1')}</Button>
               </a>
             </div>
           }
@@ -88,7 +86,7 @@ const Hobbies = () => {
           buttons={
             <div className="flex gap-x-3">
               <a target="_blank" href={YouTubeURL} rel="noopener noreferrer">
-                <Button type="primary">{t('video.button1')}</Button>
+                <Button variant={'default'}>{t('video.button1')}</Button>
               </a>
             </div>
           }

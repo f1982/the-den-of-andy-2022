@@ -1,13 +1,15 @@
-import Footer from '../../../components/molecule/footer'
-import Header from '../../../components/molecule/header'
+import SiteFooter from '@/lib/site-footer'
+import SiteHeader from '@/lib/site-header'
 import React from 'react'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <SiteHeader />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
+      <SiteFooter />
     </>
   )
 }

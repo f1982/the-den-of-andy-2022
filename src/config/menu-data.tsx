@@ -3,7 +3,8 @@ import BlogIcon from '../components/atoms/Icons/BlogIcon'
 import HobbyIcon from '../components/atoms/Icons/HobbyIcon'
 import HomeIcon from '../components/atoms/Icons/HomeIcon'
 import ProjectIcon from '../components/atoms/Icons/ProjectIcon'
-import { MenuItemData } from '../types/index'
+import { MenuItemData } from '@/components/page/header/menu-data'
+import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
 const BLOG_PATH = '/blog'
 
@@ -35,19 +36,51 @@ const menuData: MenuItemData[] = [
   },
 ]
 
-const aboutSubmenu: MenuItemData[] = [
+export const socialLinks: MenuItemData[] = [
   {
-    link: '/about/devices',
-    label: 'My Device',
+    title: 'Twitter',
+    label: 'Twitter',
+    icon: <Twitter />,
+    link: 'https://twitter.com/emojiyou',
   },
   {
-    link: '/about/apps',
-    label: 'My Software',
+    title: 'YouTube',
+    label: 'YouTube',
+    icon: <Youtube />,
+    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
   },
   {
-    link: '/about/contact',
-    label: 'Contact',
+    title: 'Ins',
+    label: 'Ins',
+    icon: <Instagram />,
+    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
+  },
+  {
+    title: 'Facebook',
+    label: 'Facebook',
+    icon: <Facebook />,
+    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
   },
 ]
 
-export { BLOG_PATH, menuData, aboutSubmenu }
+export const otherLinks: MenuItemData[] = [
+  {
+    title: 'About',
+    link: '/about',
+    label: 'About',
+  },
+  {
+    title: 'Privacy Policy',
+    link: '/privacy-policy',
+    label: 'Privacy Policy',
+  },
+  {
+    title: 'Terms of Service',
+    link: '/terms-of-service',
+    label: 'Terms of Service',
+  },
+]
+
+export const footerLinks = [menuData, otherLinks]
+
+export { BLOG_PATH, menuData }

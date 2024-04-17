@@ -1,33 +1,29 @@
 'use client'
 
-import customModalStyles from '../../../config/modelConfig'
-import useMediaQuery from '../../../lib/hooks/useMediaQuery'
-import { MenuItemData } from '../../../types'
-import Hamburger from '../../atoms/Icons/Hamburger'
-import CloseButton from '../../atoms/buttons/CloseButton'
+import { Button } from '@/components/ui/button'
+import customModalStyles from '@/config/modelConfig'
+import { usePathname } from '@/i18n/navigation'
+import useMediaQuery from '@/lib/hooks/useMediaQuery'
+import { MenuItemData } from '@/types'
 import cn from 'classnames'
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import React, { useCallback, useState } from 'react'
 import Modal from 'react-modal'
 
 const MenuItem: React.FC<MenuItemData> = ({ link, label, icon, onClick }) => {
-  // const { pathname } = useRouter()
   const pathname = usePathname()
+  console.log('pathname', pathname)
   const basicStyle = `
           px-4 py-4 
           font-bold 
-          text-on-primary 
-          transition-all
-          transition ease-in-out
-          hover:bg-primary-dark
-          hover:text-white
           flex 
           flex-row
           justify-start
           items-center`
-  const activeStyle =
-    link === pathname ? 'bg-secondary-dark text-on-background' : ''
+  const activeStyle = pathname.startsWith(link)
+    ? 'text-foreground'
+    : 'text-muted-foreground'
 
   return (
     <Link href={link} passHref legacyBehavior>
@@ -58,15 +54,12 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
   return (
     <>
       <div className="p-4 pr-0 md:hidden">
-        <button
-          aria-label="menu"
-          type="button"
-          className="w-8"
+        <Button
           onClick={() => {
             setShowing(!showing)
           }}>
-          <Hamburger />
-        </button>
+          <Menu />
+        </Button>
       </div>
       <Modal
         isOpen={showing && isMobile}
@@ -83,9 +76,11 @@ const MobileMenuBar = ({ menuData }: MobileMenuBarProps) => {
           // eslint-disable-next-line radix
           window.scrollTo(0, parseInt(scrollY || '0') * -1)
         }}>
-        <div className="h-full w-full bg-background">
+        <div className="h-full w-full bg-popover">
           <div className="flex justify-end p-[1rem]">
-            <CloseButton size="sm" onClick={() => setShowing(!showing)} />
+            <Button onClick={() => setShowing(!showing)}>
+              <X />
+            </Button>
           </div>
           <nav className="flex flex-col ">
             {menuData.map((item) => (
