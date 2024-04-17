@@ -1,9 +1,8 @@
 'use client'
 
-/* eslint-disable @next/next/no-img-element */
-import ImageComponent from '../../atoms/Image/Image'
 import Typography from '../../atoms/typography/Typography'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 
 const containerVariant = {
@@ -20,8 +19,8 @@ const containerVariant = {
 }
 
 interface SmallTextProps {
-  title?: string
-  image?: string
+  title: string
+  image: string
   description: string
 }
 
@@ -32,14 +31,14 @@ const SmallText: React.FC<SmallTextProps> = ({ description, title, image }) => (
     whileInView="show"
     viewport={{ once: true }}
     className="mx-auto mb-20 flex w-full flex-col items-center justify-center">
-    {!!title && <Typography variant="h2">{title}</Typography>}
-    {!!image && (
-      <ImageComponent
-        className="mb-4 w-full rounded-2xl"
-        src={image}
-        alt={title}
-      />
-    )}
+    {!!title && <h2 className="mb-6 text-lg font-semibold">{title}</h2>}
+    <Image
+      className="mb-4 w-full rounded-2xl"
+      src={image}
+      alt={title}
+      width={800}
+      height={600}
+    />
     <Typography variant="body">{description}</Typography>
   </motion.div>
 )

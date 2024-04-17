@@ -4,7 +4,7 @@ import PostDate from '../../../components/organisms/article/PostDate'
 import LandscapeHero from '../../../components/organisms/blocks/ContentPageHero'
 import { PROJECT_IMAGE_URL } from '../../../config/site-config'
 import { ProjectItemData } from '../../../types/projects'
-import PlatformTag from './PlatformTag'
+import PlatformTag from './project-item-tag'
 import React from 'react'
 
 const Project: React.FC<ProjectItemData> = ({

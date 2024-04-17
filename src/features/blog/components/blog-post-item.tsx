@@ -1,8 +1,8 @@
-import Image from '@/components/atoms/Image/Image'
 import { BLOG_PATH } from '@/config/menu-data'
 import parseDate from '@/features/about/utils/date.utils'
 import { BlogPostData } from '@/types/blog'
 import clsx from 'clsx'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -15,6 +15,8 @@ const PostPreview: React.FC<
         <Image
           className={clsx('aspect-video rounded-xl object-cover')}
           src={coverImage}
+          width={600}
+          height={400}
           alt={`${title} preview`}
         />
       </div>

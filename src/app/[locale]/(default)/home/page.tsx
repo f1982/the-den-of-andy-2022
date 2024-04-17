@@ -1,7 +1,7 @@
 import Hero from '../../../../components/organisms/blocks/Hero'
 import PageHero from '../../../../components/page/hero-image'
 import { YouTubeURL } from '../../../../config/links'
-import LatestProject from '../../../../features/project/components/LatestProject'
+import LatestProjectItem from '../../../../features/project/components/latest-project-item'
 import PageRows from '@/components/atoms/page-rows'
 import Prose from '@/components/atoms/prose'
 import { Button } from '@/components/ui/button'
@@ -27,7 +27,7 @@ const LastProjects: React.FC = () => (
       <h2>Latest Projects</h2>
     </Prose>
     <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
-      <LatestProject
+      <LatestProjectItem
         title="My desktop setups for WFH 2022"
         cover={LatestProjectImageURL}
         description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."

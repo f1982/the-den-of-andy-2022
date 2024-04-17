@@ -1,7 +1,8 @@
-import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import PageHero from '../../../../components/page/hero-image'
-import ProjectList from '../../../../features/project/components/ProjectList'
-import { getProjects } from '../../../../features/project/utils/project-helper'
+import PageRows from '@/components/atoms/page-rows'
+import PageTitle from '@/components/organisms/blocks/PageTitle'
+import PageHero from '@/components/page/hero-image'
+import ProjectList from '@/features/project/components/project-list'
+import { getProjects } from '@/features/project/utils/project-helper'
 import { getTranslations } from 'next-intl/server'
 
 export default async function Page() {
@@ -14,13 +15,14 @@ export default async function Page() {
   const projects = await getProjects()
 
   return (
-    <>
-      {/* <TabTitle pageTitle={t('pageTitle')} /> */}
+    <PageRows withMargin>
       <PageHero image="/static/images/cartoon-rocket.png" />
-      <div className="container mx-auto">
-        <PageTitle title={t('headline')} description={t('intro')} />
+      <div className="mx-6">
+        <div className="container">
+          <PageTitle title={t('headline')} description={t('intro')} />
+        </div>
         <ProjectList list={projects} type={type as string} />
       </div>
-    </>
+    </PageRows>
   )
 }

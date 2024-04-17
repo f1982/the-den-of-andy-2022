@@ -1,28 +1,29 @@
-import ImageWithLoader from '../../../components/atoms/Image/Image'
-import Typography from '../../../components/atoms/typography/Typography'
 import Tags from '../../../components/molecule/Tags'
 import Prose from '@/components/atoms/prose'
+import Image from 'next/image'
 import React from 'react'
 
 interface LastProjectProps {
   subtitle?: string
-  title?: string
+  title: string
   cover: string
   platform?: string
   description?: string
 }
 
-const LatestProject: React.FC<LastProjectProps> = ({
+const LatestProjectItem: React.FC<LastProjectProps> = ({
   subtitle,
-  title = undefined,
+  title,
   cover,
   platform = undefined,
   description = undefined,
 }: LastProjectProps) => (
   <div className="mx-auto mb-4 w-full md:mb-6">
     <div className="relative mb-8">
-      <ImageWithLoader
-        className="h-[240px] w-full rounded-lg object-cover md:h-[360px]"
+      <Image
+        className="w-full rounded-lg object-cover"
+        width={500}
+        height={300}
         alt={title}
         src={cover}
       />
@@ -32,7 +33,7 @@ const LatestProject: React.FC<LastProjectProps> = ({
         </div>
       )}
     </div>
-    {/* text layer */}
+
     <Prose>
       {subtitle && <h4>{subtitle}</h4>}
       {title && <h3>{title}</h3>}
@@ -41,4 +42,4 @@ const LatestProject: React.FC<LastProjectProps> = ({
   </div>
 )
 
-export default LatestProject
+export default LatestProjectItem

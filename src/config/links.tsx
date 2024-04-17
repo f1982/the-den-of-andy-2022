@@ -1,9 +1,11 @@
-import Facebook from '../components/atoms/Icons/Facebook'
-import Ins from '../components/atoms/Icons/Ins'
-import LinkedIn from '../components/atoms/Icons/LinkedIn'
-import Twitter from '../components/atoms/Icons/Twitter'
-import YouTube from '../components/atoms/Icons/YouTubeIcon'
 import { SNSPlatforms } from '../types/links'
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  YoutubeIcon,
+} from 'lucide-react'
 
 export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
 export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'
@@ -18,7 +20,7 @@ const SNS = [
     // name: 'Instagram',
     name: SNSPlatforms.Instagram,
     type: 'outside',
-    icon: <Ins />,
+    icon: <Instagram />,
     link: 'https://www.instagram.com/iandycao/',
     alt: "Andy's Instagram",
     tag: '',
@@ -38,7 +40,7 @@ const SNS = [
     id: 3,
     name: SNSPlatforms.YouTube,
     type: 'outside',
-    icon: <YouTube />,
+    icon: <YoutubeIcon />,
     link: YouTubeURL,
     alt: "Andy's Youtube Channel",
     tag: '',
@@ -48,7 +50,7 @@ const SNS = [
     id: 4,
     name: SNSPlatforms.LinkedIn,
     type: 'both',
-    icon: <LinkedIn />,
+    icon: <Linkedin />,
     link: 'https://www.linkedin.com/in/andyisme/',
     alt: "Andy's LinkedIn Page",
     tag: '',
@@ -139,4 +141,4 @@ const friends = [
   },
 ]
 
-export { SNSPlatforms, SNS, friends }
+export { SNS, SNSPlatforms, friends }
