@@ -1,27 +1,21 @@
+const createNextIntlPlugin = require('next-intl/plugin')
+const withNextIntl = createNextIntlPlugin()
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
+  enabled: process.env.ANALYZE === 'true',
 })
 
-module.exports = withBundleAnalyzer({
-  /**
-   * Enable static exports for the App Router.
-   *
-   * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
-   */
-  output: 'export',
-  // must have this when using the secondary domain of the github page
-  // basePath: '/the-den-of-andy-2022',
-  images: {
-    unoptimized: true,
-    domains: ['github.com'],
-    formats: ['image/avif', 'image/webp'],
-    // https://github.com/vercel/next.js/issues/21079
+/** @type {import('next').NextConfig} */
 
-    loader: 'imgix',
-    path: '/',
-    // path: '/_next/image',
-    // disable static imports for image files
-    disableStaticImages: false
-    // formats: ['image/webp'],
-  }
-})
+const nextConfig = {
+  // output: 'export',
+  reactStrictMode: true,
+  swcMinify: true,
+
+  images: { unoptimized: true },
+  eslint: {
+    dirs: ['src'], //or ['pages', 'hooks']
+  },
+}
+
+module.exports = withNextIntl(nextConfig)
