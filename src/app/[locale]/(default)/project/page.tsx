@@ -6,9 +6,6 @@ import { getProjects } from '@/features/project/utils/project-helper'
 import { getTranslations } from 'next-intl/server'
 
 export default async function Page() {
-  // const router = useRouter()
-  // let { type } = router.query
-  // const params = useSearchParams()
   const t = await getTranslations('project')
   const type = 'coding'
 

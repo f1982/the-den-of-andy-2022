@@ -5,13 +5,9 @@ import { BlogPostData } from '@/features/blog/blog-data'
 import Image from 'next/image'
 import React from 'react'
 
-const BlogPost: React.FC<Partial<BlogPostData>> = ({
-  title,
-  date,
-  author,
-  content,
-  coverImage,
-}) => (
+const BlogPost: React.FC<
+  Pick<BlogPostData, 'title' | 'date' | 'author' | 'content' | 'coverImage'>
+> = ({ title, date, author, content, coverImage }) => (
   <>
     {/* {coverImage && <LandscapeHero image={coverImage} text="hello" />}
     <div className="container mx-auto mt-32">

@@ -1,11 +1,26 @@
 import ProjectDetail from '@/features/project/components/project-post'
-import { getProjectDetail } from '@/features/project/utils/project-helper'
+import {
+  getProjectDetail,
+  getProjects,
+} from '@/features/project/utils/project-helper'
+import { unstable_setRequestLocale } from 'next-intl/server'
+
+export function generateStaticParams() {
+  const posts = getProjects()
+  const slugs = posts.map((p) => ({
+    slug: p.id,
+  }))
+
+  console.log('slugs', slugs)
+  return slugs
+}
 
 export default async function Page({
   params,
 }: {
   params: { slug: string; locale: string }
 }) {
+  // unstable_setRequestLocale(params.locale)
   const detail = getProjectDetail(params.slug)
 
   return (

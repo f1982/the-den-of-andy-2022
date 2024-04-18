@@ -1,5 +1,6 @@
 import LatestProjectItem from '@/features/project/components/latest-project-item'
 import { Link } from 'lucide-react'
+import React from 'react'
 
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
@@ -7,7 +8,7 @@ const LatestProjectImageURL =
 const LastProjects: React.FC = () => (
   <div className="container text-center">
     <h2>Latest Projects</h2>
-    <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
+    <Link id="test" href="/blog/my-wfh-desk-setups-2022">
       <LatestProjectItem
         title="My desktop setups for WFH 2022"
         cover={LatestProjectImageURL}

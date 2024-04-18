@@ -20,7 +20,6 @@ export default function SiteHeader() {
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />
-            {/* <LocaleSwitcher /> */}
           </div>
         }
       />

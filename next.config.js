@@ -5,19 +5,17 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+/** @type {import('next').NextConfig} */
+
 const nextConfig = {
   // output: 'export',
-  // must have this when using the secondary domain of the github page
-  // basePath: '/the-den-of-andy-2022',
-  images: {
-    unoptimized: true,
-    domains: ['github.com'],
-    formats: ['image/avif', 'image/webp'],
-    // https://github.com/vercel/next.js/issues/21079
-    loader: 'imgix',
-    path: '/',
-    disableStaticImages: false,
+  reactStrictMode: true,
+  swcMinify: true,
+
+  images: { unoptimized: true },
+  eslint: {
+    dirs: ['src'], //or ['pages', 'hooks']
   },
 }
 
-module.exports = withBundleAnalyzer(withNextIntl(nextConfig))
+module.exports = withNextIntl(nextConfig)

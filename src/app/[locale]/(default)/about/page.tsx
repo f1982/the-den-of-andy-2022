@@ -4,8 +4,11 @@ import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
 import { getAge } from '@/features/about/utils/date.utils'
 import { useTranslations } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
-export default function About() {
+export default function About({ params: { locale } }) {
+  unstable_setRequestLocale(locale)
+
   const t = useTranslations('about')
   return (
     <>

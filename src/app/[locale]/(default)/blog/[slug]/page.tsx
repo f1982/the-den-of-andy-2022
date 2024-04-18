@@ -1,8 +1,25 @@
 import markdownToHtml from '@//utils/markdownToHtml'
 import { BlogPostData } from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'
-import { getPostBySlug } from '@/features/blog/utils/blog-helper'
+import { getAllPosts, getPostBySlug } from '@/features/blog/utils/blog-helper'
 import Comments from '@/lib/comment/utteranc-comments'
+
+export function generateStaticParams() {
+  const posts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ])
+  const slugs = posts.map((item) => {
+    return {
+      slug: item.slug,
+    }
+  })
+  return slugs
+}
 
 /**
  * Get post data by slug
