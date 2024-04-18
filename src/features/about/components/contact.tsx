@@ -1,12 +1,10 @@
 /* eslint-disable react/no-danger */
-import Headline from '../../../components/atoms/typography/Headline'
 import { useTranslations } from 'next-intl'
 
 const Contact = () => {
   const t = useTranslations('contact')
   return (
     <div className="container mx-auto px-5">
-      <Headline title="Contact" />
       <section className="body-font relative text-gray-600">
         <div className="absolute inset-0 bg-gray-300" />
         <div className="container mx-auto flex px-5 py-24">

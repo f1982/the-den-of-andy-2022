@@ -1,6 +1,5 @@
 'use client'
 
-import Typography from '../../atoms/typography/Typography'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
@@ -39,7 +38,7 @@ const SmallText: React.FC<SmallTextProps> = ({ description, title, image }) => (
       width={800}
       height={600}
     />
-    <Typography variant="body">{description}</Typography>
+    <p>{description}</p>
   </motion.div>
 )
 

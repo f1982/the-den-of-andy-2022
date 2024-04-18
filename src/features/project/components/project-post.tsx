@@ -1,10 +1,9 @@
-import Typography from '../../../components/atoms/typography/Typography'
-import Tags from '../../../components/molecule/Tags'
-import PostDate from '../../../components/organisms/article/PostDate'
-import LandscapeHero from '../../../components/organisms/blocks/ContentPageHero'
-import { PROJECT_IMAGE_URL } from '../../../config/site-config'
-import { ProjectItemData } from '../../../types/projects'
 import PlatformTag from './project-item-tag'
+import Tags from '@/components/atoms/tag-cloud'
+import PostDate from '@/components/organisms/article/PostDate'
+import LandscapeHero from '@/components/organisms/blocks/ContentPageHero'
+import { PROJECT_IMAGE_URL } from '@/config/site-config'
+import { ProjectItemData } from '@/types/projects'
 import React from 'react'
 
 const Project: React.FC<ProjectItemData> = ({
@@ -34,9 +33,7 @@ const Project: React.FC<ProjectItemData> = ({
   return (
     <>
       <div className="container mx-auto mb-8">
-        <Typography variant="h2" as="h1">
-          {title}
-        </Typography>
+        <h1 className="text-3xl font-bold">{title}</h1>
         <div className="mb-4">
           <PostDate date={start} />
           <span> - </span>
@@ -51,15 +48,15 @@ const Project: React.FC<ProjectItemData> = ({
       <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
       <div className="container mx-auto">
         <div className="mb-8 mt-10">
-          <Typography variant="h3">Technology stacks:</Typography>
+          <h3>Technology stacks:</h3>
           <Tags stacks={tech.split(',')} />
         </div>
         <div className="mb-8">
-          <Typography variant="body">{description}</Typography>
+          <p>{description}</p>
         </div>
         {responsibility && (
           <div className="mb-8">
-            <Typography variant="body">{responsibility}</Typography>
+            <p>{responsibility}</p>
           </div>
         )}
         <div className="mb-9">{getCarousel(images, title)}</div>

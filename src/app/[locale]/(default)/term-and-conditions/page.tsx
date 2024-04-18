@@ -1,26 +1,23 @@
-/* eslint-disable max-len */
-import Typography from '../../../../components/atoms/typography/Typography'
-import React from 'react'
+import Prose from '@/components/atoms/prose'
 
-const TermAndCondition = () => {
-  ;<>
-    {/* <TabTitle pageTitle={t('tc.pageTitle')} /> */}
-    <div className="container mx-auto mt-20">
-      <Typography variant="h1">Terms and Conditions</Typography>
+const TermAndCondition = () => (
+  <div className="container mx-auto mt-20">
+    <Prose>
+      <h1>Terms and Conditions</h1>
       <p className="text-sm">Last updated: January 02, 2022</p>
       <p className="text-sm">
         Please read these terms and conditions carefully before using Our
         Service.
       </p>
-      <Typography variant="h2">Interpretation and Definitions</Typography>
-      <Typography variant="h2">Interpretation</Typography>
+      <h2>Interpretation and Definitions</h2>
+      <h2>Interpretation</h2>
       <p>
         The words of which the initial letter is capitalized have meanings
         defined under the following conditions. The following definitions shall
         have the same meaning regardless of whether they appear in singular or
         in plural.
       </p>
-      <Typography variant="h3">Definitions</Typography>
+      <h3>Definitions</h3>
       <p>For the purposes of these Terms and Conditions:</p>
       <ul>
         <li>
@@ -105,7 +102,7 @@ const TermAndCondition = () => {
           </p>
         </li>
       </ul>
-      <Typography variant="h2">Acknowledgment</Typography>
+      <h2>Acknowledgment</h2>
       <p>
         These are the Terms and Conditions governing the use of this Service and
         the agreement that operates between You and the Company. These Terms and
@@ -136,7 +133,7 @@ const TermAndCondition = () => {
         how the law protects You. Please read Our Privacy Policy carefully
         before using Our Service.
       </p>
-      <Typography variant="h2">Links to Other Websites</Typography>
+      <h2>Links to Other Websites</h2>
       <p>
         Our Service may contain links to third-party web sites or services that
         are not owned or controlled by the Company.
@@ -154,7 +151,7 @@ const TermAndCondition = () => {
         We strongly advise You to read the terms and conditions and privacy
         policies of any third-party web sites or services that You visit.
       </p>
-      <Typography variant="h2">Termination</Typography>
+      <h2>Termination</h2>
       <p>
         We may terminate or suspend Your access immediately, without prior
         notice or liability, for any reason whatsoever, including without
@@ -163,7 +160,7 @@ const TermAndCondition = () => {
       <p>
         Upon termination, Your right to use the Service will cease immediately.
       </p>
-      <Typography variant="h2">Limitation of Liability</Typography>
+      <h2>Limitation of Liability</h2>
       <p>
         Notwithstanding any damages that You might incur, the entire liability
         of the Company and any of its suppliers under any provision of this
@@ -191,9 +188,7 @@ const TermAndCondition = () => {
         each party&apos;s liability will be limited to the greatest extent
         permitted by law.
       </p>
-      <Typography variant="h2">
-        &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
-      </Typography>
+      <h2>&quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer</h2>
       <p>
         The Service is provided to You &quot;AS IS&quot; and &quot;AS
         AVAILABLE&quot; and with all faults and defects without warranty of any
@@ -233,25 +228,25 @@ const TermAndCondition = () => {
         section shall be applied to the greatest extent enforceable under
         applicable law.
       </p>
-      <Typography variant="h2">Governing Law</Typography>
+      <h2>Governing Law</h2>
       <p>
         The laws of the Country, excluding its conflicts of law rules, shall
         govern this Terms and Your use of the Service. Your use of the
         Application may also be subject to other local, state, national, or
         international laws.
       </p>
-      <Typography variant="h2">Disputes Resolution</Typography>
+      <h2>Disputes Resolution</h2>
       <p>
         If You have any concern or dispute about the Service, You agree to first
         try to resolve the dispute informally by contacting the Company.
       </p>
-      <Typography variant="h2">For European Union (EU) Users</Typography>
+      <h2>For European Union (EU) Users</h2>
       <p>
         If You are a European Union consumer, you will benefit from any
         mandatory provisions of the law of the country in which you are resident
         in.
       </p>
-      <Typography variant="h2">United States Legal Compliance</Typography>
+      <h2>United States Legal Compliance</h2>
       <p>
         You represent and warrant that (i) You are not located in a country that
         is subject to the United States government embargo, or that has been
@@ -259,8 +254,8 @@ const TermAndCondition = () => {
         supporting&quot; country, and (ii) You are not listed on any United
         States government list of prohibited or restricted parties.
       </p>
-      <Typography variant="h2">Severability and Waiver</Typography>
-      <Typography variant="h3">Severability</Typography>
+      <h2>Severability and Waiver</h2>
+      <h3>Severability</h3>
       <p>
         If any provision of these Terms is held to be unenforceable or invalid,
         such provision will be changed and interpreted to accomplish the
@@ -268,7 +263,7 @@ const TermAndCondition = () => {
         applicable law and the remaining provisions will continue in full force
         and effect.
       </p>
-      <Typography variant="h3">Waiver</Typography>
+      <h3>Waiver</h3>
       <p>
         Except as provided herein, the failure to exercise a right or to require
         performance of an obligation under these Terms shall not effect a
@@ -276,15 +271,13 @@ const TermAndCondition = () => {
         at any time thereafter nor shall the waiver of a breach constitute a
         waiver of any subsequent breach.
       </p>
-      <Typography variant="h2">Translation Interpretation</Typography>
+      <h2>Translation Interpretation</h2>
       <p>
         These Terms and Conditions may have been translated if We have made them
         available to You on our Service. You agree that the original English
         text shall prevail in the case of a dispute.
       </p>
-      <Typography variant="h2">
-        Changes to These Terms and Conditions
-      </Typography>
+      <h2>Changes to These Terms and Conditions</h2>
       <p>
         We reserve the right, at Our sole discretion, to modify or replace these
         Terms at any time. If a revision is material We will make reasonable
@@ -298,7 +291,7 @@ const TermAndCondition = () => {
         agree to the new terms, in whole or in part, please stop using the
         website and the Service.
       </p>
-      <Typography variant="h2">Contact Us</Typography>
+      <h2>Contact Us</h2>
       <p>
         If you have any questions about these Terms and Conditions, You can
         contact us:
@@ -306,8 +299,8 @@ const TermAndCondition = () => {
       <ul>
         <li>By email: 001sd@126.com</li>
       </ul>
-    </div>
-  </>
-}
+    </Prose>
+  </div>
+)
 
 export default TermAndCondition

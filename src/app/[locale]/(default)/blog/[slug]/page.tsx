@@ -1,8 +1,8 @@
 import { BlogPostData } from '@//types/blog'
 import markdownToHtml from '@//utils/markdownToHtml'
-import Comments from '@/components/organisms/comment/Comments'
 import BlogPost from '@/features/blog/components/blog-post'
 import { getPostBySlug } from '@/features/blog/utils/blog-helper'
+import Comments from '@/lib/comment/utteranc-comments'
 
 /**
  * Get post data by slug

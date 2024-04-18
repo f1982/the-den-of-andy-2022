@@ -1,5 +1,5 @@
+import PostDate from '@/components/organisms/article/PostDate'
 import { BLOG_PATH } from '@/config/menu-data'
-import parseDate from '@/features/about/utils/date.utils'
 import { BlogPostData } from '@/types/blog'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -22,7 +22,9 @@ const PostPreview: React.FC<
       </div>
     </Link>
     <h3 className="font-semibold">{title}</h3>
-    <span className="text-xs text-muted-foreground">{parseDate(date!)}</span>
+    <span className="text-xs text-muted-foreground">
+      <PostDate date={date} />
+    </span>
   </div>
 )
 

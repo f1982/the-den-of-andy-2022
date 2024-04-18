@@ -1,21 +1,16 @@
-import PageTitle from '../../../../components/organisms/blocks/PageTitle'
-import SmallText from '../../../../components/organisms/blocks/SmallText'
-import PageHero from '../../../../components/page/hero-image'
-import { getAge } from '../../../../features/about/utils/date.utils'
+import PageTitle from '@/components/organisms/blocks/PageTitle'
+import SmallText from '@/components/organisms/blocks/SmallText'
+import PageHero from '@/components/page/hero-image'
+import { getAge } from '@/features/about/utils/date.utils'
 import { useTranslations } from 'next-intl'
-import React from 'react'
 
 export default function About() {
   const t = useTranslations('about')
   return (
     <>
       <PageHero image="/static/images/page-hero-memoji.png" />
-      {/* <PageHero image="/static/images/about-andy-meditation.png" /> */}
       <div className="container mx-auto">
         <PageTitle title={t('headline')} description={t('description')} />
-        {/* <div className="flex flex-col items-center justify-center">
-          <Submenu items={aboutSubmenu} />
-        </div> */}
         <SmallText
           image="/static/images/about-andy-back.jpg"
           title={t('whoIsAndyTitle')}

@@ -1,10 +1,7 @@
-import parseDate from '../../../features/about/utils/date.utils'
-import Typography from '../../atoms/typography/Typography'
+import parseDate from '@/features/about/utils/date.utils'
 
 const PostDate = ({ date }) => (
-  <Typography variant="small" as="time">
-    {parseDate(date)}
-  </Typography>
+  <span className="text-sm">{parseDate(date)}</span>
 )
 
 export default PostDate

@@ -1,4 +1,4 @@
-import parseDate from '@/features/about/utils/date.utils'
+import PostDate from '@/components/organisms/article/PostDate'
 import Link from 'next/link'
 
 const BlogPostList = ({ posts }) => (
@@ -14,7 +14,7 @@ const BlogPostList = ({ posts }) => (
           legacyBehavior>
           {post.title}
         </Link>
-        <span className="text-right text-xs">{parseDate(post.date)}</span>
+        <PostDate date={post.date} />
       </li>
     ))}
   </ul>

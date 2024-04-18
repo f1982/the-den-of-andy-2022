@@ -1,6 +1,5 @@
 import PostBody from './blog-post-body'
 import Prose from '@/components/atoms/prose'
-import Typography from '@/components/atoms/typography/Typography'
 import PostDate from '@/components/organisms/article/PostDate'
 import LandscapeHero from '@/components/organisms/blocks/ContentPageHero'
 import { BlogPostData } from '@/types/blog'

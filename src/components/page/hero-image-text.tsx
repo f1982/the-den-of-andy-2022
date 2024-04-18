@@ -1,9 +1,9 @@
 'use client'
 
 import { HeroData } from '../../types'
-import Typography from '../atoms/typography/Typography'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 
 const containerVariant = {
@@ -45,7 +45,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   className,
 }) => (
   <motion.section
-    className={classNames(
+    className={clsx(
       'flex flex-col items-center gap-x-16',
       direction === 'l2r' ? 'md:flex-row' : 'md:flex-row-reverse',
       className,
@@ -54,25 +54,20 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
     initial="hidden"
     whileInView="show"
     viewport={{ once: viewPortOnce }}>
-    {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img
+    <Image
       className="mb-6 object-cover md:mb-0 md:w-2/5"
+      width={500}
+      height={300}
       alt="hero"
       src={image}
     />
     <div className="flex flex-col items-center md:w-3/5 md:items-start ">
-      <Typography variant="h2" as="h2">
-        {title}
-      </Typography>
-      {subtitle && (
-        <Typography variant="h4" as="h3" className="mt-[0]">
-          {subtitle}
-        </Typography>
-      )}
+      <h2>{title}</h2>
+      {subtitle && <h3>{subtitle}</h3>}
       <motion.div variants={itemVariant}>
-        <Typography variant="body">{description}</Typography>
+        <p>{description}</p>
       </motion.div>
-      <motion.div variants={itemVariant} className="mt-6 flex flex gap-x-3">
+      <motion.div variants={itemVariant} className="mt-6 flex gap-x-3">
         {buttons}
       </motion.div>
     </div>

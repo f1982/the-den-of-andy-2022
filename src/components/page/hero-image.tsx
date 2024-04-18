@@ -1,4 +1,4 @@
-import cn from 'classnames'
+import clsx from 'clsx'
 import Image from 'next/image'
 import React, { PropsWithChildren } from 'react'
 
@@ -12,7 +12,8 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
   className,
 }) => {
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
+    <div
+      className={clsx('flex flex-col items-center justify-center', className)}>
       <Image
         src={image}
         className="h-[600px] object-contain"

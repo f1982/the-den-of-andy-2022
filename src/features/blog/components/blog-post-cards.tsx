@@ -1,6 +1,6 @@
-import { BlogPostData } from '../../../types/blog'
 import PostPreview from './blog-post-item'
 import CardGrid from '@/components/atoms/card-grid'
+import { BlogPostData } from '@/types/blog'
 import React from 'react'
 
 // test page only can be accessed by directly input the url

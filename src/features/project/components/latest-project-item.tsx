@@ -1,4 +1,4 @@
-import Tags from '../../../components/molecule/Tags'
+import Tags from '@/components/atoms/tag-cloud'
 import Prose from '@/components/atoms/prose'
 import Image from 'next/image'
 import React from 'react'

@@ -1,7 +1,7 @@
 'use client'
 
-import { HeroData } from '../../../types'
-import cn from 'classnames'
+import { HeroData } from '@/types'
+import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
@@ -45,7 +45,7 @@ const Hero: React.FC<HeroData> = ({
   id,
 }) => (
   <motion.section
-    className={cn(
+    className={clsx(
       'container mx-auto',
       'flex',
       'items-center',
@@ -59,7 +59,7 @@ const Hero: React.FC<HeroData> = ({
     viewport={{ once: viewPortOnce }}
     id={id}>
     <Image
-      className={cn('mx-auto mb-9 w-5/6 md:w-1/2')}
+      className={clsx('mx-auto mb-9 w-5/6 md:w-1/2')}
       width={800}
       height={600}
       alt="hero"

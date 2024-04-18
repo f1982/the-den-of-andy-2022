@@ -35,7 +35,6 @@
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "8.15.14",
     "class-variance-authority": "^0.7.0",
-    "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "date-fns": "^3.2.0",
     "framer-motion": "^10.18.0",

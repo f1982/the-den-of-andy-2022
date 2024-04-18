@@ -76,7 +76,7 @@ export const otherLinks: MenuItemData[] = [
   },
   {
     title: 'Terms of Service',
-    link: '/terms-of-service',
+    link: '/term-and-conditions',
     label: 'Terms of Service',
   },
 ]

@@ -1,7 +1,6 @@
 import PlatformTag from './project-item-tag'
 import { PROJECT_IMAGE_URL } from '@/config/site-config'
 import { ProjectItemData } from '@/types/projects'
-import cn from 'classnames'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,7 +17,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
 }) => (
   <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
     <div className="cursor-pointer">
-      <div className={cn('relative rounded-[1.5rem] bg-background')}>
+      <div className={clsx('relative rounded-[1.5rem] bg-background')}>
         <Image
           className={clsx('aspect-video rounded-xl object-cover')}
           src={`${PROJECT_IMAGE_URL}/${cover}`}
