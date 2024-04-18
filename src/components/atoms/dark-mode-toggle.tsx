@@ -35,12 +35,18 @@ export default function DarkModeToggle() {
       <button
         aria-label="Toggle dark mode"
         data-testid="darkLightToggle"
-        className="rounded-full p-1 hover:bg-gray-800 focus:border-blue-300 focus:outline-none"
+        className="rounded-full p-1 focus:outline-none"
         onClick={toggleDarkMode}>
         {darkMode === 'on' ? (
-          <Sun data-testid="lightModeIcon" className="text-yellow-500" />
+          <Sun
+            data-testid="lightModeIcon"
+            className="stroke-muted hover:stroke-primary"
+          />
         ) : (
-          <MoonStar data-testid="darkModeIcon" className="text-gray-400" />
+          <MoonStar
+            data-testid="darkModeIcon"
+            className="stroke-muted hover:stroke-primary"
+          />
         )}
       </button>
     </>

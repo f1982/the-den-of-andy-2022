@@ -17,11 +17,14 @@ export default async function Page() {
   return (
     <PageRows withMargin>
       <PageHero image="/static/images/cartoon-rocket.png" />
-      <div className="mx-6">
+      <div>
         <div className="container">
           <PageTitle title={t('headline')} description={t('intro')} />
         </div>
-        <ProjectList list={projects} type={type as string} />
+
+        <div className="mx-4">
+          <ProjectList list={projects} type={type as string} />
+        </div>
       </div>
     </PageRows>
   )

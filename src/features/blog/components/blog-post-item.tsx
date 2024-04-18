@@ -11,9 +11,12 @@ const PostPreview: React.FC<
 > = ({ title, coverImage, date, author, slug }) => (
   <div className="cursor-pointer">
     <Link as={`${BLOG_PATH}/${slug}`} href={`${BLOG_PATH}/[slug]`} passHref>
-      <div className="mb-5">
+      <div className="mb-3">
         <Image
-          className={clsx('aspect-video rounded-xl object-cover')}
+          className={clsx(
+            'aspect-video w-full rounded-xl object-cover',
+            'ring-1 ring-muted',
+          )}
           src={coverImage}
           width={600}
           height={400}
@@ -21,10 +24,8 @@ const PostPreview: React.FC<
         />
       </div>
     </Link>
-    <h3 className="font-semibold">{title}</h3>
-    <span className="text-xs text-muted-foreground">
-      <FormattedDate date={date} />
-    </span>
+    <h3 className="line-clamp-1 font-semibold">{title}</h3>
+    <FormattedDate className="text-xs text-muted-foreground" date={date} />
   </div>
 )
 

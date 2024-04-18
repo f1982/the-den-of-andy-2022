@@ -27,12 +27,16 @@ const Blog: React.FC<BlogProps> = () => {
     <PageRows withMargin>
       <PageHero image="/static/images/page-hero-typewriter.png" />
 
-      <div className="mx-6">
+      <div>
         <div className="container">
           <PageTitle title={t('headline')} description={t('intro')} />
         </div>
-        {morePosts.length > 0 && <BlogPosCards posts={morePosts} />}
+
+        <div className="mx-4">
+          {morePosts.length > 0 && <BlogPosCards posts={morePosts} />}
+        </div>
       </div>
+
       <div className="container">
         <h2 className="mb-6 text-3xl font-bold">{t('more')}</h2>
         {morePosts.length > 0 && <BlogPostList posts={morePosts} />}

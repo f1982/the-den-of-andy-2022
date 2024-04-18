@@ -10,14 +10,6 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
 
-// lazy load 3d model and library will save about 5m
-// const ModelWithContainer = dynamic<any>(
-//   () => import('../components/organisms/3d/RoomModel'),
-//   {
-//     ssr: false
-//   }
-// )
-
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
 
@@ -74,25 +66,27 @@ const Home: React.FC = () => {
       <PageRows withMargin>
         <PageHero image="/static/images/page-hero-workspace.png" />
 
-        <SandwichHero
-          className="mb-16 md:mb-24"
-          image="/static/images/andy-with-bubbles.png"
-          title={t('intro.greeting')}
-          subtitle={t('intro.role')}
-          description={t('intro.description')}
-          buttons={
-            <div className="flex gap-x-6">
-              <Link href="/about" passHref legacyBehavior>
-                <Button className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
-                  {t('intro.button1')}
-                </Button>
-              </Link>
-              <Link href="/project" passHref legacyBehavior>
-                <Button variant={'default'}>{t('intro.button2')}</Button>
-              </Link>
-            </div>
-          }
-        />
+        <div className="container">
+          <SandwichHero
+            className="mb-16 md:mb-24"
+            image="/static/images/andy-with-bubbles.png"
+            title={t('intro.greeting')}
+            subtitle={t('intro.role')}
+            description={t('intro.description')}
+            buttons={
+              <div className="flex gap-x-6">
+                <Link href="/about" passHref legacyBehavior>
+                  <Button className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
+                    {t('intro.button1')}
+                  </Button>
+                </Link>
+                <Link href="/project" passHref legacyBehavior>
+                  <Button variant={'default'}>{t('intro.button2')}</Button>
+                </Link>
+              </div>
+            }
+          />
+        </div>
 
         <LastProjects />
         <ProjectWorkingOn />

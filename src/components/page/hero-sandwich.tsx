@@ -46,7 +46,6 @@ const SandwichHero: React.FC<HeroData> = ({
 }) => (
   <motion.section
     className={clsx(
-      'container mx-auto',
       'flex',
       'items-center',
       'justify-center',
@@ -65,9 +64,9 @@ const SandwichHero: React.FC<HeroData> = ({
       alt="hero"
       src={image}
     />
-    <div className="prose mx-auto w-full max-w-none dark:prose-invert">
+    <div className="prose-md prose mx-auto w-full max-w-none dark:prose-invert">
       <h2 className="text-center">{title}</h2>
-      {subtitle && <h3 className="text-center">{subtitle}</h3>}
+      {subtitle && <h4 className="text-center">{subtitle}</h4>}
       <motion.p variants={itemVariant}>{description}</motion.p>
       <motion.div variants={itemVariant} className="flex justify-center">
         {buttons}

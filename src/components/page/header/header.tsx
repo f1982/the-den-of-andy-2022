@@ -16,12 +16,12 @@ type HeaderProps = {
 const Header = ({ left, right, data, className }: HeaderProps) => {
   return (
     <header className={clsx('border-b-0 border-b-border', className)}>
-      <div className="container mb-3 mt-3 sm:mb-12 sm:mt-12">
+      <div className={clsx('container', ' mb-3 mt-3 ', 'sm:mb-12 sm:mt-12')}>
         <div className="flex w-full items-center justify-between">
           {left}
           <menu
             data-test="desktopNavMenu"
-            className="hidden flex-row gap-9 lg:flex">
+            className="hidden flex-row gap-9 md:flex">
             {data.map((item) => (
               <NavMenuItem
                 key={item.link}
@@ -30,7 +30,7 @@ const Header = ({ left, right, data, className }: HeaderProps) => {
                 icon={item.icon}></NavMenuItem>
             ))}
           </menu>
-          <div className="hidden lg:flex">{right}</div>
+          <div className="hidden md:flex">{right}</div>
 
           {/* Menu button only show in small screen */}
           <MobileNavPopover left={left} right={right} data={data} />

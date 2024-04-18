@@ -20,7 +20,7 @@ export function NavMenuItem({
       <Link
         className={clsx(
           'flex items-center',
-          'text-sm font-bold hover:text-foreground',
+          'text-sm font-bold hover:text-primary',
           pathname.startsWith(link)
             ? 'text-foreground'
             : 'text-muted-foreground',

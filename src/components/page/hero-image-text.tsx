@@ -61,9 +61,9 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
       alt="hero"
       src={image}
     />
-    <div className="flex flex-col items-center md:w-3/5 md:items-start ">
+    <div className="prose-md prose flex flex-col items-center dark:prose-invert md:w-3/5 md:items-start ">
       <h2>{title}</h2>
-      {subtitle && <h3>{subtitle}</h3>}
+      {subtitle && <h4>{subtitle}</h4>}
       <motion.div variants={itemVariant}>
         <p>{description}</p>
       </motion.div>

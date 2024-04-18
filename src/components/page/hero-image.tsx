@@ -16,7 +16,7 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
       className={clsx('flex flex-col items-center justify-center', className)}>
       <Image
         src={image}
-        className="h-[600px] object-contain"
+        className="w-[100vw] object-contain md:w-[50vw]"
         alt=""
         width={800}
         height={600}

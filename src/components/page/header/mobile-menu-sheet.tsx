@@ -5,6 +5,7 @@ import { MobileNavMenuItem } from './menu-item'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import clsx from 'clsx'
 import { Menu } from 'lucide-react'
+import React from 'react'
 
 export const MobileNavPopover = ({
   left,
@@ -18,8 +19,8 @@ export const MobileNavPopover = ({
   return (
     <>
       <Sheet>
-        <SheetTrigger className="lg:hidden">
-          <Menu />
+        <SheetTrigger className="md:hidden">
+          <Menu size={40} />
         </SheetTrigger>
         <SheetContent>
           <div className="flex flex-col gap-6">

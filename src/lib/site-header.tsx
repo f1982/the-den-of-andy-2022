@@ -1,10 +1,8 @@
 import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
 import Header from '@/components/page/header/header'
 import { menuData } from '@/config/menu-data'
-import LocaleSwitcher from '@/i18n/locale-switcher'
 import Logo from '@/lib/site-logo'
 import Link from 'next/link'
-import React from 'react'
 
 export default function SiteHeader() {
   return (
@@ -15,7 +13,7 @@ export default function SiteHeader() {
             data-test="leftLink"
             href="/"
             title="back to emojiu.cc homepage">
-            <Logo className="w-9" />
+            <Logo className="w-10 fill-primary" />
           </Link>
         }
         data={menuData}
