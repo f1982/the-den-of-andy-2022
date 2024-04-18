@@ -1,8 +1,8 @@
 import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
-import Logo from '@/components/atoms/logo/Logo'
 import Header from '@/components/page/header/header'
 import { menuData } from '@/config/menu-data'
 import LocaleSwitcher from '@/i18n/locale-switcher'
+import Logo from '@/lib/site-logo'
 import Link from 'next/link'
 import React from 'react'
 

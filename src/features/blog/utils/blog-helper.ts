@@ -1,5 +1,4 @@
-import { BLOG_POST_DIRECTORY } from '@/config/server-config'
-import { BlogPostData } from '@/types/blog'
+import { BLOG_POST_DIRECTORY, BlogPostData } from '@/features/blog/blog-data'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'

@@ -1,6 +1,6 @@
 import PlatformTag from './project-item-tag'
 import { PROJECT_IMAGE_URL } from '@/config/site-config'
-import { ProjectItemData } from '@/types/projects'
+import { ProjectItemData } from '@/features/project/project-data'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'

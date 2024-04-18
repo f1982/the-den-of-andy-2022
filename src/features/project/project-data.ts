@@ -1,3 +1,5 @@
+import { join } from 'path'
+
 export interface MenuItemObject {
   name: string
   link?: string
@@ -47,3 +49,5 @@ export interface SkillObject {
   level: number
   hidden: boolean
 }
+
+export const projectDataPath = join(process.cwd(), '/data/projects.json')

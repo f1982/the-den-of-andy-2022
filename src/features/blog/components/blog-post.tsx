@@ -1,8 +1,8 @@
 import PostBody from './blog-post-body'
+import FormattedDate from '@/components/atoms/formatted-date'
 import Prose from '@/components/atoms/prose'
-import PostDate from '@/components/organisms/article/PostDate'
-import LandscapeHero from '@/components/organisms/blocks/ContentPageHero'
-import { BlogPostData } from '@/types/blog'
+import LandscapeHero from '@/components/page/hero-landscape'
+import { BlogPostData } from '@/features/blog/blog-data'
 import React from 'react'
 
 const BlogPost: React.FC<Partial<BlogPostData>> = ({
@@ -17,7 +17,7 @@ const BlogPost: React.FC<Partial<BlogPostData>> = ({
     <div className="container mx-auto mt-32">
       <h1>{title}</h1>
       <span>
-        <PostDate date={date} />
+        <FormattedDate date={date} />
       </span>
       <div className="mb-4">{author?.name}</div>
     </div>

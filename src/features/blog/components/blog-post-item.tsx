@@ -1,6 +1,6 @@
-import PostDate from '@/components/organisms/article/PostDate'
+import FormattedDate from '@/components/atoms/formatted-date'
 import { BLOG_PATH } from '@/config/menu-data'
-import { BlogPostData } from '@/types/blog'
+import { BlogPostData } from '@/features/blog/blog-data'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,7 +23,7 @@ const PostPreview: React.FC<
     </Link>
     <h3 className="font-semibold">{title}</h3>
     <span className="text-xs text-muted-foreground">
-      <PostDate date={date} />
+      <FormattedDate date={date} />
     </span>
   </div>
 )

@@ -1,10 +1,10 @@
 import PageRows from '@/components/atoms/page-rows'
-import PageTitle from '@/components/organisms/blocks/PageTitle'
 import PageHero from '@/components/page/hero-image'
+import PageTitle from '@/components/page/page-title'
+import { BlogPostData } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 import { getAllPosts } from '@/features/blog/utils/blog-helper'
-import { BlogPostData } from '@/types/blog'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 

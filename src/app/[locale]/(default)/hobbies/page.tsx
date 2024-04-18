@@ -1,7 +1,7 @@
-import Hero from '@/components/organisms/blocks/Hero'
-import PageTitle from '@/components/organisms/blocks/PageTitle'
 import PageHero from '@/components/page/hero-image'
 import ColumnHero from '@/components/page/hero-image-text'
+import SandwichHero from '@/components/page/hero-sandwich'
+import PageTitle from '@/components/page/page-title'
 import { Button } from '@/components/ui/button'
 import {
   DrawingAlbumURL,
@@ -37,7 +37,7 @@ const Hobbies = () => {
           }
         />
         {/* rc hobby */}
-        <Hero
+        <SandwichHero
           id="rc-hobby-id"
           className="mb-16 md:mb-20"
           image="/static/images/hobby-rc-cover.png"
@@ -78,7 +78,7 @@ const Hobbies = () => {
           }
         />
         {/* video editing */}
-        <Hero
+        <SandwichHero
           className="mb-16 md:mb-20"
           image="/static/images/hobby-cover-video.png"
           title={t('video.title')}

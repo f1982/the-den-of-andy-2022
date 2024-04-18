@@ -1,11 +1,11 @@
 import PageRows from '@/components/atoms/page-rows'
 import Prose from '@/components/atoms/prose'
-import Hero from '@/components/organisms/blocks/Hero'
 import PageHero from '@/components/page/hero-image'
+import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 import { YouTubeURL } from '@/config/links'
 import LatestProjectItem from '@/features/project/components/latest-project-item'
-import WorkingOn from '@/features/project/components/working-on'
+import ProjectWorkingOn from '@/features/project/components/project-working-on'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
@@ -30,7 +30,7 @@ const LastProjects: React.FC = () => (
       <LatestProjectItem
         title="My desktop setups for WFH 2022"
         cover={LatestProjectImageURL}
-        description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and reorganise the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+        description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and re-organize the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
         platform="Article,Video"
       />
     </Link>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
       <PageRows withMargin>
         <PageHero image="/static/images/page-hero-workspace.png" />
 
-        <Hero
+        <SandwichHero
           className="mb-16 md:mb-24"
           image="/static/images/andy-with-bubbles.png"
           title={t('intro.greeting')}
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
         />
 
         <LastProjects />
-        <WorkingOn />
+        <ProjectWorkingOn />
         <YouTubeChannelSection />
       </PageRows>
     </>

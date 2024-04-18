@@ -1,4 +1,4 @@
-import PostDate from '@/components/organisms/article/PostDate'
+import FormattedDate from '@/components/atoms/formatted-date'
 import Link from 'next/link'
 
 const BlogPostList = ({ posts }) => (
@@ -14,7 +14,7 @@ const BlogPostList = ({ posts }) => (
           legacyBehavior>
           {post.title}
         </Link>
-        <PostDate date={post.date} />
+        <FormattedDate date={post.date} />
       </li>
     ))}
   </ul>

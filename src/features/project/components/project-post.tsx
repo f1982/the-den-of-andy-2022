@@ -1,9 +1,9 @@
 import PlatformTag from './project-item-tag'
+import FormattedDate from '@/components/atoms/formatted-date'
 import Tags from '@/components/atoms/tag-cloud'
-import PostDate from '@/components/organisms/article/PostDate'
-import LandscapeHero from '@/components/organisms/blocks/ContentPageHero'
+import LandscapeHero from '@/components/page/hero-landscape'
 import { PROJECT_IMAGE_URL } from '@/config/site-config'
-import { ProjectItemData } from '@/types/projects'
+import { ProjectItemData } from '@/features/project/project-data'
 import React from 'react'
 
 const Project: React.FC<ProjectItemData> = ({
@@ -35,9 +35,9 @@ const Project: React.FC<ProjectItemData> = ({
       <div className="container mx-auto mb-8">
         <h1 className="text-3xl font-bold">{title}</h1>
         <div className="mb-4">
-          <PostDate date={start} />
+          <FormattedDate date={start} />
           <span> - </span>
-          <PostDate date={end} />
+          <FormattedDate date={end} />
         </div>
         {platform && (
           <div className="mb-4">

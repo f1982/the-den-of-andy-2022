@@ -1,6 +1,6 @@
-import PageTitle from '@/components/organisms/blocks/PageTitle'
-import SmallText from '@/components/organisms/blocks/SmallText'
+import SmallText from '@/components/page/SmallText'
 import PageHero from '@/components/page/hero-image'
+import PageTitle from '@/components/page/page-title'
 import { getAge } from '@/features/about/utils/date.utils'
 import { useTranslations } from 'next-intl'
 

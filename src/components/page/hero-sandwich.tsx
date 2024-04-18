@@ -34,7 +34,7 @@ const itemVariant = {
   },
 }
 
-const Hero: React.FC<HeroData> = ({
+const SandwichHero: React.FC<HeroData> = ({
   title,
   subtitle,
   image,
@@ -76,4 +76,4 @@ const Hero: React.FC<HeroData> = ({
   </motion.section>
 )
 
-export default Hero
+export default SandwichHero

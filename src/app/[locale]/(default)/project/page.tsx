@@ -1,6 +1,6 @@
 import PageRows from '@/components/atoms/page-rows'
-import PageTitle from '@/components/organisms/blocks/PageTitle'
 import PageHero from '@/components/page/hero-image'
+import PageTitle from '@/components/page/page-title'
 import ProjectList from '@/features/project/components/project-list'
 import { getProjects } from '@/features/project/utils/project-helper'
 import { getTranslations } from 'next-intl/server'
