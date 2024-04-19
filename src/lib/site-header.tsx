@@ -1,6 +1,7 @@
 import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
 import Header from '@/components/page/header/header'
-import { menuData } from '@/config/menu-data'
+import { routeLinks } from '@/config/menu-data'
+import LocaleSwitcher from '@/i18n/locale-switcher'
 import Logo from '@/lib/site-logo'
 import Link from 'next/link'
 
@@ -16,10 +17,11 @@ export default function SiteHeader() {
             <Logo className="w-10 fill-primary" />
           </Link>
         }
-        data={menuData}
+        data={routeLinks}
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />
+            <LocaleSwitcher />
           </div>
         }
       />

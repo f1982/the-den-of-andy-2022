@@ -122,21 +122,17 @@ const friends = [
   {
     id: 1,
     name: 'TigerWang',
-    type: 'outside',
     icon: '',
     link: 'https://tigerwang.us/',
     alt: 'Tiger Wang',
-    tag: '',
     hidden: 0,
   },
   {
     id: 1,
     name: 'Feng',
-    type: 'outside',
     icon: 'facebook',
     link: 'http://fenglee.com/',
     alt: 'Indie game developer Feng Lee',
-    tag: '',
     hidden: 0,
   },
 ]

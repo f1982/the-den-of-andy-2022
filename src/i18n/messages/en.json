@@ -1,26 +1,14 @@
 {
-  "LocaleSwitcher": {
-    "label": "Select language",
-    "locale": "{locale, select, cn {🇨🇳 Chinese} en {🇺🇸 English} other {Unknown}}"
+  "common": {
+    "LocaleSwitcher": {
+      "label": "Select language",
+      "locale": "{locale, select, cn {🇨🇳 Chinese} en {🇺🇸 English} other {Unknown}}"
+    }
   },
   "welcome": {
     "pageTitle": "Welcome",
     "greeting": "Hey there! I'm Andy",
     "description": "Welcome to my digital space",
-    "buttonLabel": "Enter"
-  },
-  "pageNotFound": {
-    "pageTitle": "404, page cannot find.",
-    "headline": "Can not find the page...",
-    "errorCode": "404",
-    "subtitle": "Oops, page not found",
-    "backButtonLabel": "Back"
-  },
-  "Index": {
-    "title": "Hello world!",
-    "pageTitle": "Welcome",
-    "greeting": "Hey there! I am Andy",
-    "description": "Welcome To My Digital Space",
     "buttonLabel": "Enter"
   },
   "home": {
@@ -40,7 +28,7 @@
       "p2": "I consider indie game 🕹 development as a leisure time hobby. I know some design 🎨. I am trying to be a life-long learner 🧠, an excellent drone 🛸 pilot as well as a good father 💁🏻‍♂️"
     },
     "p2": {
-      "title": "Projects",
+      "title": "Latest Project",
       "description": "Here are some projects that I have done recently."
     }
   },

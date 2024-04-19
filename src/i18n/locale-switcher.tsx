@@ -3,7 +3,7 @@ import LocaleSwitcherSelect from './locale-switch-select'
 import { getLocale, getTranslations } from 'next-intl/server'
 
 export default async function LocaleSwitcher() {
-  const t = await getTranslations('LocaleSwitcher')
+  const t = await getTranslations('common.LocaleSwitcher')
   const locale = await getLocale()
 
   return (

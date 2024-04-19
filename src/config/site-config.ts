@@ -10,14 +10,15 @@ export const PROJECT_IMAGE_URL = '/static/images/project'
 export const siteHostname = 'andycao.me'
 export const siteUrl = `https://${siteHostname}`
 
-export const GoogleAnalyticsID = 'G-L8EFRS04CF'
+export const GoogleAnalyticsID = 'G-QSHYKJVT4S'
 
 export const siteSettings = {
-  name: 'siteName',
+  name: 'The Den of Andy C',
   url: siteUrl,
-  title: 'siteTitle',
-  description: 'siteDescription',
-  keywords: 'siteKeywords',
+  title: 'The Den of Andy C',
+  description: 'This is my personal website and blog',
+  keywords:
+    'andy cao, personal website, blog, portfolio, web developer, app developer, javascript, typescript, react, nextjs, tailwindcss',
   author: 'Andy Cao',
   creator: '@andycaonz@gmail.com',
 }
@@ -86,7 +87,7 @@ export const siteMetadata: Metadata = {
   twitter,
   verification: {
     other: {
-      // 'msvalidate.01': '8C4A5C5044C69129C4355BCC538281EC',
+      'msvalidate.01': '8C4A5C5044C69129C4355BCC538281EC',
     },
   },
 }
