@@ -8,7 +8,7 @@ import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
 const BLOG_PATH = '/blog'
 
-const menuData: MenuItemData[] = [
+const routeLinks: MenuItemData[] = [
   {
     link: '/home',
     label: 'Home',
@@ -41,25 +41,25 @@ export const socialLinks: MenuItemData[] = [
     title: 'Twitter',
     label: 'Twitter',
     icon: <Twitter />,
-    link: 'https://twitter.com/emojiyou',
+    link: 'https://twitter.com/iandycao',
   },
   {
     title: 'YouTube',
     label: 'YouTube',
     icon: <Youtube />,
-    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
+    link: 'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg',
   },
   {
     title: 'Ins',
     label: 'Ins',
     icon: <Instagram />,
-    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
+    link: 'https://www.instagram.com/iandycao/',
   },
   {
     title: 'Facebook',
     label: 'Facebook',
     icon: <Facebook />,
-    link: 'https://www.youtube.com/channel/UC8_l368_87i370525030',
+    link: 'https://www.facebook.com/andycao1982',
   },
 ]
 
@@ -81,6 +81,6 @@ export const otherLinks: MenuItemData[] = [
   },
 ]
 
-export const footerLinks = [menuData, otherLinks]
+export const footerLinks = [routeLinks, otherLinks]
 
-export { BLOG_PATH, menuData }
+export { BLOG_PATH, routeLinks }
