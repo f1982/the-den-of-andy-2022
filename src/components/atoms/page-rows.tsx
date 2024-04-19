@@ -8,7 +8,7 @@ export default function PageRows(
     <div
       className={clsx(
         'flex flex-col gap-24 sm:gap-48',
-        props.withMargin ? 'my-24 sm:my-48' : '',
+        props.withMargin ? 'my-12 sm:my-24' : '',
       )}>
       {props.children}
     </div>
