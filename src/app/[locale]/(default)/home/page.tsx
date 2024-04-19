@@ -4,30 +4,37 @@ import PageHero from '@/components/page/hero-image'
 import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 import { YouTubeURL } from '@/config/links'
+import { siteMetadata } from '@/config/site-config'
 import LatestProjectItem from '@/features/project/components/latest-project-item'
 import ProjectWorkingOn from '@/features/project/components/project-working-on'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React from 'react'
 
+export const metadata = { ...siteMetadata }
+
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
 
-const LastProjects: React.FC = () => (
-  <div className="container">
-    <Prose>
-      <h2>Latest Projects</h2>
-    </Prose>
-    <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
-      <LatestProjectItem
-        title="My desktop setups for WFH 2022"
-        cover={LatestProjectImageURL}
-        description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and re-organize the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
-        platform="Article,Video"
-      />
-    </Link>
-  </div>
-)
+const LastProjects: React.FC = () => {
+  const t = useTranslations('home')
+  return (
+    <div className="container">
+      <Prose>
+        <h2>{t('p2.title')}</h2>
+        <p>{t('p2.description')}</p>
+      </Prose>
+      <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
+        <LatestProjectItem
+          title="My desktop setups for WFH 2022"
+          cover={LatestProjectImageURL}
+          description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and re-organize the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
+          platform="Article,Video"
+        />
+      </Link>
+    </div>
+  )
+}
 
 const YouTubeChannelSection: React.FC = () => (
   <div className="flex flex-col items-center text-center">
@@ -90,6 +97,7 @@ const Home: React.FC = () => {
 
         <LastProjects />
         <ProjectWorkingOn />
+
         <YouTubeChannelSection />
       </PageRows>
     </>

@@ -13,11 +13,12 @@ export const siteUrl = `https://${siteHostname}`
 export const GoogleAnalyticsID = 'G-QSHYKJVT4S'
 
 export const siteSettings = {
-  name: 'siteName',
+  name: 'The Den of Andy C',
   url: siteUrl,
-  title: 'siteTitle',
-  description: 'siteDescription',
-  keywords: 'siteKeywords',
+  title: 'The Den of Andy C',
+  description: 'This is my personal website and blog',
+  keywords:
+    'andy cao, personal website, blog, portfolio, web developer, app developer, javascript, typescript, react, nextjs, tailwindcss',
   author: 'Andy Cao',
   creator: '@andycaonz@gmail.com',
 }

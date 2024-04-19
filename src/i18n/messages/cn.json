@@ -1,15 +1,52 @@
 {
-  "LocaleSwitcher": {
-    "label": "选择语言",
-    "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
+  "common": {
+    "LocaleSwitcher": {
+      "label": "选择语言",
+      "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
+    }
   },
-  "Index": {
-    "title": "你好，世界！",
+  "welcome": {
     "pageTitle": "欢迎",
-    "greeting": "嗨！我是安迪",
+    "greeting": "嗨!我是安迪",
     "description": "欢迎来到我的数字空间",
     "buttonLabel": "进入"
   },
+  "home": {
+    "pageTitle": "主页",
+    "intro": {
+      "greeting": "安迪·曹",
+      "pronunciation": "[ch ow]",
+      "role": "软件开发人员",
+      "description": "👋嗨e我叫安迪d我是一名前端开发人员er as住在新西兰。我主要做一些网站it和移动obi应用程序。ii我把独立游戏e c开发作为业余爱好。我也喜欢为了娱乐制作一些小硬件设备。我总是试图成为一个终身学习者lee以及一个好父亲d father 💁🏻‍♂️",
+      "button1": "了解更多",
+      "button2": "我的作品"
+    },
+    "buttonLabel": "联系方式",
+    "p1": {
+      "title": "喜欢探索和创造",
+      "p1": "我叫安迪·曹,来自中国🇨。r我是一名软件开发人员r ,专注于网站和移动i应用程序开发。ment.",
+      "p2": "我认为独立游戏开发是业余爱好。e我懂一些设计 。 我正在努力成为一个终身学习者r 一个出色的无人机n飞行员以及一个好父亲her 💁🏻‍♂️"
+    },
+    "p2": {
+      "title": "近期项目",
+      "description": "以下是我最近完成的一些项目。"
+    }
+  },
+  "blog": {
+    "pageTitle": "我的博客",
+    "intro": "我试图用文字记录我做过的事情。",
+    "headline": "博客",
+    "more": "更多"
+  },
+
+  "project": {
+    "pageTitle": "项目",
+    "headline": "项目",
+    "intro": "这是我参与过的一些项目。",
+    "title": "项目",
+    "description": "这是我参与过的项目的一部分,还有一些项目我没有整理和列出。"
+  },
+
   "hobbies": {
     "pageTitle": "我的爱好",
     "headline": "爱好",
@@ -37,7 +74,6 @@
       "button2": "Bilibili"
     }
   },
-
   "about": {
     "pageTitle": "关于我",
     "headline": "关于",

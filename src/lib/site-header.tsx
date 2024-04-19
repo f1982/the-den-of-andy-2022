@@ -1,6 +1,7 @@
 import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
 import Header from '@/components/page/header/header'
 import { routeLinks } from '@/config/menu-data'
+import LocaleSwitcher from '@/i18n/locale-switcher'
 import Logo from '@/lib/site-logo'
 import Link from 'next/link'
 
@@ -20,6 +21,7 @@ export default function SiteHeader() {
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />
+            <LocaleSwitcher />
           </div>
         }
       />
