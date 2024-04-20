@@ -9,7 +9,7 @@ export default function SiteFooter() {
     <Footer
       logo={
         <Link href="/">
-          <Logo className="w-10" />
+          <Logo className="w-10 fill-primary stroke-primary" />
         </Link>
       }
       sns={socialLinks}

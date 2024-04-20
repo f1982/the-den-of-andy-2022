@@ -2,9 +2,14 @@
 
 import { MenuItemData } from './menu-data'
 import { MobileNavMenuItem } from './menu-item'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 import clsx from 'clsx'
-import { Menu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import React from 'react'
 
 export const MobileNavPopover = ({

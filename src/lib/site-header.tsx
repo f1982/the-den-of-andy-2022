@@ -14,14 +14,14 @@ export default function SiteHeader() {
             data-test="leftLink"
             href="/"
             title="back to emojiu.cc homepage">
-            <Logo className="w-10 fill-primary" />
+            <Logo className="w-10 fill-primary stroke-primary" />
           </Link>
         }
         data={routeLinks}
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />
-            <LocaleSwitcher />
+            {/* <LocaleSwitcher /> */}
           </div>
         }
       />

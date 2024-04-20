@@ -21,8 +21,7 @@ const Blog: React.FC = () => {
 
   return (
     <PageRows withMargin>
-      <PageHero image="/static/images/page-hero-typewriter.png" />
-
+      <PageHero image="/static/images/Working_in_a_laboratory--5ec7b8ba01d0360014d4e576.png" />
       <div>
         <div className="container">
           <PageTitle title={t('headline')} description={t('intro')} />

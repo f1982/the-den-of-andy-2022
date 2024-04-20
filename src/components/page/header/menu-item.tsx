@@ -48,14 +48,18 @@ export function MobileNavMenuItem({
     <>
       <Link href={link}>
         <SheetClose className="w-full text-left">
-          {icon}
-          <span
-            className={clsx(
-              'w-full text-lg',
-              pathname.startsWith(link) ? 'font-bold' : 'font-normal',
-            )}>
-            {label}
-          </span>
+          <div className="flex flex-row items-center gap-3">
+            {icon}
+            <span
+              className={clsx(
+                'w-full text-lg',
+                pathname.startsWith(link)
+                  ? 'font-bold'
+                  : 'font-semibold text-muted-foreground',
+              )}>
+              {label}
+            </span>
+          </div>
         </SheetClose>
       </Link>
     </>

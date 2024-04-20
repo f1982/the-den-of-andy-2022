@@ -8,6 +8,7 @@ import { siteMetadata } from '@/config/site-config'
 import LatestProjectItem from '@/features/project/components/latest-project-item'
 import ProjectWorkingOn from '@/features/project/components/project-working-on'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -71,7 +72,13 @@ const Home: React.FC = () => {
   return (
     <>
       <PageRows withMargin>
-        <PageHero image="/static/images/page-hero-workspace.png" />
+        <Image
+          src="/static/images/page-hero-workspace.png"
+          className="mx-auto w-[100vw] object-contain md:max-h-[40vh] md:w-[60vw]"
+          alt=""
+          width={800}
+          height={600}
+        />
 
         <div className="container">
           <SandwichHero

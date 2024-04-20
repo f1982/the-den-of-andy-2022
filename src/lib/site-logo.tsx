@@ -1,8 +1,6 @@
-import clsx from 'clsx'
-
 const Logo = ({ className }: { className?: string }) => (
   <svg
-    className={clsx(className)}
+    className={className}
     width="100%"
     height="100%"
     viewBox="0 0 120 120"

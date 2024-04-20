@@ -13,7 +13,8 @@ export default async function Page() {
 
   return (
     <PageRows withMargin>
-      <PageHero image="/static/images/cartoon-rocket.png" />
+      <PageHero image="/static/images/Web_development--5ec7b8ad01d0360018d4d49b.png" />
+
       <div>
         <div className="container">
           <PageTitle title={t('headline')} description={t('intro')} />
