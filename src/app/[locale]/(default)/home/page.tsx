@@ -1,6 +1,5 @@
 import PageRows from '@/components/atoms/page-rows'
 import Prose from '@/components/atoms/prose'
-import PageHero from '@/components/page/hero-image'
 import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 import { YouTubeURL } from '@/config/links'
