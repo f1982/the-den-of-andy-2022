@@ -2,7 +2,7 @@ import PlatformTag from './project-item-tag'
 import FormattedDate from '@/components/atoms/formatted-date'
 import Tags from '@/components/atoms/tag-cloud'
 import LandscapeHero from '@/components/page/hero-landscape'
-import { ProjectItemData } from '@/features/project/project-data'
+import { ProjectItemData } from '@/features/project/project-types'
 import Image from 'next/image'
 import React from 'react'
 

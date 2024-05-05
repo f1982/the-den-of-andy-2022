@@ -1,6 +1,6 @@
 import PostBody from './blog-post-body'
 import FormattedDate from '@/components/atoms/formatted-date'
-import { BlogPostData } from '@/features/blog/blog-data'
+import { BlogPostData } from '@/features/blog/blog-types'
 import Image from 'next/image'
 import React from 'react'
 

@@ -1,9 +1,6 @@
 import Spinner from '@/components/atoms/spinner'
 import ProjectDetailView from '@/features/project/components/project-detail-view'
-import {
-  getProjectDetail,
-  getProjects,
-} from '@/features/project/utils/project-helper'
+import { getProjectDetail, getProjects } from '@/features/project/project-data'
 import { delay } from '@/utils/utils'
 import { Suspense } from 'react'
 

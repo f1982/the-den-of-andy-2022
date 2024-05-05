@@ -1,6 +1,6 @@
-import ProjectItem from './project-item'
+import ProjectItemView from './project-item-view'
 import CardGrid from '@/components/atoms/card-grid'
-import { ProjectItemData } from '@/features/project/project-data'
+import { ProjectItemData } from '@/features/project/project-types'
 import React from 'react'
 
 interface ProjectListProps {
@@ -11,7 +11,7 @@ const ProjectListView: React.FC<ProjectListProps> = ({ data }) => {
   return (
     <CardGrid>
       {data.map((item) => (
-        <ProjectItem key={item.id} {...item} />
+        <ProjectItemView key={item.id} {...item} />
       ))}
     </CardGrid>
   )

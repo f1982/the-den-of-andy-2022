@@ -1,6 +1,6 @@
 import FormattedDate from '@/components/atoms/formatted-date'
 import { BLOG_PATH } from '@/config/menu-data'
-import { BlogPostData } from '@/features/blog/blog-data'
+import { BlogPostData } from '@/features/blog/blog-types'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'

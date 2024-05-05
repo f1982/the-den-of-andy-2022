@@ -1,12 +1,12 @@
 import PlatformTag from './project-item-tag'
 import FormattedDate from '@/components/atoms/formatted-date'
-import { ProjectItemData } from '@/features/project/project-data'
+import { ProjectItemData } from '@/features/project/project-types'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const ProjectItem: React.FC<ProjectItemData> = ({
+const ProjectItemView: React.FC<ProjectItemData> = ({
   id,
   title,
   description,
@@ -42,4 +42,4 @@ const ProjectItem: React.FC<ProjectItemData> = ({
   </Link>
 )
 
-export default ProjectItem
+export default ProjectItemView

@@ -1,53 +1,22 @@
-import { join } from 'path'
+import { projectDataPath } from './project-types'
+import { PROJECT_IMAGE_URL } from '@/config/site-config'
+import fs from 'fs'
 
-export interface MenuItemObject {
-  name: string
-  link?: string
-  index: number
+export function getProjects() {
+  const fileContents = fs.readFileSync(projectDataPath, 'utf8')
+  const json = JSON.parse(fileContents)
+  const pjs = json.data.projects
+  return pjs.map((p) => {
+    return {
+      ...p,
+      cover: PROJECT_IMAGE_URL + '/' + p.cover,
+      images: p.images.map((i) => PROJECT_IMAGE_URL + '/' + i),
+    }
+  })
 }
 
-/**
- * Project Value Object
- */
-export interface ProjectItemData {
-  id: string
-  title: string
-  responsibility: string
-  description: string
-  type: string
-  category: string
-  icon: string
-  qrcode: string
-  platform: string
-  state: string
-  cover: string
-  start: string
-  end: string
-  images: Array<string>
-  tech: string
-  link?: string
-  github?: string
-  video?: string
-  language: string
-  quote?: string
-  content?: string
+export function getProjectDetail(slug: string) {
+  const projects = getProjects()
+  const pj = projects.find((item) => item.id === slug)
+  return pj
 }
-
-export interface LinkObject {
-  id: number
-  name: string
-  type: string
-  icon: string
-  link: string
-  alt?: string
-  tag?: string
-  hidden: boolean
-}
-
-export interface SkillObject {
-  name: string
-  level: number
-  hidden: boolean
-}
-
-export const projectDataPath = join(process.cwd(), '/data/projects.json')

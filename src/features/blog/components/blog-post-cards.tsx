@@ -1,11 +1,7 @@
 import PostPreview from './blog-post-item'
 import CardGrid from '@/components/atoms/card-grid'
-import { BlogPostData } from '@/features/blog/blog-data'
+import { BlogPostData } from '@/features/blog/blog-types'
 import React from 'react'
-
-// test page only can be accessed by directly input the url
-// http://localhost:3000/blog/test-post-with-all-kinds-of-format
-export const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
 
 interface Props {
   posts: BlogPostData[]
@@ -13,19 +9,16 @@ interface Props {
 
 const BlogPosCards: React.FC<Props> = ({ posts }) => (
   <CardGrid>
-    {posts.map(
-      (post) =>
-        post.slug !== TEST_BLOG_POST && (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            slug={post.slug}
-          />
-        ),
-    )}
+    {posts.map((post) => (
+      <PostPreview
+        key={post.slug}
+        title={post.title}
+        coverImage={post.coverImage}
+        date={post.date}
+        author={post.author}
+        slug={post.slug}
+      />
+    ))}
   </CardGrid>
 )
 
