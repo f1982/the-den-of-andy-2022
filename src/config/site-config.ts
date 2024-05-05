@@ -3,8 +3,6 @@ import { Robots } from 'next/dist/lib/metadata/types/metadata-types'
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types'
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types'
 
-export const PROJECT_IMAGE_URL = '/static/images/project'
-
 export const siteHostname = 'andycao.me'
 export const siteUrl = `https://${siteHostname}`
 

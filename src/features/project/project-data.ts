@@ -1,6 +1,8 @@
-import { projectDataPath } from './project-types'
-import { PROJECT_IMAGE_URL } from '@/config/site-config'
 import fs from 'fs'
+import { join } from 'path'
+
+export const PROJECT_IMAGE_URL = '/static/images/project'
+export const projectDataPath = join(process.cwd(), 'src/content/projects.json')
 
 export function getProjects() {
   const fileContents = fs.readFileSync(projectDataPath, 'utf8')

@@ -1,8 +1,8 @@
-import { BLOG_POST_DIRECTORY, BlogPostData } from '@/features/blog/blog-types'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { sample } from 'lodash'
 import { join } from 'path'
+
+export const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/content/posts')
 
 function isFolder(filename) {
   return filename.indexOf('.') === -1

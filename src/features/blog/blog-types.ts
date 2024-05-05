@@ -19,5 +19,3 @@ export type BlogPostData = {
 export type PostMap = {
   [key: string]: BlogPostData
 }
-
-export const BLOG_POST_DIRECTORY = join(process.cwd(), '/data/posts')
