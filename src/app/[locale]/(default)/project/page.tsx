@@ -1,16 +1,19 @@
 import PageRows from '@/components/atoms/page-rows'
+import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
-import ProjectList from '@/features/project/components/project-list'
+import ProjectListView from '@/features/project/components/project-list'
 import { getProjects } from '@/features/project/utils/project-helper'
 import { getTranslations } from 'next-intl/server'
+import { Suspense } from 'react'
+
+async function ProjectList() {
+  const projects = await getProjects()
+  return <ProjectListView data={projects} />
+}
 
 export default async function Page() {
   const t = await getTranslations('project')
-  const type = 'coding'
-
-  const projects = await getProjects()
-
   return (
     <PageRows withMargin>
       <PageHero image="/static/images/Web_development--5ec7b8ad01d0360018d4d49b.png" />
@@ -21,7 +24,9 @@ export default async function Page() {
         </div>
 
         <div className="mx-4">
-          <ProjectList list={projects} type={type as string} />
+          <Suspense fallback={<Spinner />}>
+            <ProjectList />
+          </Suspense>
         </div>
       </div>
     </PageRows>

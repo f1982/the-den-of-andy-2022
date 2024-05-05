@@ -1,6 +1,5 @@
 import PlatformTag from './project-item-tag'
 import FormattedDate from '@/components/atoms/formatted-date'
-import { PROJECT_IMAGE_URL } from '@/config/site-config'
 import { ProjectItemData } from '@/features/project/project-data'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -25,7 +24,7 @@ const ProjectItem: React.FC<ProjectItemData> = ({
             'aspect-video w-full rounded-xl object-cover ',
             'ring-1 ring-muted',
           )}
-          src={`${PROJECT_IMAGE_URL}/${cover}`}
+          src={cover}
           width={600}
           height={400}
           alt={`${title} preview`}

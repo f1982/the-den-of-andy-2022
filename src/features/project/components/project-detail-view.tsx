@@ -2,11 +2,11 @@ import PlatformTag from './project-item-tag'
 import FormattedDate from '@/components/atoms/formatted-date'
 import Tags from '@/components/atoms/tag-cloud'
 import LandscapeHero from '@/components/page/hero-landscape'
-import { PROJECT_IMAGE_URL } from '@/config/site-config'
 import { ProjectItemData } from '@/features/project/project-data'
+import Image from 'next/image'
 import React from 'react'
 
-const Project: React.FC<ProjectItemData> = ({
+const ProjectDetailView: React.FC<ProjectItemData> = ({
   title,
   cover,
   tech,
@@ -19,13 +19,10 @@ const Project: React.FC<ProjectItemData> = ({
 }) => {
   function getCarousel(imageList, alt) {
     if (!imageList) return null
-    const fullPathImages = imageList.map(
-      (image) => `${PROJECT_IMAGE_URL}/${image}`,
-    )
+
     return imageList.map((image) => (
       <div key={image} className="mb-8">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`${PROJECT_IMAGE_URL}/${image}`} alt={alt} />
+        <Image src={`${image}`} width={800} height={600} alt={alt} />
       </div>
     ))
   }
@@ -45,7 +42,7 @@ const Project: React.FC<ProjectItemData> = ({
           </div>
         )}
       </div>
-      <LandscapeHero text="" image={`${PROJECT_IMAGE_URL}/${cover}`} />
+      <LandscapeHero text="" image={cover} />
       <div className="container mx-auto">
         <div className="mb-8 mt-10">
           <h3 className="mb-6 text-lg font-semibold">Technology stacks:</h3>
@@ -65,4 +62,4 @@ const Project: React.FC<ProjectItemData> = ({
   )
 }
 
-export default Project
+export default ProjectDetailView

@@ -4,20 +4,17 @@ import { ProjectItemData } from '@/features/project/project-data'
 import React from 'react'
 
 interface ProjectListProps {
-  list: ProjectItemData[]
-  type: string
+  data: ProjectItemData[]
 }
 
-const ProjectList: React.FC<ProjectListProps> = ({ list, type = '' }) => {
+const ProjectListView: React.FC<ProjectListProps> = ({ data }) => {
   return (
     <CardGrid>
-      {type
-        ? list
-            .filter((item) => item.type === type)
-            .map((item) => <ProjectItem key={item.id} {...item} />)
-        : list.map((item) => <ProjectItem key={item.id} {...item} />)}
+      {data.map((item) => (
+        <ProjectItem key={item.id} {...item} />
+      ))}
     </CardGrid>
   )
 }
 
-export default ProjectList
+export default ProjectListView
