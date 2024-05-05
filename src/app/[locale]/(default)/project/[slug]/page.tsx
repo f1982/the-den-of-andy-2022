@@ -1,7 +1,7 @@
 import Spinner from '@/components/atoms/spinner'
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
-import { delay } from '@/utils/utils'
+import { notFound } from 'next/navigation'
 import { Suspense } from 'react'
 
 export function generateStaticParams() {
@@ -15,6 +15,9 @@ export function generateStaticParams() {
 
 async function PageDetail({ slug }: { slug: string }) {
   const detail = await getProjectDetail(slug)
+  if (!detail) {
+    return notFound()
+  }
   return <ProjectDetailView {...detail} />
 }
 

@@ -19,6 +19,9 @@ export function getPostBySlug(slug, fields: any[]) {
   // slug is the folder name
   // could add a zh-cn.md to contain other language content
   const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`)
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
