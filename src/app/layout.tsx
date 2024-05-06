@@ -1,10 +1,8 @@
 import { siteMetadata } from '@/config/site-config'
 import '@/global.css'
-import { locales } from '@/i18n/i18n-config'
 import { AnalyticSettings } from '@/lib/analytics-settings'
 import clsx from 'clsx'
-import { unstable_setRequestLocale } from 'next-intl/server'
-import { Inter, Nunito } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
