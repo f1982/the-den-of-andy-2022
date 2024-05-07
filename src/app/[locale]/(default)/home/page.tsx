@@ -72,14 +72,7 @@ const Home: React.FC = () => {
   return (
     <>
       <PageRows withMargin>
-        <Image
-          src="/static/images/page-hero-workspace.png"
-          className="mx-auto w-[100vw] object-contain md:max-h-[40vh] md:w-[60vw]"
-          alt=""
-          width={800}
-          height={600}
-        />
-
+        <PageHero image="/static/images/page-hero-workspace.png" />
         <div className="container">
           <SandwichHero
             className="mb-16 md:mb-24"

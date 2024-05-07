@@ -14,14 +14,7 @@ export default function About({ params: { locale } }) {
   return (
     <>
       <PageRows withMargin>
-        {/* <PageHero image="/static/images/page-hero-memoji.png" /> */}
-        <Image
-          className="mx-auto w-[100vw] object-contain md:max-h-[30vh] md:w-[50vw]"
-          src="/static/images/Search--5ec7b86001d0360016d490a6.png"
-          width={1000}
-          height={500}
-          alt=""
-        />
+        <PageHero image="/static/images/Search--5ec7b86001d0360016d490a6.png" />
 
         <div className="container">
           <PageTitle title={t('headline')} description={t('description')} />

@@ -1,9 +1,11 @@
 import markdownToHtml from '@//utils/markdownToHtml'
+import Spinner from '@/components/atoms/spinner'
 import { getAllPosts, getPostBySlug } from '@/features/blog/blog-data'
 import { BlogPostData } from '@/features/blog/blog-types'
 import BlogPost from '@/features/blog/components/blog-post'
 import Comments from '@/lib/comment/utteranc-comments'
 import { notFound } from 'next/navigation'
+import { Suspense } from 'react'
 
 export function generateStaticParams() {
   const posts = getAllPosts([
@@ -48,21 +50,20 @@ async function getPost(slug: string): Promise<BlogPostData | null> {
     content,
   }
 }
-
-export default async function Page({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug)
+const BlogPostDetail = async ({ slug }: { slug: string }) => {
+  const post = await getPost(slug)
   if (!post) {
     return notFound()
   }
+  return (
+    <>
+      <BlogPost {...post} />
+      <Comments />
+    </>
+  )
+}
 
-  const handleClose = () => {
-    // router.push('/blog')
-  }
-
-  // Trim spaces at the beginning and end of the keyword
-  const parseKeywords = (keywords) =>
-    keywords.split(',').map((keyword) => keyword.trim())
-
+export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <>
       {/* TODO: add JSON-LD support, https://jsonld.com/blog-post/ */}
@@ -70,7 +71,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="flex-1" />
         {/* <CloseButton onClick={handleClose} /> */}
       </div>
-      <BlogPost {...post} />
+      <Suspense fallback={<Spinner />}>
+        <BlogPostDetail slug={params.slug} />
+      </Suspense>
+
       <Comments />
     </>
   )
