@@ -19,14 +19,20 @@ export function NavMenuItem({
     <>
       <Link
         className={clsx(
-          'flex items-center',
+          'flex flex-row items-center gap-3',
           'text-sm font-bold hover:text-primary',
           pathname.startsWith(link)
             ? 'text-foreground'
             : 'text-muted-foreground',
         )}
         href={link}>
-        {/* {icon} */}
+        <span
+          className={clsx(
+            pathname.startsWith(link) ? 'visible' : 'hidden',
+            'text-primary',
+          )}>
+          {icon}
+        </span>
         {label}
       </Link>
     </>
