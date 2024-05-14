@@ -1,6 +1,7 @@
 import PostBody from './blog-post-body'
 import FormattedDate from '@/components/atoms/formatted-date'
 import { BlogPostData } from '@/features/blog/blog-types'
+import clsx from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 
@@ -9,7 +10,7 @@ const BlogPost: React.FC<
 > = ({ title, date, author, content, coverImage }) => (
   <>
     <div className="mx-auto mb-3 mt-6 flex h-96 w-full flex-col justify-start gap-9 bg-secondary py-12">
-      <div className="container">
+      <div className="container animate-pulse">
         <FormattedDate date={date} />
         <h1 className="mb-3 text-3xl font-bold">{title}</h1>
         <div className="text-sm font-bold">{author?.name}</div>
@@ -20,7 +21,10 @@ const BlogPost: React.FC<
       {coverImage && (
         <Image
           src={coverImage}
-          className="aspect-video w-full rounded-lg object-cover"
+          className={clsx(
+            'aspect-video w-full rounded-lg object-cover',
+            'animate-fade-in',
+          )}
           width={500}
           height={300}
           alt={title!}
