@@ -1,8 +1,7 @@
 import PlatformTag from './project-item-tag'
 import FormattedDate from '@/components/atoms/formatted-date'
+import HoverScaleImage from '@/components/atoms/hover-scale-image'
 import { ProjectItemData } from '@/features/project/project-types'
-import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -19,16 +18,7 @@ const ProjectItemView: React.FC<ProjectItemData> = ({
   <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
     <div className="cursor-pointer">
       <div className="relative mb-3">
-        <Image
-          className={clsx(
-            'aspect-video w-full rounded-xl object-cover ',
-            'ring-1 ring-muted',
-          )}
-          src={cover}
-          width={600}
-          height={400}
-          alt={`${title} preview`}
-        />
+        <HoverScaleImage src={cover} alt={title}></HoverScaleImage>
         <div className="absolute bottom-3 right-3">
           {platform && <PlatformTag text={platform} />}
         </div>
