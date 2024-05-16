@@ -21,7 +21,7 @@ const BlogPostList = ({ posts }) => (
             legacyBehavior>
             <span>{post.title}</span>
           </Link>
-          <FormattedDate date={post.date} />
+          <span>{post.date}</span>
         </div>
       </li>
     ))}

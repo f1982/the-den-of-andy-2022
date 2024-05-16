@@ -1,5 +1,6 @@
-import PostPreview from './blog-post-item'
+import BlogPostItemView from './blog-post-item'
 import CardGrid from '@/components/atoms/card-grid'
+import { BLOG_PATH } from '@/config/menu-data'
 import { BlogPostData } from '@/features/blog/blog-types'
 import React from 'react'
 
@@ -10,13 +11,12 @@ interface Props {
 const BlogPosCards: React.FC<Props> = ({ posts }) => (
   <CardGrid>
     {posts.map((post) => (
-      <PostPreview
+      <BlogPostItemView
         key={post.slug}
         title={post.title}
-        coverImage={post.coverImage}
+        imageUrl={post.coverImage}
         date={post.date}
-        author={post.author}
-        slug={post.slug}
+        url={`${BLOG_PATH}/${post.slug}`}
       />
     ))}
   </CardGrid>

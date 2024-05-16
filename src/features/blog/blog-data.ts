@@ -1,3 +1,4 @@
+import { format, parseISO } from 'date-fns'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
@@ -60,6 +61,11 @@ export function getPostBySlug(slug, fields: any[]) {
 // http://localhost:3000/blog/test-post-with-all-kinds-of-format
 const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
 
+function parseDate(dateStr: string) {
+  const date = parseISO(dateStr)
+  return format(date, 'LLLL d, yyyy')
+}
+
 export function getAllPosts(fields: any[], count: number = -1) {
   const folders = fs.readdirSync(BLOG_POST_DIRECTORY)
   const posts = folders
@@ -67,6 +73,7 @@ export function getAllPosts(fields: any[], count: number = -1) {
     .map((slug) => getPostBySlug(slug, fields))
     .filter((item) => item.slug !== TEST_BLOG_POST)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+    .map((p) => ({ ...p, date: parseDate(p.date) }))
 
   return posts.splice(0, count > 0 ? count : posts.length)
 }

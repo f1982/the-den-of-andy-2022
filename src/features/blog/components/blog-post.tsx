@@ -5,9 +5,13 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 
-const BlogPost: React.FC<
-  Pick<BlogPostData, 'title' | 'date' | 'author' | 'content' | 'coverImage'>
-> = ({ title, date, author, content, coverImage }) => (
+const BlogPost: React.FC<BlogPostData> = ({
+  title,
+  date,
+  author,
+  content,
+  coverImage,
+}) => (
   <>
     <div className="mx-auto mb-3 mt-6 flex h-96 w-full flex-col justify-start gap-9 bg-secondary py-12">
       <div className="container animate-pulse">
@@ -17,13 +21,13 @@ const BlogPost: React.FC<
       </div>
     </div>
 
-    <div className="container mb-12 mt-[-180px] max-w-6xl flex-1">
+    <div className="container mb-12 mt-[-180px] max-w-6xl">
       {coverImage && (
         <Image
           src={coverImage}
           className={clsx(
-            'aspect-video w-full rounded-lg object-cover',
-            'animate-fade-in',
+            'aspect-video w-full rounded-lg bg-card object-cover',
+            // 'animate-fade-in',
           )}
           width={500}
           height={300}

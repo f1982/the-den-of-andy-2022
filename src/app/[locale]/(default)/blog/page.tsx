@@ -5,7 +5,6 @@ import PageTitle from '@/components/page/page-title'
 import { getAllPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
-import { delay } from '@/utils/utils'
 import { useTranslations } from 'next-intl'
 import React, { Suspense } from 'react'
 
