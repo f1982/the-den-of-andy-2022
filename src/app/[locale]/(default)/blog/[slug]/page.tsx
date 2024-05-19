@@ -14,6 +14,7 @@ export function generateStaticParams() {
     'slug',
     'author',
     'coverImage',
+    'status',
     'excerpt',
   ])
   const slugs = posts.map((item) => {
@@ -37,6 +38,7 @@ async function getPost(slug: string): Promise<BlogPostData | null> {
     'author',
     'keywords',
     'content',
+    'status',
     'ogImage',
     'coverImage',
   ]

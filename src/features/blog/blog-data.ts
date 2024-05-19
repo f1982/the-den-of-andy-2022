@@ -1,3 +1,4 @@
+import { BlogPostData } from './blog-types'
 import { format, parseISO } from 'date-fns'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -41,15 +42,10 @@ export function getPostBySlug(slug, fields: any[]) {
   }
 
   fields.forEach((field) => {
-    if (field === 'slug') {
-      postItem.slug = slug
-    }
-    if (field === 'content') {
-      postItem.content = content
-    }
+    postItem.slug = slug
+    postItem.content = content
     // all the props written in the md file
     if (typeof data[field] !== 'undefined') {
-      //@ts-ignore
       postItem[field] = data[field]
     }
   })
@@ -71,9 +67,9 @@ export function getAllPosts(fields: any[], count: number = -1) {
   const posts = folders
     .filter((item) => isFolder(item))
     .map((slug) => getPostBySlug(slug, fields))
-    .filter((item) => item.slug !== TEST_BLOG_POST)
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-    .map((p) => ({ ...p, date: parseDate(p.date) }))
+    .filter((item) => item?.slug !== TEST_BLOG_POST)
+    .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1))
+    .map((p) => ({ ...p, date: parseDate(p!.date) }))
 
   return posts.splice(0, count > 0 ? count : posts.length)
 }

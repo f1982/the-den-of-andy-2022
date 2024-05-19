@@ -4,6 +4,7 @@ excerpt: 'Enhance your work-from-home setup with a custom 3D printed laptop stan
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
 date: '2024-05-18T05:35:07.322Z'
 keywords: '3D printed laptop stand, ergonomic desk setup, Ender 3 V2 projects, custom 3D printing, home office productivity, DIY laptop stand, PLA filament, Fusion 360 design, laptop stand STL file'
+status: 'draft'
 author:
   name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'

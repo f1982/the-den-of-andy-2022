@@ -13,8 +13,6 @@ ogImage:
 
 It’s another year in the blink of an eye, and I’m trying to summarize my experience of the year before the end of the last day of 2022
 
-![](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/2022-summary-on-cape-reinga-lighthouse.JPG.jpg)
-
 In the first half of the year, the theme of my previous work was to keep changing projects. As of October, I participated in 3 projects, 2 of them work with US team and 1 of them was working with Australia company, and learnt a lot of new (old) technologies.
 
 Around August-September, I thought about changing jobs. With the help of my friends, I passed the interview smoothly. I started my second job in NZ at the end of October. Great new work experience so far!

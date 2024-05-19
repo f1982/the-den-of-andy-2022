@@ -4,6 +4,7 @@ excerpt: 'Recently, I added some low maintenance succulent plants  onto my desk,
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
 date: '2020-10-06T05:35:07.322Z'
 keywords: 'small desk plants, plants on desk, best low maintenance house plants, mini succulent, fake desk plants, plant stand indoor, self watering pot 3d print, best office plants'
+status: 'published'
 author:
   name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
