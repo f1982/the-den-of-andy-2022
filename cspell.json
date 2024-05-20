@@ -17,5 +17,5 @@
     "Weibo"
   ],
   // Specify paths/files to ignore.
-  "ignorePaths": ["*.lock"]
+  "ignorePaths": ["*.lock", ".next/", ".out", "node_modules"]
 }
