@@ -26,19 +26,7 @@ export function generateStaticParams() {
  * @returns
  */
 async function getPost(slug: string): Promise<BlogPostData | null> {
-  const fields = [
-    'title',
-    'date',
-    'excerpt',
-    'slug',
-    'author',
-    'keywords',
-    'content',
-    'status',
-    'ogImage',
-    'coverImage',
-  ]
-  const post = getPostBySlug(slug, fields)
+  const post = getPostBySlug(slug)
   if (!post) {
     return null
   }
