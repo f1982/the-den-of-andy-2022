@@ -1,5 +1,6 @@
-import { localePrefix, locales, pathnames } from './i18n/i18n-config'
 import createMiddleware from 'next-intl/middleware'
+
+import { localePrefix, locales, pathnames } from './i18n/i18n-config'
 
 export default createMiddleware({
   // A list of all locales that are supported

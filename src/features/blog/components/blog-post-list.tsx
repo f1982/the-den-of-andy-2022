@@ -1,7 +1,8 @@
-import FormattedDate from '@/components/atoms/formatted-date'
 import clsx from 'clsx'
 import { StickyNote } from 'lucide-react'
 import Link from 'next/link'
+
+import FormattedDate from '@/components/atoms/formatted-date'
 
 const BlogPostList = ({ posts }) => (
   <ul className="flex flex-col gap-6">

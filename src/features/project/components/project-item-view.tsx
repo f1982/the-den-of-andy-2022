@@ -1,9 +1,13 @@
-import PlatformTag from './project-item-tag'
+import React from 'react'
+
+import Link from 'next/link'
+
 import FormattedDate from '@/components/atoms/formatted-date'
 import HoverScaleImage from '@/components/atoms/hover-scale-image'
+
 import { ProjectItemData } from '@/features/project/project-types'
-import Link from 'next/link'
-import React from 'react'
+
+import PlatformTag from './project-item-tag'
 
 const ProjectItemView: React.FC<ProjectItemData> = ({
   id,

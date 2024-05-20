@@ -1,12 +1,15 @@
+import React, { Suspense } from 'react'
+
+import { useTranslations } from 'next-intl'
+
 import PageRows from '@/components/atoms/page-rows'
 import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
+
 import { getAllPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
-import { useTranslations } from 'next-intl'
-import React, { Suspense } from 'react'
 
 async function PostCards() {
   const posts = getAllPosts([

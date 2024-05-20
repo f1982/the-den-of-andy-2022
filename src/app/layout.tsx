@@ -1,9 +1,12 @@
-import { siteMetadata } from '@/config/site-config'
+import React from 'react'
+
 import '@/global.css'
-import { AnalyticSettings } from '@/lib/analytics-settings'
 import clsx from 'clsx'
 import { Inter, Nunito } from 'next/font/google'
-import React from 'react'
+
+import { AnalyticSettings } from '@/lib/analytics-settings'
+
+import { siteMetadata } from '@/config/site-config'
 
 // const inter = Inter({ subsets: ['latin'] })
 const nunito = Nunito({ subsets: ['latin'] })

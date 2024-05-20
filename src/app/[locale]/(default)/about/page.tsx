@@ -1,11 +1,13 @@
+import { useTranslations } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
+import Image from 'next/image'
+
 import PageRows from '@/components/atoms/page-rows'
 import SmallText from '@/components/page/SmallText'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
+
 import { getAge } from '@/features/about/utils/date.utils'
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
-import Image from 'next/image'
 
 export default function About({ params: { locale } }) {
   unstable_setRequestLocale(locale)

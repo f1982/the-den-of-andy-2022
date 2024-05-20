@@ -1,20 +1,22 @@
-import PageRows from '@/components/atoms/page-rows'
-import PageHero from '@/components/page/hero-image'
-import ColumnHero from '@/components/page/hero-image-text'
-import SandwichHero from '@/components/page/hero-sandwich'
-import PageTitle from '@/components/page/page-title'
-import { Button } from '@/components/ui/button'
+import { useTranslations } from 'next-intl';
+
+import PageRows from '@/components/atoms/page-rows';
+import PageHero from '@/components/page/hero-image';
+import ColumnHero from '@/components/page/hero-image-text';
+import SandwichHero from '@/components/page/hero-sandwich';
+import PageTitle from '@/components/page/page-title';
+import { Button } from '@/components/ui/button';
+
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,
   RCPlanesAlbumURL,
   ThingiverseURL,
   YouTubeURL,
-} from '@/config/links'
-import { useTranslations } from 'next-intl'
+} from '@/config/links';
 
 const Hobbies = () => {
-  const t = useTranslations('hobbies')
+  const t = useTranslations('hobbies');
   return (
     <>
       <PageRows withMargin>
@@ -108,7 +110,7 @@ const Hobbies = () => {
         </div>
       </PageRows>
     </>
-  )
-}
+  );
+};
 
-export default Hobbies
+export default Hobbies;

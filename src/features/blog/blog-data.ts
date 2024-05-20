@@ -1,8 +1,9 @@
-import { BlogPostData } from './blog-types'
 import { format, parseISO } from 'date-fns'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
+
+import { BlogPostData } from './blog-types'
 
 export const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/content/posts')
 

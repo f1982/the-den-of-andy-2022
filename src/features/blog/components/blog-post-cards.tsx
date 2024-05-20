@@ -1,8 +1,12 @@
-import BlogPostItemView from './blog-post-item'
-import CardGrid from '@/components/atoms/card-grid'
-import { BLOG_PATH } from '@/config/menu-data'
-import { BlogPostData } from '@/features/blog/blog-types'
 import React from 'react'
+
+import CardGrid from '@/components/atoms/card-grid'
+
+import { BlogPostData } from '@/features/blog/blog-types'
+
+import { BLOG_PATH } from '@/config/menu-data'
+
+import BlogPostItemView from './blog-post-item'
 
 interface Props {
   posts: BlogPostData[]

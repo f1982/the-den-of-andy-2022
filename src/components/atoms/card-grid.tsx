@@ -1,5 +1,6 @@
-import clsx from 'clsx'
 import { PropsWithChildren } from 'react'
+
+import clsx from 'clsx'
 
 export default function CardGrid(props: PropsWithChildren) {
   return (

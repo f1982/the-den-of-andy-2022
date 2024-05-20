@@ -1,7 +1,9 @@
+import React from 'react'
+
+import Image from 'next/image'
+
 import Prose from '@/components/atoms/prose'
 import Tags from '@/components/atoms/tag-cloud'
-import Image from 'next/image'
-import React from 'react'
 
 interface LastProjectProps {
   subtitle?: string

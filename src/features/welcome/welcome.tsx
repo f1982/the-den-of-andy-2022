@@ -1,6 +1,8 @@
-import SVGAnimation from './logo-animation'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
+
+import SVGAnimation from './logo-animation'
 
 interface WelcomeProps {
   title: string

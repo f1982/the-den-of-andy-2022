@@ -1,9 +1,13 @@
-import PostBody from './blog-post-body'
-import FormattedDate from '@/components/atoms/formatted-date'
-import { BlogPostData } from '@/features/blog/blog-types'
+import React from 'react'
+
 import clsx from 'clsx'
 import Image from 'next/image'
-import React from 'react'
+
+import FormattedDate from '@/components/atoms/formatted-date'
+
+import { BlogPostData } from '@/features/blog/blog-types'
+
+import PostBody from './blog-post-body'
 
 const BlogPost: React.FC<BlogPostData> = ({
   title,

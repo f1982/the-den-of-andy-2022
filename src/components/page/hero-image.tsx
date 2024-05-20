@@ -1,6 +1,7 @@
+import React, { PropsWithChildren } from 'react'
+
 import clsx from 'clsx'
 import Image from 'next/image'
-import React, { PropsWithChildren } from 'react'
 
 interface PageHeroProps {
   image: string

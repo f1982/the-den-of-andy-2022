@@ -1,5 +1,6 @@
-import { YoutubeIcon } from 'lucide-react'
 import React from 'react'
+
+import { YoutubeIcon } from 'lucide-react'
 
 const ProjectWorkingOn: React.FC = () => (
   <div className="dark:text-red flex flex-col items-center text-center">

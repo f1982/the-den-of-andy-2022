@@ -1,8 +1,11 @@
+import { Suspense } from 'react'
+
+import { notFound } from 'next/navigation'
+
 import Spinner from '@/components/atoms/spinner'
+
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
-import { notFound } from 'next/navigation'
-import { Suspense } from 'react'
 
 export function generateStaticParams() {
   const posts = getProjects()

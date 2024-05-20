@@ -1,7 +1,10 @@
-import ProjectItemView from './project-item-view'
-import CardGrid from '@/components/atoms/card-grid'
-import { ProjectItemData } from '@/features/project/project-types'
 import React from 'react'
+
+import CardGrid from '@/components/atoms/card-grid'
+
+import { ProjectItemData } from '@/features/project/project-types'
+
+import ProjectItemView from './project-item-view'
 
 interface ProjectListProps {
   data: ProjectItemData[]

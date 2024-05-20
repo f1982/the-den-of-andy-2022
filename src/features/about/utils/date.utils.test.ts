@@ -1,5 +1,6 @@
-import { getAge } from './date.utils'
 import { expect, test } from 'vitest'
+
+import { getAge } from './date.utils'
 
 test('test gat age', () => {
   const age = getAge('2016-06-01')

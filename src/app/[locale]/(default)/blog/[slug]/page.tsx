@@ -1,11 +1,15 @@
+import { Suspense } from 'react'
+
 import markdownToHtml from '@//utils/markdownToHtml'
+import { notFound } from 'next/navigation'
+
+import Comments from '@/lib/comment/utteranc-comments'
+
 import Spinner from '@/components/atoms/spinner'
+
 import { getAllPosts, getPostBySlug } from '@/features/blog/blog-data'
 import { BlogPostData } from '@/features/blog/blog-types'
 import BlogPost from '@/features/blog/components/blog-post'
-import Comments from '@/lib/comment/utteranc-comments'
-import { notFound } from 'next/navigation'
-import { Suspense } from 'react'
 
 export function generateStaticParams() {
   const posts = getAllPosts([

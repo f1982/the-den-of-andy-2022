@@ -1,8 +1,10 @@
-import { SheetClose } from '@/components/ui/sheet'
+import React from 'react'
+
 import { usePathname } from '@/i18n/navigation'
 import clsx from 'clsx'
 import Link from 'next/link'
-import React from 'react'
+
+import { SheetClose } from '@/components/ui/sheet'
 
 export function NavMenuItem({
   link,

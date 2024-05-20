@@ -1,6 +1,7 @@
-import { locales } from './i18n/i18n-config'
 import { getRequestConfig } from 'next-intl/server'
 import { notFound } from 'next/navigation'
+
+import { locales } from './i18n/i18n-config'
 
 // Can be imported from a shared config
 

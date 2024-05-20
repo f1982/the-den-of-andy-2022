@@ -1,6 +1,8 @@
-import HoverScaleImage from '@/components/atoms/hover-scale-image'
-import Link from 'next/link'
 import React from 'react'
+
+import Link from 'next/link'
+
+import HoverScaleImage from '@/components/atoms/hover-scale-image'
 
 interface PostPreviewProps {
   title: string

@@ -1,7 +1,8 @@
+import React from 'react'
+
 import { MenuItemData } from '../header/menu-data'
 import { ExtraLinks } from './link-matrix'
 import SocialIconLinks from './social-icon-links'
-import React from 'react'
 
 type FooterProps = {
   logo?: React.ReactNode

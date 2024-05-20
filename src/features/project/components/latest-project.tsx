@@ -1,6 +1,8 @@
-import LatestProjectItemView from '@/features/project/components/latest-project-item'
-import { Link } from 'lucide-react'
 import React from 'react'
+
+import { Link } from 'lucide-react'
+
+import LatestProjectItemView from '@/features/project/components/latest-project-item'
 
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
