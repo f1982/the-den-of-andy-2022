@@ -9,7 +9,10 @@ import { BLOG_PATH } from '@/config/menu-data'
 import BlogPostItemView from './blog-post-item'
 
 interface Props {
-  posts: BlogPostData[]
+  posts: Pick<
+    BlogPostData,
+    'slug' | 'title' | 'date' | 'coverImage' | 'excerpt'
+  >[]
 }
 
 const BlogPosCards: React.FC<Props> = ({ posts }) => (

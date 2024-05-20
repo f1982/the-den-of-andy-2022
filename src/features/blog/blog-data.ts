@@ -18,7 +18,7 @@ function isFolder(filename) {
  * @param fields the data hash of single post
  * @returns
  */
-export function getPostBySlug(slug, fields: any[]) {
+export function getPostBySlug(slug): BlogPostData | null {
   // slug is the folder name
   // could add a zh-cn.md to contain other language content
   const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`)
@@ -29,28 +29,18 @@ export function getPostBySlug(slug, fields: any[]) {
   const { data, content } = matter(fileContents)
 
   const postItem: BlogPostData = {
-    slug: '',
-    title: '',
-    excerpt: '',
-    keywords: '',
+    slug: slug,
+    title: data['title'],
+    excerpt: data['excerpt'],
+    keywords: data['keywords'],
     author: {
-      name: '',
-      picture: '',
+      name: data['author']['name'],
+      picture: data['author']['picture'],
     },
-    content: '',
-    coverImage: '',
-    date: '',
+    content: content,
+    coverImage: data['coverImage'],
+    date: data['date'],
   }
-
-  fields.forEach((field) => {
-    postItem.slug = slug
-    postItem.content = content
-    // all the props written in the md file
-    if (typeof data[field] !== 'undefined') {
-      postItem[field] = data[field]
-    }
-  })
-
   return postItem
 }
 
@@ -63,14 +53,15 @@ function parseDate(dateStr: string) {
   return format(date, 'LLLL d, yyyy')
 }
 
-export function getAllPosts(fields: any[], count: number = -1) {
+export function getAllPosts(count: number = -1) {
   const folders = fs.readdirSync(BLOG_POST_DIRECTORY)
   const posts = folders
     .filter((item) => isFolder(item))
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug))
+    .filter((item) => Boolean(item))
     .filter((item) => item?.slug !== TEST_BLOG_POST)
     .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1))
-    .map((p) => ({ ...p, date: parseDate(p!.date) }))
+    .map((p) => ({ ...p, date: parseDate(p!.date) }) as BlogPostData)
 
   return posts.splice(0, count > 0 ? count : posts.length)
 }

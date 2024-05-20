@@ -12,14 +12,7 @@ import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
 async function PostCards() {
-  const posts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+  const posts = getAllPosts()
 
   return (
     <>
@@ -32,14 +25,7 @@ async function PostCards() {
   )
 }
 async function PostList() {
-  const posts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+  const posts = getAllPosts()
 
   return (
     <>

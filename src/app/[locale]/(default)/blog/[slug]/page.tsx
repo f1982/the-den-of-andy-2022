@@ -12,15 +12,7 @@ import { BlogPostData } from '@/features/blog/blog-types'
 import BlogPost from '@/features/blog/components/blog-post'
 
 export function generateStaticParams() {
-  const posts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'status',
-    'excerpt',
-  ])
+  const posts = getAllPosts()
   const slugs = posts.map((item) => {
     return {
       slug: item.slug,

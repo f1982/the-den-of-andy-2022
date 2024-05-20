@@ -1,5 +1,3 @@
-import { join } from 'path'
-
 export type AuthorData = {
   name: string
   picture: string
