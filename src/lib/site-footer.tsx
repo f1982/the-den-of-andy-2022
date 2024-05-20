@@ -1,8 +1,12 @@
-import Footer from '@/components/page/footer/footer'
-import { footerLinks, socialLinks } from '@/config/menu-data'
-import Logo from '@/lib/site-logo'
-import Link from 'next/link'
 import React from 'react'
+
+import Link from 'next/link'
+
+import Logo from '@/lib/site-logo'
+
+import Footer from '@/components/page/footer/footer'
+
+import { footerLinks, socialLinks } from '@/config/menu-data'
 
 export default function SiteFooter() {
   return (

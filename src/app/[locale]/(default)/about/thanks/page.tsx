@@ -1,9 +1,10 @@
-import PageRows from '@/components/atoms/page-rows'
-import PageHero from '@/components/page/hero-image'
-import PageTitle from '@/components/page/page-title'
 import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import Image from 'next/image'
+
+import PageRows from '@/components/atoms/page-rows'
+import PageHero from '@/components/page/hero-image'
+import PageTitle from '@/components/page/page-title'
 
 export default function Thanks({ params: { locale } }) {
   unstable_setRequestLocale(locale)

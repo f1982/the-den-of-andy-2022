@@ -1,5 +1,6 @@
-import { MenuItemData } from '../header/menu-data'
 import Link from 'next/link'
+
+import { MenuItemData } from '../header/menu-data'
 
 function SocialIconLinks({
   data,

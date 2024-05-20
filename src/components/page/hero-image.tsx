@@ -1,6 +1,7 @@
+import React, { PropsWithChildren } from 'react'
+
 import clsx from 'clsx'
 import Image from 'next/image'
-import React, { PropsWithChildren } from 'react'
 
 interface PageHeroProps {
   image: string
@@ -13,10 +14,13 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
 }) => {
   return (
     <div
-      className={clsx('flex flex-col items-center justify-center', className)}>
+      className={clsx(
+        'container flex flex-col items-center justify-center',
+        className,
+      )}>
       <Image
         src={image}
-        className="w-[100vw] object-contain md:max-h-[30vh] md:w-[50vw]"
+        className="aspect-square h-auto w-full object-contain md:aspect-video"
         alt=""
         width={800}
         height={600}

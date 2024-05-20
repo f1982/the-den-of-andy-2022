@@ -1,6 +1,7 @@
+import clsx from 'clsx'
+
 import { MenuItemData } from '../header/menu-data'
 import { FooterLinkItem } from './footer-link-item'
-import clsx from 'clsx'
 
 export const ExtraLinks = ({ data }: { data: MenuItemData[][] }) => {
   return (

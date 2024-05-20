@@ -1,7 +1,8 @@
 'use client'
 
-import useScript from '@/lib/hooks/useScript'
 import React, { useRef } from 'react'
+
+import useScript from '@/lib/hooks/useScript'
 
 const Comments: React.FC = () => {
   const comment = useRef(null)

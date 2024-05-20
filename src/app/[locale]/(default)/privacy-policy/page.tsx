@@ -1,5 +1,6 @@
-import Prose from '@/components/atoms/prose'
 import { useTranslations } from 'next-intl'
+
+import Prose from '@/components/atoms/prose'
 
 export default function AboutPage() {
   const t = useTranslations('AboutPage')

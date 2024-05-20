@@ -1,4 +1,3 @@
-import { SNSPlatforms } from '../types/links'
 import {
   Facebook,
   Instagram,
@@ -6,6 +5,8 @@ import {
   Twitter,
   YoutubeIcon,
 } from 'lucide-react'
+
+import { SNSPlatforms } from '../types/links'
 
 export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
 export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'

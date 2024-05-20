@@ -1,10 +1,11 @@
 'use client'
 
+import React from 'react'
+
 import { HeroData } from '@/types'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },
@@ -12,9 +13,9 @@ const containerVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.8,
-      type: 'tween',
-      staggerChildren: 1.6, // let the child show up by order after a certain delay
+      duration: 1.0,
+      type: 'liner',
+      staggerChildren: 0.6, // let the child show up by order after a certain delay
     },
   },
 }
@@ -29,8 +30,8 @@ const itemVariant = {
     y: 0,
   },
   transition: {
-    type: 'tween',
-    duration: 3.0,
+    type: 'liner',
+    // duration: 1.3,
   },
 }
 
@@ -57,16 +58,20 @@ const SandwichHero: React.FC<HeroData> = ({
     whileInView="show"
     viewport={{ once: viewPortOnce }}
     id={id}>
-    <Image
+    <motion.div
       className={clsx('mx-auto mb-9 w-5/6 md:w-1/2')}
-      width={800}
-      height={600}
-      alt="hero"
-      src={image}
-    />
+      variants={itemVariant}>
+      <Image width={800} height={600} alt="hero" src={image} />
+    </motion.div>
     <div className="prose-md prose mx-auto w-full max-w-none dark:prose-invert">
-      <h2 className="text-center">{title}</h2>
-      {subtitle && <h4 className="text-center">{subtitle}</h4>}
+      <motion.h2 variants={itemVariant} className="text-center">
+        {title}
+      </motion.h2>
+      {subtitle && (
+        <motion.h4 variants={itemVariant} className="text-center">
+          {subtitle}
+        </motion.h4>
+      )}
       <motion.p variants={itemVariant}>{description}</motion.p>
       <motion.div variants={itemVariant} className="flex justify-center">
         {buttons}

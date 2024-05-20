@@ -1,16 +1,20 @@
+import React from 'react'
+
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import PageRows from '@/components/atoms/page-rows'
 import Prose from '@/components/atoms/prose'
 import PageHero from '@/components/page/hero-image'
 import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
+
+import LatestProjectItemView from '@/features/project/components/latest-project-item'
+import ProjectWorkingOn from '@/features/project/components/project-working-on'
+
 import { YouTubeURL } from '@/config/links'
 import { siteMetadata } from '@/config/site-config'
-import LatestProjectItem from '@/features/project/components/latest-project-item'
-import ProjectWorkingOn from '@/features/project/components/project-working-on'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
 
 export const metadata = { ...siteMetadata }
 
@@ -26,7 +30,7 @@ const LastProjects: React.FC = () => {
         <p>{t('p2.description')}</p>
       </Prose>
       <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
-        <LatestProjectItem
+        <LatestProjectItemView
           title="My desktop setups for WFH 2022"
           cover={LatestProjectImageURL}
           description="Last year, I was WFH for most of time, that made me to reconsider my desktop setups and working environment at  I did some research, DIY some gadgets, bought some LED strips, two monitors, monitor stands, mechanical keyboard and new mouse. Iteratively to change the layout and re-organize the cables. It was a such great time to rethinking how the setups and arrangements can affect my daily work and productivity."
@@ -72,14 +76,7 @@ const Home: React.FC = () => {
   return (
     <>
       <PageRows withMargin>
-        <Image
-          src="/static/images/page-hero-workspace.png"
-          className="mx-auto w-[100vw] object-contain md:max-h-[40vh] md:w-[60vw]"
-          alt=""
-          width={800}
-          height={600}
-        />
-
+        <PageHero image="/static/images/page-hero-workspace.png" />
         <div className="container">
           <SandwichHero
             className="mb-16 md:mb-24"

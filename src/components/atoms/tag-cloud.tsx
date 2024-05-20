@@ -1,5 +1,6 @@
-import clsx from 'clsx'
 import React from 'react'
+
+import clsx from 'clsx'
 
 // TODO: add new styles for the tags, for example: skill tag and platform tag
 interface TagsProps {

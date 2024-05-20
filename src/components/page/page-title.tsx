@@ -1,5 +1,6 @@
-import Prose from '@/components/atoms/prose'
 import React from 'react'
+
+import Prose from '@/components/atoms/prose'
 
 interface PageTitleProps {
   title: string

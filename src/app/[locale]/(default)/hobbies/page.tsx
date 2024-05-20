@@ -1,10 +1,12 @@
-import postImage from '@/assets/Ghost--Streamline-Retro.svg'
+import { useTranslations } from 'next-intl'
+
 import PageRows from '@/components/atoms/page-rows'
 import PageHero from '@/components/page/hero-image'
 import ColumnHero from '@/components/page/hero-image-text'
 import SandwichHero from '@/components/page/hero-sandwich'
 import PageTitle from '@/components/page/page-title'
 import { Button } from '@/components/ui/button'
+
 import {
   DrawingAlbumURL,
   RCDevicesAlbumURL,
@@ -12,22 +14,13 @@ import {
   ThingiverseURL,
   YouTubeURL,
 } from '@/config/links'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 
 const Hobbies = () => {
   const t = useTranslations('hobbies')
   return (
     <>
       <PageRows withMargin>
-        {/* <PageHero image="/static/images/page-hero-hobby.png" /> */}
-        <Image
-          className="mx-auto w-[100vw] object-contain md:max-h-[30vh] md:w-[50vw]"
-          src="/static/images/Space_discovery_--5ec7b87401d0360014d4e3c7.png"
-          width={1000}
-          height={500}
-          alt=""
-        />
+        <PageHero image="/static/images/Space_discovery_--5ec7b87401d0360014d4e3c7.png" />
         <div className="container">
           <PageTitle title={t('headline')} description={t('intro')} />
         </div>

@@ -1,5 +1,6 @@
-import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import { useState } from 'react'
+
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 const Apps = ({ rotation }) => (
   <h1

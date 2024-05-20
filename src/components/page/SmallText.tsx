@@ -1,8 +1,9 @@
 'use client'
 
+import React from 'react'
+
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
 
 const containerVariant = {
   hidden: { opacity: 0, y: 100 },

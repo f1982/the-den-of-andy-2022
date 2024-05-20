@@ -1,7 +1,9 @@
-import Tags from '@/components/atoms/tag-cloud'
-import Prose from '@/components/atoms/prose'
-import Image from 'next/image'
 import React from 'react'
+
+import Image from 'next/image'
+
+import Prose from '@/components/atoms/prose'
+import Tags from '@/components/atoms/tag-cloud'
 
 interface LastProjectProps {
   subtitle?: string
@@ -11,7 +13,7 @@ interface LastProjectProps {
   description?: string
 }
 
-const LatestProjectItem: React.FC<LastProjectProps> = ({
+const LatestProjectItemView: React.FC<LastProjectProps> = ({
   subtitle,
   title,
   cover,
@@ -42,4 +44,4 @@ const LatestProjectItem: React.FC<LastProjectProps> = ({
   </div>
 )
 
-export default LatestProjectItem
+export default LatestProjectItemView

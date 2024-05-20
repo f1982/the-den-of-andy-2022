@@ -1,16 +1,11 @@
 import { Metadata } from 'next'
+
 import { Robots } from 'next/dist/lib/metadata/types/metadata-types'
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types'
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types'
 
-export const HOME_OG_IMAGE_URL =
-  'https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg'
-export const PROJECT_IMAGE_URL = '/static/images/project'
-
 export const siteHostname = 'andycao.me'
 export const siteUrl = `https://${siteHostname}`
-
-export const GoogleAnalyticsID = 'G-QSHYKJVT4S'
 
 export const siteSettings = {
   name: 'The Den of Andy C',
@@ -91,3 +86,5 @@ export const siteMetadata: Metadata = {
     },
   },
 }
+
+export const GoogleAnalyticsID = 'G-QSHYKJVT4S'

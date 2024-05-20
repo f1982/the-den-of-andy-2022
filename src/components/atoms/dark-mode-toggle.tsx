@@ -1,7 +1,8 @@
 'use client'
 
-import { MoonStar, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
+
+import { MoonStar, Sun } from 'lucide-react'
 
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState<string>('off')
