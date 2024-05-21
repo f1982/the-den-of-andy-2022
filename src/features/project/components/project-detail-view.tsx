@@ -40,11 +40,9 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
           <span> - </span>
           <FormattedDate date={end} />
         </div>
-        {platform && (
-          <div className="mb-4">
-            <PlatformTag text={platform} />
-          </div>
-        )}
+        <div className="mb-4">
+          <PlatformTag text={platform} />
+        </div>
       </div>
       <LandscapeHero text="" image={cover} />
       <div className="container mx-auto">

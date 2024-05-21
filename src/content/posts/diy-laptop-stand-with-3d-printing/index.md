@@ -1,7 +1,7 @@
 ---
 title: 'Elevate Your Workspace: DIY Aesthetic, Balancing Laptop Stand with 3D Printing'
 excerpt: 'Enhance your work-from-home setup with a custom 3D printed laptop stand, designed and printed using the Ender 3 V2 3D printer. This project not only adds style to your desk but also improves productivity by providing an ergonomic viewing angle. Learn how to design, print, and customize your own stand.'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
+coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/SCR-20240521-sugi.png'
 date: '2024-05-18T05:35:07.322Z'
 keywords: '3D printed laptop stand, ergonomic desk setup, Ender 3 V2 projects, custom 3D printing, home office productivity, DIY laptop stand, PLA filament, Fusion 360 design, laptop stand STL file'
 status: 'draft'
@@ -9,10 +9,12 @@ author:
   name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
-  url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/succulent_62b361edgy1h40or8aud1j21401e0tfo.jpg'
+  url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/SCR-20240521-sugi.png'
 ---
 
 Say hello to the latest addition to my workspace: an elegant 3D printed laptop stand that I designed, and printed by my Ender 3 v2 3D printer.
+
+![](https://raw.githubusercontent.com/f1982/planet-of-images/main/SCR-20240521-sugi.png)
 
 This project not only adds some new style to my desk but also boosts some level of my productivity by providing a more ergonomic viewing angle for my laptop.
 

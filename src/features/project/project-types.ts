@@ -1,12 +1,3 @@
-export interface MenuItemObject {
-  name: string
-  link?: string
-  index: number
-}
-
-/**
- * Project Value Object
- */
 export interface ProjectItemData {
   id: string
   title: string

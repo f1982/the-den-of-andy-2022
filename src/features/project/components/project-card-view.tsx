@@ -9,7 +9,7 @@ import { ProjectItemData } from '@/features/project/project-types'
 
 import PlatformTag from './project-item-tag'
 
-const ProjectItemView: React.FC<ProjectItemData> = ({
+const ProjectCardView: React.FC<ProjectItemData> = ({
   id,
   title,
   description,
@@ -24,7 +24,7 @@ const ProjectItemView: React.FC<ProjectItemData> = ({
       <div className="relative mb-3">
         <HoverScaleImage src={cover} alt={title}></HoverScaleImage>
         <div className="absolute bottom-3 right-3">
-          {platform && <PlatformTag text={platform} />}
+          <PlatformTag text={platform} />
         </div>
       </div>
       <h3 className="line-clamp-1 font-semibold">{title}</h3>
@@ -36,4 +36,4 @@ const ProjectItemView: React.FC<ProjectItemData> = ({
   </Link>
 )
 
-export default ProjectItemView
+export default ProjectCardView

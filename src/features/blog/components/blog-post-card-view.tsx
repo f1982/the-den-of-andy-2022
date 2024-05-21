@@ -11,7 +11,7 @@ interface PostPreviewProps {
   url: string
 }
 
-const BlogPostItemView: React.FC<PostPreviewProps> = ({
+const BlogPostCardView: React.FC<PostPreviewProps> = ({
   title,
   imageUrl,
   date,
@@ -27,4 +27,4 @@ const BlogPostItemView: React.FC<PostPreviewProps> = ({
   </Link>
 )
 
-export default BlogPostItemView
+export default BlogPostCardView
