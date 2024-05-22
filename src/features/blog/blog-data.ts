@@ -3,6 +3,8 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
 
+import markdownToHtml from '@/utils/markdownToHtml'
+
 import { BlogPostData } from './blog-types'
 
 const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/content/posts')
@@ -18,7 +20,7 @@ function isFolder(filename: string) {
 /**
  * get a single post info from md file and the folder name
  */
-export function getPostBySlug(slug): BlogPostData | null {
+export async function getPostDetail(slug: string) {
   // slug is the folder name
   // could add a zh-cn.md to contain other language content
   const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`)
@@ -27,6 +29,8 @@ export function getPostBySlug(slug): BlogPostData | null {
   }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
+  const htmlContent = await markdownToHtml(content)
+  // console.log('htmlContent', htmlContent)
 
   const postItem: BlogPostData = {
     slug: slug,
@@ -37,7 +41,7 @@ export function getPostBySlug(slug): BlogPostData | null {
       name: data['author']['name'],
       picture: data['author']['picture'],
     },
-    content: content,
+    content: htmlContent,
     coverImage: data['coverImage'],
     date: data['date'],
   }
@@ -49,13 +53,22 @@ function parseDate(dateStr: string) {
   return format(date, 'LLLL d, yyyy')
 }
 
-export function getAllPosts(count: number = -1) {
+export async function getPosts(count: number = -1) {
   const folders = fs.readdirSync(BLOG_POST_DIRECTORY)
-  const posts = folders
-    .filter((item) => isFolder(item))
-    .map((slug) => getPostBySlug(slug))
-    .filter((item) => Boolean(item))
+  const postFolders = folders.filter((item) => isFolder(item))
+
+  let posts = await Promise.all(
+    postFolders.map(async (slug) => {
+      const detail = await getPostDetail(slug)
+      if (detail !== null) {
+        return detail
+      }
+    }),
+  )
+
+  posts
     .filter((item) => item?.slug !== TEST_BLOG_POST)
+    .filter((item) => !!item)
     .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1))
     .map((p) => ({ ...p, date: parseDate(p!.date) }) as BlogPostData)
   return posts.splice(0, count > 0 ? count : posts.length)

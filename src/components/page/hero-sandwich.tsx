@@ -59,7 +59,7 @@ const SandwichHero: React.FC<HeroData> = ({
     viewport={{ once: viewPortOnce }}
     id={id}>
     <motion.div
-      className={clsx('mx-auto mb-9 w-5/6 md:w-1/2')}
+      className={clsx('mx-auto mb-6 w-4/5 md:max-w-80')}
       variants={itemVariant}>
       <Image width={800} height={600} alt="hero" src={image} />
     </motion.div>

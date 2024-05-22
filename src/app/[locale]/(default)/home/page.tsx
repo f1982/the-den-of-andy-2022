@@ -99,10 +99,10 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <LastProjects />
-        <ProjectWorkingOn />
+        {/* <LastProjects /> */}
+        {/* <ProjectWorkingOn /> */}
 
-        <YouTubeChannelSection />
+        {/* <YouTubeChannelSection /> */}
       </PageRows>
     </>
   )

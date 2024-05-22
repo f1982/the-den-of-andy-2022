@@ -23,21 +23,19 @@ const BlogPost: React.FC<BlogPostData> = ({
       </div>
     </div>
 
-    <div className="container mb-12 mt-[-180px] max-w-6xl">
-      {coverImage && (
-        <Image
-          src={coverImage}
-          className={clsx(
-            'aspect-video w-full rounded-lg bg-card object-cover',
-          )}
-          width={500}
-          height={300}
-          alt={title!}
-        />
-      )}
+    <div className="container mb-12 mt-[-180px] max-w-5xl">
+      <Image
+        src={coverImage}
+        className={clsx(
+          'aspect-video w-full rounded-lg bg-card object-cover shadow-2xl',
+        )}
+        width={500}
+        height={300}
+        alt={title!}
+      />
     </div>
 
-    <div className="container">
+    <div className="container max-w-3xl">
       <article
         className="prose-md prose mx-auto max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
