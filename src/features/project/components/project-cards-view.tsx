@@ -14,7 +14,14 @@ const ProjectCardsView: React.FC<ProjectListProps> = ({ data }) => {
   return (
     <CardGrid>
       {data.map((item) => (
-        <ProjectCardView key={item.id} {...item} />
+        <ProjectCardView
+          key={item.id}
+          cover={item.cover}
+          start={item.start}
+          title={item.title}
+          platform={item.platform}
+          url={`/project/${item.id}`}
+        />
       ))}
     </CardGrid>
   )

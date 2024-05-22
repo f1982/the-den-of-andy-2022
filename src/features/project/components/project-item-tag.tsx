@@ -4,8 +4,8 @@ const PlatformTag: React.FC<{ text: string }> = ({ text }) => (
   <span
     className="
       right-12 top-3
-      rounded-lg
-      bg-card
+      rounded-sm
+      bg-popover
       px-2
       py-0.5 text-sm font-semibold
       tracking-widest text-secondary-foreground

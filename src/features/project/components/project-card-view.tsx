@@ -9,29 +9,32 @@ import { ProjectItemData } from '@/features/project/project-types'
 
 import PlatformTag from './project-item-tag'
 
-const ProjectCardView: React.FC<ProjectItemData> = ({
-  id,
+interface ProjectCardViewProps {
+  url: string
+  title: string
+  cover: string
+  start: string
+  platform: string
+}
+const ProjectCardView: React.FC<ProjectCardViewProps> = ({
+  url,
   title,
-  description,
   cover,
   start,
-  type,
   platform,
-  tech,
 }) => (
-  <Link key={id} href={`/project/${id}`} passHref legacyBehavior>
-    <div className="cursor-pointer">
-      <div className="relative mb-3">
+  <Link key={url} href={url} passHref legacyBehavior>
+    <div className="flex cursor-pointer flex-col gap-3">
+      <div className="relative">
         <HoverScaleImage src={cover} alt={title}></HoverScaleImage>
         <div className="absolute bottom-3 right-3">
           <PlatformTag text={platform} />
         </div>
       </div>
-      <h3 className="line-clamp-1 font-semibold">{title}</h3>
-      <p className="line-clamp-2 text-sm text-muted-foreground">
-        {description}
-      </p>
-      <FormattedDate className="text-xs text-muted-foreground" date={start} />
+      <div className="pl-2">
+        <h3 className="line-clamp-1 font-semibold">{title}</h3>
+        <FormattedDate className="text-xs text-muted-foreground" date={start} />
+      </div>
     </div>
   </Link>
 )

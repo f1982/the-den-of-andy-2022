@@ -35,14 +35,14 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
   return (
     <>
       <div className="mx-auto mb-3 mt-6 flex h-96 w-full flex-col justify-start gap-9 bg-secondary py-12">
-        <div className="container mx-auto mb-8">
-          <h1 className="text-3xl font-bold">{title}</h1>
-          <div className="mb-4">
+        <div className="container mx-auto flex flex-col gap-3">
+          <div>
             <FormattedDate date={start} />
             <span> - </span>
             <FormattedDate date={end} />
           </div>
-          <div className="mb-4">
+          <h1 className="text-3xl font-bold">{title}</h1>
+          <div>
             <PlatformTag text={platform} />
           </div>
         </div>
@@ -55,8 +55,8 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
             'aspect-video w-full rounded-lg bg-card object-cover',
             'shadow-2xl',
           )}
-          width={500}
-          height={300}
+          width={800}
+          height={600}
           alt={title!}
         />
       </div>
