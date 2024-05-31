@@ -39,7 +39,6 @@ const BlogPostDetail = async ({ slug }: { slug: string }) => {
   return (
     <>
       <BlogPost {...post} />
-      <Comments />
     </>
   )
 }
@@ -47,12 +46,11 @@ const BlogPostDetail = async ({ slug }: { slug: string }) => {
 export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <>
-      <div className="container mx-auto mt-3 flex">
-        <div className="flex-1" />
-      </div>
       <Suspense fallback={<Spinner />}>
         <BlogPostDetail slug={params.slug} />
       </Suspense>
+
+      <div className="my-24" />
 
       <Comments />
     </>
