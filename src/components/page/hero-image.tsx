@@ -20,7 +20,10 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
       )}>
       <Image
         src={image}
-        className="aspect-square h-auto w-full object-contain md:aspect-video"
+        className={clsx(
+          'aspect-square h-auto w-full object-contain md:aspect-video',
+          className,
+        )}
         alt=""
         width={800}
         height={600}

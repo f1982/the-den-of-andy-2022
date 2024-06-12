@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import PageRows from '@/components/atoms/page-rows'
@@ -11,7 +10,6 @@ import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 
 import LatestProjectItemView from '@/features/project/components/latest-project-item'
-import ProjectWorkingOn from '@/features/project/components/project-working-on'
 
 import { YouTubeURL } from '@/config/links'
 import { siteMetadata } from '@/config/site-config'

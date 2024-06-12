@@ -13,6 +13,9 @@ import BlogPostList from '@/features/blog/components/blog-post-list'
 
 async function PostCards() {
   const posts = await getPosts()
+  if (!posts) {
+    return null
+  }
 
   return (
     <>

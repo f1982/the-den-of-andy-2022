@@ -57,18 +57,17 @@ export async function getPosts(count: number = -1) {
   const folders = fs.readdirSync(BLOG_POST_DIRECTORY)
   const postFolders = folders.filter((item) => isFolder(item))
 
-  let posts = await Promise.all(
-    postFolders.map(async (slug) => {
-      const detail = await getPostDetail(slug)
-      if (detail !== null) {
-        return detail
-      }
-    }),
-  )
+  let posts: BlogPostData[] = (
+    await Promise.all(
+      postFolders.map(async (slug) => {
+        return await getPostDetail(slug)
+      }),
+    )
+  ).filter((item): item is BlogPostData => item !== null)
 
   posts
     .filter((item) => item?.slug !== TEST_BLOG_POST)
-    .filter((item) => !!item)
+    .filter((item) => item as BlogPostData)
     .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1))
     .map((p) => ({ ...p, date: parseDate(p!.date) }) as BlogPostData)
   return posts.splice(0, count > 0 ? count : posts.length)

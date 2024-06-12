@@ -28,7 +28,7 @@ export default function HoverScaleImage({
       <div
         className={clsx(
           'absolute inset-0 z-10',
-          'bg-primary/20',
+          'bg-black/30',
           'pointer-events-none',
         )}></div>
     </div>
