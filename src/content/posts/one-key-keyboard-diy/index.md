@@ -2,7 +2,7 @@
 title: 'DIY One-Key Keyboard with Breathing LED'
 excerpt: 'Learn how to build a custom one-key keyboard with a breathing LED light using an Arduino Pro Micro and 3D printing. This project combines functionality and aesthetics, enhancing your workspace with a personalized touch. Follow our comprehensive guide for an easy and enjoyable DIY experience.'
 coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-after-assembly.jpg'
-date: '2024-06-11T10:00:00.000Z'
+date: '2024-06-14T12:00:00.000Z'
 keywords: 'DIY one-key keyboard project, custom mechanical keyboard tutorial, Arduino Pro Micro keyboard project, breathing LED light effect, 3D printed keyboard case, personalized keyboard for Raycast, simple keyboard soldering guide'
 status: 'publish'
 author:

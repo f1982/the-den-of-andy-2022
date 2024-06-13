@@ -1,6 +1,7 @@
 import { format, parseISO } from 'date-fns'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { orderBy } from 'lodash'
 import { join } from 'path'
 
 import markdownToHtml from '@/utils/markdownToHtml'
@@ -65,10 +66,10 @@ export async function getPosts(count: number = -1) {
     )
   ).filter((item): item is BlogPostData => item !== null)
 
+  posts = orderBy(posts, (post) => new Date(post.date).getTime(), 'desc')
   posts
     .filter((item) => item?.slug !== TEST_BLOG_POST)
     .filter((item) => item as BlogPostData)
-    .sort((post1, post2) => (post1!.date > post2!.date ? -1 : 1))
-    .map((p) => ({ ...p, date: parseDate(p!.date) }) as BlogPostData)
+
   return posts.splice(0, count > 0 ? count : posts.length)
 }
