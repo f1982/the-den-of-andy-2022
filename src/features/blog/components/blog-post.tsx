@@ -7,8 +7,6 @@ import FormattedDate from '@/components/atoms/formatted-date'
 
 import { BlogPostData } from '@/features/blog/blog-types'
 
-import PostBody from './blog-post-body'
-
 const BlogPost: React.FC<BlogPostData> = ({
   title,
   date,
@@ -25,24 +23,23 @@ const BlogPost: React.FC<BlogPostData> = ({
       </div>
     </div>
 
-    <div className="container mb-12 mt-[-180px] max-w-6xl">
-      {coverImage && (
-        <Image
-          src={coverImage}
-          className={clsx(
-            'aspect-video w-full rounded-lg bg-card object-cover',
-            // 'animate-fade-in',
-          )}
-          width={500}
-          height={300}
-          alt={title!}
-        />
-      )}
+    <div className="container mb-12 mt-[-180px] max-w-5xl">
+      <Image
+        src={coverImage}
+        className={clsx(
+          'aspect-video w-full rounded-lg bg-card object-cover shadow-2xl',
+        )}
+        width={500}
+        height={300}
+        alt={title!}
+      />
     </div>
 
-    {/* <div className="my-9 w-full border-b border-border"></div> */}
-    <div className="container">
-      <PostBody content={content} />
+    <div className="container max-w-3xl">
+      <article
+        className="prose-md prose mx-auto max-w-none dark:prose-invert"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </div>
   </>
 )

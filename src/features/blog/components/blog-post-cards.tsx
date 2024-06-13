@@ -6,7 +6,7 @@ import { BlogPostData } from '@/features/blog/blog-types'
 
 import { BLOG_PATH } from '@/config/menu-data'
 
-import BlogPostItemView from './blog-post-item'
+import BlogPostCardView from './blog-post-card-view'
 
 interface Props {
   posts: Pick<
@@ -18,7 +18,7 @@ interface Props {
 const BlogPosCards: React.FC<Props> = ({ posts }) => (
   <CardGrid>
     {posts.map((post) => (
-      <BlogPostItemView
+      <BlogPostCardView
         key={post.slug}
         title={post.title}
         imageUrl={post.coverImage}

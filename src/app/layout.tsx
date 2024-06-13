@@ -8,12 +8,8 @@ import { AnalyticSettings } from '@/lib/analytics-settings'
 
 import { siteMetadata } from '@/config/site-config'
 
-// const inter = Inter({ subsets: ['latin'] })
-const nunito = Nunito({ subsets: ['latin'] })
-
-// export function generateStaticParams() {
-//   return locales.map((locale) => ({ locale }))
-// }
+const inter = Inter({ subsets: ['latin'] })
+// const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   ...siteMetadata,
@@ -38,7 +34,7 @@ export default function RootLayout({
           'bg-background text-foreground',
           'flex min-h-screen flex-col',
           'antialiased',
-          nunito.className,
+          inter.className,
         )}>
         {children}
         <AnalyticSettings />

@@ -1,13 +1,15 @@
 import fs from 'fs'
 import { join } from 'path'
 
+import { ProjectItemData } from './project-types'
+
 export const PROJECT_IMAGE_URL = '/static/images/project'
 export const projectDataPath = join(process.cwd(), 'src/content/projects.json')
 
 export function getProjects() {
   const fileContents = fs.readFileSync(projectDataPath, 'utf8')
   const json = JSON.parse(fileContents)
-  const pjs = json.data.projects
+  const pjs: ProjectItemData[] = json.data.projects
   return pjs.map((p) => {
     return {
       ...p,

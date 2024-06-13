@@ -7,12 +7,15 @@ import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
 
-import { getAllPosts } from '@/features/blog/blog-data'
+import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
 async function PostCards() {
-  const posts = getAllPosts()
+  const posts = await getPosts()
+  if (!posts) {
+    return null
+  }
 
   return (
     <>
@@ -25,7 +28,7 @@ async function PostCards() {
   )
 }
 async function PostList() {
-  const posts = getAllPosts()
+  const posts = await getPosts()
 
   return (
     <>

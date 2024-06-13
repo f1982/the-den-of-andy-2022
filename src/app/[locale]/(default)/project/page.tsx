@@ -7,12 +7,12 @@ import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
 
-import ProjectListView from '@/features/project/components/project-list-view'
+import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
 
 async function ProjectList() {
   const projects = await getProjects()
-  return <ProjectListView data={projects} />
+  return <ProjectCardsView data={projects} />
 }
 
 export default async function Page() {
