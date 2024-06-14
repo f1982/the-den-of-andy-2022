@@ -14,7 +14,9 @@ ogImage:
 
 Say hello to the latest addition to my workspace: an elegant 3D printed laptop stand that I designed recently, and printed by my old friend, Ender 3 v2 3D printer.
 
-![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/laptop-stand-3d-printed-show-side.png)
+I make a YouTube video for the whole making process, if you're interested, you can check it out [HERE](https://youtu.be/Hl9b0ICobAQ).
+
+I record the whole building process video, you can watch on [YouTube](https://www.youtube.com/watch?v=Hl9b0ICobAQ)
 
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/diy-laptop-stand-top-view.png)
 
@@ -23,8 +25,6 @@ Say hello to the latest addition to my workspace: an elegant 3D printed laptop s
 I believe this stand not only adds some new style to my desk but also boosts some level of my productivity by providing a more ergonomic viewing angle for my laptop.
 
 I've used the stand for a while, and it works perfectly.
-
-I make a YouTube video for the whole making process, if you're interested, you can check it out [HERE](https://youtu.be/Hl9b0ICobAQ).
 
 ## Why?
 
@@ -125,7 +125,7 @@ Overall it’s pretty good!
 
 While the stand's looking beautiful and ease of printing, I must admit that it could be not stable enough in certain situations.
 
-However, with a few modifications, it's easy to customise the stand to suit individual preferences and requirements.
+However, with a few modifications, it's easy to customize the stand to suit individual preferences and requirements.
 
 Download the STL file provided below if you want to print one for yourself, you can also download the step file to modify the shapes and dimensions of the stand to create your own version.
 
@@ -134,3 +134,10 @@ If you have any idea to improve the design please let me know.
 ![from back](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/laptop-stand-3d-printed-show-back.png)
 
 ![stop motion animation](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/stand-rotation.gif)
+
+
+## Useful Links
+
+- Download stl files on Printable: [Printable](https://www.printables.com/model/904932-simplistic-laptop-stand)
+
+- Download stl files on Thingiverse: [Thingiverse](https://www.thingiverse.com/thing:5026832)
