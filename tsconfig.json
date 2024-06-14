@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -23,20 +19,19 @@
         "name": "next"
       }
     ],
-    "types": [
-      "vitest/globals"
-    ],
-    "strictNullChecks": true
+    "types": ["vitest/globals"],
+    "strictNullChecks": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
+
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts",
+    "src/app/[locale]/not-found.jsx"
   ],
-  "exclude": [
-    "node_modules",
-    "tests/e2e",
-    "tools"
-  ]
+  "exclude": ["node_modules", "tests/e2e", "tools"]
 }
