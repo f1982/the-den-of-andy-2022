@@ -3,7 +3,7 @@
  * @param dateString input birth date with string format
  * @returns
  */
-export function getAge(dateString) {
+export function getAge(dateString: string) {
   const today = new Date()
   const birthDate = new Date(dateString)
   let age = today.getFullYear() - birthDate.getFullYear()
