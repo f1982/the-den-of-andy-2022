@@ -12,19 +12,9 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "export": "next build && next export",
-    "clean": "rm -rf node_modules && rm package-lock.json",
     "lint": "next lint",
     "test": "vitest",
-    "pre:e2e": "next build && next-sitemap && next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.4",
