@@ -12,12 +12,15 @@ ogImage:
   url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-after-assembly.jpg'
 ---
 
-YouTube Video: [Here](https://youtu.be/HUIpZMjjqk4)
+Click to see the building process video on [YouTube](https://www.youtube.com/watch?v=HUIpZMjjqk4):
+
+[![DIY an One key keyboard YouTube video](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-connect-to-laptop.jpg)](https://www.youtube.com/watch?v=HUIpZMjjqk4)
+
 ## Why Build This?
 
 I use Raycast almost every day and wanted a dedicated one-key keyboard for it. With various micro controllers, key switches, and a 3D printer in hand, creating one seemed straightforward. 
 
-My goal was to design a keyboard that looks good and is simple.
+My goal was to design a keyboard that looks good and is simple. I will open source all the materials and stl files below in case you want to make one too.
 
 ## Materials
 
@@ -78,8 +81,6 @@ Next, I started working on the hardware wiring. This project only requires few s
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-key-switch.jpg)
 
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-after-assembly.jpg)
-
-![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-connect-to-laptop.jpg)
 
 ## Coding
 
@@ -208,3 +209,9 @@ Be aware that some macOS shortcut keys don’t support F20 to F24. Keys F1 to F1
 Initially I was planning to use it to launch Raycast, but after a few days playing around with it, I started to use it to trigger confetti, purely for fun and useless, but who doesn't like fun stuffs.
 
 ![](https://raw.githubusercontent.com/f1982/planet-of-images/main/ac/one-key-keyboard-confetti.jpg)
+
+## Useful Links
+
+- Download source code and design files of this project on Github: [Github](https://github.com/f1982/diy-onekey-mechanical-keyboard)
+- Project on **Printable**: [One-Key Keyboard with Breathing LED](https://www.printables.com/model/910260-one-key-keyboard-with-breathing-led)
+- Project on **Thingiverse**: [One-Key Keyboard with Breathing LED](https://www.thingiverse.com/thing:6660141)

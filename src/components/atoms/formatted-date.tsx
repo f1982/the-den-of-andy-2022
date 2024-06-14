@@ -1,10 +1,6 @@
 import clsx from 'clsx'
-import { format, parseISO } from 'date-fns'
 
-function parseDate(dateStr: string) {
-  const date = parseISO(dateStr)
-  return format(date, 'LLLL d, yyyy')
-}
+import { parseDate } from '@/utils/utils'
 
 const FormattedDate = ({
   date,
