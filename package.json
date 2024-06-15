@@ -15,7 +15,8 @@
     "lint": "next lint",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
-    "release": "standard-version"
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
