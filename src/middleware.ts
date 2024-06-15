@@ -1,10 +1,10 @@
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
-// match(languages, locales, defaultLocale) // -> 'en-US'
 import { NextResponse } from 'next/server'
 
 let defaultLocale = 'en'
 
+// Before add new language, need to check the accept-language
 let locales = ['en', 'zh-CN']
 
 // Get the preferred locale, similar to the above or using a library
@@ -33,8 +33,10 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next).*)',
+    // Skip all internal paths (_next) and public folder
+    // https://github.com/vercel/next.js/discussions/36308#discussioncomment-3758041
+    // .*\\..* matches "url.extension"
+    '/((?!api|static|.*\\..*|_next).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],

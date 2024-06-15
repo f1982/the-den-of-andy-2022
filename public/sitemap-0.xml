@@ -1,75 +1,440 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://andycao.me/en/term-and-conditions</loc><lastmod>2024-06-15T11:23:21.434Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/term-and-conditions</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/chick-fil-a-design-system</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/vodafone-dx-web-mobile-project</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/buck-new-zealand-split-money-app</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/cyber-vertex-news-portal</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/cctv-cntv-website</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/qu-duo-duo</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/cctv-video-app</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/thousand-dogs</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/time-signet</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/crunching</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/endless-nails</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/charging-spacecraft</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/pew-pew-pew</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/showstopper-basketball</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/pocket-gridiron</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/eingzone</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/project/customer-services-system</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/chick-fil-a-design-system</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/vodafone-dx-web-mobile-project</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/buck-new-zealand-split-money-app</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/cyber-vertex-news-portal</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/cctv-cntv-website</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/qu-duo-duo</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/cctv-video-app</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/thousand-dogs</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/time-signet</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/crunching</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/endless-nails</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/charging-spacecraft</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/pew-pew-pew</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/showstopper-basketball</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/pocket-gridiron</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/eingzone</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/project/customer-services-system</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/about</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/about</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/privacy-policy</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/privacy-policy</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/hobbies</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/hobbies</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/about/thanks</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/about/thanks</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/home</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/home</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/one-key-keyboard-diy</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/chattts-on-macos</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/diy-laptop-stand-with-3d-printing</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/morning-sea-bath-challenge</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/summary-of-2022</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/low-maintenance-succulent-plants-on-my-desk-setup</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/my-wfh-desk-setups-2022</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/new-apple-silicon-m1-pro-macbook-pro-hands-on</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/test-post-with-all-kinds-of-format</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/en/blog/make-a-usb-type-c-holder-on-my-desk</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/one-key-keyboard-diy</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/chattts-on-macos</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/diy-laptop-stand-with-3d-printing</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/morning-sea-bath-challenge</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/summary-of-2022</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/low-maintenance-succulent-plants-on-my-desk-setup</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/my-wfh-desk-setups-2022</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/new-apple-silicon-m1-pro-macbook-pro-hands-on</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/test-post-with-all-kinds-of-format</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://andycao.me/zh-CN/blog/make-a-usb-type-c-holder-on-my-desk</loc><lastmod>2024-06-15T11:23:21.435Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://andycao.me/en/term-and-conditions</loc>
+    <lastmod>2024-06-15T11:23:21.434Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/term-and-conditions</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/chick-fil-a-design-system</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/vodafone-dx-web-mobile-project</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/buck-new-zealand-split-money-app</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/cyber-vertex-news-portal</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/cctv-cntv-website</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/qu-duo-duo</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/cctv-video-app</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/thousand-dogs</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/time-signet</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/crunching</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/endless-nails</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/charging-spacecraft</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/pew-pew-pew</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/showstopper-basketball</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/pocket-gridiron</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/eingzone</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/project/customer-services-system</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/chick-fil-a-design-system</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/vodafone-dx-web-mobile-project</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/buck-new-zealand-split-money-app</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/cyber-vertex-news-portal</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/cctv-cntv-website</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/qu-duo-duo</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/cctv-video-app</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/thousand-dogs</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/time-signet</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/crunching</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/endless-nails</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/charging-spacecraft</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/pew-pew-pew</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/showstopper-basketball</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/pocket-gridiron</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/eingzone</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/project/customer-services-system</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/about</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/about</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/privacy-policy</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/privacy-policy</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/hobbies</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/hobbies</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/about/thanks</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/about/thanks</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/home</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/home</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/one-key-keyboard-diy</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/chattts-on-macos</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/diy-laptop-stand-with-3d-printing</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/morning-sea-bath-challenge</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/summary-of-2022</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/low-maintenance-succulent-plants-on-my-desk-setup</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/my-wfh-desk-setups-2022</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/new-apple-silicon-m1-pro-macbook-pro-hands-on</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/test-post-with-all-kinds-of-format</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/en/blog/make-a-usb-type-c-holder-on-my-desk</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/one-key-keyboard-diy</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/chattts-on-macos</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/diy-laptop-stand-with-3d-printing</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/morning-sea-bath-challenge</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/summary-of-2022</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/low-maintenance-succulent-plants-on-my-desk-setup</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/my-wfh-desk-setups-2022</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/new-apple-silicon-m1-pro-macbook-pro-hands-on</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/test-post-with-all-kinds-of-format</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andycao.me/zh-CN/blog/make-a-usb-type-c-holder-on-my-desk</loc>
+    <lastmod>2024-06-15T11:23:21.435Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
