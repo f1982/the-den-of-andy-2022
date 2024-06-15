@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
-import { useTranslations } from 'next-intl'
+import { getDictionary } from '@/app/[locale]/dictionaries'
 
-const Contact = () => {
-  const t = useTranslations('contact')
+const Contact = async ({ locale }: { locale: string }) => {
+  const dict = await getDictionary(locale)
   return (
     <div className="container mx-auto px-5">
       <section className="body-font relative text-gray-600">
@@ -53,9 +53,9 @@ const Contact = () => {
         </div>
       </section>
       <section>
-        <div dangerouslySetInnerHTML={{ __html: t('contact.p1') }} />
-        <div dangerouslySetInnerHTML={{ __html: t('contact.p2') }} />
-        <div dangerouslySetInnerHTML={{ __html: t('contact.p3') }} />
+        <div dangerouslySetInnerHTML={{ __html: dict.contact.p1 }} />
+        <div dangerouslySetInnerHTML={{ __html: dict.contact.p2 }} />
+        <div dangerouslySetInnerHTML={{ __html: dict.contact.p3 }} />
       </section>
     </div>
   )

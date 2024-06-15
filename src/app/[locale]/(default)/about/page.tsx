@@ -1,6 +1,3 @@
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
-
 import PageRows from '@/components/atoms/page-rows'
 import SmallText from '@/components/page/SmallText'
 import PageHero from '@/components/page/hero-image'
@@ -11,7 +8,8 @@ import { getAge } from '@/features/about/utils/date.utils'
 import { getDictionary } from '../../dictionaries'
 
 export default async function About({ params: { locale } }) {
-  const dict = await getDictionary(locale) // en
+  const dict = await getDictionary(locale)
+
   return (
     <>
       <PageRows withMargin>

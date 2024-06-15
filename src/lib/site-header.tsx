@@ -1,4 +1,3 @@
-import LocaleSwitcher from '@/i18n/locale-switcher'
 import Link from 'next/link'
 
 import Logo from '@/lib/site-logo'
@@ -24,7 +23,6 @@ export default function SiteHeader() {
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />
-            {/* <LocaleSwitcher /> */}
           </div>
         }
       />

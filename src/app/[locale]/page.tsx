@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
 
-import { useTranslations } from 'next-intl'
-
 import DefaultWelcome from '@/features/welcome/welcome'
 
 import { siteMetadata } from '@/config/site-config'

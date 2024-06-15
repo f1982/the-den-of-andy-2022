@@ -3,13 +3,13 @@ import Negotiator from 'negotiator'
 // match(languages, locales, defaultLocale) // -> 'en-US'
 import { NextResponse } from 'next/server'
 
-let defaultLocale = 'en-US'
+let defaultLocale = 'en'
 
-let locales = ['en-US', 'zh-CN']
+let locales = ['en', 'zh-CN']
 
 // Get the preferred locale, similar to the above or using a library
-function getLocale(request) {
-  let headers = { 'accept-language': 'en-US,en;q=0.5' }
+function getLocale(request: any) {
+  let headers = { 'accept-language': request.headers.get('accept-language') }
   let languages = new Negotiator({ headers }).languages()
   return match(languages, locales, defaultLocale)
 }

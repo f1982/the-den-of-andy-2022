@@ -15,8 +15,8 @@ import {
 
 import { getDictionary } from '../../dictionaries'
 
-export default async function Page({ params: { locale } }) {
-  const dict = await getDictionary(locale)
+export default async function Page({ params }: { params: { locale: string } }) {
+  const dict = await getDictionary(params.locale)
   return (
     <>
       <PageRows withMargin>

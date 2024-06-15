@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl'
-
 import Prose from '@/components/atoms/prose'
 
 export default function AboutPage({ params: { locale } }) {
