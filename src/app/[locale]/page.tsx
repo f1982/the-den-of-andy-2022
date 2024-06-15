@@ -11,9 +11,7 @@ import { getDictionary } from './dictionaries'
 export const metadata: Metadata = { ...siteMetadata }
 
 export default async function Page({ params: { locale } }) {
-  // const t = useTranslations('welcome')
-  const dict = await getDictionary(locale) // en
-
+  const dict = await getDictionary(locale)
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <DefaultWelcome
