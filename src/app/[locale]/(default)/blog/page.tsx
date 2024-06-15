@@ -1,6 +1,4 @@
-import React, { Suspense } from 'react'
-
-import { useTranslations } from 'next-intl'
+import { Suspense } from 'react'
 
 import PageRows from '@/components/atoms/page-rows'
 import Spinner from '@/components/atoms/spinner'
@@ -10,6 +8,8 @@ import PageTitle from '@/components/page/page-title'
 import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
+
+import { getDictionary } from '../../dictionaries'
 
 async function PostCards() {
   const posts = await getPosts()
@@ -41,14 +41,14 @@ async function PostList() {
   )
 }
 
-const Blog: React.FC = () => {
-  const t = useTranslations('blog')
+export default async function Page({ params: { locale } }) {
+  const dict = await getDictionary(locale) // en
   return (
     <PageRows withMargin>
       <PageHero image="/static/images/Working_in_a_laboratory--5ec7b8ba01d0360014d4e576.png" />
       <div>
         <div className="container">
-          <PageTitle title={t('headline')} description={t('intro')} />
+          <PageTitle title={dict.blog.headline} description={dict.blog.intro} />
         </div>
 
         <div className="mx-4">
@@ -59,7 +59,7 @@ const Blog: React.FC = () => {
       </div>
 
       <div className="container">
-        <h2 className="mb-6 text-3xl font-bold">{t('more')}</h2>
+        <h2 className="mb-6 text-3xl font-bold">{dict.blog.more}</h2>
         <Suspense fallback={<Spinner />}>
           <PostList />
         </Suspense>
@@ -67,5 +67,3 @@ const Blog: React.FC = () => {
     </PageRows>
   )
 }
-
-export default Blog

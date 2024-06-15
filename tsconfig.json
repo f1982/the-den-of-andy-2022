@@ -30,8 +30,7 @@
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/app/[locale]/not-found.jsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "tests/e2e", "tools"]
 }

@@ -17,6 +17,7 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@next/bundle-analyzer": "^14.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
@@ -27,6 +28,7 @@
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "lucide-react": "^0.320.0",
+    "negotiator": "^0.6.3",
     "next": "^14.1.0",
     "next-intl": "^3.5.4",
     "react": "^18.2.0",

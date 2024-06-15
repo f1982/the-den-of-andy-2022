@@ -18,6 +18,10 @@ export const metadata = {
   },
 }
 
+export async function generateStaticParams() {
+  return [{ locale: 'en-US' }, { locale: 'zh-CN' }]
+}
+
 export default function RootLayout({
   children,
   params: { locale },
@@ -25,8 +29,6 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  // unstable_setRequestLocale(locale)
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body

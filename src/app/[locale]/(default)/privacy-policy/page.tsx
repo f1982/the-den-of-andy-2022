@@ -2,9 +2,7 @@ import { useTranslations } from 'next-intl'
 
 import Prose from '@/components/atoms/prose'
 
-export default function AboutPage() {
-  const t = useTranslations('AboutPage')
-
+export default function AboutPage({ params: { locale } }) {
   return (
     <div className="container mx-auto mt-20">
       <Prose>
