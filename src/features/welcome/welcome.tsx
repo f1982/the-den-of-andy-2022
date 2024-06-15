@@ -17,20 +17,14 @@ const DefaultWelcome = ({
   label,
   link = '/home',
 }: WelcomeProps) => (
-  <div
-    className="
-      container mx-auto
-      flex
-      flex-col
-      items-center justify-center
-    ">
+  <div className="container mx-auto flex flex-col items-center justify-center">
     <SVGAnimation />
     <div className="prose prose-sm mb-9 text-center dark:prose-invert">
       <h1 className="uppercase">{title}</h1>
       <p>{subtitle}</p>
     </div>
     <div className="flex justify-center">
-      <Link href={link} locale="en">
+      <Link href={link}>
         <Button
           // className="bg-primary text-primary-foreground"
           variant={'default'}

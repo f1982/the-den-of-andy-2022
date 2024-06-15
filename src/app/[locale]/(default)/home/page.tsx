@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import PageRows from '@/components/atoms/page-rows'
@@ -14,18 +13,20 @@ import LatestProjectItemView from '@/features/project/components/latest-project-
 import { YouTubeURL } from '@/config/links'
 import { siteMetadata } from '@/config/site-config'
 
+import { getDictionary } from '../../dictionaries'
+
 export const metadata = { ...siteMetadata }
 
 const LatestProjectImageURL =
   'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
 
-const LastProjects: React.FC = () => {
-  const t = useTranslations('home')
+const LastProjects: React.FC = async (locale: string) => {
+  const dict = await getDictionary(locale)
   return (
     <div className="container">
       <Prose>
-        <h2>{t('p2.title')}</h2>
-        <p>{t('p2.description')}</p>
+        <h2>{dict.home.p2.title}</h2>
+        <p>{dict.home.p2.description}</p>
       </Prose>
       <Link id="test" href="/blog/my-wfh-desk-setups-2022" legacyBehavior>
         <LatestProjectItemView
@@ -69,8 +70,8 @@ const YouTubeChannelSection: React.FC = () => (
   </div>
 )
 
-const Home: React.FC = () => {
-  const t = useTranslations('home')
+export default async function Page({ params: { locale } }) {
+  const dict = await getDictionary(locale)
   return (
     <>
       <PageRows withMargin>
@@ -79,18 +80,18 @@ const Home: React.FC = () => {
           <SandwichHero
             className="mb-16 md:mb-24"
             image="/static/images/andy-with-bubbles.png"
-            title={t('intro.greeting')}
-            subtitle={t('intro.role')}
-            description={t('intro.description')}
+            title={dict.home.intro.greeting}
+            subtitle={dict.home.intro.role}
+            description={dict.home.intro.description}
             buttons={
               <div className="flex gap-x-6">
                 <Link href="/about" passHref legacyBehavior>
                   <Button className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
-                    {t('intro.button1')}
+                    {dict.home.intro.button1}
                   </Button>
                 </Link>
                 <Link href="/project" passHref legacyBehavior>
-                  <Button variant={'default'}>{t('intro.button2')}</Button>
+                  <Button variant={'default'}>{dict.home.intro.button2}</Button>
                 </Link>
               </div>
             }
@@ -105,5 +106,3 @@ const Home: React.FC = () => {
     </>
   )
 }
-
-export default Home

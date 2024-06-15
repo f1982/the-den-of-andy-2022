@@ -2,20 +2,23 @@ import React from 'react'
 
 import '@/global.css'
 import clsx from 'clsx'
-import { Inter, Nunito } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { AnalyticSettings } from '@/lib/analytics-settings'
 
 import { siteMetadata } from '@/config/site-config'
 
 const inter = Inter({ subsets: ['latin'] })
-// const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   ...siteMetadata,
   icons: {
     favicon: '/favicon.ico',
   },
+}
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'zh-CN' }]
 }
 
 export default function RootLayout({
@@ -25,8 +28,6 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  // unstable_setRequestLocale(locale)
-
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
