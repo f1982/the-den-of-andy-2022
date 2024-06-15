@@ -1,15 +1,11 @@
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
-import Image from 'next/image'
+import { getDictionary } from '@/app/[locale]/dictionaries'
 
 import PageRows from '@/components/atoms/page-rows'
 import PageHero from '@/components/page/hero-image'
 import PageTitle from '@/components/page/page-title'
 
-export default function Thanks({ params: { locale } }) {
-  unstable_setRequestLocale(locale)
-
-  const t = useTranslations('about')
+export default async function Thanks({ params: { locale } }) {
+  const dict = await getDictionary(locale) // en
   return (
     <>
       <PageRows withMargin>

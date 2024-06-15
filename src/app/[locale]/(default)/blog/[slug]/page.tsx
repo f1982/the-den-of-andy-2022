@@ -43,7 +43,11 @@ const BlogPostDetail = async ({ slug }: { slug: string }) => {
   )
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: { slug: string; locale: string }
+}) {
   return (
     <>
       <Suspense fallback={<Spinner />}>

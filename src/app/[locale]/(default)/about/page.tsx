@@ -1,7 +1,3 @@
-import { useTranslations } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
-import Image from 'next/image'
-
 import PageRows from '@/components/atoms/page-rows'
 import SmallText from '@/components/page/SmallText'
 import PageHero from '@/components/page/hero-image'
@@ -9,31 +5,35 @@ import PageTitle from '@/components/page/page-title'
 
 import { getAge } from '@/features/about/utils/date.utils'
 
-export default function About({ params: { locale } }) {
-  unstable_setRequestLocale(locale)
+import { getDictionary } from '../../dictionaries'
 
-  const t = useTranslations('about')
+export default async function About({ params: { locale } }) {
+  const dict = await getDictionary(locale)
+
   return (
     <>
       <PageRows withMargin>
         <PageHero image="/static/images/Search--5ec7b86001d0360016d490a6.png" />
 
         <div className="container">
-          <PageTitle title={t('headline')} description={t('description')} />
+          <PageTitle
+            title={dict.about.headline}
+            description={dict.about.description}
+          />
           <SmallText
             image="/static/images/about-andy-back.jpg"
-            title={t('whoIsAndyTitle')}
-            description={t('whoIsAndyDescription')}
+            title={dict.about.whoIsAndyTitle}
+            description={dict.about.whoIsAndyDescription}
           />
           <SmallText
             image="/static/images/about-computer.jpg"
-            title={t('whatAndyDoTitle')}
-            description={t('whatAndyDoDescription')}
+            title={dict.about.whatAndyDoTitle}
+            description={dict.about.whatAndyDoDescription}
           />
           <SmallText
             image="/static/images/about-andy-family.jpg"
-            title={t('familyTitle')}
-            description={String(t('familyDescription')).replace(
+            title={dict.about.familyTitle}
+            description={String(dict.about.familyDescription).replace(
               '$AGE_OF_ZOE$',
               getAge('2016-06-01').toString(),
             )}

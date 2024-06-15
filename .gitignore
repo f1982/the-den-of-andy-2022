@@ -14,6 +14,7 @@
 /.next/
 /out/
 
+
 # production
 /build
 
@@ -36,3 +37,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# next-sitemap will generate during build
+sitemap.xml
+sitemap-*.xml
+robots.txt

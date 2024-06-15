@@ -1,7 +1,7 @@
 {
   "name": "andy-personal-webpage",
   "homepage": "https://andycao.me",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Andy's personal website v2022",
   "license": "MIT",
   "authors": "Andy Cao <caojundan@gmail.com> (https://github.com/f1982)",
@@ -14,10 +14,12 @@
     "export": "next build && next export",
     "lint": "next lint",
     "test": "vitest",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^14.0.4",
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
@@ -27,8 +29,8 @@
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "lucide-react": "^0.320.0",
+    "negotiator": "^0.6.3",
     "next": "^14.1.0",
-    "next-intl": "^3.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -38,8 +40,6 @@
     "usehooks-ts": "^2.14.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.4",
-    "@commitlint/config-conventional": "^18.4.4",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
