@@ -1,3 +1,5 @@
+import { getDictionary } from '@/utils/dictionaries'
+
 import PageRows from '@/components/atoms/page-rows'
 import PageHero from '@/components/page/hero-image'
 import ColumnHero from '@/components/page/hero-image-text'
@@ -13,14 +15,19 @@ import {
   YouTubeURL,
 } from '@/config/links'
 
-import { getDictionary } from '../../dictionaries'
+import Hobbies3DPrintingImage from '@/assets/images/hobbies-3d-printing.png'
+import HobbiesDrawingImage from '@/assets/images/hobbies-drawing.png'
+import HobbiesHeroImage from '@/assets/images/hobbies-hero-spaceman.png'
+import HobbiesRCImage from '@/assets/images/hobbies-rc.png'
+import HobbiesVideoImage from '@/assets/images/hobbies-video.png'
 
 export default async function Page({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale)
+
   return (
     <>
       <PageRows withMargin>
-        <PageHero image="/static/images/Space_discovery_--5ec7b87401d0360014d4e3c7.png" />
+        <PageHero image={HobbiesHeroImage} />
         <div className="container">
           <PageTitle
             title={dict.hobbies.headline}
@@ -30,7 +37,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         <div className="container">
           <ColumnHero
             className="mb-16 md:mb-20"
-            image="/static/images/3d-printing-ender-3-v2.png"
+            image={Hobbies3DPrintingImage}
             title={dict.hobbies.print3d.title}
             subtitle="Using 3D printing to make my own 3D models."
             description={dict.hobbies.print3d.description}
@@ -54,7 +61,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
           <SandwichHero
             id="rc-hobby-id"
             className="mb-16 md:mb-20"
-            image="/static/images/hobby-rc-cover.png"
+            image={HobbiesRCImage}
             title={dict.hobbies.rc.title}
             subtitle="Using RC planes and devices to build my own robots."
             description={dict.hobbies.rc.description}
@@ -80,7 +87,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         <div className="container">
           <ColumnHero
             className="mb-16 md:mb-20"
-            image="/static/images/hobby-drawing-cover.png"
+            image={HobbiesDrawingImage}
             title={dict.hobbies.drawing.title}
             subtitle="Using digital drawing software to make my own drawings."
             description={dict.hobbies.drawing.description}
@@ -102,7 +109,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         <div className="container">
           <SandwichHero
             className="mb-16 md:mb-20"
-            image="/static/images/hobby-cover-video.png"
+            image={HobbiesVideoImage}
             title={dict.hobbies.video.title}
             subtitle="Using video editing software to make my own videos."
             description={dict.hobbies.video.description}

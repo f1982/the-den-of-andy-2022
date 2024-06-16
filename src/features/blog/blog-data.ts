@@ -6,10 +6,13 @@ import { join } from 'path'
 
 import markdownToHtml from '@/utils/markdownToHtml'
 
+import { cdnUrl } from '@/config/site-config'
+
 import { BlogPostData } from './blog-types'
 
 const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/content/posts')
 
+const articleImageUrl = `${cdnUrl}/articles`
 // test page only can be accessed by directly input the url
 // http://localhost:3000/blog/test-post-with-all-kinds-of-format
 const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
@@ -30,8 +33,13 @@ export async function getPostDetail(slug: string) {
   }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  const htmlContent = await markdownToHtml(content)
-  // console.log('htmlContent', htmlContent)
+  const replaced = content.replace(
+    /\/[^\s]+\.(jpg|jpeg|png|gif)/g,
+    (match: string) => {
+      return `${articleImageUrl}${match}`
+    },
+  )
+  const htmlContent = await markdownToHtml(replaced)
 
   const postItem: BlogPostData = {
     slug: slug,
@@ -43,7 +51,7 @@ export async function getPostDetail(slug: string) {
       picture: data['author']['picture'],
     },
     content: htmlContent,
-    coverImage: data['coverImage'],
+    coverImage: articleImageUrl + data['coverImage'],
     date: data['date'],
   }
   return postItem

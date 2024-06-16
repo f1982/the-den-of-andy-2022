@@ -34,8 +34,8 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
 
   return (
     <>
-      <div className="mx-auto mb-3 mt-6 flex h-96 w-full flex-col justify-start gap-9 bg-secondary py-12">
-        <div className="container mx-auto flex flex-col gap-3">
+      <div className="mx-auto mb-3 mt-6 flex w-full flex-col justify-start gap-9 bg-secondary py-12">
+        <div className="container mx-auto mb-[150px] flex flex-col gap-3">
           <div>
             <FormattedDate date={start} />
             <span> - </span>

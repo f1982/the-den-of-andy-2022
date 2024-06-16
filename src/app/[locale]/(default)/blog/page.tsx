@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 
+import { getDictionary } from '@/utils/dictionaries'
+
 import PageRows from '@/components/atoms/page-rows'
 import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
@@ -9,7 +11,7 @@ import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
-import { getDictionary } from '../../dictionaries'
+import BlogHeroImage from '@/assets/images/blog-hero-coding.png'
 
 async function PostCards() {
   const posts = await getPosts()
@@ -45,7 +47,7 @@ export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale) // en
   return (
     <PageRows withMargin>
-      <PageHero image="/static/images/Working_in_a_laboratory--5ec7b8ba01d0360014d4e576.png" />
+      <PageHero image={BlogHeroImage} />
       <div>
         <div className="container">
           <PageTitle title={dict.blog.headline} description={dict.blog.intro} />

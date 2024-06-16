@@ -1,14 +1,14 @@
 ---
 title: 'Cable management solution: how to keep clean when I move the laptop outside the desk'
 excerpt: 'Recently, I am obsessed with reordering or organizing my little pieces of stuff. For example, cable management is a great topic it is hard to say it’s perfect at any time. How to organize your tools or material make them easy to store and find is really a fascinating challenge.'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-cover-image.jpg'
+coverImage: '/usbc-holder-cover-image.jpg'
 date: '2020-03-26T05:35:07.322Z'
 keywords: 'cable management, cable management desk, cable management ideas, cable management tray, wfh setups, developer desk, cable management tips, developer desk setup, dev desk setup'
 author:
   name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
-  url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-cover-image.jpg'
+  url: '/usbc-holder-cover-image.jpg'
 ---
 
 # Reason and background
@@ -23,7 +23,7 @@ These few days, I started to get noticed the 2 USB type-c to HDML cables. I have
 
 I think for the vast majority of people, it is not an issue, it can be ignored for sure. But sometimes you just want to solve this kind of problem with strong intent.
 
-![Cables](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-cables-on-the-table.jpeg)
+![Cables](/usbc-holder-cables-on-the-table.jpeg)
 
 # Solutions
 
@@ -41,11 +41,11 @@ First, I sketch out the rough idea with pencil and paper, here I planned to put 
 
 After that, I started to use **Fusion 360** to model the 3D version.
 
-![Design process animation](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-design-process.mov.gif)
+![Design process animation](/usbc-holder-design-process.mov.gif)
 
 I modelled several different versions. Finally, I think I got what I want.
 
-![Different versions](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-different-models.png)
+![Different versions](/usbc-holder-different-models.png)
 
 # Print and Install
 
@@ -55,19 +55,19 @@ I am not a 3d model design export, it’s pretty hard for me to design a new mod
 
 Back to the holder, the first printing is as always failed. I measured error size of the hold on my laptop mount.
 
-![Failed design](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-printed-failed.jpeg)
+![Failed design](/usbc-holder-printed-failed.jpeg)
 
 This time the port of Type-C is too small, I cannot plug my connectors in.
 
-![Failed design](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-printed-failed-2.jpeg)
+![Failed design](/usbc-holder-printed-failed-2.jpeg)
 
 Finally, I made everything fits.
 
-![Mount on the laptop tray](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-mount-on.jpeg)
+![Mount on the laptop tray](/usbc-holder-mount-on.jpeg)
 
 Put all the calbes on it.
 
-![Final result](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/usbc-holder-final-one-with-cables.jpeg)
+![Final result](/usbc-holder-final-one-with-cables.jpeg)
 
 After the successful experiment, I extended this idea to other places which have idle cables, they are working very well so far.
 
