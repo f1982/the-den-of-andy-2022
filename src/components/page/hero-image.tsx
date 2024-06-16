@@ -1,10 +1,11 @@
 import React, { PropsWithChildren } from 'react'
 
 import clsx from 'clsx'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 
 interface PageHeroProps {
-  image: string
+  image: string | StaticImport
   className?: string
 }
 

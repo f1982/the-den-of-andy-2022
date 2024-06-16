@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 
+import { getDictionary } from '@/utils/dictionaries'
+
 import DefaultWelcome from '@/features/welcome/welcome'
 
 import { siteMetadata } from '@/config/site-config'
-
-import { getDictionary } from './dictionaries'
 
 export const metadata: Metadata = { ...siteMetadata }
 

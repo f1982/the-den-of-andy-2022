@@ -1,10 +1,13 @@
 import fs from 'fs'
 import { join } from 'path'
 
+import { cdnUrl } from '@/config/site-config'
+
 import { ProjectItemData } from './project-types'
 
-export const PROJECT_IMAGE_URL = '/static/images/project'
 export const projectDataPath = join(process.cwd(), 'src/content/projects.json')
+
+export const projectImageUrl = cdnUrl + '/projects'
 
 export function getProjects() {
   const fileContents = fs.readFileSync(projectDataPath, 'utf8')
@@ -13,8 +16,8 @@ export function getProjects() {
   return pjs.map((p) => {
     return {
       ...p,
-      cover: PROJECT_IMAGE_URL + '/' + p.cover,
-      images: p.images.map((i) => PROJECT_IMAGE_URL + '/' + i),
+      cover: projectImageUrl + '/' + p.cover,
+      images: p.images.map((i) => projectImageUrl + '/' + i),
     }
   })
 }

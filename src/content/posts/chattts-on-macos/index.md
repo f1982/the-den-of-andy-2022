@@ -1,7 +1,7 @@
 ---
 title: '使用 Python 虚拟环境和 `chattts-fork` 进行文本转语音 (TTS) 的教程'
 excerpt: '学习如何在 macOS 上安装 Python 3 和 pip，创建 Python 虚拟环境，并使用 `chattts-fork` 库进行文本转语音 (TTS)。'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/ac202405311848315.png'
+coverImage: '/chat-tts-thumbnail.png'
 date: '2024-05-31T12:00:00.000Z'
 keywords: 'Python 虚拟环境, chattts-fork, 文本转语音, TTS, macOS, pip, Homebrew'
 status: 'draft'
@@ -9,7 +9,7 @@ author:
   name: 'ChatGPT'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
-  url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/ac202405311848315.png'
+  url: '/chat-tts-thumbnail.png'
 ---
 
 以下是一个详细的教程，指导你如何在 macOS 上安装 Python 3 和 pip，创建 Python 虚拟环境并使用 `chattts-fork` 库进行文本转语音。

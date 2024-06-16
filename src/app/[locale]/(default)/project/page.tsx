@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 
+import { getDictionary } from '@/utils/dictionaries'
+
 import PageRows from '@/components/atoms/page-rows'
 import Spinner from '@/components/atoms/spinner'
 import PageHero from '@/components/page/hero-image'
@@ -8,7 +10,7 @@ import PageTitle from '@/components/page/page-title'
 import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
 
-import { getDictionary } from '../../dictionaries'
+import RocketImage from '@/assets/images/project-hero-rocket.png'
 
 async function ProjectList() {
   const projects = getProjects()
@@ -19,8 +21,7 @@ export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale)
   return (
     <PageRows withMargin>
-      <PageHero image="/static/images/Web_development--5ec7b8ad01d0360018d4d49b.png" />
-
+      <PageHero image={RocketImage} />
       <div>
         <div className="container">
           <PageTitle

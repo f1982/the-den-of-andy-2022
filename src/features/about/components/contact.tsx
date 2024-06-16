@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import { getDictionary } from '@/app/[locale]/dictionaries'
+import { getDictionary } from '@/utils/dictionaries'
 
 const Contact = async ({ locale }: { locale: string }) => {
   const dict = await getDictionary(locale)
