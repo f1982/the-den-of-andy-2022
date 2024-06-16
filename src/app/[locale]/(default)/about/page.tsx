@@ -5,6 +5,8 @@ import PageTitle from '@/components/page/page-title'
 
 import { getAge } from '@/features/about/utils/date.utils'
 
+import { imageUrl } from '@/config/site-config'
+
 import { getDictionary } from '../../dictionaries'
 
 export default async function About({ params: { locale } }) {
@@ -13,7 +15,7 @@ export default async function About({ params: { locale } }) {
   return (
     <>
       <PageRows withMargin>
-        <PageHero image="/static/images/Search--5ec7b86001d0360016d490a6.png" />
+        <PageHero image={imageUrl + '/Search--5ec7b86001d0360016d490a6.png'} />
 
         <div className="container">
           <PageTitle
@@ -21,17 +23,17 @@ export default async function About({ params: { locale } }) {
             description={dict.about.description}
           />
           <SmallText
-            image="/static/images/about-andy-back.jpg"
+            image={imageUrl + '/about-andy-back.jpg'}
             title={dict.about.whoIsAndyTitle}
             description={dict.about.whoIsAndyDescription}
           />
           <SmallText
-            image="/static/images/about-computer.jpg"
+            image={imageUrl + '/about-computer.jpg'}
             title={dict.about.whatAndyDoTitle}
             description={dict.about.whatAndyDoDescription}
           />
           <SmallText
-            image="/static/images/about-andy-family.jpg"
+            image={imageUrl + '/about-andy-family.jpg'}
             title={dict.about.familyTitle}
             description={String(dict.about.familyDescription).replace(
               '$AGE_OF_ZOE$',

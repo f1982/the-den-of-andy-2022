@@ -7,6 +7,9 @@ import { Twitter } from 'next/dist/lib/metadata/types/twitter-types'
 export const siteHostname = 'andycao.me'
 export const siteUrl = `https://${siteHostname}`
 
+export const assetUrl = `/static`
+export const imageUrl = assetUrl + '/images'
+
 export const siteSettings = {
   name: 'The Den of Andy C',
   url: siteUrl,

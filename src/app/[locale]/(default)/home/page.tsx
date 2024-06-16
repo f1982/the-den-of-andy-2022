@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import LatestProjectItemView from '@/features/project/components/latest-project-item'
 
 import { YouTubeURL } from '@/config/links'
-import { siteMetadata } from '@/config/site-config'
+import { imageUrl, siteMetadata } from '@/config/site-config'
 
 import { getDictionary } from '../../dictionaries'
 
@@ -75,11 +75,11 @@ export default async function Page({ params: { locale } }) {
   return (
     <>
       <PageRows withMargin>
-        <PageHero image="/static/images/page-hero-workspace.png" />
+        <PageHero image={imageUrl + '/page-hero-workspace.png'} />
         <div className="container">
           <SandwichHero
             className="mb-16 md:mb-24"
-            image="/static/images/andy-with-bubbles.png"
+            image={imageUrl + '/andy-with-bubbles.png'}
             title={dict.home.intro.greeting}
             subtitle={dict.home.intro.role}
             description={dict.home.intro.description}
@@ -98,7 +98,6 @@ export default async function Page({ params: { locale } }) {
           />
         </div>
 
-        {/* <LastProjects /> */}
         {/* <ProjectWorkingOn /> */}
 
         {/* <YouTubeChannelSection /> */}

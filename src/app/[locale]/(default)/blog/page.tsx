@@ -9,6 +9,8 @@ import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
+import { imageUrl } from '@/config/site-config'
+
 import { getDictionary } from '../../dictionaries'
 
 async function PostCards() {
@@ -45,7 +47,11 @@ export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale) // en
   return (
     <PageRows withMargin>
-      <PageHero image="/static/images/Working_in_a_laboratory--5ec7b8ba01d0360014d4e576.png" />
+      <PageHero
+        image={
+          imageUrl + '/Working_in_a_laboratory--5ec7b8ba01d0360014d4e576.png'
+        }
+      />
       <div>
         <div className="container">
           <PageTitle title={dict.blog.headline} description={dict.blog.intro} />
