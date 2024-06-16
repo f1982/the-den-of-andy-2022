@@ -1,14 +1,14 @@
 ---
 title: 'Challenging Myself to Take a Cold Sea Bath Before Sunrise'
 excerpt: 'Have you ever wanted to take on a challenge and push yourself out of your comfort zone? Yesterday, I finally did just that and took a cold bath in the sea water before sunrise. Despite some unexpected setbacks, the experience was invigorating and left me feeling accomplished and ready to tackle whatever comes my way.'
-coverImage: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
+coverImage: '/morning-sea-bath24.jpeg'
 date: '2023-03-04T05:35:07.322Z'
 keywords: 'challenge, cold bath, sunrise, experience, tips'
 author:
   name: 'Andy Cao'
   picture: '/static/images/avatar-pixel.jpg'
 ogImage:
-  url: 'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath24.jpeg'
+  url: '/morning-sea-bath24.jpeg'
 ---
 
 Yesterday, I decided to take on a challenge I had been wanting to do for a long time: taking a cold sea bath before sunrise. So, the night before, I went to bed early (before 11 pm), and before falling asleep, I packed up my bath towel and clothes in a bag to save time in the morning. I had two vivid dreams during the night, which didn't affect me on what was to come.
@@ -23,9 +23,9 @@ After about 20 minutes, I got out of the water, picked up my clothes, and went t
 
 I got back in my car and drove home before my daughter woke up, feeling energized and accomplished. As I drove, I spoke to myself, "I'll definitely do it again!"
 
-![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath23.jpeg)
+![morning beach](/morning-sea-bath23.jpeg)
 
-![morning beach](https://raw.githubusercontent.com/f1982/planet-of-images/main/img/morning-sea-bath21.jpeg)
+![morning beach](/morning-sea-bath21.jpeg)
 
 At the end I'd like to share the video I was listening to about Cold Exposure.
 

@@ -18,7 +18,7 @@ import { getDictionary } from '../../dictionaries'
 export const metadata = { ...siteMetadata }
 
 const LatestProjectImageURL =
-  'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/latest-project-wfh-setup-2022.png'
+  'https://raw.githubusercontent.com/f1982/planet-of-images/main/img/wfh-desk-setup-2022.png'
 
 const LastProjects: React.FC = async (locale: string) => {
   const dict = await getDictionary(locale)

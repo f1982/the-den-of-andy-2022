@@ -15,8 +15,8 @@ const BlogPost: React.FC<BlogPostData> = ({
   coverImage,
 }) => (
   <>
-    <div className="mx-auto mb-3 mt-6 flex h-96 w-full flex-col justify-start gap-9 bg-secondary py-12">
-      <div className="container animate-pulse">
+    <div className="mx-auto mb-3 mt-6 flex w-full flex-col justify-start gap-9 bg-secondary py-12">
+      <div className="container mb-[150px] animate-pulse">
         <FormattedDate date={date} />
         <h1 className="mb-3 text-3xl font-bold">{title}</h1>
         <div className="text-sm font-bold">{author?.name}</div>
