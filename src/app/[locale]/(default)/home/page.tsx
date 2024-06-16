@@ -1,13 +1,16 @@
 import Link from 'next/link'
 
+import { getDictionary } from '@/utils/dictionaries'
+
 import PageRows from '@/components/atoms/page-rows'
 import PageHero from '@/components/page/hero-image'
 import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 
-import { imageUrl, siteMetadata } from '@/config/site-config'
+import { siteMetadata } from '@/config/site-config'
 
-import { getDictionary } from '../../dictionaries'
+import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
+import StudioImage from '@/assets/images/homepage-studio.png'
 
 export const metadata = { ...siteMetadata }
 
@@ -16,11 +19,11 @@ export default async function Page({ params: { locale } }) {
   return (
     <>
       <PageRows withMargin>
-        <PageHero image={imageUrl + '/page-hero-workspace.png'} />
+        <PageHero image={StudioImage} />
         <div className="container">
           <SandwichHero
             className="mb-16 md:mb-24"
-            image={imageUrl + '/andy-with-bubbles.png'}
+            image={AndyBubbleImage}
             title={dict.home.intro.greeting}
             subtitle={dict.home.intro.role}
             description={dict.home.intro.description}

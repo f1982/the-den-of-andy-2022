@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+
 interface MenuItemData {
   link: string
   label: string
@@ -10,7 +12,7 @@ interface MenuItemData {
 interface HeroData {
   title: string
   subtitle?: string
-  image: string
+  image: string | StaticImport
   description?: string
   buttons?: React.ReactNode
   viewPortOnce?: boolean
