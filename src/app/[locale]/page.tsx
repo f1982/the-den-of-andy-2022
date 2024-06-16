@@ -6,7 +6,12 @@ import DefaultWelcome from '@/features/welcome/welcome'
 
 import { siteMetadata } from '@/config/site-config'
 
-export const metadata: Metadata = { ...siteMetadata }
+export const metadata: Metadata = {
+  ...siteMetadata,
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale)
