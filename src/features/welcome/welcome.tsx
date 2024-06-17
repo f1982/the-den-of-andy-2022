@@ -1,3 +1,4 @@
+import { Power } from 'lucide-react'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -20,16 +21,13 @@ const DefaultWelcome = ({
   <div className="container mx-auto flex flex-col items-center justify-center">
     <SVGAnimation />
     <div className="prose prose-sm mb-9 text-center dark:prose-invert">
-      <h1 className="uppercase">{title}</h1>
-      <p>{subtitle}</p>
+      <h1 className="mb-0 text-6xl uppercase tracking-tighter">{title}</h1>
+      <p className="tracking-[0.4rem] text-muted">{subtitle}</p>
     </div>
     <div className="flex justify-center">
       <Link href={link}>
-        <Button
-          // className="bg-primary text-primary-foreground"
-          variant={'default'}
-          size={'lg'}>
-          {label}
+        <Button variant={'default'} size={'sm'}>
+          <Power />
         </Button>
       </Link>
     </div>

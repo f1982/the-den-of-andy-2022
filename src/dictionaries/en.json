@@ -7,7 +7,7 @@
   },
   "welcome": {
     "pageTitle": "Welcome",
-    "greeting": "Hey there! I'm Andy",
+    "greeting": "Hey, I'm Andy",
     "description": "Welcome to my digital space",
     "buttonLabel": "Enter"
   },
@@ -52,7 +52,8 @@
     "print3d": {
       "title": "3D Printing",
       "description": "I started my 3D printing journey in 2021, my first 3D printer was Creality Ender 3 v2. 3D printing is a fun hobby which is low-cost, easy to learn, and useful. It provides a platform to channel creativity with three-dimensional designs. You can easily output your 3D ideas and design from your brain to reality.",
-      "button1": "My Thingiverse page"
+      "button1": "Thingiverse",
+      "button2": "Printable"
     },
     "rc": {
       "title": "RC Hobby",
