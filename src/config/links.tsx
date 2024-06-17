@@ -12,6 +12,7 @@ export const RCPlanesAlbumURL = 'https://photos.app.goo.gl/huWtqV1XxnSan39P7'
 export const RCDevicesAlbumURL = 'https://photos.app.goo.gl/TjSPdHm2zfGfzeA2A'
 export const DrawingAlbumURL = 'https://photos.app.goo.gl/9GZrmEyXhCBReKGP6'
 export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/'
+export const PrintableURL = 'https://www.printables.com/@andycao_315699'
 export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme'
 export const BilibiliURL = 'https://space.bilibili.com/30429048'
 

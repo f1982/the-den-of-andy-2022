@@ -11,7 +11,7 @@ import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
-import BlogHeroImage from '@/assets/images/blog-hero-coding.png'
+import HeroImage from '@/assets/images/blog-hero-coding.png'
 
 async function PostCards() {
   const posts = await getPosts()
@@ -47,7 +47,7 @@ export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale) // en
   return (
     <PageRows withMargin>
-      <PageHero image={BlogHeroImage} />
+      <PageHero image={HeroImage} />
       <div>
         <div className="container">
           <PageTitle title={dict.blog.headline} description={dict.blog.intro} />

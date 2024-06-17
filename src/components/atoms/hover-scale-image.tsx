@@ -15,7 +15,8 @@ export default function HoverScaleImage({
         className={clsx(
           'absolute inset-0 aspect-video h-auto w-full rounded-xl bg-card object-cover',
           'ring-1 ring-muted',
-          'scale-100 transition-all duration-300 ease-in-out group-hover:scale-125',
+          'scale-100 transition-all duration-300 ease-in-out',
+          'group-hover:scale-110',
         )}
         src={src}
         width={0}
@@ -24,7 +25,12 @@ export default function HoverScaleImage({
         loading="lazy"
         {...props}
       />
-      <div className={clsx('absolute inset-0', 'bg-black/30')}></div>
+      <div
+        className={clsx(
+          'absolute inset-0 transition-all duration-300 ease-in-out',
+          'bg-black/30 group-hover:bg-black/0',
+          'pointer-events-none',
+        )}></div>
     </div>
   )
 }
