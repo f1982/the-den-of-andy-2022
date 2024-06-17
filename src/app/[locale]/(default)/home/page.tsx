@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 import Link from 'next/link'
 
 import { getDictionary } from '@/utils/dictionaries'
@@ -12,10 +14,19 @@ import { siteMetadata } from '@/config/site-config'
 import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
 import StudioImage from '@/assets/images/homepage-studio.png'
 
-export const metadata = { ...siteMetadata }
+export const metadata: Metadata = {
+  ...siteMetadata,
+  title: 'Home',
+  description: 'Home page',
+  keywords: 'home page, latest project',
+  alternates: {
+    canonical: '/home',
+  },
+}
 
 export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale)
+
   return (
     <>
       <PageRows withMargin>

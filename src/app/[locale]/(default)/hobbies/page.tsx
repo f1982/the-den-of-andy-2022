@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getDictionary } from '@/utils/dictionaries'
 
 import PageRows from '@/components/atoms/page-rows'
@@ -9,6 +11,7 @@ import { Button } from '@/components/ui/button'
 
 import {
   DrawingAlbumURL,
+  PrintableURL,
   RCDevicesAlbumURL,
   RCPlanesAlbumURL,
   ThingiverseURL,
@@ -39,19 +42,20 @@ export default async function Page({ params }: { params: { locale: string } }) {
             className="mb-16 md:mb-20"
             image={Hobbies3DPrintingImage}
             title={dict.hobbies.print3d.title}
-            subtitle="Using 3D printing to make my own 3D models."
             description={dict.hobbies.print3d.description}
             direction="r2l"
             buttons={
-              <div className="flex">
-                <a
-                  href={ThingiverseURL}
-                  target="_blank"
-                  rel="noopener noreferrer">
+              <div className="flex gap-3">
+                <Link href={ThingiverseURL} target="_blank">
                   <Button variant={'default'}>
                     {dict.hobbies.print3d.button1}
                   </Button>
-                </a>
+                </Link>
+                <Link href={PrintableURL} target="_blank">
+                  <Button variant={'default'}>
+                    {dict.hobbies.print3d.button2}
+                  </Button>
+                </Link>
               </div>
             }
           />
@@ -89,7 +93,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
             className="mb-16 md:mb-20"
             image={HobbiesDrawingImage}
             title={dict.hobbies.drawing.title}
-            subtitle="Using digital drawing software to make my own drawings."
             description={dict.hobbies.drawing.description}
             buttons={
               <div className="flex gap-x-3">
@@ -111,7 +114,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
             className="mb-16 md:mb-20"
             image={HobbiesVideoImage}
             title={dict.hobbies.video.title}
-            subtitle="Using video editing software to make my own videos."
             description={dict.hobbies.video.description}
             buttons={
               <div className="flex gap-x-3">
