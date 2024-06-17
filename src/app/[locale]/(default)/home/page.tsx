@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 
 export default async function Page({ params: { locale } }) {
   const dict = await getDictionary(locale)
+
   return (
     <>
       <PageRows withMargin>
