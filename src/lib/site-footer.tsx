@@ -1,14 +1,15 @@
-import React from 'react'
-
 import Link from 'next/link'
 
 import Logo from '@/lib/site-logo'
+
+import { getDictionary } from '@/utils/dictionaries'
 
 import Footer from '@/components/page/footer/footer'
 
 import { footerLinks, socialLinks } from '@/config/menu-data'
 
-export default function SiteFooter() {
+export default async function SiteFooter(props: { locale: string }) {
+  const dict = await getDictionary(props.locale)
   return (
     <Footer
       logo={
@@ -18,8 +19,8 @@ export default function SiteFooter() {
       }
       sns={socialLinks}
       links={footerLinks}
-      copyright="© Copyright 2024. All rights reserved."
-      slogan="Open to Everything & attached to Nothing"
+      copyright={`© Copyright 2022 - ${new Date().getFullYear()}. All rights reserved.`}
+      slogan={dict.common.slogan}
     />
   )
 }

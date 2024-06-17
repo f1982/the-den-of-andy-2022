@@ -52,10 +52,6 @@ export default async function Page({ params: { locale } }) {
             }
           />
         </div>
-
-        {/* <ProjectWorkingOn /> */}
-
-        {/* <YouTubeChannelSection /> */}
       </PageRows>
     </>
   )

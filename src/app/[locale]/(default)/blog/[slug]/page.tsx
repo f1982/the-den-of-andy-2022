@@ -20,19 +20,8 @@ export async function generateStaticParams() {
   return slugs
 }
 
-/**
- * Get post data by slug
- * @returns
- */
-async function getPost(slug: string): Promise<BlogPostData | null> {
-  const post = await getPostDetail(slug)
-  if (!post) {
-    return null
-  }
-  return post
-}
 const BlogPostDetail = async ({ slug }: { slug: string }) => {
-  const post = await getPost(slug)
+  const post = await getPostDetail(slug)
   if (!post) {
     return notFound()
   }

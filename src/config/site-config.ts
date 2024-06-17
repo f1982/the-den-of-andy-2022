@@ -8,8 +8,7 @@ export const siteHostname = 'andycao.me'
 export const siteUrl = `https://${siteHostname}`
 export const cdnUrl = `https://raw.githubusercontent.com/f1982/planet-of-images/main/andycao-24`
 
-export const assetUrl = `/static`
-export const imageUrl = assetUrl + '/images'
+export const slogan = `Open to everything and attach to nothing`
 
 export const siteSettings = {
   name: 'The Den of Andy C',

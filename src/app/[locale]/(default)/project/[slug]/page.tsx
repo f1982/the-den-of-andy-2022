@@ -17,7 +17,8 @@ export function generateStaticParams() {
 }
 
 async function PageDetail({ slug }: { slug: string }) {
-  const detail = await getProjectDetail(slug)
+  const detail = getProjectDetail(slug)
+
   if (!detail) {
     return notFound()
   }
