@@ -2,10 +2,7 @@ import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 import { NextResponse } from 'next/server'
 
-let defaultLocale = 'en'
-
-// Before add new language, need to check the accept-language
-let locales = ['en', 'zh-CN']
+import { defaultLocale, locales } from './config/i18n'
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: any) {

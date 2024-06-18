@@ -1,6 +1,25 @@
+import { Metadata } from 'next'
+
+import { PageLocaleProp } from '@/types/page'
+
 import Prose from '@/components/atoms/prose'
 
-export default function AboutPage({ params: { locale } }) {
+import { getLocalPrefix } from '@/config/i18n'
+import { siteMetadata } from '@/config/site-config'
+
+export async function generateMetadata({
+  params: { locale },
+}: PageLocaleProp): Promise<Metadata> {
+  return {
+    ...siteMetadata,
+    title: 'Privacy Policy',
+    alternates: {
+      canonical: getLocalPrefix(locale) + '/privacy-policy',
+    },
+  }
+}
+
+export default function Page() {
   return (
     <div className="container mx-auto mt-20">
       <Prose>

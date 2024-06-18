@@ -19,7 +19,7 @@ export function Slogan({ text }: { text: string }) {
 
 export default function Footer(props: FooterProps) {
   return (
-    <footer className="bg-card py-16 md:py-32">
+    <footer className="py-16 md:py-32">
       <div className="container">
         <div className="flex flex-col justify-between gap-9 md:flex-row">
           <div className="flex flex-col items-center gap-6 md:items-start">
