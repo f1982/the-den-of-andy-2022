@@ -3,5 +3,5 @@ export const defaultLocale = 'en'
 export const locales = ['en', 'zh-CN']
 
 export function getLocalPrefix(locale: string) {
-  return locale == defaultLocale ? '' : locale
+  return locale
 }
