@@ -1,11 +1,17 @@
 import { Suspense } from 'react'
 
+import { Metadata } from 'next'
+
+import { PageLocaleProp, PageSlugProp } from '@/types/page'
 import { notFound } from 'next/navigation'
 
 import Spinner from '@/components/atoms/spinner'
 
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
+
+import { getLocalPrefix } from '@/config/i18n'
+import { siteMetadata } from '@/config/site-config'
 
 export function generateStaticParams() {
   const posts = getProjects()
@@ -14,6 +20,20 @@ export function generateStaticParams() {
   }))
 
   return slugs
+}
+
+export async function generateMetadata({
+  params: { locale, slug },
+}: PageLocaleProp & PageSlugProp): Promise<Metadata> {
+  const detail = getProjectDetail(slug)
+  return {
+    ...siteMetadata,
+    title: detail?.title,
+    description: detail?.description.slice(0, 160),
+    alternates: {
+      canonical: getLocalPrefix(locale) + '/project/' + detail?.id,
+    },
+  }
 }
 
 async function PageDetail({ slug }: { slug: string }) {

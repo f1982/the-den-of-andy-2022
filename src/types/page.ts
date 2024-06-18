@@ -27,3 +27,7 @@ export type PageSlugProp = {
 export interface PageIdProps {
   params: { slug: string }
 }
+
+export interface PageLocaleProp {
+  params: { locale: string }
+}

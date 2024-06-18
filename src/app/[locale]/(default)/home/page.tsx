@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import { PageLocaleProp } from '@/types/page'
 import Link from 'next/link'
 
 import { getDictionary } from '@/utils/dictionaries'
@@ -9,19 +10,22 @@ import PageHero from '@/components/page/hero-image'
 import SandwichHero from '@/components/page/hero-sandwich'
 import { Button } from '@/components/ui/button'
 
+import { getLocalPrefix } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
 import StudioImage from '@/assets/images/homepage-studio.png'
 
-export const metadata: Metadata = {
-  ...siteMetadata,
-  title: 'Home',
-  description: 'Home page',
-  keywords: 'home page, latest project',
-  alternates: {
-    canonical: '/home',
-  },
+export async function generateMetadata({
+  params: { locale },
+}: PageLocaleProp): Promise<Metadata> {
+  return {
+    ...siteMetadata,
+    title: 'Home',
+    alternates: {
+      canonical: getLocalPrefix(locale) + '/home',
+    },
+  }
 }
 
 export default async function Page({ params: { locale } }) {

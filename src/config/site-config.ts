@@ -11,12 +11,12 @@ export const cdnUrl = `https://raw.githubusercontent.com/f1982/planet-of-images/
 export const slogan = `Open to everything and attach to nothing`
 
 export const siteSettings = {
-  name: 'The Den of Andy C',
+  name: 'The Den of Andy',
   url: siteUrl,
-  title: 'The Den of Andy C',
+  title: 'The Den of Andy',
   description: 'This is my personal website and blog',
   keywords:
-    'andy cao, personal website, blog, portfolio, web developer, app developer, javascript, typescript, react, nextjs, tailwindcss',
+    'andy cao, personal website, blog, portfolio, web developer, app developer, javascript, typescript, react, nextjs, tailwindcss, rc hobbies, 3d printing, arduino, open source, open source enthusiast, open source software, open source software enthusiast',
   author: 'Andy Cao',
   creator: '@andycaonz@gmail.com',
 }

@@ -1,3 +1,6 @@
+import { Metadata } from 'next'
+
+import { PageLocaleProp } from '@/types/page'
 import Link from 'next/link'
 
 import { getDictionary } from '@/utils/dictionaries'
@@ -9,6 +12,7 @@ import SandwichHero from '@/components/page/hero-sandwich'
 import PageTitle from '@/components/page/page-title'
 import { Button } from '@/components/ui/button'
 
+import { getLocalPrefix } from '@/config/i18n'
 import {
   DrawingAlbumURL,
   PrintableURL,
@@ -17,12 +21,26 @@ import {
   ThingiverseURL,
   YouTubeURL,
 } from '@/config/links'
+import { siteMetadata } from '@/config/site-config'
 
 import Hobbies3DPrintingImage from '@/assets/images/hobbies-3d-printing.png'
 import HobbiesDrawingImage from '@/assets/images/hobbies-drawing.png'
 import HobbiesHeroImage from '@/assets/images/hobbies-hero-spaceman.png'
 import HobbiesRCImage from '@/assets/images/hobbies-rc.png'
 import HobbiesVideoImage from '@/assets/images/hobbies-video.png'
+
+export async function generateMetadata({
+  params: { locale },
+}: PageLocaleProp): Promise<Metadata> {
+  return {
+    ...siteMetadata,
+    title: 'Hobbies',
+    description: 'Hobbies',
+    alternates: {
+      canonical: getLocalPrefix(locale) + '/hobbies',
+    },
+  }
+}
 
 export default async function Page({ params }: { params: { locale: string } }) {
   const dict = await getDictionary(params.locale)
