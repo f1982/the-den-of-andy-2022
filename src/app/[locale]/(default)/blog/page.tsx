@@ -1,5 +1,9 @@
 import { Suspense } from 'react'
 
+import { Metadata } from 'next'
+
+import { PageLocaleProp } from '@/types/page'
+
 import { getDictionary } from '@/utils/dictionaries'
 
 import PageRows from '@/components/atoms/page-rows'
@@ -11,14 +15,25 @@ import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
+import { getLocalPrefix } from '@/config/i18n'
+import { siteMetadata } from '@/config/site-config'
+
 import HeroImage from '@/assets/images/blog-hero-coding.png'
+
+export async function generateMetadata({
+  params: { locale },
+}: PageLocaleProp): Promise<Metadata> {
+  return {
+    ...siteMetadata,
+    title: 'Blog',
+    alternates: {
+      canonical: getLocalPrefix(locale) + '/blog',
+    },
+  }
+}
 
 async function PostCards() {
   const posts = await getPosts()
-  if (!posts) {
-    return null
-  }
-
   return (
     <>
       {posts.length > 0 ? (
@@ -29,9 +44,9 @@ async function PostCards() {
     </>
   )
 }
+
 async function PostList() {
   const posts = await getPosts()
-
   return (
     <>
       {posts.length > 0 ? (
@@ -43,8 +58,9 @@ async function PostList() {
   )
 }
 
-export default async function Page({ params: { locale } }) {
-  const dict = await getDictionary(locale) // en
+export default async function Page({ params: { locale } }: PageLocaleProp) {
+  const dict = await getDictionary(locale)
+
   return (
     <PageRows withMargin>
       <PageHero image={HeroImage} />

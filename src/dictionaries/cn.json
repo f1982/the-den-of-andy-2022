@@ -3,6 +3,14 @@
     "LocaleSwitcher": {
       "label": "选择语言",
       "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
+    },
+    "slogan": "抱宽广之怀，未尝执于一端。",
+    "menu": {
+      "home": "主页",
+      "blog": "博客",
+      "projects": "项目",
+      "hobbies": "爱好",
+      "about": "关于"
     }
   },
   "welcome": {

@@ -3,6 +3,14 @@
     "LocaleSwitcher": {
       "label": "Select language",
       "locale": "{locale, select, cn {🇨🇳 Chinese} en {🇺🇸 English} other {Unknown}}"
+    },
+    "slogan": "Open to everything and attach to nothing",
+    "menu": {
+      "home": "Home",
+      "blog": "Blog",
+      "projects": "Projects",
+      "hobbies": "Hobbies",
+      "about": "About"
     }
   },
   "welcome": {

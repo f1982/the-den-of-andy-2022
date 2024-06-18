@@ -8,13 +8,13 @@ export default function Layout({
   params,
 }: {
   children: React.ReactNode
-  params: { locale }
+  params: { locale: string }
 }) {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale={params.locale} />
       <main className="flex-1">{children}</main>
-      <SiteFooter />
+      <SiteFooter locale={params.locale} />
     </>
   )
 }
