@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
-import { MenuItemData } from '@/components/sections/header/menu-data'
+import { MenuItemData } from '@/components/layout/header/menu-data'
 
 import AboutIcon from '../components/shared/Icons/AboutIcon'
 import BlogIcon from '../components/shared/Icons/BlogIcon'
