@@ -3,9 +3,9 @@ import React from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import FormattedDate from '@/components/atoms/formatted-date'
-import Tags from '@/components/atoms/tag-cloud'
-import LandscapeHero from '@/components/page/hero-landscape'
+import LandscapeHero from '@/components/sections/hero-landscape'
+import FormattedDate from '@/components/shared/formatted-date'
+import Tags from '@/components/shared/tag-cloud'
 
 import { ProjectItemData } from '@/features/project/project-types'
 

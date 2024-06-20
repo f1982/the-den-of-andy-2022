@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 import { PageLocaleProp } from '@/types/page'
 
-import Prose from '@/components/atoms/prose'
+import Prose from '@/components/shared/prose'
 
 import { getLocalPrefix } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'

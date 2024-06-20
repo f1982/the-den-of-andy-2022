@@ -2,8 +2,8 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import FormattedDate from '@/components/atoms/formatted-date'
-import HoverScaleImage from '@/components/atoms/hover-scale-image'
+import FormattedDate from '@/components/shared/formatted-date'
+import HoverScaleImage from '@/components/shared/hover-scale-image'
 
 import { ProjectItemData } from '@/features/project/project-types'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CardGrid from '@/components/atoms/card-grid'
+import CardGrid from '@/components/shared/card-grid'
 
 import { BlogPostData } from '@/features/blog/blog-types'
 

@@ -4,7 +4,7 @@ import Logo from '@/lib/site-logo'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import Footer from '@/components/page/footer/footer'
+import Footer from '@/components/layout/footer/footer'
 
 import { footerLinks, socialLinks } from '@/config/menu-data'
 

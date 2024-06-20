@@ -4,8 +4,8 @@ import Logo from '@/lib/site-logo'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
-import Header from '@/components/page/header/header'
+import Header from '@/components/layout/header/header'
+import DarkModeToggle from '@/components/shared/dark-mode-toggle'
 
 import { routeLinks } from '@/config/menu-data'
 
@@ -22,11 +22,8 @@ export default async function SiteHeader(params: { locale: string }) {
     <>
       <Header
         left={
-          <Link
-            data-test="leftLink"
-            href="/"
-            title="back to emojiu.cc homepage">
-            <Logo className="w-10 fill-muted stroke-muted" />
+          <Link data-test="homeLink" href="/" title="homepage">
+            <Logo className="w-10 fill-muted/60 stroke-muted/60" />
           </Link>
         }
         data={menuData}

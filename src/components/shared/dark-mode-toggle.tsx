@@ -41,12 +41,12 @@ export default function DarkModeToggle() {
         {darkMode === 'on' ? (
           <Sun
             data-testid="lightModeIcon"
-            className="stroke-muted-foreground hover:stroke-muted-foreground/60"
+            className="stroke-muted-foreground/60 hover:stroke-muted-foreground/40"
           />
         ) : (
           <MoonStar
             data-testid="darkModeIcon"
-            className="stroke-muted-foreground hover:stroke-muted-foreground/60"
+            className="stroke-muted-foreground/60 hover:stroke-muted-foreground/40"
           />
         )}
       </button>

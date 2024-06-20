@@ -26,6 +26,7 @@ const icons = {
   icon: '/icon.png',
   shortcut: '/icon.png',
   apple: '/apple-icon.png',
+  favicon: '/favicon.ico',
 }
 
 // TODO: add bing bot
