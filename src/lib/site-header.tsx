@@ -22,11 +22,8 @@ export default async function SiteHeader(params: { locale: string }) {
     <>
       <Header
         left={
-          <Link
-            data-test="leftLink"
-            href="/"
-            title="back to emojiu.cc homepage">
-            <Logo className="w-10 fill-muted stroke-muted" />
+          <Link data-test="homeLink" href="/" title="homepage">
+            <Logo className="w-10 fill-muted/60 stroke-muted/60" />
           </Link>
         }
         data={menuData}

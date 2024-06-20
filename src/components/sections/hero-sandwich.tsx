@@ -63,7 +63,7 @@ const SandwichHero: React.FC<HeroData> = ({
       variants={itemVariant}>
       <Image width={800} height={600} alt="hero" src={image} />
     </motion.div>
-    <div className="prose-md prose mx-auto w-full max-w-none dark:prose-invert">
+    <div className="prose-md prose mx-auto flex w-full max-w-none flex-col gap-6 dark:prose-invert">
       <motion.h2 variants={itemVariant} className="text-center">
         {title}
       </motion.h2>
