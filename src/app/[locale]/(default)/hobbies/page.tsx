@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import PageRows from '@/components/atoms/page-rows'
-import PageHero from '@/components/page/hero-image'
-import ColumnHero from '@/components/page/hero-image-text'
-import SandwichHero from '@/components/page/hero-sandwich'
-import PageTitle from '@/components/page/page-title'
+import PageHero from '@/components/sections/hero-image'
+import ColumnHero from '@/components/sections/hero-image-text'
+import SandwichHero from '@/components/sections/hero-sandwich'
+import PageTitle from '@/components/sections/page-title'
+import PageRows from '@/components/shared/page-rows'
 import { Button } from '@/components/ui/button'
 
 import { getLocalPrefix } from '@/config/i18n'

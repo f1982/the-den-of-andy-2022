@@ -4,8 +4,8 @@ import Logo from '@/lib/site-logo'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import DarkModeToggle from '@/components/atoms/dark-mode-toggle'
-import Header from '@/components/page/header/header'
+import Header from '@/components/layout/header/header'
+import DarkModeToggle from '@/components/shared/dark-mode-toggle'
 
 import { routeLinks } from '@/config/menu-data'
 

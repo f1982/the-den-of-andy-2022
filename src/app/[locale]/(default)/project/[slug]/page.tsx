@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import { PageLocaleProp, PageSlugProp } from '@/types/page'
 import { notFound } from 'next/navigation'
 
-import Spinner from '@/components/atoms/spinner'
+import Spinner from '@/components/shared/spinner'
 
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'

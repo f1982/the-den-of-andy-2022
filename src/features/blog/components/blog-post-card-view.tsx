@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { parseDate } from '@/utils/utils'
 
-import HoverScaleImage from '@/components/atoms/hover-scale-image'
+import HoverScaleImage from '@/components/shared/hover-scale-image'
 
 interface PostPreviewProps {
   title: string

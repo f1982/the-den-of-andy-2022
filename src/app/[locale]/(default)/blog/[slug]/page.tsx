@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
 
 import Comments from '@/lib/comment/utteranc-comments'
 
-import Spinner from '@/components/atoms/spinner'
+import Spinner from '@/components/shared/spinner'
 
 import { getPostDetail, getPosts } from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'

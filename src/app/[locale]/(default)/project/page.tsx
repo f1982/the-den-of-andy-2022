@@ -6,10 +6,10 @@ import { PageLocaleProp } from '@/types/page'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import PageRows from '@/components/atoms/page-rows'
-import Spinner from '@/components/atoms/spinner'
-import PageHero from '@/components/page/hero-image'
-import PageTitle from '@/components/page/page-title'
+import PageHero from '@/components/sections/hero-image'
+import PageTitle from '@/components/sections/page-title'
+import PageRows from '@/components/shared/page-rows'
+import Spinner from '@/components/shared/spinner'
 
 import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
