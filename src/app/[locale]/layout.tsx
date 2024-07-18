@@ -2,7 +2,7 @@ import React from 'react'
 
 import '@/global.css'
 import clsx from 'clsx'
-import { Inter } from 'next/font/google'
+import { Inter, Lalezar } from 'next/font/google'
 
 import { AnalyticSettings } from '@/lib/analytics-settings'
 
@@ -12,9 +12,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   ...siteMetadata,
-  icons: {
-    favicon: '/favicon.ico',
-  },
 }
 
 export async function generateStaticParams() {

@@ -3,7 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import FormattedDate from '@/components/atoms/formatted-date'
+import FormattedDate from '@/components/shared/formatted-date'
 
 import { BlogPostData } from '@/features/blog/blog-types'
 

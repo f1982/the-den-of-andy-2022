@@ -4,10 +4,10 @@ import { PageLocaleProp } from '@/types/page'
 
 import { getDictionary } from '@/utils/dictionaries'
 
-import PageRows from '@/components/atoms/page-rows'
-import SmallText from '@/components/page/SmallText'
-import PageHero from '@/components/page/hero-image'
-import PageTitle from '@/components/page/page-title'
+import SmallText from '@/components/sections/about-section'
+import PageHero from '@/components/sections/hero-image'
+import PageTitle from '@/components/sections/page-title'
+import PageRows from '@/components/shared/page-rows'
 
 import { getAge } from '@/features/about/utils/date.utils'
 
