@@ -10,8 +10,8 @@ import markdownToHtml from '@/utils/markdownToHtml'
 import { siteSettings } from '@/config/site-config'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | ' + siteSettings.title,
-  description: 'Our terms of use for using our services',
+  title: 'Support & Feedback | ' + siteSettings.title,
+  description: 'Our support & feedback for using our services',
 }
 
 const TermsOfUse: React.FC = async () => {
