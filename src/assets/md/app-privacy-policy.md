@@ -7,11 +7,21 @@ This Privacy Policy describes how Andy Cao ("we," "us," or "our") collects, uses
 ## Information We Collect
 
 ### Information You Provide to Us
+
 - Email address (when you contact us or participate in surveys)
 - User feedback and survey responses
 - Customer support communications
 
+### Face Image Data
+
+- We take your privacy seriously. When you upload a photo to use our cartoon character generation feature, here's how we handle your face image data:
+- Temporary Use Only: Uploaded images are only used temporarily for the sole purpose of generating cartoon characters through our AI partners (such as Google Gemini or OpenAI).
+- No Permanent Storage: Your image is not stored permanently on our servers. It is automatically deleted shortly after the processing is completed.
+- No Third-Party Sharing: We do not share your face image data with any third-party companies for marketing, analytics, or any other purposes. The image is only sent to the AI service provider strictly for processing.
+- No Face Recognition or Tracking: We do not perform or store any facial recognition, analysis, or tracking of your image.
+
 ### Information Collected Automatically
+
 We automatically collect certain information when you use our Services:
 - Device information (model, operating system version, unique device identifiers)
 - IP address and location data (country and city level only, collected only for specific features with your explicit consent)
@@ -22,8 +32,11 @@ We automatically collect certain information when you use our Services:
 ### Third-Party Services
 Our Services integrate with third-party services including:
 - Firebase (Analytics and Crash Reporting)
-- Amplitude (Analytics)
-- Intercom (Customer Support)
+- Google Analytics (Analytics)
+- Microsoft Clarity (Analytics)
+- OpenAI (AI Services)
+- Google Gemini (AI Services)
+- Admob (Ads)
 
 Each third-party service's data collection is governed by their respective privacy policies.
 
