@@ -3,7 +3,6 @@
     "details": [
       {
         "appIDs": [
-          "4MX24QZ69S.me.andycao.app.multiverseyou",
           "4MX24QZ69S.me.andycao.app.dollpack"
         ],
         "components": [
@@ -13,8 +12,25 @@
             "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
           },
           {
-            "/": "*",
-            "comment": "Allow all paths for universal links."
+            "/": "/popfig/*",
+            "comment": "Only open popfig app for URLs starting with /popfig/"
+          }
+        ]
+      },
+      {
+        "appIDs": [
+          "4MX24QZ69S.me.andycao.app.multiverseyou"
+        ],
+        "components": [
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+            "comment": "Exclude links with this fragment."
+          },
+          {
+            "/": "/toonmix/*",
+            "exclude": false,
+            "comment": "Only open multiverseyou app for URLs starting with /toonmix/"
           }
         ]
       }
