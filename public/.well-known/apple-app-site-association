@@ -18,8 +18,8 @@
         ],
         "components": [
           {
-            "/": "/app/shipfleet/*",
-            "comment": "Only open shipfleet app for URLs starting with /app/shipfleet/"
+            "/": "/shipfleet/*",
+            "comment": "Only open shipfleet app for URLs starting with /shipfleet/"
           }
         ]
       },
