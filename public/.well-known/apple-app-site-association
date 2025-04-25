@@ -19,6 +19,23 @@
       },
       {
         "appIDs": [
+          "4MX24QZ69S.me.andycao.app.shipfleet"
+        ],
+        "components": [
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+            "comment": "Exclude links with this fragment."
+          },
+          {
+            "/": "/app/shipfleet/*",
+            "exclude": false,
+            "comment": "Only open shipfleet app for URLs starting with /app/shipfleet/"
+          }
+        ]
+      },
+      {
+        "appIDs": [
           "4MX24QZ69S.me.andycao.app.multiverseyou"
         ],
         "components": [
