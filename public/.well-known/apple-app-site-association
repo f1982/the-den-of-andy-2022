@@ -7,8 +7,8 @@
         ],
         "components": [
           {
-            "/": "/popfig/*",
-            "comment": "Only open popfig app for URLs starting with /popfig/"
+            "/": "/app/popfig/*",
+            "comment": "Open PopFig app for URLs starting with /app/popfig/"
           }
         ]
       },
@@ -18,8 +18,8 @@
         ],
         "components": [
           {
-            "/": "/shipfleet/*",
-            "comment": "Only open shipfleet app for URLs starting with /shipfleet/"
+            "/": "/app/shipfleet/*",
+            "comment": "Open ShipFleet app for URLs starting with /app/shipfleet/"
           }
         ]
       },
@@ -29,8 +29,8 @@
         ],
         "components": [
           {
-            "/": "/toonmix/*",
-            "comment": "Only open multiverseyou app for URLs starting with /toonmix/"
+            "/": "/app/toonmix/*",
+            "comment": "Open ToonMix app for URLs starting with /app/toonmix/"
           }
         ]
       },
@@ -40,8 +40,8 @@
         ],
         "components": [
           {
-            "/": "/palm/*",
-            "comment": "Only open palmistrydecoder app for URLs starting with /palm/"
+            "/": "/app/palmistry/*",
+            "comment": "Open PalmistryDecoder app for URLs starting with /app/palmistry/"
           }
         ]
       }
