@@ -44,6 +44,17 @@
             "comment": "Open PalmistryDecoder app for URLs starting with /app/palmistry/"
           }
         ]
+      },
+      {
+        "appIDs": [
+          "4MX24QZ69S.me.andycao.app.noseshape"
+        ],
+        "components": [
+          {
+            "/": "/app/noseshape/*",
+            "comment": "Open NoseShape app for URLs starting with /app/noseshape/"
+          }
+        ]
       }
     ]
   }
