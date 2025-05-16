@@ -14,10 +14,14 @@ This Privacy Policy describes how Andy Cao ("we," "us," or "our") collects, uses
 
 ### Face Image Data
 
-- We take your privacy seriously. When you upload a photo to use our cartoon character generation feature, here's how we handle your face image data:
-- Temporary Use Only: Uploaded images are only used temporarily for the sole purpose of generating cartoon characters through our AI partners (such as Google Gemini or OpenAI).
+We take your privacy seriously. When you upload a photo to use our app, here's how we handle your face image data:
+
+- Temporary Use Only: Uploaded images are only used temporarily for the sole purpose of the app feature through our AI partners (such as Google Gemini or OpenAI).
+
 - No Permanent Storage: Your image is not stored permanently on our servers. It is automatically deleted shortly after the processing is completed.
+
 - No Third-Party Sharing: We do not share your face image data with any third-party companies for marketing, analytics, or any other purposes. The image is only sent to the AI service provider strictly for processing.
+
 - No Face Recognition or Tracking: We do not perform or store any facial recognition, analysis, or tracking of your image.
 
 ### Information Collected Automatically
@@ -30,6 +34,7 @@ We automatically collect certain information when you use our Services:
 - Crash reports
 
 ### Third-Party Services
+
 Our Services integrate with third-party services including:
 - Firebase (Analytics and Crash Reporting)
 - Google Analytics (Analytics)
@@ -41,6 +46,7 @@ Our Services integrate with third-party services including:
 Each third-party service's data collection is governed by their respective privacy policies.
 
 ## How We Use Your Information
+
 We use the collected information to:
 - Provide and improve our Services
 - Respond to your requests and support needs
@@ -50,12 +56,15 @@ We use the collected information to:
 - Comply with legal obligations
 
 ## Data Storage and Security
+
 We implement appropriate technical and organizational measures to protect your information. Data is stored securely using industry-standard encryption and security practices.
 
 ## Children's Privacy
+
 Our Services are not directed to children under 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us to have it removed.
 
 ## Your Privacy Rights
+
 Depending on your location, you may have rights to:
 - Access your personal information
 - Correct inaccurate data
@@ -67,21 +76,26 @@ Depending on your location, you may have rights to:
 To exercise these rights, contact us at eingzone@126.com.
 
 ## International Data Transfers
+
 Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.
 
 ## Changes to This Policy
+
 We may update this Privacy Policy periodically. We will notify you of any material changes through our Services or via email.
 
 ## California Privacy Rights
+
 California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected and shared.
 
 ## Contact Us
+
 If you have questions about this Privacy Policy or our privacy practices, contact us at:
 
 Andy Cao
 Email: eingzone@126.com
 
 ## App Store Specific Information
+
 - Our apps do not collect precise location data
 - All data collection is optional and not required for basic app functionality
 - Users can opt-out of analytics collection through device settings
@@ -89,6 +103,7 @@ Email: eingzone@126.com
 - All third-party service providers are contractually bound to protect user privacy
 
 This Privacy Policy complies with:
+
 - Apple App Store Privacy Guidelines
 - Google Play Store User Data Policy
 - General Data Protection Regulation (GDPR)
