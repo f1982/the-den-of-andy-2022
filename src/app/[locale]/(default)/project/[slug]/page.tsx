@@ -13,9 +13,9 @@ import { getProjectDetail, getProjects } from '@/features/project/project-data'
 import { getLocalPrefix } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
-export function generateStaticParams() {
-  const posts = getProjects()
-  const slugs = posts.map((p) => ({
+export async function generateStaticParams() {
+  const posts = await getProjects()
+  const slugs = posts?.map((p) => ({
     slug: p.id,
   }))
 
@@ -25,7 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params: { locale, slug },
 }: PageLocaleProp & PageSlugProp): Promise<Metadata> {
-  const detail = getProjectDetail(slug)
+  const detail = await getProjectDetail(slug)
   return {
     ...siteMetadata,
     title: detail?.title,
@@ -37,7 +37,7 @@ export async function generateMetadata({
 }
 
 async function PageDetail({ slug }: { slug: string }) {
-  const detail = getProjectDetail(slug)
+  const detail = await getProjectDetail(slug)
 
   if (!detail) {
     return notFound()

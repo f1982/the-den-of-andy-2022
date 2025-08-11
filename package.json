@@ -16,10 +16,14 @@
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "release": "standard-version",
-    "release:minor": "standard-version --release-as minor"
+    "release:minor": "standard-version --release-as minor",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "@opennextjs/cloudflare": "^1.6.5",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
@@ -30,7 +34,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.320.0",
     "negotiator": "^0.6.3",
-    "next": "^14.1.0",
+    "next": "^14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -41,6 +45,7 @@
     "usehooks-ts": "^2.14.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.13",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",

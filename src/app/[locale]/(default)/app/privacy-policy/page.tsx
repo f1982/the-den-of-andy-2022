@@ -1,13 +1,15 @@
-import React from 'react'
-
 import type { Metadata } from 'next'
 
-import fs from 'fs'
-import path from 'path'
+import { PageLocaleProp } from '@/types/page'
 
-import markdownToHtml from '@/utils/markdownToHtml'
+import { getDictionary } from '@/utils/dictionaries'
+
+import PageRows from '@/components/shared/page-rows'
 
 import { siteSettings } from '@/config/site-config'
+
+// Import the markdown content at build time
+// import privacyPolicyContent from '@/assets/md/app-privacy-policy.md'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | ' + siteSettings.title,
@@ -15,22 +17,16 @@ export const metadata: Metadata = {
     'Our commitment to protecting your privacy and personal information',
 }
 
-const PrivacyPolicy: React.FC = async () => {
-  const privacyContent = fs.readFileSync(
-    path.join(process.cwd(), 'src/assets/md/app-privacy-policy.md'),
-    'utf8',
-  )
+export default async function Page({ params: { locale } }: PageLocaleProp) {
+  const t = await getDictionary(locale)
 
-  const htmlContent = await markdownToHtml(privacyContent)
+  // Use the imported content directly
+  // const content = await markdownToHtml(privacyPolicyContent)
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <article
-        className="prose-md prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-      />
-    </div>
+    <PageRows>
+      {/* <PageTitle title={t.app.privacyPolicy} />
+      <Prose content={content} /> */}
+    </PageRows>
   )
 }
-
-export default PrivacyPolicy

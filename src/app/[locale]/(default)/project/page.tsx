@@ -33,8 +33,9 @@ export async function generateMetadata({
 }
 
 async function ProjectList() {
-  const projects = getProjects()
-  if (projects.length < 1) {
+  const projects = await getProjects()
+  console.log('projects', projects)
+  if (projects?.length < 1) {
     return <div className="text-center">No projects yet</div>
   }
   return <ProjectCardsView data={projects} />
