@@ -12,3 +12,5 @@ yarn.lock
 *.md
 *.mdx
 .DS_Store
+
+*.jsonc

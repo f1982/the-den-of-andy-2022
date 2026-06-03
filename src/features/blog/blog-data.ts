@@ -1,8 +1,6 @@
 import { format, parseISO } from 'date-fns'
-import fs from 'fs'
 import matter from 'gray-matter'
 import { orderBy } from 'lodash'
-import { join } from 'path'
 
 import markdownToHtml from '@/utils/markdownToHtml'
 
@@ -10,51 +8,54 @@ import { cdnUrl } from '@/config/site-config'
 
 import { BlogPostData } from './blog-types'
 
-const BLOG_POST_DIRECTORY = join(process.cwd(), 'src/content/posts')
-
 const articleImageUrl = `${cdnUrl}/articles`
-// test page only can be accessed by directly input the url
-// http://localhost:3000/blog/test-post-with-all-kinds-of-format
 const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
 
-function isFolder(filename: string) {
-  return filename.indexOf('.') === -1
-}
+// Pre-built blog posts data - this should be generated at build time
+const BLOG_POSTS_MANIFEST = [
+  'chattts-on-macos',
+  'diy-laptop-stand-with-3d-printing',
+  'low-maintenance-succulent-plants-on-my-desk-setup',
+  'make-a-usb-type-c-holder-on-my-desk',
+  'morning-sea-bath-challenge',
+  'my-wfh-desk-setups-2022',
+  'new-apple-silicon-m1-pro-macbook-pro-hands-on',
+  'one-key-keyboard-diy',
+  'summary-of-2022',
+]
 
-/**
- * get a single post info from md file and the folder name
- */
 export async function getPostDetail(slug: string) {
-  // slug is the folder name
-  // could add a zh-cn.md to contain other language content
-  const fullPath = join(BLOG_POST_DIRECTORY, `${slug}/index.md`)
-  if (!fs.existsSync(fullPath)) {
+  try {
+    // Import the markdown content dynamically
+    const postModule = await import(`@/content/posts/${slug}/index.md`)
+    const { data, content } = matter(postModule.default)
+
+    const replaced = content.replace(
+      /\/[^\s]+\.(jpg|jpeg|png|gif)/g,
+      (match: string) => {
+        return `${articleImageUrl}${match}`
+      },
+    )
+    const htmlContent = await markdownToHtml(replaced)
+
+    const postItem: BlogPostData = {
+      slug: slug,
+      title: data['title'],
+      excerpt: data['excerpt'],
+      keywords: data['keywords'],
+      author: {
+        name: data['author']['name'],
+        picture: data['author']['picture'],
+      },
+      content: htmlContent,
+      coverImage: articleImageUrl + data['coverImage'],
+      date: data['date'],
+    }
+    return postItem
+  } catch (error) {
+    console.error(`Error loading post ${slug}:`, error)
     return null
   }
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
-  const replaced = content.replace(
-    /\/[^\s]+\.(jpg|jpeg|png|gif)/g,
-    (match: string) => {
-      return `${articleImageUrl}${match}`
-    },
-  )
-  const htmlContent = await markdownToHtml(replaced)
-
-  const postItem: BlogPostData = {
-    slug: slug,
-    title: data['title'],
-    excerpt: data['excerpt'],
-    keywords: data['keywords'],
-    author: {
-      name: data['author']['name'],
-      picture: data['author']['picture'],
-    },
-    content: htmlContent,
-    coverImage: articleImageUrl + data['coverImage'],
-    date: data['date'],
-  }
-  return postItem
 }
 
 function parseDate(dateStr: string) {
@@ -63,19 +64,16 @@ function parseDate(dateStr: string) {
 }
 
 export async function getPosts(count: number = -1) {
-  const folders = fs.readdirSync(BLOG_POST_DIRECTORY)
-  const postFolders = folders.filter((item) => isFolder(item))
-
   let posts: BlogPostData[] = (
     await Promise.all(
-      postFolders.map(async (slug) => {
+      BLOG_POSTS_MANIFEST.map(async (slug) => {
         return await getPostDetail(slug)
       }),
     )
   ).filter((item): item is BlogPostData => item !== null)
 
   posts = orderBy(posts, (post) => new Date(post.date).getTime(), 'desc')
-  posts
+  posts = posts
     .filter((item) => item?.slug !== TEST_BLOG_POST)
     .filter((item) => item as BlogPostData)
 

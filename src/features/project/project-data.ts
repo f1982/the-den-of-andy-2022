@@ -1,29 +1,33 @@
-import fs from 'fs'
-import { join } from 'path'
-
 import { cdnUrl } from '@/config/site-config'
+
+import projectData from '@/content/projects.json'
 
 import { ProjectItemData } from './project-types'
 
-export const projectDataPath = join(process.cwd(), 'src/content/projects.json')
-
 export const projectImageUrl = cdnUrl + '/projects'
 
-export function getProjects() {
-  const fileContents = fs.readFileSync(projectDataPath, 'utf8')
-  const json = JSON.parse(fileContents)
-  const pjs: ProjectItemData[] = json.data.projects
-  return pjs.map((p) => {
-    return {
-      ...p,
-      cover: projectImageUrl + '/' + p.cover,
-      images: p.images.map((i) => projectImageUrl + '/' + i),
-    }
-  })
+export async function getProjects() {
+  try {
+    // Import the JSON data dynamically
+    // const projectsModule = await import('@/content/projects.json')
+    // const pjs: ProjectItemData[] = projectsModule?.data?.projects || []
+    const pjs: ProjectItemData[] = projectData?.data?.projects
+    console.log('pjs', pjs)
+
+    return pjs.map((p) => {
+      return {
+        ...p,
+        cover: projectImageUrl + '/' + p.cover,
+        images: p.images.map((i) => projectImageUrl + '/' + i),
+      }
+    })
+  } catch (error) {
+    console.error('Error loading projects:', error)
+    return []
+  }
 }
 
-export function getProjectDetail(slug: string) {
-  const projects = getProjects()
-  const pj = projects.find((item) => item.id === slug)
-  return pj
+export async function getProjectDetail(slug: string) {
+  const projects = await getProjects()
+  return projects?.find((p) => p?.id === slug)
 }
