@@ -17,7 +17,13 @@ export const metadata: Metadata = {
     'Our commitment to protecting your privacy and personal information',
 }
 
-export default async function Page({ params: { locale } }: PageLocaleProp) {
+export default async function Page(props: PageLocaleProp) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const t = await getDictionary(locale)
 
   // Use the imported content directly

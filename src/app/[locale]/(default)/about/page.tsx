@@ -19,9 +19,13 @@ import ComputerImage from '@/assets/images/about-computer.jpg'
 import FamilyImage from '@/assets/images/about-family.jpg'
 import HeroImage from '@/assets/images/about-hero-image.png'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'About',
@@ -33,7 +37,13 @@ export async function generateMetadata({
   }
 }
 
-export default async function About({ params: { locale } }) {
+export default async function About(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const dict = await getDictionary(locale)
 
   return (

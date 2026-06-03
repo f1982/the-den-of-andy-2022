@@ -3,12 +3,12 @@
 import React from 'react'
 
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 
 import { HeroData } from '../../types'
 
-const containerVariant = {
+const containerVariant: Variants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
@@ -21,7 +21,7 @@ const containerVariant = {
   },
 }
 
-const itemVariant = {
+const itemVariant: Variants = {
   hidden: {
     opacity: 0,
     y: -50,
@@ -29,10 +29,10 @@ const itemVariant = {
   show: {
     opacity: 1,
     y: 0,
-  },
-  transition: {
-    type: 'tween',
-    duration: 1.6,
+    transition: {
+      type: 'tween',
+      duration: 1.6,
+    },
   },
 }
 

@@ -19,9 +19,13 @@ import { siteMetadata } from '@/config/site-config'
 
 import HeroImage from '@/assets/images/project-hero-rocket.png'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'Projects',
@@ -41,7 +45,13 @@ async function ProjectList() {
   return <ProjectCardsView data={projects} />
 }
 
-export default async function Page({ params: { locale } }) {
+export default async function Page(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const dict = await getDictionary(locale)
   return (
     <PageRows withMargin>

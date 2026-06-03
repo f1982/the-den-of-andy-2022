@@ -2,9 +2,14 @@
 
 import React from 'react'
 
-import { motion } from 'framer-motion'
+import { motion, Transition } from 'framer-motion'
 
-const transition = { duration: 4, yoyo: 100, ease: 'easeInOut' }
+const transition: Transition = {
+  duration: 4,
+  repeat: 100,
+  repeatType: 'reverse',
+  ease: 'easeInOut',
+}
 
 const SVGAnimation = () => (
   <div className="fill-primary-foreground stroke-muted p-4">

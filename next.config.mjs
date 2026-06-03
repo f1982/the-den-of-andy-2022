@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare'
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: { unoptimized: true },
   eslint: {
     dirs: ['src'],
@@ -18,7 +17,7 @@ const nextConfig = {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  await setupDevPlatform()
+  await initOpenNextCloudflareForDev()
 }
 
 export default nextConfig

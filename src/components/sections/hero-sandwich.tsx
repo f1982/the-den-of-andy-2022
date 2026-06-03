@@ -4,23 +4,23 @@ import React from 'react'
 
 import { HeroData } from '@/types'
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 
-const containerVariant = {
+const containerVariant: Variants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 1.0,
-      type: 'liner',
+      type: 'tween',
       staggerChildren: 0.6, // let the child show up by order after a certain delay
     },
   },
 }
 
-const itemVariant = {
+const itemVariant: Variants = {
   hidden: {
     opacity: 0,
     y: -50,
@@ -28,10 +28,10 @@ const itemVariant = {
   show: {
     opacity: 1,
     y: 0,
-  },
-  transition: {
-    type: 'liner',
-    // duration: 1.3,
+    transition: {
+      type: 'tween',
+      // duration: 1.3,
+    },
   },
 }
 

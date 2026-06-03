@@ -19,7 +19,7 @@ const BlogPostCardView: React.FC<PostPreviewProps> = ({
   date,
   url,
 }) => (
-  <Link href={url} passHref>
+  <Link href={url}>
     <HoverScaleImage src={imageUrl} alt={title} />
 
     <div className="mt-3">

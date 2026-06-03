@@ -16,9 +16,13 @@ import { siteMetadata } from '@/config/site-config'
 import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
 import StudioImage from '@/assets/images/homepage-studio.png'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'Home',
@@ -28,7 +32,13 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({ params: { locale } }) {
+export default async function Page(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const dict = await getDictionary(locale)
 
   return (
@@ -44,14 +54,14 @@ export default async function Page({ params: { locale } }) {
             description={dict.home.intro.description}
             buttons={
               <div className="flex gap-x-6">
-                <Link href="/about" passHref legacyBehavior>
-                  <Button className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
-                    {dict.home.intro.button1}
-                  </Button>
-                </Link>
-                <Link href="/project" passHref legacyBehavior>
-                  <Button variant={'default'}>{dict.home.intro.button2}</Button>
-                </Link>
+                <Button
+                  asChild
+                  className="bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground">
+                  <Link href="/about">{dict.home.intro.button1}</Link>
+                </Button>
+                <Button asChild variant={'default'}>
+                  <Link href="/project">{dict.home.intro.button2}</Link>
+                </Button>
               </div>
             }
           />

@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import { Metadata } from 'next'
 
-import { PageLocaleProp, PageSlugProp } from '@/types/page'
+import { PageLocaleSlugProp } from '@/types/page'
 import { notFound } from 'next/navigation'
 
 import Spinner from '@/components/shared/spinner'
@@ -22,9 +22,14 @@ export async function generateStaticParams() {
   return slugs
 }
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: PageLocaleProp & PageSlugProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale,
+    slug
+  } = params;
+
   const detail = await getProjectDetail(slug)
   return {
     ...siteMetadata,
@@ -45,11 +50,12 @@ async function PageDetail({ slug }: { slug: string }) {
   return <ProjectDetailView {...detail} />
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string; locale: string }
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ slug: string; locale: string }>
+  }
+) {
+  const params = await props.params;
   return (
     <>
       <article className="mb-32">
