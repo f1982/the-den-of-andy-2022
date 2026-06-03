@@ -20,9 +20,7 @@ const BlogPostList: React.FC<{ posts: BlogPostData[] }> = ({ posts }) => (
         <div className="flex flex-1 flex-col justify-between md:flex-row">
           <Link
             href={`${BLOG_PATH}/${post.slug}`}
-            className="no-underline hover:underline"
-            passHref
-            legacyBehavior>
+            className="no-underline hover:underline">
             <span>{post.title}</span>
           </Link>
           <span>{post.date}</span>

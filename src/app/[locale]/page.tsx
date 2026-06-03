@@ -13,7 +13,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Page({ params: { locale } }) {
+export default async function Page(props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const dict = await getDictionary(locale)
   return (
     <div className="flex h-screen flex-col items-center justify-center">

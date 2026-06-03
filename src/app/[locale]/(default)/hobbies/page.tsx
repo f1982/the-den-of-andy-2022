@@ -29,9 +29,13 @@ import HobbiesHeroImage from '@/assets/images/hobbies-hero-spaceman.png'
 import HobbiesRCImage from '@/assets/images/hobbies-rc.png'
 import HobbiesVideoImage from '@/assets/images/hobbies-video.png'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'Hobbies',
@@ -42,7 +46,8 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({ params }: { params: { locale: string } }) {
+export default async function Page(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
   const dict = await getDictionary(params.locale)
 
   return (

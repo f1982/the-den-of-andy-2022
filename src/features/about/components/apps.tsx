@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import { motion, useTransform, useScroll } from 'framer-motion'
 
 const Apps = ({ rotation }) => (
   <h1
@@ -21,7 +21,7 @@ const Apps = ({ rotation }) => (
 )
 
 const RotationItem = () => {
-  const { scrollYProgress } = useViewportScroll()
+  const { scrollYProgress } = useScroll()
   const rotate = useTransform(scrollYProgress, [0.1, 0.2], [0, 360])
   const moveOut = useTransform(scrollYProgress, [0.2, 0.3], [0, 1000])
 
@@ -42,7 +42,7 @@ const RotationItem = () => {
 }
 
 const MoveInItem = () => {
-  const { scrollYProgress } = useViewportScroll()
+  const { scrollYProgress } = useScroll()
   const moveIn = useTransform(
     scrollYProgress,
     [0.3, 0.4, 0.5, 0.6],
@@ -66,7 +66,7 @@ const MoveInItem = () => {
 
 const MyDevices = () => {
   const [isComplete, setIsComplete] = useState(false)
-  const { scrollYProgress } = useViewportScroll()
+  const { scrollYProgress } = useScroll()
   const rotate = useTransform(scrollYProgress, [0, 0.9], [0, 360])
 
   return (

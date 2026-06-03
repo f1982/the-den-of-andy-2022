@@ -21,13 +21,17 @@ export type PageSetting = {
 }
 
 export type PageSlugProp = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export interface PageIdProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export interface PageLocaleProp {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
+}
+
+export interface PageLocaleSlugProp {
+  params: Promise<{ locale: string; slug: string }>
 }

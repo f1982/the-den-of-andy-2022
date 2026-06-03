@@ -2,11 +2,11 @@
 
 import React from 'react'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 
-const containerVariant = {
+const containerVariant: Variants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,

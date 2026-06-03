@@ -20,9 +20,13 @@ import { siteMetadata } from '@/config/site-config'
 
 import HeroImage from '@/assets/images/blog-hero-coding.png'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'Blog',
@@ -58,7 +62,13 @@ async function PostList() {
   )
 }
 
-export default async function Page({ params: { locale } }: PageLocaleProp) {
+export default async function Page(props: PageLocaleProp) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const dict = await getDictionary(locale)
 
   return (

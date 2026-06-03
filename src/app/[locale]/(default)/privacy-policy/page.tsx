@@ -7,9 +7,13 @@ import Prose from '@/components/shared/prose'
 import { getLocalPrefix } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
-export async function generateMetadata({
-  params: { locale },
-}: PageLocaleProp): Promise<Metadata> {
+export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   return {
     ...siteMetadata,
     title: 'Privacy Policy',

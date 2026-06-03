@@ -23,7 +23,7 @@ const ProjectCardView: React.FC<ProjectCardViewProps> = ({
   start,
   platform,
 }) => (
-  <Link key={url} href={url} passHref legacyBehavior>
+  <Link key={url} href={url}>
     <div className="flex cursor-pointer flex-col gap-3">
       <div className="relative">
         <HoverScaleImage src={cover} alt={title}></HoverScaleImage>
