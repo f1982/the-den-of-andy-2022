@@ -1,10 +1,10 @@
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
   YoutubeIcon,
-} from 'lucide-react'
+} from '@/components/shared/Icons/social-icons'
 
 import { SNSPlatforms } from '../types/links'
 
@@ -22,7 +22,7 @@ const SNS = [
     // name: 'Instagram',
     name: SNSPlatforms.Instagram,
     type: 'outside',
-    icon: <Instagram />,
+    icon: <InstagramIcon />,
     link: 'https://www.instagram.com/iandycao/',
     alt: "Andy's Instagram",
     tag: '',
@@ -32,7 +32,7 @@ const SNS = [
     id: 2,
     name: SNSPlatforms.FaceBook,
     type: 'outside',
-    icon: <Facebook />,
+    icon: <FacebookIcon />,
     link: 'https://www.facebook.com/andycao1982',
     alt: "Andy's Facebook Homepage",
     tag: '',
@@ -52,7 +52,7 @@ const SNS = [
     id: 4,
     name: SNSPlatforms.LinkedIn,
     type: 'both',
-    icon: <Linkedin />,
+    icon: <LinkedinIcon />,
     link: 'https://www.linkedin.com/in/andyisme/',
     alt: "Andy's LinkedIn Page",
     tag: '',
@@ -62,7 +62,7 @@ const SNS = [
     id: 5,
     name: SNSPlatforms.Twitter,
     type: 'outside',
-    icon: <Twitter />,
+    icon: <TwitterIcon />,
     link: 'https://twitter.com/iandycao',
     alt: "Andy's Twitter",
     tag: '',

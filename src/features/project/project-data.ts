@@ -12,7 +12,6 @@ export async function getProjects() {
     // const projectsModule = await import('@/content/projects.json')
     // const pjs: ProjectItemData[] = projectsModule?.data?.projects || []
     const pjs: ProjectItemData[] = projectData?.data?.projects
-    console.log('pjs', pjs)
 
     return pjs.map((p) => {
       return {
