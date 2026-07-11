@@ -23,9 +23,9 @@ export const siteSettings = {
 
 // Add icon image in public folder
 const icons = {
-  icon: '/icon.png',
-  shortcut: '/icon.png',
-  apple: '/apple-icon.png',
+  icon: '/favicon-32x32.png',
+  shortcut: '/favicon.ico',
+  apple: '/apple-touch-icon.png',
   favicon: '/favicon.ico',
 }
 
@@ -50,7 +50,7 @@ export const openGraph: OpenGraph = {
   siteName: siteSettings.name,
   images: [
     {
-      url: '/og-image.png',
+      url: '/og-image-1200x627.png',
     },
   ],
 }
@@ -61,7 +61,7 @@ export const twitter: Twitter = {
   creator: siteSettings.creator,
   title: siteSettings.title,
   description: siteSettings.description,
-  images: ['/og-image.png'],
+  images: ['/og-image-1200x627.png'],
 }
 
 export const siteMetadata: Metadata = {
@@ -77,9 +77,6 @@ export const siteMetadata: Metadata = {
   keywords: siteSettings.keywords,
   publisher: siteSettings.creator,
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: '/',
-  },
   icons,
   robots,
   openGraph,

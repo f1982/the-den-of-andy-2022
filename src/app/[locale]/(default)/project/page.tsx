@@ -14,7 +14,7 @@ import Spinner from '@/components/shared/spinner'
 import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 import HeroImage from '@/assets/images/project-hero-rocket.png'
@@ -31,18 +31,17 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     title: 'Projects',
     description: 'Projects',
     alternates: {
-      canonical: getLocalPrefix(locale) + '/project',
+      ...getLocalizedAlternates(locale, '/project'),
     },
   }
 }
 
-async function ProjectList() {
+async function ProjectList({ locale }: { locale: string }) {
   const projects = await getProjects()
-  console.log('projects', projects)
   if (projects?.length < 1) {
     return <div className="text-center">No projects yet</div>
   }
-  return <ProjectCardsView data={projects} />
+  return <ProjectCardsView data={projects} locale={locale} />
 }
 
 export default async function Page(props) {
@@ -55,7 +54,7 @@ export default async function Page(props) {
   const dict = await getDictionary(locale)
   return (
     <PageRows withMargin>
-      <PageHero image={HeroImage} />
+      <PageHero image={HeroImage} alt="Rocket project illustration" />
       <div>
         <div className="container">
           <PageTitle
@@ -66,7 +65,7 @@ export default async function Page(props) {
 
         <div className="mx-4">
           <Suspense fallback={<Spinner />}>
-            <ProjectList />
+            <ProjectList locale={locale} />
           </Suspense>
         </div>
       </div>

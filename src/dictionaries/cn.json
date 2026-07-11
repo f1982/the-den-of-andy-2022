@@ -5,6 +5,24 @@
       "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
     },
     "slogan": "抱宽广之怀，未尝执于一端。",
+    "homeLinkLabel": "返回安迪·曹主页",
+    "openMenuLabel": "打开导航菜单",
+    "closeMenuLabel": "关闭导航菜单",
+    "mobileMenuTitle": "导航菜单",
+    "mobileMenuDescription": "前往其他页面。",
+    "footer": {
+      "about": "关于",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款"
+    },
+    "analyticsConsent": {
+      "title": "帮助改进这个网站",
+      "description": "允许使用匿名分析数据，帮助我了解网站的使用情况。",
+      "accept": "允许分析",
+      "decline": "拒绝",
+      "privacy": "隐私政策",
+      "manage": "隐私设置"
+    },
     "menu": {
       "home": "主页",
       "blog": "博客",
@@ -25,15 +43,15 @@
       "greeting": "安迪·曹",
       "pronunciation": "[ch ow]",
       "role": "软件开发人员",
-      "description": "👋嗨e我叫安迪d我是一名前端开发人员er as住在新西兰。我主要做一些网站it和移动obi应用程序。ii我把独立游戏e c开发作为业余爱好。我也喜欢为了娱乐制作一些小硬件设备。我总是试图成为一个终身学习者lee以及一个好父亲d father 💁🏻‍♂️",
+      "description": "👋嗨！我叫安迪，是一名居住在新西兰的前端开发人员。我主要开发网站和移动应用，也把独立游戏开发作为业余爱好。我还喜欢制作一些小型硬件设备。我始终努力成为一个终身学习者和好父亲 💁🏻‍♂️。",
       "button1": "了解更多",
       "button2": "我的作品"
     },
     "buttonLabel": "联系方式",
     "p1": {
       "title": "喜欢探索和创造",
-      "p1": "我叫安迪·曹,来自中国🇨。r我是一名软件开发人员r ,专注于网站和移动i应用程序开发。ment.",
-      "p2": "我认为独立游戏开发是业余爱好。e我懂一些设计 。 我正在努力成为一个终身学习者r 一个出色的无人机n飞行员以及一个好父亲her 💁🏻‍♂️"
+      "p1": "我叫安迪·曹，来自中国🇨🇳。我是一名软件开发人员，专注于网站和移动应用开发。",
+      "p2": "我把独立游戏开发当作业余爱好，也喜欢设计和制作硬件。我正在努力成为一个终身学习者、出色的无人机飞行员以及好父亲 💁🏻‍♂️。"
     },
     "p2": {
       "title": "近期项目",
@@ -44,7 +62,11 @@
     "pageTitle": "我的博客",
     "intro": "我试图用文字记录我做过的事情。",
     "headline": "博客",
-    "more": "更多"
+    "more": "更多",
+    "comments": {
+      "open": "加载评论",
+      "description": "评论由 Utterances 提供，只有在你选择查看时才会加载。"
+    }
   },
 
   "project": {
@@ -87,9 +109,9 @@
     "headline": "关于",
     "description": "这里有一些关于我的信息",
     "whoIsAndyTitle": "谁是安迪",
-    "whoIsAndyDescription": "我叫安迪曹,来自中国🇨 我是一个软件开发人员er,专注于构建网站和移动应用程序p。我有几年的爱好与我在一起。比如遥控爱好hbby,用第一人称视角飞无人机 v视频编辑和 an。目前我和家人住在新西兰奥克兰la。d 🇳🇿.",
+    "whoIsAndyDescription": "我叫安迪·曹，来自中国🇨🇳。我是一名专注于网站和移动应用开发的软件开发人员。我长期保持着遥控模型、第一人称视角无人机、视频编辑和 DIY 等爱好。目前我和家人住在新西兰奥克兰 🇳🇿。",
     "whatAndyDoTitle": "我在做什么?",
-    "whatAndyDoDescription": "我是一个软件开发人员👨‍,在软件行业工作了n 多年。我开发过网站e制作过移动e应用程序p也制作和设计过休闲游戏e。开发软件的过程总是给我带来快乐和满足感。目前n我正在学习i和使用前端开发技术。主要关注e on JavaS、ipt、CSS,、Tateo相关的技术栈和 and React e。因为我喜欢苹果p生态系统s我也关注ye 开发。om ent.",
+    "whatAndyDoDescription": "我是一名软件开发人员 👨‍💻，在软件行业工作了 17 年以上。我开发过网站、移动应用，也制作和设计过休闲游戏。开发软件的过程总能带给我快乐和满足感。目前我专注于前端开发技术，主要使用 JavaScript、CSS、HTML、React 和 React Native。因为我喜欢 Apple 生态系统，也会关注 iOS 开发。",
     "familyTitle": "家庭",
     "familyDescription": "我很幸运很早就遇到了我的妻子方。她在我的生活和精神上帮助我很多。我们有一个$AGE_OF_ZOE$岁的女儿,她的名字叫Zoe,她健康活泼。我们一家目前住在奥克兰。"
   }

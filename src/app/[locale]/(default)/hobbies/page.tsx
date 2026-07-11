@@ -12,7 +12,7 @@ import PageTitle from '@/components/sections/page-title'
 import PageRows from '@/components/shared/page-rows'
 import { Button } from '@/components/ui/button'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import {
   DrawingAlbumURL,
   PrintableURL,
@@ -41,7 +41,7 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     title: 'Hobbies',
     description: 'Hobbies',
     alternates: {
-      canonical: getLocalPrefix(locale) + '/hobbies',
+      ...getLocalizedAlternates(locale, '/hobbies'),
     },
   }
 }
@@ -53,7 +53,7 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
   return (
     <>
       <PageRows withMargin>
-        <PageHero image={HobbiesHeroImage} />
+        <PageHero image={HobbiesHeroImage} alt="Spaceman hobby illustration" />
         <div className="container">
           <PageTitle
             title={dict.hobbies.headline}
@@ -66,15 +66,22 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
             image={Hobbies3DPrintingImage}
             title={dict.hobbies.print3d.title}
             description={dict.hobbies.print3d.description}
+            imageAlt="3D printer and printed object"
             direction="r2l"
             buttons={
               <div className="flex gap-3">
-                <Link href={ThingiverseURL} target="_blank">
+                <Link
+                  href={ThingiverseURL}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <Button variant={'default'}>
                     {dict.hobbies.print3d.button1}
                   </Button>
                 </Link>
-                <Link href={PrintableURL} target="_blank">
+                <Link
+                  href={PrintableURL}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <Button variant={'default'}>
                     {dict.hobbies.print3d.button2}
                   </Button>
@@ -92,6 +99,7 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
             title={dict.hobbies.rc.title}
             subtitle="Using RC planes and devices to build my own robots."
             description={dict.hobbies.rc.description}
+            imageAlt="Remote-controlled aircraft"
             buttons={
               <div className="flex gap-x-3">
                 <a
@@ -117,6 +125,7 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
             image={HobbiesDrawingImage}
             title={dict.hobbies.drawing.title}
             description={dict.hobbies.drawing.description}
+            imageAlt="Drawing tools and artwork"
             buttons={
               <div className="flex gap-x-3">
                 <a
@@ -138,6 +147,7 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
             image={HobbiesVideoImage}
             title={dict.hobbies.video.title}
             description={dict.hobbies.video.description}
+            imageAlt="Video editing setup"
             buttons={
               <div className="flex gap-x-3">
                 <a target="_blank" href={YouTubeURL} rel="noopener noreferrer">

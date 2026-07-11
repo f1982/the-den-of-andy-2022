@@ -1,5 +1,6 @@
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
+import { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
 import { defaultLocale, locales } from './config/i18n'
@@ -11,14 +12,14 @@ function getLocale(request: any) {
   return match(languages, locales, defaultLocale)
 }
 
-export function middleware(request) {
+export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   )
 
-  if (pathnameHasLocale) return
+  if (pathnameHasLocale) return NextResponse.next()
 
   // Redirect if there is no locale
   const locale = getLocale(request)

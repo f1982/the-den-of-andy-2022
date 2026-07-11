@@ -15,7 +15,8 @@ function SocialIconLinks({
         <Link
           key={item.link}
           href={item.link}
-          title={item.title}
+          aria-label={item.title ?? item.label}
+          title={item.title ?? item.label}
           className="text-muted-foreground transition-all hover:text-foreground">
           {item.icon}
         </Link>

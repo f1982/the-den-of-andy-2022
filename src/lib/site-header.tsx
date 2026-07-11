@@ -8,6 +8,7 @@ import Header from '@/components/layout/header/header'
 import DarkModeToggle from '@/components/shared/dark-mode-toggle'
 
 import { routeLinks } from '@/config/menu-data'
+import { localizedPath } from '@/utils/locale-path'
 
 export default async function SiteHeader(params: { locale: string }) {
   const { locale } = params
@@ -15,18 +16,29 @@ export default async function SiteHeader(params: { locale: string }) {
   const dict = await getDictionary(locale)
 
   const menuData = routeLinks.map((item) => {
-    return { ...item, label: dict.common.menu[item.label.toLowerCase()] }
+    return {
+      ...item,
+      link: localizedPath(locale, item.link),
+      label: dict.common.menu[item.label.toLowerCase()],
+    }
   })
 
   return (
     <>
       <Header
         left={
-          <Link data-test="homeLink" href="/" title="homepage">
+          <Link
+            data-test="homeLink"
+            href={localizedPath(locale)}
+            aria-label={dict.common.homeLinkLabel}>
             <Logo className="w-10 fill-muted/60 stroke-muted/60" />
           </Link>
         }
         data={menuData}
+        openMenuLabel={dict.common.openMenuLabel}
+        closeMenuLabel={dict.common.closeMenuLabel}
+        mobileMenuTitle={dict.common.mobileMenuTitle}
+        mobileMenuDescription={dict.common.mobileMenuDescription}
         right={
           <div className="flex flex-row gap-3">
             <DarkModeToggle />

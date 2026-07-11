@@ -23,6 +23,7 @@ export default function HoverScaleImage({
         height={0}
         alt={alt}
         loading="lazy"
+        sizes="(max-width: 768px) 100vw, 33vw"
         {...props}
       />
       <div

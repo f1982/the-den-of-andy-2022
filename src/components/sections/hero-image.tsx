@@ -6,11 +6,13 @@ import Image from 'next/image'
 
 interface PageHeroProps {
   image: string | StaticImport
+  alt: string
   className?: string
 }
 
 const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
   image,
+  alt,
   className,
 }) => {
   return (
@@ -25,9 +27,11 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
           'aspect-square h-auto w-full object-contain md:aspect-video',
           className,
         )}
-        alt=""
+        alt={alt}
         width={800}
         height={600}
+        priority
+        sizes="(max-width: 768px) 100vw, 800px"
       />
     </div>
   )

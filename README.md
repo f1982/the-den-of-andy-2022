@@ -1,6 +1,4 @@
-This project is Andy's personal website.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3e5c6671-2cf6-4e95-a468-9404e4d9cbaf/deploy-status)](https://app.netlify.com/sites/andycao-24/deploys)
+This project is Andy's personal website, built with Next.js and deployed to Cloudflare Workers through OpenNext.
 
 ## Why?
 
@@ -8,8 +6,8 @@ I'd love to have a place that fully autonomous. I can put all my interests there
 
 ## Install
 
-```
-npm i 
+```bash
+npm ci
 ```
 
 ## Release
@@ -25,7 +23,19 @@ The command will bump the version number, update the `CHANGELOG.md` and `git com
 
 - React
 - Next.js
+- OpenNext for Cloudflare
 
-## Services
+## Development
 
-- Netlify
+```bash
+npm run dev
+```
+
+## Production preview
+
+```bash
+npm run build
+npm run preview
+```
+
+Deploy with `npm run deploy` after authenticating Wrangler and reviewing the generated worker.
