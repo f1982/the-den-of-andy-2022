@@ -5,6 +5,7 @@ import CardGrid from '@/components/shared/card-grid'
 import { BlogPostData } from '@/features/blog/blog-types'
 
 import { BLOG_PATH } from '@/config/menu-data'
+import { localizedPath } from '@/utils/locale-path'
 
 import BlogPostCardView from './blog-post-card-view'
 
@@ -13,9 +14,10 @@ interface Props {
     BlogPostData,
     'slug' | 'title' | 'date' | 'coverImage' | 'excerpt'
   >[]
+  locale: string
 }
 
-const BlogPosCards: React.FC<Props> = ({ posts }) => (
+const BlogPosCards: React.FC<Props> = ({ posts, locale }) => (
   <CardGrid>
     {posts.map((post) => (
       <BlogPostCardView
@@ -23,7 +25,7 @@ const BlogPosCards: React.FC<Props> = ({ posts }) => (
         title={post.title}
         imageUrl={post.coverImage}
         date={post.date}
-        url={`${BLOG_PATH}/${post.slug}`}
+        url={localizedPath(locale, `${BLOG_PATH}/${post.slug}`)}
       />
     ))}
   </CardGrid>

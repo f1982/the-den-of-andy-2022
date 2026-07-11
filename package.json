@@ -6,13 +6,17 @@
   "license": "MIT",
   "authors": "Andy Cao <caojundan@gmail.com> (https://github.com/f1982)",
   "private": true,
+  "engines": {
+    "node": ">=22.21.0 <23",
+    "npm": ">=10.9.4 <11"
+  },
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap",
     "export": "next build && next export",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "vitest",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",

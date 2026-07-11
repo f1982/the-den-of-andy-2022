@@ -11,7 +11,7 @@ import PageRows from '@/components/shared/page-rows'
 
 import { getAge } from '@/features/about/utils/date.utils'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 import AndyImage from '@/assets/images/about-andy-illustration.png'
@@ -32,7 +32,7 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     description:
       'Everything about Andy, who is this guy? What he does? What he likes?',
     alternates: {
-      canonical: getLocalPrefix(locale) + '/about',
+      ...getLocalizedAlternates(locale, '/about'),
     },
   }
 }
@@ -49,7 +49,7 @@ export default async function About(props) {
   return (
     <>
       <PageRows withMargin>
-        <PageHero image={HeroImage} />
+        <PageHero image={HeroImage} alt="Illustration of Andy Cao" />
 
         <div className="container">
           <PageTitle

@@ -42,9 +42,9 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
   image,
   description,
   buttons,
-  viewPortOnce = true,
   direction = 'l2r',
   className,
+  imageAlt = 'Illustration',
 }) => (
   <motion.section
     className={clsx(
@@ -53,19 +53,19 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
       className,
     )}
     variants={containerVariant}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: viewPortOnce }}>
+    initial={false}
+    animate="show">
     <Image
       className="mb-6 object-cover md:mb-0 md:w-2/5"
       width={500}
       height={300}
-      alt="hero"
+      alt={imageAlt}
       src={image}
+      sizes="(max-width: 768px) 100vw, 500px"
     />
     <div className="prose-md prose flex flex-col items-center dark:prose-invert md:w-3/5 md:items-start ">
       <h2>{title}</h2>
-      {subtitle && <h4>{subtitle}</h4>}
+      {subtitle && <h3>{subtitle}</h3>}
       <motion.div variants={itemVariant}>
         <p>{description}</p>
       </motion.div>

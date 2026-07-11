@@ -33,7 +33,7 @@ export function NavMenuItem({
             pathname.startsWith(link) ? 'visible' : 'hidden',
             'text-primary',
           )}>
-          {icon}
+          <span aria-hidden="true">{icon}</span>
         </span>
         {label}
       </Link>
@@ -54,10 +54,10 @@ export function MobileNavMenuItem({
 
   return (
     <>
-      <Link href={link}>
-        <SheetClose className="w-full text-left">
-          <div className="flex flex-row items-center gap-3">
-            {icon}
+      <SheetClose asChild>
+        <Link href={link} className="block w-full text-left">
+          <span className="flex flex-row items-center gap-3">
+            <span aria-hidden="true">{icon}</span>
             <span
               className={clsx(
                 'w-full text-lg',
@@ -67,9 +67,9 @@ export function MobileNavMenuItem({
               )}>
               {label}
             </span>
-          </div>
-        </SheetClose>
-      </Link>
+          </span>
+        </Link>
+      </SheetClose>
     </>
   )
 }

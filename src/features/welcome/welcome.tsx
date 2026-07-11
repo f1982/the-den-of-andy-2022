@@ -26,8 +26,13 @@ const DefaultWelcome = ({
     </div>
     <div className="flex justify-center">
       <Link href={link}>
-        <Button variant={'default'} size={'sm'}>
-          <Power />
+        <Button
+          variant={'default'}
+          size={'sm'}
+          aria-label={label}
+          title={label}>
+          <Power aria-hidden="true" />
+          <span className="sr-only">{label}</span>
         </Button>
       </Link>
     </div>

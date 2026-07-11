@@ -41,43 +41,53 @@ const SandwichHero: React.FC<HeroData> = ({
   image,
   description,
   buttons,
-  viewPortOnce = true,
   className,
   id,
-}) => (
-  <motion.section
-    className={clsx(
-      'flex',
-      'items-center',
-      'justify-center',
-      'flex-col',
-      className,
-    )}
-    variants={containerVariant}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: viewPortOnce }}
-    id={id}>
-    <motion.div
-      className={clsx('mx-auto mb-6 w-4/5 md:max-w-80')}
-      variants={itemVariant}>
-      <Image width={800} height={600} alt="hero" src={image} />
-    </motion.div>
-    <div className="prose-md prose mx-auto flex w-full max-w-none flex-col gap-6 dark:prose-invert">
-      <motion.h2 variants={itemVariant} className="text-center">
-        {title}
-      </motion.h2>
-      {subtitle && (
-        <motion.h4 variants={itemVariant} className="text-center">
-          {subtitle}
-        </motion.h4>
+  imageAlt = 'Illustration',
+  headingLevel = 2,
+}) => {
+  const Heading = headingLevel === 1 ? motion.h1 : motion.h2
+
+  return (
+    <motion.section
+      className={clsx(
+        'flex',
+        'items-center',
+        'justify-center',
+        'flex-col',
+        className,
       )}
-      <motion.p variants={itemVariant}>{description}</motion.p>
-      <motion.div variants={itemVariant} className="flex justify-center">
-        {buttons}
+      variants={containerVariant}
+      initial={false}
+      animate="show"
+      id={id}>
+      <motion.div
+        className={clsx('mx-auto mb-6 w-4/5 md:max-w-80')}
+        variants={itemVariant}>
+        <Image
+          width={800}
+          height={600}
+          alt={imageAlt}
+          src={image}
+          sizes="(max-width: 768px) 80vw, 320px"
+        />
       </motion.div>
-    </div>
-  </motion.section>
-)
+      <div className="prose-md prose mx-auto flex w-full max-w-none flex-col gap-6 dark:prose-invert">
+        <Heading variants={itemVariant} className="text-center">
+          {title}
+        </Heading>
+        {subtitle && (
+          <motion.h3 variants={itemVariant} className="text-center">
+            {subtitle}
+          </motion.h3>
+        )}
+        <motion.p variants={itemVariant}>{description}</motion.p>
+        <motion.div variants={itemVariant} className="flex justify-center">
+          {buttons}
+        </motion.div>
+      </div>
+    </motion.section>
+  )
+}
 
 export default SandwichHero

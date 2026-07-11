@@ -5,6 +5,24 @@
       "locale": "{locale, select, cn {🇨🇳 Chinese} en {🇺🇸 English} other {Unknown}}"
     },
     "slogan": "Open to everything and attach to nothing",
+    "homeLinkLabel": "Go to Andy Cao home",
+    "openMenuLabel": "Open navigation menu",
+    "closeMenuLabel": "Close navigation menu",
+    "mobileMenuTitle": "Navigation menu",
+    "mobileMenuDescription": "Navigate to another page.",
+    "footer": {
+      "about": "About",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "analyticsConsent": {
+      "title": "Help improve this site",
+      "description": "Allow anonymous analytics to help understand how this site is used.",
+      "accept": "Allow analytics",
+      "decline": "Decline",
+      "privacy": "Privacy policy",
+      "manage": "Privacy settings"
+    },
     "menu": {
       "home": "Home",
       "blog": "Blog",
@@ -44,7 +62,11 @@
     "pageTitle": "My blog",
     "intro": "I try to use texts to record something I have done.",
     "headline": "Blog",
-    "more": "More"
+    "more": "More",
+    "comments": {
+      "open": "Load comments",
+      "description": "Comments are provided by Utterances and loaded only when you choose to view them."
+    }
   },
   "project": {
     "pageTitle": "Projects",

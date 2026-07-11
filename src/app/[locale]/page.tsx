@@ -1,16 +1,21 @@
 import { Metadata } from 'next'
 
 import { getDictionary } from '@/utils/dictionaries'
+import SchemaJsonLd from '@/utils/schema-jsonld'
 
 import DefaultWelcome from '@/features/welcome/welcome'
 
-import { siteMetadata } from '@/config/site-config'
+import { siteMetadata, siteSettings, siteUrl } from '@/config/site-config'
+import { getJsonLdWebsite } from '@/utils/schema-json-utils'
+import { getLocalizedAlternates } from '@/config/i18n'
 
-export const metadata: Metadata = {
-  ...siteMetadata,
-  alternates: {
-    canonical: '/',
-  },
+export async function generateMetadata(props): Promise<Metadata> {
+  const { locale } = await props.params
+
+  return {
+    ...siteMetadata,
+    alternates: getLocalizedAlternates(locale),
+  }
 }
 
 export default async function Page(props) {
@@ -23,11 +28,17 @@ export default async function Page(props) {
   const dict = await getDictionary(locale)
   return (
     <div className="flex h-screen flex-col items-center justify-center">
+      <SchemaJsonLd
+        jsonLd={getJsonLdWebsite({
+          ...siteSettings,
+          url: `${siteUrl}/${locale}`,
+        })}
+      />
       <DefaultWelcome
         title={dict.welcome.greeting}
         subtitle={dict.welcome.description}
         label={dict.welcome.buttonLabel}
-        link="/home"
+        link={`/${locale}/home`}
       />
     </div>
   )

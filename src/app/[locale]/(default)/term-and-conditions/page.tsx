@@ -4,7 +4,7 @@ import { PageLocaleProp } from '@/types/page'
 
 import Prose from '@/components/shared/prose'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
@@ -18,7 +18,7 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     ...siteMetadata,
     title: 'Terms and Conditions',
     alternates: {
-      canonical: getLocalPrefix(locale) + '/term-and-conditions',
+      ...getLocalizedAlternates(locale, '/term-and-conditions'),
     },
   }
 }

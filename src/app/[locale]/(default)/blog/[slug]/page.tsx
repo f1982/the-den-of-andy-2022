@@ -11,8 +11,9 @@ import Spinner from '@/components/shared/spinner'
 
 import { getPostDetail, getPosts } from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'
+import { getDictionary } from '@/utils/dictionaries'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 export async function generateStaticParams() {
@@ -40,7 +41,7 @@ export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metad
     description: post?.excerpt,
     keywords: post?.keywords,
     alternates: {
-      canonical: getLocalPrefix(locale) + '/blog/' + post?.slug,
+      ...getLocalizedAlternates(locale, '/blog/' + post?.slug),
     },
   }
 }
@@ -63,6 +64,7 @@ export default async function Page(
   }
 ) {
   const params = await props.params;
+  const dict = await getDictionary(params.locale)
   return (
     <>
       <Suspense fallback={<Spinner />}>
@@ -71,7 +73,7 @@ export default async function Page(
 
       <div className="my-24" />
 
-      <Comments />
+      <Comments labels={dict.blog.comments} />
     </>
   )
 }

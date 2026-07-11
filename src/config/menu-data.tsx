@@ -74,16 +74,19 @@ export const otherLinks: MenuItemData[] = [
     title: 'About',
     link: '/about',
     label: 'About',
+    labelKey: 'about',
   },
   {
     title: 'Privacy Policy',
     link: '/privacy-policy',
     label: 'Privacy Policy',
+    labelKey: 'privacyPolicy',
   },
   {
     title: 'Terms of Service',
     link: '/term-and-conditions',
     label: 'Terms of Service',
+    labelKey: 'termsOfService',
   },
 ]
 

@@ -10,7 +10,7 @@ import Spinner from '@/components/shared/spinner'
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
 
-import { getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
 export async function generateStaticParams() {
@@ -36,7 +36,7 @@ export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metad
     title: detail?.title,
     description: detail?.description.slice(0, 160),
     alternates: {
-      canonical: getLocalPrefix(locale) + '/project/' + detail?.id,
+      ...getLocalizedAlternates(locale, '/project/' + detail?.id),
     },
   }
 }
