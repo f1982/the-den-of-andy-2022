@@ -1,6 +1,10 @@
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-
 import { MenuItemData } from '@/components/layout/header/menu-data'
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from '@/components/shared/Icons/social-icons'
 
 import AboutIcon from '../components/shared/Icons/AboutIcon'
 import BlogIcon from '../components/shared/Icons/BlogIcon'
@@ -42,25 +46,25 @@ export const socialLinks: MenuItemData[] = [
   {
     title: 'Twitter',
     label: 'Twitter',
-    icon: <Twitter />,
+    icon: <TwitterIcon />,
     link: 'https://twitter.com/iandycao',
   },
   {
     title: 'YouTube',
     label: 'YouTube',
-    icon: <Youtube />,
+    icon: <YoutubeIcon />,
     link: 'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg',
   },
   {
     title: 'Ins',
     label: 'Ins',
-    icon: <Instagram />,
+    icon: <InstagramIcon />,
     link: 'https://www.instagram.com/iandycao/',
   },
   {
     title: 'Facebook',
     label: 'Facebook',
-    icon: <Facebook />,
+    icon: <FacebookIcon />,
     link: 'https://www.facebook.com/andycao1982',
   },
 ]
