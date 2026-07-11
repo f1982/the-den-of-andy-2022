@@ -14,9 +14,9 @@ import { getAge } from '@/features/about/utils/date.utils'
 import { getLocalPrefix } from '@/config/i18n'
 import { siteMetadata } from '@/config/site-config'
 
-import AndyImage from '@/assets/images/about-andy.jpg'
-import ComputerImage from '@/assets/images/about-computer.jpg'
-import FamilyImage from '@/assets/images/about-family.jpg'
+import AndyImage from '@/assets/images/about-andy-illustration.png'
+import ComputerImage from '@/assets/images/about-computer-illustration.png'
+import FamilyImage from '@/assets/images/about-family-illustration.png'
 import HeroImage from '@/assets/images/about-hero-image.png'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {

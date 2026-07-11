@@ -38,7 +38,6 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
 
 async function ProjectList() {
   const projects = await getProjects()
-  console.log('projects', projects)
   if (projects?.length < 1) {
     return <div className="text-center">No projects yet</div>
   }
