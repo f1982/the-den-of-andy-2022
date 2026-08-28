@@ -10,9 +10,9 @@ import SandwichHero from '@/components/sections/hero-sandwich'
 import PageRows from '@/components/shared/page-rows'
 import { Button } from '@/components/ui/button'
 
-import { getLocalizedAlternates } from '@/config/i18n'
 import { localizedPath } from '@/utils/locale-path'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
 import StudioImage from '@/assets/images/homepage-studio.png'
@@ -24,13 +24,13 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Home',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/home'),
-    },
-  }
+  const dict = await getDictionary(locale)
+  return getPageMetadata({
+    locale,
+    path: '/home',
+    title: `${dict.home.intro.greeting} — ${dict.home.intro.role} | ${siteSettings.name}`,
+    description: truncateMetaDescription(dict.home.intro.description),
+  })
 }
 
 export default async function Page(props) {

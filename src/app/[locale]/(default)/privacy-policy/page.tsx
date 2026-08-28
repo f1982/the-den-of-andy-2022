@@ -4,8 +4,8 @@ import { PageLocaleProp } from '@/types/page'
 
 import Prose from '@/components/shared/prose'
 
-import { getLocalizedAlternates } from '@/config/i18n'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;
@@ -14,13 +14,13 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Privacy Policy',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/privacy-policy'),
-    },
-  }
+  return getPageMetadata({
+    locale,
+    path: '/privacy-policy',
+    title: `Privacy Policy | ${siteSettings.name}`,
+    description:
+      'Learn how The Den of Andy handles analytics, comments, cookies and privacy requests.',
+  })
 }
 
 export default function Page() {

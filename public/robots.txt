@@ -1,6 +1,37 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Disallow: /
+
+# CCBot
+User-agent: CCBot
+Disallow: /
+
+# Bytespider
+User-agent: Bytespider
+Disallow: /
 
 # Host
 Host: https://andycao.me

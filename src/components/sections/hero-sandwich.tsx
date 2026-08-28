@@ -76,11 +76,18 @@ const SandwichHero: React.FC<HeroData> = ({
         <Heading variants={itemVariant} className="text-center">
           {title}
         </Heading>
-        {subtitle && (
-          <motion.h3 variants={itemVariant} className="text-center">
-            {subtitle}
-          </motion.h3>
-        )}
+        {subtitle &&
+          (headingLevel === 1 ? (
+            <motion.p
+              variants={itemVariant}
+              className="text-center text-xl font-semibold">
+              {subtitle}
+            </motion.p>
+          ) : (
+            <motion.h3 variants={itemVariant} className="text-center">
+              {subtitle}
+            </motion.h3>
+          ))}
         <motion.p variants={itemVariant}>{description}</motion.p>
         <motion.div variants={itemVariant} className="flex justify-center">
           {buttons}

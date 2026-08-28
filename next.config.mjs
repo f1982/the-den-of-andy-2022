@@ -23,8 +23,12 @@ const nextConfig = {
             value:
               "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://utteranc.es; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com; img-src 'self' data: blob: https://raw.githubusercontent.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://utteranc.es; object-src 'none'; base-uri 'self'; form-action 'self'",
           },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           {
             key: 'Permissions-Policy',

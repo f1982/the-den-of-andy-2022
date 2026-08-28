@@ -14,8 +14,8 @@ import Spinner from '@/components/shared/spinner'
 import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
 
-import { getLocalizedAlternates } from '@/config/i18n'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 import HeroImage from '@/assets/images/project-hero-rocket.png'
 
@@ -26,14 +26,14 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Projects',
-    description: 'Projects',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/project'),
-    },
-  }
+  const dict = await getDictionary(locale)
+  return getPageMetadata({
+    locale,
+    path: '/project',
+    title: `${dict.project.headline} by Andy Cao | ${siteSettings.name}`,
+    description: truncateMetaDescription(dict.project.intro),
+    keywords: siteSettings.keywords,
+  })
 }
 
 async function ProjectList({ locale }: { locale: string }) {

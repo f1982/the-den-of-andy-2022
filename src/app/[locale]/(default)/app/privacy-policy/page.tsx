@@ -1,38 +1,37 @@
 import type { Metadata } from 'next'
 
-import { PageLocaleProp } from '@/types/page'
-
-import { getDictionary } from '@/utils/dictionaries'
-
-import PageRows from '@/components/shared/page-rows'
+import markdownToHtml from '@/utils/markdownToHtml'
 
 import { siteSettings } from '@/config/site-config'
+import { getPageMetadata } from '@/utils/metadata-utils'
 
-// Import the markdown content at build time
-// import privacyPolicyContent from '@/assets/md/app-privacy-policy.md'
+import { getLocalizedMarkdown } from '@/content/localized-markdown'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | ' + siteSettings.title,
-  description:
-    'Our commitment to protecting your privacy and personal information',
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await props.params
+  return getPageMetadata({
+    locale,
+    path: '/app/privacy-policy',
+    title: `Privacy Policy | ${siteSettings.name}`,
+    description:
+      'Our commitment to protecting your privacy and personal information.',
+  })
 }
 
-export default async function Page(props: PageLocaleProp) {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
-
-  const t = await getDictionary(locale)
-
-  // Use the imported content directly
-  // const content = await markdownToHtml(privacyPolicyContent)
+export default async function Page(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params
+  const htmlContent = await markdownToHtml(
+    getLocalizedMarkdown('appPrivacyPolicy', locale),
+  )
 
   return (
-    <PageRows>
-      {/* <PageTitle title={t.app.privacyPolicy} />
-      <Prose content={content} /> */}
-    </PageRows>
+    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
+      <article
+        className="prose-md prose mx-auto max-w-none dark:prose-invert"
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+      />
+    </div>
   )
 }

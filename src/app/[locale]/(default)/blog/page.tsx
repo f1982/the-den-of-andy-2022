@@ -15,8 +15,8 @@ import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
 import BlogPostList from '@/features/blog/components/blog-post-list'
 
-import { getLocalizedAlternates } from '@/config/i18n'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 import HeroImage from '@/assets/images/blog-hero-coding.png'
 
@@ -27,17 +27,18 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Blog',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/blog'),
-    },
-  }
+  const dict = await getDictionary(locale)
+  return getPageMetadata({
+    locale,
+    path: '/blog',
+    title: `${dict.blog.headline} — Software, DIY & Life | ${siteSettings.name}`,
+    description: truncateMetaDescription(dict.blog.intro),
+    keywords: siteSettings.keywords,
+  })
 }
 
 async function PostCards({ locale }: { locale: string }) {
-  const posts = await getPosts()
+  const posts = await getPosts(-1, locale)
   return (
     <>
       {posts.length > 0 ? (
@@ -50,7 +51,7 @@ async function PostCards({ locale }: { locale: string }) {
 }
 
 async function PostList({ locale }: { locale: string }) {
-  const posts = await getPosts()
+  const posts = await getPosts(-1, locale)
   return (
     <>
       {posts.length > 0 ? (

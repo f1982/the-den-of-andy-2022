@@ -5,11 +5,22 @@ import { NextResponse } from 'next/server'
 
 import { defaultLocale, locales } from './config/i18n'
 
-// Get the preferred locale, similar to the above or using a library
-function getLocale(request: any) {
-  let headers = { 'accept-language': request.headers.get('accept-language') }
-  let languages = new Negotiator({ headers }).languages()
-  return match(languages, locales, defaultLocale)
+// Get the preferred locale, similar to the above or using a library.
+// `match` (from @formatjs/intl-localematcher) throws a RangeError when the
+// Accept-Language header contains a structurally invalid BCP-47 tag — a common
+// occurrence with bots and crawlers. Guard it so a bad header falls back to the
+// default locale instead of crashing the middleware with a 500 (server error).
+function getLocale(request: NextRequest) {
+  try {
+    const acceptLanguage = request.headers.get('accept-language')
+    if (!acceptLanguage) return defaultLocale
+
+    const headers = { 'accept-language': acceptLanguage }
+    const languages = new Negotiator({ headers }).languages()
+    return match(languages, locales, defaultLocale)
+  } catch {
+    return defaultLocale
+  }
 }
 
 export function middleware(request: NextRequest) {
@@ -21,11 +32,14 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return NextResponse.next()
 
-  // Redirect if there is no locale
+  // Redirect if there is no locale.
+  // For the root path, redirect to `/${locale}` (no trailing slash) rather than
+  // `/${locale}/`, which Next.js would then redirect again to `/${locale}` —
+  // avoiding a redirect chain that Search Console flags under "Page with redirect".
   const locale = getLocale(request)
-  request.nextUrl.pathname = `/${locale}${pathname}`
+  request.nextUrl.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   // e.g. incoming request is /products
-  // The new URL is now /en-US/products
+  // The new URL is now /en/products
   return NextResponse.redirect(request.nextUrl)
 }
 

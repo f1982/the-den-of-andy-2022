@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
+import { Settings2 } from 'lucide-react'
 import { useIsMounted } from 'usehooks-ts'
 
 import { GoogleAnalyticsID, siteHostname } from '../config/site-config'
@@ -79,9 +80,11 @@ export const AnalyticSettings = ({
       {consent !== 'unknown' && (
         <button
           type="button"
-          className="fixed bottom-4 right-4 z-40 rounded border border-border bg-background px-3 py-2 text-xs shadow"
+          aria-label={labels.manage}
+          title={labels.manage}
+          className="fixed bottom-4 right-4 z-40 rounded-full border border-border bg-background p-2 text-muted-foreground shadow transition-colors hover:bg-muted hover:text-foreground"
           onClick={() => setConsent('unknown')}>
-          {labels.manage}
+          <Settings2 size={16} aria-hidden="true" />
         </button>
       )}
     </>
