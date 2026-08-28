@@ -32,3 +32,13 @@ declare module '*.gif' {
   const content: any
   export default content
 }
+
+declare module '*.md' {
+  const content: string
+  export default content
+}
+
+declare module '@/assets/md/app-privacy-policy.md' {
+  const content: string
+  export default content
+}

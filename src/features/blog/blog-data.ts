@@ -24,11 +24,19 @@ const BLOG_POSTS_MANIFEST = [
   'summary-of-2022',
 ]
 
-export async function getPostDetail(slug: string) {
+export async function getPostDetail(slug: string, locale = 'en') {
   try {
-    // Import the markdown content dynamically
-    const postModule = await import(`@/content/posts/${slug}/index.md`)
+    const postModule =
+      locale === 'zh-CN'
+        ? await import(`@/content/posts/${slug}/zh-cn.md`).catch(
+            () => import(`@/content/posts/${slug}/index.md`),
+          )
+        : await import(`@/content/posts/${slug}/index.md`)
     const { data, content } = matter(postModule.default)
+
+    // Drafts remain available in source control but must not become public,
+    // indexable pages or sitemap entries by accident.
+    if (data['status'] === 'draft') return null
 
     const replaced = content.replace(
       /\/[^\s]+\.(jpg|jpeg|png|gif)/g,
@@ -63,11 +71,11 @@ function parseDate(dateStr: string) {
   return format(date, 'LLLL d, yyyy')
 }
 
-export async function getPosts(count: number = -1) {
+export async function getPosts(count: number = -1, locale = 'en') {
   let posts: BlogPostData[] = (
     await Promise.all(
       BLOG_POSTS_MANIFEST.map(async (slug) => {
-        return await getPostDetail(slug)
+        return await getPostDetail(slug, locale)
       }),
     )
   ).filter((item): item is BlogPostData => item !== null)

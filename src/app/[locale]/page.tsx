@@ -2,20 +2,23 @@ import { Metadata } from 'next'
 
 import { getDictionary } from '@/utils/dictionaries'
 import SchemaJsonLd from '@/utils/schema-jsonld'
+import { getPageMetadata } from '@/utils/metadata-utils'
 
 import DefaultWelcome from '@/features/welcome/welcome'
 
-import { siteMetadata, siteSettings, siteUrl } from '@/config/site-config'
-import { getJsonLdWebsite } from '@/utils/schema-json-utils'
-import { getLocalizedAlternates } from '@/config/i18n'
+import { siteSettings, siteUrl } from '@/config/site-config'
+import { getJsonLdPerson, getJsonLdWebsite } from '@/utils/schema-json-utils'
 
 export async function generateMetadata(props): Promise<Metadata> {
   const { locale } = await props.params
+  const dict = await getDictionary(locale)
 
-  return {
-    ...siteMetadata,
-    alternates: getLocalizedAlternates(locale),
-  }
+  return getPageMetadata({
+    locale,
+    path: '/',
+    title: `${dict.welcome.greeting} | ${siteSettings.name}`,
+    description: dict.welcome.description,
+  })
 }
 
 export default async function Page(props) {
@@ -32,8 +35,9 @@ export default async function Page(props) {
         jsonLd={getJsonLdWebsite({
           ...siteSettings,
           url: `${siteUrl}/${locale}`,
-        })}
+        }, locale)}
       />
+      <SchemaJsonLd jsonLd={getJsonLdPerson(siteSettings)} />
       <DefaultWelcome
         title={dict.welcome.greeting}
         subtitle={dict.welcome.description}

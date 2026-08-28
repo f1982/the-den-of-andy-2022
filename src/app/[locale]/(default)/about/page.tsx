@@ -11,8 +11,8 @@ import PageRows from '@/components/shared/page-rows'
 
 import { getAge } from '@/features/about/utils/date.utils'
 
-import { getLocalizedAlternates } from '@/config/i18n'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 import AndyImage from '@/assets/images/about-andy-illustration.png'
 import ComputerImage from '@/assets/images/about-computer-illustration.png'
@@ -26,15 +26,15 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'About',
-    description:
-      'Everything about Andy, who is this guy? What he does? What he likes?',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/about'),
-    },
-  }
+  const dict = await getDictionary(locale)
+  return getPageMetadata({
+    locale,
+    path: '/about',
+    title: `${dict.about.headline} Andy Cao — Software Developer | ${siteSettings.name}`,
+    description: truncateMetaDescription(
+      `${dict.about.description} ${dict.about.whoIsAndyDescription}`,
+    ),
+  })
 }
 
 export default async function About(props) {

@@ -1,0 +1,23 @@
+# The Den of Andy
+
+> The personal website and blog of Andy Cao, a software developer in Auckland, New Zealand.
+
+## About
+
+Andy Cao writes about software development, web and mobile applications, DIY projects, 3D printing, RC hobbies, desk setups and life in New Zealand.
+
+- Homepage: https://andycao.me/en
+- Chinese homepage: https://andycao.me/zh-CN
+- About Andy: https://andycao.me/en/about
+- Projects: https://andycao.me/en/project
+- Blog: https://andycao.me/en/blog
+- Hobbies: https://andycao.me/en/hobbies
+- Security contact: mailto:caojundan@gmail.com
+
+## Citation guidance
+
+Use the linked pages as the source of truth. Attribute personal experiences, opinions and project descriptions to Andy Cao. The site is available in English and Simplified Chinese; use the matching locale when citing translated content.
+
+## Content policy
+
+Search and answer-engine retrieval are allowed. Content is not licensed for model training or bulk republishing.

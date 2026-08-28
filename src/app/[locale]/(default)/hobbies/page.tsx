@@ -12,7 +12,6 @@ import PageTitle from '@/components/sections/page-title'
 import PageRows from '@/components/shared/page-rows'
 import { Button } from '@/components/ui/button'
 
-import { getLocalizedAlternates } from '@/config/i18n'
 import {
   DrawingAlbumURL,
   PrintableURL,
@@ -21,7 +20,8 @@ import {
   ThingiverseURL,
   YouTubeURL,
 } from '@/config/links'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 import Hobbies3DPrintingImage from '@/assets/images/hobbies-3d-printing.png'
 import HobbiesDrawingImage from '@/assets/images/hobbies-drawing.png'
@@ -36,14 +36,15 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Hobbies',
-    description: 'Hobbies',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/hobbies'),
-    },
-  }
+  const dict = await getDictionary(locale)
+  return getPageMetadata({
+    locale,
+    path: '/hobbies',
+    title: `${dict.hobbies.headline} — 3D Printing, RC & DIY | ${siteSettings.name}`,
+    description: truncateMetaDescription(
+      `${dict.hobbies.intro} ${dict.hobbies.print3d.description}`,
+    ),
+  })
 }
 
 export default async function Page(props: { params: Promise<{ locale: string }> }) {

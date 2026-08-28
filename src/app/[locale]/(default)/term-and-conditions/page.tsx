@@ -4,8 +4,8 @@ import { PageLocaleProp } from '@/types/page'
 
 import Prose from '@/components/shared/prose'
 
-import { getLocalizedAlternates } from '@/config/i18n'
-import { siteMetadata } from '@/config/site-config'
+import { getPageMetadata } from '@/utils/metadata-utils'
+import { siteSettings } from '@/config/site-config'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;
@@ -14,13 +14,12 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
     locale
   } = params;
 
-  return {
-    ...siteMetadata,
-    title: 'Terms and Conditions',
-    alternates: {
-      ...getLocalizedAlternates(locale, '/term-and-conditions'),
-    },
-  }
+  return getPageMetadata({
+    locale,
+    path: '/term-and-conditions',
+    title: `Terms and Conditions | ${siteSettings.name}`,
+    description: 'Terms and conditions for using The Den of Andy website.',
+  })
 }
 
 export default async function Page(props) {

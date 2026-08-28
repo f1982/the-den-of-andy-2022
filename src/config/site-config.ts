@@ -10,15 +10,24 @@ export const cdnUrl = `https://raw.githubusercontent.com/f1982/planet-of-images/
 
 export const slogan = `Open to everything and attach to nothing`
 
+export const socialProfiles = [
+  'https://twitter.com/iandycao',
+  'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg',
+  'https://www.instagram.com/iandycao/',
+  'https://www.facebook.com/andycao1982',
+]
+
 export const siteSettings = {
   name: 'The Den of Andy',
   url: siteUrl,
   title: 'The Den of Andy',
-  description: 'This is my personal website and blog',
+  description:
+    'The personal website and blog of Andy Cao, a software developer in Auckland, New Zealand.',
   keywords:
-    'andy cao, personal website, blog, portfolio, web developer, app developer, javascript, typescript, react, nextjs, tailwindcss, rc hobbies, 3d printing, arduino, open source, open source enthusiast, open source software, open source software enthusiast',
+    'Andy Cao, software developer Auckland, frontend developer, React, React Native, TypeScript, JavaScript, web development, mobile apps, 3D printing, RC hobbies, DIY, open source',
   author: 'Andy Cao',
-  creator: '@andycaonz@gmail.com',
+  creator: 'Andy Cao',
+  email: 'caojundan@gmail.com',
 }
 
 // Add icon image in public folder
@@ -29,7 +38,6 @@ const icons = {
   favicon: '/favicon.ico',
 }
 
-// TODO: add bing bot
 const robots: Robots = {
   index: true,
   follow: true,
@@ -48,20 +56,24 @@ export const openGraph: OpenGraph = {
   title: siteSettings.title,
   description: siteSettings.description,
   siteName: siteSettings.name,
+  locale: 'en_NZ',
   images: [
     {
-      url: '/og-image-1200x627.png',
+      url: `${siteUrl}/og-image-1200x627.png`,
+      width: 1200,
+      height: 627,
+      alt: 'The Den of Andy — the personal website of Andy Cao',
     },
   ],
 }
 
 export const twitter: Twitter = {
   card: 'summary_large_image',
-  site: siteSettings.creator,
-  creator: siteSettings.creator,
+  site: '@iandycao',
+  creator: '@iandycao',
   title: siteSettings.title,
   description: siteSettings.description,
-  images: ['/og-image-1200x627.png'],
+  images: [`${siteUrl}/og-image-1200x627.png`],
 }
 
 export const siteMetadata: Metadata = {
@@ -75,7 +87,9 @@ export const siteMetadata: Metadata = {
   title: siteSettings.title,
   description: siteSettings.description,
   keywords: siteSettings.keywords,
-  publisher: siteSettings.creator,
+  authors: [{ name: siteSettings.author, url: siteUrl }],
+  creator: siteSettings.creator,
+  publisher: siteSettings.author,
   metadataBase: new URL(siteUrl),
   icons,
   robots,
