@@ -1,5 +1,5 @@
 import { format, parseISO } from 'date-fns'
-import matter from 'gray-matter'
+import yaml from 'js-yaml'
 import { orderBy } from 'lodash'
 
 import markdownToHtml from '@/utils/markdownToHtml'
@@ -10,6 +10,20 @@ import { BlogPostData } from './blog-types'
 
 const articleImageUrl = `${cdnUrl}/articles`
 const TEST_BLOG_POST = 'test-post-with-all-kinds-of-format'
+
+// Parse YAML front matter from a Markdown string. Replaces gray-matter, whose
+// bundled JavaScript engine uses direct eval and triggers a bundler warning.
+function matter(raw: string): {
+  data: Record<string, any>
+  content: string
+} {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
+  if (!match) {
+    return { data: {}, content: raw }
+  }
+  const data = (yaml.load(match[1]) as Record<string, any>) ?? {}
+  return { data, content: match[2] }
+}
 
 // Pre-built blog posts data - this should be generated at build time
 const BLOG_POSTS_MANIFEST = [
