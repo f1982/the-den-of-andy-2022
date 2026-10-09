@@ -6,12 +6,12 @@
 
 Andy Cao writes about software development, web and mobile applications, DIY projects, 3D printing, RC hobbies, desk setups and life in New Zealand.
 
-- Homepage: https://andycao.me/en
+- Homepage: https://andycao.me/
 - Chinese homepage: https://andycao.me/zh-CN
-- About Andy: https://andycao.me/en/about
-- Projects: https://andycao.me/en/project
-- Blog: https://andycao.me/en/blog
-- Hobbies: https://andycao.me/en/hobbies
+- About Andy: https://andycao.me/about
+- Projects: https://andycao.me/project
+- Blog: https://andycao.me/blog
+- Hobbies: https://andycao.me/hobbies
 - Security contact: mailto:caojundan@gmail.com
 
 ## Citation guidance

@@ -8,6 +8,7 @@ import Comments from '@/lib/comment/utteranc-comments'
 import { getPostDetail, getPosts } from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'
 import { getDictionary } from '@/utils/dictionaries'
+import { localizedPath } from '@/utils/locale-path'
 import { getPageMetadata } from '@/utils/metadata-utils'
 import SchemaJsonLd from '@/utils/schema-jsonld'
 import {
@@ -64,7 +65,7 @@ export default async function Page(
   const post = getPostDetail(params.slug, params.locale)
   if (!post) return notFound()
 
-  const articleUrl = `${siteUrl}/${params.locale}/blog/${post.slug}`
+  const articleUrl = `${siteUrl}${localizedPath(params.locale, `/blog/${post.slug}`)}`
   return (
     <>
       <SchemaJsonLd
@@ -80,8 +81,8 @@ export default async function Page(
       />
       <SchemaJsonLd
         jsonLd={getJsonLdBreadcrumb([
-          { name: dict.common.menu.home, url: `${siteUrl}/${params.locale}` },
-          { name: dict.blog.headline, url: `${siteUrl}/${params.locale}/blog` },
+          { name: dict.common.menu.home, url: `${siteUrl}${localizedPath(params.locale)}` },
+          { name: dict.blog.headline, url: `${siteUrl}${localizedPath(params.locale, '/blog')}` },
           { name: post.title, url: articleUrl },
         ])}
       />

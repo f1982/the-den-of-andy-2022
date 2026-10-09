@@ -6,6 +6,14 @@ module.exports = {
   sitemapSize: 7000, // if it's bigger than 7000, will create sitemap-2.xml
   changefreq: 'weekly',
   exclude: ['/manifest.*', '/api'],
+  // English pages are built under /en but served at the site root (the
+  // middleware 301s /en/* to /*), so list the public URL.
+  transform: async (config, path) => ({
+    loc: path === '/en' ? '/' : path.replace(/^\/en\//, '/'),
+    changefreq: config.changefreq,
+    priority: config.priority,
+    lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+  }),
   robotsTxtOptions: {
     policies: [
       {

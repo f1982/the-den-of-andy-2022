@@ -1,24 +1,31 @@
 export const defaultLocale = 'en'
-// Before add new language, need to check the accept-language
 export const locales = ['en', 'zh-CN']
 
 export function isLocale(value: string) {
   return locales.includes(value)
 }
 
+/**
+ * URL prefix for a locale. The default locale (English) lives at the site
+ * root, so its prefix is empty; `/en/*` only exists internally — the
+ * middleware rewrites `/about` to `/en/about` and 301s `/en/*` to `/*`.
+ */
 export function getLocalPrefix(locale: string) {
-  return `/${locales.includes(locale) ? locale : defaultLocale}`
+  return isLocale(locale) && locale !== defaultLocale ? `/${locale}` : ''
+}
+
+/** Public path of `path` in `locale`, e.g. ('en', '/about') → '/about'. */
+export function getLocalizedPathname(locale: string, path = '/') {
+  return `${getLocalPrefix(locale)}${path === '/' ? '' : path}` || '/'
 }
 
 export function getLocalizedAlternates(locale: string, path = '/') {
-  const localizedPath = `${getLocalPrefix(locale)}${path === '/' ? '' : path}`
-
   return {
-    canonical: localizedPath,
+    canonical: getLocalizedPathname(locale, path),
     languages: {
-      en: `/en${path === '/' ? '' : path}`,
-      'zh-CN': `/zh-CN${path === '/' ? '' : path}`,
-      'x-default': `/en${path === '/' ? '' : path}`,
+      en: getLocalizedPathname('en', path),
+      'zh-CN': getLocalizedPathname('zh-CN', path),
+      'x-default': getLocalizedPathname(defaultLocale, path),
     },
   }
 }

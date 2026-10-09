@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
 
+import { localizedPath } from '@/utils/locale-path'
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import SchemaJsonLd from '@/utils/schema-jsonld'
 import { getJsonLdBreadcrumb } from '@/utils/schema-json-utils'
@@ -57,13 +58,13 @@ export default async function Page(
   const detail = await getProjectDetail(params.slug)
   if (!detail) return notFound()
 
-  const projectUrl = `${siteUrl}/${params.locale}/project/${detail.id}`
+  const projectUrl = `${siteUrl}${localizedPath(params.locale, `/project/${detail.id}`)}`
   return (
     <>
       <SchemaJsonLd
         jsonLd={getJsonLdBreadcrumb([
-          { name: 'Home', url: `${siteUrl}/${params.locale}` },
-          { name: 'Projects', url: `${siteUrl}/${params.locale}/project` },
+          { name: 'Home', url: `${siteUrl}${localizedPath(params.locale)}` },
+          { name: 'Projects', url: `${siteUrl}${localizedPath(params.locale, '/project')}` },
           { name: detail.title, url: projectUrl },
         ])}
       />

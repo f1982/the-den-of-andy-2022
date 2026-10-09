@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { getLocalizedAlternates, getLocalPrefix } from '@/config/i18n'
+import { getLocalizedAlternates, getLocalizedPathname } from '@/config/i18n'
 import {
   openGraph,
   siteMetadata,
@@ -44,9 +44,7 @@ export function getPageMetadata({
   publishedTime,
   modifiedTime,
 }: PageMetadataOptions): Metadata {
-  const localizedUrl = absoluteUrl(
-    `${getLocalPrefix(locale)}${path === '/' ? '' : path}`,
-  )
+  const localizedUrl = absoluteUrl(getLocalizedPathname(locale, path))
   const imageUrl = absoluteImageUrl(image)
 
   return {
