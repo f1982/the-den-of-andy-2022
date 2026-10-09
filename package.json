@@ -14,7 +14,7 @@
     "dev": "pnpm content && next dev",
     "start": "next start",
     "build": "pnpm content && next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && pnpm verify:seo",
     "content": "node scripts/build-content.mjs",
     "typecheck": "pnpm content && tsc --noEmit",
     "lint": "eslint .",
@@ -23,7 +23,8 @@
     "release:minor": "standard-version --release-as minor",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "verify:seo": "node scripts/verify-static-seo.mjs --allow-dynamic=/[locale]/[...notFound]"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.9.0",

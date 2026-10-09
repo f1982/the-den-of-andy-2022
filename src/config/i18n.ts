@@ -2,6 +2,10 @@ export const defaultLocale = 'en'
 // Before add new language, need to check the accept-language
 export const locales = ['en', 'zh-CN']
 
+export function isLocale(value: string) {
+  return locales.includes(value)
+}
+
 export function getLocalPrefix(locale: string) {
   return `/${locales.includes(locale) ? locale : defaultLocale}`
 }

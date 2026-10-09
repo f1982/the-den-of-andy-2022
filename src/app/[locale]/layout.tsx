@@ -3,6 +3,7 @@ import React from 'react'
 import '@/global.css'
 import clsx from 'clsx'
 import { Inter } from 'next/font/google'
+import { notFound } from 'next/navigation'
 
 import { AnalyticSettings } from '@/lib/analytics-settings'
 import { darkModeScript } from '@/utils/dark-mode-script'
@@ -10,7 +11,7 @@ import { getDictionary } from '@/utils/dictionaries'
 import { localizedPath } from '@/utils/locale-path'
 
 import { siteMetadata } from '@/config/site-config'
-import { getLocalizedAlternates } from '@/config/i18n'
+import { getLocalizedAlternates, isLocale, locales } from '@/config/i18n'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,8 +27,13 @@ export async function generateMetadata(props: {
 }
 
 export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'zh-CN' }]
+  return locales.map((locale) => ({ locale }))
 }
+
+// The middleware skips any path containing a dot, so without this a URL like
+// `/random.xyz` matched `[locale]` and rendered the home page with a 200
+// (and `<html lang="random.xyz">`) — an unbounded set of soft-404 duplicates.
+export const dynamicParams = false
 
 export default async function RootLayout(
   props: {
@@ -40,6 +46,8 @@ export default async function RootLayout(
   const {
     locale
   } = params;
+  if (!isLocale(locale)) notFound()
+
   const dict = await getDictionary(locale)
 
   const {

@@ -23,7 +23,35 @@ function getLocale(request: NextRequest) {
   }
 }
 
+const localHosts = new Set(['localhost', '127.0.0.1', '[::1]', '::1'])
+
+// Plain-http requests used to fall straight through and answer 200, leaving a
+// crawlable http:// duplicate of every page. OpenNext builds the middleware
+// URL from the Worker's request URL, which keeps the scheme the browser used;
+// x-forwarded-proto is preferred when present. Only an explicit `http` counts
+// as insecure, so a missing signal can never cause a redirect loop.
+function getHttpsRedirect(request: NextRequest) {
+  const host = request.headers.get('host')
+  if (!host) return null
+
+  const hostname = host.replace(/:\d+$/, '')
+  if (localHosts.has(hostname)) return null
+
+  const forwardedProto = request.headers
+    .get('x-forwarded-proto')
+    ?.split(',')[0]
+    .trim()
+  const scheme = forwardedProto || request.nextUrl.protocol.replace(/:$/, '')
+  if (scheme !== 'http') return null
+
+  const { pathname, search } = request.nextUrl
+  return new URL(`${pathname}${search}`, `https://${hostname}`)
+}
+
 export function middleware(request: NextRequest) {
+  const httpsUrl = getHttpsRedirect(request)
+  if (httpsUrl) return NextResponse.redirect(httpsUrl, 301)
+
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl
   const pathnameHasLocale = locales.some(
@@ -37,7 +65,8 @@ export function middleware(request: NextRequest) {
   // `/${locale}/`, which Next.js would then redirect again to `/${locale}` —
   // avoiding a redirect chain that Search Console flags under "Page with redirect".
   const locale = getLocale(request)
-  request.nextUrl.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
+  request.nextUrl.pathname =
+    pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   // e.g. incoming request is /products
   // The new URL is now /en/products
   return NextResponse.redirect(request.nextUrl)
@@ -45,11 +74,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip internal paths (_next), the public folder (".*\\..*" matches
-    // "url.extension") and paths that already start with a locale, so the
-    // middleware only runs for URLs that need a locale redirect.
-    // Keep the locale list in sync with `locales` in config/i18n.ts.
+    // Skip internal paths (_next) and the public folder (".*\\..*" matches
+    // "url.extension"). Localized pages must still pass through so plain-http
+    // requests for them get the https redirect above.
     // https://github.com/vercel/next.js/discussions/36308#discussioncomment-3758041
-    '/((?!api|static|_next|en(?:/|$)|zh-CN(?:/|$)|.*\\..*).*)',
+    '/((?!api|static|_next|.*\\..*).*)',
   ],
 }
