@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
+import { stripLocalePrefix } from '../config/i18n'
 import { localizedPath } from './locale-path'
 
 describe('localizedPath', () => {
@@ -20,5 +21,20 @@ describe('localizedPath', () => {
     expect(localizedPath('en', 'https://example.com')).toBe(
       'https://example.com',
     )
+  })
+})
+
+describe('stripLocalePrefix', () => {
+  it('removes a known locale segment', () => {
+    expect(stripLocalePrefix('/en/about')).toBe('/about')
+    expect(stripLocalePrefix('/zh-CN/blog/post')).toBe('/blog/post')
+    expect(stripLocalePrefix('/en')).toBe('/')
+    expect(stripLocalePrefix('/zh-CN')).toBe('/')
+  })
+
+  it('leaves unprefixed paths alone', () => {
+    expect(stripLocalePrefix('/about')).toBe('/about')
+    expect(stripLocalePrefix('/')).toBe('/')
+    expect(stripLocalePrefix('/english')).toBe('/english')
   })
 })

@@ -10,6 +10,13 @@ export const cdnUrl = `https://raw.githubusercontent.com/f1982/planet-of-images/
 
 export const slogan = `Open to everything and attach to nothing`
 
+/**
+ * Public contact address. Use this for anything rendered in the UI (mailto
+ * links, contact sections); never show `siteSettings.email`.
+ */
+export const contactEmail = 'hi@andycao.me'
+export const contactMailto = `mailto:${contactEmail}`
+
 export const socialProfiles = [
   'https://twitter.com/iandycao',
   'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg',

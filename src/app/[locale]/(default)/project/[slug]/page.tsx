@@ -3,13 +3,18 @@ import { Metadata } from 'next'
 import { PageLocaleSlugProp } from '@/types/page'
 import { notFound } from 'next/navigation'
 
-import ProjectDetailView from '@/features/project/components/project-detail-view'
+import { getDictionary } from '@/utils/dictionaries'
+import { localizedPath } from '@/utils/locale-path'
+import {
+  getPageMetadata,
+  truncateMetaDescription,
+} from '@/utils/metadata-utils'
+import { getJsonLdBreadcrumb } from '@/utils/schema-json-utils'
+import SchemaJsonLd from '@/utils/schema-jsonld'
+
+import ProjectDetail from '@/features/project/components/project-detail'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
 
-import { localizedPath } from '@/utils/locale-path'
-import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
-import SchemaJsonLd from '@/utils/schema-jsonld'
-import { getJsonLdBreadcrumb } from '@/utils/schema-json-utils'
 import { siteSettings, siteUrl } from '@/config/site-config'
 
 // Only serve slugs known at build time; any other slug returns a clean 404
@@ -25,17 +30,19 @@ export async function generateStaticParams() {
   return slugs
 }
 
-export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metadata> {
-  const params = await props.params;
+export async function generateMetadata(
+  props: PageLocaleSlugProp,
+): Promise<Metadata> {
+  const params = await props.params
 
-  const {
-    locale,
-    slug
-  } = params;
+  const { locale, slug } = params
 
   const detail = await getProjectDetail(slug)
   if (!detail) {
-    return { title: 'Project not found', robots: { index: false, follow: false } }
+    return {
+      title: 'Project not found',
+      robots: { index: false, follow: false },
+    }
   }
   return {
     ...getPageMetadata({
@@ -49,31 +56,37 @@ export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metad
   }
 }
 
-export default async function Page(
-  props: {
-    params: Promise<{ slug: string; locale: string }>
-  }
-) {
-  const params = await props.params;
-  const detail = await getProjectDetail(params.slug)
+export default async function Page(props: {
+  params: Promise<{ slug: string; locale: string }>
+}) {
+  const params = await props.params
+  const projects = (await getProjects()) ?? []
+  const index = projects.findIndex((p) => p.id === params.slug)
+  const detail = projects[index]
   if (!detail) return notFound()
 
+  const dict = await getDictionary(params.locale)
   const projectUrl = `${siteUrl}${localizedPath(params.locale, `/project/${detail.id}`)}`
   return (
     <>
       <SchemaJsonLd
         jsonLd={getJsonLdBreadcrumb([
           { name: 'Home', url: `${siteUrl}${localizedPath(params.locale)}` },
-          { name: 'Projects', url: `${siteUrl}${localizedPath(params.locale, '/project')}` },
+          {
+            name: 'Projects',
+            url: `${siteUrl}${localizedPath(params.locale, '/project')}`,
+          },
           { name: detail.title, url: projectUrl },
         ])}
       />
-      <article className="mb-32">
-        <div className="container mx-auto mt-8 flex">
-          <div className="flex-1" />
-        </div>
-        <ProjectDetailView {...detail} />
-      </article>
+      <ProjectDetail
+        project={detail}
+        index={index}
+        prev={projects[index - 1]}
+        next={projects[index + 1]}
+        locale={params.locale}
+        copy={dict.den.projects}
+      />
     </>
   )
 }

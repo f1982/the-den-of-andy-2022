@@ -36,7 +36,7 @@ const SandwichHero: React.FC<HeroData> = ({
           sizes="(max-width: 768px) 80vw, 320px"
         />
       </div>
-      <div className="prose mx-auto flex w-full max-w-none flex-col gap-6 dark:prose-invert">
+      <div className="prose mx-auto flex w-full max-w-none flex-col gap-6">
         <Heading className="text-center">{title}</Heading>
         {subtitle &&
           (headingLevel === 1 ? (

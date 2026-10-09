@@ -1,49 +1,76 @@
 import React from 'react'
 
-import clsx from 'clsx'
-import Image from 'next/image'
+import Link from 'next/link'
 
-import FormattedDate from '@/components/shared/formatted-date'
+import { Kicker, Polaroid } from '@/components/den'
 
 import { BlogPostData } from '@/features/blog/blog-types'
 
-const BlogPost: React.FC<BlogPostData> = ({
-  title,
-  date,
-  author,
-  content,
-  coverImage,
-}) => (
-  <>
-    <div className="mx-auto mb-3 mt-6 flex w-full flex-col justify-start gap-9 bg-secondary py-12">
-      <div className="container mb-[150px]">
-        <FormattedDate date={date} />
-        <h1 className="mb-3 text-3xl font-bold">{title}</h1>
-        <div className="text-sm font-bold">{author?.name}</div>
+/**
+ * A notebook entry: grid-paper header (kicker, serif title), the cover as a
+ * taped print, then the article in a ~680px prose column.
+ */
+export default function BlogPost({
+  post,
+  kicker,
+  caption,
+  backHref,
+  backLabel,
+}: {
+  post: BlogPostData
+  /** "Making · 14 Jun 2024 · 4 min read" */
+  kicker: React.ReactNode
+  /** Handwritten caption on the cover print. */
+  caption?: string
+  backHref: string
+  backLabel: string
+}) {
+  return (
+    <article>
+      <header className="bg-grid-paper">
+        <div className="mx-auto flex max-w-[1100px] flex-col gap-6 px-4 pt-10 pb-[140px] desk:px-16 desk:pt-16 desk:pb-[200px]">
+          <BackLink href={backHref} label={backLabel} />
+          <Kicker className="mt-4 desk:mt-8">{kicker}</Kicker>
+          <h1 className="max-w-[18ch] font-serif text-[46px] leading-[0.98] font-normal tracking-[-0.02em] text-balance desk:text-[84px] desk:leading-[0.95]">
+            {post.title}
+          </h1>
+        </div>
+      </header>
+
+      <div className="mx-auto -mt-[100px] max-w-[920px] px-4 desk:-mt-[150px] desk:px-8">
+        <Polaroid
+          src={post.coverImage}
+          alt={post.title}
+          caption={caption}
+          tape={{ width: 130, rotate: -3 }}
+          rotate={-1.2}
+          preload
+          sizes="(max-width: 960px) 100vw, 860px"
+          photoClassName="h-auto aspect-[3/2]"
+          captionClassName="bottom-3.5 left-[22px]"
+          className="p-3! pb-14! desk:p-4! desk:pb-16!"
+        />
       </div>
-    </div>
 
-    <div className="container mb-12 mt-[-180px] max-w-5xl">
-      <Image
-        src={coverImage}
-        className={clsx(
-          'aspect-video w-full rounded-lg bg-card object-cover shadow-2xl',
-        )}
-        width={1024}
-        height={576}
-        sizes="(max-width: 1024px) 100vw, 1024px"
-        preload
-        alt={title!}
-      />
-    </div>
+      <div className="mx-auto max-w-[712px] px-4 pt-16 desk:pt-24">
+        <div
+          className="prose max-w-none desk:prose-lg"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+        <div className="mt-16 border-t border-ink/90 pt-6">
+          <BackLink href={backHref} label={backLabel} />
+        </div>
+      </div>
+    </article>
+  )
+}
 
-    <div className="container max-w-3xl">
-      <article
-        className="prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
-  </>
-)
-
-export default BlogPost
+function BackLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex min-h-11 items-center self-start font-mono text-xs tracking-[0.06em] uppercase hover:text-pen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pen">
+      {label}
+    </Link>
+  )
+}

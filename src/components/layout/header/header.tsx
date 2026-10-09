@@ -1,15 +1,21 @@
 import React from 'react'
 
-import clsx from 'clsx'
+import { PillLink } from '@/components/den'
+import { cn } from '@/components/ui/utils'
 
-import { MenuItemData } from './menu-data'
-import { NavMenuItem } from './menu-item'
+import { LanguageSwitch } from './language-switch'
+import { LanguageSwitchLabels, NavItem } from './menu-data'
 import { MobileNav } from './mobile-menu'
+import { NavLinks } from './nav-links'
 
 type HeaderProps = {
-  left?: React.ReactNode
-  right?: React.ReactNode
-  data: MenuItemData[]
+  locale: string
+  brand: React.ReactNode
+  items: NavItem[]
+  navLabel: string
+  languageLabels: LanguageSwitchLabels
+  sayHello: { label: string; href: string }
+  motto?: string
   openMenuLabel?: string
   closeMenuLabel?: string
   mobileMenuTitle?: string
@@ -17,50 +23,52 @@ type HeaderProps = {
   className?: string
 }
 
+/**
+ * Den header: brand left, numbered nav in the middle, language switch and
+ * "Say hello" on the right. Below 960px the nav collapses into a sheet.
+ */
 const Header = ({
-  left,
-  right,
-  data,
-  className,
+  locale,
+  brand,
+  items,
+  navLabel,
+  languageLabels,
+  sayHello,
+  motto,
   openMenuLabel,
   closeMenuLabel,
   mobileMenuTitle,
   mobileMenuDescription,
+  className,
 }: HeaderProps) => {
   return (
-    <header className={clsx('border-b-0 border-b-border', className)}>
-      <div className={clsx('container', ' mb-3 mt-3 ', 'sm:mb-12 sm:mt-12')}>
-        <div className="flex w-full items-center justify-between">
-          {left}
-          <nav
-            aria-label="Primary navigation"
-            data-test="desktopNavMenu"
-            className="hidden flex-row gap-9 md:flex">
-            <ul className="flex flex-row gap-9">
-              {data.map((item) => (
-                <li key={item.link}>
-                  <NavMenuItem
-                    label={item.label}
-                    link={item.link}
-                    icon={item.icon}
-                  />
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="hidden md:flex">{right}</div>
-
-          {/* Menu button only show in small screen */}
-          <MobileNav
-            left={left}
-            right={right}
-            data={data}
-            openMenuLabel={openMenuLabel}
-            closeMenuLabel={closeMenuLabel}
-            menuTitle={mobileMenuTitle}
-            menuDescription={mobileMenuDescription}
-          />
+    <header id="top" className={cn('relative z-20', className)}>
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-3 desk:py-[18px] xl:gap-6 xl:px-10">
+        {brand}
+        <NavLinks
+          items={items}
+          ariaLabel={navLabel}
+          className="hidden desk:block"
+        />
+        <div className="hidden items-center gap-2.5 desk:flex">
+          <LanguageSwitch locale={locale} labels={languageLabels} />
+          <PillLink href={sayHello.href} arrow>
+            {sayHello.label}
+          </PillLink>
         </div>
+        <MobileNav
+          locale={locale}
+          items={items}
+          brand={brand}
+          navLabel={navLabel}
+          languageLabels={languageLabels}
+          sayHello={sayHello}
+          motto={motto}
+          openMenuLabel={openMenuLabel}
+          closeMenuLabel={closeMenuLabel}
+          menuTitle={mobileMenuTitle}
+          menuDescription={mobileMenuDescription}
+        />
       </div>
     </header>
   )

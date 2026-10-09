@@ -29,7 +29,7 @@ const ColumnHero: React.FC<HeroData & { direction?: 'l2r' | 'r2l' }> = ({
       src={image}
       sizes="(max-width: 768px) 100vw, 500px"
     />
-    <div className="prose flex flex-col items-center dark:prose-invert md:w-3/5 md:items-start">
+    <div className="prose flex flex-col items-center md:w-3/5 md:items-start">
       <h2>{title}</h2>
       {subtitle && <h3>{subtitle}</h3>}
       <div>

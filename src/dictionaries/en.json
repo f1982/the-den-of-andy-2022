@@ -5,7 +5,7 @@
       "locale": "{locale, select, cn {🇨🇳 Chinese} en {🇺🇸 English} other {Unknown}}"
     },
     "slogan": "Open to everything and attach to nothing",
-    "homeLinkLabel": "Go to Andy Cao home",
+    "homeLinkLabel": "Andy, home",
     "openMenuLabel": "Open navigation menu",
     "closeMenuLabel": "Close navigation menu",
     "mobileMenuTitle": "Navigation menu",
@@ -25,8 +25,8 @@
     },
     "menu": {
       "home": "Home",
-      "blog": "Blog",
-      "projects": "Projects",
+      "blog": "Notebook",
+      "projects": "Works",
       "hobbies": "Hobbies",
       "about": "About"
     }
@@ -113,5 +113,538 @@
     "whatAndyDoDescription": "I am a software developer 👨‍💻 and have worked in the software industry for more than 17 years. I have developed websites, made mobile 📱apps, and also built and designed casual games 🕹. The process of developing software always brings me happiness and satisfaction. Currently, I am learning 📖 and using front-end development technology. The main focuses are on JavaScript, CSS, HTML, React related technology stack and React Native. Because I love Apple 💻 ecosystem, I also keep an eye on iOS develoment.",
     "familyTitle": "Family",
     "familyDescription": "I was very lucky to have met my wife Fang very early. She helped me immensely in my life and my spirit. We have a $AGE_OF_ZOE$ year old daughter, her name is Zoe and she is healthy and lively. Our family currently lives in Auckland."
+  },
+  "den": {
+    "projects": {
+      "hero": {
+        "kicker": "§ 03 — works · {count} projects, {from} → {to}",
+        "title": "Things I’ve\n*shipped*",
+        "lede": "Websites, mobile apps and casual games — from Flash and Cocos2d back in the day to React and Next.js now. Pick one and I’ll tell you how it went.",
+        "note": "the oldest one runs on Flash ↓"
+      },
+      "list": {
+        "ariaLabel": "All projects",
+        "empty": "No projects yet."
+      },
+      "outro": "…and a few more still waiting in the drawer.",
+      "types": {
+        "coding": "Code",
+        "game": "Game"
+      },
+      "detail": {
+        "back": "All works",
+        "kicker": "§ Works — No. {n}",
+        "platform": "Platform",
+        "years": "Years",
+        "type": "Kind",
+        "stack": "Stack",
+        "brief": "01 — the brief",
+        "role": "02 — my part",
+        "gallery": "03 — screens from the time",
+        "galleryNote": "taped in, slightly crooked",
+        "visit": "Visit",
+        "github": "GitHub",
+        "video": "Watch the video",
+        "prev": "Previous",
+        "next": "Next",
+        "pager": "More works"
+      }
+    },
+    "hobbies": {
+      "hero": {
+        "kicker": "§ 04 — hobbies · four chapters",
+        "title": "Everybody needs\n==hobbies==",
+        "lede": "Code pays the bills. These four fill the rest of the desk — and most of the weekends.",
+        "note": "warning: may involve glue",
+        "contents": "Chapters"
+      },
+      "chapters": {
+        "print3d": {
+          "kicker": "Chapter 01 — make",
+          "note": "Ender 3 V2,\nmy old friend"
+        },
+        "rc": {
+          "kicker": "Chapter 02 — fly",
+          "note": "a childhood dream,\nfinally flying"
+        },
+        "drawing": {
+          "kicker": "Chapter 03 — draw",
+          "note": "doodles since\nDragon Ball"
+        },
+        "video": {
+          "kicker": "Chapter 04 — film",
+          "note": "external memory"
+        }
+      }
+    },
+    "welcome": {
+      "kicker": "The Den of Andy — Auckland, NZ",
+      "title": "Hey, I’m *Andy*",
+      "note": "come on in —\nmind the cables",
+      "enterAria": "Enter the den"
+    },
+    "notFound": {
+      "kicker": "Error 404 — nothing filed under this address",
+      "title": "Nothing on\nthis *desk*",
+      "lede": "Whatever you were looking for has been moved, tidied away or never existed. The coffee’s still warm, though.",
+      "note": "just me and a flat white",
+      "home": "Back to the den",
+      "blog": "Read the notebook"
+    },
+    "legal": {
+      "kicker": "§ — the fine print",
+      "note": "the boring-but-important bit"
+    },
+    "common": {
+      "brand": "Andy",
+      "pronunciation": "[ch·ow]",
+      "siteName": "The Den of Andy",
+      "homeAriaLabel": "Andy, home",
+      "mainNavLabel": "Main",
+      "sayHello": "Say hello",
+      "language": {
+        "label": "Language",
+        "en": "EN",
+        "zh": "中文",
+        "switchToEn": "Read this page in English",
+        "switchToZh": "阅读中文版"
+      },
+      "motto": "open to everything, attach to nothing",
+      "copyright": "© {year} Andy — The Den of Andy",
+      "builtWith": "Built with Next.js · served from Cloudflare",
+      "backToTop": "Back to top",
+      "footerNavLabel": "Footer",
+      "socialNavLabel": "Elsewhere",
+      "email": "Email",
+      "elsewhere": "Elsewhere",
+      "liveClock": {
+        "place": "Auckland",
+        "ariaLabel": "Current time in Auckland"
+      },
+      "terminalTitle": "andy — zsh",
+      "minutes": "{n} min",
+      "minutesRead": "{n} min read",
+      "opensInNewTab": "(opens in a new tab)"
+    },
+    "home": {
+      "meta": {
+        "title": "The Den of Andy — frontend developer in Auckland",
+        "description": "Andy is a frontend developer from China living in Auckland, New Zealand. He builds websites and mobile apps, and on the side 3D prints, flies RC planes, draws and films."
+      },
+      "desk": {
+        "ariaLabel": "Andy's desk — click an object",
+        "note": "psst — this is my desk",
+        "kicker": "Auckland, Aotearoa NZ — 36.85° S",
+        "title": "The *Den*\nof ==Andy==",
+        "lede": "I’m Andy — a frontend developer from China, now living in Auckland. I build websites and mobile apps, and on the side, ~~tiny-but-lovely hardware~~.",
+        "hintPill": "Click",
+        "hint": "anything on the desk — every object has a story."
+      },
+      "objects": {
+        "keyboard": {
+          "label": "one-key keyboard",
+          "ariaLabel": "One-key keyboard — read the build notes"
+        },
+        "postcard": {
+          "label": "Cape Reinga, ’22",
+          "ariaLabel": "Cape Reinga postcard — Annual summary of 2022"
+        },
+        "rcplane": {
+          "label": "a childhood dream, finally flying",
+          "ariaLabel": "RC plane — RC hobby"
+        },
+        "printer": {
+          "label": "Ender 3 V2,\nmy old friend",
+          "ariaLabel": "3D printer — 3D printing"
+        },
+        "drone": {
+          "label": "FPV — flying in first person",
+          "ariaLabel": "FPV drone — RC hobby"
+        },
+        "succulent": {
+          "label": "low-maintenance colleague",
+          "ariaLabel": "Succulent in a 3D-printed pot"
+        },
+        "laptop": {
+          "label": "where the code happens",
+          "ariaLabel": "Laptop — selected works"
+        },
+        "sketchbook": {
+          "label": "doodles since Dragon Ball",
+          "ariaLabel": "Sketchbook — drawing"
+        },
+        "coffee": {
+          "label": "flat white",
+          "ariaLabel": "Flat white"
+        },
+        "camera": {
+          "label": "external memory",
+          "ariaLabel": "Camera — video editing"
+        }
+      },
+      "tip": {
+        "meta": "Notebook · {date}",
+        "cta": "Read the build →"
+      },
+      "terminal": {
+        "lines": [
+          {
+            "kind": "cmd",
+            "text": "whoami"
+          },
+          {
+            "kind": "out",
+            "text": "frontend dev · 17+ yrs"
+          },
+          {
+            "kind": "cmd",
+            "text": "ls ./den"
+          },
+          {
+            "kind": "out",
+            "text": "code/ prints/ planes/ films/"
+          }
+        ]
+      },
+      "den": {
+        "kicker": "§ 01 — inside the den",
+        "title": "Four things I do\n*in here*",
+        "aside": "+ drawing, ever since\nDragon Ball days",
+        "cards": {
+          "code": {
+            "tag": "01 / Code",
+            "title": "Websites & apps",
+            "body": "React, React Native and Next.js. Software has been my job for more than 17 years — and it still makes me happy.",
+            "link": "Selected works →"
+          },
+          "make": {
+            "tag": "02 / Make",
+            "title": "3D printing",
+            "body": "Since 2021 with an Ender 3 V2 — pots, stands, cable holders and the odd keyboard for my desk.",
+            "link": "Printables ↗"
+          },
+          "fly": {
+            "tag": "03 / Fly",
+            "title": "RC planes & FPV",
+            "body": "A dream from the magazines I read in primary school — the internet finally helped me build and fly my own.",
+            "link": "Planes album ↗"
+          },
+          "film": {
+            "tag": "04 / Film",
+            "title": "Video editing",
+            "body": "Memory is blurry, video isn’t. I keep it as an external memory — especially of Zoe growing up.",
+            "link": "YouTube ↗"
+          }
+        }
+      },
+      "notebook": {
+        "kicker": "§ 02 — the notebook",
+        "title": "Fresh from\n*the notebook*",
+        "allEntries": "All {count} entries →"
+      },
+      "works": {
+        "kicker": "§ 03 — works",
+        "title": "Things I’ve *shipped*",
+        "aside": "{count} projects since 2005 — a few favourites ↓",
+        "notes": {
+          "vodafone": "first time with GraphQL!"
+        },
+        "items": {
+          "chick-fil-a-design-system": {
+            "title": "Chick-fil-A Design System",
+            "meta": "Web · UI library"
+          },
+          "vodafone-dx-web-mobile-project": {
+            "title": "Vodafone DX *— web & app*",
+            "meta": "Web & mobile"
+          },
+          "buck-new-zealand-split-money-app": {
+            "title": "BUCK",
+            "meta": "Web & mobile · Westpac"
+          },
+          "cctv-video-app": {
+            "title": "CCTV Video",
+            "meta": "iOS app"
+          },
+          "pew-pew-pew": {
+            "title": "Pew Pew Pew",
+            "meta": "iOS game"
+          }
+        }
+      },
+      "contact": {
+        "kicker": "— the one rule of the den",
+        "motto": "Open to everything,\nattach to *nothing*.",
+        "mottoRinged": "nothing",
+        "sayHello": "Say hello",
+        "emailNote": "happy to talk code, prints or planes"
+      }
+    },
+    "blog": {
+      "meta": {
+        "title": "The Notebook — Andy's blog",
+        "description": "Field notes on making, coding and cold mornings: DIY hardware, 3D printing, desk setups and life in Auckland."
+      },
+      "hero": {
+        "kicker": "§ The notebook — {count} entries, {from} → {to}",
+        "title": "The\n*Notebook*",
+        "lede": "I try to use words to record the things I’ve done — mostly made with my hands, sometimes with a ==keyboard==.",
+        "note": "field notes on making, coding & cold mornings",
+        "sketchbookAlt": "An open sketchbook with pencil doodles of robots and a rocket",
+        "labelSmall": "Field notes",
+        "labelBig": "Vol. {from}–{to}",
+        "fuel": "← fuel"
+      },
+      "filters": {
+        "groupLabel": "Filter entries",
+        "all": "All",
+        "searchLabel": "Search",
+        "searchPlaceholder": "keyboard, desk, sea…",
+        "noResults": "Nothing in the notebook matches that — try another word.",
+        "results": "{count} entries shown"
+      },
+      "categories": {
+        "making": "Making",
+        "hardware": "Hardware",
+        "desk": "Desk setup",
+        "life": "Life",
+        "gear": "Gear"
+      },
+      "featured": {
+        "latest": "Latest entry",
+        "read": "Read the entry →",
+        "watch": "Watch the build ↗"
+      },
+      "row": {
+        "readAriaLabel": "Read {title}"
+      },
+      "post": {
+        "back": "← Back to the notebook"
+      },
+      "ticket": {
+        "stub": "ADMIT ONE · THE DEN",
+        "kicker": "Follow along",
+        "title": "Between entries, the builds & flights live *on video*.",
+        "serial": "NO. 0007",
+        "seat": "SEAT: ANY",
+        "place": "AUCKLAND, NZ"
+      },
+      "posts": {
+        "one-key-keyboard-diy": {
+          "caption": "one key. one job. breathing LED.",
+          "shortCaption": "click. glow. breathe.",
+          "categories": [
+            "making",
+            "hardware"
+          ],
+          "summary": "An Arduino Pro Micro, a 3D-printed case and one very satisfying key — wired up for Raycast.",
+          "featuredTitle": "DIY one-key keyboard with a *breathing* LED",
+          "featuredBody": "A custom one-key keyboard with a breathing LED, built from an Arduino Pro Micro and a 3D-printed case — small, useful, and nice to look at on the desk.",
+          "parts": [
+            "Arduino Pro Micro",
+            "3D-printed case",
+            "Breathing LED",
+            "Raycast shortcut"
+          ]
+        },
+        "morning-sea-bath-challenge": {
+          "caption": "before sunrise, brrr",
+          "shortCaption": "before sunrise, brrr",
+          "categories": [
+            "life"
+          ],
+          "summary": "In bed before 11, towel packed the night before — and into the sea before the sun was up."
+        },
+        "summary-of-2022": {
+          "caption": "Cape Reinga, top of NZ",
+          "shortCaption": "Cape Reinga",
+          "categories": [
+            "life"
+          ],
+          "summary": "Another year in the blink of an eye — summed up before its very last day."
+        },
+        "low-maintenance-succulent-plants-on-my-desk-setup": {
+          "caption": "low-maintenance colleagues",
+          "shortCaption": "succulents!",
+          "categories": [
+            "desk",
+            "making"
+          ],
+          "summary": "More vigour on the desk, in 3D-printed pots of my own design."
+        },
+        "my-wfh-desk-setups-2022": {
+          "caption": "desk tour!",
+          "shortCaption": "desk tour!",
+          "categories": [
+            "desk"
+          ],
+          "summary": "Monitors, LED strips, DIY gadgets and a lot of re-routed cables."
+        },
+        "new-apple-silicon-m1-pro-macbook-pro-hands-on": {
+          "caption": "120Hz, finally",
+          "shortCaption": "M1 Pro",
+          "categories": [
+            "gear"
+          ],
+          "summary": "A week in: no lag in my dev workflow, and that 120Hz screen."
+        },
+        "make-a-usb-type-c-holder-on-my-desk": {
+          "caption": "a clip for every cable",
+          "shortCaption": "USB-C holder",
+          "categories": [
+            "desk",
+            "making"
+          ],
+          "summary": "Cable management is never perfect — but a small printed clip helps."
+        }
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "About Andy — software developer in Auckland",
+        "description": "Andy is a software developer from China living in Auckland with his family. 17+ years of websites, mobile apps and casual games — plus 3D printing, RC planes, drawing and film."
+      },
+      "badge": {
+        "strap": "THE DEN OF ANDY · THE DEN OF ANDY · THE DEN",
+        "role": "RESIDENT",
+        "avatarAlt": "Pixel-art portrait of Andy",
+        "name": "Andy",
+        "job": "Frontend developer",
+        "place": "AUCKLAND, NZ",
+        "pronunciation": "[CH·OW]",
+        "note": "↑ that’s me, in pixels"
+      },
+      "intro": {
+        "kicker": "§ About — who’s Andy",
+        "parts": {
+          "start": "Hi, I’m Andy — a software developer",
+          "middle": "from China, now in Auckland with my family. On my own time I",
+          "print": "print",
+          "fly": "fly",
+          "draw": "draw",
+          "film": "film",
+          "and": "and",
+          "comma": ",",
+          "end": "— and try to be a ==life-long learner== and a good dad."
+        },
+        "cta": "Get in touch →",
+        "pronounce": "pronounced “ch-ow”, like wow"
+      },
+      "stats": {
+        "ariaLabel": "In numbers",
+        "items": [
+          {
+            "num": "20*05*",
+            "label": "First project shipped",
+            "body": "A customer-service system in Flash, Java and JSP."
+          },
+          {
+            "num": "17*+*",
+            "label": "Years in software",
+            "body": "Websites, mobile apps and casual games."
+          },
+          {
+            "num": "20*21*",
+            "label": "First 3D printer",
+            "body": "A Creality Ender 3 V2 — still printing."
+          }
+        ]
+      },
+      "who": {
+        "kicker": "01 — who",
+        "title": "Who’s *Andy*?",
+        "body": "My name is Andy Cao and I come from China. I’m a software developer who focuses on building websites and mobile apps. I’ve kept several hobbies with me for many years — RC, FPV (flying drones in first-person view), video editing and DIY. My family and I currently live in Auckland, New Zealand.",
+        "postcardAlt": "Postcard of Cape Reinga lighthouse",
+        "noteHome": "home, now —\nAotearoa",
+        "noteDesk": "paua + a flat white"
+      },
+      "what": {
+        "kicker": "02 — what",
+        "title": "What I *do*",
+        "body": "I’ve worked in the software industry for more than 17 years — I’ve developed websites, made mobile apps, and built and designed casual games. The process of building software always brings me happiness and satisfaction. These days I focus on front-end: JavaScript, CSS, HTML, React and React Native. And because I love the Apple ecosystem, I keep an eye on iOS development too.",
+        "stickers": {
+          "javascript": "JavaScript",
+          "typescript": "TypeScript",
+          "react": "React",
+          "reactNative": "React Native",
+          "nextjs": "Next.js",
+          "cssHtml": "CSS & HTML",
+          "ios": "iOS, keeping an eye",
+          "cocos": "Cocos2d-x",
+          "flash": "Flash"
+        },
+        "flashNote": "← RIP, 2005–2011",
+        "terminal": {
+          "lines": [
+            {
+              "kind": "cmd",
+              "text": "cat ./what-i-do.txt"
+            },
+            {
+              "kind": "out",
+              "text": "websites · mobile apps · casual games"
+            },
+            {
+              "kind": "out",
+              "text": "building software = happiness"
+            }
+          ]
+        }
+      },
+      "family": {
+        "kicker": "03 — family",
+        "title": "Fang, Zoe *& me*",
+        "body": "I was very lucky to meet my wife Fang very early. She has helped me immensely, in life and in spirit. We have a $AGE_OF_ZOE$-year-old daughter, Zoe — healthy and lively. Our family lives in Auckland.",
+        "crayonAlt": "A child's crayon drawing of a family of three under a big sun",
+        "note": "a spot for Zoe’s latest masterpiece →"
+      },
+      "history": {
+        "ariaLabel": "A short history",
+        "kicker": "04 — a short history",
+        "title": "Twenty years,\n*one ruler*",
+        "aside": "measured in projects, not years ↓",
+        "events": [
+          {
+            "year": "2005",
+            "text": "First project — a customer-service system in Flash & Java"
+          },
+          {
+            "year": "2009",
+            "text": "First iOS game, Crunching — and the CCTV.com website"
+          },
+          {
+            "year": "2012",
+            "text": "CCTV Video, an iOS app, until 2015"
+          },
+          {
+            "year": "2017",
+            "text": "WeChat mini-games: Thousand Dogs, Time Signet"
+          },
+          {
+            "year": "2020",
+            "text": "BUCK for Westpac, in New Zealand"
+          },
+          {
+            "year": "2021",
+            "text": "Vodafone DX · first 3D printer"
+          },
+          {
+            "year": "2022",
+            "text": "Chick-fil-A design system"
+          },
+          {
+            "year": "2024",
+            "text": "One-key keyboard, breathing LED"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Want to\nst*a*rt\n*a* new\nproject?",
+        "orHello": "Or just say *hello.*",
+        "email": "Email",
+        "elsewhere": "Elsewhere",
+        "note": "English or 中文 — both welcome"
+      }
+    }
   }
 }

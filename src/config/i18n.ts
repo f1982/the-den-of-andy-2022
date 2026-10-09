@@ -19,6 +19,17 @@ export function getLocalizedPathname(locale: string, path = '/') {
   return `${getLocalPrefix(locale)}${path === '/' ? '' : path}` || '/'
 }
 
+/**
+ * Strip a leading locale segment: '/zh-CN/about' → '/about', '/en' → '/'.
+ * Client components see '/en/…' while prerendering and '/…' in the browser
+ * (the middleware rewrite), so compare paths after normalising them here.
+ */
+export function stripLocalePrefix(pathname: string) {
+  const [, first = '', ...rest] = pathname.split('/')
+  if (isLocale(first)) return `/${rest.join('/')}`
+  return pathname || '/'
+}
+
 export function getLocalizedAlternates(locale: string, path = '/') {
   return {
     canonical: getLocalizedPathname(locale, path),

@@ -5,17 +5,25 @@ import { notFound } from 'next/navigation'
 
 import Comments from '@/lib/comment/utteranc-comments'
 
-import { getPostDetail, getPosts } from '@/features/blog/blog-data'
-import BlogPost from '@/features/blog/components/blog-post'
 import { getDictionary } from '@/utils/dictionaries'
+import { fillTemplate } from '@/utils/fill-template'
 import { localizedPath } from '@/utils/locale-path'
 import { getPageMetadata } from '@/utils/metadata-utils'
-import SchemaJsonLd from '@/utils/schema-jsonld'
 import {
   getJsonLdArticle,
   getJsonLdBreadcrumb,
 } from '@/utils/schema-json-utils'
+import SchemaJsonLd from '@/utils/schema-jsonld'
 
+import { getPostDetail, getPosts } from '@/features/blog/blog-data'
+import BlogPost from '@/features/blog/components/blog-post'
+import {
+  NotebookPostCopy,
+  formatPostDate,
+  getReadMinutes,
+} from '@/features/blog/notebook-data'
+
+import { BLOG_PATH } from '@/config/menu-data'
 import { siteSettings, siteUrl } from '@/config/site-config'
 
 // Only serve slugs known at build time; any other slug returns a clean 404
@@ -26,17 +34,19 @@ export async function generateStaticParams() {
   return getPosts().map((item) => ({ slug: item.slug }))
 }
 
-export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metadata> {
-  const params = await props.params;
+export async function generateMetadata(
+  props: PageLocaleSlugProp,
+): Promise<Metadata> {
+  const params = await props.params
 
-  const {
-    locale,
-    slug
-  } = params;
+  const { locale, slug } = params
 
   const post = getPostDetail(slug, locale)
   if (!post) {
-    return { title: 'Article not found', robots: { index: false, follow: false } }
+    return {
+      title: 'Article not found',
+      robots: { index: false, follow: false },
+    }
   }
 
   const description = post.excerpt
@@ -55,15 +65,22 @@ export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metad
   }
 }
 
-export default async function Page(
-  props: {
-    params: Promise<{ slug: string; locale: string }>
-  }
-) {
-  const params = await props.params;
+export default async function Page(props: {
+  params: Promise<{ slug: string; locale: string }>
+}) {
+  const params = await props.params
   const dict = await getDictionary(params.locale)
   const post = getPostDetail(params.slug, params.locale)
   if (!post) return notFound()
+
+  const copy = (dict.den.blog.posts as Record<string, NotebookPostCopy>)[
+    post.slug
+  ]
+  const categoryKey = copy?.categories?.[0]
+  const categoryLabel = categoryKey
+    ? ((dict.den.blog.categories as Record<string, string>)[categoryKey] ??
+      categoryKey)
+    : undefined
 
   const articleUrl = `${siteUrl}${localizedPath(params.locale, `/blog/${post.slug}`)}`
   return (
@@ -81,16 +98,36 @@ export default async function Page(
       />
       <SchemaJsonLd
         jsonLd={getJsonLdBreadcrumb([
-          { name: dict.common.menu.home, url: `${siteUrl}${localizedPath(params.locale)}` },
-          { name: dict.blog.headline, url: `${siteUrl}${localizedPath(params.locale, '/blog')}` },
+          {
+            name: dict.common.menu.home,
+            url: `${siteUrl}${localizedPath(params.locale)}`,
+          },
+          {
+            name: dict.blog.headline,
+            url: `${siteUrl}${localizedPath(params.locale, '/blog')}`,
+          },
           { name: post.title, url: articleUrl },
         ])}
       />
-      <BlogPost {...post} />
+      <BlogPost
+        post={post}
+        kicker={[
+          categoryLabel,
+          formatPostDate(post.date, params.locale, true),
+          fillTemplate(dict.den.common.minutesRead, {
+            n: getReadMinutes(post.content),
+          }),
+        ]
+          .filter(Boolean)
+          .join(' · ')}
+        caption={copy?.caption}
+        backHref={localizedPath(params.locale, BLOG_PATH)}
+        backLabel={dict.den.blog.post.back}
+      />
 
-      <div className="my-24" />
-
-      <Comments labels={dict.blog.comments} />
+      <div className="pt-20 pb-24 desk:pt-28 desk:pb-32">
+        <Comments labels={dict.blog.comments} />
+      </div>
     </>
   )
 }

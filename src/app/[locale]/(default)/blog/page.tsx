@@ -3,72 +3,147 @@ import { Metadata } from 'next'
 import { PageLocaleProp } from '@/types/page'
 
 import { getDictionary } from '@/utils/dictionaries'
-
-import PageHero from '@/components/sections/hero-image'
-import PageTitle from '@/components/sections/page-title'
-import PageRows from '@/components/shared/page-rows'
+import { fillTemplate } from '@/utils/fill-template'
+import {
+  getPageMetadata,
+  truncateMetaDescription,
+} from '@/utils/metadata-utils'
 
 import { getPosts } from '@/features/blog/blog-data'
-import BlogPosCards from '@/features/blog/components/blog-post-cards'
-import BlogPostList from '@/features/blog/components/blog-post-list'
+import { NotebookFeatured } from '@/features/blog/components/notebook-featured'
+import { NotebookHero } from '@/features/blog/components/notebook-hero'
+import {
+  NotebookFilter,
+  NotebookIndex,
+} from '@/features/blog/components/notebook-index'
+import { NotebookRow } from '@/features/blog/components/notebook-row'
+import { NotebookTicket } from '@/features/blog/components/notebook-ticket'
+import {
+  NotebookPostCopy,
+  groupByYear,
+  toNotebookEntry,
+} from '@/features/blog/notebook-data'
 
-import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import HeroImage from '@/assets/images/blog-hero-coding.webp'
+// Category chips, in the order they appear (other categories still show as
+// tags on the rows).
+const FILTER_CATEGORIES = ['making', 'desk', 'life', 'gear']
 
-export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
+export async function generateMetadata(
+  props: PageLocaleProp,
+): Promise<Metadata> {
+  const { locale } = await props.params
 
   const dict = await getDictionary(locale)
   return getPageMetadata({
     locale,
     path: '/blog',
-    title: `${dict.blog.headline} — Software, DIY & Life | ${siteSettings.name}`,
-    description: truncateMetaDescription(dict.blog.intro),
+    title: `${dict.den.blog.meta.title} | ${siteSettings.name}`,
+    description: truncateMetaDescription(dict.den.blog.meta.description),
     keywords: siteSettings.keywords,
   })
 }
 
 export default async function Page(props: PageLocaleProp) {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
+  const { locale } = await props.params
 
   const dict = await getDictionary(locale)
-  const posts = getPosts(-1, locale)
+  const t = dict.den.blog
+  const categoryLabels: Record<string, string> = t.categories
+  const postCopy = t.posts as Record<string, NotebookPostCopy>
+
+  const entries = getPosts(-1, locale).map((post) =>
+    toNotebookEntry(post, locale, postCopy[post.slug] ?? {}, categoryLabels),
+  )
+  const labelsFor = (categories: string[]) =>
+    categories.map((key) => categoryLabels[key] ?? key)
+
+  const years = entries.map((entry) => entry.year)
+  const from = years.length ? Math.min(...years) : new Date().getFullYear()
+  const to = years.length ? Math.max(...years) : from
+
+  const filters: NotebookFilter[] = FILTER_CATEGORIES.map((key) => ({
+    key,
+    label: categoryLabels[key] ?? key,
+    count: entries.filter((entry) => entry.categories.includes(key)).length,
+  })).filter((filter) => filter.count > 0)
+
+  const latest = entries[0]
 
   return (
-    <PageRows withMargin>
-      <PageHero image={HeroImage} alt="Coding illustration" />
-      <div>
-        <div className="container">
-          <PageTitle title={dict.blog.headline} description={dict.blog.intro} />
-        </div>
+    <>
+      <NotebookHero
+        kicker={fillTemplate(t.hero.kicker, {
+          count: entries.length,
+          from,
+          to,
+        })}
+        title={t.hero.title}
+        lede={t.hero.lede}
+        note={t.hero.note}
+        sketchbookAlt={t.hero.sketchbookAlt}
+        labelSmall={t.hero.labelSmall}
+        labelBig={fillTemplate(t.hero.labelBig, {
+          from,
+          to: String(to).slice(-2),
+        })}
+        fuel={t.hero.fuel}
+      />
 
-        <div className="mx-4">
-          {posts.length > 0 ? (
-            <BlogPosCards posts={posts} locale={locale} />
-          ) : (
-            <div className="text-center">No posts yet</div>
-          )}
-        </div>
-      </div>
+      <div className="page-wrap pb-[120px]">
+        <NotebookIndex
+          labels={t.filters}
+          filters={filters}
+          featured={
+            latest && {
+              slug: latest.slug,
+              categories: latest.categories,
+              searchText: latest.searchText,
+              node: (
+                <NotebookFeatured
+                  entry={latest}
+                  labels={{
+                    ...t.featured,
+                    categories: labelsFor(latest.categories),
+                    readTime: fillTemplate(dict.den.common.minutesRead, {
+                      n: latest.readMinutes,
+                    }),
+                    opensInNewTab: dict.den.common.opensInNewTab,
+                  }}
+                />
+              ),
+            }
+          }
+          groups={groupByYear(entries).map((group) => ({
+            year: group.year,
+            items: group.entries.map((entry) => ({
+              slug: entry.slug,
+              categories: entry.categories,
+              searchText: entry.searchText,
+              node: (
+                <NotebookRow
+                  entry={entry}
+                  tags={labelsFor(entry.categories)}
+                  readTime={fillTemplate(dict.den.common.minutes, {
+                    n: entry.readMinutes,
+                  })}
+                  readAriaLabel={fillTemplate(t.row.readAriaLabel, {
+                    title: entry.title,
+                  })}
+                />
+              ),
+            })),
+          }))}
+        />
 
-      <div className="container">
-        <h2 className="mb-6 text-3xl font-bold">{dict.blog.more}</h2>
-        {posts.length > 0 ? (
-          <BlogPostList posts={posts} locale={locale} />
-        ) : (
-          <div className="text-center">No posts yet</div>
-        )}
+        <NotebookTicket
+          labels={{
+            ...t.ticket,
+            opensInNewTab: dict.den.common.opensInNewTab,
+          }}
+        />
       </div>
-    </PageRows>
+    </>
   )
 }

@@ -1,10 +1,4 @@
 import { MenuItemData } from '@/components/layout/header/menu-data'
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from '@/components/shared/Icons/social-icons'
 
 import AboutIcon from '../components/shared/Icons/AboutIcon'
 import BlogIcon from '../components/shared/Icons/BlogIcon'
@@ -42,33 +36,6 @@ const routeLinks: MenuItemData[] = [
   },
 ]
 
-export const socialLinks: MenuItemData[] = [
-  {
-    title: 'Twitter',
-    label: 'Twitter',
-    icon: <TwitterIcon />,
-    link: 'https://twitter.com/iandycao',
-  },
-  {
-    title: 'YouTube',
-    label: 'YouTube',
-    icon: <YoutubeIcon />,
-    link: 'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg',
-  },
-  {
-    title: 'Ins',
-    label: 'Ins',
-    icon: <InstagramIcon />,
-    link: 'https://www.instagram.com/iandycao/',
-  },
-  {
-    title: 'Facebook',
-    label: 'Facebook',
-    icon: <FacebookIcon />,
-    link: 'https://www.facebook.com/andycao1982',
-  },
-]
-
 export const otherLinks: MenuItemData[] = [
   {
     title: 'About',
@@ -89,7 +56,5 @@ export const otherLinks: MenuItemData[] = [
     labelKey: 'termsOfService',
   },
 ]
-
-export const footerLinks = [routeLinks, otherLinks]
 
 export { BLOG_PATH, routeLinks }

@@ -3,48 +3,53 @@ import Link from 'next/link'
 import Logo from '@/lib/site-logo'
 
 import { getDictionary } from '@/utils/dictionaries'
-
-import Header from '@/components/layout/header/header'
-import DarkModeToggle from '@/components/shared/dark-mode-toggle'
-
-import { routeLinks } from '@/config/menu-data'
 import { localizedPath } from '@/utils/locale-path'
 
-export default async function SiteHeader(params: { locale: string }) {
-  const { locale } = params
-  // TODO: move this data out for reusing
-  const dict = await getDictionary(locale)
+import Header from '@/components/layout/header/header'
+import { NavItem } from '@/components/layout/header/menu-data'
 
-  const menuData = routeLinks.map((item) => {
-    return {
-      ...item,
-      link: localizedPath(locale, item.link),
-      label: dict.common.menu[item.label.toLowerCase()],
-    }
-  })
+import { routeLinks } from '@/config/menu-data'
+import { contactMailto } from '@/config/site-config'
+
+export default async function SiteHeader({ locale }: { locale: string }) {
+  const dict = await getDictionary(locale)
+  const den = dict.den.common
+
+  const items: NavItem[] = routeLinks.map((item) => ({
+    path: item.link,
+    href: localizedPath(locale, item.link),
+    label: dict.common.menu[item.label.toLowerCase()],
+  }))
+
+  const brand = (
+    <Link
+      data-test="homeLink"
+      href={localizedPath(locale)}
+      aria-label={den.homeAriaLabel}
+      className="flex min-h-11 items-center gap-2 text-ink transition-colors hover:text-pen">
+      <Logo className="size-[30px] flex-none" />
+      <span className="font-serif text-[27px] leading-none tracking-[-0.01em]">
+        {den.brand}
+      </span>
+      <span className="font-mono text-[11px] text-graphite">
+        {den.pronunciation}
+      </span>
+    </Link>
+  )
 
   return (
-    <>
-      <Header
-        left={
-          <Link
-            data-test="homeLink"
-            href={localizedPath(locale)}
-            aria-label={dict.common.homeLinkLabel}>
-            <Logo className="w-10 fill-muted/60 stroke-muted/60" />
-          </Link>
-        }
-        data={menuData}
-        openMenuLabel={dict.common.openMenuLabel}
-        closeMenuLabel={dict.common.closeMenuLabel}
-        mobileMenuTitle={dict.common.mobileMenuTitle}
-        mobileMenuDescription={dict.common.mobileMenuDescription}
-        right={
-          <div className="flex flex-row gap-3">
-            <DarkModeToggle />
-          </div>
-        }
-      />
-    </>
+    <Header
+      locale={locale}
+      brand={brand}
+      items={items}
+      navLabel={den.mainNavLabel}
+      languageLabels={den.language}
+      sayHello={{ label: den.sayHello, href: contactMailto }}
+      motto={den.motto}
+      openMenuLabel={dict.common.openMenuLabel}
+      closeMenuLabel={dict.common.closeMenuLabel}
+      mobileMenuTitle={dict.common.mobileMenuTitle}
+      mobileMenuDescription={dict.common.mobileMenuDescription}
+    />
   )
 }
