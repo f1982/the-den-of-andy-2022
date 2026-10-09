@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { RichText } from '@/components/den'
 
 import type { AboutCopy } from '../about-types'
@@ -13,9 +15,10 @@ export function AboutStats({ copy }: { copy: AboutCopy['stats'] }) {
           key={item.label}
           className={
             i === 0
-              ? 'flex flex-col gap-3 pt-10 pr-8 pb-9'
-              : 'flex flex-col gap-3 border-t border-dashed border-ink/28 pt-10 pr-8 pb-9 desk:border-t-0 desk:border-l desk:pl-8'
-          }>
+              ? 'flex animate-reveal flex-col gap-3 pt-10 pr-8 pb-9'
+              : 'flex animate-reveal flex-col gap-3 border-t border-dashed border-ink/28 pt-10 pr-8 pb-9 desk:border-t-0 desk:border-l desk:pl-8'
+          }
+          style={{ '--stagger': i } as React.CSSProperties}>
           <p className="font-serif text-[80px] leading-[0.8] tracking-[-0.03em] desk:text-[120px]">
             <RichText text={item.num} />
           </p>

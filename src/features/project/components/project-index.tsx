@@ -41,14 +41,17 @@ function ProjectsHero({
     <header className="overflow-x-clip border-b border-ink/15 bg-grid-paper">
       <div className="page-wrap grid items-center gap-10 pt-14 pb-16 desk:grid-cols-[minmax(0,1fr)_minmax(0,400px)] desk:pt-20 desk:pb-24">
         <div className="flex flex-col gap-7">
-          <Kicker>{kicker}</Kicker>
-          <h1 className="font-serif text-[64px] leading-[0.88] font-normal tracking-[-0.03em] text-balance desk:text-[132px]">
+          <Kicker className="animate-rise">{kicker}</Kicker>
+          <h1 className="animate-rise font-serif text-[64px] leading-[0.88] font-normal tracking-[-0.03em] text-balance [--stagger:1] desk:text-[132px]">
             <RichText text={copy.hero.title} />
           </h1>
-          <p className="max-w-[46ch] text-[17px] leading-[1.6] text-pretty text-ink-soft">
+          <p className="max-w-[46ch] animate-rise text-[17px] leading-[1.6] text-pretty text-ink-soft [--stagger:2]">
             {copy.hero.lede}
           </p>
-          <HandNote size={26} rotate={-2}>
+          <HandNote
+            size={26}
+            rotate={-2}
+            className="animate-rise [--stagger:5]">
             {copy.hero.note}
           </HandNote>
         </div>
@@ -60,13 +63,14 @@ function ProjectsHero({
             rotate={-5}
             preload
             sizes="(max-width: 960px) 300px, 400px"
+            className="animate-place [--stagger:2]"
           />
           <CutoutImage
             src={denCutouts.keyboard}
             rotate={12}
             small
             sizes="140px"
-            className="absolute -right-2 -bottom-6 w-[34%]"
+            className="absolute -right-2 -bottom-6 w-[34%] animate-place [--stagger:5] [--tilt:-6deg]"
           />
         </div>
       </div>
@@ -92,13 +96,14 @@ function ProjectRow({
   return (
     <li
       className={[
-        'group relative grid grid-cols-[40px_minmax(0,1fr)_16px] items-baseline gap-x-3 gap-y-2 border-b border-dashed border-ink/30 py-6 transition-[background-color,background-image]',
+        'group relative isolate grid animate-reveal grid-cols-[40px_minmax(0,1fr)_16px] items-baseline gap-x-3 gap-y-2 border-b border-dashed border-ink/30 py-6',
         'desk:grid-cols-[56px_minmax(0,1fr)_170px_96px_28px] desk:items-center desk:gap-x-5 desk:py-[26px]',
         'xl:grid-cols-[56px_minmax(0,1fr)_170px_250px_96px_28px]',
-        'hover:bg-[linear-gradient(90deg,transparent,var(--color-highlighter)_6%,var(--color-highlighter)_94%,transparent)]',
+        // The highlighter is drawn left to right behind a hovered row.
+        'before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:bg-[linear-gradient(90deg,transparent,var(--color-highlighter)_6%,var(--color-highlighter)_94%,transparent)] before:transition-transform before:duration-600 before:ease-out-soft hover:before:scale-x-100 has-[a:focus-visible]:before:scale-x-100',
         'has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-pen',
       ].join(' ')}>
-      <span className="font-mono text-[13px] text-graphite group-hover:text-ink">
+      <span className="font-mono text-[13px] text-graphite transition-colors duration-300 group-hover:text-ink">
         {projectNumber(index)}
       </span>
       <div className="flex min-w-0 flex-col gap-2">
@@ -123,7 +128,7 @@ function ProjectRow({
       </span>
       <span
         aria-hidden="true"
-        className="self-center text-right transition-transform group-hover:translate-x-1">
+        className="self-center text-right transition-transform duration-500 ease-spring group-hover:translate-x-1.5">
         →
       </span>
     </li>

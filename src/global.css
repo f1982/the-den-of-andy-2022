@@ -18,19 +18,6 @@
   }
 }
 
-/* Fade sections up as they scroll into view. Pure CSS, so content is visible
-   before (and without) JavaScript; browsers without scroll-driven animations
-   just show it. */
-@utility animate-reveal {
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 60%;
-    }
-  }
-}
-
 /* Draw an SVG path (with pathLength="1") back and forth. */
 @utility animate-draw {
   stroke-dasharray: 1;
@@ -86,6 +73,10 @@
 
   /* The header switches from the mobile menu to the full nav at 960px. */
   --breakpoint-desk: 60rem;
+
+  /* Motion: a long soft settle, and a small overshoot for things picked up. */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
 }
 
 /* Font families come from next/font CSS variables set on <html> in
@@ -140,6 +131,33 @@
   padding: 0 0.08em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  /* The pen swipes across as the line scrolls into view. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: hl-swipe linear both;
+      animation-timeline: view();
+      animation-range: entry 70% cover 40%;
+    }
+  }
+}
+
+/* Same highlighter, drawn on hover: put the end state on a hover variant,
+   e.g. `group-hover:[background-size:100%_46%]`. */
+@utility hl-sweep {
+  background-image: linear-gradient(
+    104deg,
+    transparent 0.4%,
+    var(--color-highlighter) 1.6%,
+    var(--color-highlighter) 96%,
+    transparent 99%
+  );
+  background-size: 0% 46%;
+  background-position: 0 80%;
+  background-repeat: no-repeat;
+  padding: 0 0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 600ms var(--ease-out-soft);
 }
 
 /* Inventory numeral: ① */
@@ -265,11 +283,21 @@
   font-size: 14px;
   white-space: nowrap;
   transition:
-    background-color 150ms,
-    color 150ms;
+    background-color 200ms,
+    color 200ms,
+    scale 200ms var(--ease-out-soft);
+  & svg {
+    transition: translate 400ms var(--ease-spring);
+  }
   &:hover {
     background: var(--color-pen);
     color: var(--color-paper);
+  }
+  &:hover svg {
+    translate: 2px -2px;
+  }
+  &:active {
+    scale: 0.97;
   }
   &:focus-visible {
     outline: 2px solid var(--color-pen);
@@ -291,12 +319,22 @@
   font-size: 14px;
   white-space: nowrap;
   transition:
-    background-color 150ms,
-    color 150ms,
-    box-shadow 150ms;
+    background-color 200ms,
+    color 200ms,
+    box-shadow 200ms,
+    scale 200ms var(--ease-out-soft);
+  & svg {
+    transition: translate 400ms var(--ease-spring);
+  }
   &:hover {
     color: var(--color-pen);
     box-shadow: inset 0 0 0 1px var(--color-pen);
+  }
+  &:hover svg {
+    translate: 2px -2px;
+  }
+  &:active {
+    scale: 0.97;
   }
   &:focus-visible {
     outline: 2px solid var(--color-pen);
@@ -317,10 +355,254 @@
   );
 }
 
+/* ---------- Motion ----------
+   Quiet, paper-like motion: on load the hero copy rises into focus and the
+   objects settle onto the desk; further down, things ease up as they scroll
+   in; a few objects breathe. It is all CSS, so the prerendered pages read
+   fine without JavaScript (and in browsers without scroll timelines). Only
+   transform, opacity and a touch of blur move, and nothing moves at all
+   for prefers-reduced-motion.
+
+   These animate `transform`, which composes with the `translate` / `rotate`
+   / `scale` properties that Tailwind utilities and inline tilts use. So
+   don't hover-animate `transform` on the same element: lift with
+   `-translate-y-*` / `scale-*` instead.
+
+   Stagger siblings with `[--stagger:n]` (or style={{ '--stagger': n }}). */
+
+/* Page load: fade up from a soft blur. Hero copy. */
+@utility animate-rise {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: rise 1s var(--ease-out-soft) both;
+    animation-delay: calc(var(--stagger, 0) * 90ms + 40ms);
+  }
+}
+
+/* Page load: an object set down on the desk, from a little above with a
+   tilt (`--tilt`, default 4deg). Cut-outs and prints. */
+@utility animate-place {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: place 1.1s var(--ease-out-soft) both;
+    animation-delay: calc(var(--stagger, 0) * 80ms + 120ms);
+  }
+}
+
+/* Page load: slide down on its strap and settle (the lanyard badge). */
+@utility animate-hang {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: hang 1.4s var(--ease-spring) both;
+    animation-delay: 80ms;
+  }
+}
+
+/* Page load: a small card or chip popping onto the desk. */
+@utility animate-pop {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: pop 700ms var(--ease-spring) both;
+    animation-delay: calc(var(--stagger, 0) * 80ms + 120ms);
+  }
+}
+
+/* Page load: a hand-drawn arrow (paths with pathLength="1") drawing itself. */
+@utility animate-draw-in {
+  @media (prefers-reduced-motion: no-preference) {
+    & path {
+      stroke-dasharray: 1;
+      animation: draw-in 900ms var(--ease-out-soft) both;
+      animation-delay: calc(var(--stagger, 0) * 90ms + 40ms);
+    }
+  }
+}
+
+/* Scroll: ease up into place as it enters the viewport. */
+@utility animate-reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: reveal both;
+      animation-timing-function: var(--ease-out-soft);
+      animation-timeline: view();
+      animation-range: entry calc(var(--stagger, 0) * 8%) cover
+        calc(28% + var(--stagger, 0) * 4%);
+    }
+  }
+}
+
+/* Scroll: drift against the scroll by `--parallax` (default 28px) each way.
+   Decorative cut-outs only. */
+@utility animate-parallax {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: parallax linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+  }
+}
+
+/* Scroll: a ballpoint ring drawn around a word, left to right. */
+@utility animate-ring-in {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: ring-in both;
+      animation-timing-function: var(--ease-out-soft);
+      animation-timeline: view();
+      animation-range: entry 100% cover 45%;
+    }
+  }
+}
+
+/* Idle: float on a slow breath. Tune with `--drift-y`, `--drift-r` and
+   `--drift-duration`; desync siblings with a negative `--drift-delay`. */
+@utility animate-drift {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: drift var(--drift-duration, 7s) ease-in-out
+      var(--drift-delay, 0s) infinite;
+  }
+}
+
+/* Idle: hang and sway from the top edge (the lanyard badge). */
+@utility animate-sway {
+  transform-origin: 50% 0;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: sway 6.5s ease-in-out infinite;
+  }
+}
+
+/* Idle: blinking terminal caret. */
+@utility animate-caret {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: caret 1.15s steps(1) infinite;
+  }
+}
+
+/* Idle: a slow ring breathing out of a status dot. Put it on an empty,
+   absolutely positioned element over the dot. */
+@utility animate-pulse-ring {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: pulse-ring 2.6s var(--ease-out-soft) infinite;
+  }
+}
+
+/* The highlighter in hero copy swipes in once the line has risen. */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-rise .hl {
+    animation: hl-swipe 900ms var(--ease-out-soft) both;
+    animation-timeline: auto;
+    animation-delay: calc(var(--stagger, 0) * 90ms + 650ms);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(5px);
+  }
+}
+
+@keyframes place {
+  from {
+    opacity: 0;
+    transform: translateY(-22px) rotate(var(--tilt, 4deg)) scale(1.04);
+  }
+  45% {
+    opacity: 1;
+  }
+}
+
+@keyframes hang {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+}
+
+@keyframes draw-in {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
-    translate: 0 100px;
+    transform: translateY(36px);
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(var(--parallax, 28px));
+  }
+  to {
+    transform: translateY(calc(var(--parallax, 28px) * -1));
+  }
+}
+
+@keyframes ring-in {
+  from {
+    opacity: 0.4;
+    clip-path: inset(-20% 100% -20% -20%);
+  }
+  to {
+    clip-path: inset(-20% -20% -20% -20%);
+  }
+}
+
+@keyframes hl-swipe {
+  from {
+    background-size: 0% 46%;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(var(--drift-y, -7px)) rotate(var(--drift-r, -1deg));
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-0.8deg);
+  }
+  50% {
+    transform: rotate(0.8deg);
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  from {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  70%,
+  to {
+    opacity: 0;
+    transform: scale(2.6);
   }
 }
 

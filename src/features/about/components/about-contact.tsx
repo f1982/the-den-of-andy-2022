@@ -77,20 +77,20 @@ export function AboutContact({
       className="relative mt-[120px] overflow-hidden bg-secondary pt-20 pb-20 desk:mt-[190px] desk:pt-[120px] desk:pb-[120px]">
       <span
         aria-hidden="true"
-        className="absolute top-[330px] left-[41%] hidden size-[88px] rounded-full border border-ink desk:block"
+        className="absolute top-[330px] left-[41%] hidden size-[88px] animate-parallax rounded-full border border-ink [--parallax:36px] desk:block"
       />
       <span
         aria-hidden="true"
-        className="absolute top-10 right-[4%] hidden size-[120px] rounded-full border border-ink desk:block"
+        className="absolute top-10 right-[4%] hidden size-[120px] animate-parallax rounded-full border border-ink [--parallax:-24px] desk:block"
       />
       <span
         aria-hidden="true"
-        className="absolute top-[190px] right-[12%] hidden size-[22px] rounded-full bg-highlighter desk:block"
+        className="absolute top-[190px] right-[12%] hidden size-[22px] animate-parallax rounded-full bg-highlighter [--parallax:56px] desk:block"
       />
 
       <div className="relative page-wrap">
         <div className="grid items-start gap-16 desk:grid-cols-2">
-          <div>
+          <div className="animate-reveal">
             <h2
               id="about-contact-title"
               className={cn(
@@ -110,7 +110,7 @@ export function AboutContact({
             </p>
           </div>
 
-          <div className="flex flex-col gap-11 desk:pt-[30px]">
+          <div className="flex animate-reveal flex-col gap-11 [--stagger:1] desk:pt-[30px]">
             <div className="flex flex-col gap-3.5">
               <Kicker>{copy.email}</Kicker>
               <a

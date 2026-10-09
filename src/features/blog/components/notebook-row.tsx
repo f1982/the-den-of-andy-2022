@@ -31,7 +31,7 @@ export function NotebookRow({
   readAriaLabel: string
 }) {
   return (
-    <div className="group/row relative grid grid-cols-[96px_minmax(0,1fr)] items-center gap-x-4 gap-y-3 border-b border-dashed border-ink/28 py-[26px] desk:grid-cols-[84px_132px_minmax(0,1fr)_90px] desk:gap-x-7">
+    <div className="group/row relative grid animate-reveal grid-cols-[96px_minmax(0,1fr)] items-center gap-x-4 gap-y-3 border-b border-dashed border-ink/28 py-[26px] focus-within:z-[4] hover:z-[4] desk:grid-cols-[84px_132px_minmax(0,1fr)_90px] desk:gap-x-7">
       <p className="col-span-full font-mono text-[13px] leading-[1.3] desk:col-span-1">
         <time dateTime={entry.date}>{entry.dayMonth}</time>
       </p>
@@ -39,7 +39,7 @@ export function NotebookRow({
       <NotebookVisualImage
         visual={entry.visual}
         sizes={SIZES}
-        className="h-[76px] w-[96px] rounded-[2px] desk:h-[96px] desk:w-[132px]"
+        className="h-[76px] w-[96px] rounded-[2px] transition-[rotate,scale] duration-500 ease-spring group-hover/row:scale-[1.04] group-hover/row:-rotate-2 desk:h-[96px] desk:w-[132px]"
       />
 
       <div className="min-w-0">
@@ -47,7 +47,7 @@ export function NotebookRow({
           <Link
             href={entry.href}
             className="rounded-sm after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pen">
-            <span className="group-focus-within/row:hl group-hover/row:hl">
+            <span className="hl-sweep group-focus-within/row:[background-size:100%_46%] group-hover/row:[background-size:100%_46%]">
               {entry.title}
             </span>
           </Link>
@@ -73,14 +73,18 @@ export function NotebookRow({
         <Link
           href={entry.href}
           aria-label={readAriaLabel}
-          className="relative z-[1] grid size-11 place-items-center rounded-full text-ink shadow-[inset_0_0_0_1px_rgba(28,27,25,0.25)] transition-colors group-hover/row:bg-ink group-hover/row:text-paper group-hover/row:shadow-none hover:bg-pen! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pen">
-          <span aria-hidden="true">→</span>
+          className="relative z-[1] grid size-11 place-items-center rounded-full text-ink shadow-[inset_0_0_0_1px_rgba(28,27,25,0.25)] transition-[color,background-color,box-shadow,scale] duration-300 group-hover/row:scale-105 group-hover/row:bg-ink group-hover/row:text-paper group-hover/row:shadow-none hover:bg-pen! focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pen">
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-500 ease-spring group-hover/row:translate-x-0.5">
+            →
+          </span>
         </Link>
       </div>
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-20 -right-10 z-[3] hidden w-[260px] scale-90 rotate-[2deg] opacity-0 transition-[opacity,scale,rotate] duration-300 ease-out group-hover/row:scale-100 group-hover/row:rotate-[5deg] group-hover/row:opacity-100 motion-reduce:transition-none desk:block">
+        className="pointer-events-none absolute -top-20 -right-10 z-[3] hidden w-[260px] scale-90 rotate-[2deg] opacity-0 transition-[opacity,scale,rotate] duration-500 ease-spring group-hover/row:scale-100 group-hover/row:rotate-[5deg] group-hover/row:opacity-100 motion-reduce:transition-none desk:block">
         <div className="polaroid" style={{ padding: '10px 10px 40px' }}>
           <Tape width={80} height={24} />
           <NotebookVisualImage

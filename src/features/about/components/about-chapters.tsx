@@ -26,7 +26,7 @@ function ChapterText({
   className?: string
 }) {
   return (
-    <div className={cn('flex flex-col gap-[22px]', className)}>
+    <div className={cn('flex animate-reveal flex-col gap-[22px]', className)}>
       <Kicker>{kicker}</Kicker>
       <h2 className="font-serif text-[60px] leading-[0.9] font-normal tracking-[-0.02em] desk:text-[96px]">
         <RichText text={title} />
@@ -52,7 +52,7 @@ export function WhoChapter({ copy }: { copy: AboutCopy['who'] }) {
     <Chapter>
       <ChapterText kicker={copy.kicker} title={copy.title} body={copy.body} />
       <div className="relative h-[360px] desk:h-[480px]">
-        <div className="absolute top-[8%] left-[6%] w-[62%] -rotate-5">
+        <div className="absolute top-[8%] left-[6%] w-[62%] -rotate-5 animate-reveal">
           <Tape rotate={4} />
           <CutoutImage
             src={denCutouts.postcard}
@@ -64,13 +64,13 @@ export function WhoChapter({ copy }: { copy: AboutCopy['who'] }) {
           src={denCutouts.shell}
           rotate={18}
           sizes="(max-width: 960px) 36vw, 210px"
-          className="absolute top-[48%] right-[2%] w-[36%]"
+          className="absolute top-[48%] right-[2%] w-[36%] animate-parallax [--parallax:40px]"
         />
         <CutoutImage
           src={denCutouts.coffee}
           rotate={-6}
           sizes="(max-width: 960px) 26vw, 150px"
-          className="absolute top-[62.5%] left-[14%] w-[26%]"
+          className="absolute top-[62.5%] left-[14%] w-[26%] animate-parallax [--parallax:22px]"
         />
         <HandNote
           size={26}
@@ -130,14 +130,14 @@ export function WhatChapter({
         className="desk:order-2"
       />
       <div className="flex flex-col justify-center gap-7 desk:order-1 desk:h-[480px]">
-        <ul className="flex max-w-[520px] flex-wrap items-center gap-x-3 gap-y-3.5">
+        <ul className="flex max-w-[520px] animate-reveal flex-wrap items-center gap-x-3 gap-y-3.5">
           {STICKERS.map(({ key, tone, rotate }) => {
             const isFlash = key === 'flash'
             return (
               <li
                 key={key}
                 className={cn(
-                  'inline-flex h-[46px] items-center rounded-full px-5 text-[17px] shadow-[0_10px_18px_-12px_rgba(40,30,10,0.5)]',
+                  'inline-flex h-[46px] items-center rounded-full px-5 text-[17px] shadow-[0_10px_18px_-12px_rgba(40,30,10,0.5)] transition-[scale,translate] duration-500 ease-spring hover:-translate-y-0.5 hover:scale-[1.06]',
                   STICKER_STYLES[tone],
                   isFlash && 'text-graphite',
                 )}
@@ -157,7 +157,7 @@ export function WhatChapter({
           lines={copy.terminal.lines as TerminalLine[]}
           caret={false}
           rotate={1.5}
-          className="w-[300px] max-w-full desk:ml-10"
+          className="w-[300px] max-w-full animate-reveal [--stagger:1] desk:ml-10"
         />
       </div>
     </Chapter>
@@ -180,7 +180,7 @@ export function FamilyChapter({
         body={copy.body.replace('$AGE_OF_ZOE$', String(zoeAge))}
       />
       <div className="relative h-[360px] desk:h-[480px]">
-        <div className="absolute top-[4%] left-[14%] w-[66%] rotate-3">
+        <div className="absolute top-[4%] left-[14%] w-[66%] rotate-3 animate-reveal">
           <CutoutImage
             src={denCutouts.crayon}
             alt={copy.crayonAlt}

@@ -53,7 +53,7 @@ export function HistoryRuler({ copy }: { copy: AboutCopy['history'] }) {
         }
       />
 
-      <div className="relative desk:h-[380px]">
+      <div className="relative animate-reveal desk:h-[380px]">
         {/* Track, year marks and stems are decoration only. */}
         <div aria-hidden="true" className="hidden desk:block">
           <div className="absolute inset-x-0 top-[180px] h-[34px] bg-card bg-[image:repeating-linear-gradient(90deg,rgba(28,27,25,0.8)_0_1px,transparent_1px_5%),repeating-linear-gradient(90deg,rgba(28,27,25,0.4)_0_1px,transparent_1px_1%)] bg-[length:100%_16px,100%_8px] bg-no-repeat shadow-[0_0_0_1px_rgba(28,27,25,0.12),0_16px_26px_-18px_rgba(40,30,10,0.4)]" />

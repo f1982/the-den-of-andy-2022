@@ -109,7 +109,7 @@ export function CutoutObject({
         sizes={sizes}
         preload={preload}
         className={cn(
-          'transition-transform duration-300 group-hover:-translate-y-1.5',
+          'transition-transform duration-500 ease-spring group-hover:-translate-y-2 group-hover:scale-[1.025]',
           imageClassName,
         )}
       />
@@ -121,7 +121,9 @@ export function CutoutObject({
         style={labelPosition}>
         {arrow}
         <CircledNumber n={n} />
-        <HandNote size={labelSize} className="group-hover:text-ink desk:whitespace-pre">
+        <HandNote
+          size={labelSize}
+          className="group-hover:text-ink desk:whitespace-pre">
           {label}
         </HandNote>
       </span>

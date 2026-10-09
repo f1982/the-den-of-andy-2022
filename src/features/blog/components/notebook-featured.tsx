@@ -36,7 +36,7 @@ export function NotebookFeatured({
         href={entry.href}
         tabIndex={-1}
         aria-hidden="true"
-        className="polaroid -rotate-[1.6deg] transition-transform duration-300 hover:-rotate-[0.6deg]"
+        className="group polaroid -rotate-[1.6deg] animate-reveal transition-[rotate,translate] duration-700 ease-spring hover:-translate-y-1 hover:-rotate-[0.4deg]"
         style={{ padding: '16px 16px 64px' }}>
         <Tape width={130} rotate={-3} />
         {visual.kind === 'cutout' ? (
@@ -76,7 +76,7 @@ export function NotebookFeatured({
         )}
       </Link>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex animate-reveal flex-col gap-6 [--stagger:1]">
         <p className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-graphite">
           <span className="text-ink">{labels.latest}</span>
           {labels.categories.slice(0, 1).map((label) => (
@@ -88,7 +88,7 @@ export function NotebookFeatured({
         <h2 className="font-serif text-[46px] leading-[0.95] font-normal tracking-[-0.02em] text-balance desk:text-[76px]">
           <Link
             href={entry.href}
-            className="rounded-sm hover:text-pen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pen">
+            className="rounded-sm transition-colors duration-300 hover:text-pen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pen">
             <RichText text={entry.featuredTitle} />
           </Link>
         </h2>

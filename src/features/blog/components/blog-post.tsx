@@ -30,14 +30,14 @@ export default function BlogPost({
       <header className="bg-grid-paper">
         <div className="mx-auto flex max-w-[1100px] flex-col gap-6 px-4 pt-10 pb-[140px] desk:px-16 desk:pt-16 desk:pb-[200px]">
           <BackLink href={backHref} label={backLabel} />
-          <Kicker className="mt-4 desk:mt-8">{kicker}</Kicker>
-          <h1 className="max-w-[18ch] font-serif text-[46px] leading-[0.98] font-normal tracking-[-0.02em] text-balance desk:text-[84px] desk:leading-[0.95]">
+          <Kicker className="mt-4 animate-rise desk:mt-8">{kicker}</Kicker>
+          <h1 className="max-w-[18ch] animate-rise font-serif text-[46px] leading-[0.98] font-normal tracking-[-0.02em] text-balance [--stagger:1] desk:text-[84px] desk:leading-[0.95]">
             {post.title}
           </h1>
         </div>
       </header>
 
-      <div className="mx-auto -mt-[100px] max-w-[920px] px-4 desk:-mt-[150px] desk:px-8">
+      <div className="mx-auto -mt-[100px] max-w-[920px] animate-place px-4 [--stagger:2] [--tilt:-2deg] desk:-mt-[150px] desk:px-8">
         <Polaroid
           src={post.coverImage}
           alt={post.title}
@@ -69,7 +69,7 @@ function BackLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex min-h-11 items-center self-start font-mono text-xs tracking-[0.06em] uppercase hover:text-pen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pen">
+      className="inline-flex min-h-11 items-center self-start font-mono text-xs tracking-[0.06em] uppercase transition-colors duration-300 hover:text-pen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pen">
       {label}
     </Link>
   )

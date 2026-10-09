@@ -46,6 +46,8 @@ type DeskObject = {
   /** Masking tape over the top edge (the postcard). */
   tape?: { rotate: number; top: number }
   preload?: boolean
+  /** Idle float for things that fly (classes for the photo). */
+  drift?: string
 }
 
 export function DeskStage({
@@ -92,6 +94,8 @@ export function DeskStage({
       deskWidth: 21,
       labelPosition: { left: '18%', top: '100%' },
       preload: true,
+      drift:
+        'animate-drift [--drift-duration:9s] [--drift-r:-1.6deg] [--drift-y:-9px]',
     },
     {
       key: 'printer',
@@ -111,6 +115,8 @@ export function DeskStage({
       className: 'desk:left-[82%] desk:top-[244px] desk:w-[14%]',
       deskWidth: 14,
       labelPosition: { left: '-6%', top: '102%' },
+      drift:
+        'animate-drift [--drift-duration:5.5s] [--drift-r:1.2deg] [--drift-delay:-2s] [--drift-y:-6px]',
     },
     {
       key: 'succulent',
@@ -171,6 +177,15 @@ export function DeskStage({
       ? `${copy.ariaLabel} ${dict.den.common.opensInNewTab}`
       : copy.ariaLabel
     const sizes = `(max-width: 960px) 33vw, ${Math.round(object.deskWidth * 14.4)}px`
+    // Set down one after another once the headline is up, tilting
+    // alternately left and right.
+    const place = {
+      className: 'animate-place',
+      style: {
+        '--stagger': n + 3,
+        '--tilt': n % 2 ? '5deg' : '-5deg',
+      } as React.CSSProperties,
+    }
     const cutout = (
       <CutoutObject
         href={object.href}
@@ -180,14 +195,18 @@ export function DeskStage({
         n={n}
         label={copy.label}
         imageRotate={object.imageRotate}
+        imageClassName={object.drift}
         labelPosition={object.labelPosition}
         labelClassName={object.labelClassName}
         arrow={object.arrow}
         sizes={sizes}
         preload={object.preload}
         className={
-          object.tape ? undefined : cn('desk:absolute', object.className)
+          object.tape
+            ? undefined
+            : cn('desk:absolute', object.className, place.className)
         }
+        style={object.tape ? undefined : place.style}
       />
     )
 
@@ -197,7 +216,12 @@ export function DeskStage({
     return (
       <div
         key={object.key}
-        className={cn('relative desk:absolute', object.className)}>
+        className={cn(
+          'relative desk:absolute',
+          object.className,
+          place.className,
+        )}
+        style={place.style}>
         {cutout}
         <Tape rotate={object.tape.rotate} style={{ top: object.tape.top }} />
       </div>
@@ -216,7 +240,7 @@ export function DeskStage({
         {keyboardPost && (
           <Link
             href={post(keyboardPost.slug)}
-            className="group hidden w-[196px] rotate-[1.5deg] rounded px-4 pt-3.5 pb-4 text-sm leading-[1.35] float-card desk:absolute desk:top-[70px] desk:left-[17%] desk:block">
+            className="group hidden w-[196px] rotate-[1.5deg] animate-pop rounded px-4 pt-3.5 pb-4 text-sm leading-[1.35] float-card transition-[rotate,translate] duration-500 ease-spring [--stagger:6] hover:-translate-y-1 hover:rotate-0 desk:absolute desk:top-[70px] desk:left-[17%] desk:block">
             <span className="mb-1.5 block font-mono text-[11px] text-graphite">
               {fillTemplate(home.tip.meta, {
                 date: formatPostDate(keyboardPost.date, locale),
@@ -238,7 +262,7 @@ export function DeskStage({
           ariaLabel={dict.den.common.liveClock.ariaLabel}
           locale={locale}
           rotate={-2}
-          className="hidden desk:absolute desk:top-[96px] desk:left-[48.5%] desk:inline-flex"
+          className="hidden animate-pop [--stagger:7] desk:absolute desk:top-[96px] desk:left-[48.5%] desk:inline-flex"
         />
 
         {renderObject(rcplane, 3)}
@@ -249,22 +273,26 @@ export function DeskStage({
           title={dict.den.common.terminalTitle}
           lines={home.terminal.lines as TerminalLine[]}
           rotate={2}
-          className="hidden desk:absolute desk:top-[440px] desk:left-[75.5%] desk:block"
+          className="hidden animate-pop [--stagger:10] desk:absolute desk:top-[440px] desk:left-[75.5%] desk:block"
         />
 
         <div className="order-first col-span-full mb-5 flex flex-col items-center text-center desk:absolute desk:top-[196px] desk:left-1/2 desk:mb-0 desk:w-[min(660px,48%)] desk:-translate-x-1/2">
-          <div className="mb-3.5 flex -rotate-3 items-end gap-1.5 desk:-translate-x-10">
+          <div className="mb-3.5 flex -rotate-3 animate-rise items-end gap-1.5 [--stagger:3] desk:-translate-x-10">
             <HandNote size={30}>{desk.note}</HandNote>
-            <HandArrow variant="curl-down" />
+            <HandArrow
+              variant="curl-down"
+              className="animate-draw-in"
+              style={{ '--stagger': 9 } as React.CSSProperties}
+            />
           </div>
-          <Kicker className="mb-[26px]">{desk.kicker}</Kicker>
-          <h1 className="font-serif text-[length:min(96px,24vw)] leading-[0.84] font-normal tracking-[-0.025em] desk:text-[length:clamp(124px,12vw,172px)]">
+          <Kicker className="mb-[26px] animate-rise">{desk.kicker}</Kicker>
+          <h1 className="animate-rise font-serif text-[length:min(96px,24vw)] leading-[0.84] font-normal tracking-[-0.025em] [--stagger:1] desk:text-[length:clamp(124px,12vw,172px)]">
             <RichText text={desk.title} emClassName="tracking-[-0.03em]" />
           </h1>
-          <p className="mt-[34px] max-w-[520px] text-[17px] leading-normal text-pretty desk:text-[19px]">
+          <p className="mt-[34px] max-w-[520px] animate-rise text-[17px] leading-normal text-pretty [--stagger:2] desk:text-[19px]">
             <RichText text={desk.lede} />
           </p>
-          <p className="mt-[30px] flex flex-wrap items-center justify-center gap-2.5 text-sm text-graphite">
+          <p className="mt-[30px] flex animate-rise flex-wrap items-center justify-center gap-2.5 text-sm text-graphite [--stagger:4]">
             <span className="inline-flex h-[26px] items-center rounded-full border border-ink px-3 text-[13px] text-ink">
               {desk.hintPill}
             </span>

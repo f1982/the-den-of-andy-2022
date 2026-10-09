@@ -149,7 +149,7 @@ function HobbyChapter({
             'relative mx-auto flex w-full max-w-[460px] flex-col items-center',
             reverse && 'desk:order-2',
           )}>
-          <div className="relative flex w-full justify-center py-4">
+          <div className="relative flex w-full animate-reveal justify-center py-4">
             <CutoutImage
               src={chapter.image}
               rotate={chapter.imageRotate}
@@ -162,11 +162,14 @@ function HobbyChapter({
                 rotate={chapter.extra.rotate}
                 small
                 sizes="(max-width: 960px) 40vw, 200px"
-                className={cn('absolute', chapter.extra.className)}
+                className={cn(
+                  'absolute animate-parallax [--parallax:30px]',
+                  chapter.extra.className,
+                )}
               />
             )}
           </div>
-          <p className="mt-3 flex items-center gap-2 text-ink">
+          <p className="mt-3 flex animate-reveal items-center gap-2 text-ink">
             <CircledNumber n={n} />
             <HandNote size={25} rotate={-2}>
               {chapter.note}
@@ -174,7 +177,7 @@ function HobbyChapter({
           </p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex animate-reveal flex-col gap-6 [--stagger:1]">
           <Kicker>{chapter.kicker}</Kicker>
           <h2
             id={headingId}
@@ -214,21 +217,24 @@ export default function HobbiesPage({ dict }: { dict: Dict }) {
       <header className="overflow-x-clip border-b border-ink/15 bg-grid-paper">
         <div className="page-wrap grid items-center gap-14 pt-14 pb-16 desk:grid-cols-[minmax(0,1fr)_340px] desk:pt-20 desk:pb-24">
           <div className="flex flex-col gap-7">
-            <Kicker>{copy.hero.kicker}</Kicker>
-            <h1 className="font-serif text-[60px] leading-[0.88] font-normal tracking-[-0.03em] text-balance desk:text-[124px]">
+            <Kicker className="animate-rise">{copy.hero.kicker}</Kicker>
+            <h1 className="animate-rise font-serif text-[60px] leading-[0.88] font-normal tracking-[-0.03em] text-balance [--stagger:1] desk:text-[124px]">
               <RichText text={copy.hero.title} />
             </h1>
-            <p className="max-w-[44ch] text-[17px] leading-[1.6] text-pretty text-ink-soft">
+            <p className="max-w-[44ch] animate-rise text-[17px] leading-[1.6] text-pretty text-ink-soft [--stagger:2]">
               {copy.hero.lede}
             </p>
-            <HandNote size={26} rotate={-2}>
+            <HandNote
+              size={26}
+              rotate={-2}
+              className="animate-rise [--stagger:6]">
               {copy.hero.note}
             </HandNote>
           </div>
 
           <nav
             aria-label={copy.hero.contents}
-            className="relative mx-auto w-full max-w-[340px] rotate-[1.5deg] paper-card px-6 pt-8 pb-5">
+            className="relative mx-auto w-full max-w-[340px] rotate-[1.5deg] animate-place paper-card px-6 pt-8 pb-5 [--stagger:3] [--tilt:-4deg]">
             <Pin color="pen" />
             <Kicker as="h2" className="mb-3">
               {copy.hero.contents}
@@ -240,9 +246,14 @@ export default function HobbiesPage({ dict }: { dict: Dict }) {
                   className="border-b border-dashed border-ink/20 last:border-b-0">
                   <a
                     href={`#${chapter.id}`}
-                    className="flex min-h-12 items-center gap-3 font-serif text-[26px] leading-none hover:text-pen">
-                    <CircledNumber n={i + 1} />
-                    {chapter.title}
+                    className="group flex min-h-12 items-center gap-3 font-serif text-[26px] leading-none transition-colors duration-300 hover:text-pen">
+                    <CircledNumber
+                      n={i + 1}
+                      className="transition-transform duration-500 ease-spring group-hover:scale-110 group-hover:-rotate-12"
+                    />
+                    <span className="transition-transform duration-500 ease-spring group-hover:translate-x-1">
+                      {chapter.title}
+                    </span>
                   </a>
                 </li>
               ))}

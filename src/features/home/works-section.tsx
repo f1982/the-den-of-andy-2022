@@ -13,6 +13,10 @@ import { FeaturedWork, HomeDictionary } from './home-data'
 const HIGHLIGHT_ROW =
   'linear-gradient(90deg, rgb(223 242 106 / 0), var(--color-highlighter) 6%, var(--color-highlighter) 94%, rgb(223 242 106 / 0))'
 
+// The same highlighter drawn left to right behind a hovered row.
+const ROW_SWEEP =
+  'before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:bg-[linear-gradient(90deg,transparent,var(--color-highlighter)_6%,var(--color-highlighter)_94%,transparent)] before:opacity-60 before:transition-transform before:duration-600 before:ease-out-soft hover:before:scale-x-100 has-[a:focus-visible]:before:scale-x-100'
+
 /** § 03 — a few favourite projects as a ruled list. */
 export function WorksSection({
   dict,
@@ -50,7 +54,10 @@ export function WorksSection({
           return (
             <li
               key={work.id}
-              className="group relative grid grid-cols-[40px_minmax(0,1fr)] items-center gap-x-5 gap-y-1 border-b border-dashed border-ink/28 py-[26px] desk:grid-cols-[64px_minmax(0,1fr)_170px_250px_96px_28px]"
+              className={cn(
+                'group relative isolate grid animate-reveal grid-cols-[40px_minmax(0,1fr)] items-center gap-x-5 gap-y-1 border-b border-dashed border-ink/28 py-[26px] desk:grid-cols-[64px_minmax(0,1fr)_170px_250px_96px_28px]',
+                !highlighted && ROW_SWEEP,
+              )}
               style={
                 highlighted ? { backgroundImage: HIGHLIGHT_ROW } : undefined
               }>
@@ -64,7 +71,7 @@ export function WorksSection({
               {/* The title link stretches over the whole row. */}
               <Link
                 href={localizedPath(locale, `/project/${work.id}`)}
-                className="font-serif text-[32px] leading-none tracking-[-0.01em] group-hover:text-pen after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-pen desk:text-[46px]">
+                className="font-serif text-[32px] leading-none tracking-[-0.01em] transition-colors duration-300 group-hover:text-pen after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-pen desk:text-[46px]">
                 <RichText text={item?.title ?? work.title} />
               </Link>
               <span className="hidden text-sm text-ink-soft desk:block">
@@ -78,7 +85,7 @@ export function WorksSection({
               </span>
               <span
                 aria-hidden="true"
-                className="hidden transition-transform group-hover:translate-x-1 desk:block">
+                className="hidden transition-transform duration-500 ease-spring group-hover:translate-x-1.5 desk:block">
                 →
               </span>
               {work.note && (

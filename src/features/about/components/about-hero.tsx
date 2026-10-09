@@ -8,7 +8,7 @@ import type { AboutCopy } from '../about-types'
 import { IdBadge } from './id-badge'
 
 /** A small cut-out object sitting in a sand pill, inline with the text. */
-function ObjectChip({ image }: { image: StaticImageData }) {
+function ObjectChip({ image, n }: { image: StaticImageData; n: number }) {
   return (
     <span
       aria-hidden="true"
@@ -17,7 +17,9 @@ function ObjectChip({ image }: { image: StaticImageData }) {
         src={image}
         alt=""
         sizes="120px"
-        className="absolute top-1/2 left-1/2 h-auto max-h-[1.02em] w-auto max-w-[1.6em] -translate-x-1/2 -translate-y-[58%] -rotate-6 drop-shadow-[0_6px_6px_rgba(60,44,20,0.22)]"
+        className="absolute top-1/2 left-1/2 h-auto max-h-[1.02em] w-auto max-w-[1.6em] -translate-x-1/2 -translate-y-[58%] -rotate-6 animate-pop drop-shadow-[0_6px_6px_rgba(60,44,20,0.22)]"
+        // Pop in one by one once the sentence has risen.
+        style={{ '--stagger': n + 6 } as React.CSSProperties}
       />
     </span>
   )
@@ -33,19 +35,19 @@ export function AboutHero({ copy }: { copy: AboutCopy }) {
         <IdBadge copy={copy.badge} />
 
         <div className="flex flex-col gap-[30px] desk:absolute desk:top-[120px] desk:left-[40%] desk:w-[54%]">
-          <h1 className="kicker">{copy.intro.kicker}</h1>
-          <p className="font-serif text-[38px] leading-[1.08] tracking-[-0.015em] text-pretty desk:text-[66px]">
-            {parts.start} <ObjectChip image={denCutouts.laptop} />{' '}
+          <h1 className="animate-rise kicker">{copy.intro.kicker}</h1>
+          <p className="animate-rise font-serif text-[38px] leading-[1.08] tracking-[-0.015em] text-pretty [--stagger:1] desk:text-[66px]">
+            {parts.start} <ObjectChip image={denCutouts.laptop} n={0} />{' '}
             {parts.middle} <em>{parts.print}</em>{' '}
-            <ObjectChip image={denCutouts.printer} />
+            <ObjectChip image={denCutouts.printer} n={1} />
             {parts.comma} <em>{parts.fly}</em>{' '}
-            <ObjectChip image={denCutouts.rcplane} />
+            <ObjectChip image={denCutouts.rcplane} n={2} />
             {parts.comma} <em>{parts.draw}</em>{' '}
-            <ObjectChip image={denCutouts.sketchbook} /> {parts.and}{' '}
-            <em>{parts.film}</em> <ObjectChip image={denCutouts.camera} />{' '}
+            <ObjectChip image={denCutouts.sketchbook} n={3} /> {parts.and}{' '}
+            <em>{parts.film}</em> <ObjectChip image={denCutouts.camera} n={4} />{' '}
             <RichText text={parts.end} />
           </p>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex animate-rise flex-wrap items-center gap-3 [--stagger:3]">
             <PillLink href="#contact">{copy.intro.cta}</PillLink>
             <HandNote size={25} className="ml-2.5">
               {copy.intro.pronounce}

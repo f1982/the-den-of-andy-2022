@@ -68,8 +68,9 @@ export function LiveClockChip({
       style={{ rotate: rotate ? `${rotate}deg` : undefined, ...style }}>
       <i
         aria-hidden="true"
-        className="size-[7px] flex-none rounded-full bg-signal shadow-[0_0_0_4px_rgba(226,70,43,0.15)]"
-      />
+        className="relative size-[7px] flex-none rounded-full bg-signal shadow-[0_0_0_4px_rgba(226,70,43,0.15)]">
+        <span className="absolute inset-0 animate-pulse-ring rounded-full bg-signal opacity-0" />
+      </i>
       <span>
         {label} · <time className="tabular-nums">{time ?? '--:--'}</time>
       </span>

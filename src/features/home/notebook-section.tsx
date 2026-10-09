@@ -68,9 +68,10 @@ export function NotebookSection({
               key={post.slug}
               href={localizedPath(locale, `/blog/${post.slug}`)}
               className={cn(
-                'group flex flex-col gap-3.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-pen',
+                'group flex animate-reveal flex-col gap-3.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-pen',
                 layout.className,
-              )}>
+              )}
+              style={{ '--stagger': i } as React.CSSProperties}>
               <Polaroid
                 src={visual.src}
                 alt=""
@@ -80,7 +81,8 @@ export function NotebookSection({
                 rotate={layout.rotate}
                 tape={layout.tape ? { rotate: layout.tape } : true}
                 sizes="(max-width: 960px) 100vw, 400px"
-                className="transition-transform duration-300 group-hover:-translate-y-1"
+                imageClassName="transition-transform duration-700 ease-out-soft group-hover:scale-[1.04]"
+                className="transition-[translate,box-shadow] duration-500 ease-spring group-hover:-translate-y-1.5"
               />
               <p className="mt-3.5 flex flex-wrap gap-3.5 font-mono text-xs text-graphite">
                 <time dateTime={post.date}>
@@ -95,7 +97,7 @@ export function NotebookSection({
                   })}
                 </span>
               </p>
-              <h3 className="font-serif text-[34px] leading-[1.02] font-normal text-balance group-hover:text-pen">
+              <h3 className="font-serif text-[34px] leading-[1.02] font-normal text-balance transition-colors duration-300 group-hover:text-pen">
                 {post.title}
               </h3>
               {copy.summary && (

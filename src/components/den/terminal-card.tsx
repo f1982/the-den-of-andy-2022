@@ -51,7 +51,7 @@ export function TerminalCard({
         {caret && (
           <p aria-hidden="true">
             <b className="font-medium text-highlighter">~</b>{' '}
-            <span className="inline-block h-[13px] w-[7px] bg-highlighter align-[-2px]" />
+            <span className="inline-block h-[13px] w-[7px] animate-caret bg-highlighter align-[-2px]" />
           </p>
         )}
       </div>

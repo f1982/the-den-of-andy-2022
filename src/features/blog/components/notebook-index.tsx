@@ -155,7 +155,7 @@ export function NotebookIndex({
             hidden={visible.length === 0}
             aria-label={yearText}
             className="grid grid-cols-1 gap-5 pt-[70px] min-[1200px]:grid-cols-[240px_minmax(0,1fr)] min-[1200px]:gap-10 desk:pt-[110px]">
-            <h2 className="font-serif text-[88px] leading-[0.8] font-normal tracking-[-0.03em] desk:text-[132px]">
+            <h2 className="animate-reveal font-serif text-[88px] leading-[0.8] font-normal tracking-[-0.03em] desk:text-[132px]">
               {yearText.slice(0, 2)}
               <em>{yearText.slice(2)}</em>
             </h2>

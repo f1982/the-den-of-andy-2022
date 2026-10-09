@@ -7,6 +7,7 @@ import { fillTemplate } from '@/utils/fill-template'
 import { localizedPath } from '@/utils/locale-path'
 
 import { HandNote, Kicker, PillLink, Tape } from '@/components/den'
+import { cn } from '@/components/ui/utils'
 
 import {
   ProjectsCopy,
@@ -26,6 +27,7 @@ function TapedPrint({
   caption,
   sizes,
   preload,
+  className,
 }: {
   src: string
   alt: string
@@ -34,10 +36,11 @@ function TapedPrint({
   caption?: string
   sizes: string
   preload?: boolean
+  className?: string
 }) {
   return (
     <figure
-      className="polaroid"
+      className={cn('polaroid', className)}
       style={{ rotate: rotate ? `${rotate}deg` : undefined }}>
       <Tape rotate={tapeRotate} />
       <Image
@@ -106,20 +109,25 @@ export default function ProjectDetail({
         <div className="page-wrap pt-8 pb-16 desk:pt-10 desk:pb-24">
           <Link
             href={localizedPath(locale, '/project')}
-            className="inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-[0.08em] text-graphite uppercase hover:text-pen">
-            <span aria-hidden="true">←</span> {t.back}
+            className="group inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-[0.08em] text-graphite uppercase transition-colors duration-300 hover:text-pen">
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-500 ease-spring group-hover:-translate-x-1">
+              ←
+            </span>{' '}
+            {t.back}
           </Link>
 
           <div className="mt-8 grid items-center gap-14 desk:grid-cols-[minmax(0,1fr)_minmax(0,480px)] desk:gap-16">
             <div className="flex min-w-0 flex-col gap-7">
-              <Kicker>
+              <Kicker className="animate-rise">
                 {fillTemplate(t.kicker, { n: projectNumber(index) })}
               </Kicker>
-              <h1 className="font-serif text-[52px] leading-[0.92] font-normal tracking-[-0.02em] text-balance [overflow-wrap:anywhere] desk:text-[96px]">
+              <h1 className="animate-rise font-serif text-[52px] leading-[0.92] font-normal tracking-[-0.02em] text-balance [overflow-wrap:anywhere] [--stagger:1] desk:text-[96px]">
                 {project.title}
               </h1>
 
-              <dl className="grid grid-cols-2 gap-x-6 gap-y-5 border-t border-dashed border-ink/30 pt-6 sm:grid-cols-3">
+              <dl className="grid animate-rise grid-cols-2 gap-x-6 gap-y-5 border-t border-dashed border-ink/30 pt-6 [--stagger:2] sm:grid-cols-3">
                 <MetaItem label={t.platform} value={project.platform} />
                 <MetaItem
                   label={t.years}
@@ -130,7 +138,7 @@ export default function ProjectDetail({
                 )}
               </dl>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex animate-rise flex-col gap-3 [--stagger:3]">
                 <p className="font-mono text-[11px] tracking-[0.08em] text-graphite uppercase">
                   {t.stack}
                 </p>
@@ -146,7 +154,7 @@ export default function ProjectDetail({
               </div>
 
               {links.length > 0 && (
-                <div className="flex flex-wrap gap-3">
+                <div className="flex animate-rise flex-wrap gap-3 [--stagger:4]">
                   {links.map((link, i) => (
                     <PillLink
                       key={link.href + link.label}
@@ -161,7 +169,7 @@ export default function ProjectDetail({
               )}
             </div>
 
-            <div className="mx-auto w-full max-w-[480px] pt-4">
+            <div className="mx-auto w-full max-w-[480px] animate-place pt-4 [--stagger:3]">
               <TapedPrint
                 src={project.cover}
                 alt={project.title}
@@ -178,14 +186,14 @@ export default function ProjectDetail({
 
       <div className="page-wrap overflow-x-clip pt-16 pb-24 desk:pt-24 desk:pb-32">
         <div className="grid gap-12 desk:grid-cols-2 desk:gap-20">
-          <section className="flex flex-col gap-5">
+          <section className="flex animate-reveal flex-col gap-5">
             <Kicker as="h2">{t.brief}</Kicker>
             <p className="text-[17px] leading-[1.7] text-pretty desk:text-[19px]">
               {project.description}
             </p>
           </section>
           {project.responsibility && (
-            <section className="flex flex-col gap-5">
+            <section className="flex animate-reveal flex-col gap-5 [--stagger:1]">
               <Kicker as="h2">{t.role}</Kicker>
               <p className="text-[17px] leading-[1.7] text-pretty text-ink-soft desk:text-[19px]">
                 {project.responsibility}
@@ -206,13 +214,17 @@ export default function ProjectDetail({
             </div>
             <ul className="grid items-start gap-x-12 gap-y-16 sm:grid-cols-2">
               {gallery.map((src, i) => (
-                <li key={src}>
+                <li
+                  key={src}
+                  className="animate-reveal"
+                  style={{ '--stagger': i % 2 } as React.CSSProperties}>
                   <TapedPrint
                     src={src}
                     alt={`${project.title} — ${i + 1}`}
                     rotate={GALLERY_TILT[i % GALLERY_TILT.length]}
                     tapeRotate={i % 2 ? 4 : -4}
                     sizes="(max-width: 640px) 100vw, 600px"
+                    className="transition-[translate] duration-500 ease-spring hover:-translate-y-1.5"
                   />
                 </li>
               ))}

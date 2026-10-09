@@ -34,7 +34,7 @@ export function SectionHead({
   return (
     <div
       className={cn(
-        'mb-10 flex flex-wrap items-end justify-between gap-8 desk:mb-14',
+        'mb-10 flex animate-reveal flex-wrap items-end justify-between gap-8 desk:mb-14',
         className,
       )}>
       <div className="flex flex-col gap-[18px]">

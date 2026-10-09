@@ -152,11 +152,13 @@ const ARROWS = {
 export function HandArrow({
   variant = 'curl-down',
   className,
+  style,
   width,
   height,
 }: {
   variant?: keyof typeof ARROWS
   className?: string
+  style?: React.CSSProperties
   width?: number
   height?: number
 }) {
@@ -167,9 +169,12 @@ export function HandArrow({
       width={width ?? arrow.width}
       height={height ?? arrow.height}
       viewBox={`0 0 ${arrow.width} ${arrow.height}`}
-      className={cn('flex-none', className)}>
+      className={cn('flex-none', className)}
+      style={style}>
+      {/* pathLength lets `animate-draw-in` draw the arrow on. */}
       <path
         d={arrow.d}
+        pathLength={1}
         fill="none"
         stroke="var(--color-pen)"
         strokeWidth={1.5}

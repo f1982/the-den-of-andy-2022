@@ -25,7 +25,10 @@ function Motto({ text }: { text: string }) {
           {i > 0 && <br />}
           {line.split(/(\*[^*]+\*)/g).map((part, j) =>
             part.length > 2 && part.startsWith('*') && part.endsWith('*') ? (
-              <HandRing key={j} as="em">
+              <HandRing
+                key={j}
+                as="em"
+                ringClassName="-top-[4%] -left-[6%] h-[112%] w-[112%] animate-ring-in">
                 {part.slice(1, -1)}
               </HandRing>
             ) : (
@@ -49,7 +52,7 @@ export function MottoContactSection({ dict }: { dict: HomeDictionary }) {
       className="relative page-wrap scroll-mt-8 pt-32 pb-20 desk:pt-[170px] desk:pb-28">
       <span
         aria-hidden="true"
-        className="absolute top-12 left-2 w-[72px] desk:top-[120px] desk:left-[1%] desk:w-[132px]">
+        className="absolute top-12 left-2 w-[72px] animate-parallax [--parallax:44px] desk:top-[120px] desk:left-[1%] desk:w-[132px]">
         <CutoutImage
           src={denCutouts.shell}
           rotate={-14}
@@ -59,7 +62,7 @@ export function MottoContactSection({ dict }: { dict: HomeDictionary }) {
       </span>
       <span
         aria-hidden="true"
-        className="absolute top-[150px] right-2 w-[60px] desk:top-[330px] desk:right-[2%] desk:w-[104px]">
+        className="absolute top-[150px] right-2 w-[60px] animate-parallax [--parallax:-30px] desk:top-[330px] desk:right-[2%] desk:w-[104px]">
         <CutoutImage
           src={denCutouts.filament}
           rotate={10}
@@ -68,19 +71,21 @@ export function MottoContactSection({ dict }: { dict: HomeDictionary }) {
         />
       </span>
 
-      <Kicker className="mb-[30px] text-center">{contact.kicker}</Kicker>
+      <Kicker className="mb-[30px] animate-reveal text-center">
+        {contact.kicker}
+      </Kicker>
       <p
         id="contact-motto"
-        className="relative text-center font-serif text-[length:clamp(40px,11.5vw,64px)] leading-[0.9] tracking-[-0.025em] desk:text-[length:clamp(96px,9.2vw,132px)]">
+        className="relative animate-reveal text-center font-serif text-[length:clamp(40px,11.5vw,64px)] leading-[0.9] tracking-[-0.025em] desk:text-[length:clamp(96px,9.2vw,132px)]">
         <Motto text={contact.motto} />
       </p>
 
-      <div className="mt-20 grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-10 border-y border-ink/90 pt-14 pb-12 desk:mt-[110px] desk:pt-[72px] desk:pb-16">
+      <div className="mt-20 grid animate-reveal grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-10 border-y border-ink/90 pt-14 pb-12 desk:mt-[110px] desk:pt-[72px] desk:pb-16">
         <div className="flex flex-col items-start gap-[18px]">
           <Kicker>{contact.sayHello}</Kicker>
           <a
             href={contactMailto}
-            className="inline-block border-b-2 border-ink pb-1 font-serif text-[32px] leading-none break-all hover:border-pen hover:text-pen desk:text-[54px]">
+            className="inline-block border-b-2 border-ink pb-1 font-serif text-[32px] leading-none break-all transition-colors duration-300 hover:border-pen hover:text-pen desk:text-[54px]">
             {contactEmail}
           </a>
           <HandNote as="p" size={24}>
@@ -96,11 +101,15 @@ export function MottoContactSection({ dict }: { dict: HomeDictionary }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-11 items-center justify-between gap-3 border-b border-ink/14 text-[15px] hover:text-pen">
+                className="group flex min-h-11 items-center justify-between gap-3 border-b border-ink/14 text-[15px] transition-colors duration-300 hover:text-pen">
                 {link.label}
                 <span className="font-mono text-xs text-graphite">
                   {link.handle && <span className="mr-1.5">{link.handle}</span>}
-                  <span aria-hidden="true">↗</span>
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform duration-500 ease-spring group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    ↗
+                  </span>
                   <span className="sr-only">
                     {' '}
                     {dict.den.common.opensInNewTab}
