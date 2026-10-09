@@ -1,8 +1,50 @@
 # AGENTS.md — The Den of Andy (andycao.me)
 
-Personal site on Next.js (App Router), deployed to Cloudflare Workers via
-OpenNext. See `README.md` for commands. These are the invariants that are easy
-to break silently — the build stays green and only Search Console notices.
+Andy Cao's personal site and blog: Next.js 16 (App Router, React 19),
+Tailwind 4, TypeScript 6, deployed to Cloudflare Workers via OpenNext. Every
+page is prerendered at build time. The rules below are easy to break silently:
+the build stays green and only Search Console notices.
+
+## Commands
+
+pnpm 11 and Node 22 (pinned in `package.json` `engines` / `volta`).
+
+| Command                   | What it does                                                         |
+| ------------------------- | -------------------------------------------------------------------- |
+| `pnpm dev`                | Build content, then `next dev`                                       |
+| `pnpm build`              | Build content, `next build`, then `postbuild` (sitemap + SEO guard)  |
+| `pnpm typecheck`          | Build content, then `tsc --noEmit`                                   |
+| `pnpm lint` / `pnpm test` | ESLint / Vitest (`src/**/*.test.ts`)                                 |
+| `pnpm verify:seo`         | Run the SEO guard alone against an existing `.next`                  |
+| `pnpm preview`            | OpenNext build + local Workers preview on :8787                      |
+| `pnpm run deploy`         | OpenNext build + deploy (not `pnpm deploy`, a built-in pnpm command) |
+| `pnpm release[:minor]`    | `standard-version`: bump version, update `CHANGELOG.md`, commit      |
+
+## Layout
+
+- `src/app/[locale]/…`: every route is under a locale (`en`, `zh-CN`). Pages
+  live in the `(default)` route group: `home`, `about`, `blog/[slug]`,
+  `project/[slug]`, `hobbies`, `app/*` (app legal/support pages), plus a
+  `[...notFound]` catch-all.
+- `src/features/<feature>/`: page composition. `src/components/{layout,sections,shared,ui}`:
+  reusable UI. `src/lib/`: site header/footer, analytics consent, comments.
+- `src/config/`: `site-config.ts` (site URL, metadata, social profiles, GA id),
+  `i18n.ts` (locales + hreflang alternates), menu and links.
+- `src/utils/`: metadata builder (`metadata-utils.ts`), JSON-LD helpers,
+  dictionaries loader, `localizedPath`.
+- UI strings live in `src/dictionaries/{en,cn}.json`. Import alias: `@/*` → `src/*`.
+- Prettier sorts imports and Tailwind classes (`.prettierrc.js`). No semicolons,
+  single quotes.
+
+## Content
+
+- Blog posts are `src/content/posts/<slug>/index.md` with YAML front matter.
+  App legal pages are `src/assets/md/*.md` plus a `*.zh-CN.md` variant.
+  `scripts/build-content.mjs` renders both to HTML in
+  `src/generated/content.json` (git-ignored). It runs automatically before
+  `dev`, `build` and `typecheck`; run `pnpm content` after editing Markdown
+  while the dev server is running.
+- Projects come from `src/content/projects.json`.
 
 ## SEO invariants
 
@@ -10,43 +52,68 @@ to break silently — the build stays green and only Search Console notices.
   renders, where Googlebot ignores `rel=canonical` and the meta description. So
   no `headers()` / `cookies()` / `searchParams` / `force-dynamic` in a layout,
   and every dynamic segment keeps `generateStaticParams` and
-  `dynamicParams = false`. `open-next.config.ts` serves pages from the read-only static-assets
-  cache, which also assumes nothing is dynamic or revalidates.
+  `dynamicParams = false`. `open-next.config.ts` serves pages from the
+  read-only static-assets cache, which also assumes nothing is dynamic or
+  revalidates.
 - **`postbuild` runs `scripts/verify-static-seo.mjs`** and fails the build if
   any page is not prerendered, a canonical is missing from `<head>`, or a
-  localhost origin leaks into canonicals / sitemap / robots. Run it alone with
-  `pnpm verify:seo` after `pnpm build`.
+  localhost origin leaks into canonicals, sitemap or robots.
   - The only exemption is `/[locale]/[...notFound]`: it exists solely to call
     `notFound()` for unknown paths under a valid locale, so it carries no SEO
     weight. Justify any new `--allow-dynamic` entry the same way.
-- **Canonical origin is hardcoded** (`siteUrl` in `src/config/site-config.ts`,
-  `siteUrl` in `next-sitemap.config.js`). Never add a `|| 'http://localhost…'`
+- **Canonical origin is hardcoded** (`siteUrl` in `src/config/site-config.ts`
+  and in `next-sitemap.config.js`). Never add a `|| 'http://localhost…'`
   fallback.
 - **Unknown locales must 404.** `[locale]/layout.tsx` sets
-  `dynamicParams = false` and calls `notFound()` for anything not in `locales`. The middleware
-  skips dotted paths, so without this `/random.xyz` rendered the home page with
-  a 200.
+  `dynamicParams = false` and calls `notFound()` for anything not in
+  `locales`. The middleware skips dotted paths, so without this `/random.xyz`
+  rendered the home page with a 200.
+- Build per-page metadata with `getPageMetadata()` (`src/utils/metadata-utils.ts`)
+  so canonical, Open Graph, Twitter and hreflang all point at the same
+  localized URL.
+- `sitemap.xml` and `robots.txt` are generated by `next-sitemap` in
+  `postbuild`. The robots policy allows AI search crawlers and blocks
+  training crawlers.
 
 ## Locale routing
 
-- All pages live under `/en` or `/zh-CN`; `/` and unprefixed paths redirect via
-  `Accept-Language` in `src/middleware.ts`. **Keep the `/en` prefix** — moving
-  an indexed site's canonicals to `/` risks a sustained ranking drop. Adding a
-  locale means updating `locales` in `src/config/i18n.ts`,
-  `getLocalizedAlternates`, and the dictionaries.
+- All pages live under `/en` or `/zh-CN`. `/` and unprefixed paths 307 to a
+  locale chosen from `Accept-Language` in `src/middleware.ts`. **Keep the `/en`
+  prefix**: moving an indexed site's canonicals to `/` risks a sustained
+  ranking drop.
+- Adding a locale means updating `locales` in `src/config/i18n.ts`,
+  `getLocalizedAlternates`, `src/utils/dictionaries.ts`,
+  `scripts/build-content.mjs`, and the Open Graph locale in
+  `metadata-utils.ts`.
 
 ## Middleware
 
-- `src/middleware.ts` 301s plain-http page requests to https (local hosts
+- `src/middleware.ts` 301s plain-http page requests to https (local hosts are
   exempt). It only redirects on an explicit `http` scheme, so a missing signal
-  can't loop. Unit tests: `src/middleware.test.ts`.
-- `wrangler`/`opennextjs-cloudflare preview` rewrites `Location` headers that
-  contain the request host back to `http://`, so a `Host: andycao.me` curl
-  against the local preview shows `http://` — that is the dev proxy, not the
-  Worker. Trust the unit tests.
+  can't cause a loop. Unit tests: `src/middleware.test.ts`.
+- The local `opennextjs-cloudflare preview` (wrangler dev proxy) rewrites
+  `Location` headers that contain the request host back to `http://`. A
+  `Host: andycao.me` curl against the local preview therefore shows `http://`;
+  that comes from the dev proxy, not the Worker. Trust the unit tests.
 
-## Content
+## Deploy
 
-- Blog posts (`src/content/posts`) and app legal pages (`src/assets/md`) are
-  rendered to `src/generated/content.json` by `scripts/build-content.mjs`; it
-  runs automatically before `dev`, `build` and `typecheck`.
+- **Before every deploy, check the Wrangler login: it must be
+  `caojundan@gmail.com` (account "Andy").**
+
+  ```bash
+  pnpm exec wrangler whoami
+  ```
+
+  If it shows any other email (for example `fangfangkiwi@gmail.com`), stop and
+  run `pnpm exec wrangler login` as caojundan@gmail.com first. Another
+  account can hold a Worker with the same name `andycao`, so a deploy from the
+  wrong login reports success but never reaches andycao.me.
+
+- Deploy with `pnpm run deploy`. It runs the full build, so the SEO guard
+  gates every deploy.
+- After deploying, verify on **andycao.me itself**, not on a `*.workers.dev`
+  URL. For example, `http://andycao.me/en` should 301 to https, and
+  `https://andycao.me/random.xyz` should return 404.
+- Static-asset cache headers live in `public/_headers`. Image resizing uses the
+  `IMAGES` binding in `wrangler.jsonc`.
