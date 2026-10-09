@@ -2,9 +2,10 @@ import React from 'react'
 
 import '@/global.css'
 import clsx from 'clsx'
-import { Inter, Lalezar } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { AnalyticSettings } from '@/lib/analytics-settings'
+import { darkModeScript } from '@/utils/dark-mode-script'
 import { getDictionary } from '@/utils/dictionaries'
 import { localizedPath } from '@/utils/locale-path'
 
@@ -47,6 +48,9 @@ export default async function RootLayout(
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
+      </head>
       <body
         className={clsx(
           'bg-background text-foreground',

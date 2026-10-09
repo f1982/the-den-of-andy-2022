@@ -1,17 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "module": "esnext",
     "plugins": [
@@ -19,20 +23,25 @@
         "name": "next"
       }
     ],
-    "types": ["vitest/globals"],
     "strictNullChecks": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-
   "include": [
     "next-env.d.ts",
     "src/types/index.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "tests/e2e", "tools"]
+  "exclude": [
+    "node_modules",
+    "tests/e2e",
+    "tools"
+  ]
 }

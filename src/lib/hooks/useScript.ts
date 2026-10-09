@@ -9,10 +9,7 @@ const useScript = (params) => {
 
   // run the useEffect when the url of the script changes
   useEffect(() => {
-    if (!url) {
-      setStatus('idle')
-      return
-    }
+    if (!url) return
 
     const script = document.createElement('script')
     script.src = url
@@ -57,7 +54,6 @@ const useScript = (params) => {
     script.addEventListener('load', setAttributeStatus)
     script.addEventListener('error', setAttributeStatus)
 
-    // eslint-disable-next-line consistent-return
     return () => {
       // useEffect clean up
       if (script) {
@@ -66,7 +62,7 @@ const useScript = (params) => {
       }
     }
   }, [issueTerm, ref, repo, theme, url])
-  return status
+  return url ? status : 'idle'
 }
 
 export default useScript
