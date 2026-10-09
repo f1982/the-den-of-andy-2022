@@ -6,5 +6,10 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  // Lets next/image resize and convert images (AVIF/WebP) on Cloudflare.
+  // Without it, OpenNext serves every image at its original size.
+  "images": {
+    "binding": "IMAGES"
   }
 }

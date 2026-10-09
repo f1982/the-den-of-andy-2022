@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
 
 import { PageLocaleProp } from '@/types/page'
@@ -9,7 +7,6 @@ import { getDictionary } from '@/utils/dictionaries'
 import PageHero from '@/components/sections/hero-image'
 import PageTitle from '@/components/sections/page-title'
 import PageRows from '@/components/shared/page-rows'
-import Spinner from '@/components/shared/spinner'
 
 import ProjectCardsView from '@/features/project/components/project-cards-view'
 import { getProjects } from '@/features/project/project-data'
@@ -17,7 +14,7 @@ import { getProjects } from '@/features/project/project-data'
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import HeroImage from '@/assets/images/project-hero-rocket.png'
+import HeroImage from '@/assets/images/project-hero-rocket.webp'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;
@@ -64,9 +61,7 @@ export default async function Page(props) {
         </div>
 
         <div className="mx-4">
-          <Suspense fallback={<Spinner />}>
-            <ProjectList locale={locale} />
-          </Suspense>
+          <ProjectList locale={locale} />
         </div>
       </div>
     </PageRows>

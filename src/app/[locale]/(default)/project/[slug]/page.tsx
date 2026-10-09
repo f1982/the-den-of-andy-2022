@@ -1,11 +1,7 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
 
 import { PageLocaleSlugProp } from '@/types/page'
 import { notFound } from 'next/navigation'
-
-import Spinner from '@/components/shared/spinner'
 
 import ProjectDetailView from '@/features/project/components/project-detail-view'
 import { getProjectDetail, getProjects } from '@/features/project/project-data'
@@ -75,9 +71,7 @@ export default async function Page(
         <div className="container mx-auto mt-8 flex">
           <div className="flex-1" />
         </div>
-        <Suspense fallback={<Spinner />}>
-          <ProjectDetailView {...detail} />
-        </Suspense>
+        <ProjectDetailView {...detail} />
       </article>
     </>
   )

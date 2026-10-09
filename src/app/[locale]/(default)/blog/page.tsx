@@ -15,7 +15,7 @@ import BlogPostList from '@/features/blog/components/blog-post-list'
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import HeroImage from '@/assets/images/blog-hero-coding.png'
+import HeroImage from '@/assets/images/blog-hero-coding.webp'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;

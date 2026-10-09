@@ -45,11 +45,11 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next) and public folder
+    // Skip internal paths (_next), the public folder (".*\\..*" matches
+    // "url.extension") and paths that already start with a locale, so the
+    // middleware only runs for URLs that need a locale redirect.
+    // Keep the locale list in sync with `locales` in config/i18n.ts.
     // https://github.com/vercel/next.js/discussions/36308#discussioncomment-3758041
-    // .*\\..* matches "url.extension"
-    '/((?!api|static|.*\\..*|_next).*)',
-    // Optional: only run on root (/) URL
-    // '/'
+    '/((?!api|static|_next|en(?:/|$)|zh-CN(?:/|$)|.*\\..*).*)',
   ],
 }

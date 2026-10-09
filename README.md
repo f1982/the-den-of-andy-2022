@@ -31,6 +31,11 @@ The command will bump the version number, update the `CHANGELOG.md` and `git com
 pnpm dev
 ```
 
+Blog posts (`src/content/posts`) and the app legal pages (`src/assets/md`) are
+rendered from Markdown to HTML at build time by `scripts/build-content.mjs`.
+`pnpm dev` and `pnpm build` run it automatically; run `pnpm content` after
+editing Markdown while the dev server is running.
+
 ## Production preview
 
 ```bash

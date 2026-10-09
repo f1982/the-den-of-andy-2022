@@ -3,10 +3,13 @@
 import React from 'react'
 
 import clsx from 'clsx'
-import { Menu, X } from 'lucide-react'
+import { Menu } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -15,7 +18,50 @@ import {
 } from '@/components/ui/sheet'
 
 import { MenuItemData } from './menu-data'
-import { MobileNavMenuItem } from './menu-item'
+
+export function MobileNavMenuItem({
+  link,
+  label,
+  icon,
+}: {
+  link: string
+  label: string
+  icon?: React.ReactNode
+}) {
+  const pathname = usePathname()
+
+  return (
+    <>
+      <SheetClose asChild>
+        <Link href={link} className="block w-full text-left">
+          <span className="flex flex-row items-center gap-3">
+            <span aria-hidden="true">{icon}</span>
+            <span
+              className={clsx(
+                'w-full text-lg',
+                pathname.startsWith(link)
+                  ? 'font-bold'
+                  : 'font-semibold text-muted-foreground',
+              )}>
+              {label}
+            </span>
+          </span>
+        </Link>
+      </SheetClose>
+    </>
+  )
+}
+
+export type MobileNavProps = {
+  left?: React.ReactNode
+  right?: React.ReactNode
+  data: MenuItemData[]
+  openMenuLabel?: string
+  closeMenuLabel?: string
+  menuTitle?: string
+  menuDescription?: string
+  defaultOpen?: boolean
+}
 
 export const MobileNavPopover = ({
   left,
@@ -25,18 +71,11 @@ export const MobileNavPopover = ({
   closeMenuLabel,
   menuTitle,
   menuDescription,
-}: {
-  left?: React.ReactNode
-  right?: React.ReactNode
-  data: MenuItemData[]
-  openMenuLabel?: string
-  closeMenuLabel?: string
-  menuTitle?: string
-  menuDescription?: string
-}) => {
+  defaultOpen,
+}: MobileNavProps) => {
   return (
     <>
-      <Sheet>
+      <Sheet defaultOpen={defaultOpen}>
         <SheetTrigger
           className="md:hidden"
           aria-label={openMenuLabel ?? 'Open navigation menu'}>

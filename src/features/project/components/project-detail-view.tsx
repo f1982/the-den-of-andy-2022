@@ -3,7 +3,6 @@ import React from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import LandscapeHero from '@/components/sections/hero-landscape'
 import FormattedDate from '@/components/shared/formatted-date'
 import Tags from '@/components/shared/tag-cloud'
 
@@ -22,16 +21,6 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
   responsibility,
   images,
 }) => {
-  function getCarousel(imageList, alt) {
-    if (!imageList) return null
-
-    return imageList.map((image) => (
-      <div key={image} className="mb-8">
-        <Image src={`${image}`} width={800} height={600} alt={alt} />
-      </div>
-    ))
-  }
-
   return (
     <>
       <div className="mx-auto mb-3 mt-6 flex w-full flex-col justify-start gap-9 bg-secondary py-12">
@@ -57,6 +46,8 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
           )}
           width={800}
           height={600}
+          sizes="(max-width: 1024px) 100vw, 1024px"
+          preload
           alt={title!}
         />
       </div>
@@ -71,7 +62,13 @@ const ProjectDetailView: React.FC<ProjectItemData> = ({
 
         {images.map((image) => (
           <div key={image} className="mb-8">
-            <Image src={`${image}`} width={800} height={600} alt={title} />
+            <Image
+              src={`${image}`}
+              width={800}
+              height={600}
+              sizes="(max-width: 768px) 100vw, 768px"
+              alt={title}
+            />
           </div>
         ))}
       </div>

@@ -23,11 +23,11 @@ import {
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import Hobbies3DPrintingImage from '@/assets/images/hobbies-3d-printing.png'
-import HobbiesDrawingImage from '@/assets/images/hobbies-drawing.png'
-import HobbiesHeroImage from '@/assets/images/hobbies-hero-spaceman.png'
-import HobbiesRCImage from '@/assets/images/hobbies-rc.png'
-import HobbiesVideoImage from '@/assets/images/hobbies-video.png'
+import Hobbies3DPrintingImage from '@/assets/images/hobbies-3d-printing.webp'
+import HobbiesDrawingImage from '@/assets/images/hobbies-drawing.webp'
+import HobbiesHeroImage from '@/assets/images/hobbies-hero-spaceman.webp'
+import HobbiesRCImage from '@/assets/images/hobbies-rc.webp'
+import HobbiesVideoImage from '@/assets/images/hobbies-video.webp'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;

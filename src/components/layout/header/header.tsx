@@ -1,12 +1,10 @@
-'use client'
-
 import React from 'react'
 
 import clsx from 'clsx'
 
 import { MenuItemData } from './menu-data'
 import { NavMenuItem } from './menu-item'
-import { MobileNavPopover } from './mobile-menu-sheet'
+import { MobileNav } from './mobile-menu'
 
 type HeaderProps = {
   left?: React.ReactNode
@@ -53,7 +51,7 @@ const Header = ({
           <div className="hidden md:flex">{right}</div>
 
           {/* Menu button only show in small screen */}
-          <MobileNavPopover
+          <MobileNav
             left={left}
             right={right}
             data={data}
