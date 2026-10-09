@@ -81,7 +81,9 @@ export function DeskStage({
       imageRotate: -5,
       className: 'desk:left-[31%] desk:top-[30px] desk:w-[15%]',
       deskWidth: 15,
-      labelPosition: { left: '8%', top: '104%' },
+      // Beside the card, under the clock: the doodle postcard is taller than
+      // the photo was, so a tag below it ran into the hero note.
+      labelPosition: { left: '94%', top: '70%' },
       tape: { rotate: -8, top: -6 },
       preload: true,
     },
@@ -133,11 +135,11 @@ export function DeskStage({
       href: localizedPath(locale, '/project'),
       image: denCutouts.laptop,
       imageRotate: -4,
-      className: 'desk:left-[22%] desk:top-[836px] desk:w-[19.5%]',
+      // z-10 on the object itself: its entrance animation makes it a stacking
+      // context, so a z-index on the tag alone can't lift it over the sketchbook.
+      className: 'desk:left-[22%] desk:top-[836px] desk:z-10 desk:w-[19.5%]',
       deskWidth: 19.5,
       labelPosition: { left: '74%', top: '30%' },
-      // Keep the tag above the sketchbook it runs into.
-      labelClassName: 'desk:z-10',
     },
     {
       key: 'sketchbook',

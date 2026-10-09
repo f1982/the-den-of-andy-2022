@@ -1,4 +1,4 @@
-// Static imports of the Den photos. Cut-outs are transparent WebPs (use with
+// Static imports of the Den images. Cut-outs are transparent WebPs (use with
 // <CutoutImage>/<CutoutObject> or the `cutout` class); photos are opaque
 // (use with <Polaroid> or object-cover).
 import avatarPixel from '@/assets/images/avatar-pixel.jpg'
@@ -21,7 +21,10 @@ import sketchbook from '@/assets/images/den/sketchbook.webp'
 import succulent from '@/assets/images/den/succulent.webp'
 import sunrise from '@/assets/images/den/sunrise.webp'
 
-/** Transparent cut-outs of Andy's actual stuff. */
+/**
+ * Andy's actual stuff as flat grayscale crayon drawings (transparent, ≤900px),
+ * generated with Codex image_gen in the style of a hand-drawn picture book.
+ */
 export const denCutouts = {
   keyboard,
   printer,
