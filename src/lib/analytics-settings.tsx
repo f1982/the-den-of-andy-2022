@@ -1,9 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 
 import { Settings2 } from 'lucide-react'
-import { useIsMounted } from 'usehooks-ts'
 
 import { GoogleAnalyticsID, siteHostname } from '../config/site-config'
 import { GoogleAnalytics } from '../utils/google-analytics'
@@ -17,6 +16,29 @@ type AnalyticsConsentLabels = {
   manage: string
 }
 
+type Consent = 'unknown' | 'granted' | 'denied'
+
+const CONSENT_KEY = 'analytics-consent'
+const consentListeners = new Set<() => void>()
+
+function subscribeConsent(listener: () => void) {
+  consentListeners.add(listener)
+  return () => consentListeners.delete(listener)
+}
+
+function readConsent(): Consent {
+  try {
+    const stored = window.localStorage.getItem(CONSENT_KEY)
+    return stored === 'granted' || stored === 'denied' ? stored : 'unknown'
+  } catch {
+    return 'unknown'
+  }
+}
+
+// Nothing is rendered on the server or during hydration: the stored choice is
+// only known in the browser, so returning visitors never see the banner flash.
+const readServerConsent = () => null
+
 export const AnalyticSettings = ({
   labels,
   privacyHref,
@@ -24,30 +46,27 @@ export const AnalyticSettings = ({
   labels: AnalyticsConsentLabels
   privacyHref: string
 }) => {
-  const [consent, setConsent] = useState<'unknown' | 'granted' | 'denied'>('unknown')
-  const [isDebugging, setIsDebugging] = useState(false)
-  const isMounted = useIsMounted()
-  const getDebugFlag = () => {
-    return window.location.hostname !== siteHostname
-  }
-  useEffect(() => {
-    if (isMounted()) {
-      setIsDebugging(getDebugFlag())
-      const storedConsent = window.localStorage.getItem('analytics-consent')
-      if (storedConsent === 'granted' || storedConsent === 'denied') {
-        setConsent(storedConsent)
-      }
-    }
-  }, [isMounted])
+  const storedConsent = useSyncExternalStore(
+    subscribeConsent,
+    readConsent,
+    readServerConsent,
+  )
+  const [isManaging, setIsManaging] = useState(false)
+
+  if (storedConsent === null) return null
+
+  const consent: Consent = isManaging ? 'unknown' : storedConsent
+  const isDebugging = window.location.hostname !== siteHostname
 
   const saveConsent = (value: 'granted' | 'denied') => {
-    window.localStorage.setItem('analytics-consent', value)
-    setConsent(value)
+    window.localStorage.setItem(CONSENT_KEY, value)
+    consentListeners.forEach((listener) => listener())
+    setIsManaging(false)
   }
 
   return (
     <>
-      {consent === 'granted' && (
+      {storedConsent === 'granted' && (
         <GoogleAnalytics gaId={GoogleAnalyticsID} debugMode={isDebugging} />
       )}
       {consent === 'unknown' && (
@@ -82,8 +101,8 @@ export const AnalyticSettings = ({
           type="button"
           aria-label={labels.manage}
           title={labels.manage}
-          className="fixed bottom-4 right-4 z-40 rounded-full border border-border bg-background p-2 text-muted-foreground shadow transition-colors hover:bg-muted hover:text-foreground"
-          onClick={() => setConsent('unknown')}>
+          className="fixed bottom-4 right-4 z-40 rounded-full border border-border bg-background p-2 text-muted-foreground shadow-sm transition-colors hover:bg-muted hover:text-foreground"
+          onClick={() => setIsManaging(true)}>
           <Settings2 size={16} aria-hidden="true" />
         </button>
       )}

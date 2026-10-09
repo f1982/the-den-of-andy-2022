@@ -16,7 +16,7 @@ const BlogPost: React.FC<BlogPostData> = ({
 }) => (
   <>
     <div className="mx-auto mb-3 mt-6 flex w-full flex-col justify-start gap-9 bg-secondary py-12">
-      <div className="container mb-[150px] animate-pulse">
+      <div className="container mb-[150px]">
         <FormattedDate date={date} />
         <h1 className="mb-3 text-3xl font-bold">{title}</h1>
         <div className="text-sm font-bold">{author?.name}</div>
@@ -29,15 +29,17 @@ const BlogPost: React.FC<BlogPostData> = ({
         className={clsx(
           'aspect-video w-full rounded-lg bg-card object-cover shadow-2xl',
         )}
-        width={500}
-        height={300}
+        width={1024}
+        height={576}
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        preload
         alt={title!}
       />
     </div>
 
     <div className="container max-w-3xl">
       <article
-        className="prose-md prose mx-auto max-w-none dark:prose-invert"
+        className="prose mx-auto max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>

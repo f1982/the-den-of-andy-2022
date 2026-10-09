@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 import { getDictionary } from '@/utils/dictionaries'
+import { localizedPath } from '@/utils/locale-path'
 import SchemaJsonLd from '@/utils/schema-jsonld'
 import { getPageMetadata } from '@/utils/metadata-utils'
 
@@ -34,7 +35,7 @@ export default async function Page(props) {
       <SchemaJsonLd
         jsonLd={getJsonLdWebsite({
           ...siteSettings,
-          url: `${siteUrl}/${locale}`,
+          url: `${siteUrl}${localizedPath(locale)}`,
         }, locale)}
       />
       <SchemaJsonLd jsonLd={getJsonLdPerson(siteSettings)} />
@@ -42,7 +43,7 @@ export default async function Page(props) {
         title={dict.welcome.greeting}
         subtitle={dict.welcome.description}
         label={dict.welcome.buttonLabel}
-        link={`/${locale}/home`}
+        link={localizedPath(locale, '/home')}
       />
     </div>
   )

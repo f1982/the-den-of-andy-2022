@@ -1,10 +1,10 @@
+'use client'
+
 import React from 'react'
 
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-import { SheetClose } from '@/components/ui/sheet'
 
 export function NavMenuItem({
   link,
@@ -37,39 +37,6 @@ export function NavMenuItem({
         </span>
         {label}
       </Link>
-    </>
-  )
-}
-
-export function MobileNavMenuItem({
-  link,
-  label,
-  icon,
-}: {
-  link: string
-  label: string
-  icon?: React.ReactNode
-}) {
-  const pathname = usePathname()
-
-  return (
-    <>
-      <SheetClose asChild>
-        <Link href={link} className="block w-full text-left">
-          <span className="flex flex-row items-center gap-3">
-            <span aria-hidden="true">{icon}</span>
-            <span
-              className={clsx(
-                'w-full text-lg',
-                pathname.startsWith(link)
-                  ? 'font-bold'
-                  : 'font-semibold text-muted-foreground',
-              )}>
-              {label}
-            </span>
-          </span>
-        </Link>
-      </SheetClose>
     </>
   )
 }

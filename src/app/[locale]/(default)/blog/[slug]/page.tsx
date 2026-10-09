@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
 
 import { PageLocaleSlugProp } from '@/types/page'
@@ -7,11 +5,10 @@ import { notFound } from 'next/navigation'
 
 import Comments from '@/lib/comment/utteranc-comments'
 
-import Spinner from '@/components/shared/spinner'
-
 import { getPostDetail, getPosts } from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'
 import { getDictionary } from '@/utils/dictionaries'
+import { localizedPath } from '@/utils/locale-path'
 import { getPageMetadata } from '@/utils/metadata-utils'
 import SchemaJsonLd from '@/utils/schema-jsonld'
 import {
@@ -26,13 +23,7 @@ import { siteSettings, siteUrl } from '@/config/site-config'
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
-  const slugs = posts.map((item) => {
-    return {
-      slug: item!.slug,
-    }
-  })
-  return slugs
+  return getPosts().map((item) => ({ slug: item.slug }))
 }
 
 export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metadata> {
@@ -43,7 +34,7 @@ export async function generateMetadata(props: PageLocaleSlugProp): Promise<Metad
     slug
   } = params;
 
-  const post = await getPostDetail(slug, locale)
+  const post = getPostDetail(slug, locale)
   if (!post) {
     return { title: 'Article not found', robots: { index: false, follow: false } }
   }
@@ -71,10 +62,10 @@ export default async function Page(
 ) {
   const params = await props.params;
   const dict = await getDictionary(params.locale)
-  const post = await getPostDetail(params.slug, params.locale)
+  const post = getPostDetail(params.slug, params.locale)
   if (!post) return notFound()
 
-  const articleUrl = `${siteUrl}/${params.locale}/blog/${post.slug}`
+  const articleUrl = `${siteUrl}${localizedPath(params.locale, `/blog/${post.slug}`)}`
   return (
     <>
       <SchemaJsonLd
@@ -90,14 +81,12 @@ export default async function Page(
       />
       <SchemaJsonLd
         jsonLd={getJsonLdBreadcrumb([
-          { name: dict.common.menu.home, url: `${siteUrl}/${params.locale}` },
-          { name: dict.blog.headline, url: `${siteUrl}/${params.locale}/blog` },
+          { name: dict.common.menu.home, url: `${siteUrl}${localizedPath(params.locale)}` },
+          { name: dict.blog.headline, url: `${siteUrl}${localizedPath(params.locale, '/blog')}` },
           { name: post.title, url: articleUrl },
         ])}
       />
-      <Suspense fallback={<Spinner />}>
-        <BlogPost {...post} />
-      </Suspense>
+      <BlogPost {...post} />
 
       <div className="my-24" />
 

@@ -9,7 +9,7 @@ export default function Prose({
   return (
     <article
       className={clsx(
-        'prose-md prose mb-9 max-w-none dark:prose-invert',
+        'prose mb-9 max-w-none dark:prose-invert',
         className,
       )}>
       {children}

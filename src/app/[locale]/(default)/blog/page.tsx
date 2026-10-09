@@ -1,5 +1,3 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
 
 import { PageLocaleProp } from '@/types/page'
@@ -9,7 +7,6 @@ import { getDictionary } from '@/utils/dictionaries'
 import PageHero from '@/components/sections/hero-image'
 import PageTitle from '@/components/sections/page-title'
 import PageRows from '@/components/shared/page-rows'
-import Spinner from '@/components/shared/spinner'
 
 import { getPosts } from '@/features/blog/blog-data'
 import BlogPosCards from '@/features/blog/components/blog-post-cards'
@@ -18,7 +15,7 @@ import BlogPostList from '@/features/blog/components/blog-post-list'
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import HeroImage from '@/assets/images/blog-hero-coding.png'
+import HeroImage from '@/assets/images/blog-hero-coding.webp'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;
@@ -37,32 +34,6 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
   })
 }
 
-async function PostCards({ locale }: { locale: string }) {
-  const posts = await getPosts(-1, locale)
-  return (
-    <>
-      {posts.length > 0 ? (
-        <BlogPosCards posts={posts} locale={locale} />
-      ) : (
-        <div className="text-center">No posts yet</div>
-      )}
-    </>
-  )
-}
-
-async function PostList({ locale }: { locale: string }) {
-  const posts = await getPosts(-1, locale)
-  return (
-    <>
-      {posts.length > 0 ? (
-        <BlogPostList posts={posts} locale={locale} />
-      ) : (
-        <div className="text-center">No posts yet</div>
-      )}
-    </>
-  )
-}
-
 export default async function Page(props: PageLocaleProp) {
   const params = await props.params;
 
@@ -71,6 +42,7 @@ export default async function Page(props: PageLocaleProp) {
   } = params;
 
   const dict = await getDictionary(locale)
+  const posts = getPosts(-1, locale)
 
   return (
     <PageRows withMargin>
@@ -81,17 +53,21 @@ export default async function Page(props: PageLocaleProp) {
         </div>
 
         <div className="mx-4">
-          <Suspense fallback={<Spinner />}>
-            <PostCards locale={locale} />
-          </Suspense>
+          {posts.length > 0 ? (
+            <BlogPosCards posts={posts} locale={locale} />
+          ) : (
+            <div className="text-center">No posts yet</div>
+          )}
         </div>
       </div>
 
       <div className="container">
         <h2 className="mb-6 text-3xl font-bold">{dict.blog.more}</h2>
-        <Suspense fallback={<Spinner />}>
-          <PostList locale={locale} />
-        </Suspense>
+        {posts.length > 0 ? (
+          <BlogPostList posts={posts} locale={locale} />
+        ) : (
+          <div className="text-center">No posts yet</div>
+        )}
       </div>
     </PageRows>
   )

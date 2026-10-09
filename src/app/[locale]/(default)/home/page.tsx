@@ -14,8 +14,8 @@ import { localizedPath } from '@/utils/locale-path'
 import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.png'
-import StudioImage from '@/assets/images/homepage-studio.png'
+import AndyBubbleImage from '@/assets/images/homepage-andy-bubbles.webp'
+import StudioImage from '@/assets/images/homepage-studio.webp'
 
 export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
   const params = await props.params;

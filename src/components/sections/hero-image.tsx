@@ -30,7 +30,7 @@ const PageHero: React.FC<PropsWithChildren<PageHeroProps>> = ({
         alt={alt}
         width={800}
         height={600}
-        priority
+        preload
         sizes="(max-width: 768px) 100vw, 800px"
       />
     </div>
