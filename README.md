@@ -7,13 +7,13 @@ I'd love to have a place that fully autonomous. I can put all my interests there
 ## Install
 
 ```bash
-npm ci
+pnpm install --frozen-lockfile
 ```
 
 ## Release
 
 ```bash
- npm run release:minor
+ pnpm release:minor
 ```
 
 The command will bump the version number, update the `CHANGELOG.md` and `git commit` the changes
@@ -28,14 +28,14 @@ The command will bump the version number, update the `CHANGELOG.md` and `git com
 ## Development
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Production preview
 
 ```bash
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
 
-Deploy with `npm run deploy` after authenticating Wrangler and reviewing the generated worker.
+Deploy with `pnpm run deploy` (plain `pnpm deploy` is a built-in pnpm command) after authenticating Wrangler and reviewing the generated worker.
