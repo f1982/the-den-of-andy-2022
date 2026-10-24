@@ -5,7 +5,7 @@
       "locale": "{locale, select, cn {🇨🇳 中文} en {🇺🇸 英文} other {Unknown}}"
     },
     "slogan": "抱宽广之怀，未尝执于一端。",
-    "homeLinkLabel": "返回安迪·曹主页",
+    "homeLinkLabel": "Andy，返回首页",
     "openMenuLabel": "打开导航菜单",
     "closeMenuLabel": "关闭导航菜单",
     "mobileMenuTitle": "导航菜单",
@@ -24,9 +24,9 @@
       "manage": "隐私设置"
     },
     "menu": {
-      "home": "主页",
-      "blog": "博客",
-      "projects": "项目",
+      "home": "首页",
+      "blog": "笔记",
+      "projects": "作品",
       "hobbies": "爱好",
       "about": "关于"
     }
@@ -68,7 +68,6 @@
       "description": "评论由 Utterances 提供，只有在你选择查看时才会加载。"
     }
   },
-
   "project": {
     "pageTitle": "项目",
     "headline": "项目",
@@ -76,7 +75,6 @@
     "title": "项目",
     "description": "这是我参与过的项目的一部分,还有一些项目我没有整理和列出。"
   },
-
   "hobbies": {
     "pageTitle": "我的爱好",
     "headline": "爱好",
@@ -114,5 +112,538 @@
     "whatAndyDoDescription": "我是一名软件开发人员 👨‍💻，在软件行业工作了 17 年以上。我开发过网站、移动应用，也制作和设计过休闲游戏。开发软件的过程总能带给我快乐和满足感。目前我专注于前端开发技术，主要使用 JavaScript、CSS、HTML、React 和 React Native。因为我喜欢 Apple 生态系统，也会关注 iOS 开发。",
     "familyTitle": "家庭",
     "familyDescription": "我很幸运很早就遇到了我的妻子方。她在我的生活和精神上帮助我很多。我们有一个$AGE_OF_ZOE$岁的女儿,她的名字叫Zoe,她健康活泼。我们一家目前住在奥克兰。"
+  },
+  "den": {
+    "projects": {
+      "hero": {
+        "kicker": "§ 03 — 作品 · {count} 个项目，{from} → {to}",
+        "title": "我*做过*的\n东西",
+        "lede": "网站、移动应用和休闲游戏——从当年的 Flash 和 Cocos2d，一路写到现在的 React 和 Next.js。挑一个，我来讲讲它的故事。",
+        "note": "最老的那个还是用 Flash 写的 ↓"
+      },
+      "list": {
+        "ariaLabel": "全部项目",
+        "empty": "暂时还没有项目。"
+      },
+      "outro": "……抽屉里还躺着几个没来得及整理的。",
+      "types": {
+        "coding": "开发",
+        "game": "游戏"
+      },
+      "detail": {
+        "back": "全部作品",
+        "kicker": "§ 作品 — 第 {n} 号",
+        "platform": "平台",
+        "years": "年份",
+        "type": "类型",
+        "stack": "技术栈",
+        "brief": "01 — 项目简介",
+        "role": "02 — 我负责的部分",
+        "gallery": "03 — 当年的截图",
+        "galleryNote": "随手贴上，有点歪",
+        "visit": "访问",
+        "github": "GitHub",
+        "video": "观看视频",
+        "prev": "上一个",
+        "next": "下一个",
+        "pager": "更多作品"
+      }
+    },
+    "hobbies": {
+      "hero": {
+        "kicker": "§ 04 — 爱好 · 四个章节",
+        "title": "每个人都需要\n==爱好==",
+        "lede": "写代码负责养家，这四样占满了书桌剩下的地方——还有大部分周末。",
+        "note": "注意：可能会用到胶水",
+        "contents": "章节"
+      },
+      "chapters": {
+        "print3d": {
+          "kicker": "第 01 章 — 制作",
+          "note": "Ender 3 V2，\n我的老伙计"
+        },
+        "rc": {
+          "kicker": "第 02 章 — 飞行",
+          "note": "儿时的梦想，\n终于飞起来了"
+        },
+        "drawing": {
+          "kicker": "第 03 章 — 画画",
+          "note": "从《龙珠》开始的涂鸦"
+        },
+        "video": {
+          "kicker": "第 04 章 — 影像",
+          "note": "外置记忆"
+        }
+      }
+    },
+    "welcome": {
+      "kicker": "The Den of Andy — 新西兰奥克兰",
+      "title": "嗨，我是 *Andy*",
+      "note": "请进——\n小心脚下的线",
+      "enterAria": "进入书房"
+    },
+    "notFound": {
+      "kicker": "错误 404 — 这个地址下什么也没有",
+      "title": "书桌上\n*空空如也*",
+      "lede": "你要找的东西可能被挪走了、收起来了，或者压根就不存在。不过咖啡还是热的。",
+      "note": "只有我和一杯馥芮白",
+      "home": "回到书房",
+      "blog": "看看笔记本"
+    },
+    "legal": {
+      "kicker": "§ — 条款细则",
+      "note": "无聊但重要的部分"
+    },
+    "common": {
+      "brand": "Andy",
+      "pronunciation": "[ch·ow]",
+      "siteName": "The Den of Andy",
+      "homeAriaLabel": "Andy，返回首页",
+      "mainNavLabel": "主导航",
+      "sayHello": "打个招呼",
+      "language": {
+        "label": "语言",
+        "en": "EN",
+        "zh": "中文",
+        "switchToEn": "Read this page in English",
+        "switchToZh": "阅读中文版"
+      },
+      "motto": "抱宽广之怀，未尝执于一端",
+      "copyright": "© {year} Andy — The Den of Andy",
+      "builtWith": "基于 Next.js 构建 · 由 Cloudflare 提供服务",
+      "backToTop": "回到顶部",
+      "footerNavLabel": "页脚",
+      "socialNavLabel": "其他平台",
+      "email": "邮箱",
+      "elsewhere": "其他平台",
+      "liveClock": {
+        "place": "奥克兰",
+        "ariaLabel": "奥克兰当前时间"
+      },
+      "terminalTitle": "andy — zsh",
+      "minutes": "{n} 分钟",
+      "minutesRead": "阅读约 {n} 分钟",
+      "opensInNewTab": "（在新标签页中打开）"
+    },
+    "home": {
+      "meta": {
+        "title": "The Den of Andy — 住在奥克兰的前端开发者",
+        "description": "Andy 是一名来自中国、现居新西兰奥克兰的前端开发者。他开发网站和移动应用，业余时间玩 3D 打印、航模、画画和拍视频。"
+      },
+      "desk": {
+        "ariaLabel": "Andy 的书桌——点击任意物件",
+        "note": "嘘——这是我的书桌",
+        "kicker": "新西兰奥克兰 — 南纬 36.85°",
+        "title": "The *Den*\nof ==Andy==",
+        "lede": "我是 Andy，一名来自中国、现居奥克兰的前端开发者。我开发网站和移动应用，业余时间也做些~~小而美的硬件~~。",
+        "hintPill": "点一点",
+        "hint": "书桌上的任何物件——每一件都有故事。"
+      },
+      "objects": {
+        "keyboard": {
+          "label": "单键键盘",
+          "ariaLabel": "单键键盘——阅读制作笔记"
+        },
+        "postcard": {
+          "label": "雷因格角，2022",
+          "ariaLabel": "雷因格角明信片——2022 年度总结"
+        },
+        "rcplane": {
+          "label": "儿时的梦想，终于飞起来了",
+          "ariaLabel": "遥控飞机——航模爱好"
+        },
+        "printer": {
+          "label": "Ender 3 V2，\n我的老伙计",
+          "ariaLabel": "3D 打印机——3D 打印"
+        },
+        "drone": {
+          "label": "FPV——第一人称飞行",
+          "ariaLabel": "FPV 穿越机——航模爱好"
+        },
+        "succulent": {
+          "label": "好养活的同事",
+          "ariaLabel": "种在 3D 打印花盆里的多肉"
+        },
+        "laptop": {
+          "label": "写代码的地方",
+          "ariaLabel": "笔记本电脑——作品精选"
+        },
+        "sketchbook": {
+          "label": "从《龙珠》开始的涂鸦",
+          "ariaLabel": "速写本——画画"
+        },
+        "coffee": {
+          "label": "馥芮白",
+          "ariaLabel": "一杯馥芮白"
+        },
+        "camera": {
+          "label": "外置记忆",
+          "ariaLabel": "相机——视频剪辑"
+        }
+      },
+      "tip": {
+        "meta": "笔记 · {date}",
+        "cta": "看看制作过程 →"
+      },
+      "terminal": {
+        "lines": [
+          {
+            "kind": "cmd",
+            "text": "whoami"
+          },
+          {
+            "kind": "out",
+            "text": "前端开发 · 17 年以上"
+          },
+          {
+            "kind": "cmd",
+            "text": "ls ./den"
+          },
+          {
+            "kind": "out",
+            "text": "code/ prints/ planes/ films/"
+          }
+        ]
+      },
+      "den": {
+        "kicker": "§ 01 — 书房里",
+        "title": "我在这里\n*做的四件事*",
+        "aside": "+ 还有画画，\n从看《龙珠》那会儿就开始了",
+        "cards": {
+          "code": {
+            "tag": "01 / 代码",
+            "title": "网站与应用",
+            "body": "React、React Native 和 Next.js。写软件是我做了 17 年多的工作——至今仍让我快乐。",
+            "link": "作品精选 →"
+          },
+          "make": {
+            "tag": "02 / 制作",
+            "title": "3D 打印",
+            "body": "2021 年开始用 Ender 3 V2——花盆、支架、理线夹，偶尔还给书桌打一把键盘。",
+            "link": "Printables ↗"
+          },
+          "fly": {
+            "tag": "03 / 飞行",
+            "title": "航模与 FPV",
+            "body": "小学时在杂志上埋下的梦想——多亏了互联网，我终于能自己造飞机、自己飞。",
+            "link": "航模相册 ↗"
+          },
+          "film": {
+            "tag": "04 / 影像",
+            "title": "视频剪辑",
+            "body": "记忆会模糊，视频不会。我把它当作外置记忆——尤其是记录 Zoe 的成长。",
+            "link": "YouTube ↗"
+          }
+        }
+      },
+      "notebook": {
+        "kicker": "§ 02 — 笔记本",
+        "title": "笔记本里的\n*新鲜事*",
+        "allEntries": "全部 {count} 篇 →"
+      },
+      "works": {
+        "kicker": "§ 03 — 作品",
+        "title": "我*做过*的东西",
+        "aside": "2005 年至今 {count} 个项目——挑几个最喜欢的 ↓",
+        "notes": {
+          "vodafone": "第一次用 GraphQL！"
+        },
+        "items": {
+          "chick-fil-a-design-system": {
+            "title": "Chick-fil-A 设计系统",
+            "meta": "网页 · UI 组件库"
+          },
+          "vodafone-dx-web-mobile-project": {
+            "title": "Vodafone DX *— 网站与应用*",
+            "meta": "网页与移动端"
+          },
+          "buck-new-zealand-split-money-app": {
+            "title": "BUCK",
+            "meta": "网页与移动端 · Westpac"
+          },
+          "cctv-video-app": {
+            "title": "央视影音",
+            "meta": "iOS 应用"
+          },
+          "pew-pew-pew": {
+            "title": "Pew Pew Pew",
+            "meta": "iOS 游戏"
+          }
+        }
+      },
+      "contact": {
+        "kicker": "— 书房里唯一的规矩",
+        "motto": "抱宽广之怀，\n未尝*执于一端*。",
+        "mottoRinged": "执于一端",
+        "sayHello": "打个招呼",
+        "emailNote": "聊代码、聊打印、聊飞机都欢迎"
+      }
+    },
+    "blog": {
+      "meta": {
+        "title": "笔记本 — Andy 的博客",
+        "description": "关于制作、写代码和清冷早晨的随手笔记：DIY 硬件、3D 打印、桌面布置，以及在奥克兰的生活。"
+      },
+      "hero": {
+        "kicker": "§ 笔记本 — {count} 篇，{from} → {to}",
+        "title": "我的\n*笔记本*",
+        "lede": "我试着用文字记录自己做过的事——大多是亲手做出来的，有时也用==键盘==。",
+        "note": "关于制作、写代码和清冷早晨的笔记",
+        "sketchbookAlt": "一本摊开的速写本，上面是机器人和火箭的铅笔涂鸦",
+        "labelSmall": "随手笔记",
+        "labelBig": "卷 {from}–{to}",
+        "fuel": "← 燃料"
+      },
+      "filters": {
+        "groupLabel": "筛选文章",
+        "all": "全部",
+        "searchLabel": "搜索",
+        "searchPlaceholder": "键盘、书桌、大海…",
+        "noResults": "笔记本里没有匹配的内容——换个词试试。",
+        "results": "显示 {count} 篇"
+      },
+      "categories": {
+        "making": "制作",
+        "hardware": "硬件",
+        "desk": "桌面布置",
+        "life": "生活",
+        "gear": "装备"
+      },
+      "featured": {
+        "latest": "最新一篇",
+        "read": "阅读全文 →",
+        "watch": "观看制作视频 ↗"
+      },
+      "row": {
+        "readAriaLabel": "阅读《{title}》"
+      },
+      "post": {
+        "back": "← 回到笔记本"
+      },
+      "ticket": {
+        "stub": "ADMIT ONE · THE DEN",
+        "kicker": "关注我",
+        "title": "两篇笔记之间，制作和飞行都记录*在视频里*。",
+        "serial": "NO. 0007",
+        "seat": "SEAT: ANY",
+        "place": "AUCKLAND, NZ"
+      },
+      "posts": {
+        "one-key-keyboard-diy": {
+          "caption": "一个键，一件事，会呼吸的灯。",
+          "shortCaption": "按下，发光，呼吸。",
+          "categories": [
+            "making",
+            "hardware"
+          ],
+          "summary": "一块 Arduino Pro Micro、一个 3D 打印外壳，再加一个按起来特别爽的键——绑定了 Raycast。",
+          "featuredTitle": "DIY 一个带*呼吸灯*的单键键盘",
+          "featuredBody": "用 Arduino Pro Micro 和 3D 打印外壳做的单键键盘，带呼吸灯——小巧、实用，放在桌上也好看。",
+          "parts": [
+            "Arduino Pro Micro",
+            "3D 打印外壳",
+            "呼吸灯",
+            "Raycast 快捷键"
+          ]
+        },
+        "morning-sea-bath-challenge": {
+          "caption": "日出之前，好冷",
+          "shortCaption": "日出之前，好冷",
+          "categories": [
+            "life"
+          ],
+          "summary": "十一点前上床，前一晚就收好毛巾——太阳还没升起，我已经下海了。"
+        },
+        "summary-of-2022": {
+          "caption": "雷因格角，新西兰最北端",
+          "shortCaption": "雷因格角",
+          "categories": [
+            "life"
+          ],
+          "summary": "一眨眼又是一年——赶在最后一天之前做个总结。"
+        },
+        "low-maintenance-succulent-plants-on-my-desk-setup": {
+          "caption": "好养活的同事们",
+          "shortCaption": "多肉！",
+          "categories": [
+            "desk",
+            "making"
+          ],
+          "summary": "给书桌添点生气，种在我自己设计、3D 打印的花盆里。"
+        },
+        "my-wfh-desk-setups-2022": {
+          "caption": "桌面巡礼！",
+          "shortCaption": "桌面巡礼！",
+          "categories": [
+            "desk"
+          ],
+          "summary": "显示器、LED 灯带、DIY 小玩意，还有一大堆重新整理过的线。"
+        },
+        "new-apple-silicon-m1-pro-macbook-pro-hands-on": {
+          "caption": "终于用上 120Hz",
+          "shortCaption": "M1 Pro",
+          "categories": [
+            "gear"
+          ],
+          "summary": "用了一周：开发流程毫无卡顿，还有那块 120Hz 屏幕。"
+        },
+        "make-a-usb-type-c-holder-on-my-desk": {
+          "caption": "每根线都有个夹子",
+          "shortCaption": "USB-C 收纳夹",
+          "categories": [
+            "desk",
+            "making"
+          ],
+          "summary": "理线永远做不到完美——但一个打印出来的小夹子很有帮助。"
+        }
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "关于 Andy — 住在奥克兰的软件开发者",
+        "description": "Andy 是一名来自中国、和家人住在奥克兰的软件开发者。17 年多的网站、移动应用和休闲游戏开发经验——还爱好 3D 打印、航模、画画和拍视频。"
+      },
+      "badge": {
+        "strap": "THE DEN OF ANDY · THE DEN OF ANDY · THE DEN",
+        "role": "RESIDENT",
+        "avatarAlt": "Andy 的像素风头像",
+        "name": "Andy",
+        "job": "前端开发者",
+        "place": "AUCKLAND, NZ",
+        "pronunciation": "[CH·OW]",
+        "note": "↑ 这就是我，像素版"
+      },
+      "intro": {
+        "kicker": "§ 关于 — Andy 是谁",
+        "parts": {
+          "start": "嗨，我是 Andy——一名软件开发者",
+          "middle": "，来自中国，现在和家人住在奥克兰。业余时间我会",
+          "print": "打印",
+          "fly": "飞行",
+          "draw": "画画",
+          "film": "拍片",
+          "and": "和",
+          "comma": "、",
+          "end": "——也努力做一个==终身学习者==和好爸爸。"
+        },
+        "cta": "联系我 →",
+        "pronounce": "Cao 读作 “ch-ow”，和 wow 押韵"
+      },
+      "stats": {
+        "ariaLabel": "数字里的我",
+        "items": [
+          {
+            "num": "20*05*",
+            "label": "第一个上线的项目",
+            "body": "一个用 Flash、Java 和 JSP 开发的客服系统。"
+          },
+          {
+            "num": "17*+*",
+            "label": "年软件开发经验",
+            "body": "网站、移动应用和休闲游戏。"
+          },
+          {
+            "num": "20*21*",
+            "label": "第一台 3D 打印机",
+            "body": "一台 Creality Ender 3 V2——至今还在打印。"
+          }
+        ]
+      },
+      "who": {
+        "kicker": "01 — 是谁",
+        "title": "*Andy* 是谁？",
+        "body": "我叫 Andy Cao，来自中国，是一名专注于网站和移动应用开发的软件开发者。我有几个坚持了很多年的爱好——航模、FPV（第一人称视角飞行）、视频剪辑和 DIY。现在我和家人住在新西兰奥克兰。",
+        "postcardAlt": "雷因格角灯塔明信片",
+        "noteHome": "现在的家——\nAotearoa 新西兰",
+        "noteDesk": "鲍鱼壳 + 一杯馥芮白"
+      },
+      "what": {
+        "kicker": "02 — 做什么",
+        "title": "我*做*什么",
+        "body": "我在软件行业工作了 17 年多——开发过网站、做过移动应用，也设计和制作过休闲游戏。开发软件的过程总能给我带来快乐和满足。现在我专注于前端：JavaScript、CSS、HTML、React 和 React Native。因为喜欢苹果生态，我也一直关注 iOS 开发。",
+        "stickers": {
+          "javascript": "JavaScript",
+          "typescript": "TypeScript",
+          "react": "React",
+          "reactNative": "React Native",
+          "nextjs": "Next.js",
+          "cssHtml": "CSS & HTML",
+          "ios": "iOS，一直在关注",
+          "cocos": "Cocos2d-x",
+          "flash": "Flash"
+        },
+        "flashNote": "← 安息吧，2005–2011",
+        "terminal": {
+          "lines": [
+            {
+              "kind": "cmd",
+              "text": "cat ./what-i-do.txt"
+            },
+            {
+              "kind": "out",
+              "text": "网站 · 移动应用 · 休闲游戏"
+            },
+            {
+              "kind": "out",
+              "text": "写软件 = 快乐"
+            }
+          ]
+        }
+      },
+      "family": {
+        "kicker": "03 — 家人",
+        "title": "Fang、Zoe *和我*",
+        "body": "我很幸运，很早就遇到了我的妻子 Fang。她在生活和精神上都给了我巨大的帮助。我们有一个 $AGE_OF_ZOE$ 岁的女儿 Zoe，健康又活泼。我们一家住在奥克兰。",
+        "crayonAlt": "孩子用蜡笔画的一家三口，头顶有个大太阳",
+        "note": "这里留给 Zoe 的最新杰作 →"
+      },
+      "history": {
+        "ariaLabel": "简史",
+        "kicker": "04 — 简史",
+        "title": "二十年，\n*一把尺子*",
+        "aside": "用项目丈量，而不是年份 ↓",
+        "events": [
+          {
+            "year": "2005",
+            "text": "第一个项目——用 Flash 和 Java 开发的客服系统"
+          },
+          {
+            "year": "2009",
+            "text": "第一款 iOS 游戏 Crunching，以及 CCTV.com 网站"
+          },
+          {
+            "year": "2012",
+            "text": "iOS 应用 CCTV Video，一直做到 2015 年"
+          },
+          {
+            "year": "2017",
+            "text": "微信小游戏：Thousand Dogs、Time Signet"
+          },
+          {
+            "year": "2020",
+            "text": "在新西兰为 Westpac 开发 BUCK"
+          },
+          {
+            "year": "2021",
+            "text": "Vodafone DX · 第一台 3D 打印机"
+          },
+          {
+            "year": "2022",
+            "text": "Chick-fil-A 设计系统"
+          },
+          {
+            "year": "2024",
+            "text": "带呼吸灯的单键键盘"
+          }
+        ]
+      },
+      "contact": {
+        "title": "想一起\n开始\n一个新\n项目吗？",
+        "orHello": "或者只是说声*你好。*",
+        "email": "邮箱",
+        "elsewhere": "其他平台",
+        "note": "English 或中文——都欢迎"
+      }
+    }
   }
 }

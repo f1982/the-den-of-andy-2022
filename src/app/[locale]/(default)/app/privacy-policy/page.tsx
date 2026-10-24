@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 
-import { siteSettings } from '@/config/site-config'
 import { getPageMetadata } from '@/utils/metadata-utils'
+
+import LegalPage from '@/features/legal/legal-page'
+
+import { siteSettings } from '@/config/site-config'
 
 import { getLocalizedHtml } from '@/content/localized-markdown'
 
@@ -18,16 +21,11 @@ export async function generateMetadata(props: {
   })
 }
 
-export default async function Page(props: { params: Promise<{ locale: string }> }) {
+export default async function Page(props: {
+  params: Promise<{ locale: string }>
+}) {
   const { locale } = await props.params
   const htmlContent = getLocalizedHtml('appPrivacyPolicy', locale)
 
-  return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <article
-        className="prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-      />
-    </div>
-  )
+  return <LegalPage locale={locale} html={htmlContent} />
 }

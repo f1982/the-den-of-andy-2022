@@ -2,8 +2,11 @@ import React from 'react'
 
 import { Metadata } from 'next'
 
-import { siteSettings } from '@/config/site-config'
 import { getPageMetadata } from '@/utils/metadata-utils'
+
+import LegalPage from '@/features/legal/legal-page'
+
+import { siteSettings } from '@/config/site-config'
 
 import { getLocalizedHtml } from '@/content/localized-markdown'
 
@@ -25,14 +28,7 @@ const TermsOfUse: React.FC<{ params: Promise<{ locale: string }> }> = async ({
   const { locale } = await params
   const htmlContent = getLocalizedHtml('appTermsOfUse', locale)
 
-  return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <article
-        className="prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-      />
-    </div>
-  )
+  return <LegalPage locale={locale} html={htmlContent} />
 }
 
 export default TermsOfUse

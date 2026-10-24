@@ -1,20 +1,19 @@
-import { MessageCircleQuestion } from 'lucide-react'
-import Link from 'next/link'
+import { getDictionary } from '@/utils/dictionaries'
 
-import { Button } from '@/components/ui/button'
-import { localizedPath } from '@/utils/locale-path'
+import NotFoundView from '@/features/not-found/not-found-view'
 
-export default function NotFound({ params }: { params?: { locale?: string } }) {
-  const locale = params?.locale ?? 'en'
+export default async function NotFound() {
+  const [en, zh] = await Promise.all([
+    getDictionary('en'),
+    getDictionary('zh-CN'),
+  ])
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
-      <MessageCircleQuestion size={48} />
-      <h2 className="text-lg">Oops! Not Found</h2>
-
-      <Link href={localizedPath(locale)}>
-        <Button>Home</Button>
-      </Link>
-    </div>
+    <NotFoundView
+      copy={{
+        en: { ...en.den.notFound, brand: en.den.common.brand },
+        'zh-CN': { ...zh.den.notFound, brand: zh.den.common.brand },
+      }}
+    />
   )
 }

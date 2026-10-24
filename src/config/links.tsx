@@ -15,6 +15,39 @@ export const ThingiverseURL = 'https://www.thingiverse.com/iandycao/'
 export const PrintableURL = 'https://www.printables.com/@andycao_315699'
 export const YouTubeURL = 'https://www.youtube.com/c/AndyCaoisme'
 export const BilibiliURL = 'https://space.bilibili.com/30429048'
+export const TwitterURL = 'https://twitter.com/iandycao'
+export const InstagramURL = 'https://www.instagram.com/iandycao/'
+export const YouTubeChannelURL =
+  'https://www.youtube.com/channel/UCja8b7EiKdWoSKeUicboVhg'
+
+export type DenSocialLink = {
+  id:
+    | 'twitter'
+    | 'youtube'
+    | 'instagram'
+    | 'bilibili'
+    | 'printables'
+    | 'thingiverse'
+  label: string
+  /** Optional handle shown next to the label, e.g. `@iandycao`. */
+  handle?: string
+  href: string
+}
+
+/** Social profiles shown in the footer and contact sections of the Den design. */
+export const denSocialLinks: DenSocialLink[] = [
+  {
+    id: 'twitter',
+    label: 'X / Twitter',
+    handle: '@iandycao',
+    href: TwitterURL,
+  },
+  { id: 'youtube', label: 'YouTube', href: YouTubeChannelURL },
+  { id: 'instagram', label: 'Instagram', href: InstagramURL },
+  { id: 'bilibili', label: 'Bilibili', href: BilibiliURL },
+  { id: 'printables', label: 'Printables', href: PrintableURL },
+  { id: 'thingiverse', label: 'Thingiverse', href: ThingiverseURL },
+]
 
 const SNS = [
   {

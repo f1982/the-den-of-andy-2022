@@ -56,10 +56,8 @@ async function markdownToHtml(markdown) {
 async function buildPost(slug, locale) {
   const dir = path.join(postsDir, slug)
   const localized = path.join(dir, 'zh-cn.md')
-  const file =
-    locale === 'zh-CN' && existsSync(localized)
-      ? localized
-      : path.join(dir, 'index.md')
+  const translated = locale === 'zh-CN' && existsSync(localized)
+  const file = translated ? localized : path.join(dir, 'index.md')
   const { data, content } = matter(await readFile(file, 'utf8'))
 
   // Drafts remain available in source control but must not become public,
@@ -73,6 +71,10 @@ async function buildPost(slug, locale) {
 
   return {
     slug,
+    // Language the text is actually written in. A zh-CN post without a
+    // zh-cn.md falls back to the English text, so its page canonicalises to
+    // the English URL instead of competing with it as a duplicate.
+    contentLocale: translated ? 'zh-CN' : 'en',
     title: data.title,
     excerpt: data.excerpt,
     keywords: data.keywords,

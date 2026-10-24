@@ -4,9 +4,7 @@ import clsx from 'clsx'
 import { StickyNote } from 'lucide-react'
 import Link from 'next/link'
 
-import { BLOG_PATH } from '@/config/menu-data'
-import { localizedPath } from '@/utils/locale-path'
-
+import { postPath } from '../blog-data'
 import { BlogPostData } from '../blog-types'
 
 const BlogPostList: React.FC<{ posts: BlogPostData[]; locale: string }> = ({
@@ -23,7 +21,7 @@ const BlogPostList: React.FC<{ posts: BlogPostData[]; locale: string }> = ({
         <StickyNote className="fill-muted stroke-muted-foreground" />
         <div className="flex flex-1 flex-col justify-between md:flex-row">
           <Link
-            href={localizedPath(locale, `${BLOG_PATH}/${post.slug}`)}
+            href={postPath(post.slug, locale)}
             className="no-underline hover:underline">
             <span>{post.title}</span>
           </Link>

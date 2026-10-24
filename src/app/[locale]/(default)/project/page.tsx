@@ -3,25 +3,20 @@ import { Metadata } from 'next'
 import { PageLocaleProp } from '@/types/page'
 
 import { getDictionary } from '@/utils/dictionaries'
+import {
+  getPageMetadata,
+  truncateMetaDescription,
+} from '@/utils/metadata-utils'
 
-import PageHero from '@/components/sections/hero-image'
-import PageTitle from '@/components/sections/page-title'
-import PageRows from '@/components/shared/page-rows'
-
-import ProjectCardsView from '@/features/project/components/project-cards-view'
+import ProjectIndex from '@/features/project/components/project-index'
 import { getProjects } from '@/features/project/project-data'
 
-import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
 import { siteSettings } from '@/config/site-config'
 
-import HeroImage from '@/assets/images/project-hero-rocket.webp'
-
-export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
+export async function generateMetadata(
+  props: PageLocaleProp,
+): Promise<Metadata> {
+  const { locale } = await props.params
 
   const dict = await getDictionary(locale)
   return getPageMetadata({
@@ -33,37 +28,17 @@ export async function generateMetadata(props: PageLocaleProp): Promise<Metadata>
   })
 }
 
-async function ProjectList({ locale }: { locale: string }) {
-  const projects = await getProjects()
-  if (projects?.length < 1) {
-    return <div className="text-center">No projects yet</div>
-  }
-  return <ProjectCardsView data={projects} locale={locale} />
-}
-
-export default async function Page(props) {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
+export default async function Page(props: PageLocaleProp) {
+  const { locale } = await props.params
 
   const dict = await getDictionary(locale)
-  return (
-    <PageRows withMargin>
-      <PageHero image={HeroImage} alt="Rocket project illustration" />
-      <div>
-        <div className="container">
-          <PageTitle
-            title={dict.project.headline}
-            description={dict.project.intro}
-          />
-        </div>
+  const projects = (await getProjects()) ?? []
 
-        <div className="mx-4">
-          <ProjectList locale={locale} />
-        </div>
-      </div>
-    </PageRows>
+  return (
+    <ProjectIndex
+      projects={projects}
+      locale={locale}
+      copy={dict.den.projects}
+    />
   )
 }

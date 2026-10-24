@@ -3,79 +3,62 @@ import { Metadata } from 'next'
 import { PageLocaleProp } from '@/types/page'
 
 import { getDictionary } from '@/utils/dictionaries'
+import {
+  getPageMetadata,
+  truncateMetaDescription,
+} from '@/utils/metadata-utils'
 
-import SmallText from '@/components/sections/about-section'
-import PageHero from '@/components/sections/hero-image'
-import PageTitle from '@/components/sections/page-title'
-import PageRows from '@/components/shared/page-rows'
-
+import {
+  FamilyChapter,
+  WhatChapter,
+  WhoChapter,
+} from '@/features/about/components/about-chapters'
+import { AboutContact } from '@/features/about/components/about-contact'
+import { AboutHero } from '@/features/about/components/about-hero'
+import { AboutStats } from '@/features/about/components/about-stats'
+import { HistoryRuler } from '@/features/about/components/history-ruler'
 import { getAge } from '@/features/about/utils/date.utils'
 
-import { getPageMetadata, truncateMetaDescription } from '@/utils/metadata-utils'
-import { siteSettings } from '@/config/site-config'
-
-import AndyImage from '@/assets/images/about-andy-illustration.webp'
-import ComputerImage from '@/assets/images/about-computer-illustration.webp'
-import FamilyImage from '@/assets/images/about-family-illustration.webp'
-import HeroImage from '@/assets/images/about-hero-image.webp'
-
-export async function generateMetadata(props: PageLocaleProp): Promise<Metadata> {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
-
+export async function generateMetadata(
+  props: PageLocaleProp,
+): Promise<Metadata> {
+  const { locale } = await props.params
   const dict = await getDictionary(locale)
+  const meta = dict.den.about.meta
+
   return getPageMetadata({
     locale,
     path: '/about',
-    title: `${dict.about.headline} Andy Cao — Software Developer | ${siteSettings.name}`,
-    description: truncateMetaDescription(
-      `${dict.about.description} ${dict.about.whoIsAndyDescription}`,
-    ),
+    title: meta.title,
+    description: truncateMetaDescription(meta.description),
   })
 }
 
-export default async function About(props) {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
-
+export default async function About(props: PageLocaleProp) {
+  const { locale } = await props.params
   const dict = await getDictionary(locale)
+  const about = dict.den.about
 
   return (
-    <>
-      <PageRows withMargin>
-        <PageHero image={HeroImage} alt="Illustration of Andy Cao" />
+    <div className="overflow-x-clip">
+      <AboutHero copy={about} />
 
-        <div className="container">
-          <PageTitle
-            title={dict.about.headline}
-            description={dict.about.description}
-          />
-          <SmallText
-            image={AndyImage}
-            title={dict.about.whoIsAndyTitle}
-            description={dict.about.whoIsAndyDescription}
-          />
-          <SmallText
-            image={ComputerImage}
-            title={dict.about.whatAndyDoTitle}
-            description={dict.about.whatAndyDoDescription}
-          />
-          <SmallText
-            image={FamilyImage}
-            title={dict.about.familyTitle}
-            description={String(dict.about.familyDescription).replace(
-              '$AGE_OF_ZOE$',
-              getAge('2016-06-01').toString(),
-            )}
-          />
-        </div>
-      </PageRows>
-    </>
+      <div className="page-wrap">
+        <AboutStats copy={about.stats} />
+        <WhoChapter copy={about.who} />
+        <WhatChapter
+          copy={about.what}
+          terminalTitle={dict.den.common.terminalTitle}
+        />
+        <FamilyChapter copy={about.family} zoeAge={getAge('2016-06-01')} />
+        <HistoryRuler copy={about.history} />
+      </div>
+
+      <AboutContact
+        copy={about.contact}
+        opensInNewTab={dict.den.common.opensInNewTab}
+        compactTitle={locale === 'zh-CN'}
+      />
+    </div>
   )
 }
