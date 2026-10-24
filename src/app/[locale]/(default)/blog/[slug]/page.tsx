@@ -15,7 +15,12 @@ import {
 } from '@/utils/schema-json-utils'
 import SchemaJsonLd from '@/utils/schema-jsonld'
 
-import { getPostDetail, getPosts } from '@/features/blog/blog-data'
+import {
+  getPostDetail,
+  getPostLocales,
+  getPosts,
+  postPath,
+} from '@/features/blog/blog-data'
 import BlogPost from '@/features/blog/components/blog-post'
 import {
   NotebookPostCopy,
@@ -61,6 +66,7 @@ export async function generateMetadata(
       image,
       type: 'article',
       publishedTime: post.date,
+      availableLocales: getPostLocales(post.slug),
     }),
   }
 }
@@ -82,7 +88,7 @@ export default async function Page(props: {
       categoryKey)
     : undefined
 
-  const articleUrl = `${siteUrl}${localizedPath(params.locale, `/blog/${post.slug}`)}`
+  const articleUrl = `${siteUrl}${postPath(post.slug, params.locale)}`
   return (
     <>
       <SchemaJsonLd
@@ -93,7 +99,7 @@ export default async function Page(props: {
           image: post.coverImage,
           datePublished: post.date,
           author: post.author.name,
-          locale: params.locale,
+          locale: post.contentLocale,
         })}
       />
       <SchemaJsonLd

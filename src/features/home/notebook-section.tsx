@@ -8,6 +8,7 @@ import { localizedPath } from '@/utils/locale-path'
 import { PillLink, Polaroid, SectionHead } from '@/components/den'
 import { cn } from '@/components/ui/utils'
 
+import { postPath } from '@/features/blog/blog-data'
 import { BlogPostData } from '@/features/blog/blog-types'
 
 import {
@@ -66,7 +67,7 @@ export function NotebookSection({
           return (
             <Link
               key={post.slug}
-              href={localizedPath(locale, `/blog/${post.slug}`)}
+              href={postPath(post.slug, locale)}
               className={cn(
                 'group flex animate-reveal flex-col gap-3.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-pen',
                 layout.className,

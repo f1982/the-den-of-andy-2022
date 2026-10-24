@@ -1,11 +1,8 @@
 import type { StaticImageData } from 'next/image'
 
-import { localizedPath } from '@/utils/locale-path'
-
 import { denCutouts, denPhotos } from '@/components/den'
 
-import { BLOG_PATH } from '@/config/menu-data'
-
+import { postPath } from './blog-data'
 import { BlogPostData } from './blog-types'
 
 /** Den copy for one post: den.blog.posts.<slug> in the dictionaries. */
@@ -146,7 +143,7 @@ export function toNotebookEntry(
 
   return {
     slug: post.slug,
-    href: localizedPath(locale, `${BLOG_PATH}/${post.slug}`),
+    href: postPath(post.slug, locale),
     title: post.title,
     date: post.date,
     year: new Date(post.date).getUTCFullYear(),

@@ -20,6 +20,8 @@ import {
 } from '@/components/den'
 import { cn } from '@/components/ui/utils'
 
+import { postPath } from '@/features/blog/blog-data'
+
 import {
   DrawingAlbumURL,
   PrintableURL,
@@ -62,7 +64,7 @@ export function DeskStage({
 }) {
   const home = dict.den.home
   const desk = home.desk
-  const post = (slug: string) => localizedPath(locale, `/blog/${slug}`)
+  const post = (slug: string) => postPath(slug, locale)
 
   const objects: DeskObject[] = [
     {

@@ -31,7 +31,9 @@ export default function BlogPost({
         <div className="mx-auto flex max-w-[1100px] flex-col gap-6 px-4 pt-10 pb-[140px] desk:px-16 desk:pt-16 desk:pb-[200px]">
           <BackLink href={backHref} label={backLabel} />
           <Kicker className="mt-4 animate-rise desk:mt-8">{kicker}</Kicker>
-          <h1 className="max-w-[18ch] animate-rise font-serif text-[46px] leading-[0.98] font-normal tracking-[-0.02em] text-balance [--stagger:1] desk:text-[84px] desk:leading-[0.95]">
+          <h1
+            lang={post.contentLocale}
+            className="max-w-[18ch] animate-rise font-serif text-[46px] leading-[0.98] font-normal tracking-[-0.02em] text-balance [--stagger:1] desk:text-[84px] desk:leading-[0.95]">
             {post.title}
           </h1>
         </div>
@@ -54,6 +56,7 @@ export default function BlogPost({
 
       <div className="mx-auto max-w-[712px] px-4 pt-16 desk:pt-24">
         <div
+          lang={post.contentLocale}
           className="prose max-w-none desk:prose-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />

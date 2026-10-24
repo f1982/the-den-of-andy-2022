@@ -1,6 +1,11 @@
 import { Metadata } from 'next'
 
-import { getLocalizedAlternates, getLocalizedPathname } from '@/config/i18n'
+import {
+  defaultLocale,
+  getLocalizedAlternates,
+  getLocalizedPathname,
+  locales,
+} from '@/config/i18n'
 import {
   openGraph,
   siteMetadata,
@@ -19,6 +24,11 @@ type PageMetadataOptions = {
   type?: 'website' | 'article'
   publishedTime?: string
   modifiedTime?: string
+  /**
+   * Locales that have this content. A page in any other locale is a fallback
+   * copy of the default-locale text and canonicalises to that URL.
+   */
+  availableLocales?: readonly string[]
 }
 
 function absoluteUrl(path: string) {
@@ -43,8 +53,12 @@ export function getPageMetadata({
   type = 'website',
   publishedTime,
   modifiedTime,
+  availableLocales = locales,
 }: PageMetadataOptions): Metadata {
-  const localizedUrl = absoluteUrl(getLocalizedPathname(locale, path))
+  const contentLocale = availableLocales.includes(locale)
+    ? locale
+    : defaultLocale
+  const localizedUrl = absoluteUrl(getLocalizedPathname(contentLocale, path))
   const imageUrl = absoluteImageUrl(image)
 
   return {
@@ -52,14 +66,14 @@ export function getPageMetadata({
     title: { absolute: title },
     description,
     ...(keywords ? { keywords } : {}),
-    alternates: getLocalizedAlternates(locale, path),
+    alternates: getLocalizedAlternates(locale, path, availableLocales),
     openGraph: {
       ...openGraph,
       type,
       url: localizedUrl,
       title,
       description,
-      locale: locale === 'zh-CN' ? 'zh_CN' : 'en_NZ',
+      locale: contentLocale === 'zh-CN' ? 'zh_CN' : 'en_NZ',
       images: [
         {
           url: imageUrl,
