@@ -1,6 +1,4 @@
-This project is Andy's personal website.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3e5c6671-2cf6-4e95-a468-9404e4d9cbaf/deploy-status)](https://app.netlify.com/sites/andycao-24/deploys)
+This project is Andy's personal website, built with Next.js and deployed to Cloudflare Workers through OpenNext.
 
 ## Why?
 
@@ -8,14 +6,14 @@ I'd love to have a place that fully autonomous. I can put all my interests there
 
 ## Install
 
-```
-npm i 
+```bash
+pnpm install --frozen-lockfile
 ```
 
 ## Release
 
 ```bash
- npm run release:minor
+ pnpm release:minor
 ```
 
 The command will bump the version number, update the `CHANGELOG.md` and `git commit` the changes
@@ -25,7 +23,24 @@ The command will bump the version number, update the `CHANGELOG.md` and `git com
 
 - React
 - Next.js
+- OpenNext for Cloudflare
 
-## Services
+## Development
 
-- Netlify
+```bash
+pnpm dev
+```
+
+Blog posts (`src/content/posts`) and the app legal pages (`src/assets/md`) are
+rendered from Markdown to HTML at build time by `scripts/build-content.mjs`.
+`pnpm dev` and `pnpm build` run it automatically; run `pnpm content` after
+editing Markdown while the dev server is running.
+
+## Production preview
+
+```bash
+pnpm build
+pnpm preview
+```
+
+Deploy with `pnpm run deploy` (plain `pnpm deploy` is a built-in pnpm command) after authenticating Wrangler and reviewing the generated worker.

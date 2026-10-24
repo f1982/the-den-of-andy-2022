@@ -2,34 +2,33 @@ import React from 'react'
 
 import { Metadata } from 'next'
 
-import fs from 'fs'
-import path from 'path'
+import { getPageMetadata } from '@/utils/metadata-utils'
 
-import markdownToHtml from '@/utils/markdownToHtml'
+import LegalPage from '@/features/legal/legal-page'
 
 import { siteSettings } from '@/config/site-config'
 
-export const metadata: Metadata = {
-  title: 'Terms of Use | ' + siteSettings.title,
-  description: 'Our terms of use for using our services',
+import { getLocalizedHtml } from '@/content/localized-markdown'
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await props.params
+  return getPageMetadata({
+    locale,
+    path: '/app/terms-of-use',
+    title: `Terms of Use | ${siteSettings.name}`,
+    description: 'Read the terms for using Andy Cao apps and services.',
+  })
 }
 
-const TermsOfUse: React.FC = async () => {
-  const termsContent = fs.readFileSync(
-    path.join(process.cwd(), 'src/assets/md/app-terms-of-use.md'),
-    'utf8',
-  )
+const TermsOfUse: React.FC<{ params: Promise<{ locale: string }> }> = async ({
+  params,
+}) => {
+  const { locale } = await params
+  const htmlContent = getLocalizedHtml('appTermsOfUse', locale)
 
-  const htmlContent = await markdownToHtml(termsContent)
-
-  return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <article
-        className="prose-md prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-      />
-    </div>
-  )
+  return <LegalPage locale={locale} html={htmlContent} />
 }
 
 export default TermsOfUse

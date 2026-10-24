@@ -9,6 +9,7 @@ module.exports = {
     '@trivago/prettier-plugin-sort-imports',
     'prettier-plugin-tailwindcss',
   ],
+  tailwindStylesheet: './src/global.css',
   tailwindFunctions: ['cn'],
   importOrder: [
     '^react$',

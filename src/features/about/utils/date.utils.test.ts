@@ -1,9 +1,17 @@
-import { expect, test } from 'vitest'
+import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
 import { getAge } from './date.utils'
 
-test('test gat age', () => {
+beforeEach(() => {
+  vi.useFakeTimers()
+  vi.setSystemTime(new Date('2023-08-15'))
+})
+
+afterEach(() => {
+  vi.useRealTimers()
+})
+
+test('test get age', () => {
   const age = getAge('2016-06-01')
-  console.log('age', age)
   expect(age).toBe(7)
 })

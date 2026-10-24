@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import useScript from '@/lib/hooks/useScript'
 
-const Comments: React.FC = () => {
+const CommentsEmbed: React.FC = () => {
   const comment = useRef(null)
 
   useScript({
@@ -16,6 +16,30 @@ const Comments: React.FC = () => {
   })
 
   return <div ref={comment} />
+}
+
+const Comments: React.FC<{
+  labels: { open: string; description: string }
+}> = ({ labels }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <section className="container mx-auto max-w-3xl" aria-label={labels.open}>
+      {!isOpen ? (
+        <div className="rounded-lg border border-border p-6 text-center">
+          <p className="mb-4 text-sm text-muted-foreground">{labels.description}</p>
+          <button
+            type="button"
+            className="rounded bg-primary px-4 py-2 text-sm text-primary-foreground"
+            onClick={() => setIsOpen(true)}>
+            {labels.open}
+          </button>
+        </div>
+      ) : (
+        <CommentsEmbed />
+      )}
+    </section>
+  )
 }
 
 export default Comments

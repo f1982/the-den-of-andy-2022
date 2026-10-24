@@ -12,6 +12,8 @@ export type BlogPostData = {
   content: string
   slug: string
   keywords: string
+  /** Language of the text; 'en' when a locale has no translation yet. */
+  contentLocale: string
 }
 
 export type PostMap = {

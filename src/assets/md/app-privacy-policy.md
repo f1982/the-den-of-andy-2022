@@ -1,8 +1,8 @@
 # Privacy Policy
 
-Last Updated: December 18, 2023
+Last Updated: August 2, 2026
 
-This Privacy Policy describes how Andy Cao ("we," "us," or "our") collects, uses, and shares your information when you use our mobile applications, websites, and other services (collectively, the "Services").
+This Privacy Policy describes how **PolygonFleet** (our developer name on Google Play) and **Cao Jundan** (our developer name on the Apple App Store) — collectively "we," "us," or "our" — collect, use, and share your information when you use our mobile applications, websites, and other services (collectively, the "Services"). This policy applies to all mobile applications we publish under the PolygonFleet (Google Play) and Cao Jundan (Apple App Store) developer accounts.
 
 ## Information We Collect
 
@@ -12,17 +12,21 @@ This Privacy Policy describes how Andy Cao ("we," "us," or "our") collects, uses
 - User feedback and survey responses
 - Customer support communications
 
-### Face Image Data
+### Photos and Images You Provide
 
-We take your privacy seriously. When you upload a photo to use our app, here's how we handle your face image data:
+Some of our apps ask you to take or select a photo — of your face, a room in your home, an object, or a document — so that a feature can analyse or transform it. Photos are personal data and we treat them accordingly.
 
-- Temporary Use Only: Uploaded images are only used temporarily for the sole purpose of the app feature through our AI partners (such as Google Gemini or OpenAI).
+- **Your permission first**: We only access your camera or photo library after you grant the operating system permission, and we only send an image for processing after you choose that image for a feature that clearly says the image will be processed by an AI provider.
 
-- No Permanent Storage: Your image is not stored permanently on our servers. It is automatically deleted shortly after the processing is completed.
+- **Who processes the image**: The image is transmitted to the AI provider that powers the feature you used. Depending on the app, that provider is **Google (Gemini, including via Firebase AI Logic)** or **OpenAI**. The image is sent to that provider for the sole purpose of returning the result you requested.
 
-- No Third-Party Sharing: We do not share your face image data with any third-party companies for marketing, analytics, or any other purposes. The image is only sent to the AI service provider strictly for processing.
+- **Retention and deletion**: We do not keep a permanent copy of your input photo on our servers. It is held only for as long as the request takes to process and is deleted shortly afterwards. Our AI providers apply their own limited retention for abuse monitoring under their terms; we do not permit them to use your image to train their models. Results you choose to save are stored **on your device**, inside the app, and are deleted when you delete them or uninstall the app.
 
-- No Face Recognition or Tracking: We do not perform or store any facial recognition, analysis, or tracking of your image.
+- **No advertising or profiling use**: We do not use your photos, or anything derived from them, for advertising, ad targeting, or building a profile about you, and we do not sell or share them with any other company for those purposes.
+
+- **No biometric identification**: We do not run facial recognition or any other biometric identification against your images, and we do not create or store a biometric template or faceprint from them.
+
+- **How to remove your data**: Because saved results live on your device, deleting them in the app (or uninstalling the app) removes them. If you have contacted support and want that correspondence deleted, email us using the address below.
 
 ### Information Collected Automatically
 
@@ -38,10 +42,13 @@ We automatically collect certain information when you use our Services:
 Our Services integrate with third-party services including:
 - Firebase (Analytics and Crash Reporting)
 - Google Analytics (Analytics)
-- Microsoft Clarity (Analytics)
+- Microsoft Clarity (Analytics, our websites)
 - OpenAI (AI Services)
-- Google Gemini (AI Services)
-- Admob (Ads)
+- Google Gemini, including Firebase AI Logic (AI Services)
+- RevenueCat (Subscription and purchase management)
+- AdMob (Ads)
+
+Not every app uses every service listed above. In particular, **AdMob is only present in apps that actually display ads**; apps with no advertising do not include it and do not send it any data. An app's App Store "App Privacy" label and its Google Play "Data safety" section describe what that specific app collects.
 
 Each third-party service's data collection is governed by their respective privacy policies.
 
@@ -73,7 +80,9 @@ Depending on your location, you may have rights to:
 - Data portability
 - Withdraw consent
 
-To exercise these rights, contact us at eingzone@126.com.
+Withdrawing consent for photo processing is immediate and requires no request: stop submitting photos, and/or revoke the camera and photo-library permission for the app in your device settings. The app's other features continue to work.
+
+To exercise these rights, contact us at eingzone@126.com. We respond within 30 days.
 
 ## International Data Transfers
 
@@ -91,7 +100,7 @@ California residents have additional rights under the California Consumer Privac
 
 If you have questions about this Privacy Policy or our privacy practices, contact us at:
 
-Andy Cao
+PolygonFleet (Google Play) / Cao Jundan (Apple App Store)
 Email: eingzone@126.com
 
 ## App Store Specific Information

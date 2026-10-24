@@ -1,36 +1,31 @@
-import React from 'react'
-
 import type { Metadata } from 'next'
 
-import fs from 'fs'
-import path from 'path'
+import { getPageMetadata } from '@/utils/metadata-utils'
 
-import markdownToHtml from '@/utils/markdownToHtml'
+import LegalPage from '@/features/legal/legal-page'
 
 import { siteSettings } from '@/config/site-config'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | ' + siteSettings.title,
-  description:
-    'Our commitment to protecting your privacy and personal information',
+import { getLocalizedHtml } from '@/content/localized-markdown'
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await props.params
+  return getPageMetadata({
+    locale,
+    path: '/app/privacy-policy',
+    title: `Privacy Policy | ${siteSettings.name}`,
+    description:
+      'Our commitment to protecting your privacy and personal information.',
+  })
 }
 
-const PrivacyPolicy: React.FC = async () => {
-  const privacyContent = fs.readFileSync(
-    path.join(process.cwd(), 'src/assets/md/app-privacy-policy.md'),
-    'utf8',
-  )
+export default async function Page(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await props.params
+  const htmlContent = getLocalizedHtml('appPrivacyPolicy', locale)
 
-  const htmlContent = await markdownToHtml(privacyContent)
-
-  return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <article
-        className="prose-md prose mx-auto max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-      />
-    </div>
-  )
+  return <LegalPage locale={locale} html={htmlContent} />
 }
-
-export default PrivacyPolicy

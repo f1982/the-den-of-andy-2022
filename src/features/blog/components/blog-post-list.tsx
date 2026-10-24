@@ -4,11 +4,13 @@ import clsx from 'clsx'
 import { StickyNote } from 'lucide-react'
 import Link from 'next/link'
 
-import { BLOG_PATH } from '@/config/menu-data'
-
+import { postPath } from '../blog-data'
 import { BlogPostData } from '../blog-types'
 
-const BlogPostList: React.FC<{ posts: BlogPostData[] }> = ({ posts }) => (
+const BlogPostList: React.FC<{ posts: BlogPostData[]; locale: string }> = ({
+  posts,
+  locale,
+}) => (
   <ul className="flex flex-col gap-6">
     {posts.map((post) => (
       <li
@@ -19,10 +21,8 @@ const BlogPostList: React.FC<{ posts: BlogPostData[] }> = ({ posts }) => (
         <StickyNote className="fill-muted stroke-muted-foreground" />
         <div className="flex flex-1 flex-col justify-between md:flex-row">
           <Link
-            href={`${BLOG_PATH}/${post.slug}`}
-            className="no-underline hover:underline"
-            passHref
-            legacyBehavior>
+            href={postPath(post.slug, locale)}
+            className="no-underline hover:underline">
             <span>{post.title}</span>
           </Link>
           <span>{post.date}</span>
